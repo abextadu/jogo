@@ -59,4 +59,132 @@
 
 ---
 
-<!-- PARTE A, MECÂNICAS 2 A 11: EM ANDAMENTO -->
+### 2. Temporadas e ligas
+
+**O que é.** Períodos com início e fim (de semanas a meses) em que a disputa recomeça, muitas vezes num mundo ou economia à parte, com ranking e recompensas próprias.
+
+**Quem faz bem**
+- [F] **Old School RuneScape (Leagues e Deadman)**: as temporadas são **modos paralelos** em mundos separados, em que todos começam do zero. Elas devolvem à conta principal só cosméticos e prestígio, com troféus por percentil do top 60% ao top 1% ([OSRS Wiki, Twisted League](https://oldschool.runescape.wiki/w/Twisted_League)). Os recordes de jogadores simultâneos coincidem com estreias de Liga: 210.027 no lançamento da Liga V, em 27/11/2024 ([MeinMMO](https://mein-mmo.de/en/23-year-old-mmorpg-played-more-than-new-world-throne-and-liberty-and-lost-ark-combined-thanks-to-a-major-event,1203195)); o Deadman: Annihilation (jan–fev/2026) teve mais de 153 mil participantes ([Jagex](https://www.jagex.com/news/old-school-runescape-prepares-for-final-(deadman)-annihilation)). Detalhes em `fichas/F03-runescape-e-osrs.md`. [H] O jogo principal nunca reseta e não inflaciona com a temporada.
+- [F] **Path of Exile (ligas)**: o reset da liga zera personagens, moeda e preços e funciona como dreno final da economia; o recorde de simultâneos do PoE1 no Steam (228.398) veio numa estreia de liga ([SteamCharts](https://steamcharts.com/app/238960); `fichas/F05-path-of-exile.md`).
+- [F] **Diablo IV**: temporadas de cerca de três meses exigem personagem novo, que ao fim migra para o modo "eterno" sem perder nada; o passe tem trilha gratuita e trilha paga só de cosméticos ([Wikipedia](https://en.wikipedia.org/wiki/Diablo_IV)).
+- [F] **Travian**: cada rodada dura cerca de 200 dias até o fim de jogo, quando coalizões correm para construir a Maravilha do Mundo; o primeiro a chegar ao nível 100 vence, o servidor para e uma rodada nova começa do zero ([Wikipedia](https://en.wikipedia.org/wiki/Travian)). [H] O fim marcado dá desfecho a uma guerra que, sem ele, viraria estagnação.
+- [F] **IdleMMO (idle de navegador)**: temporadas de guilda de 60 dias, quatro campanhas sazonais por ano que funcionam como passe gratuito e ligas de grupo que premiam o top 25 ([wiki oficial, via `fichas/C04-idlemmo.md`](https://support.idle-mmo.com/wiki/guilds/seasons)).
+
+**Quem faz mal**
+- [F] **A evasão depois da estreia é brutal.** No PoE1, o pico mensal no Steam foi de 184.284 em março de 2026 (liga Mirage), 53.761 em abril e 16.105 em maio ([SteamCharts](https://steamcharts.com/app/238960), via `fichas/F05-path-of-exile.md`). O modelo troca retenção contínua por reativação sazonal.
+- [C] **Fadiga de temporada.** Comentaristas e jogadores descrevem o ciclo de recomeçar a cada poucos meses como desgastante no PoE ([Prima Games](https://primagames.com/tips/is-path-of-exiles-dwindling-player-count-simply-due-to-fatigue-or-is-it-something-more-abhorrent); [fórum oficial](https://www.pathofexile.com/forum/view-thread/3513537)) e no Diablo IV, cuja primeira temporada foi recebida com revolta pelos nerfs e pela moagem ([GamesRadar](https://gamesradar.com/diablo-4s-controversial-season-1-leads-players-to-a-staggering-revelation-you-can-stop-playing-when-youre-not-having-fun); [Kotaku](https://kotaku.com/diablo-4-season-1-grind-burnout-level-xp-loot-rpg-1850621843)). A própria equipe do Diablo IV sugeriu que o jogador "dê um tempo" e volte na temporada seguinte ([PC Gamer](https://pcgamer.com/diablo-4-developers-gently-suggest-players-should-take-a-break-as-the-brutal-grind-continues-to-wear-them-down)).
+- [F] **Idlescape: temporadas que fragmentam uma base pequena.** Legacy, Pre-Launch e temporadas Ironman criaram várias economias simultâneas, e uma base pequena dividida em modos gerou livros de ofertas rasos (`fichas/C03-idlescape.md`, com [patch 0.23.0](https://www.idlescape.com/news/beta-0-23-0)).
+- [F] **Recompensa por ranking vira mercado de boosting.** No WoW, o título do top 1% de Mythic+ estimula carregamentos pagos; em setembro de 2026 a Blizzard passou a revisar o top 1% da temporada ([fórum oficial](https://us.forums.blizzard.com/en/wow/t/uh-oh-top-1-of-mythic-runs-under-review/2343265), via `fichas/F06-world-of-warcraft.md`).
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Temporada como mundo paralelo, nunca como reset do principal** (modelo OSRS). O personagem eterno segue intocado; o sazonal migra para o eterno ao fim (modelo Diablo IV), e o que se leva é cosmético, título ou conveniência de conta.
+- **Ritmo de idle**: temporadas longas (três a quatro meses), metas por marcos alcançáveis em ritmo casual e **recompensas por percentil** e por patamares, não só pelo top 10. Quem entra no meio recebe aceleração de recuperação.
+- **A temporada legitima a pausa.** O fim marcado é um ponto de saída sem culpa e um ponto de volta com motivo (a sugestão de "dar um tempo" do Diablo IV é, para um idle, uma virtude).
+- **Uma temporada por vez, com mercado único entre os sazonais**, para não repetir a fragmentação do Idlescape.
+- **RMT fora da temporada**: o token vive na economia eterna. Há precedente: o WoW Token ficou fora do Classic Era, do Hardcore e do Season of Discovery (`fichas/F06-world-of-warcraft.md`).
+
+**Problema · emoção · comportamento.** [H] Resolve economia velha, inflação acumulada e domínio dos veteranos · gera recomeço justo, corrida e "agora é minha vez" · incentiva retorno em massa no início, planejamento de builds e conteúdo de criadores.
+
+**Custo: médio a alto.** Médio se a temporada for um conjunto de modificadores sobre as mesmas regras, num esquema de banco separado com migração ao fim. Alto se cada temporada pedir mecânica nova, como no PoE: aí o custo é a cadência de conteúdo, não o código.
+
+**Riscos e mitigação**
+- *População e mercado fragmentados* → uma temporada ativa por vez, limiar mínimo de população e fusão dos sazonais no eterno ao fim.
+- *Fadiga* → temporadas opcionais, longas e com recompensas cosméticas; nada de exigir recomeço da conta principal.
+- *Boosting e RMT por ranking* → recompensas por percentil e patamar, intransferíveis, com revisão do topo.
+- *Inflação no eterno quando a riqueza sazonal migra* → converter riqueza sazonal em cosméticos e moeda de conta, com teto de ouro migrado.
+- *Pagar para largar na frente* → nenhum poder pago dentro da temporada.
+
+### 3. Chefes mundiais compartilhados
+
+**O que é.** Um inimigo que aparece para todo o servidor (ou para uma guilda), derrotado em conjunto, com recompensa repartida por participação.
+
+**Quem faz bem**
+- [F] **Guild Wars 2**: eventos e chefes **não usam "tag"**. Todo mundo que participa ativamente ganha experiência, karma e moedas, e o loot é calculado por jogador; medalhas de bronze, prata e ouro pagam 75%, 85% ou 100% da recompensa, e um evento fracassado paga metade. O desenho declarado busca cooperação em vez de competição, para reduzir roubo de abate e acampamento de spawn ([wiki oficial, Dynamic event](https://wiki.guildwars2.com/wiki/Dynamic_event)). Os chefes mundiais seguem horário fixo e o baú do chão só pode ser saqueado uma vez por personagem por dia por chefe; o baú bônus, uma vez por conta por dia ([wiki oficial, World boss](https://wiki.guildwars2.com/wiki/World_boss)).
+- [F] **IdleMMO (idle de navegador)**: 11 chefes mundiais permanentes, lutas de 10 a 28 minutos e reaparecimento a cada 8 a 18 horas. O jogador pode **entrar na fila até 2 horas antes** da luta, e os chefes são a principal fonte de ovos de pet ([wiki oficial, World Bosses](https://support.idle-mmo.com/wiki/combat/world-bosses)); alertas de chefe são opcionais ([patch notes](https://web.idle-mmo.com/patch-notes)). Ver `fichas/C04-idlemmo.md`. [H] É o melhor exemplo de chefe mundial compatível com o ausente: a decisão é se inscrever e escolher o equipamento, não estar online no minuto exato.
+- [F] **Idle Clans** e **Shop Titans**: chefes de clã para até 20 jogadores e uma Clan Cup semanal que premia número e velocidade de abates ([wiki, Clan](https://idleclans.wiki/w/Clan)); no Shop Titans, os eventos de guilda (Dragon Invasion, Lost City of Gold) cumprem o papel de chefe compartilhado ([CogConnected, 16/06/2026](https://cogconnected.com/2026/06/kabam-celebrates-7-years-of-shop-titans-with-new-content-and-rewards/)). Ver `fichas/C02-idle-clans.md` e `fichas/C06-shop-titans.md`.
+
+**Quem faz mal**
+- [C] **Chefe de mundo aberto com "tag" e acampamento.** No WoW Classic, jogadores relatam disputa por Azuregos e Kazzak e problemas com as camadas (*layering*) de servidor ([fórum oficial da Blizzard](https://us.forums.blizzard.com/en/wow/t/examples-of-layering-exploits-and-problems/198240)); já em 2005 havia acusação de guilda que decifrou o horário de spawn para monopolizar os chefes ([Lurker Lounge](https://lurkerlounge.com/forums/printthread.php?tid=6143)). [H] Quando o chefe é escasso e o loot vai para quem "marcou" primeiro, o conteúdo coletivo vira corrida de poucos.
+- [F] **Vender a automação do conteúdo coletivo.** O Idle Clans vende um token de "Auto raid" (US$ 4,99) para fazer uma raid totalmente AFK e outro de chaves de chefe ilimitadas ([wiki, Tokens](https://idleclans.wiki/w/Tokens)). [H] Isso esvazia o motivo para jogar junto e transforma o chefe em compra.
+- [F] **Chefe como torneira de ouro.** O SimpleMMO reduziu o ouro dos chefes mundiais em set/2026, dentro de uma série de drenos contra uma economia que "cresceu massivamente" ([log de atualizações](https://web.simple-mmo.com/updates); [blog, retrospectiva 2022](https://www.galahadcreative.com/blog/simplemmo-looking-back-on-2022-a-year-in-review/)). O criador já tinha admitido em 2023 que o sistema de chefes fora feito "com barbante e fita adesiva" ([blog oficial, jul/2023](https://www.galahadcreative.com/blog/an-update-on-simplemmo/)). Ver `fichas/C05-simplemmo.md`.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Inscrição antecipada e luta simulada**: o jogador se inscreve horas antes (IdleMMO) com um *snapshot* do personagem; a luta corre no servidor, e o ativo pode intervir (usar habilidades, trocar formação) para ganhar uma fatia extra, nunca a recompensa base.
+- **Sem "tag" e sem loot disputado** (GW2): recompensa individual por patamar de contribuição, com teto diário por conta para conter alts.
+- **HP do servidor que desce com o idle de todos**: um chefe global com dias de duração, cuja vida cai com a produção ociosa de cada jogador, liga o ausente ao evento sem exigir presença.
+- **Horários que rotacionam por fuso**, ou muitas aparições ao dia (de 8 a 18 horas no IdleMMO), para o Brasil e o resto do mundo terem chance igual.
+
+**Problema · emoção · comportamento.** [H] Resolve a solidão do idle e a falta de momento coletivo · gera espetáculo, "estávamos todos lá" e a tensão de bater o tempo · incentiva login em horários marcados, socialização e preparo de equipamento.
+
+**Custo: médio.** Exige estado compartilhado com muitas escritas simultâneas no mesmo contador de vida (agregação e idempotência no PostgreSQL), agenda, simulação de luta e tabelas de recompensa. Reaproveita o combate automático que o jogo já terá.
+
+**Riscos e mitigação**
+- *Torneira de ouro e itens* → recompensa principal em material de progresso pessoal ou intransferível, e parte negociável sob orçamento diário.
+- *Ranking de dano dominado por baleias* → recompensa por patamar de participação, com retorno decrescente no topo.
+- *Alts multiplicando recompensa* → teto por conta, não por personagem (como o baú bônus do GW2).
+- *Fuso único* → horários rotativos ou janelas longas.
+- *Automação paga* → nunca vender a participação; no máximo conveniência de inscrição, igual para todos.
+
+### 4. PvP assíncrono
+
+**O que é.** Jogadores enfrentam a defesa, a base ou uma cópia (*snapshot*, "fantasma") do personagem de outros, sem que o defensor precise estar online.
+
+**Quem faz bem**
+- [F] **Super Auto Pets**: todas as batalhas da Arena são assíncronas, contra times de outros jogadores, ou contra times gerados quando não há jogador disponível naquele turno. O jogo também roda no navegador ([Wikipedia](https://en.wikipedia.org/wiki/Super_Auto_Pets)).
+- [F] **Backpack Battles**: o personagem luta "asynchronously without player control" contra o de outro jogador, escolhido de forma semialeatória entre as runs alheias; a run acaba em 10 vitórias ou 5 derrotas. Vendeu cerca de 640 mil unidades no primeiro mês no Steam e passou de 36 mil jogadores simultâneos no lançamento (jun/2025) ([Wikipedia](https://en.wikipedia.org/wiki/Backpack_Battles)).
+- [F] **Clash of Clans**: ataques de até três minutos contra vilas de outros jogadores ([Wikipedia](https://en.wikipedia.org/wiki/Clash_of_Clans)). Quem é saqueado ganha escudo: no sistema antigo, 12, 14 ou 16 horas conforme a destruição (30%, 60% ou 90%); desde outubro de 2025, um "Magic Shield" fixo de 8 horas quando 30% ou mais do saque disponível é roubado ([Clash Ninja](https://www.clash.ninja/guides/what-are-shields-and-guard); [Supercell](https://supercell.com/en/games/clashofclans/blog/release-notes/get-ready-for-ranked-update); [Fragster](https://www.fragster.com/clash-of-clans-october-2025-update-battle-modes-shield-rework-more/)). O jogo passou de US$ 6,4 bilhões de receita até 2018 ([Wikipedia](https://en.wikipedia.org/wiki/Clash_of_Clans)).
+- [F] **SimpleMMO (navegador)**: o PvP é massivo e assíncrono, contra personagens de outros jogadores; foram 105,8 milhões de "jogadores derrotados" em 2022, contra 21 milhões em 2021 ([blog, retrospectiva 2022](https://www.galahadcreative.com/blog/simplemmo-looking-back-on-2022-a-year-in-review/), via `fichas/C05-simplemmo.md`).
+
+**Quem faz mal**
+- **Ficar online como escudo.** [NV] No Clash of Clans a vila não pode ser atacada com o dono conectado (conhecimento prévio, coerente com a regra a seguir, mas sem fonte lida). [F] Desde a atualização de dezembro de 2015, quem acumula três horas online sem escudo é forçado a uma pausa de seis minutos (o *Personal Break*) ([Christian Post, 28/11/2015](https://www.christianpost.com/trends/clash-of-clans-updates-village-guard-personal-breaks-league-bonuses-and-loot.html)). A mesma atualização acabou com o escudo grátis e passou a exigir 30% de destruição para gerá-lo ([Pocket Gamer, 16/12/2015](https://www.pocketgamer.com/clash-of-clans/clash-of-clans-101-the-complete-guide-to-decembers-town-hall-11-update/)). [H] A pausa forçada mostra o efeito colateral do raide assíncrono mal desenhado: estar conectado vira proteção, e o jogo passa a premiar quem nunca sai, o oposto do idle.
+- [C] **Ser "zerado" enquanto dorme** é a queixa central dos 4X mobile (seção 1), em que a perda do ausente é grande e o escudo é vendido.
+- [H] **Saque sem teto contra o mais fraco** desestimula quem chega: o veterano "farma" o novato. As fichas de OGame e Travian, em andamento, tratam do caso clássico; aqui só registramos o padrão.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Fantasmas em vez de raides**: o modelo Super Auto Pets / Backpack Battles é o mais idle de todos. O personagem ausente vira oponente de outros, e pode até render uma pequena recompensa de defesa quando seu fantasma vence. Ninguém perde nada por estar fora.
+- **Se houver saque, perda limitada e anunciada**: só o que está "exposto" (produção ainda não guardada), nunca equipamento nem progresso; escudo automático depois de cada saque; proteção de novato.
+- **Estar online não protege nem expõe**: nem vantagem de defesa por estar logado, nem desvantagem (a lição do *Personal Break*).
+- **Faixas de poder e formatos normalizados** para que a derrota venha de decisão, não de diferença de conta.
+
+**Problema · emoção · comportamento.** [H] Resolve a falta de oposição humana num gênero solitário, sem exigir agenda · gera rivalidade, vingança e orgulho de uma build bem montada · incentiva teoria de builds, leitura de registros de batalha e ataques no momento escolhido.
+
+**Custo: médio.** Guardar *snapshots*, simulação determinística no servidor (a mesma do combate automático), emparelhamento por força e registro de batalha. Fica mais barato se o combate do jogo já for automático e reproduzível.
+
+**Riscos e mitigação**
+- *Veterano caçando novato* → emparelhamento por faixa de poder, proteção de novato e retorno decrescente contra alvos mais fracos.
+- *Aversão à perda* → fantasmas sem perda; saque só opt-in e limitado.
+- *Pagar para vencer* → formatos com nível ou poder normalizado.
+- *Alts alimentando vitórias* → recompensas por rating, teto diário e detecção de conluio.
+- *Meta estagnado* → regras rotativas, como as filas semanais do Super Auto Pets ([Wikipedia](https://en.wikipedia.org/wiki/Super_Auto_Pets)).
+
+### 5. Arenas
+
+**O que é.** PvP estruturado num ranking (ladder), com tentativas por dia, temporadas e recompensas por posição; em idles e jogos mobile, quase sempre contra o time de defesa de outro jogador.
+
+**Quem faz bem**
+- [F] **Hearthstone (Arena)**: o jogador monta um baralho de 30 cartas escolhendo entre três opções, rodada após rodada, joga até um número fixo de vitórias ou derrotas e recebe recompensas conforme o resultado ([Wikipedia](https://en.wikipedia.org/wiki/Hearthstone)). [H] O *draft* neutraliza a vantagem de coleção: todos montam com o que o sorteio oferece.
+- [F] **Clash of Clans (Clan War Leagues, out/2018)**: cada clã enfrenta sete outros e sobe ou cai de liga pelas estrelas ([Wikipedia](https://en.wikipedia.org/wiki/Clash_of_Clans)). No modo ranqueado de 2025, cada ataque vale no máximo 40 troféus ([Blueprint CoC](https://blueprintcoc.com/blogs/new-clash-of-clans-update/ranked-battle-sneak-peek-2); [Clash Ninja](https://www.clash.ninja/blog/battle-and-ranked-modes)).
+- [F] **Super Auto Pets (Versus)**: todos começam com 1.500 pontos e há filas semanais com conjuntos de bichos que mudam ([Wikipedia](https://en.wikipedia.org/wiki/Super_Auto_Pets)). [H] A rotação semanal renova o meta sem *power creep*.
+- [F] **Backpack Battles**: a "arena" é a própria run, com fim em 10 vitórias ou 5 derrotas ([Wikipedia](https://en.wikipedia.org/wiki/Backpack_Battles)). [H] Limitar por derrotas, e não por tempo, deixa o jogador parar quando quiser.
+
+**Quem faz mal**
+- [C] **Arena de coleção paga.** No AFK Arena, críticos descrevem o PvP como pay-to-win, com quem paga tendo heróis mais fortes e mais vitórias ([Indiecator](https://indiecator.org/2020/12/26/afk-arena-exists/); [Gamebrain](https://gamebrain.co/game/afk-arena-1)). No Hearthstone, estimou-se de US$ 50 a 100 para ter baralhos competitivos e cerca de US$ 400 por ano para manter a coleção completa ([Wikipedia, citando Polygon, 2017](https://en.wikipedia.org/wiki/Hearthstone)).
+- [F] **Moeda premium como prêmio de topo.** No SimpleMMO, o top 3 da arena ganha diamantes, a moeda paga ([wiki de fãs, via `fichas/C05-simplemmo.md`](https://simplemmo.fandom.com/wiki/Diamonds)). [H] Num jogo com RMT oficial, prêmio de ranking conversível em dinheiro cria incentivo a contas alimentadas, boosting e bots.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Cargas acumuláveis**: as tentativas diárias se acumulam até um teto (por exemplo, três dias de cargas), para quem fica fora não perder a cota.
+- **A defesa pontua sozinha**: o time de defesa do ausente ganha pontos quando resiste, então ele sobe no ranking mesmo sem atacar.
+- **Duas arenas**: uma "aberta", com o poder da conta, e uma normalizada (*draft* ou nível fixo), em que vence a decisão. A normalizada é a que recebe o ranking de prestígio.
+- **Recompensa por patamar e por participação**, com cosméticos e títulos no topo, e nunca moeda conversível em dinheiro.
+
+**Problema · emoção · comportamento.** [H] Resolve a falta de um placar legível entre jogadores e dá um destino competitivo ao poder acumulado · gera status, progresso visível e o "só mais uma" · incentiva login diário curto, ajuste de defesa e estudo do meta.
+
+**Custo: médio, baixo se o PvP assíncrono já existir.** Exige sistema de rating (Elo ou Glicko), temporadas, tabelas de recompensa e antifraude. Sobre a base da seção 4, é uma camada incremental.
+
+**Riscos e mitigação**
+- *Topo dominado por quem paga* → arena normalizada como a de prestígio, e retorno decrescente do poder na aberta.
+- *Alts e conluio* → emparelhamento por rating, teto de pontos contra o mesmo oponente, revisão do topo.
+- *"Snipe" no corte do ranking diário* → corte em horário aleatório ou pontuação média do período.
+- *Prêmio de ranking com valor em dinheiro* → prêmios intransferíveis.
+
+<!-- PARTE A, MECÂNICAS 6 A 11: EM ANDAMENTO -->
