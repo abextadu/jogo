@@ -23,6 +23,12 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 - **Onda 2 (depois das fichas de MMOs, idles multiplayer e casos de alerta):** economia (fontes e drenos, inflação; mercados, proteções e bots) e RMT (modelos, mercado paralelo e recomendação). Esses estudos leem as fichas para não refazer pesquisa.
 - **Fechamento:** mapa do gênero, padrões + matriz + leis do design idle, síntese com os 30 insights e checkpoint.
 
+**Execução:** lotes de 6 pesquisadores. Quando um termina, entra o próximo da fila.
+
+- **Rodando:** idle MMOs I (C01–C03), idle MMOs II (C04–C06), EVE e Albion (F01–F02), RuneScape e Tibia (F03–F04), jurídico Brasil (05b), Melvor e IdleOn (B01–B02).
+- **Fila, em ordem:** alertas de dinheiro real (G01–G03); PoE, WoW e GW2 (F05–F07); Black Desert e Throne and Liberty (F08–F09); New World e Banana/Bongo Cat (G04–G05); coletâneas de fracassos (G06–G07); teoria do design idle (02a); além do idle (03); jurídico global e pagamentos (05c); Torn, Shakes & Fidget e KoL (D01–D03); técnica (07); OGame e Travian (D04–D05); idle clássicos I (A01–A03, A09); incrementais de nicho (A04–A08); idle RPGs II (B03–B06); mobile AFK (E01–E04); radar 2023–2026 (A10); monetização e retenção (06); mercado e posicionamento (08).
+- **Onda 2** (depois das fichas F, C e G e do jurídico): economia (04a, 04b) e RMT (05a, 05d).
+
 ## Checklist de entregáveis da Fase 1
 
 **Fichas (47)**
@@ -69,3 +75,4 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 ## Registro
 
 - **2026-11-06** — Estrutura criada (`docs/`, `PROGRESSO.md`, `CLAUDE.md`, `METODOLOGIA.md`). Git inicializado. Onda 1 da pesquisa iniciada.
+- **2026-11-07** — A primeira rodada foi interrompida antes de gravar arquivos. Pesquisa retomada em lotes de 6, com gravação a cada ficha concluída (`METODOLOGIA.md`, seção 10).
