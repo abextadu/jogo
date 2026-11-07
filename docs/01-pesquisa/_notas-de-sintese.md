@@ -82,6 +82,19 @@ Pista a verificar (fora do escopo do pesquisador): um resultado de busca diz que
 
 Números: receita do IdleOn só por estimativas de terceiros (Gamalytic: ~US$ 52 milhões brutos no Steam; Sensor Tower: ~US$ 400 mil/mês na Google Play dos EUA). Melvor: status "Declínio" [H].
 
+## F05–F07 — Path of Exile, World of Warcraft, Guild Wars 2 (concluído em 2026-11-07)
+
+1. **A moeda de troca deve ser consumível de progresso:** as orbs do PoE são gastas no crafting, então o dreno vem embutido ([Wikipedia](https://en.wikipedia.org/wiki/Path_of_Exile)). → O que se negocia entre jogadores deve servir de material de upgrade.
+2. **Dois mercados assíncronos, com taxa em moeda não negociável:** o PoE2 usa livro de ofertas para commodities e venda instantânea com vendedor offline para itens únicos; o comprador paga ouro ([poedb](https://poedb.tw/us/Merchants_Tab)). → Arquitetura natural de mercado para um idle.
+3. **Token oficial com preço livre funciona, mas não acaba com bots nem RMT:** em 2023 a Blizzard ainda banía dezenas de milhares de bots por semana e chamou o token de "uma ferramenta entre várias" ([post oficial](https://us.forums.blizzard.com/en/wow/t/topic/1598255/1)); o preço do token foi de 30 mil para algo entre 185 e 400 mil de ouro. → RMT oficial exige fiscalização e drenos; preço do token como KPI público de inflação.
+4. **A inflação explosiva vem no começo:** no GW2, 100 gemas custavam 0,27 de ouro em 2012 e 20,7 em 2015; depois só dobraram até 2026 (40,65) ([análise](https://wiki.guildwars2.com/wiki/User:1Maven/Currency_exchange_historic_data_analysis); [API oficial](https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=1000000)). → Lançar com fontes apertadas e monitorar desde o dia 1.
+5. **Progresso offline que gera moeda negociável é emissão de dinheiro:** o wiki do WoW lista as mesas de missões entre as fontes que criaram ouro ([warcraft.wiki.gg](https://warcraft.wiki.gg/wiki/Money)). → O ganho offline deve virar sobretudo progresso pessoal, ou passar por drenos antes de chegar ao mercado.
+6. **Taxa em duas partes:** o GW2 cobra 5% para anunciar (sem reembolso) + 10% na venda ([wiki](https://wiki.guildwars2.com/wiki/Trading_Post)). → A taxa de anúncio freia spam e undercut; o corte na venda drena em proporção ao volume.
+7. **Temporadas reativam, mas a evasão é brutal:** o PoE1 caiu de 184 mil para 16 mil no pico mensal do Steam em dois meses ([SteamCharts](https://steamcharts.com/app/238960)). → Temporadas com ganchos depois da 4ª semana e um modo permanente saudável.
+8. **Loot box custa reputação e risco legal:** a licença de montaria do GW2 gerou revolta ([Zero Lives](https://zerolives.com/news/PexEOxDu/arenanet-we-wont-change-current-guild-wars-2-mount-skins-lootboxes-but-wont-add-new-skins-to-it-either)); a compra de gemas foi bloqueada na Bélgica em 2018 ([PCGamesN](https://www.pcgamesn.com/guild-wars-2/guild-wars-2-gems-belgium?tw=pcgn_ne)). → Venda direta, sem gacha pago.
+
+Lacunas: sem contagem de reviews negativas no Steam; sem receita recente de WoW e GW2; taxas exatas do Currency Exchange do PoE não encontradas.
+
 ## Observações do orquestrador sobre fichas já gravadas
 
 - **C01 Milky Way Idle:** livro de ordens com taxa de 4% que vira, todo dia, bônus coletivo do servidor; arredondamento da taxa para cima contra monopólio de itens baratos; degraus de preço ajustados várias vezes; Cowbells vendidas em "sacos" negociáveis (token de fato); horas de offline e vagas de fila vendidas por Cowbells (ir de 10 h a 72 h custa ~US$ 230–270), e isso é queixa recorrente. Estúdio de duas pessoas; ~70% de queda na média de jogadores no Steam desde o pico de 2025.
