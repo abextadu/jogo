@@ -9,7 +9,7 @@
 | Modelo de negócio | Free-to-play com assinatura (membership) e token de assinatura negociável (Bonds). O RuneScape 3 (RS3) teve microtransações pesadas de 2012 a jan/2026 |
 | Status em 2026 | OSRS: Crescendo (recorde de ~240 mil simultâneos em ago/2025). RS3: em reestruturação (fim do Treasure Hunter e do Hero Pass) |
 
-> **Cartão-resumo:** RuneScape é o MMO de navegador que virou duas franquias: o RS3, moderno e monetizado, e o OSRS, uma cópia do jogo de 2007 relançada por votação em 2013 que hoje é a maior das duas. A Jagex testou em público quase tudo o que planejamos: livro de ordens central (Grand Exchange), proibição do comércio livre para matar o RWT (e a volta atrás por referendo), token oficial de assinatura negociável (Bonds), imposto de mercado que financia a destruição de itens, modos sazonais que não resetam o jogo principal e uma "constituição" de enquetes. **Lição nº 1:** RMT oficial só vence o mercado negro se for seguro, conveniente e próximo do preço dele. E a integridade (não vender poder) tem de ser promessa de produto, não detalhe.
+> **Cartão-resumo:** RuneScape virou duas franquias: o RS3, moderno e monetizado, e o OSRS, cópia do jogo de 2007 relançada por votação em 2013, hoje a maior das duas. A Jagex testou em público quase tudo o que planejamos: livro de ordens central (Grand Exchange), proibição do comércio livre contra o RWT (revertida por referendo), token de assinatura negociável (Bonds), imposto de mercado que financia a destruição de itens, modos sazonais que não resetam o jogo principal e uma "constituição" de enquetes. **Lição nº 1:** RMT oficial só vence o mercado negro se for seguro, conveniente e de preço próximo. E não vender poder tem de ser promessa de produto.
 
 ## 1. Loop central
 
