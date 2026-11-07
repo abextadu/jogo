@@ -1,0 +1,32 @@
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Python (simulação da economia, Fase 3)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (Fase 5)
+node_modules/
+dist/
+build/
+coverage/
+
+# Logs e temporários
+*.log
+tmp/
+.tmp/
+
+# Configurações locais do Claude Code
+.claude/settings.local.json
