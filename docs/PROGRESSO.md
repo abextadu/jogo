@@ -25,9 +25,10 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 
 **Execução:** lotes de 6 pesquisadores. Quando um termina, entra o próximo da fila.
 
-- **Prontas (6 de 47 fichas):** Melvor Idle (B01), Milky Way Idle (C01), IdleMMO (C04), SimpleMMO (C05), EVE Online (F01), RuneScape/OSRS (F03). Jurídico Brasil (05b) parcialmente gravado.
-- **Rodando:** idle MMOs I (C02–C03), idle MMOs II (C06), Albion (F02), Tibia (F04), jurídico Brasil (05b, seções finais), IdleOn (B02).
-- **Fila, em ordem:** alertas de dinheiro real (G01–G03); PoE, WoW e GW2 (F05–F07); Black Desert e Throne and Liberty (F08–F09); New World e Banana/Bongo Cat (G04–G05); coletâneas de fracassos (G06–G07); teoria do design idle (02a); além do idle (03); jurídico global e pagamentos (05c); Torn, Shakes & Fidget e KoL (D01–D03); técnica (07); OGame e Travian (D04–D05); idle clássicos I (A01–A03, A09); incrementais de nicho (A04–A08); idle RPGs II (B03–B06); mobile AFK (E01–E04); radar 2023–2026 (A10); monetização e retenção (06); mercado e posicionamento (08).
+- **Prontas:** 7 de 47 fichas — Melvor Idle (B01), Milky Way Idle (C01), IdleMMO (C04), SimpleMMO (C05), Shop Titans (C06), EVE Online (F01), RuneScape/OSRS (F03). Estudos: jurídico Brasil (05b).
+- **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
+- **Rodando:** idle MMOs I (C02–C03), Albion (F02), Tibia (F04), IdleOn (B02), alertas de dinheiro real (G01–G03), PoE, WoW e GW2 (F05–F07).
+- **Fila, em ordem:** Black Desert e Throne and Liberty (F08–F09); New World e Banana/Bongo Cat (G04–G05); coletâneas de fracassos (G06–G07); teoria do design idle (02a); além do idle (03); jurídico global e pagamentos (05c); Torn, Shakes & Fidget e KoL (D01–D03); técnica (07); OGame e Travian (D04–D05); idle clássicos I (A01–A03, A09); incrementais de nicho (A04–A08); idle RPGs II (B03–B06); mobile AFK (E01–E04); radar 2023–2026 (A10); monetização e retenção (06); mercado e posicionamento (08).
 - **Onda 2** (depois das fichas F, C e G e do jurídico): economia (04a, 04b) e RMT (05a, 05d).
 
 ## Checklist de entregáveis da Fase 1
