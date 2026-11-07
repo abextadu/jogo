@@ -1,12 +1,22 @@
 # Teoria do design idle: o que GDC, Kongregate e academia sabem sobre o gênero
 
-> **Escopo.** Este estudo reúne a teoria publicada sobre design idle/incremental: as palestras da GDC e a série "The Math of Idle Games" (Anthony Pecorella, Kongregate), os artigos acadêmicos (CHI, CHI PLAY, DiGRA), depoimentos de designers e da comunidade, e a psicologia que costuma ser invocada para explicar o gênero (barras de progresso, metas, recompensa variável, efeito Zeigarnik, loops de compulsão e de domínio). Perguntas que responde: como se calibra o crescimento e o ritmo? Por que o prestígio funciona, e quando passa do ponto? Quando o número que cresce perde o sentido? Como dar decisões ao ausente e recompensa ao ativo? O que acontece com essa matemática quando existe mercado entre jogadores? No fim há um rascunho de 13 "leis do design idle", cada uma com a fonte que a sustenta e um contraexemplo.
+> **Escopo.** Este estudo reúne a teoria publicada sobre design idle/incremental: as palestras da GDC e a série "The Math of Idle Games" (Anthony Pecorella, Kongregate), os artigos acadêmicos (CHI, CHI PLAY, DiGRA), depoimentos de designers e da comunidade, e a psicologia que costuma ser invocada para explicar o gênero (barras de progresso, metas, recompensa variável, efeito Zeigarnik, loops de compulsão e de domínio). Perguntas que responde: como se calibra o crescimento e o ritmo? Por que o prestígio funciona, e quando passa do ponto? Quando o número que cresce perde o sentido? Como dar decisões ao ausente e recompensa ao ativo? O que acontece com essa matemática quando existe mercado entre jogadores? No fim há um rascunho de 14 "leis do design idle", cada uma com a fonte que a sustenta e um contraexemplo.
 >
 > Etiquetas: **[F]** fato com fonte · **[C]** consenso da comunidade · **[H]** hipótese ou análise do estúdio · **[NV]** não verificado. Links acessados em novembro de 2026.
 
 ## Resumo executivo
 
-*(em redação — preenchido ao final)*
+O idle não é um jogo sem decisões. É um jogo em que a decisão é **deslocada no tempo**: o especialista interage menos e planeja mais. A teoria publicada (Pecorella no Kongregate, estudos de CHI, CHI PLAY e DiGRA, designers) converge em cinco ideias.
+
+1. **O motor é uma gangorra:** custo exponencial contra produção polinomial. Calibrar um idle é calibrar o **tempo até a próxima compra significativa**, num "serrote" de esperas e multiplicadores, e não o tamanho dos números.
+2. **A novidade que segura muda uma regra.** O prestígio funciona quando refaz depressa o que já foi dominado, vai mais longe a cada ciclo e devolve os números a uma escala humana. Só multiplicar não basta.
+3. **O ausente planeja e nunca perde.** Esperar é jogar: offline igual ao online, sem hora marcada. O ativo é recompensado em outra moeda, nunca com exclusividade obrigatória.
+4. **A automação é a recompensa natural do domínio.** Quando o jogo não a oferece, o jogador instala um script.
+5. **Percebemos números em escala logarítmica.** Um número enorme só tem sentido se muda alguma decisão.
+
+O ponto mais importante para nós: essa matemática foi feita para jogos solo. **Num mercado comum, renda exponencial é inflação embutida**, como mostram SimpleMMO, Ultima Online, Milky Way Idle e o teto de 32 bits do OSRS. A saída é separar camadas. O exponencial mora nos custos (drenos) e nas camadas pessoais não negociáveis. A moeda e os bens negociáveis ficam em unidades absolutas, com produção limitada pelo tempo, drenos proporcionais e temporadas como prestígio coletivo.
+
+A crítica ética (padrões obscuros, monetização coercitiva, espera vendida como produto) é central num jogo com RMT. O que circula por dinheiro deve ser o que outros jogadores produziram, nunca o fim da espera emitido pelo estúdio nem a taxa do ausente. O estudo termina com 14 leis candidatas, cada uma com fonte e contraexemplo.
 
 ## 1. O que a teoria entende por "idle"
 

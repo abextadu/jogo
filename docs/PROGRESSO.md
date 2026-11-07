@@ -27,8 +27,8 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 
 - **Prontas:** 21 de 47 fichas — Melvor Idle (B01), Legends of IdleOn (B02); os 6 idle MMOs do grupo C (Milky Way Idle, Idle Clans, Idlescape, IdleMMO, SimpleMMO, Shop Titans); EVE Online (F01), Albion Online (F02), RuneScape/OSRS (F03), Tibia (F04), Path of Exile (F05), World of Warcraft (F06), Guild Wars 2 (F07), Black Desert (F08); Diablo III e a casa de leilão (G01), Entropia Universe (G02), New World (G04), Banana e Bongo Cat (G05), economias que colapsaram (G07). Estudos: teoria do design idle (02a), jurídico Brasil (05b).
 - **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
-- **Rodando:** Axie Infinity e Web3 (G03), Throne and Liberty e Lost Ark (F09), idles que morreram (G06), além do idle (03), jurídico global e pagamentos (05c), Torn, Shakes & Fidget e KoL (D01–D03).
-- **Fila, em ordem:** técnica (07); **onda 2** assim que F09, G03, G06 e 05c terminarem — economia (04a, 04b) e RMT (05a, 05d); monetização e retenção (06); mercado e posicionamento (08); OGame e Travian (D04–D05); idle clássicos I (A01–A03, A09); incrementais de nicho (A04–A08); idle RPGs II (B03–B06); mobile AFK (E01–E04); radar 2023–2026 (A10).
+- **Rodando:** Axie Infinity e Web3 (G03), Throne and Liberty e Lost Ark (F09), idles que morreram (G06), além do idle (03), jurídico global e pagamentos (05c), Torn, Shakes & Fidget e KoL (D01–D03), técnica (07).
+- **Fila, em ordem:** **onda 2** assim que F09, G03, G06 e 05c terminarem — economia (04a, 04b) e RMT (05a, 05d); monetização e retenção (06); mercado e posicionamento (08); OGame e Travian (D04–D05); idle clássicos I (A01–A03, A09); incrementais de nicho (A04–A08); idle RPGs II (B03–B06); mobile AFK (E01–E04); radar 2023–2026 (A10).
 - A onda 2 passou à frente das fichas secundárias porque está no caminho crítico da síntese.
 
 ## Checklist de entregáveis da Fase 1
