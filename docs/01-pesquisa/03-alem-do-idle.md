@@ -218,4 +218,168 @@
 - *Torneira de itens para o mercado* → recompensas de run majoritariamente intransferíveis ou em moeda própria.
 - *Conteúdo que se repete* → semente diária e modificadores semanais antes de produzir muito conteúdo novo.
 
-<!-- PARTE A, MECÂNICAS 7 A 11: EM ANDAMENTO -->
+### 7. Crafting com qualidade variável
+
+**O que é.** O mesmo item fabricado pode sair melhor ou pior conforme insumos, perícia, foco e sorte; qualidade vira diferenciação de produto e identidade de quem fabrica.
+
+**Quem faz bem**
+- [F] **Star Wars Galaxies**: os recursos surgiam em jazidas rotativas espalhadas pelos planetas, cada uma com atributos de qualidade próprios e vida útil limitada (um relato de fórum cita de 6 a 21 dias); na etapa final o artesão distribuía pontos de experimentação para ajustar o item ao pedido do cliente, com variação a cada tentativa ([wiki do servidor SWG Restoration](https://swgr.org/wiki/crafting); [SWG Infinity, recursos](https://www.swginfinity.com/server-information/resources); [Q&A oficial, via GameBanshee](https://gamebanshee.com/uyw); vistos via resumo de busca). [H] A qualidade nascia de **informação e timing** (saber qual jazida era boa e estocar), não de sorte pura, e isso criou artesãos famosos.
+- [F] **Albion Online**: o item sai em níveis de qualidade (de Normal a Masterpiece); especialização e foco aumentam a chance de qualidade alta, e a qualidade pode ser rerrolada ([Albion Free Market](https://albionfreemarket.com/crafting); [guildorder](https://guildorder.com/th/games/albion/wiki/crafting-and-gathering); guias da comunidade). Não encontramos as probabilidades oficiais.
+- [F] **Milky Way Idle (idle)**: o aprimoramento é o grande dreno de capital, e o guia recomenda ter "pelo menos 5 bilhões de moedas" antes de aprimorar a sério; o mercado estima o valor de cada item por nível de aprimoramento, recalculado de hora em hora, e usa degraus de preço cinco vezes maiores para itens +1 ou mais ([wiki](https://milkywayidle.wiki.gg/wiki/Milkyway_Idle_Beginner_Guide); [Marketplace](https://milkywayidle.wiki.gg/wiki/Marketplace); `fichas/C01-milky-way-idle.md`).
+- [F] **Black Desert**: cada falha comum soma chance para a próxima tentativa (*failstack*) e a Agris Essence garante 100% quando cheia, uma espécie de "pity" ([wiki oficial, via `fichas/F08-black-desert.md`](https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=48)).
+
+**Quem faz mal**
+- [F] **Path of Exile: o trauma de tirar o determinismo.** No manifesto do patch 3.14 (2021), a GGG disse estar preocupada com o quanto o crafting do Harvest era determinístico e com a facilidade de fazer itens quase perfeitos, e removeu os modificadores mais precisos, admitindo um "heavy nerf" ([manifesto oficial](https://www.pathofexile.com/forum/view-thread/3069670)). [C] A comunidade reagiu argumentando que o corte prejudicava o jogador novo e só favorecia o topo, que já tinha moeda acumulada ([GameRant](https://gamerant.com/path-of-exile-harvest-nerf-fans-upset/); [Destructoid](https://destructoid.com/?p=265083)).
+- [F] **Final Fantasy XIV: qualidade nos insumos virou entulho.** No Endwalker (6.0), os materiais coletados deixaram de ter versão de alta qualidade (HQ), que continuou só no crafting ([Siliconera](https://www.siliconera.com/ffxiv-endwalker-gathering-cuts-high-quality-materials/)); um dos motivos citados foi o inventário, porque HQ e NQ ocupavam dois espaços ([fórum oficial](https://forum.square-enix.com/ffxiv/showthread.php?p=5671626)).
+- [F] **Aprimoramento com destruição** (Black Desert): acima do patamar seguro a falha rebaixa ou destrói o item, o que gera frustração e demanda por itens de loja que protegem a tentativa (`fichas/F08-black-desert.md`).
+
+**Encaixe no idle (teste do ausente)** [H]
+- **A qualidade vem de decisões tomadas antes**: escolha de insumos, especialização, ferramenta e um recurso de "foco" que se acumula offline (como o Focus do Albion). Nada de minigame em tempo real como requisito; o ativo pode ter uma escolha opcional que dá um bônus pequeno.
+- **Qualidade só no produto final, insumos padronizados** (a lição do FFXIV): menos variações, livros de ofertas mais fundos e inventário legível.
+- **Poucos níveis, variância limitada e "pity"**: três a cinco níveis, garantia após N tentativas, chances publicadas.
+- **Assinatura do artesão** no item de alta qualidade, para virar reputação e marca no mercado.
+- **Preço de referência por nível de qualidade**, calculado pelo sistema (como no Milky Way Idle), para o comprador ausente não ser enganado.
+
+**Problema · emoção · comportamento.** [H] Resolve o item fabricado como commodity indiferenciada e o artesão sem identidade · gera surpresa, orgulho da peça-prima e maestria · incentiva especialização, fabricação em volume (que drena insumos) e comércio de peças raras.
+
+**Custo: médio.** Faixas de atributo, rolagem, *pity*, interface e, sobretudo, suporte do mercado a variantes (filtros por qualidade ou livros separados por nível). Baixo se forem poucos níveis fixos.
+
+**Riscos e mitigação**
+- *Frustração com o azar* → *pity*, variância limitada e chances públicas.
+- *Percepção de jogo de azar* → nunca vender por dinheiro itens que aumentam a chance de qualidade; isso aproxima o crafting de loot box (ver `05b-rmt-legal-brasil.md`).
+- *Fragmentação do mercado* → qualidade só em bens finais e poucos níveis.
+- *Tirar o determinismo depois* → definir desde o início quanto do resultado é controlável.
+- *Itens perfeitos que nunca saem de circulação* → durabilidade e destruição parcial (seção 8).
+
+### 8. Profissões interdependentes
+
+**O que é.** As profissões precisam umas das outras (quem coleta abastece quem refina, que abastece quem fabrica), e nenhum jogador consegue, ou compensa, fazer tudo sozinho.
+
+**Quem faz bem**
+- [F] **Albion Online**: todo equipamento é feito por jogadores, numa cadeia coletar → refinar → fabricar → vender → usar → perder → fabricar de novo; as cidades têm bônus de produção diferentes, o que espalha a especialização pelo mapa (`fichas/F02-albion-online.md`, com [Wikipedia](https://en.wikipedia.org/wiki/Albion_Online) e [guildorder](https://guildorder.com/games/albion/wiki/market-arbitrage-and-regional-pricing)). O Black Market cria um piso de demanda para os fabricantes ([GamingOnLinux, 2/6/2017](https://gamingonlinux.com/2017/06/albion-onlines-new-black-market-feature-is-sounding-really-interesting)).
+- [F] **EVE Online**: quase tudo é minerado, fabricado, transportado e vendido por jogadores e depois destruído; em 2025 foram cerca de 1,14 quatrilhão de ISK em naves e itens destruídos, o que mantém a demanda dos produtores (`fichas/F01-eve-online.md`, com [PC Gamer](https://www.pcgamer.com/games/mmo/eve-online-players-destroyed-1-142-260-784-813-930-isk-worth-of-ships-in-2025-which-according-to-my-caveman-level-maths-amounts-to-over-usd6-million-lost-to-the-void/)).
+- [F] **Star Wars Galaxies (antes de 2005)**: cada personagem tinha um teto de pontos de habilidade, de modo que ninguém dominava todas as profissões ao mesmo tempo ([arquivo do SWGEmu, 2007](https://www.swgemu.com/archive/scrapbookv51/data/20070206174400); a cifra de 250 pontos vem de calculadoras de fãs, [West Games](https://west-games.com/swg-skill-tree-calculator/)). O resultado foi uma divisão de trabalho complexa, com jogadores fabricando quase tudo, de armas a casas e droides, e cidades com hospitais e cantinas ([Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_Galaxies)).
+- [F] **Shop Titans (idle mobile)**: o pagante compra tempo e trabalho dos gratuitos via itens fabricados no mercado, e o gratuito vira produtor valorizado (`fichas/C06-shop-titans.md`).
+
+**Quem faz mal**
+- [F] **SWG e a NGE (novembro de 2005).** Uma semana depois da expansão Trials of Obi-Wan, a Sony reduziu as profissões a nove e trocou o combate por um modelo em tempo real. Houve pedidos de reembolso, a Sony acabou oferecendo reembolso a quem pedisse e muitos jogadores saíram; John Smedley defendeu a mudança como necessária e depois admitiu "stupid decisions" ([Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_Galaxies)). [H] Tirar a interdependência depois que os jogadores construíram identidade em torno dela é das mudanças mais destrutivas que um MMO pode fazer.
+- [F] **Base pequena, cadeia rasa.** No Idlescape, a divisão da base em vários modos deixou os livros de ofertas rasos (`fichas/C03-idlescape.md`). [H] Interdependência rígida com pouca gente vira gargalo: se ninguém exerce uma profissão, a cadeia para.
+- [H] **Tudo solável.** O Melvor Idle é solo por desenho e cada jogador faz todas as skills (`fichas/B01-melvor-idle.md`). É ótimo num jogo single-player e péssimo num jogo de mercado: se cada um é autossuficiente, não há o que trocar.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Interdependência "macia"**: qualquer um pode aprender tudo, mas a maestria tem custo crescente ou teto de pontos (o modelo SWG), e a especialização dá bônus (o modelo das cidades do Albion).
+- **Cadeias que rodam offline**: a fila de produção do ausente abastece o mercado; encomendas (seção 9) deixam o ausente atender pedidos sem estar online.
+- **Consumo e perda** em cada elo: ferramentas que gastam, consumíveis de expedição, desgaste do equipamento. Sem destruição, a cadeia satura.
+- **Comprador NPC de último recurso** com preço pior, para a cadeia não travar quando faltar gente numa profissão.
+
+**Problema · emoção · comportamento.** [H] Resolve o jogador autossuficiente que não precisa do mercado nem dos outros · gera pertencimento ("o servidor precisa do meu aço"), reconhecimento e a satisfação de ser bom numa coisa · incentiva especialização, comércio, contratos e guildas de produção.
+
+**Custo: médio a alto.** O código é simples (receitas que pedem insumos de outras profissões); o caro é o desenho do grafo de receitas e a simulação econômica para calibrar oferta e demanda (Fase 3), além do comprador NPC de reserva.
+
+**Riscos e mitigação**
+- *Gargalo por falta de gente* → NPC de reserva a preço ruim e receitas alternativas.
+- *Coleta dominada por bots* → coleta não pode ser a única renda; detecção de padrões e tetos diários por conta.
+- *Arrependimento de especialização* → troca possível, com custo moderado.
+- *Mudar a regra depois* → definir a estrutura de profissões antes do lançamento e nunca "simplificar" de cima para baixo (a NGE).
+
+### 9. Contratos entre jogadores
+
+**O que é.** Acordos registrados pelo sistema, com termos fixos, garantia (*escrow*) e prazo, para o que o livro de ofertas não comporta: encomendas, frete, serviços, pacotes e recompensas por alvo.
+
+**Quem faz bem**
+- [F] **EVE Online**: três tipos de contrato (troca de itens, transporte e leilão), públicos, privados, de corporação ou de aliança. No contrato de transporte, o cliente paga uma recompensa e o transportador deposita um colateral, que vai para o dono se a entrega falhar ([EVE University, Contracts](https://wiki.eveuniversity.org/Contracts), via `fichas/F01-eve-online.md`). [H] O colateral transforma confiança em dinheiro: ninguém precisa confiar em ninguém.
+- [F] **WoW (crafting orders, patch 10.0.2, 15/11/2022)**: o cliente pede quase qualquer receita numa interface parecida com a do leilão, em pedido público, de guilda ou pessoal; oferece uma comissão e pode incluir reagentes opcionais, e o sistema aceita até itens que ficam presos a quem os recebe ([warcraft.wiki.gg](https://warcraft.wiki.gg/wiki/Crafting_order)). [H] Resolve o problema do item personalizado que não cabe num leilão anônimo e dá clientela ao artesão.
+- [F] **Shop Titans**: um pedido de guilda a cada 24 horas, atendido pelos colegas sem imposto (`fichas/C06-shop-titans.md`, com [guia](https://shopkeeper.neocities.org/docs/personal-guides/guide-market)).
+- [F] **SimpleMMO**: recompensas por cabeça, roubo de ouro e Coliseu fazem parte do PvP de navegador ([log de atualizações](https://web.simple-mmo.com/updates), via `fichas/C05-simplemmo.md`).
+
+**Quem faz mal**
+- [F] **Golpe como conteúdo.** O próprio guia da EVE University lista os golpes típicos: colateral inflado seguido de ataque ao transportador numa rota curta ou em zona sem lei, e ofertas com o mesmo item dos dois lados ([EVE University, Contracts](https://wiki.eveuniversity.org/Contracts)). O CCP considera golpes dentro das regras parte do jogo ([CCP](https://www.eveonline.com/article/a-reminder-regarding-scamming-charity-events)).
+- [C] **Vazamento de imposto.** Jogadores do EVE notam que contratos escapam do imposto de venda do mercado ([fórum oficial](https://forums.eveonline.com/t/sales-tax-7-5-percent-assault/479278), via `fichas/F01-eve-online.md`). [H] Se o contrato for mais barato que o mercado, o volume migra para ele e o dreno some.
+
+**Encaixe no idle (teste do ausente)** [H]
+- O contrato é assíncrono por natureza: publicar, sair, e outro aceita e executa com o tempo. O ausente pode ser cliente e fornecedor ao mesmo tempo, porque a fila de produção dele atende encomendas enquanto dorme.
+- **Modelos fechados, não texto livre**: encomenda de fabricação, frete, coleta com prazo, defesa de território alugada. O sistema guarda o pagamento e o colateral e executa sozinho.
+- **Reputação calculada pelo sistema** (contratos cumpridos, atrasos, valor movimentado), visível no perfil.
+- **Mesma taxa do mercado**, para o contrato não virar rota de fuga do dreno.
+
+**Problema · emoção · comportamento.** [H] Resolve o comércio de serviços e de itens sob medida, que o mercado anônimo não faz · gera confiança, empreendedorismo e reputação · incentiva especialização, clientela recorrente e logística de guilda.
+
+**Custo: médio.** *Escrow*, máquina de estados (aberto, aceito, cumprido, expirado, falhado), modelos de contrato, tratamento de disputa e interface. Baixo se começar só com encomendas de fabricação.
+
+**Riscos e mitigação**
+- *Golpes* → termos fixos verificados pelo sistema, identidade do item visível e alertas de preço fora da curva.
+- *Fuga de imposto* → taxa igual à do mercado.
+- *Lavagem de RMT ilegal* → contratos muito assimétricos e contas novas sob limite e monitoramento (ver `04b`).
+- *Spam* → taxa de publicação não reembolsável.
+
+### 10. Eventos ao vivo
+
+**O que é.** Conteúdo temporário com data marcada (festival, invasão, show, campanha narrativa), anunciado com antecedência, que muda regras, recompensas ou a história do mundo por um período.
+
+**Quem faz bem**
+- [F] **Fortnite (Astronomical, abril de 2020)**: a primeira sessão do show de Travis Scott teve 12,3 milhões de jogadores simultâneos, recorde do jogo (o anterior, o show de Marshmello em fevereiro de 2019, tivera 10,7 milhões); o evento foi repetido em cinco sessões entre 23 e 25 de abril, com 27,7 milhões de jogadores únicos ([GamesRadar](https://gamesradar.com/fortnite-travis-scott-event-sees-123-million-players-in-first-show); [Game Developer](https://gamedeveloper.com/business/-i-fortnite-s-i-virtual-travis-scott-gig-attracted-a-record-12-3-million-concurrent-players); [PocketGamer.biz](https://www.pocketgamer.biz/fortnites-astronomical-travis-scott-concert-player-record)). [H] Repetir o momento em vários horários é o que torna um evento "ao vivo" acessível a um público global.
+- [F] **Pokémon GO (Community Day)**: evento mensal de algumas horas, desde 20/01/2018, com mais aparições de um Pokémon, mais chance de versão rara (*shiny*) e um golpe exclusivo para quem evolui durante o evento ([Wikipedia](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go)). Os eventos presenciais renderam US$ 249 milhões em turismo em 2019 (mesma fonte).
+- [F] **Helldivers 2 (Major Orders)**: missões coletivas que movem a "Guerra Galáctica"; a trama avança em tempo real conforme decisões da comunidade, e a equipe observava os jogadores e interferia no jogo ao vivo nos primeiros meses. Na Major Order de 11/06/2024, os jogadores podiam libertar um planeta que dava minas antitanque ou outro em que crianças estavam presas; os desenvolvedores esperavam as minas, e a comunidade escolheu salvar as crianças ([Wikipedia](https://en.wikipedia.org/wiki/Helldivers_2)).
+- [F] **Idle Clans (idle)**: nos eventos sazonais, o servidor doa itens de evento a um estoque comum que liga um bônus global de XP de 2% a 25%, e o estoque escoa a cada hora ([anúncio oficial, out/2026](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114033648), via `fichas/C02-idle-clans.md`). [H] É o evento ao vivo nativo de idle: todo mundo contribui com o que produz, online ou não.
+
+**Quem faz mal**
+- [F] **Infraestrutura que cai no dia do evento.** No primeiro evento presencial do Pokémon GO (Chicago, julho de 2017), mais de 20 mil ingressos esgotaram em meia hora, a rede celular local não aguentou, a Niantic reembolsou todos e deu US$ 100 em moeda do jogo a cada um, e cerca de duas dezenas de participantes processaram a empresa ([Wikipedia](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go)).
+- [F] **Tirar uma conveniência de evento.** Em agosto de 2021, a Niantic desfez mudanças da pandemia (o raio de interação voltou de 80 para 40 metros); houve boicote com a hashtag #HearUsNiantic e o raio de 80 metros voltou em 26/08/2021 ([Wikipedia](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go)).
+- [F] **Evento como torneira.** No EVE, itens de eventos como Crimson Harvest e Winter Nexus aparecem entre as fontes de ISK do mês ([TAGN, nov/2025](https://tagn.wordpress.com/2025/11/14/the-october-2025-eve-online-monthly-economic-report/), via `fichas/F01-eve-online.md`).
+- [H] **FOMO como motor.** Cosmético exclusivo que nunca volta pune quem estava fora na semana do evento. É o oposto do respeito ao ausente.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **A moeda do evento cai da atividade idle normal**, então o ausente participa só por ter a fila rodando; o ativo ganha mais nas atividades especiais do evento.
+- **Eventos de uma a três semanas**, com metas por patamar, e momentos ao vivo (o "show", a batalha final) repetidos em horários para Américas, Europa e Ásia.
+- **Meta coletiva alimentada pela produção de todos** (o modelo Idle Clans; ver seção 18).
+- **Exclusivos que voltam**: cosméticos de evento retornam em edições futuras ou numa loja de recuperação, para tirar o peso do FOMO.
+- **Orçamento de torneira por evento**: recompensas negociáveis com teto; o resto em cosmético e material intransferível.
+
+**Problema · emoção · comportamento.** [H] Resolve a rotina sem picos e a falta de assunto comum · gera expectativa, celebração coletiva e "eu estava lá" · incentiva retorno de jogadores afastados, compras sazonais e conteúdo de criadores.
+
+**Custo: médio para construir, alto para operar.** Um motor de eventos dirigido por dados (agenda, moeda temporária, loja, regras configuráveis) é investimento médio e único; a cadência (eventos novos todo mês) exige equipe de conteúdo e de operação contínuas. Eventos também concentram carga no servidor e pedem teste de carga.
+
+**Riscos e mitigação**
+- *Servidor cair no pico* → teste de carga antes de cada evento grande e filas de entrada; a infraestrutura própria (VPS) é o ponto mais sensível.
+- *Inflação de evento* → orçamento de torneira e recompensas intransferíveis.
+- *FOMO e culpa* → exclusivos que retornam e participação passiva.
+- *Fadiga de eventos repetidos* → rodízio de formatos e eventos maiores mais espaçados.
+- *Retirar o que o evento deu* → anunciar desde o início o que é temporário.
+
+### 11. Janelas curtas de jogo ativo com recompensa alta
+
+**O que é.** Momentos breves (de segundos a algumas horas) em que estar presente rende muito mais que o normal: um bônus que aparece na tela, uma hora com multiplicador, uma guerra diária, um evento de clã com recarga.
+
+**Quem faz bem**
+- [F] **Cookie Clicker (golden cookies)**: aparecem de tempos em tempos em lugares aleatórios, somem depois de alguns segundos e, clicados, dão efeitos como um aumento temporário da produção ([Wikipedia](https://en.wikipedia.org/wiki/Cookie_Clicker)). [H] É o arquétipo da recompensa ativa num idle: o ausente não perde nada, o presente ganha um pico.
+- [F] **Pokémon GO (Community Day)**: algumas horas por mês com aparições e chances de raridade muito acima do normal ([Wikipedia](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go)).
+- [F] **Idle Clans (eventos de clã)**: 4 eventos de coleta e 3 de produção por membro por dia, com recarga ([wiki, Clan](https://idleclans.wiki/w/Clan), via `fichas/C02-idle-clans.md`). [H] A cota diária com recarga é uma janela ativa sem horário fixo.
+- [F] **Legends of IdleOn**: corridas "boosted" semanais nas masmorras em grupo ([wiki, Dungeons](https://idleon.wiki/wiki/Dungeons)), e **IdleMMO**, que reserva ao ativo mercado, leilões, contratos e "eventos de toque na tela" ([patch notes](https://web.idle-mmo.com/patch-notes), via `fichas/C04-idlemmo.md`).
+
+**Quem faz mal**
+- [F] **Horário fixo de um fuso só.** No Black Desert, há Node War todo dia em horário fixo, e o sábado é da Conquest War ([wiki oficial, via `fichas/F08-black-desert.md`](https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=56)). [H] Para um público do Brasil e do mundo, a janela fixa escolhe quem pode jogar.
+- [H] **Janela que vira obrigação.** Se a janela rende muito mais que o idle, perder a janela passa a parecer perda, e o jogo volta a exigir presença (o mesmo efeito da Soul Ash de Torghast, seção 6).
+- [H] **Reflexo em vez de decisão.** O clique rápido do golden cookie é fácil de automatizar com *autoclicker*; num jogo com mercado e RMT, janela que premia reflexo premia bot.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Oportunidades que se acumulam**: em vez de o bônus aparecer só para quem está online, o jogo gera "cargas de oportunidade" enquanto o jogador está fora (uma a cada X horas, até um teto). Ao voltar, ele decide quando gastá-las. O ausente não perde a oportunidade, só a adia, e se sente esperto por escolher o momento.
+- **Janelas agendadas que rotacionam** entre fusos e se repetem no dia (o modelo das sessões do Fortnite, seção 10).
+- **Decisão, não reflexo**: a janela pede escolhas (qual alvo, qual receita, qual rota), validadas no servidor.
+- **Recompensa alta, mas com teto diário** e majoritariamente intransferível.
+
+**Problema · emoção · comportamento.** [H] Resolve o idle sem motivo para abrir o jogo e sem picos de emoção · gera excitação, "jackpot" e a sensação de jogar de verdade · incentiva sessões ativas curtas, notificações aceitas e retorno no horário certo.
+
+**Custo: baixo a médio.** Bônus temporários e cargas reaproveitam a fila e os multiplicadores que o idle já tem (baixo). Janelas coletivas agendadas pedem agenda, notificações e balanceamento (médio).
+
+**Riscos e mitigação**
+- *FOMO e culpa* → cargas acumuláveis com teto generoso.
+- *Exclusão por fuso* → rotação e repetição.
+- *Bots* → decisões validadas no servidor, sem prêmio por velocidade de clique.
+- *Torneira econômica* → recompensas com teto e intransferíveis.
+- *Pressão para ficar online* → nada de bônus que exija presença contínua; a janela é curta por definição.
+
+---
+
+## Parte B — Mecânicas reveladas pela pesquisa
+
+<!-- PARTE B, MECÂNICAS 12 A 18: EM ANDAMENTO -->

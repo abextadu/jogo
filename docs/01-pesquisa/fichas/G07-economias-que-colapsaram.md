@@ -107,7 +107,7 @@
 ### 2.13 Counter-Strike 2 (2025): o próprio dono muda a oferta
 
 - [F] Em 23/10/2025, a Valve passou a aceitar 5 itens "Covert" em troca de uma faca ou luva (Trade Up Contract). Em horas, o valor de mercado das skins caiu cerca de 15%, de mais de US$ 6,3 bilhões para US$ 5,3 bilhões, e chegou a US$ 4,2 bilhões, pelo PricEmpire. Pelo CSFloat, até 5,5 milhões de facas e luvas poderiam entrar, o que dobraria o estoque ([Mein-MMO, 23/10/2025](https://mein-mmo.de/en/counter-strike-2-trade-up-update-markt-crash,1533409)).
-- [F] Jogadores acusaram a Valve de manipular o mercado e pediram regras à Comissão Europeia (mesma fonte).
+- [F] Jogadores acusaram a Valve de manipular o mercado e pediram regras à Comissão Europeia (mesma fonte). A [G05](G05-banana-e-bongo-cat.md) reúne outras medições da queda, todas estimativas de terceiros.
 - **Causa-raiz:** mudança de regra que multiplicou a oferta de um item usado como reserva de valor, sem aviso nem transição.
 - [H] Num mercado com saída em dinheiro, o patch do designer é política monetária. Quem guardou valor no item perde dinheiro de verdade da noite para o dia.
 
