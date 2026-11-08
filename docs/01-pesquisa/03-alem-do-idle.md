@@ -187,4 +187,35 @@
 - *"Snipe" no corte do ranking diário* → corte em horário aleatório ou pontuação média do período.
 - *Prêmio de ranking com valor em dinheiro* → prêmios intransferíveis.
 
-<!-- PARTE A, MECÂNICAS 6 A 11: EM ANDAMENTO -->
+### 6. Runs estilo roguelite
+
+**O que é.** Incursões curtas e autocontidas, com mapa e escolhas aleatórias, poder temporário que some ao fim e uma recompensa permanente que alimenta a progressão "de fora" (meta-progressão).
+
+**Quem faz bem**
+- [F] **Loop Hero**, o roguelite mais próximo do idle: o herói anda sozinho por um circuito e luta automaticamente; o jogador só posiciona cartas de terreno que mudam o mapa. Morrer custa 70% dos recursos da expedição; recuar fora de combate custa 40% se o herói estiver longe do acampamento, e nada se estiver nele. O que volta alimenta a construção do acampamento, que fortalece o herói ([Wikipedia](https://en.wikipedia.org/wiki/Loop_Hero)). A crítica da Ars Technica o leu como uma versão do gênero idle (mesma fonte). [H] A decisão de **quando recuar** é a essência: risco escolhido, nunca imposto.
+- [F] **Slay the Spire (Daily Climb)**: uma tentativa por dia, com condições e semente aleatória fixas, iguais para todos ([Wikipedia](https://en.wikipedia.org/wiki/Slay_the_Spire)). [H] Semente comum torna a comparação justa e dá assunto à comunidade ("viu a run de hoje?").
+- [F] **Backpack Battles**: a run acaba em 10 vitórias ou 5 derrotas, contra builds de outros jogadores ([Wikipedia](https://en.wikipedia.org/wiki/Backpack_Battles)), o que junta roguelite e PvP assíncrono (seção 4).
+- [F] **Legends of IdleOn**: masmorras instanciadas, solo ou com até 10 jogadores, com multiplicador de drop de 1 (solo) a cerca de 3,16 (dez pessoas) e corridas "boosted" semanais ([wiki, Dungeons](https://idleon.wiki/wiki/Dungeons), via `fichas/B02-legends-of-idleon.md`). É a run ativa dentro de um idle.
+
+**Quem faz mal**
+- [F] **WoW: Torghast (Shadowlands, 2020).** A torre roguelite dava a Soul Ash, moeda semanal exigida para fabricar os itens lendários. Antes do patch 9.1, o grupo tinha um limite de mortes; esgotado, surgia o Tarragrue, que matava com um golpe e encerrava a run ([warcraft.wiki.gg](https://warcraft.wiki.gg/wiki/Torghast,_Tower_of_the_Damned)). [C] A queixa central era sair sem nada depois de uma run longa e falhada; o patch 9.1 trocou o "passa ou falha" por pontuação e tirou o limite de mortes ([PC Gamer](https://pcgamer.com/world-of-warcrafts-roguelike-dungeon-is-being-overhauled-so-that-failing-to-beat-it-wont-ruin-your-night); [Mein-MMO](https://mein-mmo.de/en/wow-torghast-is-heavily-criticized-as-blizzard-removes-the-fun,630461); [fórum oficial](https://us.forums.blizzard.com/en/wow/t/it-still-astounds-me-how-badly-blizzard-botched-torghast/1719660?page=5)). [H] Três erros juntos: obrigatório para o poder, longo e com perda total na falha.
+- [F] **Modos de desafio sem nada compartilhado.** O Melvor Idle tem modos em saves separados (Hardcore, Adventure, Ancient Relics), mas nenhum tem ranking ou temporada compartilhada ([wiki, Game Mode](https://wiki.melvoridle.com/w/Game_Mode), via `fichas/B01-melvor-idle.md`). [H] Num idle multiplayer, a run solitária desperdiça o principal ativo do jogo, que é a comparação com os outros.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Run com piloto automático e pontos de decisão**: o personagem avança sozinho (Loop Hero) e a run para em encruzilhadas (rota, relíquia, recuar ou seguir). O ausente pode deixar **regras de decisão** prontas ("recuar se a vida cair abaixo de 30%"), e o ativo decide na hora e ganha um bônus pequeno pela atenção.
+- **Recuar sempre é possível e a falha nunca zera tudo**: perda parcial e conhecida (os 70% e 40% do Loop Hero são um bom ponto de partida para calibrar).
+- **Entradas acumuláveis** e run curta (15 a 30 minutos de tempo de jogo), para caber numa janela ativa (seção 11).
+- **Semente diária comum** com ranking por percentil: vira conteúdo social sem PvP direto.
+- **A recompensa permanente não é obrigatória para o poder central**: é atalho, cosmético ou material extra, nunca o único caminho (a lição de Torghast).
+
+**Problema · emoção · comportamento.** [H] Resolve a monotonia do loop idle e dá variação de curto prazo · gera tensão, surpresa e a "história da run" · incentiva sessões ativas curtas, experimentação de builds e retorno diário pela semente nova.
+
+**Custo: médio.** Geração procedural de mapas e eventos, pool de relíquias e balanceamento combinatório. O combate automático já existe; o custo real está em conteúdo (variedade suficiente para as runs não se repetirem), como a crítica da IGN a Backpack Battles aponta ([Wikipedia](https://en.wikipedia.org/wiki/Backpack_Battles)).
+
+**Riscos e mitigação**
+- *Run obrigatória para o poder* → recompensa como atalho ou bônus, com caminho idle equivalente mais lento.
+- *Falha punitiva* → pontuação em vez de passa ou falha; perda parcial.
+- *Torneira de itens para o mercado* → recompensas de run majoritariamente intransferíveis ou em moeda própria.
+- *Conteúdo que se repete* → semente diária e modificadores semanais antes de produzir muito conteúdo novo.
+
+<!-- PARTE A, MECÂNICAS 7 A 11: EM ANDAMENTO -->

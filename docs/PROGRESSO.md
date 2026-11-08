@@ -25,11 +25,11 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 
 **Execução:** lotes de 6 pesquisadores. Quando um termina, entra o próximo da fila.
 
-- **Prontas:** 22 de 47 fichas — Melvor Idle (B01), Legends of IdleOn (B02); os 6 idle MMOs do grupo C (Milky Way Idle, Idle Clans, Idlescape, IdleMMO, SimpleMMO, Shop Titans); todo o grupo F (EVE, Albion, RuneScape/OSRS, Tibia, Path of Exile, WoW, Guild Wars 2, Black Desert, Throne and Liberty/Lost Ark); Diablo III e a casa de leilão (G01), Entropia Universe (G02), New World (G04), Banana e Bongo Cat (G05), economias que colapsaram (G07). Estudos: teoria do design idle (02a), jurídico Brasil (05b).
+- **Prontas:** 24 de 47 fichas — Melvor Idle (B01), Legends of IdleOn (B02); os 6 idle MMOs do grupo C (Milky Way Idle, Idle Clans, Idlescape, IdleMMO, SimpleMMO, Shop Titans); Torn (D01); todo o grupo F (EVE, Albion, RuneScape/OSRS, Tibia, Path of Exile, WoW, Guild Wars 2, Black Desert, Throne and Liberty/Lost Ark); Diablo III e a casa de leilão (G01), Entropia Universe (G02), Axie Infinity e Web3 (G03), New World (G04), Banana e Bongo Cat (G05), economias que colapsaram (G07). Estudos: teoria do design idle (02a), jurídico Brasil (05b); além do idle (03) parcialmente gravado.
 - **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
-- **Rodando:** Axie Infinity e Web3 (G03), idles que morreram (G06), além do idle (03), jurídico global e pagamentos (05c), Torn, Shakes & Fidget e KoL (D01–D03), técnica (07), monetização e retenção (06).
-- **Fila, em ordem:** **onda 2** assim que G03, G06 e 05c terminarem — economia (04a, 04b) e RMT (05a, 05d); mercado e posicionamento (08); OGame e Travian (D04–D05); idle clássicos I (A01–A03, A09); incrementais de nicho (A04–A08); idle RPGs II (B03–B06); mobile AFK (E01–E04); radar 2023–2026 (A10).
-- A onda 2 passou à frente das fichas secundárias porque está no caminho crítico da síntese.
+- **Rodando no Opus:** idles que morreram (G06), além do idle (03), jurídico global e pagamentos (05c), Shakes & Fidget e KoL (D02–D03), técnica (07), monetização e retenção (06).
+- **Rodando no Sonnet:** idle clássicos I (A01–A03, A09), incrementais de nicho (A04–A08), idle RPGs II (B03–B06), mobile AFK (E01–E04).
+- **Fila:** **onda 2** no Opus assim que G06 e 05c terminarem — economia (04a, 04b) e RMT (05a, 05d); mercado e posicionamento (08) no Opus; OGame e Travian (D04–D05) e radar 2023–2026 (A10) no Sonnet.
 
 ## Checklist de entregáveis da Fase 1
 
@@ -68,6 +68,7 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 | 2026-11-06 | Acesso à web confirmado: a pesquisa usa fontes reais, com link. | Claude |
 | 2026-11-06 | Repositório: https://github.com/abextadu/jogo (branch `main`). Commits com o e-mail privado (noreply) do GitHub. | Gabriel |
 | 2026-11-06 | Pesquisa em duas ondas, com subagentes em paralelo, seguindo `METODOLOGIA.md`. | Claude |
+| 2026-11-07 | Fichas secundárias (idle clássicos, incrementais de nicho, idle RPGs II, mobile AFK, OGame/Travian, radar 2023–2026) pesquisadas com o Sonnet; o resto segue no Opus. | Gabriel |
 | 2026-11-06 | Ampliação da lista de jogos além do mínimo pedido: Egg Inc., Shop Titans, Guild Wars 2, Black Desert, Throne and Liberty/Lost Ark, Entropia Universe, Axie Infinity/Web3, New World, Banana/Bongo Cat e radar 2023–2026. | Claude |
 
 ## Pendências e decisões aguardando o Gabriel

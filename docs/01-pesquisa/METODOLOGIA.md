@@ -50,6 +50,10 @@ Regras:
   - Receita mobile: posts públicos da Sensor Tower, AppMagic, data.ai, Mobilegamer.biz, PocketGamer.biz, Naavik, Deconstructor of Fun.
   - Postmortems e palestras: GDC Vault, Game Developer (gamedeveloper.com), blogs oficiais, dev diaries, entrevistas.
   - Economia: relatórios mensais de economia do EVE (MER), dev blogs do Albion, posts da Jagex, Edward Castronova, Lehdonvirta & Castronova (*Virtual Economies*, MIT Press, 2014), textos de Raph Koster.
+- **Lições práticas da onda 1:**
+  - O endpoint JSON de reviews do Steam costuma redirecionar para a página inicial. Use as páginas da comunidade: `https://steamcommunity.com/app/<APPID>/negativereviews/?browsefilter=mostrecent&filterLanguage=all` (10 reviews por página).
+  - Reddit e várias wikis (RuneScape, Tibia, Albion, poewiki, wiki.gg de alguns jogos) bloqueiam o WebFetch (403/402). Use os trechos da busca e diga de onde veio o dado.
+  - A cota de WebSearch é compartilhada entre os pesquisadores. Prefira poucas buscas bem formuladas.
 - Garimpe as reclamações de verdade: reviews negativas do Steam e da Play Store, threads como "why I quit", "is X dead", "X is pay to win", tópicos de fórum oficial. Procure padrões e quantifique quando possível.
 - Estude controvérsias e erros com o mesmo cuidado que os acertos: mudanças impopulares, nerfs, monetização predatória, bots, exploits, servidores fechados.
 
