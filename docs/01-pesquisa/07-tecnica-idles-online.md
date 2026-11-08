@@ -175,3 +175,51 @@ Três jeitos de resolver os drops do ausente:
   - **Resolve** a inflação embutida e o estouro técnico.
   - **Incentiva** a investir na camada pessoal (o "número subindo") e a negociar bens com preço legível.
   - **Risco:** a camada negociável parecer pouco "idle" e o jogo perder a sensação de crescimento ([02a](02a-teoria-design-idle.md), "como pode dar errado"). Também é preciso prever desde o início uma unidade de alta denominação e regras de conversão, para não repetir o remendo do OSRS.
+
+## 4. Sincronização de save
+
+### 4.1 Onde mora o estado
+
+| Modelo | Exemplo | Conflito entre dispositivos | Serve para economia? |
+|---|---|---|---|
+| Save só no aparelho | Melvor no modo offline | Não existe; cada aparelho é um jogo | Não: o save é editável |
+| Save no aparelho + cópia na nuvem | Melvor com nuvem; Saved Games do Google Play | Resolvido por política (o mais recente, o de mais tempo de jogo) ou por fusão feita pelo jogo | Não: a nuvem guarda o que o cliente mandar |
+| Local-first com fusão automática (CRDT) | apps de edição colaborativa | Fusão automática de edições concorrentes | Não: recurso escasso não se "funde" |
+| Estado no servidor, cliente como tela | idle MMOs (C01–C05) | Não há dois estados; há comandos concorrentes | Sim |
+| Estado no servidor + cliente otimista que se reconcilia | Replicache | O servidor reexecuta os comandos; o cliente refaz os pendentes sobre o estado oficial | Sim, com cuidado |
+
+- [F] **O custo do save no cliente.** No Melvor, 35 das 80 reviews negativas de 2026 tratam de conexão, save ou bugs: 12 relatam perda de save, local ou na nuvem, e 14 reclamam de exigir internet num jogo solo. O FAQ admite que os saves não têm backup no Steam e que a nuvem sincroniza sozinha a cada 12 horas, o que permite sobrescrever por engano (ficha [B01, §11](fichas/B01-melvor-idle.md)). [H] É o pior dos dois mundos: o jogo exige rede, mas a rede não protege o progresso.
+- [F] **Política de conflito do Google Play.** O serviço de jogos salvos oferece políticas para resolver conflitos entre versões: ficar com a de maior tempo de jogo, com a modificada mais recentemente, com a base ou com a remota, ou não resolver nada e deixar a fusão para o jogo; nesse caso, o jogo não pode ler nem gravar o save até resolver o conflito ([Android Developers, Saved Games, SDK v1](https://developer.android.com/games/pgs/v1/cpp/saved-games)). [H] Toda política automática joga fora o progresso de um dos aparelhos. Num jogo solo, isso irrita; num jogo com mercado, "ficar com a versão de maior tempo de jogo" pode ressuscitar ouro já gasto em outro aparelho, um dupe entregue de bandeja.
+- [F] **Local-first** é a linha de pesquisa que propõe manter os dados no aparelho e fundir edições concorrentes com estruturas que convergem sozinhas (CRDTs), sem depender do servidor ([Kleppmann, Wiggins, van Hardenberg e McGranaghan, Ink & Switch, 2019](https://www.inkandswitch.com/local-first/)). [H] Funciona para texto e listas, em que duas edições podem coexistir. Não funciona para ouro e itens: duas compras do mesmo item único com o mesmo ouro não podem "coexistir".
+- [F] **Cliente otimista com servidor autoritativo.** No Replicache, cada comando roda na hora no cliente e fica guardado como "pendente", com um número sequencial por cliente. O servidor recebe os pendentes em lote, reexecuta cada comando com a lógica dele, e o resultado do servidor é o oficial. O cliente então volta ao último estado oficial, aplica a atualização e reaplica os pendentes que sobraram (*rebase*). Os números de sequência garantem que nada seja aplicado duas vezes, e os conflitos se resolvem na lógica de cada comando ([documentação do Replicache](https://doc.replicache.dev/concepts/how-it-works)).
+
+### 4.2 Conflito entre dispositivos num jogo autoritativo
+
+- [H] Com o estado no servidor, não existem "dois saves". Existem dois aparelhos mandando comandos ao mesmo tempo (o celular lista um item enquanto o PC o equipa). As regras:
+  1. **Ordem por conta:** os comandos de uma conta passam por um ponto de serialização (trava por conta ou por personagem no banco), e cada comando valida o estado do momento em que roda, não o que o aparelho via.
+  2. **Versão por personagem:** o cliente manda a versão do estado que viu; se ela mudou, o servidor recusa ou revalida, e o cliente recarrega (concorrência otimista).
+  3. **Chave de idempotência** em todo comando que move valor (2.4), para que o reenvio depois de uma queda não execute duas vezes.
+  4. **Uma sessão "de controle" por conta, várias de leitura:** o segundo aparelho pode ver tudo, mas, para agir, assume o controle e o primeiro é avisado. É mais simples para o jogador e, de quebra, é uma das defesas contra multicontas e fazendas listadas na ficha [G05, §13](fichas/G05-banana-e-bongo-cat.md).
+- [F] **Referências de limite por conta no gênero:** o IdleMMO permite até 5 personagens, com no máximo 3 rodando ações ao mesmo tempo ([C04, §5](fichas/C04-idlemmo.md)); o Milky Way Idle, até 4, só 1 deles com acesso ao mercado ([C01, §7.2](fichas/C01-milky-way-idle.md)).
+
+### 4.3 PWA offline-first com reconciliação
+
+- [H] **O que o cliente pode fazer sem rede:** mostrar o último estado conhecido (inventário, filas, preços com a data da cotação), projetar visualmente o progresso a partir do horário de término que o servidor mandou, e rascunhar planos (reordenar a fila, preparar uma lista de vendas).
+- [H] **O que ele não pode fazer:** concluir qualquer coisa que mova valor. Comandos feitos sem rede entram numa fila local, cada um com chave de idempotência e prazo de validade ("vender a 12 de ouro, válido por 10 minutos"). Na volta, o servidor revalida um a um; o que não vale mais (o preço mudou, o item foi usado no outro aparelho) é recusado com explicação, e o cliente refaz a tela sobre o estado oficial, no modelo do Replicache.
+- [H] **Regra de interface:** ganho "previsto" e ganho "confirmado" têm visual diferente. O jogador nunca vê como dele algo que o servidor ainda não liquidou; isso evita a sensação de "o jogo me roubou" quando a reconciliação corrige a previsão.
+- [H] **As quatro perguntas, para o cliente otimista:**
+  - **Inspira-se no** Replicache e se diferencia do save na nuvem do Melvor e do Google Play: não há fusão de estados, só reexecução de comandos.
+  - **Resolve** a rede ruim do celular (metrô, 4G instável) sem abrir mão da autoridade.
+  - **Incentiva** a abrir o app em qualquer lugar e planejar mesmo sem rede.
+  - **Risco:** previsões erradas frustram, e a fila offline vira vetor de abuso se o servidor confiar no horário do aparelho (a "venda feita às 10h" que chega às 11h vale pelo horário do servidor).
+
+### 4.4 O navegador apaga dados
+
+- [F] **Por padrão, o armazenamento do navegador é "melhor esforço".** Persiste enquanto houver cota e espaço; o pedido de armazenamento persistente (`navigator.storage.persist()`) abre um aviso no Firefox e é decidido sozinho, pelo histórico de uso, no Safari e no Chrome. Quando o navegador despeja dados, apaga **tudo** daquela origem de uma vez. O Safari, com a prevenção de rastreamento ligada, apaga os dados criados por script de um site que passe 7 dias sem interação do usuário ([MDN](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)).
+- [F] **A regra dos 7 dias e os apps da tela inicial.** Desde mar/2020, o WebKit apaga IndexedDB, LocalStorage, SessionStorage e registros e caches de service worker depois de 7 dias de uso do Safari sem interação com o site. Apps adicionados à tela inicial não fazem parte do Safari e têm contador próprio, zerado pelo uso do app; o WebKit diz não esperar que os dados próprios desses apps sejam apagados ([WebKit, John Wilander, 24/mar/2020](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/)).
+- [H] **Implicação:** o cache do cliente é descartável por definição. Num jogo autoritativo isso é tranquilo, porque nada se perde quando o navegador limpa. Mas a fila de comandos offline (4.3) pode sumir junto: ela deve ser pequena, curta e reenviada assim que houver rede. É mais um motivo para incentivar a instalação do PWA no iPhone (seção 7).
+
+### 4.5 Backup é rollback
+
+- [F] O PostgreSQL permite recuperação para um ponto no tempo a partir de um backup base mais o arquivamento contínuo do log de transações (WAL) ([documentação](https://www.postgresql.org/docs/current/continuous-archiving.html)).
+- [H] Restaurar o banco inteiro para antes de um incidente é um *rollback* global, e rollback é uma das fábricas clássicas de dupe (seção 5.1): o que saiu de uma conta depois do ponto de restauração volta a existir, e o que entrou em outra pode já ter sido trocado. Com o ledger (2.5), a correção preferida é cirúrgica: estornar os lançamentos do incidente, conta a conta, preservando o honesto, como a ficha [G04, §13](fichas/G04-new-world.md) recomenda.
