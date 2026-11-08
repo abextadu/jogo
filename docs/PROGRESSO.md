@@ -30,8 +30,8 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 - **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
 - **Rodando no Opus:** além do idle (03), jurídico global e pagamentos (05c), Kingdom of Loathing (D03), técnica (07), monetização e retenção (06), mercado e posicionamento (08); **onda 2:** economia — fontes, drenos e inflação (04a) e mercados, proteções e bots (04b).
 - **Grupo E completo** (E04 = Capybara Go!, escolhido por dados de receita).
-- **Prontas depois do último balanço:** Egg Inc. (A09) e Capybara Go! (E04) — 41 de 47 fichas.
-- **Rodando no Sonnet:** Kittens Game e Trimps (A07–A08), OGame e Travian (D04–D05), radar 2023–2026 (A10).
+- **Prontas depois do último balanço:** Egg Inc. (A09), Capybara Go! (E04), Kittens Game (A07) e Trimps (A08) — **43 de 47 fichas**. Faltam: radar 2023–2026 (A10), Kingdom of Loathing (D03), OGame (D04), Travian (D05).
+- **Rodando no Sonnet:** OGame e Travian (D04–D05), radar 2023–2026 (A10).
 - **Fila:** RMT (05a, 05d) no Opus assim que o 05c terminar.
 
 ## Checklist de entregáveis da Fase 1
