@@ -174,7 +174,8 @@ Não encontrado: número confiável de jogadores ativos do Axie em 2026 (as font
 19. [[Regulatory Republic] The trendy money-making game (P2E) can't run fast in Korea](https://www.asiae.co.kr/en/article/2022011110193915583) — imprensa (KR) — 11/1/2022.
 20. [BKL Legal Update](https://www.bkl.co.kr/en/law/insight/newsletter/5356) — escritório de advocacia (KR) — 2022 (conteúdo via buscador).
 21. [Popular NFT games made in South Korea, and banned in South Korea](https://forkast.news/south-korea-nft-play-to-earn-games-still-banned/) — imprensa — 2024.
-22. [Inside South Korea's wild plan to dominate the metaverse](https://cointelegraph.com/magazine/inside-south-korea-wild-plan-dominate-metaverse) — imprensa — 2026 (conteúdo via buscador).
+22. [Inside South Korea's wild plan to dominate the metaverse](https://cointelegraph.com/magazine/inside-south-korea-wild-plan-dominate-metaverse) — imprensa — c. 2022 (data não confirmada; conteúdo via buscador).
+22a. [South Korea's failure to lift ban on P2E games discourages game makers](https://coingeek.com/south-korea-failure-to-lift-ban-on-p2e-games-discourages-game-makers-report/) — imprensa — c. 2025 (conteúdo via buscador).
 23. [MIR4 officially launching in 170 countries](https://www.invenglobal.com/articles/14934/blockbuster-mmorpg-mir4-officially-launching-in-170-countries-and-12-languages-on-august-26) — imprensa — ago/2021.
 24. [MIR4 passa de 1,3 milhão de simultâneos](https://gamebiz.jp/news/337835) — imprensa (JP) — 23/11/2021.
 25. [Blockchain game MIR4 gains global popularity despite ban in South Korea](https://forkast.news/blockchain-game-mir4-gains-global-popularity-despite-ban-in-south-korea/amp/) — imprensa — 2021.
@@ -184,7 +185,7 @@ Não encontrado: número confiável de jogadores ativos do Axie em 2026 (as font
 29. [Gunzilla, GUNZ, Off The Grid e Game Informer](https://aftermath.site/gunzilla-gunz-gun-off-the-grid-game-informer) — imprensa — 8/4/2026.
 30. [NEXPACE launches MapleStory N and NXPC token](https://decrypt.co/320220/nexpace-launches-maplestory-n-and-nxpc-token-charting-a-new-chapter-for-maplestory-universe?amp=1) — imprensa — 15/5/2025.
 31. [Nexpace posts 30.98 million NXPC in first-half protocol revenue](https://labs.invenglobal.com/articles/25725/nexpace-posts-3098-million-nxpc-in-first-half-protocol-revenue) — imprensa — 8/9/2026.
-32. [Nexon announces $10M buyback program for NXPC](https://labs.invenglobal.com/articles/22130/nexon-announces-10m-buyback-program-for-maplestory-universe-nxpc) — imprensa — mai/2026.
+32. [Nexpace announces NXPC buyback program](https://decrypt.co/368733?amp=1) — press release — mai/2026 (conteúdo via buscador).
 33. [[GDC24] Achieving $10 million in revenue in 3 days: Night Crows](https://www.invenglobal.com/articles/18784/gdc24-achieving-10-million-in-revenue-in-3-days-whats-the-secret-of-night-crows) — imprensa — mar/2024.
 34. [Wemade's Wemix token plunges 60% after South Korean exchanges announce delisting](https://www.theblock.co/post/352911/wemades-wemix-token-plunges-after-south-korean-exchanges-announce-delisting) — imprensa — 2/5/2025.
 35. [Wemade WEMIX secondary delisting confirmed](https://www.asiae.co.kr/en/article/2025053016500402987) — imprensa (KR) — 30/5/2025.

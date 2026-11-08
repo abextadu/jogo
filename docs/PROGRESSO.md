@@ -27,9 +27,9 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 
 - **Prontas:** 24 de 47 fichas — Melvor Idle (B01), Legends of IdleOn (B02); os 6 idle MMOs do grupo C (Milky Way Idle, Idle Clans, Idlescape, IdleMMO, SimpleMMO, Shop Titans); Torn (D01); todo o grupo F (EVE, Albion, RuneScape/OSRS, Tibia, Path of Exile, WoW, Guild Wars 2, Black Desert, Throne and Liberty/Lost Ark); Diablo III e a casa de leilão (G01), Entropia Universe (G02), Axie Infinity e Web3 (G03), New World (G04), Banana e Bongo Cat (G05), economias que colapsaram (G07). Estudos: teoria do design idle (02a), jurídico Brasil (05b); além do idle (03) parcialmente gravado.
 - **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
-- **Rodando no Opus:** idles que morreram (G06), além do idle (03), jurídico global e pagamentos (05c), Shakes & Fidget e KoL (D02–D03), técnica (07), monetização e retenção (06).
+- **Rodando no Opus:** idles que morreram (G06), além do idle (03), jurídico global e pagamentos (05c), Shakes & Fidget e KoL (D02–D03), técnica (07), monetização e retenção (06), mercado e posicionamento (08).
 - **Rodando no Sonnet:** idle clássicos I (A01–A03, A09), incrementais de nicho (A04–A08), idle RPGs II (B03–B06), mobile AFK (E01–E04).
-- **Fila:** **onda 2** no Opus assim que G06 e 05c terminarem — economia (04a, 04b) e RMT (05a, 05d); mercado e posicionamento (08) no Opus; OGame e Travian (D04–D05) e radar 2023–2026 (A10) no Sonnet.
+- **Fila:** **onda 2** no Opus assim que G06 e 05c terminarem — economia (04a, 04b) e RMT (05a, 05d); OGame e Travian (D04–D05) e radar 2023–2026 (A10) no Sonnet.
 
 ## Checklist de entregáveis da Fase 1
 
