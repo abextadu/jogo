@@ -29,8 +29,8 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 - **Faltam 8 fichas:** Kittens Game (A07), Trimps (A08), Egg Inc. (A09), radar 2023–2026 (A10), Kingdom of Loathing (D03), OGame (D04), Travian (D05), 4ª ficha de mobile AFK (E04).
 - **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
 - **Rodando no Opus:** além do idle (03), jurídico global e pagamentos (05c), Kingdom of Loathing (D03), técnica (07), monetização e retenção (06), mercado e posicionamento (08); **onda 2:** economia — fontes, drenos e inflação (04a) e mercados, proteções e bots (04b).
-- **Rodando no Sonnet:** Egg Inc. (A09), Kittens Game e Trimps (A07–A08), fechamento do relatório de idle RPGs II (B03–B06), 4ª ficha de mobile AFK (E04).
-- **Fila:** RMT (05a, 05d) no Opus assim que o 05c terminar; OGame e Travian (D04–D05) e radar 2023–2026 (A10) no Sonnet.
+- **Rodando no Sonnet:** Egg Inc. (A09), Kittens Game e Trimps (A07–A08), 4ª ficha de mobile AFK (E04), OGame e Travian (D04–D05).
+- **Fila:** RMT (05a, 05d) no Opus assim que o 05c terminar; radar 2023–2026 (A10) no Sonnet.
 
 ## Checklist de entregáveis da Fase 1
 

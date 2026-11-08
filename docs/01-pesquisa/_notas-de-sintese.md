@@ -154,6 +154,19 @@ Ressalva do pesquisador: as fontes são majoritariamente de idles solo de 2015�
 
 Divergência a conferir: a C06 atribui o Shop Heroes à Riposte; o suporte no Steam é da Cloudcade.
 
+## B03–B06 — Idle Champions, Soda Dungeon, Idle Slayer, Tap Titans 2 (Sonnet; concluído em 2026-11-08)
+
+Fichas mais curtas (~1.300–1.800 palavras) por bloqueio de wikis, Reddit e Play Store.
+
+1. **Raid de clã com ataques curtos em janela fixa é o principal gancho social do gênero** (Tap Titans 2: 4 ataques de 30 s a cada 12 h, clã de até 50 — [review de 2020](https://alternateimage.net/gaming/2020/08/09/tap-titans-2-a-review/)). → Raids cooperativas curtas, com tolerância a quem falta, para o ausente não virar peso no clã.
+2. **Passe com títulos que dão bônus permanente e torneios mal pareados geram percepção de P2W** (6 de 22 reviews — [JustUseApp](https://justuseapp.com/en/app/1120294802/tap-titans-2-hero-legends/reviews)). → Recompensa de temporada cosmética ou resetável; competição com faixas de poder.
+3. **A promessa pública de F2P justo sustenta 93% de aprovação em 3.139 reviews** (Soda Dungeon 2: "sem timers, vidas, loot boxes ou paywall; tudo comprável com moeda do jogo" — [Steam](https://store.steampowered.com/app/946050)). → Escrever a regra de monetização na página da loja e cumprir.
+4. **Vender automação e gacha de equipamento por personagem gera queixa de P2W e de "idle que dá trabalho"** (Idle Champions — [Steam](https://steamcommunity.com/app/627690/discussions/0/3204869541738049671)). → Automação gratuita; profundidade vinda de sinergia, não de gacha.
+5. **Ação ativa obrigatória é o principal atrito:** minigames exigidos por quests aparecem em 4 das 10 negativas recentes do Idle Slayer ([Steam](https://steamcommunity.com/app/1353300/negativereviews/?browsefilter=mostrecent&filterLanguage=all)). → O ativo ganha bônus, nunca é a única porta de progresso.
+6. **Colaboração com IP gera pico mensurável:** Attack on Titan (jul/2024) trouxe +70% de downloads e +88% de receita no Idle Slayer (dado da Yodo1, parte interessada — [case](https://www.yodo1.com/case-studies/idle-slayer-x-attack-on-titan)). → Eventos sazonais com identidade própria como motor de retorno.
+7. **Ads recompensados opcionais + "Remove Ads" barato quase não geram reclamação** (1 de 10 negativas no Idle Slayer; 0 de 10 no Soda Dungeon 2). → Ads opcionais são monetização segura, se fizerem sentido no navegador.
+8. **Sem social nem eventos, a base derrete:** Soda Dungeon 2 foi de 11.281 simultâneos (jul/2020) para ~223 de média; Idle Champions de 18.578 (set/2021) para ~2.000 ([SteamCharts](https://steamcharts.com/app/946050)). → Social e eventos ao vivo seguram a base.
+
 ## Observações do orquestrador sobre fichas já gravadas
 
 - **C01 Milky Way Idle:** livro de ordens com taxa de 4% que vira, todo dia, bônus coletivo do servidor; arredondamento da taxa para cima contra monopólio de itens baratos; degraus de preço ajustados várias vezes; Cowbells vendidas em "sacos" negociáveis (token de fato); horas de offline e vagas de fila vendidas por Cowbells (ir de 10 h a 72 h custa ~US$ 230–270), e isso é queixa recorrente. Estúdio de duas pessoas; ~70% de queda na média de jogadores no Steam desde o pico de 2025.
