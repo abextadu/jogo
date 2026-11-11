@@ -202,6 +202,17 @@ E04 escolhido por dados: Capybara Go! liderou o ranking de idle RPG da Sensor To
 7. **Kittens Game vende barato (iOS US$ 2,99; Steam R$ 26,49; web grátis) e mantém a reputação há mais de 10 anos** ([App Store](https://apps.apple.com/app/id1198099725)). → Versão grátis na web como porta de entrada; versão paga que parece pior que a grátis gera crítica.
 8. **Moeda premium ganhável de graça com a promessa de que o jogo não é balanceado em torno de comprá-la** (NGU Idle, Trimps) ajuda, mas é frágil quando automação e QoL ficam atrás do paywall. → A promessa precisa valer para automação e QoL também.
 
+## D04–D05 — OGame, Travian (Sonnet; concluído em 2026-11-11)
+
+1. **Frota em missão não pode ser atacada, e o fleetsave é tratado como obrigação** ([Gameforge](https://gameforge.com/en-GB/games/ogame-fleetsave.html)). → "Modo missão" em que o ausente fica produtivo e protegido; a esperteza é escolha, não obrigação diária.
+2. **O ônus da ausência aparece como alarmes e vigilância** (evidência fraca: ex-jogadores citam despertadores e conta perdida nas férias — [Steemit](https://steemit.com/review/@enjar/review-or-ogame)); a própria Gameforge admite o fleetsave como a única mecânica crítica em tempo. → Guerra com proteção automática do ausente.
+3. **Universos novos, começando do zero, são válvula de igualdade e de monetização:** a Gameforge abre universos "regularmente", com Dark Matter inicial, e as expansões estreiam neles ([Gameforge](https://gameforge.com/en-GB/games/space-mmo-browser-2026.html)). → Temporadas e servidores novos como funil.
+4. **A rodada do Travian termina na Maravilha do Mundo e exige cooperação real** (a segunda planta tem de estar com outro jogador da mesma aliança — [Travian Support](https://support.travian.com/en/articles/104-construction-plans)). → Final de temporada com vitória coletiva.
+5. **Sitter com saldo de inatividade de 14 dias (desde mar/2021) ajuda sem permitir conta alugada**; mas o sitter com permissão de gastar ouro gasta sem limite e sem reembolso ([blog Travian](https://blog.travian.com/2021/03/stricter-rules-for-sitter-accounts)). → Delegação com cota e permissões separadas, sem gasto de premium por padrão.
+6. **A acusação de P2W vem do aceleramento comprado** (Gameforge diz que o Dark Matter compra "conforto"; Trustpilot do Travian tem nota 1,6 citando ouro e multicontas). → [H] Em jogo de guerra, aceleração é poder militar: não vender tempo no PvP.
+7. **Suporte e banimento opacos são a reclamação mais consistente nos dois.** → Processo de apelação visível.
+8. **Tribal Wars varia a condição de vitória por mundo** ([Wikipedia](https://en.wikipedia.org/wiki/Tribal_Wars)). → Testar regras de temporada diferentes por servidor. Brasil: Tribal Wars tem portal e mundos BR ativos; sem números.
+
 ## Observações do orquestrador sobre fichas já gravadas
 
 - **C01 Milky Way Idle:** livro de ordens com taxa de 4% que vira, todo dia, bônus coletivo do servidor; arredondamento da taxa para cima contra monopólio de itens baratos; degraus de preço ajustados várias vezes; Cowbells vendidas em "sacos" negociáveis (token de fato); horas de offline e vagas de fila vendidas por Cowbells (ir de 10 h a 72 h custa ~US$ 230–270), e isso é queixa recorrente. Estúdio de duas pessoas; ~70% de queda na média de jogadores no Steam desde o pico de 2025.

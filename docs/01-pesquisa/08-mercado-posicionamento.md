@@ -57,6 +57,51 @@ Números das fichas (todos com fonte nas fichas; tipos de métrica diferentes, e
 
 ## 2. Público brasileiro vs. global
 
+### 2.1 Quantos jogam, em quê e quanto o mercado vale
+
+- **[F] Pesquisa Game Brasil 2026 (13ª edição, SX Group e Go Gamers, com Blend New Research e ESPM):** 75,3% dos brasileiros de 16 a 55 anos dizem jogar, contra 82,8% em 2025. O celular é a plataforma preferida de 44,1%, o console de 24% e o PC de 21,1%. A geração Z (16–29) passou a ser o maior grupo (36,5%), à frente dos millennials (33,7%); mulheres são 52,8%; a classe média (B2, C1, C2), 54,9%. Para 80,7%, o jogo é a principal forma de entretenimento. Preço baixo ou promoção é o primeiro motivo para recomprar um jogo (44%). Amostra de 7.115 pessoas, coletada de 5 a 13/3/2026 ([Meio & Mensagem, 9/4/2026](https://www.meioemensagem.com.br/marketing/apos-pico-numero-de-jogadores-brasileiros-cai-segundo-pgb); [Omelete](https://www.omelete.com.br/games/pesquisa-game-brasil-2026-ia-jogos)). A matéria não traz dados de meios de pagamento nem de gasto médio.
+- **[F] Newzoo (atualização de ago/2026, citada pela gamescom latam):** o mercado global fechou 2025 em US$ 201,6 bilhões (+9,1%) e deve ir a US$ 213,9 bilhões em 2026 (+6,1%), com o mobile em US$ 121,1 bilhões. A América Latina deve fazer US$ 9,3 bilhões (+7,9%) com 394 milhões de jogadores em 2026: 11% dos jogadores do mundo e só 4% da receita ([gamescom latam](https://latam.gamescom.global/en/the-global-gaming-market-in-2026/)).
+- **[F] Brasil em dinheiro:** cerca de US$ 3,8 bilhões em 2026, pela projeção de uma consultoria de pagamentos analisada pela EBANX ([PocketGamer.biz, 1/10/2026](https://www.pocketgamer.biz/netease-games-club-partners-with-ebanx-projecting-84bn-in-latam-revenue-this-year/)). Outra compilação fala em US$ 2,52 bilhões em 2025 e em 103 a 115 milhões de jogadores, o 5º maior contingente de jogadores online do mundo, sem citar a fonte do valor ([Allcorrect, 9/9/2025](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/)). Consultorias de mercado divergem por uma ordem de grandeza (de US$ 0,36 bilhão a US$ 5,64 bilhões em 2025: [6Wresearch](https://www.6wresearch.com/industry-report/brazil-gaming-market-outlook), [IMARC](https://www.imarcgroup.com/brazil-gaming-market)). Não achei o recorte de games do Brasil na edição 2025–2029 da PwC (a página da PwC Brasil retornou 403).
+- **[F] O que o Brasil mais baixa e mais paga no celular (2025, AppMagic, via Allcorrect):** em downloads, Roblox, Free Fire, Block Blast!, Subway Surfers e Minecraft; em receita, Roblox, Free Fire, Coin Master, Candy Crush Saga e Royal Match ([Allcorrect](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/)).
+- **[F] No PC, o português do Brasil é o 5º idioma do Steam:** 4,46% dos usuários em out/2026, à frente de alemão (2,89%), japonês (2,47%) e francês (2,41%), atrás de inglês, chinês simplificado, russo e espanhol da Espanha ([Steam Hardware & Software Survey, out/2026](https://store.steampowered.com/hwsurvey/)). A participação oscila de mês a mês com o peso da China na amostra.
+- **[H] Leitura.** O Brasil é mercado de volume e de celular, com receita por jogador baixa (o retrato da América Latina: 11% dos jogadores, 4% da receita). Um jogo que nasce para o Brasil precisa de custo por usuário baixo (servidor barato, sem aquisição paga cara) e de muitos pagantes pequenos, não de baleias. O PC brasileiro também é relevante: quase 1 em cada 20 usuários do Steam.
+
+### 2.2 Como o brasileiro paga: Pix lidera em número, cartão parcelado em valor
+
+- **[F] Pix passou o cartão no e-commerce:** 42% do comércio eletrônico brasileiro em 2025, contra 40% do cartão de crédito, 10% das carteiras digitais, 4% do débito, 3% do dinheiro e 2% de outros, com projeção de 44% para o Pix e 34% para o crédito em 2030, segundo o Global Payments Report 2026 ([VTEX, 24/9/2026](https://www.vtex.com/pt-br/noticias/pix-avanca-mas-cartao-resiste-no-e-commerce); [Panorama Farmacêutico](https://panoramafarmaceutico.com.br/pagamentos-por-pix-dominam-42-do-e-commerce-nacional-em-2025/)). As matérias divergem se o percentual mede valor ou número de transações.
+- **[F] Em valor, o cartão ainda manda, por causa do parcelamento:** numa base de 8,4 mil lojas (Appmax, 1º semestre de 2026), o Pix teve ~52% das transações, mas o cartão ficou com 64% do valor; na Nuvemshop, o tíquete médio foi de R$ 233,80 no Pix e R$ 339,97 no cartão, e a fatia do faturamento em cartão paga à vista caiu de 60,7% para 57,2% ([VTEX, 24/9/2026](https://www.vtex.com/pt-br/noticias/pix-avanca-mas-cartao-resiste-no-e-commerce)). [H] Por diferença, ~43% do faturamento em cartão é parcelado.
+- **[F] Alcance:** o Pix é usado por cerca de 96% dos adultos (~170 milhões), e cerca de 60 milhões de brasileiros não têm cartão de crédito, segundo a EBANX ([PocketGamer.biz, 1/10/2026](https://www.pocketgamer.biz/netease-games-club-partners-with-ebanx-projecting-84bn-in-latam-revenue-this-year/)).
+- **[F] Os jogos estrangeiros estão se adaptando:** a loja de recargas da NetEase passou a aceitar Pix e Mercado Pago em out/2026 (mesma fonte); *Ragnarok Origin* aceitou Pix, boleto e carteiras digitais no Brasil em abr/2024 ([PR Newswire](https://www.prnewswire.com/br/comunicados-para-a-imprensa/ragnarok-origin-roo-agora-aceita-pix-como-forma-de-pagamento-302118355.html)). Numa pesquisa da EBANX de 2021 com jogadores de um grande jogo online, 66% disseram que gastariam mais se pudessem pagar com Pix ([Let's Money](https://www.letsmoney.com.br/noticias/netease-ebanx-pix-games-america-latina/)); o dado é antigo e de amostra específica.
+- **Não encontrado:** participação do Pix nas compras dentro de jogos (só há dados de e-commerce geral) e fonte primária recente sobre boleto (há só blogs citando a Neotrust, com 8% a 12%).
+- **[H] Leitura.** Para o nosso jogo: Pix (inclusive Pix Automático para VIP, ver [05b](05b-rmt-legal-brasil.md)) para o pagante pequeno e sem cartão; cartão com parcelamento para pacotes maiores; carteira digital como terceira via. Num navegador ou PWA, o estúdio cobra direto, sem a comissão das lojas de apps, o que é vantagem de margem sobre concorrentes presos à Apple e ao Google. O Pix também tem riscos próprios (golpe, MED 2.0), já mapeados em [05b](05b-rmt-legal-brasil.md).
+
+### 2.3 Sensibilidade a preço e preços regionais
+
+- **[F] O preço em dólar é queixa explícita:** no Albion, uma das 10 reviews negativas mais úteis do ano em português reclama do preço só em dólar ([F02](fichas/F02-albion-online.md)). No Tibia, a ficha registra o peso do preço em euro e a origem da BoaCompra como revendedora local ([F04](fichas/F04-tibia.md)).
+- **[F] O Steam já pratica preço regional forte para o Brasil:** o *Melvor Idle* custa US$ 9,99 nos EUA e R$ 32,99 no Brasil ([B01](fichas/B01-melvor-idle.md); [Steam](https://store.steampowered.com/app/1267910/?l=brazilian)). Guias de terceiros dizem que o preço recomendado pela Valve para o Brasil fica tipicamente 50% a 70% abaixo do preço em dólar ([Steam Page Analyzer](https://www.steampageanalyzer.com/blog/steam-regional-pricing-guide)), e que a política de 2024 aceita um piso de 0,5x para o Brasil ([Marix](https://marix.app/library/guides/steam-regional-pricing-policy-2026-changes)). [NV] Não confirmei isso na documentação do Steamworks.
+- **[F] Preço baixo é o principal gatilho de compra** de quem recompra jogos (44%, PGB 2026 — [Meio & Mensagem](https://www.meioemensagem.com.br/marketing/apos-pico-numero-de-jogadores-brasileiros-cai-segundo-pgb)).
+- **[H] Leitura.** Preço em real, com pacotes pequenos (de poucos reais) e valores pensados para o poder de compra local, não convertidos do dólar. Isso também é defesa econômica: preço oficial alto empurra o jogador para o mercado paralelo, e o RMT ilegal vende ouro a uma fração do preço oficial (no OSRS, ~45% — [F03](fichas/F03-runescape-e-osrs.md)). Com economia global e preços regionais, surge um risco de arbitragem: o brasileiro compra o token barato e vende ouro para quem paga em dólar. Isso exige token com preço único em ouro e limites de compra (ver seção "Como isso pode dar errado").
+
+### 2.4 A força dos jogos online no Brasil
+
+(em pesquisa)
+
+### 2.5 Compra e venda de itens e contas: o RMT já é normal por aqui?
+
+(em pesquisa)
+
+### 2.6 Localização em PT-BR: o nicho quase não fala português
+
+- **[F] Situação dos concorrentes no Steam (8/11/2026):**
+  - *Milky Way Idle*: inglês e chinês simplificado; a loja mostra "Indisponível em Português (Brasil)" ([Steam](https://store.steampowered.com/app/3224420/Milky_Way_Idle/?l=brazilian)). Um anúncio de jul/2026 fala em "localizações adicionais", sem lista legível ([anúncio](https://steamcommunity.com/ogg/3224420/announcements/detail/675126099358778792)).
+  - *IdleOn*: seis idiomas, sem português, e mesmo assim **1.114 reviews em português do Brasil, 89% positivas** ([Steam](https://store.steampowered.com/app/1476970/?l=brazilian)).
+  - *Idle Clans*: oito idiomas, com português do Brasil ([Steam](https://store.steampowered.com/app/2103530/?l=brazilian)).
+  - *Melvor Idle*: 13 idiomas, com português do Brasil; 263 reviews em PT-BR, 96% positivas ([Steam](https://store.steampowered.com/app/1267910/?l=brazilian)).
+- **[F] Onde há português e servidor, o brasileiro aparece em massa:** no Albion, o português é o 3º idioma das reviews (10.974, 85% positivas, ~10,6% do total) ([F02](fichas/F02-albion-online.md)); no Tibia, o Brasil tem ~45% dos jogadores e 32 dos 90 mundos ([F04](fichas/F04-tibia.md)).
+- **[H] Leitura.** Traduzir não basta (o Idle Clans e o Melvor têm PT-BR e nenhum virou "o idle MMO do Brasil"); a vantagem está no pacote: idioma, servidor com ping baixo no Brasil, preço em real, Pix, suporte e comunidade (Discord, criadores de conteúdo) em português. Nenhum concorrente do nicho tem esse pacote.
+
+### 2.7 Estúdios brasileiros de sucesso (e um fracasso instrutivo)
+
 (em pesquisa)
 
 ## 3. Segmentos globais
