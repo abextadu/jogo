@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(d) Obra-prima — wireframe</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.doc{max-width:1120px;margin:0 auto;padding:16px}
+.doc-topo h1{font-size:20px;margin:4px 0}
+.doc-topo p{margin:4px 0;font-size:14px;color:var(--cinza)}
+.grade{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.grade{grid-template-columns:400px minmax(0,1fr);align-items:start}.notas{position:sticky;top:16px}}
+.telas{display:grid;gap:24px}
+.celular{background:var(--papel);border:2px solid var(--tinta);border-radius:22px;width:100%;max-width:400px;margin:0 auto;overflow:hidden}
+.cab{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:2px solid var(--tinta);background:var(--suave)}
+.cab .lugar{flex:1;min-width:0}
+.cab .lugar strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab .lugar small{display:block;color:var(--cinza);font-size:12px}
+.saldo{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:1.5px solid var(--tinta);border-radius:999px;background:#fff;font-size:13px;text-decoration:none;white-space:nowrap}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:4px;background:#fff;font-size:10px;flex:none}
+.ico.red{border-radius:50%}
+.conteudo{padding:12px;display:grid;gap:12px}
+.cartao{border:1.5px solid var(--tinta);border-radius:10px;padding:12px;background:#fff}
+.cartao>h2,.cartao>h3{margin:0 0 6px;font-size:16px;line-height:1.3}
+.cartao p{margin:4px 0}
+.secao-titulo{font-size:17px;margin:4px 0 0}
+.rot{margin:0 0 4px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
+.img{display:flex;align-items:center;justify-content:center;min-height:80px;padding:8px;border:1.5px dashed var(--linha);border-radius:8px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px);color:var(--cinza);font-size:13px;text-align:center}
+.linha{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cresce{flex:1;min-width:0}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--tinta);border-radius:10px;background:#fff;color:var(--tinta);font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.pri{background:var(--tinta);color:#fff}
+.btn.larga{width:100%}
+.btn.off{border-style:dashed;color:var(--cinza);background:var(--suave);cursor:not-allowed}
+.barra{height:12px;border:1.5px solid var(--tinta);border-radius:999px;overflow:hidden;background:#fff}
+.barra>i{display:block;height:100%;background:var(--tinta)}
+.barra.prev>i{background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.previsto{color:var(--cinza);font-style:italic}
+.tag{display:inline-block;padding:1px 6px;border:1px solid var(--tinta);border-radius:6px;font-size:12px}
+.tag.cheia{background:var(--tinta);color:#fff}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);color:#000;font-size:12px;font-weight:700;font-style:normal;vertical-align:middle;flex:none}
+.abas{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--tinta);background:var(--suave)}
+.abas a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:6px 2px;font-size:12px;text-decoration:none}
+.abas a[aria-current="page"]{font-weight:700;box-shadow:inset 0 4px 0 var(--tinta)}
+.notas{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px 16px}
+.notas h2{margin:4px 0 8px;font-size:17px}
+.notas ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.notas li p{margin:0}
+.notas .rodape{margin-top:12px;font-size:13px;color:var(--cinza)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;font-size:13px;color:var(--cinza);padding-bottom:4px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--medio);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:600;color:var(--cinza)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.segmento{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--tinta);border-radius:10px;overflow:hidden}
+.segmento>*{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 4px;border:0;border-left:1px solid var(--tinta);background:#fff;color:var(--tinta);font-family:inherit;font-size:13px;font-weight:600;text-decoration:none}
+.segmento>*:first-child{border-left:0}
+.segmento [aria-current],.segmento [aria-pressed="true"]{background:var(--tinta);color:#fff}
+.campo{display:grid;gap:4px}
+.campo label,.campo .rotulo{font-size:13px;font-weight:600}
+.campo input,.campo select{min-height:44px;padding:0 10px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff;font-family:inherit;font-size:16px}
+.legenda{font-size:12px;color:var(--cinza)}
+.aviso{padding:8px 10px;border-left:4px solid var(--tinta);border-radius:6px;background:var(--suave);font-size:14px}
+.forte{font-weight:700}
+hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* específicos desta tela */
+.etapas{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;list-style:none;margin:0;padding:0}
+.etapas li{border:1.5px solid var(--tinta);border-radius:8px;padding:6px;font-size:13px;text-align:center}
+.etapas li[aria-current="step"]{background:var(--tinta);color:#fff;font-weight:700}
+.etapas li.feita{border-style:dashed}
+.escala{position:relative;height:44px;border:1.5px solid var(--tinta);border-radius:8px;display:grid;grid-template-columns:2fr 1fr 2fr;overflow:hidden}
+.escala span{display:flex;align-items:flex-end;justify-content:center;font-size:11px;padding-bottom:2px;color:var(--cinza)}
+.escala .ideal{background:var(--medio);border-left:1.5px dashed var(--tinta);border-right:1.5px dashed var(--tinta);color:var(--tinta);font-weight:700}
+.ponteiro{position:absolute;top:0;bottom:0;left:33%;width:4px;background:var(--tinta)}
+.ponteiro::after{content:"agora";position:absolute;top:2px;left:6px;font-size:11px;font-weight:700}
+.opcoes{display:grid;gap:8px}
+.opcao{display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start;border:1.5px solid var(--tinta);border-radius:8px;padding:8px;min-height:44px}
+.opcao input{width:20px;height:20px;margin:2px 0 0}
+.chance{display:grid;grid-template-columns:96px 1fr 44px;gap:6px;align-items:center;font-size:13px}
+.chance .barra{height:10px}
+.resultado{display:grid;gap:8px;text-align:center}
+.moldura-ornada{border:3px double var(--tinta);outline:2px dashed var(--tinta);outline-offset:3px;border-radius:6px;padding:10px;margin:8px}
+.interruptor{display:flex;align-items:center;gap:8px;min-height:44px}
+.interruptor input{width:22px;height:22px}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="doc-topo">
+    <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
+    <h1>(d) Obra-prima</h1>
+    <p>Sessão curta e ativa que define a qualidade de uma peça. Etapas, reagentes e chances são exemplos; a mecânica é do módulo 06 [H].</p>
+  </header>
+
+  <div class="grade">
+    <div class="telas">
+      <!-- Durante a obra-prima -->
+      <section class="celular" aria-label="Wireframe: obra-prima em andamento">
+        <header class="cab">
+          <div class="lugar"><strong>Obra-prima</strong><small>Ferraria 42 · 2 cargas de 3</small></div>
+          <a class="btn" href="a-arraial.html">Pausar e sair</a>
+        </header>
+        <main class="conteudo">
+          <section class="cartao" aria-labelledby="t-peca">
+            <div class="linha">
+              <div class="img" style="width:64px;min-height:64px;font-size:10px">gravura da peça</div>
+              <div class="cresce">
+                <h2 id="t-peca" style="margin:0;font-size:17px">Machado de ipê · T3</h2>
+                <p class="legenda" style="margin:0">Leva de 1 a 2 minutos. Nada aqui depende de reflexo. <span class="n" aria-hidden="true">1</span></p>
+              </div>
+            </div>
+          </section>
+
+          <ol class="etapas" aria-label="Etapas da obra-prima">
+            <li class="feita">1. Reagente ✓</li>
+            <li aria-current="step">2. Têmpera</li>
+            <li>3. Acabamento</li>
+          </ol>
+          <span class="n" aria-hidden="true">2</span>
+
+          <p class="legenda" style="margin:0">Reagente escolhido: <strong>óleo de copaíba</strong> (mais durabilidade, menos fio).</p>
+
+          <section class="cartao" aria-labelledby="t-temp">
+            <p class="rot">Etapa 2 de 3 <span class="n" aria-hidden="true">3</span></p>
+            <h2 id="t-temp">Têmpera: a peça está um pouco fria</h2>
+            <div class="escala" role="img" aria-label="Temperatura: um pouco abaixo da faixa ideal">
+              <span>fria</span><span class="ideal">ideal</span><span>quente</span>
+              <i class="ponteiro" aria-hidden="true"></i>
+            </div>
+            <p class="legenda">A faixa ideal é mais larga com mais nível de ofício. Sem cor: a faixa tem borda tracejada e rótulo.</p>
+            <div class="acoes">
+              <button class="btn" type="button">Soprar o fole</button>
+              <button class="btn" type="button">Esperar</button>
+              <button class="btn pri" type="button">Mergulhar agora</button>
+            </div>
+            <label class="interruptor"><input type="checkbox" checked> Modo tranquilo: a temperatura só muda quando você toca <span class="n" aria-hidden="true">4</span></label>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-prev">
+            <p class="rot">Prévia da qualidade <span class="n" aria-hidden="true">5</span></p>
+            <h2 id="t-prev">Muda com as suas escolhas</h2>
+            <div role="table" aria-label="Chances de qualidade com as escolhas atuais">
+              <div class="chance" role="row"><span role="cell">Comum</span><div class="barra" role="cell" aria-hidden="true"><i style="width:5%"></i></div><span class="num" role="cell">5%</span></div>
+              <div class="chance" role="row"><span role="cell">Bom</span><div class="barra" role="cell" aria-hidden="true"><i style="width:30%"></i></div><span class="num" role="cell">30%</span></div>
+              <div class="chance" role="row"><span role="cell">Fino</span><div class="barra" role="cell" aria-hidden="true"><i style="width:50%"></i></div><span class="num" role="cell">50%</span></div>
+              <div class="chance" role="row"><span role="cell">Obra-prima</span><div class="barra" role="cell" aria-hidden="true"><i style="width:15%"></i></div><span class="num" role="cell">15%</span></div>
+            </div>
+            <p class="legenda">Se o módulo 06 decidir que a qualidade é determinística, esta caixa vira "qualidade esperada: Fino".</p>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-ins">
+            <p class="rot">O que esta peça consome <span class="n" aria-hidden="true">6</span></p>
+            <h2 id="t-ins" class="sr">Insumos</h2>
+            <table>
+              <tbody>
+                <tr><td>Lingote de ferro (T3)</td><td class="num">2</td><td class="legenda">Fundição</td></tr>
+                <tr><td>Cabo de ipê</td><td class="num">1</td><td class="legenda">Carpintaria (comprado na Bolsa)</td></tr>
+                <tr><td>Óleo de copaíba</td><td class="num">1</td><td class="legenda">Alquimia</td></tr>
+              </tbody>
+            </table>
+            <p class="legenda">Os insumos só são gastos ao fim da etapa 1; sair antes não gasta nada.</p>
+          </section>
+        </main>
+      </section>
+
+      <!-- Resultado -->
+      <section class="celular" aria-label="Wireframe: resultado da obra-prima">
+        <header class="cab">
+          <div class="lugar"><strong>Obra-prima</strong><small>Resultado</small></div>
+        </header>
+        <main class="conteudo">
+          <section class="resultado" aria-labelledby="t-res" role="status">
+            <p class="rot">Pronto <span class="n" aria-hidden="true">7</span></p>
+            <div class="moldura-ornada">
+              <div class="img" style="min-height:140px">gravura grande da peça, com o selo do mestre</div>
+              <h2 id="t-res" style="margin:8px 0 0;font-size:20px">Machado de ipê · Fino</h2>
+              <p class="legenda" style="margin:4px 0 0">Moldura ornada = Fino · durabilidade 100 de 100 · reparos 0 de 5</p>
+              <p style="margin:6px 0 0"><strong>Marca do mestre:</strong> Joana do Vau</p>
+            </div>
+            <p>Sua decisão que mais pesou: a têmpera na faixa ideal (+20 pontos de chance de Fino).</p>
+          </section>
+          <div class="acoes">
+            <a class="btn pri" href="#">Guardar</a>
+            <a class="btn" href="c-bolsa-feira.html#feira">Vender na Feira</a>
+            <a class="btn" href="#">Outra (1 carga)</a>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    <aside class="notas" aria-labelledby="t-notas">
+      <h2 id="t-notas">Notas de design</h2>
+      <ol>
+        <li><span class="n">1</span><p><strong>Curta, avisada e sem reflexo.</strong> O jogador sabe quanto tempo leva antes de começar. A habilidade é decidir, não reagir: quem joga com uma mão, no ônibus ou com limitação motora joga igual.</p></li>
+        <li><span class="n">2</span><p><strong>Três etapas visíveis</strong> (reagente, têmpera, acabamento), como prevê o conceito. A etapa atual é marcada pelo texto e por <code>aria-current</code>, não só pela cor.</p></li>
+        <li><span class="n">3</span><p><strong>A escala tem faixa ideal com borda e rótulo.</strong> O feedback é em palavras ("um pouco fria"), e o som acompanha, mas não é necessário (nenhuma informação só por som).</p></li>
+        <li><span class="n">4</span><p><strong>Modo tranquilo, ligado por padrão:</strong> o relógio para e a temperatura só muda quando o jogador toca. É o tempo ajustável do WCAG (2.2.1) e o ajuste de velocidade do <a href="https://gameaccessibilityguidelines.com/basic/">GAG</a>. Quem quer o desafio desliga.</p></li>
+        <li><span class="n">5</span><p><strong>A prévia mostra como cada escolha muda o resultado.</strong> O jogador aprende o sistema e se sente autor da qualidade. É uma tabela para o leitor de tela.</p></li>
+        <li><span class="n">6</span><p><strong>A interdependência aparece na própria receita:</strong> cada insumo mostra de que ofício veio (pilar 1, "ninguém faz tudo"). Sair antes do fim da etapa 1 não gasta nada.</p></li>
+        <li><span class="n">7</span><p><strong>Resultado com moldura, nome e marca do mestre.</strong> A qualidade não depende de cor. A marca acompanha a peça na Feira e transforma a obra-prima em reputação. A linha "sua decisão que mais pesou" fecha o ciclo de aprendizado.</p></li>
+      </ol>
+      <p class="rodape">Lembrete do piso (P12): a obra-prima é opcional. O ausente ganha volume pela fila; o ativo ganha qualidade aqui. As cargas acumulam até um teto [H], para que ninguém precise vir todo dia "não perder" a carga.</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>

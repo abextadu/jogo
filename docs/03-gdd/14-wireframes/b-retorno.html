@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(b) Folheto da volta — wireframe</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.doc{max-width:1120px;margin:0 auto;padding:16px}
+.doc-topo h1{font-size:20px;margin:4px 0}
+.doc-topo p{margin:4px 0;font-size:14px;color:var(--cinza)}
+.grade{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.grade{grid-template-columns:400px minmax(0,1fr);align-items:start}.notas{position:sticky;top:16px}}
+.telas{display:grid;gap:24px}
+.celular{background:var(--papel);border:2px solid var(--tinta);border-radius:22px;width:100%;max-width:400px;margin:0 auto;overflow:hidden}
+.cab{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:2px solid var(--tinta);background:var(--suave)}
+.cab .lugar{flex:1;min-width:0}
+.cab .lugar strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab .lugar small{display:block;color:var(--cinza);font-size:12px}
+.saldo{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:1.5px solid var(--tinta);border-radius:999px;background:#fff;font-size:13px;text-decoration:none;white-space:nowrap}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:4px;background:#fff;font-size:10px;flex:none}
+.ico.red{border-radius:50%}
+.conteudo{padding:12px;display:grid;gap:12px}
+.cartao{border:1.5px solid var(--tinta);border-radius:10px;padding:12px;background:#fff}
+.cartao>h2,.cartao>h3{margin:0 0 6px;font-size:16px;line-height:1.3}
+.cartao p{margin:4px 0}
+.secao-titulo{font-size:17px;margin:4px 0 0}
+.rot{margin:0 0 4px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
+.img{display:flex;align-items:center;justify-content:center;min-height:80px;padding:8px;border:1.5px dashed var(--linha);border-radius:8px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px);color:var(--cinza);font-size:13px;text-align:center}
+.linha{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cresce{flex:1;min-width:0}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--tinta);border-radius:10px;background:#fff;color:var(--tinta);font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.pri{background:var(--tinta);color:#fff}
+.btn.larga{width:100%}
+.btn.off{border-style:dashed;color:var(--cinza);background:var(--suave);cursor:not-allowed}
+.barra{height:12px;border:1.5px solid var(--tinta);border-radius:999px;overflow:hidden;background:#fff}
+.barra>i{display:block;height:100%;background:var(--tinta)}
+.barra.prev>i{background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.previsto{color:var(--cinza);font-style:italic}
+.tag{display:inline-block;padding:1px 6px;border:1px solid var(--tinta);border-radius:6px;font-size:12px}
+.tag.cheia{background:var(--tinta);color:#fff}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);color:#000;font-size:12px;font-weight:700;font-style:normal;vertical-align:middle;flex:none}
+.abas{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--tinta);background:var(--suave)}
+.abas a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:6px 2px;font-size:12px;text-decoration:none}
+.abas a[aria-current="page"]{font-weight:700;box-shadow:inset 0 4px 0 var(--tinta)}
+.notas{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px 16px}
+.notas h2{margin:4px 0 8px;font-size:17px}
+.notas ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.notas li p{margin:0}
+.notas .rodape{margin-top:12px;font-size:13px;color:var(--cinza)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;font-size:13px;color:var(--cinza);padding-bottom:4px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--medio);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:600;color:var(--cinza)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.segmento{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--tinta);border-radius:10px;overflow:hidden}
+.segmento>*{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 4px;border:0;border-left:1px solid var(--tinta);background:#fff;color:var(--tinta);font-family:inherit;font-size:13px;font-weight:600;text-decoration:none}
+.segmento>*:first-child{border-left:0}
+.segmento [aria-current],.segmento [aria-pressed="true"]{background:var(--tinta);color:#fff}
+.campo{display:grid;gap:4px}
+.campo label,.campo .rotulo{font-size:13px;font-weight:600}
+.campo input,.campo select{min-height:44px;padding:0 10px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff;font-family:inherit;font-size:16px}
+.legenda{font-size:12px;color:var(--cinza)}
+.aviso{padding:8px 10px;border-left:4px solid var(--tinta);border-radius:6px;background:var(--suave);font-size:14px}
+.forte{font-weight:700}
+hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* específicos desta tela */
+.capa{display:grid;gap:8px;padding:12px;border-bottom:2px solid var(--tinta)}
+.capa h1{margin:0;font-size:22px;line-height:1.2}
+.plano{border:2px solid var(--tinta);border-radius:10px;padding:12px;background:var(--suave)}
+.plano p{margin:4px 0}
+.tempo{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.tempo li{display:grid;grid-template-columns:52px 1fr;gap:8px;padding:6px 0;border-left:2px solid var(--tinta);margin-left:24px;padding-left:12px;position:relative}
+.tempo li::before{content:"";position:absolute;left:-7px;top:12px;width:10px;height:10px;border:2px solid var(--tinta);border-radius:50%;background:#fff}
+.tempo .h{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;margin-left:-4px}
+.ganho{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px solid var(--medio);font-size:15px}
+.ganho:last-child{border-bottom:0}
+.dobra{font-size:12px;color:var(--cinza);text-align:center;margin:-4px 0 0}
+.rodape-acoes{display:grid;gap:8px;padding:12px;border-top:2px solid var(--tinta);background:var(--suave)}
+.curto{border:2px solid var(--tinta);border-radius:10px;padding:10px 12px;display:flex;gap:8px;align-items:center}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="doc-topo">
+    <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
+    <h1>(b) Folheto da volta — a tela de retorno do ausente</h1>
+    <p>Abre sozinha quando o jogador volta depois de 1 h ou mais. Nome proposto à bíblia (documento 14, seção 4). Números são exemplos [H].</p>
+  </header>
+
+  <div class="grade">
+    <div class="telas">
+      <section class="celular" aria-label="Wireframe: Folheto da volta">
+        <header class="cab">
+          <div class="lugar"><strong>Folheto da volta</strong><small>Arraial do Vau · Era 1</small></div>
+          <a class="btn" href="#" aria-label="Mostrar tudo de uma vez">Mostrar tudo <span class="n" aria-hidden="true">1</span></a>
+        </header>
+
+        <div class="capa">
+          <div class="img" style="min-height:120px">gravura da capa: a forja apagada à noite, a lua sobre o rio (muda com o que aconteceu)</div>
+          <h1>Enquanto você esteve fora</h1>
+          <p class="legenda">9 h 12 min · de sex., 22h48, a sáb., 8h00 · tudo abaixo já está no seu inventário</p>
+        </div>
+
+        <main class="conteudo">
+          <!-- O plano -->
+          <section class="plano" aria-labelledby="t-plano">
+            <p class="rot">O seu plano <span class="n" aria-hidden="true">2</span></p>
+            <h2 id="t-plano" style="margin:0;font-size:18px">Seu plano rendeu 108 lingotes de ferro.</h2>
+            <p>O gargalo foi o carvão: ele acabou às 3h12. Com 30 carvões a mais, a fila teria ido até o fim.</p>
+            <div class="acoes"><a class="btn" href="#">Comprar carvão na Bolsa</a></div>
+          </section>
+
+          <!-- Linha do tempo -->
+          <section class="cartao" aria-labelledby="t-tempo">
+            <p class="rot">O que aconteceu, hora a hora <span class="n" aria-hidden="true">3</span></p>
+            <h2 id="t-tempo" class="sr">Linha do tempo</h2>
+            <ol class="tempo">
+              <li><span class="h">22h48</span><span>Você saiu. Fila 1: fundir 120 lingotes de ferro.</span></li>
+              <li><span class="h">03h12</span><span>O carvão acabou. A fila passou para a tarefa de reserva: separar minério.</span></li>
+              <li><span class="h">05h30</span><span>A Muralha chegou a 72%. A Bruma recuou 1 légua.</span></li>
+              <li><span class="h">06h40</span><span>A tarefa de reserva terminou. A oficina ficou parada.</span></li>
+              <li><span class="h">08h00</span><span>Você voltou.</span></li>
+            </ol>
+          </section>
+
+          <!-- Oficina -->
+          <section class="cartao" aria-labelledby="t-of">
+            <p class="rot">Sua oficina</p>
+            <h2 id="t-of">O que você produziu</h2>
+            <div class="ganho"><span>Lingote de ferro (T2)</span><strong class="num">+108</strong></div>
+            <div class="ganho"><span>Minério separado</span><strong class="num">+36</strong></div>
+            <div class="ganho"><span>Fundição: subiu para o nível 39</span><strong>receita nova: pregos de ferro</strong></div>
+          </section>
+
+          <!-- Teto -->
+          <section class="cartao" aria-labelledby="t-teto">
+            <p class="rot">Teto negociável <span class="n" aria-hidden="true">4</span></p>
+            <h2 id="t-teto">92 lingotes podem ir ao mercado hoje</h2>
+            <p>Os outros 16 passaram do teto do dia e viraram <strong>48 de Mérito</strong> para a Muralha. Você pode preferir que eles fiquem na sua conta (Você › Configurações).</p>
+          </section>
+
+          <!-- Mercado -->
+          <section class="cartao" aria-labelledby="t-merc">
+            <p class="rot">Mercado <span class="n" aria-hidden="true">5</span></p>
+            <h2 id="t-merc">2 ordens executadas na Bolsa</h2>
+            <table>
+              <caption>Venda de 40 lingotes de ferro (T2) a 31 de ouro</caption>
+              <tbody>
+                <tr><th scope="row">Valor bruto</th><td class="num">1.240</td></tr>
+                <tr><th scope="row">Taxa de venda (5%, destruída)</th><td class="num">−62</td></tr>
+                <tr><th scope="row"><span class="forte">Você recebeu</span></th><td class="num"><span class="forte">1.178 de ouro</span></td></tr>
+              </tbody>
+            </table>
+            <p class="legenda">A taxa de anúncio (1%) foi paga quando você anunciou.</p>
+            <hr>
+            <p><strong>Pregão:</strong> seu lance no Machado de ipê (Fino) foi superado. Lance atual: 1.950. Faltam 3 h.</p>
+            <div class="acoes"><a class="btn" href="c-bolsa-feira.html">Ver no Mercado</a></div>
+          </section>
+
+          <!-- Arraial -->
+          <section class="cartao" aria-labelledby="t-arr">
+            <p class="rot">O Arraial</p>
+            <h2 id="t-arr">A cidade andou enquanto você dormia</h2>
+            <p>A Muralha avançou 4% (agora 72%). Na encomenda "Lanças para a Muralha", sua nota subiu para B.</p>
+            <p>Cerco de sábado: as inscrições ficam abertas até sex., 20h.</p>
+          </section>
+
+          <!-- Recados -->
+          <section class="cartao" aria-labelledby="t-rec">
+            <p class="rot">Recados</p>
+            <h2 id="t-rec">1 Troca recebida</h2>
+            <p>Bia enviou 40 tábuas de cedro.</p>
+          </section>
+
+          <p class="dobra">Na arte final, cada seção desdobra como uma página de folheto. Com movimento reduzido, tudo aparece de uma vez.</p>
+        </main>
+
+        <div class="rodape-acoes">
+          <a class="btn pri larga" href="a-arraial.html">Repetir o plano <span class="n" aria-hidden="true">6</span></a>
+          <p class="legenda" style="margin:0">Você tem carvão para 74 lingotes. A fila vai até onde o carvão der e depois passa para a reserva.</p>
+          <div class="linha">
+            <a class="btn cresce" href="#">Ajustar filas</a>
+            <a class="btn cresce" href="a-arraial.html">Ir ao Arraial</a>
+          </div>
+          <p class="legenda" style="margin:0;text-align:center">Não há nada para coletar: tudo já é seu. <span class="n" aria-hidden="true">7</span></p>
+        </div>
+      </section>
+
+      <!-- Variante: ausência curta -->
+      <section class="celular" aria-label="Wireframe: variante de ausência curta">
+        <div class="conteudo">
+          <p class="rot">Variante: ausência de menos de 1 h <span class="n" aria-hidden="true">8</span></p>
+          <div class="curto" role="status">
+            <span class="cresce">Em 42 min: +31 lingotes, 1 ordem executada (+412 de ouro).</span>
+            <a class="btn" href="#">Ver</a>
+          </div>
+          <p class="legenda">Faixa de uma linha no topo do Arraial, sem abrir o Folheto.</p>
+        </div>
+      </section>
+    </div>
+
+    <aside class="notas" aria-labelledby="t-notas">
+      <h2 id="t-notas">Notas de design</h2>
+      <ol>
+        <li><span class="n">1</span><p><strong>"Mostrar tudo" sempre à mão.</strong> O Folheto abre seção a seção como um presente, mas quem tem pressa pula a encenação num toque. O jogo lembra a preferência.</p></li>
+        <li><span class="n">2</span><p><strong>A primeira linha é a consequência do plano,</strong> não a lista de ganhos: "seu plano rendeu X; o gargalo foi Y". O jogador atribui o resultado a si e aprende a planejar (<a href="../../01-pesquisa/02a-teoria-design-idle.md">02a</a>; insight 14 da síntese). A sugestão de melhoria leva direto à solução.</p></li>
+        <li><span class="n">3</span><p><strong>Linha do tempo de eventos.</strong> O cálculo do ausente no servidor salta de evento em evento (<a href="../../01-pesquisa/07-tecnica-idles-online.md">07, §1.1</a>), e cada evento vira uma linha legível. A tarefa de reserva mostra que o plano tinha um "se der errado".</p></li>
+        <li><span class="n">4</span><p><strong>O teto explicado no momento em que pesa.</strong> O excedente não sumiu: virou Mérito ou ficou na conta, conforme a escolha do jogador (bíblia §6.6; módulo 07).</p></li>
+        <li><span class="n">5</span><p><strong>Mercado com o líquido.</strong> Bruto, taxa destruída e "você recebeu" (princípio 9). O Pregão aparece com o prazo, sem alarme.</p></li>
+        <li><span class="n">6</span><p><strong>Repetir o plano em um toque.</strong> É a ação mais comum de quem volta: a sessão de 5 minutos começa resolvida. Antes de começar, o jogo diz até onde os insumos dão; comprar o que falta é outra ação, com a própria confirmação (princípio 11).</p></li>
+        <li><span class="n">7</span><p><strong>Nada a coletar, nada a dobrar.</strong> Não existe "coletar", "dobrar com anúncio" nem "dobrar com Alvará": o ganho do ausente nunca está à venda (zona vermelha; pilar 4).</p></li>
+        <li><span class="n">8</span><p><strong>Ausência curta, resumo curto.</strong> Quem volta seis vezes por dia não precisa abrir um presente a cada vez; abaixo de 1 h [H], a volta é uma faixa de uma linha, anunciada ao leitor de tela como mensagem de estado.</p></li>
+      </ol>
+      <p class="rodape">Acessibilidade: a linha do tempo é uma lista ordenada; os valores da Bolsa estão numa tabela com cabeçalhos; a gravura da capa é decorativa (o texto diz tudo).</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>

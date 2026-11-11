@@ -42,7 +42,7 @@ Um RPG idle online, de navegador, em que cada servidor é uma cidade viva, o **A
 | **Era** | A "temporada" do Arraial: cerca de 3 meses, com uma ameaça nova e uma regra nova. |
 | **Travessia** | A temporada de expedição à Bruma (a Fronteira), em mundo paralelo, a partir da 2ª Era. |
 | **Ouro** | Moeda do jogo. Negociável. |
-| **Alvará** | O token oficial. Comprado em reais, transferível livremente. Consumido, dá 30 dias de conveniência, ou é gasto em cosméticos. |
+| **Alvará** | O token oficial, em forma de **coins** (moeda divisível). Recebido por **doação** em reais (cada valor doado credita um número de Alvarás), sem reembolso. Transferível livremente. Gasto na loja: premium (conveniência por tempo), cosméticos, Baú do Mascate e outros itens de conforto e cosmético. Nunca compra renda, XP ou poder. |
 | **Marcos** | Moeda da Travessia. Presa à conta e à temporada. |
 | **Mérito** | Pontos de cidadania: contribuição para obras, encomendas e cercos. Preso à conta. Dá títulos e prioridade em recompensas da cidade; não pesa no voto (uma pessoa, um voto). |
 | **Bolsa** | Balcão de livro de ordens (commodities: minérios, madeiras, tecidos, comida). |

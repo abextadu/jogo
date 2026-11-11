@@ -17,6 +17,14 @@
 | 4 | **Um personagem por conta**, com companheiros NPC contratados e não negociáveis. |
 | 5 | **Sem PvP direto no lançamento;** competição assíncrona (cercos, rankings de guilda, corrida da Fronteira). |
 
+### Decisão de 2026-11-11 (Gabriel): doação, coins e sem reembolso
+
+- **O pagamento funciona como "doação":** cada valor doado credita um número de coins (Alvarás). Os coins são gastos na loja: premium (conveniência por tempo), cosméticos, Baú do Mascate e outros itens da loja (respeitando a decisão 3 do checkpoint 2: conforto e cosmético, nunca poder).
+- **Sem reembolso** por parte do estúdio.
+- **O Alvará passa de "item de 30 dias" a moeda divisível (coins),** transferível livremente (decisão 1 do checkpoint 1).
+- **Alerta registrado uma vez:** chamar de doação não muda a natureza de compra perante o CDC, pode atrair ITCMD e conflitar com as regras dos provedores de pagamento; a contestação forçada pelo banco (chargeback, MED do Pix) continua possível. Risco assumido pelo Gabriel.
+- **Pendente:** como tratar a contestação forçada pelo banco.
+
 ### Plano da Fase 3
 
 - **Bíblia do GDD:** [`03-gdd/00-biblia.md`](03-gdd/00-biblia.md) ✅ — visão, mundo provisório (Pindorama, Arraial, Bruma), glossário oficial, números-âncora e mapa dos módulos.

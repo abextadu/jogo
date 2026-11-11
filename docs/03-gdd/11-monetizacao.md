@@ -15,7 +15,7 @@
 - **Baú do Mascate:** custa R$ 4,90 de saldo do Alvará, e as chances são publicadas na tela e na página do jogo. A cada 10 Baús sem item Raro ou melhor, o décimo garante um. **Todo item do Baú também é vendido diretamente, com preço fixo**, o que põe um teto no valor do prêmio. Os itens saem lacrados e são negociáveis; ao serem aplicados, ficam presos à conta. Limites: 20 Baús comprados por mês, 10 aberturas por dia e 40 por mês.
 - **Passe da Era:** R$ 19,90, sem poder e sem expirar. Avança por marcos, não por horas, com teto semanal acumulável, para que quem fica fora uma semana não perca nada.
 - **Teto de gasto de R$ 250 por mês para todos**, com níveis de R$ 600 e R$ 1.200 só por pedido e com espera. Há ainda limite de cinco compras por dia, reembolso em 7 dias, painel de gasto, opção de fechar a loja para si e resposta graduada a sinais de risco.
-- **Projeção** [H]: R$ 32 mil, R$ 163 mil e R$ 463 mil por mês nos cenários pessimista (2 mil simultâneos), base (3,5 mil) e otimista (5 mil). O cenário base paga uma equipe enxuta de cerca de 5 pessoas e a operação. **O achado principal:** a verificação de idade de cada conta nova come cerca de 30% da receita no cenário base e quase toda a receita no pessimista (seção 8.5).
+- **Projeção** [H]: R$ 32 mil, R$ 163 mil e R$ 463 mil por mês nos cenários pessimista (2 mil simultâneos), base (3,5 mil) e otimista (5 mil). O cenário base paga uma equipe enxuta de 4 a 5 pessoas e a operação; o pessimista não paga equipe. **O achado principal:** a verificação de idade de cada conta nova, a R$ 1,00, consome cerca de 25% da receita bruta no cenário base e 70% no pessimista (seção 8.5). É o motivo econômico para verificar só depois do prólogo ([12](12-onboarding.md)) e para negociar o preço da verificação.
 
 ## 1. A régua: o que pode e o que não pode ir à loja
 
@@ -444,4 +444,280 @@ A soma dos limites (15) passa do teto (10), para dar escolha. **Venda no mercado
 
 > **Quatro perguntas** — Referência: tetos da Jagex, FIFA Playtime, o "cofre" de autoexclusão das casas de aposta reguladas [NV: modelo citado de memória, não estudado na Fase 1], o caso Clicker Heroes 2 ([A02](../01-pesquisa/fichas/A02-clicker-heroes.md)) · Problema: uma receita que não dependa de quem perdeu o controle, num jogo que tem caixa paga · Comportamento: o jogador vê e escolhe quanto gasta; o grande pagante precisa pedir e esperar · Risco: o teto empurra quem quer gastar mais para o mercado cinza (comprar Alvará e ouro de outros jogadores por Pix, fora do jogo); a mitigação é medir o preço do nosso ouro no mercado cinza ([05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.7) e manter o canal oficial mais seguro.
 
-<!-- continua -->
+## 8. Projeção de receita
+
+### 8.1 A fórmula e as premissas
+
+[H] A bíblia (§6.7) pede um plano que feche com 2 a 5 mil simultâneos por Arraial. A conta parte dos simultâneos e chega à receita:
+
+`DAU = simultâneos × (DAU por simultâneo)`
+`MAU = DAU ÷ (DAU/MAU)`
+`receita do mês = MAU × conversão × ARPPU`
+
+*Exemplo calculado (cenário base):* `3.500 × 10 = 35.000 DAU`; `35.000 ÷ 0,30 ≈ 116.667 MAU`; `116.667 × 4% × R$ 35 ≈ R$ 163.333 por mês`.
+
+| Premissa [H] | Pessimista | Base | Otimista | De onde vem |
+|---|---|---|---|---|
+| Simultâneos (média do dia) | 2.000 | 3.500 | 5.000 | Bíblia, §6.7 |
+| DAU por simultâneo | 8 | 10 | 12 | Leitura nossa: no navegador, muita gente deixa a aba aberta horas (modo canto de tela, [08](../01-pesquisa/08-mercado-posicionamento.md), H4), o que reduz o número de pessoas por vaga simultânea; no celular, sessões de 5 a 15 min (bíblia, §6.1) aumentam. **É a premissa mais incerta da tabela** |
+| DAU/MAU | 25% | 30% | 35% | Idles de 2020: 18%; mediana do PC em 2025: 4% a 5% ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.1). Ficamos acima porque o idle é hábito diário e a base é de adultos verificados, já filtrados pelo prólogo ([12](12-onboarding.md)) |
+| Conversão (pagantes em dinheiro no mês ÷ MAU) | 2% | 4% | 6% | 1% a 3% no F2P mobile, com o RPG no topo; 1,9% na Swrve ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.2). O pessimista fica dentro da faixa conservadora do 06; base e otimista acima, porque a base é de adultos verificados e o produto central é recorrente (como uma assinatura) |
+| ARPPU mensal | R$ 25 | R$ 35 | R$ 45 | US$ 20 no top 15% e US$ 27 a 31 em RPG, no mobile de 2019 ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.2). Ficamos bem abaixo por causa do teto de gasto, da ausência de gacha de poder e do Brasil, que gasta pouco por jogador ([08](../01-pesquisa/08-mercado-posicionamento.md), §2.1) |
+
+### 8.2 Resultado
+
+| Resultado [H] | Pessimista | Base | Otimista |
+|---|---|---|---|
+| DAU | 16.000 | 35.000 | 60.000 |
+| MAU | 64.000 | ~116.700 | ~171.400 |
+| Pagantes em dinheiro no mês | 1.280 | ~4.670 | ~10.290 |
+| **Receita bruta por mês** | **R$ 32.000** | **R$ 163.333** | **R$ 462.857** |
+| Receita bruta por ano | R$ 384 mil | R$ 1,96 milhão | R$ 5,55 milhões |
+| Receita por MAU por mês | R$ 0,50 | R$ 1,40 | R$ 2,70 |
+| ARPDAU (por dia) | R$ 0,066 | R$ 0,154 | R$ 0,254 |
+| ARPDAU em dólar de preço regional Steam (÷ 3,30, seção 2.2) | US$ 0,020 | US$ 0,047 | US$ 0,077 |
+
+**Checagem contra os benchmarks [H]:** o ARPDAU do pessimista empata com a mediana do mobile de 2019 (US$ 0,02); o do base fica entre a mediana e o top 15% (US$ 0,10 a 0,14); nenhum cenário chega ao teto de RPG e estratégia (US$ 0,25) ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.2). O base é conservador frente aos benchmarks de RPG e otimista frente ao "gasto baixo" do Brasil. A conversão de dólar pelo preço regional do Steam é aproximação nossa.
+
+**Como a receita do cenário base se distribui entre os pagantes [H]:**
+
+| Perfil de pagante | Parcela dos pagantes | Gasto médio no mês | Contribuição para o ARPPU |
+|---|---|---|---|
+| Leve (1 Alvará: conveniência ou passe) | 65% | R$ 19,90 | R$ 12,94 |
+| Médio (2 Alvarás, ou 1 mais cosméticos e Baús) | 27% | R$ 39,80 | R$ 10,75 |
+| Alto (perto do teto padrão) | 7% | R$ 99,50 | R$ 6,97 |
+| Teto ampliado ou máximo | 1% | R$ 400 | R$ 4,00 |
+| **Média (ARPPU)** | 100% | — | **R$ 34,66 ≈ R$ 35** |
+
+O 1% que mais paga responde por ~12% da receita (`4,00 ÷ 34,66`), e os 8% de cima, por ~32%.
+
+### 8.3 Composição da receita e fluxo de Alvarás (cenário base)
+
+[H] Premissas de uso, para a simulação calibrar:
+
+| Fluxo | Valor no base [H] | Conta |
+|---|---|---|
+| Cosméticos e passes pagos direto (Pix e cartão) | 15% da receita = R$ 24.500 | — |
+| Compras de Alvará | 85% da receita = R$ 138.833 | ÷ R$ 19,90 ≈ **6.980 Alvarás por mês** (1,49 por pagante) |
+| → consumidos em conveniência por quem comprou | 40% = 2.790 | — |
+| → **vendidos por ouro (Câmbio ou Troca)** | **35% = 2.440** | — |
+| → abertos na loja (saldo) | 15% = 1.047 = R$ 20.835 de saldo | — |
+| → pagos no Cartório | 5% = 349 (35 destruídos pela taxa de 10%) | — |
+| → guardados | 5% = 349 | Receita diferida |
+| Alvarás comprados com ouro: consumidos em conveniência | 80% de 2.440 = 1.954 | — |
+| Alvarás comprados com ouro: abertos na loja | 20% de 2.440 = 488 = R$ 9.711 de saldo | — |
+| **Conveniências ativas** | 2.790 + 1.954 ≈ **4.745 contas (4,1% do MAU)** | — |
+| Parcela das conveniências obtidas com ouro | 1.954 ÷ 4.745 ≈ **41%** | Meta do [05d](../01-pesquisa/05d-rmt-recomendacao.md): 30% a 65% (IdleMMO: 65,2%) |
+| Saldo total de loja no mês | R$ 30.546: 60% em Baú, 25% em passe, 15% em cosméticos | — |
+| **Baús por mês** | R$ 18.328 ÷ R$ 4,90 ≈ **3.740** (2.550 de saldo comprado em reais e 1.190 de saldo vindo de Alvará comprado com ouro) | — |
+| Gasto em Baú de origem em dinheiro | ~R$ 12.500 por mês (7,7% da receita) | — |
+
+### 8.4 Deduções, custos e o que a receita paga
+
+[H] Deduções sobre a receita bruta: impostos ~12% ([NV]: depende do regime, Simples Nacional ou Lucro Presumido, e da transição para IBS e CBS; **validar com contador**); meios de pagamento ~3% (seção 2.4); reembolsos e chargebacks ~1,5%. Receita líquida ≈ 83,5% da bruta.
+
+**Custo de uma pessoa na equipe [F + H]:** agregadores de salário põem a média de desenvolvedor de jogos no Brasil em ~R$ 8.200 por mês, somando todos os níveis ([Contabilizei](https://www.contabilizei.com.br/contabilidade-online/quanto-ganha-um-desenvolvedor-de-jogos-confira/)), e o sênior em ~R$ 11.450 ([Jornal Contábil](https://jornalcontabil.com.br/noticia/voce-sabe-quanto-ganha-um-desenvolvedor-de-jogos-confira/)). São fontes comerciais, de baixa confiança, e outras fontes divergem muito. [H] Com encargos, benefícios e equipamento (~1,7 vez o salário), usamos **R$ 14 mil por pessoa por mês**.
+
+**Custo da verificação de idade [F + H]:** em 2019, o Datavalid do Serpro cobrava R$ 0,80 por validação cadastral e R$ 1,68 por biometria facial, na faixa de até 999 consultas, com preço menor por volume ([Tecnoblog, 19/6/2019](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/)); não encontramos tabela atual. [H] Usamos **R$ 1,00 por conta nova verificada**, e **contas novas verificadas por mês = 35% do MAU** (num jogo maduro, a base se renova; com a retenção-alvo do [12](12-onboarding.md), a conta dá de 35% a 43%).
+
+| Linha (por mês) [H] | Pessimista | Base | Otimista |
+|---|---|---|---|
+| Receita bruta | R$ 32.000 | R$ 163.333 | R$ 462.857 |
+| Receita líquida (83,5%) | R$ 26.720 | R$ 136.383 | R$ 386.486 |
+| Verificação de idade (35% do MAU × R$ 1,00) | −R$ 22.400 | −R$ 40.833 | −R$ 60.000 |
+| Servidor, backup, CDN e anti-DDoS (VPS própria) | −R$ 4.000 | −R$ 6.000 | −R$ 10.000 |
+| Jurídico e contábil | −R$ 4.000 | −R$ 8.000 | −R$ 15.000 |
+| Ferramentas e serviços (e-mail, monitoramento, antifraude) | −R$ 1.500 | −R$ 3.000 | −R$ 6.000 |
+| Comunidade e criadores de conteúdo | R$ 0 | −R$ 10.000 | −R$ 30.000 |
+| Arte terceirizada de cosméticos | R$ 0 | −R$ 5.000 | −R$ 30.000 |
+| **Sobra para a equipe** | **−R$ 5.180** | **R$ 63.550** | **R$ 235.486** |
+| **Equipe que isso paga (R$ 14 mil por pessoa)** | **nenhuma** | **~4 a 5 pessoas** | **~17 pessoas** |
+
+**Leitura [H]:**
+- **Pessimista:** não paga nem a verificação e a operação mínima. Nessa escala, o jogo só existe como projeto de uma ou duas pessoas sem salário de mercado, como os concorrentes ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.4), ou com uma verificação muito mais barata.
+- **Base:** paga uma equipe enxuta de 4 a 5 pessoas, além do Gabriel (por exemplo: duas de servidor e infraestrutura, uma de cliente e interface, uma de design e economia, uma de comunidade e suporte), com a arte de cosméticos parcialmente terceirizada. Fecha, mas no limite do que "confiança como produto" pede (antibot, suporte bilíngue, relatório mensal).
+- **Otimista:** ~17 pessoas e verba para o conteúdo de cada Era, a Travessia e marketing.
+
+### 8.5 O peso da verificação de idade
+
+[H] A verificação cobra por conta nova, enquanto a receita vem só de quem paga. A parcela da receita bruta que ela consome independe do número de simultâneos:
+
+`peso da verificação = (contas novas ÷ MAU) × custo por verificação ÷ (conversão × ARPPU)`
+
+| Custo por verificação | Pessimista (R$ 0,50 por MAU) | Base (R$ 1,40 por MAU) | Otimista (R$ 2,70 por MAU) |
+|---|---|---|---|
+| R$ 0,40 | 28% | 10% | 5% |
+| **R$ 1,00** | **70%** | **25%** | **13%** |
+| R$ 1,68 (preço de 2019, faixa baixa) | 118% | 42% | 22% |
+
+*Exemplo calculado (base, R$ 1,00):* `0,35 × 1,00 ÷ (0,04 × 35) = 0,35 ÷ 1,40 = 25%`.
+
+**Consequências para o desenho:**
+1. **Verificar só quem quer ficar.** É o principal motivo econômico para o prólogo sem conta do [12](12-onboarding.md): quem só está olhando não gera custo de verificação.
+2. **Negociar preço por volume** e combinar métodos (o módulo 13 escolhe), mirando R$ 0,40 ou menos por conta.
+3. **Acompanhar o "token etário"** estudado pelo Ministério da Justiça desde dez./2025: uma credencial que confirmaria a faixa de idade sem expor dados ([Contábeis, 3/12/2025](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/)). Especialistas também discutem a confirmação de idade por bancos, via Open Finance, sem produto disponível ([Let's Money, 18/3/2026](https://www.letsmoney.com.br/noticias/bancos-validar-idade-eca-digital-open-finance/)). Se uma solução pública e gratuita vingar, o peso cai perto de zero.
+4. **Reserva de lançamento:** no primeiro mês, quase todo o MAU é conta nova. Com 60 mil verificados no mês de estreia, são R$ 60 mil de verificação antes de a receita amadurecer. O orçamento precisa reservar cerca de três meses de verificação de lançamento.
+
+### 8.6 Ponto de equilíbrio e sensibilidade (cenário base)
+
+**Para uma equipe de 8 pessoas** (R$ 112 mil por mês), com o MAU do base e os demais custos do base (R$ 72.833, incluindo a verificação), a receita líquida precisa ser de R$ 184.833, e a bruta, de ~R$ 221 mil. Isso dá **R$ 1,90 por MAU por mês**: por exemplo, 5% de conversão com ARPPU de R$ 38, ou 4% com R$ 47.
+
+**Uma premissa por vez** (o resto igual ao base):
+
+| Premissa alterada | Sobra para a equipe | Pessoas |
+|---|---|---|
+| Base | R$ 63.550 | ~4,5 |
+| Conversão 3% / 5% | R$ 29.455 / R$ 97.646 | ~2 / ~7 |
+| ARPPU R$ 25 / R$ 45 | R$ 24.584 / R$ 102.517 | ~2 / ~7 |
+| Verificação R$ 0,40 / R$ 1,68 | R$ 88.050 / R$ 35.783 | ~6 / ~2,5 |
+| Contas novas 25% / 45% do MAU | R$ 75.216 / R$ 51.883 | ~5,5 / ~3,5 |
+| DAU por simultâneo 6 / 15 | R$ 25.330 / R$ 111.325 | ~2 / ~8 |
+
+[H] Os números que mais mexem no resultado são o DAU por simultâneo (que só se mede com jogadores reais), a conversão e o ARPPU. O preço da verificação vem logo atrás. A sensibilidade reforça a recomendação do [06](../01-pesquisa/06-monetizacao-retencao.md) (§4.4): medir o próprio funil desde o alfa, por coorte, porque nenhum benchmark público mostra a cauda que paga um RPG.
+
+## 9. Interfaces com a economia (módulo 07) e com a simulação (módulo 08)
+
+[H] Parâmetros que este módulo entrega para a simulação, com a faixa a testar:
+
+| Parâmetro | Pessimista | Base | Otimista | Faixa para testar |
+|---|---|---|---|---|
+| % do MAU que paga em dinheiro no mês | 2% | 4% | 6% | 1% a 8% |
+| ARPPU mensal | R$ 25 | R$ 35 | R$ 45 | R$ 20 a R$ 60 |
+| Preço do Alvará | R$ 19,90 | R$ 19,90 | R$ 19,90 | R$ 14,90 a R$ 24,90 |
+| Alvarás comprados com dinheiro por mês | ~1.370 | ~6.980 | ~19.770 | — |
+| Alvarás por pagante por mês | 1,07 | 1,49 | 1,92 | 1 a 2,5 |
+| Destino dos Alvarás comprados com dinheiro (conveniência própria / Câmbio e Troca / loja / Cartório / guardados) | 40 / 35 / 15 / 5 / 5% | igual | igual | Câmbio e Troca de 20% a 55% |
+| **Alvarás que entram no Câmbio ou na Troca por mês** | **~480** | **~2.440** | **~6.920** | — |
+| Destino dos Alvarás comprados com ouro (conveniência / loja) | 80 / 20% | igual | igual | — |
+| Conveniências ativas (dinheiro e ouro) | ~930 (1,5% do MAU) | ~4.745 (4,1%) | ~13.440 (7,8%) | — |
+| Parcela das conveniências obtidas com ouro | 41% | 41% | 41% | 20% a 65% |
+| Baús abertos por mês (todas as origens) | ~730 | ~3.740 | ~10.600 | — |
+| Gasto em Baú de origem em dinheiro | ~R$ 2.450 | ~R$ 12.500 | ~R$ 35.400 | — |
+| Baús revendidos fechados no mercado | 30% | 30% | 30% | 10% a 50% |
+| Alvará destruído pela taxa do Cartório por mês | ~7 | ~35 | ~99 | — |
+| Pagantes que gastam mais de R$ 99 no mês / que chegam ao teto padrão ou acima | 8% / 1% | 8% / 1% | 8% / 1% | — |
+
+**Cenários de estresse que a simulação deve rodar [H]** (somados aos quatro do [05d](../01-pesquisa/05d-rmt-recomendacao.md), "Implicações"):
+1. **Onda de compras na estreia de uma Era:** Alvarás comprados × 2 no mês, com 50% indo ao Câmbio.
+2. **Fuga dos pagantes:** conversão cai à metade em 60 dias.
+3. **Conveniência sem apelo:** conveniência própria cai de 40% para 20% e o Câmbio sobe para 55%. É o teste de "o Alvará vira só ouro comprado": mede o "P2W de capital" (patrimônio do pagante alto contra o do não pagante mediano).
+4. **Fraude de cartão:** 5% dos Alvarás do mês revertidos depois de vendidos no Câmbio.
+5. **Teto dobrado** (R$ 500 padrão), para medir quanto a receita e a concentração mudam.
+
+**O que a economia precisa garantir para a monetização funcionar [H]:**
+- O preço do Alvará em ouro precisa ficar alcançável para o não pagante (meta do [05d](../01-pesquisa/05d-rmt-recomendacao.md): de 30% a 65% do premium obtido com ouro). Se o ouro inflar, a rota grátis fecha (as gemas do GW2, [F07](../01-pesquisa/fichas/F07-guild-wars-2.md)).
+- Limites de Alvarás por conta no Câmbio (o [05d](../01-pesquisa/05d-rmt-recomendacao.md) sugere simular de 2 a 5 vendidos por semana e de 3 a 6 comprados por mês) **a reconciliar com o módulo 07**, respeitando a decisão de transferência livre.
+- O Baú não pode derrubar o preço da decoração feita pelos ofícios (seção 5.8).
+
+## 10. A carta pública de monetização
+
+[H] Texto para a página do jogo e para a tela "Como o jogo ganha dinheiro", acessível da loja. Versão 0: **revisar com advogado antes de publicar**, porque a carta é um compromisso público e pode ser lida como oferta (CDC, art. 30). O [06](../01-pesquisa/06-monetizacao-retencao.md) ("Como isso pode dar errado", item 11) lembra que o contrato público pode virar armadilha se for impreciso.
+
+---
+
+> ### Como o Arraial ganha dinheiro, e o que nunca vamos vender
+>
+> O Arraial é de quem joga. Esta carta diz, sem letra miúda, como o jogo se paga. Se um dia ela mudar, você vai saber com 30 dias de antecedência, com os motivos e os números.
+>
+> **O que vendemos**
+> - **O Alvará, por R$ 19,90.** Ele vale 30 dias de conveniência ou R$ 19,90 em crédito na loja de cosméticos. Você pode usar, guardar ou passar para outro jogador. Quem não quer pagar em reais pode comprar um Alvará com ouro ganho jogando, no Câmbio.
+> - **Conveniência:** um cosmético novo por mês, que fica com você para sempre, mais espaço no guarda-roupa, cômodos de decoração na casa, festas para os amigos, um painel do seu patrimônio e temas de interface. A lista completa está na loja.
+> - **Cosméticos:** aparências, decoração, visuais de ajudante, gestos. O preço aparece em reais, sempre.
+> - **O Passe da Era:** uma trilha de recompensas cosméticas. Ele não expira. Passes antigos continuam à venda e podem ser completados quando você quiser.
+> - **O Baú do Mascate:** uma caixa com um cosmético ou decoração sorteados. As chances exatas de cada item estão na tela do Baú e nesta página. **Todo item do Baú também é vendido diretamente, com preço fixo**, então você nunca precisa contar com a sorte para ter o que quer. Há limite de Baús por mês.
+>
+> **O que nunca vendemos, nem por reais nem por Alvará**
+> - Tempo: horas de offline, filas, aceleração.
+> - Automação.
+> - Renda, XP, nível, poder de combate ou qualidade de fabricação.
+> - Espaço de armazenamento, vagas ou destaque no mercado, taxas menores.
+> - Reparo ou qualquer alívio do desgaste.
+> - Mérito, voto, título de conquista ou lugar em ranking.
+>
+> Também não damos Alvará nem Baú de graça em eventos, porque isso desvaloriza o que outros jogadores pagaram.
+>
+> **A espera é igual para todos.** Todo mundo tem 24 horas de trabalho guardado quando está fora, e pode chegar a 72 horas jogando. Ninguém compra mais. Sair do jogo nunca faz você perder o que tem.
+>
+> **Limites que protegem você**
+> - O teto de gasto é de **R$ 250 por mês**, igual para todos. Para aumentar, você pede e espera alguns dias. Para diminuir, o efeito é imediato.
+> - Você pode **fechar a loja para você** por 30, 90 ou 180 dias, ou de vez.
+> - O seu gasto do mês, do ano e da vida da conta fica sempre à vista.
+> - Não usamos contagem regressiva, oferta "só para você" nem notificação de promoção.
+> - **Reembolso:** Alvará não usado e ainda não passado a outra pessoa é devolvido em até 7 dias, sem perguntas.
+> - O jogo é só para maiores de 18 anos, com idade confirmada. Uma pessoa, uma conta.
+>
+> **O dinheiro, o ouro e as trocas**
+> - O estúdio não compra de volta Alvará, ouro, itens ou contas, e não paga dinheiro a jogadores.
+> - O Cartório é o único lugar oficial de venda de contas. O pagamento é em Alvará, e a taxa de 10% é destruída.
+> - Trocas por dinheiro entre jogadores, fora do jogo, não são intermediadas nem garantidas por nós, e não damos suporte a elas. Não temos parceria nem integração com sites de venda de itens. Uso de bot é proibido.
+> - Todas as taxas em ouro são destruídas. O estúdio não ganha ouro.
+> - **Não prometemos renda.** Ninguém deve jogar este jogo para ganhar dinheiro.
+>
+> **Preços e mudanças**
+> - O preço do Alvará não sobe nos primeiros 12 meses. Depois, nunca acima da inflação oficial (IPCA) do período, e sempre com 30 dias de aviso.
+> - Nada que for tirado do jogo grátis volta à venda.
+>
+> **Transparência**
+> Todo mês publicamos um relatório com o preço do Alvará em ouro, o ouro criado e destruído, quanto da conveniência foi obtida com ouro, a diferença de progresso entre quem paga e quem não paga, as chances dos Baús e os banimentos por bot e fraude.
+
+---
+
+## 11. Decisões que este módulo pede ao diretor
+
+[H] Até cinco, cada uma com opções e a recomendação.
+
+1. **Preço do Alvará.** (A) R$ 19,90 ← recomendado; (B) R$ 14,90; (C) R$ 24,90. *Por quê:* fica entre o Torn e o IdleMMO em preço regional, sem baratear o ouro nem empurrar para o mercado cinza (seção 2.2).
+2. **Todo item do Baú também à venda diretamente.** (A) Sim, com preço fixo, e o item comum custando o mesmo que o Baú ← recomendado; (B) só os itens Raro ou melhor; (C) Baú com itens exclusivos. *Por quê:* (A) põe teto no prêmio e piso no resultado, enfraquecendo dois lados do triângulo de risco jurídico (seção 5.1); (C) é o desenho que gerou a revolta da licença de montaria no Guild Wars 2.
+3. **Como pagar abaixo de R$ 19,90.** (A) Saldo da loja em reais ← recomendado; (B) moeda premium com nome próprio; (C) só preços em Alvarás inteiros. *Por quê:* (A) não esconde o preço e não cria moeda (seção 2.6).
+4. **Teto de gasto padrão.** (A) R$ 250 por mês, com níveis de R$ 600 e R$ 1.200 por pedido e com espera ← recomendado; (B) R$ 500; (C) R$ 150. *Por quê:* R$ 250 cobre o gasto mensal de 77% dos jogadores ouvidos pela Serasa e comporta o pacote anual; (B) dobra a exposição dos vulneráveis; (C) não comporta o pacote anual (R$ 238,80) e obriga quem paga o ano adiantado a pedir aumento de teto.
+5. **Passe da Era.** (A) Separado da conveniência, por R$ 19,90 ← recomendado; (B) incluso na conveniência (como propôs o [06](../01-pesquisa/06-monetizacao-retencao.md)). *Por quê:* (A) dá a quem só quer a coleção da Era um produto próprio e cria um segundo uso do Alvará, o que sustenta o preço dele em ouro.
+
+## Propostas de mudança na bíblia
+
+1. **[proposta de mudança na bíblia] Glossário:** incluir **Saldo da loja** (crédito em reais, preso à conta, gerado ao abrir um Alvará na loja; só compra da loja do estúdio; não é moeda e não circula), **Passe da Era** (o passe da temporada, um por Era, sem expirar) e **feito** (unidade de progresso do Passe da Era; não é moeda). O nome "feito" evita colisão com **Marcos**, a moeda da Travessia.
+2. **[proposta de mudança na bíblia] Regra do lacre** como complemento do piso P3 para bens que não se desgastam: cosmético negociável (do Baú ou feito por jogadores) circula lacrado e fica preso à conta quando aplicado. A reconciliar com os módulos 05 e 07.
+3. **[proposta de mudança na bíblia] Números-âncora, §6.7:** Alvará a R$ 19,90 (no lugar de "a definir"); teto de gasto padrão de R$ 250 por mês; Baú a R$ 4,90 de saldo; Passe da Era a R$ 19,90.
+
+## Conflitos e pontos a reconciliar
+
+| Ponto | Onde está o conflito | Como este módulo tratou |
+|---|---|---|
+| Sorteio pago | O [06](../01-pesquisa/06-monetizacao-retencao.md) (princípio 3) e o [05d](../01-pesquisa/05d-rmt-recomendacao.md) (§4.1, item 7) recomendavam nenhum sorteio pago; o Gabriel decidiu pelo Baú | Segue a decisão; salvaguardas da seção 5 |
+| Token com uma revenda só, sem troca direta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §4.1; a bíblia decidiu transferência livre, com Troca e Câmbio | Segue a bíblia; limites por conta e carência ficam para os módulos 07 e 13 |
+| Passe incluso na assinatura | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 5 | Separado (decisão 5) |
+| Cosmético da loja preso × Baú negociável | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 7 × decisão do Gabriel | Loja direta presa; Baú lacrado e negociável; preso ao aplicar |
+| Limites de Alvarás no Câmbio por conta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.3 × transferência livre | A reconciliar com o módulo 07 |
+| Verificação de idade antes de jogar | Bíblia: jogo inteiro 18+ | O [12](12-onboarding.md) propõe um prólogo sem conta antes da verificação, para decisão do diretor |
+| Lugar do Baú fechado no mercado (Bolsa?) | Módulo 07 | A reconciliar |
+
+## Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| **O Baú é lido como jogo de azar** | Pagamento, sorte e prêmio negociável com RMT aberto: o triângulo da LCP, art. 50, e da tese de Nova York contra a Valve ([05b](../01-pesquisa/05b-rmt-legal-brasil.md), §3) | Venda direta de todo item, piso igual ao preço, teto de compra e de abertura, chances exatas, sem apresentação de cassino. Interruptor para desligar o Baú por país. Risco assumido pelo Gabriel; **validar com advogado** antes do lançamento |
+| **Gateway ou loja recusa o jogo por causa do Baú** | Provedores restringem caixa paga com prêmio de valor ([05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)) | Aprovação do modelo por escrito com dois provedores (R9 do [05d](../01-pesquisa/05d-rmt-recomendacao.md)); versão de loja de apps sem Baú e sem Câmbio |
+| **A conveniência vale pouco** | Sem bônus de XP, poucos consomem Alvará em conveniência; o Alvará vira só "ouro comprado"; o preço dele em ouro cai, e o pagante recebe menos ouro por real | Cenário de estresse 3 (seção 9); reforçar com mais cosmético e mais vida social, nunca com resultado; medir a parcela de consumo próprio todo mês |
+| **A conveniência escorrega para resultado** | Pressão para incluir "só um pouquinho" de offline, de fila ou de taxa menor | Teste das quatro perguntas por alguém de fora do time de receita; a carta pública lista o que nunca se vende |
+| **P2W de capital pelo Câmbio** | O pagante alto vende Alvarás e compra o mercado ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)) | Teto de gasto; sem desconto por volume; limites por conta no Câmbio (módulo 07); publicar a diferença de patrimônio entre pagante e não pagante |
+| **Cartão roubado vira Pix pelo RMT informal** | Fraudador compra Alvarás, transfere e vende por Pix fora do jogo antes do estorno | Carência de transferência por meio de pagamento (S2, módulo 13); regra de reversão; disjuntor por taxa de disputas |
+| **A verificação de idade inviabiliza a conta** | A R$ 1,00 por conta nova, consome 25% da receita no base e 70% no pessimista (seção 8.5) | Prólogo sem conta antes da verificação ([12](12-onboarding.md)); negociação por volume; métodos combinados (módulo 13); acompanhar o token etário público; reserva de lançamento |
+| **O teto empurra para o mercado cinza** | Quem quer gastar mais compra ouro ou Alvará por Pix de outros jogadores | Medir o preço do nosso ouro no mercado cinza; canal oficial mais seguro; teto ampliado por pedido |
+| **O pessimista acontece** | 2 mil simultâneos, 2% de conversão e ARPPU de R$ 25 não pagam nem a verificação | Decidir, antes de construir, qual equipe mínima o Gabriel banca sem receita; medir no alfa o DAU por simultâneo e a conversão; plano B dentro da carta: mais cosmético, expansões de conteúdo cosmético, versão Steam |
+| **O saldo da loja parece moeda escondida** | O jogador sente o crédito como "gemas" | Saldo sempre em reais, complemento por Pix, reembolso do saldo não gasto |
+| **Abuso do reembolso** | "Usa a conveniência e devolve" todo mês | Medir; se houver abuso, uma vez a cada 12 meses (validar com advogado) |
+| **Pix Automático esquecido** | O jogador paga meses sem usar | Aviso 3 dias antes de cada cobrança, cancelamento com um toque, pausa |
+| **Especulação com itens lacrados** | Lendários lacrados guardados como reserva de valor | Teto de valor pela venda direta; o lacre tira o item do mercado quando usado; edições nunca retiradas |
+| **O Baú derruba o artesão da decoração** | Cosméticos do Baú inundam o mercado e competem com o que os ofícios fabricam | Monitorar preços (módulo 07); moldes da trilha grátis do passe dão aos ofícios uma linha própria; ajustar o volume de decoração nas edições |
+| **A carta pública vira armadilha** | Um compromisso impreciso impede uma correção necessária (o token no WoW Classic, [F06](../01-pesquisa/fichas/F06-world-of-warcraft.md)) | Texto revisado por advogado; listas exatas do que é proibido e do que é permitido; mudanças só a favor do jogador |
+| **Pressão por receita muda a cultura** | Anos de vendas de atalho no RS3 sob donos sucessivos ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)) | Indicadores de justiça na mesma reunião que a receita ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 12); a carta pública como freio |
+
+## Fontes novas deste módulo
+
+As demais fontes estão nos estudos e fichas da Fase 1 citados ao longo do texto. Acessadas em novembro de 2026.
+
+1. [Mercado Pago — Link de pagamento (taxas de Pix, cartão e parcelamento)](https://www.mercadopago.com.br/ferramentas-para-vender/link-de-pagamento) — oficial (empresa) — sem data de vigência na página.
+2. [Tecnoblog — MPDFT acusa Serpro de usar dados da CNH sem autorização (preços do Datavalid)](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/) — imprensa — 19/6/2019.
+3. [Contábeis — Governo estuda criar token etário digital](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/) — imprensa — 3/12/2025.
+4. [Let's Money — Bancos podem validar idade para o ECA Digital via Open Finance](https://www.letsmoney.com.br/noticias/bancos-validar-idade-eca-digital-open-finance/) — imprensa — 18/3/2026, atualizada em 12/9/2026.
+5. [Contabilizei — Quanto ganha um desenvolvedor de jogos](https://www.contabilizei.com.br/contabilidade-online/quanto-ganha-um-desenvolvedor-de-jogos-confira/) — blog comercial — sem data visível (baixa confiança).
+6. [Jornal Contábil — Quanto ganha um desenvolvedor de jogos](https://jornalcontabil.com.br/noticia/voce-sabe-quanto-ganha-um-desenvolvedor-de-jogos-confira/) — imprensa especializada — sem data visível (baixa confiança).

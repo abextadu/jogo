@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(a) Arraial — wireframe</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.doc{max-width:1120px;margin:0 auto;padding:16px}
+.doc-topo h1{font-size:20px;margin:4px 0}
+.doc-topo p{margin:4px 0;font-size:14px;color:var(--cinza)}
+.grade{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.grade{grid-template-columns:400px minmax(0,1fr);align-items:start}.notas{position:sticky;top:16px}}
+.telas{display:grid;gap:24px}
+.celular{background:var(--papel);border:2px solid var(--tinta);border-radius:22px;width:100%;max-width:400px;margin:0 auto;overflow:hidden}
+.cab{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:2px solid var(--tinta);background:var(--suave)}
+.cab .lugar{flex:1;min-width:0}
+.cab .lugar strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab .lugar small{display:block;color:var(--cinza);font-size:12px}
+.saldo{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:1.5px solid var(--tinta);border-radius:999px;background:#fff;font-size:13px;text-decoration:none;white-space:nowrap}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:4px;background:#fff;font-size:10px;flex:none}
+.ico.red{border-radius:50%}
+.conteudo{padding:12px;display:grid;gap:12px}
+.cartao{border:1.5px solid var(--tinta);border-radius:10px;padding:12px;background:#fff}
+.cartao>h2,.cartao>h3{margin:0 0 6px;font-size:16px;line-height:1.3}
+.cartao p{margin:4px 0}
+.secao-titulo{font-size:17px;margin:4px 0 0}
+.rot{margin:0 0 4px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
+.img{display:flex;align-items:center;justify-content:center;min-height:80px;padding:8px;border:1.5px dashed var(--linha);border-radius:8px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px);color:var(--cinza);font-size:13px;text-align:center}
+.linha{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cresce{flex:1;min-width:0}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--tinta);border-radius:10px;background:#fff;color:var(--tinta);font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.pri{background:var(--tinta);color:#fff}
+.btn.larga{width:100%}
+.btn.off{border-style:dashed;color:var(--cinza);background:var(--suave);cursor:not-allowed}
+.barra{height:12px;border:1.5px solid var(--tinta);border-radius:999px;overflow:hidden;background:#fff}
+.barra>i{display:block;height:100%;background:var(--tinta)}
+.barra.prev>i{background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.previsto{color:var(--cinza);font-style:italic}
+.tag{display:inline-block;padding:1px 6px;border:1px solid var(--tinta);border-radius:6px;font-size:12px}
+.tag.cheia{background:var(--tinta);color:#fff}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);color:#000;font-size:12px;font-weight:700;font-style:normal;vertical-align:middle;flex:none}
+.abas{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--tinta);background:var(--suave)}
+.abas a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:6px 2px;font-size:12px;text-decoration:none}
+.abas a[aria-current="page"]{font-weight:700;box-shadow:inset 0 4px 0 var(--tinta)}
+.notas{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px 16px}
+.notas h2{margin:4px 0 8px;font-size:17px}
+.notas ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.notas li p{margin:0}
+.notas .rodape{margin-top:12px;font-size:13px;color:var(--cinza)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;font-size:13px;color:var(--cinza);padding-bottom:4px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--medio);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:600;color:var(--cinza)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.segmento{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--tinta);border-radius:10px;overflow:hidden}
+.segmento>*{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 4px;border:0;border-left:1px solid var(--tinta);background:#fff;color:var(--tinta);font-family:inherit;font-size:13px;font-weight:600;text-decoration:none}
+.segmento>*:first-child{border-left:0}
+.segmento [aria-current],.segmento [aria-pressed="true"]{background:var(--tinta);color:#fff}
+.campo{display:grid;gap:4px}
+.campo label,.campo .rotulo{font-size:13px;font-weight:600}
+.campo input,.campo select{min-height:44px;padding:0 10px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff;font-family:inherit;font-size:16px}
+.legenda{font-size:12px;color:var(--cinza)}
+.aviso{padding:8px 10px;border-left:4px solid var(--tinta);border-radius:6px;background:var(--suave);font-size:14px}
+.forte{font-weight:700}
+hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* específicos desta tela */
+.mapa{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;padding:6px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff}
+.lote{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:1px;border:1px solid var(--tinta);font-size:9px;line-height:1.1;text-align:center;background:#fff}
+.lote.b{border:1px dashed var(--linha);background:var(--suave);color:var(--cinza)}
+.lote.o{background:var(--medio);font-weight:700}
+.lote.v{outline:3px solid var(--tinta);outline-offset:-4px;font-weight:700}
+.fila{display:grid;gap:6px;padding:10px 0;border-top:1px dashed var(--linha)}
+.fila:first-of-type{border-top:0;padding-top:0}
+.ritmos{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px}
+.ritmos div{border:1px solid var(--medio);border-radius:6px;padding:4px 6px}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="doc-topo">
+    <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
+    <h1>(a) Arraial — visão da cidade e da oficina</h1>
+    <p>Tela inicial, depois do Folheto da volta. Celular de 360 a 400 px. Nomes e números são exemplos [H].</p>
+  </header>
+
+  <div class="grade">
+    <div class="telas">
+      <section class="celular" aria-label="Wireframe: tela Arraial">
+        <header class="cab">
+          <div class="lugar"><strong>Arraial do Vau</strong><small>Era 1 · semana 6</small></div>
+          <a class="saldo" href="#" aria-label="Ouro: 12.430"><span class="ico red" aria-hidden="true">o</span>12.430</a>
+          <a class="saldo" href="g-loja.html" aria-label="Alvará: 2. Abrir a Loja"><span class="ico" aria-hidden="true">A</span>2</a>
+          <a class="saldo" href="#" aria-label="Recados: 3 novos"><span class="ico" aria-hidden="true">!</span>3</a>
+          <span class="n" aria-hidden="true">1</span>
+        </header>
+
+        <main class="conteudo">
+          <!-- A cidade -->
+          <section class="cartao" aria-labelledby="t-cidade">
+            <p class="rot">A cidade <span class="n" aria-hidden="true">2</span></p>
+            <h2 id="t-cidade">A Bruma recuou 1 légua esta semana</h2>
+            <div class="mapa" role="img" aria-label="Mapa do Arraial: 36 lotes. 22 entintados e 14 ainda na Bruma, nas bordas. A Muralha está em obra no lado norte. Sua oficina fica no lote C3.">
+              <span class="lote b">Bruma</span><span class="lote b">Bruma</span><span class="lote o">Muralha</span><span class="lote o">Muralha</span><span class="lote b">Bruma</span><span class="lote b">Bruma</span>
+              <span class="lote b">Bruma</span><span class="lote">Feira</span><span class="lote">Bolsa</span><span class="lote">Câmara</span><span class="lote">casas</span><span class="lote b">Bruma</span>
+              <span class="lote">rio</span><span class="lote">forja</span><span class="lote v">você</span><span class="lote">tear</span><span class="lote">casas</span><span class="lote b">Bruma</span>
+              <span class="lote">vau</span><span class="lote">porto</span><span class="lote">praça</span><span class="lote">horta</span><span class="lote">casas</span><span class="lote b">Bruma</span>
+              <span class="lote b">Bruma</span><span class="lote">rio</span><span class="lote">curtume</span><span class="lote">serraria</span><span class="lote b">Bruma</span><span class="lote b">Bruma</span>
+              <span class="lote b">Bruma</span><span class="lote b">Bruma</span><span class="lote">rio</span><span class="lote b">Bruma</span><span class="lote b">Bruma</span><span class="lote b">Bruma</span>
+            </div>
+            <div class="linha" style="margin-top:8px">
+              <span class="cresce"><strong>Muralha</strong> · etapa 3 de 4</span><span class="num">72%</span>
+            </div>
+            <div class="barra" role="img" aria-label="Muralha: 72% da etapa 3"><i style="width:72%"></i></div>
+            <p class="legenda">Toque num lote para ver a obra. Lotes tracejados ainda estão na Bruma (na arte final, papel em branco).</p>
+          </section>
+
+          <!-- Agenda -->
+          <section aria-labelledby="t-agenda">
+            <h2 id="t-agenda" class="secao-titulo">Agenda <span class="n" aria-hidden="true">3</span></h2>
+            <p class="legenda">Ordenada pelo prazo mais próximo. No máximo cinco cartões.</p>
+
+            <article class="cartao" aria-labelledby="t-cerco">
+              <p class="rot">Cerco · sáb., 16/11, 20h (Brasília)</p>
+              <h3 id="t-cerco">Inscrições fecham em 1 d 4 h (sex., 20h)</h3>
+              <p>Você ainda não se inscreveu. Não precisa estar online no sábado.</p>
+              <div class="acoes"><a class="btn pri" href="e-cerco-inscricao.html">Inscrever-me</a></div>
+            </article>
+
+            <article class="cartao" aria-labelledby="t-enc" style="margin-top:8px">
+              <p class="rot">Encomenda · faltam 2 d</p>
+              <h3 id="t-enc">Lanças para a Muralha</h3>
+              <div class="linha"><span class="cresce">Sua parte: 6 de 10 · nota atual B</span></div>
+              <div class="barra" role="img" aria-label="Sua parte: 6 de 10"><i style="width:60%"></i></div>
+              <div class="acoes"><a class="btn" href="#">Entregar</a></div>
+            </article>
+
+            <article class="cartao" aria-labelledby="t-cam" style="margin-top:8px">
+              <p class="rot">Câmara · até qui., 21/11, 20h</p>
+              <h3 id="t-cam">Eleição dos vereadores aberta</h3>
+              <p>Uma pessoa, um voto.</p>
+              <div class="acoes"><a class="btn" href="f-camara.html">Votar</a></div>
+            </article>
+          </section>
+
+          <!-- Oficina -->
+          <section class="cartao" aria-labelledby="t-of">
+            <p class="rot">Sua oficina <span class="n" aria-hidden="true">4</span></p>
+            <h2 id="t-of">Ferraria 42 · Fundição 38 · Guardião 27</h2>
+
+            <div class="fila">
+              <div class="linha"><span class="tag cheia">Fila 1</span><strong class="cresce">Fundir lingotes de ferro (T2)</strong></div>
+              <div class="linha"><span class="cresce">34 de 120 confirmados · <span class="previsto">41 previstos</span></span><span class="num">termina 18h40</span></div>
+              <div class="barra prev" role="img" aria-label="34 de 120 confirmados; 41 previstos"><i style="width:34%"></i></div>
+              <div class="ritmos" aria-label="Duas taxas">
+                <div>Ritmo presente<br><strong class="num">14 por hora</strong></div>
+                <div>Ritmo ausente <span class="n" aria-hidden="true">5</span><br><strong class="num">11 por hora</strong></div>
+              </div>
+              <p class="legenda">Seu offline cobre até 24 h. Tarefa de reserva: separar minério.</p>
+              <div class="acoes"><a class="btn" href="#">Ajustar</a></div>
+            </div>
+
+            <div class="fila">
+              <div class="linha"><span class="tag">Fila 2</span><span class="cresce">Vazia</span><a class="btn" href="#">Montar fila</a></div>
+            </div>
+
+            <div class="fila">
+              <div class="linha"><span class="tag">Fila 3</span><span class="cresce">Bloqueada — conquiste ao chegar ao nível 50 num ofício mestre <span class="n" aria-hidden="true">6</span></span></div>
+            </div>
+
+            <hr>
+            <div class="linha">
+              <span class="cresce"><strong>Obra-prima</strong> · 2 cargas de 3</span>
+              <a class="btn pri" href="d-obra-prima.html">Começar</a>
+            </div>
+            <p class="legenda">Ajudante: Tiana (forja) repõe o carvão da reserva.</p>
+          </section>
+
+          <!-- Teto negociável -->
+          <section class="cartao" aria-labelledby="t-teto">
+            <p class="rot">Teto negociável de hoje <span class="n" aria-hidden="true">7</span></p>
+            <h2 id="t-teto">73% do teto de hoje já foi ao mercado</h2>
+            <div class="barra" role="img" aria-label="73% do teto negociável diário usado"><i style="width:73%"></i></div>
+            <p>O que passar do teto vira Mérito para as obras ou fica na sua conta. Nada se perde.</p>
+            <div class="acoes"><a class="btn" href="#">Entenda o teto</a></div>
+          </section>
+        </main>
+
+        <nav class="abas" aria-label="Navegação principal">
+          <a href="a-arraial.html" aria-current="page"><span class="ico" aria-hidden="true"></span>Arraial</a>
+          <a href="#"><span class="ico" aria-hidden="true"></span>Oficina</a>
+          <a href="c-bolsa-feira.html"><span class="ico" aria-hidden="true"></span>Mercado</a>
+          <a href="#"><span class="ico" aria-hidden="true"></span>Bruma</a>
+          <a href="#"><span class="ico" aria-hidden="true"></span>Você <span class="n" aria-hidden="true">8</span></a>
+        </nav>
+      </section>
+    </div>
+
+    <aside class="notas" aria-labelledby="t-notas">
+      <h2 id="t-notas">Notas de design</h2>
+      <ol>
+        <li><span class="n">1</span><p><strong>Cabeçalho fixo.</strong> Nome do Arraial e da Era; ouro; Alvará (na arte final, cor lacre), que leva à Loja em um toque, sem selo de oferta; Recados. Cada saldo tem nome acessível completo.</p></li>
+        <li><span class="n">2</span><p><strong>A cidade primeiro.</strong> A tela inicial começa pelo coletivo (pilar 3, "a cidade é de todos"). O mapa é uma grade de lotes-ladrilho; a Bruma ocupa as bordas e recua quando as obras avançam. O mapa tem descrição em texto para o leitor de tela.</p></li>
+        <li><span class="n">3</span><p><strong>Agenda por prazo.</strong> No máximo cinco cartões, do prazo mais próximo ao mais distante, cada um com uma única ação. O cerco fica a dois toques da inscrição. Cartões sem prazo não ganham marcador vermelho (princípio 8, calma por padrão).</p></li>
+        <li><span class="n">4</span><p><strong>Oficina em resumo.</strong> Os dois ofícios mestres e a vocação. O horário de término vem do servidor; entre atualizações, o progresso desenhado é "previsto" (cinza, tracejado) e só vira "confirmado" quando o servidor liquida (princípio 5).</p></li>
+        <li><span class="n">5</span><p><strong>Duas taxas visíveis</strong> (piso P12): ritmo presente e ritmo ausente, e quanto o offline ainda cobre. Os valores são exemplos, a reconciliar com o módulo 02.</p></li>
+        <li><span class="n">6</span><p><strong>A fila bloqueada mostra como se conquista,</strong> nunca um preço. Filas estão na zona vermelha, fora da loja.</p></li>
+        <li><span class="n">7</span><p><strong>Teto negociável à vista.</strong> O jogador vê antes de sair que o excedente vira Mérito ou fica na conta; isso evita a sensação de castigo na volta (<a href="../../01-pesquisa/04a-economia-fontes-drenos-inflacao.md">04a</a>). O teto pertence ao módulo 07.</p></li>
+        <li><span class="n">8</span><p><strong>Cinco abas com rótulo,</strong> alvos de 56 px de altura. A Loja mora em "Você", mas o saldo de Alvará no cabeçalho leva a ela em um toque.</p></li>
+      </ol>
+      <p class="rodape">Desktop: as mesmas seções numa barra lateral; a agenda e a conversa ficam numa coluna à direita (documento 14, seção 2.2).</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
