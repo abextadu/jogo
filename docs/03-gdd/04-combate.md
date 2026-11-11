@@ -200,4 +200,161 @@ Chance de dádiva: 10% por libertação de encantado comum; **garantida na prime
 - **Redução por repetição:** o mesmo controle (atordoar, enlear, sono, encanto) no mesmo alvo, dentro de 10 s, dura 50%, depois 25%, e depois o alvo fica imune por 10 s.
 - **Chefes:** controles duram metade e eles são imunes a sono.
 
-<!-- PARTE 2 -->
+## 7. Expedições de coleta
+
+### 7.1 Tipos de expedição
+
+| Tipo | Alvo | Rende | Efeito no mundo |
+|---|---|---|---|
+| **Caça** | Bichos tomados | Pele, carne, matéria dura | Gera pressão de caça (7.3) |
+| **Limpeza** | Almas e visagens | Essência de Bruma, relíquias, achados | Baixa a Bruma da região |
+| **Libertação** | Encantados | Dádivas, Mérito, cartas de ajudante | Baixa muito a Bruma da região |
+| **Vigia** | Os arredores, na semana do cerco | Pontos de vigia para o Presságio (11.2) | Revela o cerco |
+| **Travessia** | A terra nova da temporada | Marcos e mapa | A partir da 2ª Era; módulo 10 |
+
+**A Bruma da região** (0 a 100) muda a mistura de inimigos. Ela sobe 2 pontos por dia sozinha, desce com limpeza, libertação e obras, e sobe 15 pontos numa região de fora quando a cidade perde um cerco (11.5).
+
+| Bruma da região | Bichos | Almas | Encantados | Observação |
+|---|---|---|---|---|
+| Abaixo de 30 | 70% | 25% | 5% | Boa para caça |
+| De 30 a 60 | 45% | 40% | 15% | Mista; tochas a partir de 40 |
+| Acima de 60 | 25% | 45% | 30% | Mais essência e mais perigo: +1% de força dos inimigos por ponto acima de 60 |
+
+### 7.2 Como é uma expedição
+
+1. **Escolhas antes de sair:** região (tier e bioma), tipo, ajudantes, suprimentos (cinto, refeições e consumível vocacional, tirados do armazém), regras, plano com recuo e Plano B, e a trilha, no caso do Batedor.
+2. **Caminho:** de 5 a 20 min de ida, conforme a distância, sem combate (o Batedor vaqueano corta 25%).
+3. **Ciclo:** procura do próximo encontro (20 a 30 s; o desnorteio soma 50%) → encontro com 1 a 4 inimigos (luta média de 20 a 40 s) → saque → regeneração.
+4. **A expedição ocupa a fila,** como uma ação de ofício ([00-biblia](00-biblia.md), glossário). Lutar ou produzir é a grande decisão do dia.
+5. **Roda offline** até o teto de offline do jogador (24 h na base, até 72 h conquistadas).
+6. **Na volta, o diário:** encontros, regras que dispararam, consumo, desgaste, drops, Encruzilhadas e o motivo de cada recuo.
+
+### 7.3 A Lei da Caipora: pressão de caça
+
+[F] Na tradição, a Caipora reina sobre os animais, castiga sobretudo quem abate além do necessário e aceita presentes (fumo de corda deixado numa árvore) que garantem a boa sorte do caçador ([Wikipedia, Caipora](https://pt.wikipedia.org/wiki/Caipora), com base em Câmara Cascudo e no *Dicionário de tupi antigo* de Eduardo Navarro).
+
+[H] **No jogo:**
+- Cada região tem uma **pressão de caça** de 0 a 100%, **comum ao servidor inteiro**.
+- Cada bicho abatido soma 0,02 ponto (o Caçador soma 0,014, pela *Caça de respeito*). A região descansa 5 pontos por hora. Uma região aguenta uns 250 abates por hora (cerca de quatro caçadores em tempo integral) sem subir.
+- **Rendimento dos bichos** (pele, carne, matéria dura): `multiplicador = 1 − 0,5 × (pressão / 100)²`. Com 50%, rende 87,5%; com 80%, 68%; com 100%, 50%.
+- **A partir de 80%, a Caipora se zanga:** encontros com a **Caipora tomada** (elite) começam a aparecer. Libertá-la derruba a pressão da região para 20% (um bem público) e rende dádiva; dispersá-la derruba para 60%, por pouco tempo.
+- **Presente à Caipora:** antes de caçar, o jogador pode deixar um presente (uma refeição Fina ou melhor), e a pressão que ele gera cai pela metade naquela expedição. É um dreno da Culinária. Usar fumo, como na tradição, ou só comida fica para a consultoria cultural (seção 15).
+- **Nas regras:** "QUANDO a pressão passar de 70% → Plano B".
+
+**Exemplo:** doze caçadores na Várzea, 750 abates por hora, somam 15 pontos e a região descansa 5: +10 por hora. Começando em 20%, a pressão chega a 80% em 6 h. Às 3 h da manhã, as regras dos caçadores ausentes os levam ao Plano B, e a Várzea descansa.
+
+[H] **Quatro perguntas.** *Referência:* o estado de mundo por região, movido pela soma do idle de todos ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 15), e a própria lenda. *Diferença:* a regulação do farm vira folclore e bem público, e não um "rendimento decrescente" escondido. *Problema:* o farm concentrado num ponto (o terreno do bot), preços que despencam e um mundo que não reage. *Comportamento:* espalhar a caça, rodar entre regiões, libertar a Caipora como serviço à cidade. *Risco:* um grupo grande esgota uma região para atrapalhar os outros. Mitigação: o efeito máximo é −50%, a região descansa sozinha, a libertação zera o problema e os Planos B levam os caçadores para outro lugar.
+
+### 7.4 Drops por hora
+
+**Referência:** uma hora de expedição, **sozinho**, na **margem 0** (tier do equipamento igual ao tier da região), com refeição e pressão de caça abaixo de 30%. São cerca de **55 encontros por hora** e **100 abates por hora**. O tier da região define o tier do material (a Várzea T1 rende pele T1; a Mata Funda T4 rende pele T4); a quantidade é a mesma em todos os tiers.
+
+**Drop por abate, na base** [H]:
+
+| Família de inimigo | Pele | Carne | Matéria dura | Peçonha, resina, sementes | Essência de Bruma | Relíquia | Achado |
+|---|---|---|---|---|---|---|---|
+| Bicho tomado | 0,40 | 0,50 | 0,25 | 0,05 | 0,02 | — | 0,002 |
+| Alma | — | — | — | — | 0,50 | 0,05 | 0,006 |
+| Encantado dispersado | — | — | — | — | 3,0 | 0,3 | 0,02 |
+
+**Ritmo e olhar de colheita por vocação** ([03-personagem](03-personagem.md), seção 7):
+
+| Vocação | Ritmo de abate | Pele | Carne | Matéria dura | Peçonha, resina, sementes | Essência | Achados |
+|---|---|---|---|---|---|---|---|
+| Guardião | × 0,8 | × 1,0 | × 1,0 | **× 1,6** | × 1,0 | × 1,0 | × 1,0 |
+| Caçador | × 1,1 | **× 1,6** | **× 1,4** | × 1,0 | × 1,0 | × 0,8 | × 1,0 |
+| Encantador | × 1,0 (× 1,3 contra bandos) | × 0,8 | × 0,8 | × 1,0 | × 1,0 | **× 1,8** | × 1,0 |
+| Erveiro | × 0,7 | × 1,0 | × 1,0 | × 0,8 | **× 1,8** | × 1,0 | × 1,0 |
+| Batedor | × 1,1 | × 0,9 | × 0,9 | × 0,9 | × 0,9 | × 0,9 | **× 2,5** |
+
+**Exemplo — uma hora de caça na Várzea:**
+
+| | Abates | Pele | Carne | Matéria dura | Achados |
+|---|---|---|---|---|---|
+| Base | 100 | 40 | 50 | 25 | 0,2 |
+| Caçador (40% dos abates são limpos: +50% de pele) | 110 | 0,40 × 1,6 × 110 × 1,2 ≈ **84** | **77** | 27 | 0,22 |
+| Guardião | 80 | 32 | 40 | **32** | 0,16 |
+| Batedor (Varredura) | 110 | 40 | 50 | 25 | **0,55** |
+
+O Guardião tira menos por hora, mas gasta cerca de 40% menos poções (8.1). O valor líquido por hora de cada vocação tem de ficar dentro de ±10% (meta para o módulo 08).
+
+**Regras gerais dos drops** [H]:
+- **O combate não solta ouro.** [proposta para o módulo 07] O ouro entra pela venda de bens básicos ao NPC e pelas encomendas. O ouro de monstro é a torneira clássica que cresce com horas e com contas (lei 6; [F] o SimpleMMO cortou o ouro dos chefes mundiais em set/2026, numa série de drenos, segundo [03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3).
+- **Teto de emissão:** o que passar do teto negociável diário da conta fica preso à conta (o próprio jogador usa) ou vai para as obras como Mérito ([00-biblia](00-biblia.md), 6.6).
+- **Todas as tabelas de drop são públicas** (P6 e insight 2 da [síntese](../01-pesquisa/00-sintese.md)).
+- **Achados** têm grau (comum, raro, único): relíquias das cidades de outrora (para obras e coleções), **moldes** (receitas especiais para os ofícios), mapas, minérios e madeiras raros. Os únicos são presos à conta.
+- A **Arrancada** multiplica os drops por 1,5 durante 10 min (10.2).
+
+## 8. Consumo e desgaste por hora de combate
+
+### 8.1 Consumo por combatente
+
+**Referência:** margem 0, com refeição, sozinho.
+
+| Consumível | Por hora de combate [H] |
+|---|---|
+| **Refeição** | 1 porção por combatente (o personagem e cada ajudante) |
+| **Poção de cura** | ~1 na margem +1 · **~3 na margem 0** · ~8 na margem −1 (com risco de derrota). Sem refeição, × 2 |
+| Ajuste por vocação | Guardião × 0,6 · Erveiro × 0,5 · Caçador × 1,0 · Encantador × 1,1 · Batedor × 1,2 |
+| Com Erveiro no grupo | −30% para todos (−50% com o marco *Farmácia de campo*) |
+| **Feixe de flechas** | 1 (Caçador) |
+| **Óleo de lamparina** | 1 frasco (Encantador) |
+| **Ervas frescas** | ~6 (Erveiro) |
+| **Tocha** | 1 (Batedor, em regiões com Bruma ≥ 40) |
+| Óleo de arma | Opcional: 1 frasco dura 300 golpes, uns 25 min de uso contínuo; as regras decidem quando aplicar |
+| Tônico, antídoto, água de clareza | De 0 a 3, conforme a região e o inimigo |
+
+### 8.2 Desgaste
+
+- **Durabilidade:** 100 pontos por peça, em qualquer tier. O tier muda o custo do reparo, não a duração.
+
+| Casa | Pontos perdidos por hora de combate (margem 0) [H] |
+|---|---|
+| Arma | 2,5 |
+| Secundária | 2,0 (escudo do Guardião: 3,0) |
+| Cabeça e corpo | 2,0 (Guardião: 3,0) |
+| Pés | 1,5 (Batedor: 2,25) |
+
+- **Modificadores:** peça um tier acima da região (margem +1): × 0,6; um tier abaixo (margem −1): × 1,5; cada derrota: −5 pontos em todas as peças; unguento: −30% na armadura.
+- **Abaixo de 20 pontos**, a peça perde 15% dos números (com aviso). **A 0**, fica avariada e não dá nada até o reparo. **Nunca some por uso.**
+- **Reparo** (a reconciliar com 05 e 06): consome material, devolve a peça ao máximo e reduz o máximo em 10 pontos. Depois do 5º reparo, a peça vive com máximo de 50; quando chega a 0 de novo, **se gasta e some** ([00-biblia](00-biblia.md), 6.5).
+- **Vida útil de uma arma:** 100 + 90 + 80 + 70 + 60 + 50 = 450 pontos ÷ 2,5 por hora = **180 h de combate**. Para quem luta cerca de 6 h por dia (somando o offline), dá **uns 30 dias**. Armadura: uns 37 dias; a do Guardião, uns 25. Meta: **3 a 6 semanas de uso normal** (a reconciliar com 05 e 07).
+- **Cerco:** 8 pontos por peça, cobrados no fechamento da inscrição (11.1). **Masmorra:** 4 pontos por peça e por corrida, cobrados no compromisso (9.2).
+- O recuo padrão do plano é a 15 pontos, para o ausente não voltar com tudo avariado.
+
+[H] **Quatro perguntas.** *Referência:* [F] perda de itens aparece em 16 dos 29 jogos com mercado entre jogadores e em 1 dos 27 sem mercado; o Shop Titans precisou da quebra de equipamento para sustentar quem fabrica ([02-padroes](../01-pesquisa/02-padroes-matriz-leis.md), lei 17). *Diferença:* aqui a perda é só por desgaste, previsível e visível, nunca por morte. *Problema:* sem destruição, o estoque cresce e o preço cai. *Comportamento:* compra recorrente de equipamento e reparo; os ofícios sempre têm freguês. *Risco:* o desgaste parecer imposto. Mitigação: a barra de durabilidade e a previsão de "horas restantes" aparecem no plano da expedição antes de sair.
+
+## 9. Masmorras de grupo assíncronas
+
+### 9.1 Formato
+
+- **5 salas e um chefe.** Grupo de 3 a 5 vagas. Dificuldades: *Normal*, *Brava* (exige ter vencido a Normal) e *Lendária* (da Era).
+- Cada masmorra conta uma lenda: o Casarão do Corpo-seco, o Furo da Boiúna, a Lavra da Mãe-do-ouro (seção 12).
+
+### 9.2 Como funciona
+
+1. **Abrir ou entrar numa mesa** no quadro de masmorras do Arraial. O quadro mostra as vagas por papel (frente, dano, suporte) e a faixa de poder recomendada.
+2. **Comprometer-se.** Cada membro entrega uma **cópia congelada** do personagem: atributos, caminhos, equipamento, regras e um cinto de consumíveis, que sai do inventário. O desgaste da corrida (4 pontos por peça) é cobrado nessa hora. O personagem continua livre para a sua fila normal, porque quem entra na masmorra é a cópia.
+3. **Prazo de formação:** até 12 h. Se a mesa não encher, os ajudantes de quem abriu completam as vagas; na falta deles, entram ajudantes do Arraial (NPC genéricos).
+4. **Resolução:** o servidor simula sala por sala no "toque" seguinte (a cada 15 min).
+5. **Encruzilhadas:** em duas salas, o grupo escolhe entre 2 ou 3 caminhos (ex.: "a ponte podre ou o desvio pelo brejo"). Cada jogador tem um voto, e os ajudantes não votam. A janela é de 4 h; sem votos, vale a escolha padrão deixada por quem abriu a mesa. **O ausente nunca trava o grupo.**
+6. **Diário e saque.** Todos recebem o diário. **O saque é individual**: cada membro abre o próprio baú, e ninguém disputa o drop de ninguém.
+
+### 9.3 Cargas, bônus de grupo e papel em falta
+
+- **Cargas de masmorra:** 1 por dia, acumulando até 4. Entrar gasta uma.
+- **Bônus de grupo:** `multiplicador do baú = 1 + 0,2 × (jogadores − 1)`. Um jogador com quatro ajudantes: × 1,0; três jogadores: × 1,4; cinco jogadores: × 1,8. Os ajudantes não contam. [F] No IdleOn, o multiplicador de drop das masmorras vai de 1 (solo) a cerca de 3,16 (10 pessoas) ([B02](../01-pesquisa/fichas/B02-legends-of-idleon.md)).
+- **Papel em falta:** se a mesa não tem nenhum jogador de frente ou de suporte, quem entra nesse papel ganha +25% no próprio baú.
+- **Fora da faixa:** quem está muito abaixo da faixa de poder recomendada recebe metade do baú. Isso tira o lucro do "carregamento" pago, um vetor clássico de RMT ([F] o Milky Way Idle baniu centenas de contas por boosting em mai/2025, segundo [C01](../01-pesquisa/fichas/C01-milky-way-idle.md)).
+
+### 9.4 Recompensas
+
+Materiais próprios da masmorra (negociáveis, com teto diário), **moldes** (receitas especiais para os ofícios, negociáveis e consumidos quando aprendidos), relíquias, entradas de bestiário e títulos. A masmorra não dá Mérito: ela é pessoal, e o Mérito é cívico.
+
+[H] **Os moldes amarram o combate de grupo à demanda dos artesãos:** o ferreiro que quer a receita da masmorra precisa de quem a vença, e o vencedor precisa de quem saiba usá-la.
+
+### 9.5 Quatro perguntas
+
+[H] *Referência:* as masmorras do IdleOn, com multiplicador por tamanho do grupo ([B02](../01-pesquisa/fichas/B02-legends-of-idleon.md)); as do Milky Way Idle, com chaves, recomeço na onda 1 se o grupo morre e **expulsão de quem fica 5 min sem dar "pronto"** ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)), que é justamente o que evitamos; e o saque sem disputa do GW2 ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3). *Diferença:* cópia congelada, prazo de horas e Encruzilhada com escolha padrão. *Problema:* grupo síncrono exige horário marcado, contra o P12. *Comportamento:* formar grupos de amigos pelo bônus; guildas com "noite de masmorra" opcional. *Risco:* mesas que nunca enchem de madrugada (mitigação: ajudantes); abuso da cópia, entrando com o melhor equipamento e vendendo-o depois (mitigação: desgaste cobrado no compromisso); [F] saque leiloado que cria demanda por ouro, como o GDKP que a Blizzard proibiu ([00-sintese](../01-pesquisa/00-sintese.md), insight 22) (mitigação: baú individual).
+
+<!-- PARTE 3 -->

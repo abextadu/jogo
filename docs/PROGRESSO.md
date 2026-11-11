@@ -23,6 +23,7 @@
 - **Sem reembolso** por parte do estúdio.
 - **O Alvará passa de "item de 30 dias" a moeda divisível (coins),** transferível livremente (decisão 1 do checkpoint 1).
 - **Alerta registrado uma vez:** chamar de doação não muda a natureza de compra perante o CDC, pode atrair ITCMD e conflitar com as regras dos provedores de pagamento; a contestação forçada pelo banco (chargeback, MED do Pix) continua possível. Risco assumido pelo Gabriel.
+- **Chat (aprovado pelo Gabriel em 2026-11-11):** é proibido anunciar RMT nos canais públicos, e quem aplica golpe com prova no chat do jogo é banido. É moderação de spam e golpe; o RMT informal continua não intermediado e não proibido.
 - **Contestação forçada pelo banco (chargeback no cartão, MED do Pix):** a conta fica **suspensa até regularizar**, ou seja, até o jogador pagar de novo o valor contestado (decisão do Gabriel, prática comum em servidores de Tibia). Substitui a "dívida em ouro" proposta no módulo 13.
 
 ### Plano da Fase 3

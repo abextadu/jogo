@@ -38,7 +38,7 @@
 - Fila da Travessia: nem comprada nem conquistada jogando (igual para todos) — compatível com P7; aceitar.
 - Final da Travessia em frentes coletivas em vez de corrida de guildas pela cidadela — aceitar (reduz domínio das guildas grandes).
 - Travessia com o mesmo personagem normalizado em vez de mundo com personagem novo — aceitar (evita dividir a base).
-- **RMT informal:** o módulo proíbe anunciá-lo nos canais públicos e bane quem engana com prova no chat. **Levar ao Gabriel no checkpoint 3:** é moderação de spam e golpe, não proibição do RMT, mas toca a decisão 1.
+- **RMT informal:** o módulo proíbe anunciá-lo nos canais públicos e bane quem engana com prova no chat. **Aprovado pelo Gabriel em 2026-11-11.**
 
 ## 13 — Anti-abuso (concluído em 2026-11-11)
 

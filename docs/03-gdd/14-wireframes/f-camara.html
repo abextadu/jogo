@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(f) Câmara — wireframe</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.doc{max-width:1120px;margin:0 auto;padding:16px}
+.doc-topo h1{font-size:20px;margin:4px 0}
+.doc-topo p{margin:4px 0;font-size:14px;color:var(--cinza)}
+.grade{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.grade{grid-template-columns:400px minmax(0,1fr);align-items:start}.notas{position:sticky;top:16px}}
+.telas{display:grid;gap:24px}
+.celular{background:var(--papel);border:2px solid var(--tinta);border-radius:22px;width:100%;max-width:400px;margin:0 auto;overflow:hidden}
+.cab{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:2px solid var(--tinta);background:var(--suave)}
+.cab .lugar{flex:1;min-width:0}
+.cab .lugar strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab .lugar small{display:block;color:var(--cinza);font-size:12px}
+.saldo{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:1.5px solid var(--tinta);border-radius:999px;background:#fff;font-size:13px;text-decoration:none;white-space:nowrap}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:4px;background:#fff;font-size:10px;flex:none}
+.ico.red{border-radius:50%}
+.conteudo{padding:12px;display:grid;gap:12px}
+.cartao{border:1.5px solid var(--tinta);border-radius:10px;padding:12px;background:#fff}
+.cartao>h2,.cartao>h3{margin:0 0 6px;font-size:16px;line-height:1.3}
+.cartao p{margin:4px 0}
+.secao-titulo{font-size:17px;margin:4px 0 0}
+.rot{margin:0 0 4px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
+.img{display:flex;align-items:center;justify-content:center;min-height:80px;padding:8px;border:1.5px dashed var(--linha);border-radius:8px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px);color:var(--cinza);font-size:13px;text-align:center}
+.linha{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cresce{flex:1;min-width:0}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--tinta);border-radius:10px;background:#fff;color:var(--tinta);font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.pri{background:var(--tinta);color:#fff}
+.btn.larga{width:100%}
+.btn.off{border-style:dashed;color:var(--cinza);background:var(--suave);cursor:not-allowed}
+.barra{height:12px;border:1.5px solid var(--tinta);border-radius:999px;overflow:hidden;background:#fff}
+.barra>i{display:block;height:100%;background:var(--tinta)}
+.barra.prev>i{background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.previsto{color:var(--cinza);font-style:italic}
+.tag{display:inline-block;padding:1px 6px;border:1px solid var(--tinta);border-radius:6px;font-size:12px}
+.tag.cheia{background:var(--tinta);color:#fff}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);color:#000;font-size:12px;font-weight:700;font-style:normal;vertical-align:middle;flex:none}
+.abas{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--tinta);background:var(--suave)}
+.abas a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:6px 2px;font-size:12px;text-decoration:none}
+.abas a[aria-current="page"]{font-weight:700;box-shadow:inset 0 4px 0 var(--tinta)}
+.notas{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px 16px}
+.notas h2{margin:4px 0 8px;font-size:17px}
+.notas ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.notas li p{margin:0}
+.notas .rodape{margin-top:12px;font-size:13px;color:var(--cinza)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;font-size:13px;color:var(--cinza);padding-bottom:4px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--medio);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:600;color:var(--cinza)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.segmento{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--tinta);border-radius:10px;overflow:hidden}
+.segmento>*{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 4px;border:0;border-left:1px solid var(--tinta);background:#fff;color:var(--tinta);font-family:inherit;font-size:13px;font-weight:600;text-decoration:none}
+.segmento>*:first-child{border-left:0}
+.segmento [aria-current],.segmento [aria-pressed="true"]{background:var(--tinta);color:#fff}
+.campo{display:grid;gap:4px}
+.campo label,.campo .rotulo{font-size:13px;font-weight:600}
+.campo input,.campo select{min-height:44px;padding:0 10px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff;font-family:inherit;font-size:16px}
+.legenda{font-size:12px;color:var(--cinza)}
+.aviso{padding:8px 10px;border-left:4px solid var(--tinta);border-radius:6px;background:var(--suave);font-size:14px}
+.forte{font-weight:700}
+hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* específicos desta tela */
+.cand{display:grid;grid-template-columns:56px 1fr;gap:10px;padding:10px 0;border-top:1px dashed var(--linha)}
+.cand:first-of-type{border-top:0}
+.cand .img{width:56px;min-height:56px;font-size:10px;padding:2px}
+.cand h3{margin:0;font-size:16px}
+.cand ul{margin:4px 0;padding-left:18px;font-size:14px}
+.faixa{position:relative;margin:28px 6px 22px;height:16px;border:1.5px solid var(--tinta);border-radius:4px;background:repeating-linear-gradient(90deg,#fff 0 6px,var(--suave) 6px 12px)}
+.faixa .marca{position:absolute;top:-24px;transform:translateX(-50%);font-size:12px;font-weight:700;white-space:nowrap}
+.faixa .marca::after{content:"";position:absolute;left:50%;top:18px;width:2px;height:22px;background:var(--tinta)}
+.faixa .marca.prop{top:auto;bottom:-22px}
+.faixa .marca.prop::after{top:auto;bottom:16px;border-left:2px dashed var(--tinta);background:none}
+.faixa .lim{position:absolute;bottom:-20px;font-size:11px;color:var(--cinza)}
+.voto td:last-child{font-weight:700}
+.nunca{margin:4px 0;padding-left:18px}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="doc-topo">
+    <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
+    <h1>(f) Câmara — eleição e votações</h1>
+    <p>Conselho eleito a cada 2 meses (bíblia §6.1), com poderes limitados por faixas da constituição. Número de vagas, carência e método de voto a reconciliar com o módulo 09 [H].</p>
+  </header>
+
+  <div class="grade">
+    <div class="telas">
+      <!-- ELEIÇÃO -->
+      <section class="celular" aria-label="Wireframe: eleição da Câmara">
+        <header class="cab">
+          <div class="lugar"><strong>Câmara do Vau</strong><small>Mandato 3 · Era 1</small></div>
+          <a class="btn" href="a-arraial.html" aria-label="Voltar ao Arraial">Voltar</a>
+        </header>
+        <main class="conteudo">
+          <nav class="segmento" aria-label="Seções da Câmara">
+            <a href="#eleicao" aria-current="page">Eleição</a><a href="#votacoes">Votações</a><a href="#">Vereadores</a><a href="#constituicao">Regras</a>
+          </nav>
+
+          <section class="cartao" id="eleicao" aria-labelledby="t-el">
+            <p class="rot">Fecha qui., 19/11, 20h (Brasília)</p>
+            <h2 id="t-el">Eleição da Câmara · 7 vagas, 23 candidatos</h2>
+            <div class="aviso" role="note"><strong>Uma pessoa, um voto.</strong> Seu voto é secreto. <span class="n" aria-hidden="true">1</span></div>
+            <p class="legenda">Você pode votar: conta verificada há mais de 30 dias. Contas compradas no Cartório votam depois de uma carência [H]. <span class="n" aria-hidden="true">2</span></p>
+          </section>
+
+          <section aria-labelledby="t-cands">
+            <div class="linha">
+              <h2 id="t-cands" class="secao-titulo cresce">Candidatos</h2>
+              <span class="legenda">ordem sorteada a cada visita <span class="n" aria-hidden="true">3</span></span>
+            </div>
+
+            <div class="cartao">
+              <article class="cand" aria-labelledby="c1">
+                <div class="img">retrato</div>
+                <div>
+                  <h3 id="c1">Rita Barqueira</h3>
+                  <p class="legenda" style="margin:0">Remos do Vau · Pesca e Culinária · título: Mestra cozinheira</p>
+                  <ul>
+                    <li>Próxima Obra: Ponte do Vau</li>
+                    <li>Taxa da Feira: 5% <span class="tag">dentro da faixa 4–8%</span></li>
+                    <li>Encomenda semanal de comida para o cerco</li>
+                  </ul>
+                  <div class="acoes"><a class="btn" href="#">Ler plataforma</a><a class="btn pri" href="#confirmar">Votar em Rita</a></div>
+                </div>
+              </article>
+
+              <article class="cand" aria-labelledby="c2">
+                <div class="img">retrato</div>
+                <div>
+                  <h3 id="c2">Tião Ferrador</h3>
+                  <p class="legenda" style="margin:0">Ferreiros do Vau · Ferraria e Fundição</p>
+                  <ul>
+                    <li>Próxima Obra: Farol da Lagoa</li>
+                    <li>Taxa da Feira: 6% <span class="tag">dentro da faixa 4–8%</span></li>
+                    <li>Prioridade para encomendas de armas</li>
+                  </ul>
+                  <div class="acoes"><a class="btn" href="#">Ler plataforma</a><a class="btn pri" href="#confirmar">Votar em Tião</a></div>
+                </div>
+              </article>
+
+              <article class="cand" aria-labelledby="c3">
+                <div class="img">retrato</div>
+                <div>
+                  <h3 id="c3">Lia do Tear</h3>
+                  <p class="legenda" style="margin:0">Sem guilda · Tecelagem e Alfaiataria</p>
+                  <ul>
+                    <li>Próxima Obra: Ponte do Vau</li>
+                    <li>Taxa da Feira: 4% <span class="tag">mínimo da faixa</span></li>
+                    <li>Relatório público mensal da Câmara</li>
+                  </ul>
+                  <div class="acoes"><a class="btn" href="#">Ler plataforma</a><a class="btn pri" href="#confirmar">Votar em Lia</a></div>
+                </div>
+              </article>
+              <p class="legenda">Mais 20 candidatos · <a href="#">ver todos</a> <span class="n" aria-hidden="true">4</span></p>
+            </div>
+          </section>
+
+          <section class="cartao" id="confirmar" aria-labelledby="t-conf">
+            <p class="rot">Confirmação</p>
+            <h2 id="t-conf">Votar em Rita Barqueira?</h2>
+            <p>Você pode mudar o voto até qui., 20h [H]. Ninguém vê em quem você votou.</p>
+            <div class="acoes"><a class="btn pri" href="#">Confirmar voto</a><a class="btn" href="#eleicao">Voltar</a></div>
+          </section>
+        </main>
+      </section>
+
+      <!-- VOTAÇÕES -->
+      <section class="celular" id="votacoes" aria-label="Wireframe: votações da Câmara">
+        <header class="cab">
+          <div class="lugar"><strong>Câmara do Vau</strong><small>Votações em andamento</small></div>
+        </header>
+        <main class="conteudo">
+          <nav class="segmento" aria-label="Seções da Câmara">
+            <a href="#eleicao">Eleição</a><a href="#votacoes" aria-current="page">Votações</a><a href="#">Vereadores</a><a href="#constituicao">Regras</a>
+          </nav>
+
+          <section class="cartao" aria-labelledby="t-taxa">
+            <p class="rot">Votação dos vereadores · até sáb., 14/11, 20h</p>
+            <h2 id="t-taxa">Taxa da Feira: de 6% para 5%</h2>
+            <div class="faixa" role="img" aria-label="Faixa constitucional da taxa da Feira: de 4% a 8%. Hoje: 6%. Proposta: 5%.">
+              <span class="marca" style="left:50%">hoje 6%</span>
+              <span class="marca prop" style="left:25%">proposta 5%</span>
+              <span class="lim" style="left:0">4%</span>
+              <span class="lim" style="right:0">8%</span>
+            </div>
+            <p class="legenda">A faixa de 4% a 8% é da constituição; fora dela, a Câmara não pode votar. <span class="n" aria-hidden="true">5</span></p>
+            <table class="voto">
+              <caption>Voto de cada vereador (público) <span class="n" aria-hidden="true">6</span></caption>
+              <thead><tr><th scope="col">Vereador</th><th scope="col">Voto</th></tr></thead>
+              <tbody>
+                <tr><td>Bia Cedreira</td><td>Sim</td></tr>
+                <tr><td>Zé do Curtume</td><td>Não</td></tr>
+                <tr><td>Nina Erveira</td><td>Sim</td></tr>
+                <tr><td>Caio Batedor</td><td>Abstenção</td></tr>
+                <tr><td>Mais 3 vereadores</td><td>ainda não votaram</td></tr>
+              </tbody>
+            </table>
+            <div class="aviso" role="note">Se aprovada, vale a partir de sáb., 21/11, com 7 dias de aviso a todo o Arraial. <span class="n" aria-hidden="true">7</span></div>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-obra">
+            <p class="rot">Próxima Obra · decisão da Câmara</p>
+            <h2 id="t-obra">Ponte do Vau ou Farol da Lagoa?</h2>
+            <table>
+              <thead><tr><th scope="col">Obra</th><th scope="col">Efeito para todos</th></tr></thead>
+              <tbody>
+                <tr><td>Ponte do Vau</td><td>Abre a região da outra margem</td></tr>
+                <tr><td>Farol da Lagoa</td><td>A Bruma recua mais rápido no leste</td></tr>
+              </tbody>
+            </table>
+            <p class="legenda">Consulta ao Arraial (não vinculante): 58% preferem a Ponte. Você ainda não respondeu.</p>
+            <div class="acoes"><a class="btn" href="#">Responder à consulta</a></div>
+          </section>
+
+          <section class="cartao" id="constituicao" aria-labelledby="t-nunca">
+            <p class="rot">Regras · o que a Câmara não pode mudar <span class="n" aria-hidden="true">8</span></p>
+            <h2 id="t-nunca">Fora do alcance da Câmara</h2>
+            <ul class="nunca">
+              <li>O Alvará, o seu preço e o que ele compra</li>
+              <li>Offline, filas e automação (zona vermelha)</li>
+              <li>Qualquer taxa fora da faixa da constituição</li>
+              <li>As regras de voto: uma pessoa, um voto</li>
+            </ul>
+            <div class="acoes"><a class="btn" href="#">Ler a constituição</a><a class="btn" href="#">Denunciar conduta <span class="n" aria-hidden="true">9</span></a></div>
+          </section>
+        </main>
+      </section>
+    </div>
+
+    <aside class="notas" aria-labelledby="t-notas">
+      <h2 id="t-notas">Notas de design</h2>
+      <ol>
+        <li><span class="n">1</span><p><strong>"Uma pessoa, um voto" na primeira linha.</strong> Cada conta é um adulto verificado (piso P8), e o Mérito não pesa no voto (glossário). O voto do cidadão é secreto.</p></li>
+        <li><span class="n">2</span><p><strong>Elegibilidade explicada,</strong> inclusive a carência das contas compradas no Cartório, a mitigação contra a "compra de votos" prevista no conceito (<a href="../../02-conceito.md">02, §7</a>). Os prazos são do módulo 09.</p></li>
+        <li><span class="n">3</span><p><strong>Ordem sorteada.</strong> O primeiro da lista ganha votos por estar no topo; sortear a ordem a cada visita tira essa vantagem [H].</p></li>
+        <li><span class="n">4</span><p><strong>A plataforma fala de propostas, não de poder.</strong> O cartão mostra guilda, ofícios e títulos, mas não a riqueza nem o Mérito em número: o voto é por proposta. Cada proposta já mostra se cabe na faixa constitucional (o cadastro recusa o que não cabe).</p></li>
+        <li><span class="n">5</span><p><strong>A faixa desenhada.</strong> O jogador vê o limite da constituição, o valor de hoje e a proposta numa régua, com texto equivalente para o leitor de tela.</p></li>
+        <li><span class="n">6</span><p><strong>O voto do vereador é público.</strong> O cidadão vota em segredo, mas quem governa presta contas: o voto nominal fica no registro do mandato. Os rótulos são palavras (Sim, Não, Abstenção), nunca só cor.</p></li>
+        <li><span class="n">7</span><p><strong>Mudança de regra monetária com aviso.</strong> Uma taxa nova só vale depois de 7 dias de aviso [H] (insight 10 da síntese: toda mudança vem com aviso, dados e porquê).</p></li>
+        <li><span class="n">8</span><p><strong>O que está fora de alcance fica escrito na tela.</strong> Isso protege contra a captura da Câmara e responde antes de a dúvida virar teoria da conspiração.</p></li>
+        <li><span class="n">9</span><p><strong>Denúncia de conduta a um toque.</strong> Política tóxica é risco previsto no conceito; moderação e regras públicas são a mitigação (módulo 09).</p></li>
+      </ol>
+      <p class="rodape">Na arte final, a Câmara é um lote do mapa do Arraial; o resultado de cada eleição vira um "folheto" de capa nova, com versos de cordelista contratado.</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>

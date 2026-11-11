@@ -3,7 +3,7 @@
 > **Escopo.** As quatro moedas, o teto de emissão negociável, a tabela de fontes e drenos de ouro e de itens, os cinco canais de troca (Bolsa, Feira, Pregão, Câmbio e Troca), o Alvará, o Cartório, o Baú do Mascate, as alavancas contra inflação e manipulação, a constituição econômica do Arraial, o painel diário e a lista de parâmetros para a simulação (módulo 08).
 > **Base:** [bíblia](00-biblia.md) (glossário, seção 6.6 e regras da seção 8), [conceito](../02-conceito.md) (piso P1–P12), [PROGRESSO](../PROGRESSO.md) (decisões do Gabriel), [04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), [04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md), [05d](../01-pesquisa/05d-rmt-recomendacao.md), [00-sintese](../01-pesquisa/00-sintese.md) e as leis 15 a 22 do [02](../01-pesquisa/02-padroes-matriz-leis.md).
 > **Etiquetas:** [F] fato com fonte · [C] consenso da comunidade · [H] proposta do estúdio · [NV] não verificado. **Todo número deste módulo é [H] até a simulação.** Onde ele depende de outro módulo escrito em paralelo, aparece "a reconciliar com o módulo X".
-> **Decisões que este módulo não reabre:** Alvará e ouro transferíveis livremente; RMT informal não intermediado nem proibido; Cartório desde o lançamento; Baú comprável com Alvará e negociável por ouro, com conteúdo em itens; jogo 18+ com idade verificada; sem parecer jurídico (risco assumido pelo Gabriel). Onde uma dessas decisões cria tensão com a pesquisa, o módulo registra a tensão e desenha a mitigação, sem mudar a decisão.
+> **Decisões que este módulo não reabre:** Alvará em coins (moeda divisível) creditados por doação em reais, sem reembolso; conta suspensa até regularizar quando a doação é contestada no banco (chargeback, MED); Alvará e ouro transferíveis livremente; RMT informal não intermediado nem proibido; Cartório desde o lançamento; Baú comprável com Alvará e negociável por ouro, com conteúdo em itens; jogo 18+ com idade verificada; sem parecer jurídico (risco assumido pelo Gabriel). Onde uma dessas decisões cria tensão com a pesquisa, o módulo registra a tensão e desenha a mitigação, sem mudar a decisão.
 
 ## 0. Resumo
 
@@ -11,10 +11,11 @@
 2. **O teto de emissão é um portão de saída, não uma marca no item.** O jogador produz à vontade e usa tudo o que produz. O teto limita só o valor que ele mesmo criou e que sai da conta por dia (venda, Troca ou NPC). Ele cresce de forma linear com a progressão, acumula por até 3 dias e começa reduzido nas contas novas. O excedente fica na conta para uso próprio ou vira obra e Mérito (seção 3).
 3. **O dreno principal é o consumo embutido:** insumos vendidos por NPC em toda receita de T2 para cima e na partida das expedições, indexados ao IPA, mais desgaste e quebra. As taxas são freio, não âncora (seções 4 e 9).
 4. **Toda forma de mover valor custa o mesmo:** cerca de 6% para trocar item por ouro em qualquer canal, 12% para converter Alvará em ouro em qualquer canal e 3% para presentear. Sem isso, o comércio foge para o canal mais barato e o índice perde o sentido (seção 5.6).
-5. **O Câmbio forma o preço do Alvará num leilão de chamada a cada hora:** um preço único por rodada, com banda de ±3% por rodada e ±10% por dia. Com 2 a 5 mil simultâneos, o Câmbio terá poucas operações por hora. Um livro contínuo seria raso e premiaria velocidade, e uma fila administrada poria o estúdio como culpado de cada alta. O leilão de chamada junta a liquidez, tira a vantagem do clique e gera o índice (seção 5.4).
+5. **O Câmbio forma o preço do Alvará, em unidades, num leilão de chamada a cada hora:** um preço único por Alvará em cada rodada, com banda de ±3% por rodada e ±10% por dia. Com 2 a 5 mil simultâneos, o Câmbio terá poucas operações por hora. Um livro contínuo seria raso e premiaria velocidade, e uma fila administrada poria o estúdio como culpado de cada alta. O leilão de chamada junta a liquidez, tira a vantagem do clique e gera o índice (seção 5.4).
 6. **Cartório:** vende o personagem, não o cidadão. Vão junto o progresso, os ajudantes, a casa, os cosméticos aplicados e o equipamento em uso, que fica preso ao comprador por 30 dias. Ficam com o vendedor o Mérito, o ouro, o Alvará e o armazém. A taxa de 10% é paga em Alvará e destruída. O anúncio só abre depois de um aviso de 72 h ao dono da conta (seção 7).
-7. **Baú do Mascate:** custa 1/5 de Alvará, publica a tabela de chances com garantia, tem tiragem máxima para o topo e teto de compra e de abertura por mês. Seu conteúdo é negociável até ser aplicado, e aplicar prende o item à conta, o que funciona como dreno de cosméticos (seção 8).
+7. **Baú do Mascate:** custa ~40 Alvarás (~R$ 4), publica a tabela de chances com garantia, tem tiragem máxima para o topo e teto de compra e de abertura por mês. Seu conteúdo é negociável até ser aplicado, e aplicar prende o item à conta, o que funciona como dreno de cosméticos (seção 8).
 8. **Constituição pública de 14 artigos:** a meta do IPA vai de 0% a +8% ao ano. A Câmara mexe só na Feira, nas prioridades das encomendas e na escolha da obra. Política monetária não vai a voto (seção 11).
+9. **Alvará em coins:** a doação credita Alvarás (referência de trabalho: ~R$ 0,10 cada; premium de 30 dias por ~200). O gasto na loja destrói o Alvará, que é o dreno dele. A carência vale por lote de doação, e a doação contestada no banco suspende a conta até ela regularizar. Quem recebeu de boa-fé fica com o que recebeu (seção 6).
 
 ## 1. Premissas e escala
 
@@ -31,7 +32,7 @@
 
 - **O ouro tem duas casas decimais** (centésimos), no livro-razão e na tela. Os bens básicos valem de frações de ouro a dezenas de ouro, e uma escala inteira deixaria o degrau de preço grosseiro demais nos itens baratos (seção 5.1). O brasileiro já pensa em reais e centavos. **[proposta de mudança na bíblia]**, que não fixa a unidade.
 - **Inteiros de 64 bits em centésimos** em todo saldo e toda ordem. O OSRS precisou liberar ofertas acima de 2,147 bilhões em 2026 ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md), via [04a, §5.3](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)).
-- **Âncora relativa, não absoluta.** O número que importa é quanto o Alvará custa em dias de renda, não em ouro. Meta [H]: **o Alvará vale de 12 a 20 dias das fontes brutas de ouro de um jogador mediano** (seção 4.6). Com a renda mediana de ~970 ouro por dia, isso dá um preço inicial esperado de ~15.000 ouro (faixa a testar: 8.000 a 30.000).
+- **Âncora relativa, não absoluta.** O número que importa é quanto o premium custa em dias de renda, não em ouro. Meta [H]: **o premium de 30 dias vale de 12 a 20 dias das fontes brutas de ouro de um jogador mediano** (seção 4.6). Com a renda mediana de ~970 ouro por dia, isso dá ~15.000 ouro pelo premium de 30 dias (faixa a testar: 8.000 a 30.000). Com o premium a ~200 Alvarás (seção 6.1), o preço inicial esperado é de **~75 ouro por Alvará** (faixa: 40 a 150).
 - **Valor de referência (VR):** o preço de mercado estimado de cada item, recalculado de hora em hora (seção 5.1). Taxas, teto de emissão, Troca e painel usam o VR, nunca o valor de NPC. É a correção do erro que o IdleMMO admitiu: um único número (o valor de NPC) controlava a emissão, a base do imposto e o piso de preço ([C04](../01-pesquisa/fichas/C04-idlemmo.md), via [04a, §5.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)). **[proposta de mudança na bíblia]:** incluir "valor de referência (VR)" no glossário.
 
 ### 1.3 Três camadas de valor
@@ -40,7 +41,7 @@
 |---|---|---|---|
 | **Progresso preso** | Níveis, maestria, Selos, ajudantes, filas, offline, Mérito, Marcos | Pode crescer sem limite; nunca vira negociável por compra | P1; lei 16; [04a, decisão 1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md) |
 | **Bens negociáveis** | Ouro, materiais, consumíveis, equipamento, cosméticos de jogador e do Baú | Unidades que cabem na cabeça; emissão com teto por conta; tudo se gasta | P2, P3 |
-| **Alvará** | O token | Nasce só de compra em reais; nunca dá renda, XP ou poder | Bíblia, seção 5 |
+| **Alvará** | O token, em coins | Nasce só de doação em reais; gasto na loja, é destruído; nunca dá renda, XP ou poder | Bíblia, glossário e seção 5 |
 
 ## 2. Moedas
 
@@ -49,11 +50,11 @@
 | Moeda | O que faz | Como entra | Como sai | Negociável? |
 |---|---|---|---|---|
 | **Ouro** | Moeda de todos os balcões e das taxas; paga insumos de NPC, serviços, obras e luxos | Venda a NPC, encomendas, cercos e eventos com inscrição, missões do começo (seção 4.1) | Insumos de NPC, custo de partida, taxas, obras, luxos, Selo, ajudantes (seção 4.3) | **Sim, livremente:** balcões e Troca, sempre com taxa destruída |
-| **Alvará** | 30 dias de conveniência (acumuláveis), saldo de cosméticos, Baús na loja, lances no Cartório | Só compra em reais na loja web (Pix e cartão). Nunca de graça, nunca como prêmio | Consumido (conveniência, cosméticos, Baú) ou destruído na taxa do Cartório | **Sim, livremente,** depois da carência por meio de pagamento (seção 6.3). Troca por ouro só no Câmbio ou na Troca |
+| **Alvará** | Moeda divisível (coins), gasta na loja em premium (conveniência por tempo), cosméticos, Baú do Mascate e outros itens de conforto e cosmético; paga lances no Cartório | Só por doação em reais na loja web (Pix e cartão), sem reembolso. Nunca de graça, nunca como prêmio | Destruído quando é gasto na loja ou na taxa do Cartório | **Sim, livremente,** depois da carência por lote (seção 6.3). Troca por ouro só no Câmbio ou na Troca |
 | **Marcos** | Moeda da Travessia: suprimentos temporários, melhorias de posto, cosméticos e títulos da temporada | Atividades da Travessia (expedições na Bruma, descobertas, chefes de região) | Gastos na Travessia; no fim da temporada, a sobra vira uma recompensa cosmética fixa por faixa, nunca ouro | **Não.** Presos à conta e à temporada; zeram ao fim |
 | **Mérito** | Títulos de cidadania e prioridade nas recompensas da cidade; não pesa no voto | Contribuição para obras, nota em encomendas, defesa nos cercos | Não se gasta. O **Mérito vitalício** só cresce (títulos). O **Mérito da Era** zera a cada Era (prioridade) | **Não.** Preso à conta, e fica com a conta no Cartório (seção 7.3) |
 
-**Saldo de cosméticos.** O Alvará pode virar saldo da loja, preso à conta, para comprar cosméticos de valor fracionado. O nome e a tabela ficam com o módulo 11. O saldo nunca volta a ser Alvará e nunca paga outro jogador, para que não exista uma segunda moeda negociável (o pergaminho do IdleMMO, [05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)).
+**Gastar na loja destrói o Alvará.** Como o Alvará agora é moeda divisível, não há mais saldo de cosméticos separado: a loja cobra direto em Alvarás, e cada Alvará gasto sai da economia. A loja é a fonte de demanda que sustenta o preço do Alvará em ouro, e por isso o que ela vende (premium, cosméticos, Baú) precisa ter demanda real (seção 6.2).
 
 ### 2.2 Decisões sobre as moedas
 
@@ -138,7 +139,7 @@ A produção acima do teto não se perde. Ela fica na conta, de origem, e tem qu
 
 ### 3.6 O salário-teto do farmer
 
-[H] Com o Alvará a R$ 19,90 e a 15.000 ouro, 1 ouro vale ~R$ 0,0013. Uma conta mediana que vendesse todo o teto renderia ~R$ 2,80 por dia (~R$ 84 por mês) a preço oficial. Uma conta no topo renderia ~R$ 163 por mês brutos e ~R$ 105 líquidos de insumos e desgaste (~35% de custo). No RMT informal, o ouro costuma sair abaixo do oficial: no OSRS, a 45% do Bond ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)). Isso deixa o salário de uma conta no topo entre R$ 50 e R$ 75 por mês.
+[H] Com o Alvará a ~R$ 0,10 e a ~75 ouro (o premium de 30 dias a ~R$ 20 e ~15.000 ouro), 1 ouro vale ~R$ 0,0013. Uma conta mediana que vendesse todo o teto renderia ~R$ 2,80 por dia (~R$ 84 por mês) a preço oficial. Uma conta no topo renderia ~R$ 163 por mês brutos e ~R$ 105 líquidos de insumos e desgaste (~35% de custo). No RMT informal, o ouro costuma sair abaixo do oficial: no OSRS, a 45% do Bond ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)). Isso deixa o salário de uma conta no topo entre R$ 50 e R$ 75 por mês.
 - **Restrição de desenho [H]:** o salário-teto líquido de uma conta no topo fica **abaixo de ~R$ 100 por mês a preço oficial.** Acima disso, alugar a identidade verificada de um terceiro (o "laranja") passa a compensar.
 - **Com os valores iniciais, o topo fica no limite (~R$ 105).** Se a simulação confirmar, a inclinação cai de 30 para 25 por nível, ou a camada de maestria cai de 50 para 25 (parâmetros 7 e 8 da seção 13).
 - **Barreiras somadas:** a identidade verificada (P8), os ~90 dias até o nível 100 (bíblia 6.2), a rampa de conta nova e a detecção por fluxo (seção 10).
@@ -251,7 +252,7 @@ Ficam fora da conta diária: o **Baú do Mascate** (cosméticos, conforme os pag
 | **Casual** | `n ≈ 25`, 1 fila, 2 sessões por dia | 1.350 |
 | **Mediano** | `n ≈ 50`, 2 filas, 3 a 4 sessões | 2.100 |
 | **Hardcore** | `n ≈ 85`, 3 filas, 6 sessões, obras-primas frequentes | 3.150 |
-| **Pagante** | Mediano que compra 2 Alvarás por mês, consome 1 e vende 1 no Câmbio | 2.100 |
+| **Pagante** | Mediano que doa ~R$ 40 por mês (~400 Alvarás), gasta metade na loja e vende metade no Câmbio | 2.100 |
 | **Bot** | Conta verificada de terceiro, 3 filas, vende até o teto todo dia, sem luxo nem obra | até 4.100 |
 
 **Modelo de bolso por conta ativa** ([04a, §5.2](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)): `dM/dt = (1 − a) × E − (τ × V + s) × M`, com equilíbrio `M* = (1 − a) × E ÷ (τ × V + s)`.
@@ -261,18 +262,18 @@ Ficam fora da conta diária: o **Baú do Mascate** (cosméticos, conforme os pag
   - Drenos de atividade (insumos, partida, ajudantes): 530, o que dá `a = 0,55`.
   - Comércio e Câmbio: `τ × V ≈ 0,0018` por dia (taxa efetiva de ~6% sobre um giro de ~2% da massa por dia, mais o Câmbio).
   - Luxos, obras em ouro e Selo: `s ≈ 1%` do estoque por dia.
-  - Resultado: `M* = 0,45 × 970 ÷ 0,0118 ≈ 37.000` de ouro por conta ativa (~2,5 Alvarás), com constante de tempo de ~85 dias. Uma conta que começa com 2.000 chega a ~24.000 no dia 85.
+  - Resultado: `M* = 0,45 × 970 ÷ 0,0118 ≈ 37.000` de ouro por conta ativa (~2,5 premiums de 30 dias, ~490 Alvarás), com constante de tempo de ~85 dias. Uma conta que começa com 2.000 chega a ~24.000 no dia 85.
 - **Três conclusões:**
   1. **A alavanca é `a`:** cada 10 pontos a mais de consumo embutido cortam ~20% de `M*`.
   2. **`s` encurta o caminho até o equilíbrio,** mas é comportamental: depende de os luxos serem desejados. É o parâmetro mais incerto do modelo.
   3. **`τ` é freio.** Dobrar todas as taxas move `M*` menos de 15%.
-- **Meta [H]:** `M* ÷ preço do Alvará` entre 2 e 3 por conta ativa. A riqueza grande deve estar em itens, que se gastam, não em ouro parado.
+- **Meta [H]:** `M* ÷ preço em ouro do premium de 30 dias` entre 2 e 3 por conta ativa. A riqueza grande deve estar em itens, que se gastam, não em ouro parado.
 
 **Conta de guardanapo do Câmbio [H]:**
-- **Volume:** com 30 mil ativos por dia, 8% de pagantes, 2 Alvarás por pagante por mês e metade vendida no Câmbio, são ~2.400 Alvarás por mês, ou **~3 por hora**.
+- **Volume:** com 30 mil ativos por dia, 8% de pagantes, ~R$ 40 doados por pagante por mês (~400 Alvarás) e metade vendida no Câmbio, são ~480 mil Alvarás por mês, ~670 por hora. Em número de ordens, com ordens típicas de ~200 Alvarás, isso dá **~3 a 7 ordens por hora**: muitas unidades, mas poucos participantes.
 - **Ouro:** o volume é de ~36 milhões por mês, e os 12% destroem ~4,3 milhões por mês, **~0,5% das fontes**. O Câmbio é um dreno pequeno; seu papel é o índice e a rota do não pagante.
-- **Rota do não pagante:** ~50% da conveniência viria de ouro, dentro da faixa-alvo de 30% a 65% do [05d, §6](../01-pesquisa/05d-rmt-recomendacao.md) (65,2% no IdleMMO).
-- **Pagante:** recebe ~13.200 de ouro por Alvará, o equivalente a ~14 dias de fontes de um mediano.
+- **Rota do não pagante:** ~50% do premium viria de ouro, dentro da faixa-alvo de 30% a 65% do [05d, §6](../01-pesquisa/05d-rmt-recomendacao.md) (65,2% no IdleMMO).
+- **Pagante:** recebe ~66 de ouro por Alvará, ou ~13.200 pelos ~200 Alvarás de um premium, o equivalente a ~14 dias de fontes de um mediano.
 
 ### 4.7 Obras e encomendas como amortecedores
 
@@ -295,7 +296,7 @@ Ficam fora da conta diária: o **Baú do Mascate** (cosméticos, conforme os pag
 | **Bolsa** | Commodities fungíveis por item, tier e qualidade; Baús lacrados por série | Livro de ordens contínuo | 1% de anúncio + 5% na venda | Estúdio (constituição) |
 | **Feira** | Itens únicos e com atributos | Anúncio de preço fixo, compra na hora | 6% na venda (inclui sinal de 0,5%) | **Câmara, de 4% a 8%** |
 | **Pregão** | Raridades | Leilão inglês com lance máximo automático | 7% do lance vencedor + abertura | Estúdio |
-| **Câmbio** | Alvará ↔ ouro | Leilão de chamada a cada hora | 12% de quem vende | Estúdio |
+| **Câmbio** | Alvará ↔ ouro, em unidades | Leilão de chamada a cada hora | 12% de quem vende | Estúdio |
 | **Troca** | Qualquer coisa negociável, direto entre dois jogadores | Proposta assíncrona com garantia | 3% do que cada lado recebe; 12% sobre Alvará e Baú lacrado | Estúdio |
 | **Cartório** | Personagens | Leilão em Alvará | 10% em Alvará | Estúdio (seção 7) |
 
@@ -378,38 +379,40 @@ Princípios do [04b, §5.1](../01-pesquisa/04b-economia-mercados-protecoes-bots.
 
 **A decisão: como se forma o preço.**
 
-| Opção | Como funciona | Com 2 a 5 mil simultâneos (~3 operações por hora, seção 4.6) |
+| Opção | Como funciona | Com 2 a 5 mil simultâneos (~3 a 7 ordens por hora, seção 4.6) |
 |---|---|---|
-| (A) Livro contínuo | Como o PLEX do EVE | Raso: uma conta com 20 Alvarás move o preço, o spread fica largo e quem clica primeiro leva. Manipulável |
+| (A) Livro contínuo | Como o PLEX do EVE | Raso: uma conta com alguns milhares de Alvarás move o preço, o spread fica largo e quem clica primeiro leva. Manipulável |
 | (B) Fila administrada | Como o WoW Token: o sistema fixa a cotação pela fila de vendedores e pela demanda | Execução imediata, mas o preço é "do estúdio", e cada alta vira culpa da casa, como os tetos do Black Desert ([04b, §1.8](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). Se o vendedor trava a cotação e o comprador paga outra, a diferença cria ou destrói ouro fora do livro-razão |
 | **(C) Leilão de chamada a cada hora ← recomendado** | Os jogadores deixam ordens com preço limite, e a cada hora o sistema calcula **um preço único** que maximiza o volume, dentro de uma banda | O preço é formado pelos jogadores, a liquidez de uma hora se junta num instante só, a velocidade não vale nada e cada rodada já é o índice |
 
 **Por que (C).** É um livro de ordens, como queria o [04b, §5.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md), compensado em rodadas, e tem a estabilidade que o [05d, §4.1](../01-pesquisa/05d-rmt-recomendacao.md) buscava na fila administrada. A divergência entre os dois estudos fica resolvida. [F] Na literatura de desenho de mercado, Budish, Cramton e Shim propõem trocar o livro contínuo por leilões em lote frequentes. Eles mostram que o lote anula o valor de pequenas vantagens de velocidade e transforma a competição por rapidez em competição por preço ([QJE 130(4), 2015](https://econpapers.repec.org/RePEc:oup:qjecon:v:130:y:2015:i:4:p:1547-1621); [versão de trabalho](https://conference.nber.org/conf_papers/f69665.pdf)). [H] No nosso caso, o lote serve menos contra robôs de milissegundo e mais para juntar uma liquidez escassa. Para um idle, esperar até uma hora não custa nada.
 
 **Regras [H].**
-- **Ordens:** compra (quantidade e preço máximo, com o ouro reservado) e venda (quantidade e preço mínimo, com o Alvará reservado). Há ordem "a qualquer preço dentro da banda". No máximo 10 Alvarás por ordem e 3 ordens abertas por conta.
+- **Unidade e preço:** o Câmbio negocia Alvarás em unidades inteiras. O preço é cotado **por Alvará, em ouro**, com o degrau de 3 algarismos significativos da Bolsa (ex.: 75,3).
+- **Ordens:** compra (quantidade e preço máximo, com o ouro reservado) e venda (quantidade e preço mínimo, com os Alvarás do saldo livre reservados). Há ordem "a qualquer preço dentro da banda". Cada ordem vai de 10 a 2.000 Alvarás, com até 3 ordens abertas por conta.
 - **A rodada:** a cada hora cheia, o sistema escolhe o preço `P*` dentro da banda que maximiza o número de Alvarás negociados. No empate, fica o menor desequilíbrio e depois o preço mais perto da rodada anterior. Todos negociam a `P*`: quem ofereceu mais recebe a diferença de volta, e quem pediu menos recebe mais. A prioridade é por preço e depois por antiguidade. O que sobra fica para a rodada seguinte.
 - **Banda:** ±3% da rodada anterior; no máximo ±10% em 24 horas. Ao bater no limite diário, o Câmbio segue funcionando, mas o painel avisa e a equipe revisa (disjuntor da seção 10).
-- **Taxa:** 12% de `P*`, descontada de quem vende e destruída. O preço publicado é o que o comprador paga.
-- **Limite de compra:** 10 Alvarás por conta a cada 7 dias, contra o cornering e o entesouramento especulativo. É uma regra do balcão, não da transferência: a Troca continua livre. Não há limite de venda, porque o teto de gasto em reais já limita a oferta de cada pagante (seção 6).
+- **Taxa:** 12% de `P*` vezes a quantidade, arredondada para cima ao centésimo, descontada de quem vende e destruída. O preço publicado é o que o comprador paga.
+- **Limite de compra:** 2.000 Alvarás por conta a cada 7 dias (~10 premiums de 30 dias), contra o cornering e o entesouramento especulativo. É uma regra do balcão, não da transferência: a Troca continua livre. Não há limite de venda, porque o teto de doação já limita a oferta de cada pagante (seção 6.5).
+- **Contestação:** se a doação de quem vendeu for contestada depois da rodada, o comprador de boa-fé fica com os Alvarás, e a conta que contestou fica suspensa até regularizar (seção 6.4).
 - **O estúdio nunca compra nem vende no Câmbio,** e isso fica escrito na constituição.
-- **Frequência:** de hora em hora no lançamento. Se passar de 30 Alvarás por rodada de forma sustentada, as rodadas podem ficar a cada 15 minutos.
+- **Frequência:** de hora em hora no lançamento. Se passar de 30 ordens executadas por rodada de forma sustentada, as rodadas podem ficar a cada 15 minutos.
 
-**Exemplo calculado.** A rodada anterior saiu a 15.000, e a banda vai de 14.550 a 15.450.
+**Exemplo calculado.** A rodada anterior saiu a 75,00 por Alvará, e a banda vai de 72,75 a 77,25.
 
-| Ordens | Quantidade | Limite |
+| Ordens | Quantidade (Alvarás) | Limite (ouro por Alvará) |
 |---|---|---|
-| Compra | 6 | até 15.300 |
-| Compra | 4 | até 15.000 |
-| Compra | 5 | até 14.600 |
-| Venda | 3 | a partir de 14.500 |
-| Venda | 5 | a partir de 14.900 |
-| Venda | 4 | a partir de 15.200 |
+| Compra | 600 | até 76,50 |
+| Compra | 400 | até 75,00 |
+| Compra | 500 | até 73,00 |
+| Venda | 300 | a partir de 72,50 |
+| Venda | 500 | a partir de 74,50 |
+| Venda | 400 | a partir de 76,00 |
 
-- Volume por preço: a 14.600 negociam-se 3; de 14.900 a 15.000, 8 (há 10 compradores e 8 vendedores); a 15.200, 6.
-- O volume máximo, 8, sai a 14.900 ou a 15.000, com o mesmo desequilíbrio. O desempate pelo preço mais perto da rodada anterior dá **`P* = 15.000`**.
-- Os 6 compradores a 15.300 levam tudo e recebem 300 de volta por Alvará. Dos 4 a 15.000, os 2 mais antigos levam.
-- Cada vendedor recebe `15.000 × 0,88 = 13.200`, e a rodada destrói `8 × 1.800 = 14.400` de ouro.
+- Volume por preço: a 73,00 negociam-se 300; de 74,50 a 75,00, 800 (há 1.000 Alvarás pedidos na compra e 800 oferecidos na venda); a 76,00, 600.
+- O volume máximo, 800, sai a 74,50 ou a 75,00, com o mesmo desequilíbrio. O desempate pelo preço mais perto da rodada anterior dá **`P* = 75,00`**.
+- A compra de 600 a 76,50 leva tudo e recebe 1,50 de volta por Alvará. Da compra de 400 a 75,00, os 200 Alvarás das ordens mais antigas são atendidos.
+- Cada vendedor recebe `75,00 × 0,88 = 66,00` por Alvará, e a rodada destrói `800 × 9,00 = 7.200` de ouro.
 
 **Quatro perguntas.**
 - *Referência:* PLEX e Bond (preço de mercado), WoW Token (cotação única), o leilão de abertura das bolsas [NV] e os leilões em lote frequentes (Budish et al.).
@@ -426,7 +429,8 @@ A Troca é livre por decisão do Gabriel: nenhum limite de valor, nenhuma proibi
 | **Formato** | Proposta assíncrona: um lado monta a oferta, e o outro aceita em até 24 horas. Tudo o que está na proposta fica reservado até aceitar, recusar ou expirar |
 | **Taxa** | **Cada lado paga 3% do valor de mercado do que recebe,** em ouro, destruído (mínimo de 1 ouro). Uma troca equilibrada custa ~6% no total, como a Bolsa; um presente custa 3% a quem recebe. Qualquer lado pode assumir a taxa do outro |
 | **Valor de mercado** | VR da Bolsa para commodities; valor estimado da Feira para itens únicos; ouro pelo valor de face; item sem estimativa pelo maior entre o valor declarado e um piso por tier |
-| **Alvará na Troca** | Quem recebe paga **12% do preço do Câmbio** em ouro. **[proposta de mudança na bíblia]** (seção 5.6) |
+| **Alvará na Troca** | Quem recebe paga **12% do preço do Câmbio vezes a quantidade**, em ouro. **[proposta de mudança na bíblia]** (seção 5.6). Com o Alvará divisível, essa taxa também impede que ele vire a moeda em que se cotam os itens entre jogadores (seção 6.2). Só sai Alvará do saldo livre, fora da carência |
+| **Contestação no banco** | Se a doação de quem deu o Alvará for contestada (chargeback, MED), quem recebeu de boa-fé fica com ele, e a conta que contestou fica suspensa até regularizar (seção 6.4). Com sinais de fraude organizada, o caso cai no nível 3 abaixo |
 | **Baú lacrado na Troca** | Quem recebe paga **12% do VR** do Baú. **[proposta de mudança na bíblia]** (seção 8) |
 | **Cota** | Dar item de origem consome cota de quem dá (seção 3.3) |
 | **Tela de confirmação** | VR de cada lado, desequilíbrio em percentual e aviso acima de 50%; aviso extra quando o outro lado é uma conta com menos de 7 dias |
@@ -464,91 +468,113 @@ A Troca é livre por decisão do Gabriel: nenhum limite de valor, nenhuma proibi
 | Baú lacrado por ouro | **12%** (proposta) | — | — | **12%** (proposta) | — | — |
 | Personagem | — | — | — | — | — | 10% em Alvará |
 
-**O conflito com a bíblia.** Pela bíblia, a Troca custa 3% e o Câmbio, 12%. Se um Alvará pudesse ser trocado por ouro na Troca a 6% no total (3% + 3%), o Câmbio seria contornado, o dreno cairia à metade e o índice passaria a medir só a parte do mercado que ainda usasse o balcão. O mesmo vale para o Baú lacrado, que é Alvará em outra forma: 1 Alvará compra 5 Baús, que voltariam a ouro na Bolsa por 6%. **[proposta de mudança na bíblia]:** o Alvará e o Baú lacrado pagam 12% em qualquer canal. Isso não limita a transferência; só a deixa com o mesmo preço em todo lugar.
+**O conflito com a bíblia.** Pela bíblia, a Troca custa 3% e o Câmbio, 12%. Se um Alvará pudesse ser trocado por ouro na Troca a 6% no total (3% + 3%), o Câmbio seria contornado, o dreno cairia à metade e o índice passaria a medir só a parte do mercado que ainda usasse o balcão. O mesmo vale para o Baú lacrado, que é Alvará em outra forma: 40 Alvarás compram 1 Baú, que voltaria a ouro na Bolsa por 6%. **[proposta de mudança na bíblia]:** o Alvará e o Baú lacrado pagam 12% em qualquer canal. Isso não limita a transferência; só a deixa com o mesmo preço em todo lugar.
 
 ## 6. Alvará
 
-### 6.1 Emissão
+### 6.1 Emissão por doação
 
-- **Só por compra em reais**, na loja web (Pix e cartão), por conta verificada (todas são, P8). O preço em reais fica com o módulo 11 (faixa a testar: R$ 14,90 a R$ 24,90; bíblia 6.7).
-- **Nunca de graça:** não é prêmio de evento, de ranking nem de Travessia. Compensação por manutenção vem em dias de conveniência presos, nunca em Alvará. [F] O PLEX caiu de ~6 para ~4,5 milhões de ISK com distribuição gratuita e a unificação do mercado ([05d](../01-pesquisa/05d-rmt-recomendacao.md), "Como isso pode dar errado").
-- **Item, não moeda:** unidade indivisível, com número de série no livro-razão ([05d, §4.1](../01-pesquisa/05d-rmt-recomendacao.md)).
+- **O pagamento é uma doação que credita Alvarás** (decisão do Gabriel, [PROGRESSO](../PROGRESSO.md)). Cada valor doado na loja web (Pix e cartão) credita um número de Alvarás na conta. Os pacotes e eventuais bônus por valor ficam com o módulo 11.
+- **Moeda em unidades.** O Alvará é uma moeda divisível em unidades inteiras (coins), não mais um item de 30 dias.
+  - **Referência de trabalho [H]:** 1 Alvará ≈ R$ 0,10, ou seja, R$ 10 doados creditam 100 Alvarás.
+  - Com isso, o premium de 30 dias fica entre 149 e 249 Alvarás (a faixa de R$ 14,90 a R$ 24,90 da bíblia 6.7), e o Baú, em ~40.
+  - **A reconciliar com o módulo 11.**
+- **Sem reembolso** por parte do estúdio.
+- **Nunca de graça:** não é prêmio de evento, de ranking nem de Travessia. Compensação por manutenção vem em dias de premium presos, nunca em Alvará. [F] O PLEX caiu de ~6 para ~4,5 milhões de ISK com distribuição gratuita e a unificação do mercado ([05d](../01-pesquisa/05d-rmt-recomendacao.md), "Como isso pode dar errado").
+- **Rastreio por lote.** Cada doação gera um lote no livro-razão, com valor, meio de pagamento, data e carência.
+  - No saldo, os Alvarás são iguais entre si. Mas o livro-razão sabe de que lote saiu cada unidade transferida, e é isso que permite a carência (6.3) e a regra de contestação (6.4).
+  - **Ordem de uso:** o gasto na loja consome primeiro o saldo em carência. A transferência sai só do saldo livre, do lote mais antigo para o mais novo.
+- **Validar com advogado:**
+  - Chamar o pagamento de doação não muda a natureza de compra perante o CDC (Lei 8.078/1990, art. 49, arrependimento de 7 dias). Também pode atrair ITCMD e conflitar com as regras dos provedores de pagamento. O alerta já está registrado no [PROGRESSO](../PROGRESSO.md), e o risco foi assumido pelo Gabriel.
+  - Uma moeda divisível que paga outros jogadores na Troca se afasta do circuito fechado (Lei 12.865/2013, art. 6º, §3º) e se aproxima de ativo virtual (Lei 14.478/2022, art. 3º) ([05b](../01-pesquisa/05b-rmt-legal-brasil.md)).
 
 ### 6.2 Usos
 
 | Uso | Efeito | Observação |
 |---|---|---|
-| **Consumir** | 30 dias de conveniência, acumuláveis | O conteúdo da conveniência fica com o módulo 11. **Nunca:** desconto de taxa, teto ou cota maior, filas, offline, vagas de ordem, renda, XP ou poder ([05d, §5.2](../01-pesquisa/05d-rmt-recomendacao.md): desconto de taxa favorece quem já é rico, [F08](../01-pesquisa/fichas/F08-black-desert.md)) |
-| **Converter em saldo de cosméticos** | Saldo preso à conta, para itens de valor fracionado | Não volta a ser Alvará (seção 2.1) |
-| **Comprar Baús** | 1 Alvará = 5 Baús (seção 8) | O Baú herda a carência do Alvará |
-| **Dar lance no Cartório** | Pagamento de personagens (seção 7) | Só com Alvarás fora da carência |
-| **Vender no Câmbio** | Ouro de outro jogador, menos 12% | Seção 5.4 |
-| **Trocar na Troca** | Por qualquer coisa | 12% do preço do Câmbio, pago por quem recebe (proposta, seção 5.6) |
+| **Gastar na loja** | Premium (conveniência por tempo), cosméticos, Baú do Mascate e outros itens de conforto e cosmético | O Alvará gasto na loja é **destruído**: é o dreno do Alvará. O conteúdo do premium fica com o módulo 11. **Nunca:** desconto de taxa, teto ou cota maior, filas, offline, vagas de ordem, renda, XP ou poder ([05d, §5.2](../01-pesquisa/05d-rmt-recomendacao.md): desconto de taxa favorece quem já é rico, [F08](../01-pesquisa/fichas/F08-black-desert.md)) |
+| **Comprar Baús** | ~40 Alvarás por Baú (seção 8) | O Baú comprado com saldo em carência herda a carência |
+| **Dar lance no Cartório** | Pagamento de personagens (seção 7) | Só com saldo livre |
+| **Vender no Câmbio** | Em unidades, por ouro de outro jogador, menos 12% | Seção 5.4 |
+| **Trocar na Troca** | Por qualquer coisa | 12% do preço do Câmbio vezes a quantidade, pago por quem recebe (proposta, seção 5.6) |
 
-### 6.3 Carência por meio de pagamento (salvaguarda S2)
+- **Estoque:** `Alvarás em circulação = doados − gastos na loja − destruídos no Cartório`. Publicado de forma agregada (6.6). Como moeda, o Alvará pode ser guardado sem prazo. O estoque parado é demanda futura da loja e oferta futura do Câmbio, e o painel o acompanha.
+- **Risco novo: moeda paralela.** Divisível e livre, o Alvará pode virar a moeda em que se cotam os itens caros entre jogadores, fora do ouro. Foi o que aconteceu com o pergaminho do IdleMMO e com a "dolarização" do Throne and Liberty ([04b, §5.1](../01-pesquisa/04b-economia-mercados-protecoes-bots.md); [05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). Defesas: balcões só em ouro (5.0), 12% em qualquer troca de Alvará (5.6) e índice publicado em ouro.
 
-Antes da **primeira transferência** (Câmbio, Troca, lance no Cartório), cada Alvará cumpre uma carência que depende do meio de pagamento. Durante a carência, ele pode ser consumido, mas não transferido. Depois dela, circula livremente para sempre (decisão do Gabriel).
+### 6.3 Carência por lote e meio de pagamento (salvaguarda S2)
+
+Antes da **primeira transferência** (Câmbio, Troca, lance no Cartório), cada lote de Alvarás cumpre uma carência que depende do meio de pagamento. Durante a carência, os Alvarás do lote podem ser gastos na loja, mas não transferidos. Depois dela, circulam livremente para sempre (decisão do Gabriel).
 
 | Situação | Carência [H] | Referência |
 |---|---|---|
 | Pix, conta com histórico limpo | 72 horas | [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) |
 | Cartão, conta com histórico limpo | 7 dias | Coins do Tibia transferíveis conforme o meio de pagamento ([F04](../01-pesquisa/fichas/F04-tibia.md)) |
-| Primeira compra da conta, qualquer meio | 7 dias | Trava de 72 h do MWI; retenção de 7 dias da Steam ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)) |
-| Compra fora do padrão da conta ou com sinal de risco | Até 30 dias | GGMAX retém de 7 a 30 dias ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)) |
+| Primeira doação da conta, qualquer meio | 7 dias | Trava de 72 h do MWI; retenção de 7 dias da Steam ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)) |
+| Doação fora do padrão da conta ou com sinal de risco | Até 30 dias | GGMAX retém de 7 a 30 dias ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)) |
 
-- [F] Nenhuma carência cobre o prazo inteiro de contestação: cerca de 120 dias no cartão e até 80 dias no MED do Pix ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)). [H] A carência barra a fraude rápida, e o resto fica com a regra de reversão.
-- **Baús comprados com Alvará em carência** e o conteúdo deles herdam a carência que falta: não se vendem nem se trocam antes do fim.
+- [F] Nenhuma carência cobre o prazo inteiro de contestação: cerca de 120 dias no cartão e até 80 dias no MED do Pix ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)). [H] A carência barra a fraude rápida, e o resto fica com a regra de contestação.
+- **Baús comprados com saldo em carência** e o conteúdo deles herdam a carência que falta: não se vendem nem se trocam antes do fim.
 
-### 6.4 Regra de reversão (chargeback e MED)
+### 6.4 Contestação forçada pelo banco (chargeback e MED)
 
-Adaptada do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) à transferência livre; publicada antes do lançamento.
-1. **Alvará contestado ainda na conta:** só ele é revogado. A conta não é bloqueada por inteiro sem processo, o que a FTC condenou no caso Epic ([05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §3.1).
-2. **Alvará contestado e já transferido:** quem o recebeu de boa-fé fica com ele, e o estúdio absorve a perda. A conta que comprou e contestou recebe uma **dívida em ouro** igual ao preço do Câmbio no dia, perde o acesso aos balcões até quitar e é banida se houver fraude. O ouro recebido é rastreado no livro-razão e congelado onde ainda for identificável nas contas do fraudador.
-3. **Disjuntor:** se as disputas passarem de um limiar interno (bem abaixo do 1,5% das bandeiras, [05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §5.1), a venda de Alvará no Câmbio e na Troca é suspensa, e a compra para consumo continua.
-- **Validar com advogado:** a dívida em ouro e o congelamento diante do CDC (Lei 8.078/1990, art. 51, cláusulas abusivas) e do arrependimento de 7 dias (art. 49).
+**Regra decidida pelo Gabriel:** a conta cuja doação é contestada (chargeback no cartão ou MED do Pix) **fica suspensa até regularizar**, isto é, até pagar de novo o valor contestado. A regra substitui a dívida em ouro.
 
-### 6.5 Teto de gasto em reais
+Como ela se aplica a uma moeda que circula [H]:
+1. **Durante a suspensão,** a conta não joga, não negocia e não transfere. Alvarás, ouro e itens ficam congelados com ela. As ordens abertas são canceladas, e o que estava reservado volta, congelado, para a própria conta.
+2. **Quem recebeu de boa-fé fica com o que recebeu:** Alvarás numa Troca, ouro de uma venda no Câmbio, um personagem no Cartório. O estúdio absorve a perda; nada é tirado de terceiros por causa da contestação de outro.
+3. **Regularizou, a suspensão cai,** e a conta volta com o que tinha.
+4. **Fraude organizada é outro caso.** Quando a contestação vem com sinais de fraude (cartão de terceiro, funil de contas, risco de troca nível 3), as contas que receberam o valor entram em revisão. **A reconciliar com o módulo 13.**
+5. **Disjuntor:** se as disputas passarem de um limiar interno (bem abaixo do 1,5% das bandeiras, [05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §5.1), as transferências de Alvará (Câmbio, Troca, Cartório) são suspensas. O gasto na loja continua.
 
-- **Padrão igual para todos [H]:** R$ 300 por mês somando todas as compras, o que dá ~15 Alvarás.
-- **Aumento** por pedido, até R$ 1.500 por mês, com 7 dias de espera. **Limites pessoais menores** a qualquer hora. Esfriamento de 24 horas depois de compra acima de R$ 150. Painel de gasto ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 10).
-- **Papel econômico:** o teto limita a oferta de Alvarás por pagante e, com ela, o "pay-to-win de capital", em que quem paga compra liquidez para dominar livros ([04a, §3.4](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), mecanismo 5).
+**Efeito na economia.** Os Alvarás contestados que já foram transferidos seguem circulando sem dinheiro por trás. A massa ativa de ouro e de Alvará cai pelo que fica congelado nas contas suspensas. A simulação modela os dois efeitos (parâmetros 43 a 45 da seção 13).
+
+**Por que a carência continua necessária.** A suspensão não pesa para quem usa cartão roubado: o fraudador abandona a conta. A carência impede que ele transfira antes de a vítima perceber.
+
+**Tensão registrada.** O [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) recomendava revogar só o valor contestado, sem bloquear a conta inteira, porque a FTC condenou a Epic por bloquear contas inteiras depois de contestações ([05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §3.1). A decisão do Gabriel suspende a conta, mas devolve tudo ao regularizar. **Validar com advogado** a suspensão e o congelamento de saldo diante do CDC (art. 51, cláusulas abusivas). Risco assumido pelo Gabriel.
+
+### 6.5 Teto de doação mensal
+
+- **Padrão igual para todos [H]:** R$ 300 por mês, somando todas as doações (~3.000 Alvarás).
+- **Aumento** por pedido, até R$ 1.500 por mês, com 7 dias de espera. **Limites pessoais menores** a qualquer hora. Esfriamento de 24 horas depois de doação acima de R$ 150. Painel de gasto ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 10).
+- **Papel econômico:** o teto limita a oferta de Alvarás por pagante e, com ela, o "pay-to-win de capital", em que quem paga compra liquidez para dominar livros ([04a, §3.4](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), mecanismo 5). Também limita o estrago de um cartão roubado.
 - **Os valores ficam com o módulo 11.**
 
 ### 6.6 Índice público do Alvará
 
 - **No jogo e em dados abertos, com atraso de 1 hora:**
-  - preço de cada rodada do Câmbio (série horária e diária, com abertura, máxima, mínima e fechamento);
-  - volume e ordens em espera dos dois lados;
-  - ouro destruído pela taxa.
-- **Semanal:**
-  - Alvarás consumidos, destruídos no Cartório e em circulação, agregados;
-  - parcela da conveniência obtida com ouro.
-- **Leitura obrigatória ao lado da cesta (IPA) e da massa monetária:** o preço do Alvará mede também a oferta e a demanda do próprio Alvará. [F] PLEX, point do Torn e Bond do OSRS caíram com a moeda crescendo ([04a, §3.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)). Aqui, a taxa do Cartório, que destrói Alvarás, empurra o preço para cima sem que os bens mudem.
+  - preço de cada rodada do Câmbio, **por Alvará, em ouro** (série horária e diária, com abertura, máxima, mínima e fechamento);
+  - a leitura humana do índice, **o preço do premium de 30 dias em ouro** (o preço por Alvará vezes os Alvarás do premium);
+  - volume em unidades, ordens em espera dos dois lados e ouro destruído pela taxa.
+- **Semanal, agregado:**
+  - Alvarás doados, gastos na loja, destruídos no Cartório e em circulação;
+  - parcela do premium obtida com ouro;
+  - contas suspensas por contestação e contas regularizadas.
+- **Leitura obrigatória ao lado da cesta (IPA) e da massa monetária:** o preço do Alvará mede também a oferta e a demanda do próprio Alvará. [F] PLEX, point do Torn e Bond do OSRS caíram com a moeda crescendo ([04a, §3.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)). Aqui, o gasto na loja e a taxa do Cartório destroem Alvarás e empurram o preço para cima sem que os bens mudem; um estoque grande parado pode empurrá-lo para baixo de uma vez.
 
-### 6.7 Quatro perguntas (Alvará livre)
+### 6.7 Quatro perguntas (Alvará em coins, livre)
 
-- **Referência:** Tibia Coins transferíveis e Premium Scrolls ([F04](../01-pesquisa/fichas/F04-tibia.md)); PLEX, Bond e WoW Token. *Diferença:* livre em qualquer canal, mas com a mesma taxa em todos.
-- **Problema:** capturar a demanda de RMT pelo canal oficial e dar ao não pagante uma rota à conveniência (lei 19).
-- **Comportamento:** o pagante financia o tempo do não pagante; o Alvará vira presente entre amigos.
-- **Risco:** o Alvará livre circulando sem limite se aproxima de "ativo virtual" (Lei 14.478/2022, art. 3º), ponto amarelo do [00-sintese](../01-pesquisa/00-sintese.md). **Validar com advogado**; risco assumido pelo Gabriel. Também pode virar reserva de valor especulativa. Mitigação: limite de compra no Câmbio, taxa de 12% em todo canal e nenhuma emissão grátis.
+- **Referência:** Tibia Coins (moeda em unidades, transferível conforme o meio de pagamento, [F04](../01-pesquisa/fichas/F04-tibia.md)); PLEX, Bond e WoW Token. *Diferença:* livre em qualquer canal, com a mesma taxa em todos, e o gasto na loja como dreno.
+- **Problema:** capturar a demanda de RMT pelo canal oficial e dar ao não pagante uma rota ao premium (lei 19).
+- **Comportamento:** o pagante doa e vende parte dos Alvarás por ouro, financiando o tempo do não pagante; o Alvará vira presente entre amigos; quem não paga junta ouro para o premium.
+- **Risco:** moeda paralela, ativo virtual e entesouramento especulativo. Mitigação: balcões só em ouro, limite de compra no Câmbio, taxa de 12% em todo canal, nenhuma emissão grátis e o estoque em circulação no painel. **Validar com advogado** (seção 6.1).
 
 ## 7. Cartório (bazar de contas)
 
 ### 7.1 Formato
 
-- **Leilão em Alvará** de 3 ou 7 dias, com lance inicial de pelo menos 5 Alvarás, incremento de 1 Alvará e lance máximo automático.
+- **Leilão em Alvará** de 3 ou 7 dias, com lance inicial de pelo menos 300 Alvarás (~R$ 30), incremento de 5% (mínimo de 10 Alvarás) e lance máximo automático.
 - **Prorrogação** de 30 minutos para lance no fim, até 24 horas no total.
-- **Garantia de 100%** em Alvarás fora da carência; lances irrevogáveis.
+- **Garantia de 100%** em Alvarás do saldo livre, fora da carência; lances irrevogáveis.
 - [F] O Char Bazaar do Tibia funciona com taxa de 50 TC, comissão de 12%, pagamento só com coins transferíveis e reserva de 10% do lance. Em 2025 movimentou 721,4 milhões de TC, com ~98,7 milhões em taxas, cerca de 13% da receita da CipSoft pela estimativa de terceiros ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)).
 
 ### 7.2 Taxas
 
-- **10% do lance vencedor em Alvará, destruído** (bíblia 6.6), arredondado para cima ao Alvará inteiro, com mínimo de 1. Exemplos:
-  - venda por 8 → taxa 1 (12,5%), o vendedor recebe 7;
-  - venda por 23 → taxa 3 (13%), recebe 20;
-  - venda por 50 → taxa 5 (10%), recebe 45.
+- **10% do lance vencedor em Alvará, destruído** (bíblia 6.6), arredondado para cima à unidade. Exemplos:
+  - venda por 300 → taxa 30, o vendedor recebe 270;
+  - venda por 2.345 → taxa 235, recebe 2.110.
+  - Com o Alvará em unidades, o arredondamento deixa de pesar nas vendas pequenas.
 - **Anúncio:** 2.000 ouro, sem reembolso, contra anúncios de teste e spam. **[proposta de complemento à bíblia]**
-- **Por que em Alvará destruído:** o dinheiro já entrou quando o Alvará foi comprado. Destruí-lo tira oferta de Alvará e não cria receita nova para o estúdio a cada venda, como pede a regra de que taxa não é receita (bíblia 6.6). Efeito colateral: o preço do Alvará em ouro sobe (seção 6.6).
+- **Por que em Alvará destruído:** o dinheiro já entrou quando o Alvará foi doado. Destruí-lo tira oferta de Alvará e não cria receita nova para o estúdio a cada venda, como pede a regra de que taxa não é receita (bíblia 6.6). Efeito colateral: o preço do Alvará em ouro sobe (seção 6.6).
 
 ### 7.3 O que vai junto e o que fica
 
@@ -557,7 +583,7 @@ Adaptada do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) à transferênc
 | Vai com o personagem | Fica com a conta do vendedor |
 |---|---|
 | Níveis, maestrias, Selos de mestre, vocação, habilidades | **Mérito**, vitalício e da Era: a cidadania é da pessoa |
-| Ajudantes | **Ouro, Alvará e saldo de cosméticos** |
+| Ajudantes | **Ouro e Alvará** |
 | Equipamento em uso, **preso ao comprador por 30 dias** | Inventário e armazém negociáveis |
 | Cosméticos aplicados e presos; casa e decoração presa | Direito de voto e histórico na Câmara (módulo 09) |
 | Títulos de feito, com a marca "via Cartório" visível no perfil | **Marcos:** zerados na venda, porque a temporada é de quem jogou |
@@ -570,7 +596,7 @@ Adaptada do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) à transferênc
 
 - Conta com pelo menos 30 dias e 40 horas de jogo ativo verificado (sessões com decisões, não cliente aberto).
 - Segundo fator de autenticação ativo há pelo menos 14 dias, sem troca de e-mail, senha ou segundo fator nos últimos 14 dias.
-- Personagem fora de guilda, sem mandato na Câmara, sem encomenda ativa, sem dívida, sem investigação aberta e sem Alvará em carência.
+- Personagem fora de guilda, sem mandato na Câmara, sem encomenda ativa, sem suspensão por contestação, sem investigação aberta e sem Alvará em carência.
 - Uma venda a cada 60 dias por conta.
 
 ### 7.5 Quem pode comprar
@@ -587,6 +613,9 @@ Adaptada do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) à transferênc
 - **Aviso de 72 horas:** ao criar o anúncio, o dono da conta recebe aviso por e-mail e no segundo fator, com cancelamento em um clique. O leilão só abre depois disso. É a janela contra o roubo de conta.
 - **Liquidação atômica** no livro-razão. O personagem muda de conta, e nenhuma senha, e-mail ou documento muda de mãos. As sessões do vendedor no personagem são encerradas. [F] Antes do Char Bazaar, compradores acionavam a recuperação de conta para confirmar a posse, e o comércio corria no eBay com golpe e banimento ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)).
 - **Os Alvarás recebidos pelo vendedor ficam retidos por 7 dias.** Se, em até 30 dias, ficar provado que a venda veio de conta invadida, o personagem volta ao dono legítimo, e os Alvarás retidos voltam ao comprador. Depois disso, o caso segue o artigo 12 da constituição.
+- **Contestação no banco depois da liquidação** (seção 6.4):
+  - Se a doação que pagou os lances do comprador for contestada, o vendedor de boa-fé fica com os Alvarás, e a conta compradora fica suspensa até regularizar, com o personagem.
+  - Se a contestação for de doações do próprio vendedor, a conta dele fica suspensa, mas a venda não se desfaz: o comprador de boa-fé fica com o personagem.
 - **Vender a conta fora do Cartório continua proibido,** não por ser RMT (o RMT informal está em aberto), mas porque significa entregar a identidade verificada de outra pessoa. Isso quebra a regra de idade (P8) e a barreira contra multicontas.
 
 ### 7.7 Quatro perguntas
@@ -594,15 +623,15 @@ Adaptada do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) à transferênc
 - **Referência:** Char Bazaar do Tibia ([F04](../01-pesquisa/fichas/F04-tibia.md); [05a, §3.C](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). *Diferença:* o cofre e a cidadania não vão junto, e há um aviso de 72 horas ao dono.
 - **Problema:** o mercado cinza de contas, com golpe de recuperação e venda da identidade de outra pessoa.
 - **Comportamento:** investir no personagem como patrimônio e "realizar" o progresso ao sair, em vez de abandonar a conta.
-- **Risco:** num idle, vender a conta é vender tempo ausente acumulado, que é o que um bot produz de graça ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). Mitigação: 40 horas de jogo ativo verificado, uma venda a cada 60 dias, identidade verificada e detecção de nivelamento automatizado. **Validar com advogado** a natureza jurídica da venda de personagem e as regras de reversão (CDC, arts. 49 e 51).
+- **Risco:** num idle, vender a conta é vender tempo ausente acumulado, que é o que um bot produz de graça ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). Mitigação: 40 horas de jogo ativo verificado, uma venda a cada 60 dias, identidade verificada e detecção de nivelamento automatizado. **Validar com advogado** a natureza jurídica da venda de personagem e a suspensão por contestação (CDC, arts. 49 e 51).
 
 ## 8. Baú do Mascate
 
 ### 8.1 Preço e compra
 
-- **1 Alvará = 5 Baús na loja** [H], ou ~R$ 4 por Baú com o Alvará a R$ 19,90. **O preço final fica com o módulo 11.**
+- **~40 Alvarás por Baú na loja** [H], ou ~R$ 4 com o Alvará a ~R$ 0,10. **O preço final fica com o módulo 11.**
 - Comprado com Alvará, o **Baú lacrado é um item negociável por ouro** (decisão do Gabriel). É fungível dentro da série, então é negociado na Bolsa, num livro por série.
-- **Taxa:** o Baú lacrado é Alvará em outra forma e paga 12% em qualquer canal (1% de anúncio + 11% na venda na Bolsa; 12% na Troca). **[proposta de mudança na bíblia]** (seção 5.6). Pela arbitragem, o preço do Baú em ouro tende a ficar perto do preço do Alvará dividido por 5, mais ou menos o prêmio da série.
+- **Taxa:** o Baú lacrado é Alvará em outra forma e paga 12% em qualquer canal (1% de anúncio + 11% na venda na Bolsa; 12% na Troca). **[proposta de mudança na bíblia]** (seção 5.6). Pela arbitragem, o preço do Baú em ouro tende a ficar perto de 40 vezes o preço do Alvará, mais ou menos o prêmio da série.
 
 ### 8.2 Conteúdo
 
@@ -629,7 +658,7 @@ Adaptada do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) à transferênc
 
 | Limite | Valor [H] |
 |---|---|
-| Baús comprados na loja | Até 25 por conta por mês (5 Alvarás) |
+| Baús comprados na loja | Até 25 por conta por mês (~1.000 Alvarás, ~R$ 100) |
 | Baús abertos, de qualquer origem | Até 40 por conta por mês |
 | Limites pessoais | Menores, a qualquer hora, com efeito imediato |
 | Ofertas | Nenhuma com contagem regressiva ou personalizada para quem mais gasta ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 10) |

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(g) Loja — wireframe</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.doc{max-width:1120px;margin:0 auto;padding:16px}
+.doc-topo h1{font-size:20px;margin:4px 0}
+.doc-topo p{margin:4px 0;font-size:14px;color:var(--cinza)}
+.grade{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.grade{grid-template-columns:400px minmax(0,1fr);align-items:start}.notas{position:sticky;top:16px}}
+.telas{display:grid;gap:24px}
+.celular{background:var(--papel);border:2px solid var(--tinta);border-radius:22px;width:100%;max-width:400px;margin:0 auto;overflow:hidden}
+.cab{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:2px solid var(--tinta);background:var(--suave)}
+.cab .lugar{flex:1;min-width:0}
+.cab .lugar strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab .lugar small{display:block;color:var(--cinza);font-size:12px}
+.saldo{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:1.5px solid var(--tinta);border-radius:999px;background:#fff;font-size:13px;text-decoration:none;white-space:nowrap}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:4px;background:#fff;font-size:10px;flex:none}
+.ico.red{border-radius:50%}
+.conteudo{padding:12px;display:grid;gap:12px}
+.cartao{border:1.5px solid var(--tinta);border-radius:10px;padding:12px;background:#fff}
+.cartao>h2,.cartao>h3{margin:0 0 6px;font-size:16px;line-height:1.3}
+.cartao p{margin:4px 0}
+.secao-titulo{font-size:17px;margin:4px 0 0}
+.rot{margin:0 0 4px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
+.img{display:flex;align-items:center;justify-content:center;min-height:80px;padding:8px;border:1.5px dashed var(--linha);border-radius:8px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px);color:var(--cinza);font-size:13px;text-align:center}
+.linha{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cresce{flex:1;min-width:0}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--tinta);border-radius:10px;background:#fff;color:var(--tinta);font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.pri{background:var(--tinta);color:#fff}
+.btn.larga{width:100%}
+.btn.off{border-style:dashed;color:var(--cinza);background:var(--suave);cursor:not-allowed}
+.barra{height:12px;border:1.5px solid var(--tinta);border-radius:999px;overflow:hidden;background:#fff}
+.barra>i{display:block;height:100%;background:var(--tinta)}
+.barra.prev>i{background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.previsto{color:var(--cinza);font-style:italic}
+.tag{display:inline-block;padding:1px 6px;border:1px solid var(--tinta);border-radius:6px;font-size:12px}
+.tag.cheia{background:var(--tinta);color:#fff}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);color:#000;font-size:12px;font-weight:700;font-style:normal;vertical-align:middle;flex:none}
+.abas{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--tinta);background:var(--suave)}
+.abas a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:6px 2px;font-size:12px;text-decoration:none}
+.abas a[aria-current="page"]{font-weight:700;box-shadow:inset 0 4px 0 var(--tinta)}
+.notas{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px 16px}
+.notas h2{margin:4px 0 8px;font-size:17px}
+.notas ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.notas li p{margin:0}
+.notas .rodape{margin-top:12px;font-size:13px;color:var(--cinza)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;font-size:13px;color:var(--cinza);padding-bottom:4px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--medio);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:600;color:var(--cinza)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.segmento{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--tinta);border-radius:10px;overflow:hidden}
+.segmento>*{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 4px;border:0;border-left:1px solid var(--tinta);background:#fff;color:var(--tinta);font-family:inherit;font-size:13px;font-weight:600;text-decoration:none}
+.segmento>*:first-child{border-left:0}
+.segmento [aria-current],.segmento [aria-pressed="true"]{background:var(--tinta);color:#fff}
+.campo{display:grid;gap:4px}
+.campo label,.campo .rotulo{font-size:13px;font-weight:600}
+.campo input,.campo select{min-height:44px;padding:0 10px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff;font-family:inherit;font-size:16px}
+.legenda{font-size:12px;color:var(--cinza)}
+.aviso{padding:8px 10px;border-left:4px solid var(--tinta);border-radius:6px;background:var(--suave);font-size:14px}
+.forte{font-weight:700}
+hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* específicos desta tela */
+.preco{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+.produto{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:start}
+.produto .img{width:72px;min-height:72px;font-size:10px;padding:2px}
+.cosmeticos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cosmetico{border:1.5px solid var(--tinta);border-radius:8px;padding:8px;display:grid;gap:4px}
+.cosmetico .img{min-height:72px;font-size:11px}
+.cosmetico strong{font-size:14px;line-height:1.25}
+details{border:1.5px solid var(--tinta);border-radius:8px;padding:0 10px}
+summary{min-height:44px;display:flex;align-items:center;font-weight:600;cursor:pointer}
+details ul{margin:0 0 10px;padding-left:18px}
+.lacre{border-width:2px;border-style:solid;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px var(--tinta)}
+.pix{display:grid;place-items:center;min-height:150px;border:1.5px dashed var(--linha);border-radius:8px;font-size:13px;color:var(--cinza)}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="doc-topo">
+    <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
+    <h1>(g) Loja — Alvará em R$, cosméticos e Baú do Mascate com chances</h1>
+    <p>Aberta pelo saldo de Alvará no cabeçalho ou por Você › Loja. Todos os preços, limites e chances são exemplos a definir no módulo 11 [H].</p>
+  </header>
+
+  <div class="grade">
+    <div class="telas">
+      <section class="celular" aria-label="Wireframe: Loja">
+        <header class="cab">
+          <div class="lugar"><strong>Loja</strong><small>Preços em reais, com Pix</small></div>
+          <a class="saldo" href="#" aria-label="Alvará: 2"><span class="ico" aria-hidden="true">A</span>2</a>
+          <a class="btn" href="a-arraial.html" aria-label="Fechar a Loja">Fechar</a>
+        </header>
+        <main class="conteudo">
+          <!-- Teto de gasto -->
+          <section class="cartao" aria-labelledby="t-teto">
+            <p class="rot">Seu limite de gasto <span class="n" aria-hidden="true">1</span></p>
+            <h2 id="t-teto">Neste mês: R$ 39,80 de R$ 300,00</h2>
+            <div class="barra" role="img" aria-label="13% do limite mensal usado"><i style="width:13%"></i></div>
+            <p class="legenda">Baixar o limite vale na hora; subir leva 7 dias [H].</p>
+            <div class="acoes"><a class="btn" href="#">Ajustar limite</a><a class="btn" href="#">Histórico de compras</a></div>
+          </section>
+
+          <!-- Alvará -->
+          <section class="cartao lacre" aria-labelledby="t-alv">
+            <p class="rot">Alvará <span class="n" aria-hidden="true">2</span></p>
+            <div class="produto">
+              <div class="img">folha com lacre de cera</div>
+              <div>
+                <h2 id="t-alv" style="margin:0">1 Alvará</h2>
+                <p class="preco">R$ 19,90</p>
+                <p>Vale 30 dias de conveniência ou serve para comprar cosméticos. É seu: pode ser transferido a outro jogador ou trocado por ouro no Câmbio (taxa de 12%, destruída).</p>
+              </div>
+            </div>
+            <div class="acoes"><a class="btn pri larga" href="#pagar">Comprar 1 Alvará · R$ 19,90</a></div>
+            <p class="legenda">Pix ou cartão. Pago com cartão, o Alvará pode ser transferido depois de 7 dias; com Pix, depois de 1 dia [H]. <span class="n" aria-hidden="true">3</span></p>
+            <details>
+              <summary>O que o Alvará nunca compra <span class="n" aria-hidden="true" style="margin-left:6px">4</span></summary>
+              <ul>
+                <li>Renda, XP ou poder</li>
+                <li>Filas, offline ou automação</li>
+                <li>Espaço de estoque, taxas ou vagas de mercado</li>
+                <li>Reparo ou durabilidade</li>
+              </ul>
+            </details>
+          </section>
+
+          <!-- Conveniência -->
+          <section class="cartao" aria-labelledby="t-conv">
+            <p class="rot">Conveniência <span class="n" aria-hidden="true">5</span></p>
+            <h2 id="t-conv">30 dias de conveniência · consome 1 Alvará (R$ 19,90)</h2>
+            <p class="legenda">O conteúdo é do módulo 11. Exemplos da zona verde e amarela: temas de interface, predefinições de fila salvas, histórico pessoal detalhado, cosmético do mês.</p>
+            <div class="acoes"><a class="btn" href="#">Ver o que inclui</a><a class="btn" href="#">Ativar</a></div>
+          </section>
+
+          <!-- Cosméticos -->
+          <section aria-labelledby="t-cos">
+            <h2 id="t-cos" class="secao-titulo">Cosméticos <span class="n" aria-hidden="true">6</span></h2>
+            <div class="cosmeticos">
+              <article class="cosmetico">
+                <div class="img">fachada de oficina</div>
+                <strong>Fachada "Taipa e cal"</strong>
+                <span>1 Alvará · <strong>R$ 19,90</strong></span>
+                <a class="btn" href="#">Provar</a>
+              </article>
+              <article class="cosmetico">
+                <div class="img">aparência de ajudante</div>
+                <strong>Tiana com avental de chita</strong>
+                <span>1 Alvará · <strong>R$ 19,90</strong></span>
+                <a class="btn" href="#">Provar</a>
+              </article>
+              <article class="cosmetico">
+                <div class="img">decoração de casa</div>
+                <strong>Rede de varanda</strong>
+                <span>1 Alvará · <strong>R$ 19,90</strong></span>
+                <a class="btn" href="#">Provar</a>
+              </article>
+              <article class="cosmetico">
+                <div class="img">roupa do personagem</div>
+                <strong>Gibão de couro bordado</strong>
+                <span>2 Alvarás · <strong>R$ 39,80</strong></span>
+                <a class="btn" href="#">Provar</a>
+              </article>
+            </div>
+            <p class="legenda">"Provar" mostra o cosmético no seu personagem ou na sua casa antes de comprar.</p>
+          </section>
+
+          <!-- Baú -->
+          <section class="cartao" aria-labelledby="t-bau">
+            <p class="rot">Baú do Mascate <span class="n" aria-hidden="true">7</span></p>
+            <div class="produto">
+              <div class="img">baú de mascate</div>
+              <div>
+                <h2 id="t-bau" style="margin:0">1 Baú · 1 Alvará (R$ 19,90)</h2>
+                <p>Sempre um item cosmético ou decorativo. Nunca poder.</p>
+              </div>
+            </div>
+            <table>
+              <caption>Chances de cada Baú, publicadas antes da compra</caption>
+              <thead><tr><th scope="col">Categoria</th><th scope="col" class="num">Chance</th><th scope="col">O que pode vir</th></tr></thead>
+              <tbody>
+                <tr><td>Comum</td><td class="num">70%</td><td>20 decorações de casa</td></tr>
+                <tr><td>Incomum</td><td class="num">22%</td><td>14 roupas e fachadas</td></tr>
+                <tr><td>Raro</td><td class="num">7%</td><td>10 aparências de ajudante</td></tr>
+                <tr><td>Lendário</td><td class="num">1%</td><td>4 conjuntos completos</td></tr>
+              </tbody>
+            </table>
+            <div class="acoes"><a class="btn" href="#">Ver os 48 itens e a chance de cada um</a></div>
+            <p>Este mês: <strong>2 Baús</strong> abertos, de um limite de 10 [H]. <span class="n" aria-hidden="true">8</span></p>
+            <div class="acoes"><a class="btn pri larga" href="#pagar">Comprar 1 Baú · R$ 19,90</a></div>
+            <p class="legenda">Ao abrir, o item aparece na hora, sem roleta. Baús também são vendidos por outros jogadores na Feira, por ouro.</p>
+          </section>
+
+          <!-- Confirmação de pagamento -->
+          <section class="cartao" id="pagar" aria-labelledby="t-pag">
+            <p class="rot">Exemplo: confirmação de pagamento <span class="n" aria-hidden="true">9</span></p>
+            <h2 id="t-pag">Você vai pagar R$ 19,90</h2>
+            <table>
+              <tbody>
+                <tr><th scope="row">Produto</th><td>1 Alvará</td></tr>
+                <tr><th scope="row">Forma</th><td>Pix</td></tr>
+                <tr><th scope="row">Limite do mês depois desta compra</th><td>R$ 59,70 de R$ 300,00</td></tr>
+              </tbody>
+            </table>
+            <div class="pix" style="margin-top:8px">código Pix (copia e cola) e QR code</div>
+            <p class="legenda">O Alvará chega quando o Pix for confirmado, normalmente em segundos.</p>
+            <div class="acoes"><a class="btn pri" href="#">Gerar Pix</a><a class="btn" href="#">Pagar com cartão</a><a class="btn" href="#">Cancelar</a></div>
+          </section>
+
+          <p class="legenda" style="text-align:center">Preços em reais, com impostos incluídos [H, validar com advogado e contador]. Nenhum preço desta loja tem contagem regressiva. <span class="n" aria-hidden="true">10</span></p>
+        </main>
+      </section>
+    </div>
+
+    <aside class="notas" aria-labelledby="t-notas">
+      <h2 id="t-notas">Notas de design</h2>
+      <ol>
+        <li><span class="n">1</span><p><strong>O limite de gasto vem antes de qualquer produto.</strong> Teto padrão para todos; baixar é imediato e subir tem espera (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06</a>; salvaguarda S5). Os valores são do módulo 11.</p></li>
+        <li><span class="n">2</span><p><strong>Preço em R$ grande e primeiro.</strong> O Alvará é o único produto comprado com dinheiro, e o preço em reais aparece como o CDC pede: claro e ostensivo (art. 31; validar com advogado). Na arte final, a cor lacre marca tudo que envolve dinheiro real.</p></li>
+        <li><span class="n">3</span><p><strong>A carência por meio de pagamento é dita antes da compra</strong> (salvaguarda S2), não descoberta depois. Os prazos são dos módulos 11 e 13.</p></li>
+        <li><span class="n">4</span><p><strong>O que o Alvará nunca compra, na própria loja.</strong> A zona vermelha (piso P7) escrita onde a tentação existe. É a "carta pública de monetização" da pesquisa.</p></li>
+        <li><span class="n">5</span><p><strong>Conveniência sem multiplicador.</strong> O que entra aqui passa pelo teste das três perguntas da pesquisa (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §3.4</a>).</p></li>
+        <li><span class="n">6</span><p><strong>Todo preço em Alvará tem o R$ ao lado</strong> (princípio 6). "Provar" antes de comprar evita a compra por impulso que vira arrependimento. Se o Alvará for divisível, o módulo 11 decide; a regra do R$ ao lado continua.</p></li>
+        <li><span class="n">7</span><p><strong>As chances estão na tela de compra,</strong> não atrás de um link: categoria, porcentagem e quantos itens há em cada uma, mais a lista completa a um toque. É o piso exigido pela Apple (3.1.1) e o que a condenação da Riot no TJDFT mandou fazer (<a href="../../01-pesquisa/05b-rmt-legal-brasil.md">05b</a>). O conteúdo é sempre cosmético (decisão do checkpoint 2).</p></li>
+        <li><span class="n">8</span><p><strong>Limite de Baús e contador do mês à vista;</strong> um Baú por compra, sem "pacote de 10 com desconto"; abertura imediata, sem roleta nem "quase ganhou". A loja não mostra o valor em ouro dos itens do Baú, para a abertura não virar aposta. Nada disso tira o Baú da zona de risco jurídico (risco assumido; <strong>validar com advogado</strong>).</p></li>
+        <li><span class="n">9</span><p><strong>Confirmação com o limite atualizado.</strong> O jogador vê quanto do teto sobra depois da compra. Pix primeiro, porque é como o brasileiro paga (<a href="../../01-pesquisa/08-mercado-posicionamento.md">08, §2.2</a>).</p></li>
+        <li><span class="n">10</span><p><strong>Sem contagem regressiva, sem "de/por" falso, sem oferta relâmpago.</strong> A oferta por tempo limitado está na lista de práticas predatórias (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §2.3</a>). Recusá-la nos tira da média do mercado; é o preço da promessa.</p></li>
+      </ol>
+      <p class="rodape">Acessibilidade: a tabela de chances tem legenda e cabeçalhos; os botões de compra dizem o produto e o preço no próprio texto ("Comprar 1 Baú · R$ 19,90"), para que o leitor de tela não anuncie só "Comprar".</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>

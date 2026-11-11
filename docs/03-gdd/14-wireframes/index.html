@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframes — Projeto Ofício</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+main{max-width:960px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin:8px 0 4px}
+h2{font-size:18px;margin:24px 0 8px}
+p{margin:6px 0}
+.sub{color:var(--cinza);font-size:14px}
+.telas{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){.telas{grid-template-columns:1fr 1fr}}
+.telas li{background:var(--papel);border:2px solid var(--tinta);border-radius:12px}
+.telas a{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;padding:12px;min-height:44px;text-decoration:none}
+.letra{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:2px solid var(--tinta);border-radius:10px;font-weight:800;font-size:18px}
+.telas strong{display:block;font-size:16px;text-decoration:underline}
+.telas span.d{display:block;font-size:14px;color:var(--cinza)}
+.legenda{display:grid;gap:8px;background:var(--papel);border:1.5px solid var(--tinta);border-radius:12px;padding:12px;margin:0}
+.legenda div{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:center}
+.amostra-img{height:36px;border:1.5px dashed var(--linha);border-radius:6px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px)}
+.amostra-btn{display:inline-flex;align-items:center;justify-content:center;height:36px;border:2px solid var(--tinta);border-radius:8px;background:var(--tinta);color:#fff;font-weight:600;font-size:13px}
+.amostra-btn.sec{background:#fff;color:var(--tinta)}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);font-size:12px;font-weight:700}
+.prev{height:12px;border:1.5px solid var(--tinta);border-radius:999px;background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.mapa{background:var(--papel);border:1.5px solid var(--tinta);border-radius:12px;padding:12px}
+.mapa ul{margin:4px 0;padding-left:20px}
+.mapa li{margin:4px 0}
+.mapa .aba{font-weight:700}
+.aviso{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px}
+footer{margin-top:24px;font-size:13px;color:var(--cinza)}
+</style>
+</head>
+<body>
+<main>
+  <p class="sub"><a href="../14-arte-e-ui.md">← Documento 14 (arte e UI)</a> · <a href="../00-biblia.md">Bíblia do GDD</a></p>
+  <h1>Wireframes das telas principais</h1>
+  <p class="sub">Projeto Ofício (nome provisório) · Fase 3, GDD · módulo 14 · novembro de 2026</p>
+
+  <div class="aviso" role="note">
+    <p><strong>Isto é documentação de interface, não código do jogo.</strong> São caixas, textos e hierarquia, em HTML simples, sem bibliotecas nem fontes externas. A arte final (xilogravura, papel, cores da direção "Folheto") não está aqui. Nomes, preços, prazos e chances são exemplos [H], a reconciliar com os módulos indicados em cada tela.</p>
+  </div>
+
+  <h2>As telas</h2>
+  <ul class="telas">
+    <li><a href="a-arraial.html"><span class="letra" aria-hidden="true">a</span><span><strong>Arraial: cidade e oficina</strong><span class="d">Tela inicial: mapa de lotes e a Bruma, agenda por prazo, filas com as duas taxas, teto negociável.</span></span></a></li>
+    <li><a href="b-retorno.html"><span class="letra" aria-hidden="true">b</span><span><strong>Folheto da volta</strong><span class="d">A tela de retorno do ausente como presente: plano e gargalo, linha do tempo, nada a coletar.</span></span></a></li>
+    <li><a href="c-bolsa-feira.html"><span class="letra" aria-hidden="true">c</span><span><strong>Bolsa e Feira</strong><span class="d">Livro de ordens legível sem cor, posição na fila, taxas e líquido; anúncios com durabilidade.</span></span></a></li>
+    <li><a href="d-obra-prima.html"><span class="letra" aria-hidden="true">d</span><span><strong>Obra-prima</strong><span class="d">Três etapas decididas por toque, sem reflexo; modo tranquilo; resultado com a marca do mestre.</span></span></a></li>
+    <li><a href="e-cerco-inscricao.html"><span class="letra" aria-hidden="true">e</span><span><strong>Inscrição no cerco</strong><span class="d">Sem plantão: posto, equipamento, suprimentos, guarnição da guilda e o que falta à defesa.</span></span></a></li>
+    <li><a href="f-camara.html"><span class="letra" aria-hidden="true">f</span><span><strong>Câmara</strong><span class="d">Eleição com uma pessoa, um voto; votações com a faixa constitucional e o voto nominal dos vereadores.</span></span></a></li>
+    <li><a href="g-loja.html"><span class="letra" aria-hidden="true">g</span><span><strong>Loja</strong><span class="d">Limite de gasto, Alvará em R$ com Pix, cosméticos com R$ ao lado, Baú com a tabela de chances.</span></span></a></li>
+  </ul>
+
+  <h2>Como ler</h2>
+  <div class="legenda">
+    <div><span class="amostra-img" aria-hidden="true"></span><span>Caixa tracejada: lugar de imagem (na arte final, uma gravura).</span></div>
+    <div><span class="n" aria-hidden="true">1</span><span>Círculo amarelo numerado: corresponde a uma nota de design ao lado da tela (no celular, abaixo).</span></div>
+    <div><span class="amostra-btn" aria-hidden="true">Ação</span><span>Botão preenchido: a ação principal da tela. Só há uma por cartão.</span></div>
+    <div><span class="amostra-btn sec" aria-hidden="true">Ação</span><span>Botão vazado: ação secundária. Todos os alvos têm 44 px ou mais.</span></div>
+    <div><span class="prev" aria-hidden="true"></span><span>Barra tracejada e texto cinza em itálico: valor <em>previsto</em>, ainda não confirmado pelo servidor.</span></div>
+  </div>
+
+  <h2>Mapa de navegação</h2>
+  <div class="mapa">
+    <p>Ao abrir o jogo depois de 1 h ou mais: <a href="b-retorno.html">Folheto da volta</a> → <a href="a-arraial.html">Arraial</a>.</p>
+    <p>Cabeçalho fixo em todas as telas: ouro · Alvará (→ <a href="g-loja.html">Loja</a>) · Recados · Conversa.</p>
+    <ul>
+      <li><span class="aba">Arraial</span> (início) — <a href="a-arraial.html">cidade e oficina</a>
+        <ul>
+          <li>Agenda → <a href="e-cerco-inscricao.html">inscrição no cerco</a> · encomenda · <a href="f-camara.html">Câmara</a></li>
+          <li>Cartão da oficina → <a href="d-obra-prima.html">obra-prima</a> · ajustar fila</li>
+        </ul>
+      </li>
+      <li><span class="aba">Oficina</span> — ofícios, filas, receitas, <a href="d-obra-prima.html">obra-prima</a>, ajudantes, inventário</li>
+      <li><span class="aba">Mercado</span> — <a href="c-bolsa-feira.html">Bolsa e Feira</a> · Pregão · Câmbio · Troca</li>
+      <li><span class="aba">Bruma</span> — expedições, vocação, masmorras, Travessia (a partir da 2ª Era)</li>
+      <li><span class="aba">Você</span> — personagem, guilda, títulos e Mérito, Recados, <a href="g-loja.html">Loja</a>, Cartório, configurações</li>
+    </ul>
+    <p class="sub">Regra dos dois toques: qualquer ação frequente fica a no máximo dois toques do Arraial; a confirmação de uma ação de valor não conta (documento 14, seção 2.3).</p>
+  </div>
+
+  <footer>
+    <p>Todas as telas foram pensadas para celular de 360 a 400 px de largura e funcionam no desktop. O CSS respeita a preferência de movimento reduzido do sistema. Para o desktop, o modo denso da Bolsa e o modo canto de tela estão descritos no documento 14, seção 2.2.</p>
+  </footer>
+</main>
+</body>
+</html>
