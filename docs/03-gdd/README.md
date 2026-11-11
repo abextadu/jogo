@@ -23,6 +23,7 @@ Comece pelo **[documento-mestre (bíblia)](00-biblia.md)**: visão, nomes oficia
 | 12 | [Onboarding](12-onboarding.md) | Prólogo, primeira hora, primeiro dia e primeira semana |
 | 13 | [Anti-abuso](13-anti-abuso.md) | Bots, multicontas, duplicação, fraude e contestação, RMT informal, lavagem, API, moderação |
 | 14 | [Arte e UI](14-arte-e-ui.md) | Direção "Maquete" em pixel art, paleta, fontes, interface, acessibilidade, PWA |
+| — | [Resumo e checkpoint da Fase 3](resumo-e-checkpoint.md) | Resumo executivo de uma página e as decisões do checkpoint |
 
 ## Material de apoio
 

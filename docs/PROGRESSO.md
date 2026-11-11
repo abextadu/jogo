@@ -5,7 +5,9 @@
 
 ## Fase atual
 
-**Fase 3 — GDD + simulação da economia: em andamento.** O checkpoint da Fase 2 foi aprovado pelo Gabriel em 2026-11-11 (as 5 recomendações).
+**Fase 3 — GDD + simulação da economia: entregue.** 🛑 **Checkpoint da Fase 3 aguardando o Gabriel:** 5 decisões em [`03-gdd/resumo-e-checkpoint.md`](03-gdd/resumo-e-checkpoint.md) (prólogo sem conta, freios temporários na transferência, custo da verificação de idade, como seguir com a economia, quem constrói e opera). GDD completo no [índice](03-gdd/README.md).
+
+O checkpoint da Fase 2 foi aprovado pelo Gabriel em 2026-11-11 (as 5 recomendações).
 
 ### Decisões do checkpoint da Fase 2 (2026-11-11, aprovadas como recomendado)
 
@@ -42,7 +44,7 @@ A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11
 |---|---|---|
 | 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
 | 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Concluída · checkpoint aprovado |
-| 3. GDD + simulação da economia | `docs/03-gdd/` | 🟡 Em andamento |
+| 3. GDD + simulação da economia | `docs/03-gdd/` | ✅ Entregue · 🛑 checkpoint pendente |
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
 
