@@ -17,6 +17,12 @@
 | 4 | **Um personagem por conta**, com companheiros NPC contratados e não negociáveis. |
 | 5 | **Sem PvP direto no lançamento;** competição assíncrona (cercos, rankings de guilda, corrida da Fronteira). |
 
+### Plano da Fase 3
+
+- **Bíblia do GDD:** [`03-gdd/00-biblia.md`](03-gdd/00-biblia.md) ✅ — visão, mundo provisório (Pindorama, Arraial, Bruma), glossário oficial, números-âncora e mapa dos módulos.
+- **Módulos em paralelo (rodando):** 01 loops + 02 progressão; 03 personagem + 04 combate; 05 itens + 06 ofícios; 07 economia; 09 social + 10 live ops; 11 monetização + 12 onboarding; 13 anti-abuso; 14 arte e UI com wireframes HTML.
+- **Depois:** 08 simulação da economia em Node.js (6 a 12 meses; populações casual, hardcore, pagante e bot), ajustes de parâmetros, revisão de consistência entre módulos, índice e checkpoint da Fase 3.
+
 A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11-11, com ajustes (tabela abaixo).
 
 | Fase | Entregável | Status |
