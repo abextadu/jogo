@@ -1,0 +1,817 @@
+[
+ {
+  "id": "base",
+  "nome": "Cenário base (configuração recomendada)",
+  "grupo": "base",
+  "sementes": [
+   42,
+   7,
+   2026
+  ],
+  "media": {
+   "ipc_anual": 0.021348830880043763,
+   "ipc_medio": 45.89503944693672,
+   "drenos_fontes": 0.864403079192965,
+   "frac_teto": 0.22874031409375697,
+   "premium_dias": 16.500899112091403,
+   "massa_premiums": 0.7979253501972864,
+   "massa_estab_premiums": 1.7602284838077458,
+   "top10": 0.37926626578091577,
+   "top1": 0.07112059572810832,
+   "gini": 0.5016493843281378,
+   "premium_via_ouro": 0.4623320378759508,
+   "coins_trocas": 0.0057037152641916415,
+   "basicos_piso": 0.7938010840400224,
+   "salario_topo": 145.24701691872616,
+   "dia_teto_reais": 5.832410497717853,
+   "lucro_fazenda_mes": 16.34421972816317,
+   "preco_coin": 45.9087739344262,
+   "premium_ouro": 9181.754786885247,
+   "renda_mediana": 557.2848922765612,
+   "falta_essencial": 0.33355051750687603,
+   "vr_preso": 0,
+   "producao": 174443311.04115108,
+   "mercado_ouro": 23095537.88354059,
+   "cambio_rodadas": 20.207650273224044,
+   "cambio_ordens": 97.18579234972678,
+   "vol_coin": 0.05007003734084723,
+   "vol_ipc": 0.07170331742650671,
+   "velocidade": 0.12155488310388214,
+   "massa_por_ativo": 7190.289316445054
+  },
+  "min": {
+   "ipc_anual": -0.27957803706487727,
+   "ipc_medio": 42.674462516613694,
+   "drenos_fontes": 0.8615712066272586,
+   "frac_teto": 0.21632181652082064,
+   "premium_dias": 15.77069219192131,
+   "massa_premiums": 0.7863717895048165,
+   "massa_estab_premiums": 1.6610389089790716,
+   "top10": 0.3493015065551219,
+   "top1": 0.06899525479199278,
+   "gini": 0.4743310723200938,
+   "premium_via_ouro": 0.4416135333611676,
+   "coins_trocas": 0.004766945081302163,
+   "basicos_piso": 0.7836267963578448,
+   "salario_topo": 128.81027500889064,
+   "dia_teto_reais": 5.180831923908583,
+   "lucro_fazenda_mes": 15.484462430189062,
+   "preco_coin": 42.564523989071006,
+   "premium_ouro": 8512.904797814208,
+   "renda_mediana": 541.2778299599962,
+   "falta_essencial": 0.27924221420844836,
+   "vr_preso": 0,
+   "producao": 171885056.0324741,
+   "mercado_ouro": 22604375.324996058,
+   "cambio_rodadas": 19.972677595628415,
+   "cambio_ordens": 92.45901639344262,
+   "vol_coin": 0.048142550672114925,
+   "vol_ipc": 0.06374707853525964,
+   "velocidade": 0.11402706407475754,
+   "massa_por_ativo": 6666.137727341874
+  },
+  "max": {
+   "ipc_anual": 0.5506304906358643,
+   "ipc_medio": 49.223089278483904,
+   "drenos_fontes": 0.8690515495389194,
+   "frac_teto": 0.2481291222133481,
+   "premium_dias": 17.820345121099017,
+   "massa_premiums": 0.8050513621338705,
+   "massa_estab_premiums": 1.8221922892827533,
+   "top10": 0.39728531951811197,
+   "top1": 0.07275848046725188,
+   "gini": 0.5163471999000735,
+   "premium_via_ouro": 0.49919262535629455,
+   "coins_trocas": 0.006844202359386124,
+   "basicos_piso": 0.8013200047598708,
+   "salario_topo": 176.19261288946538,
+   "dia_teto_reais": 7.053779394796463,
+   "lucro_fazenda_mes": 17.456705892033447,
+   "preco_coin": 50.74983606557376,
+   "premium_ouro": 10149.967213114754,
+   "renda_mediana": 570.8787066202789,
+   "falta_essencial": 0.39934791729509117,
+   "vr_preso": 0,
+   "producao": 178973237.6789798,
+   "mercado_ouro": 23813907.1118913,
+   "cambio_rodadas": 20.672131147540984,
+   "cambio_ordens": 102.51366120218579,
+   "vol_coin": 0.053270075244382584,
+   "vol_ipc": 0.08413880952389563,
+   "velocidade": 0.12673036581565703,
+   "massa_por_ativo": 7995.558498046932
+  },
+  "passa": [
+   6,
+   6,
+   6
+  ],
+  "d100": [
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 1043,
+     "regular": 1446,
+     "hardcore": 749
+    }
+   },
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 997,
+     "regular": 1411,
+     "hardcore": 722
+    }
+   },
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 956,
+     "regular": 1447,
+     "hardcore": 725
+    }
+   }
+  ],
+  "contadores": [
+   {
+    "bazarVendas": 72,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1286,
+    "coinsTrocaBypass": 2595623.6999999997,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 82,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1646,
+    "coinsTrocaBypass": 2128030.1959999995,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 86,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1248,
+    "coinsTrocaBypass": 2455650.320000002,
+    "coinsItens": 0
+   }
+  ]
+ },
+ {
+  "id": "r1b_ferramenta_acelera",
+  "nome": "R1b — Ferramenta acelera a fila (05/06, até 1,72×)",
+  "grupo": "reconciliacao",
+  "sementes": [
+   42,
+   7,
+   2026
+  ],
+  "media": {
+   "ipc_anual": 0.8326720450043988,
+   "ipc_medio": 70.30442595622985,
+   "drenos_fontes": 0.8558301889678784,
+   "frac_teto": 0.2782663070256433,
+   "premium_dias": 15.081899748687414,
+   "massa_premiums": 0.8546761774354135,
+   "massa_estab_premiums": 1.9394543597812322,
+   "top10": 0.41319329722647047,
+   "top1": 0.0728974767998032,
+   "gini": 0.5357423158976059,
+   "premium_via_ouro": 0.4152410593834827,
+   "coins_trocas": 0.0041307793229365345,
+   "basicos_piso": 0.753976268834748,
+   "salario_topo": 223.54742593765272,
+   "dia_teto_reais": 9.269876741268941,
+   "lucro_fazenda_mes": 16.466583471567017,
+   "preco_coin": 42.04044444444444,
+   "premium_ouro": 8408.08888888889,
+   "renda_mediana": 557.7915570165727,
+   "falta_essencial": 0.47387172776267067,
+   "vr_preso": 0,
+   "producao": 182631582.08421978,
+   "mercado_ouro": 22736254.956624944,
+   "cambio_rodadas": 19.51366120218579,
+   "cambio_ordens": 91.29326047358832,
+   "vol_coin": 0.04928018955487664,
+   "vol_ipc": 0.0729126756489696,
+   "velocidade": 0.1268859764076923,
+   "massa_por_ativo": 6784.686228138101
+  },
+  "min": {
+   "ipc_anual": 0.4112150399689485,
+   "ipc_medio": 64.30751588542908,
+   "drenos_fontes": 0.8456746065477002,
+   "frac_teto": 0.2707002059848238,
+   "premium_dias": 14.114694337690576,
+   "massa_premiums": 0.7483362376480411,
+   "massa_estab_premiums": 1.709170770468697,
+   "top10": 0.3962056312224645,
+   "top1": 0.06893050631891802,
+   "gini": 0.5244139675981978,
+   "premium_via_ouro": 0.4026154951663856,
+   "coins_trocas": 0.0038788177154127404,
+   "basicos_piso": 0.7413381115433433,
+   "salario_topo": 196.89927879341164,
+   "dia_teto_reais": 8.151890454118073,
+   "lucro_fazenda_mes": 15.442932907190299,
+   "preco_coin": 39.39505464480874,
+   "premium_ouro": 7879.0109289617485,
+   "renda_mediana": 554.2981349345605,
+   "falta_essencial": 0.4471034318421098,
+   "vr_preso": 0,
+   "producao": 181694181.50367928,
+   "mercado_ouro": 21864851.1090156,
+   "cambio_rodadas": 19.16393442622951,
+   "cambio_ordens": 88.7431693989071,
+   "vol_coin": 0.04845549118953593,
+   "vol_ipc": 0.060396141801725305,
+   "velocidade": 0.11627276593429876,
+   "massa_por_ativo": 6247.910409139898
+  },
+  "max": {
+   "ipc_anual": 1.2124943489867368,
+   "ipc_medio": 79.40635102909073,
+   "drenos_fontes": 0.8696171988558977,
+   "frac_teto": 0.28371163351175666,
+   "premium_dias": 16.056443939145062,
+   "massa_premiums": 0.9415448969148442,
+   "massa_estab_premiums": 2.1496459685796436,
+   "top10": 0.44467509538951017,
+   "top1": 0.0771496550035669,
+   "gini": 0.5571578679025655,
+   "premium_via_ouro": 0.43820996363871095,
+   "coins_trocas": 0.004630898331458217,
+   "basicos_piso": 0.7653672624523098,
+   "salario_topo": 254.2251474367206,
+   "dia_teto_reais": 10.575701352512613,
+   "lucro_fazenda_mes": 17.22735746544216,
+   "preco_coin": 44.50077049180328,
+   "premium_ouro": 8900.154098360657,
+   "renda_mediana": 559.8099160478225,
+   "falta_essencial": 0.5214526036386165,
+   "vr_preso": 0,
+   "producao": 184490615.89094597,
+   "mercado_ouro": 23439487.988286268,
+   "cambio_rodadas": 19.97814207650273,
+   "cambio_ordens": 94.64480874316939,
+   "vol_coin": 0.05040789110931022,
+   "vol_ipc": 0.08344996710321131,
+   "velocidade": 0.1326161605604213,
+   "massa_por_ativo": 7349.390132429186
+  },
+  "passa": [
+   6,
+   5,
+   6
+  ],
+  "d100": [
+   {
+    "casual": 142,
+    "regular": 111,
+    "hardcore": 85,
+    "n": {
+     "casual": 1126,
+     "regular": 1679,
+     "hardcore": 863
+    }
+   },
+   {
+    "casual": 142,
+    "regular": 111,
+    "hardcore": 85,
+    "n": {
+     "casual": 1106,
+     "regular": 1700,
+     "hardcore": 846
+    }
+   },
+   {
+    "casual": 142,
+    "regular": 111,
+    "hardcore": 85,
+    "n": {
+     "casual": 1134,
+     "regular": 1698,
+     "hardcore": 855
+    }
+   }
+  ],
+  "contadores": [
+   {
+    "bazarVendas": 97,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1529,
+    "coinsTrocaBypass": 1819103.0155999993,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 108,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1281,
+    "coinsTrocaBypass": 2111716.6839999994,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 112,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1406,
+    "coinsTrocaBypass": 1953546.759999999,
+    "coinsItens": 0
+   }
+  ]
+ },
+ {
+  "id": "r1c_acelera_coef56",
+  "nome": "R1c — Ferramenta acelera, curva com coeficiente 5,6",
+  "grupo": "reconciliacao",
+  "sementes": [
+   42,
+   7,
+   2026
+  ],
+  "media": {
+   "ipc_anual": 0.03724349411785751,
+   "ipc_medio": 49.932277268322345,
+   "drenos_fontes": 0.8508004837409704,
+   "frac_teto": 0.2599609671150314,
+   "premium_dias": 16.346182433639704,
+   "massa_premiums": 0.8329516317579079,
+   "massa_estab_premiums": 1.953029478835955,
+   "top10": 0.42357972698758983,
+   "top1": 0.07844689047886799,
+   "gini": 0.54183664765573,
+   "premium_via_ouro": 0.4145403599381096,
+   "coins_trocas": 0.004689834301684757,
+   "basicos_piso": 0.7594885646825614,
+   "salario_topo": 203.05346903970562,
+   "dia_teto_reais": 8.079797147386861,
+   "lucro_fazenda_mes": 16.6095667505275,
+   "preco_coin": 44.410295081967206,
+   "premium_ouro": 8882.059016393445,
+   "renda_mediana": 538.9456957938655,
+   "falta_essencial": 0.46048235991476777,
+   "vr_preso": 0,
+   "producao": 178803582.48107466,
+   "mercado_ouro": 23342370.546450272,
+   "cambio_rodadas": 19.14207650273224,
+   "cambio_ordens": 93.3424408014572,
+   "vol_coin": 0.04757504240863673,
+   "vol_ipc": 0.0795209175221367,
+   "velocidade": 0.12918909654820387,
+   "massa_por_ativo": 6862.355259458785
+  },
+  "min": {
+   "ipc_anual": -0.055070214833790265,
+   "ipc_medio": 46.11088486444393,
+   "drenos_fontes": 0.842545545480058,
+   "frac_teto": 0.2481806426066071,
+   "premium_dias": 13.360736798655843,
+   "massa_premiums": 0.6617674212352288,
+   "massa_estab_premiums": 1.5415910048197035,
+   "top10": 0.4086225532732025,
+   "top1": 0.07410117449104846,
+   "gini": 0.5271142854327493,
+   "premium_via_ouro": 0.40276908957711227,
+   "coins_trocas": 0.0036150936298576936,
+   "basicos_piso": 0.752546282518115,
+   "salario_topo": 151.80137111121786,
+   "dia_teto_reais": 6.064134727073992,
+   "lucro_fazenda_mes": 12.408429665931385,
+   "preco_coin": 34.9192131147541,
+   "premium_ouro": 6983.84262295082,
+   "renda_mediana": 522.0413633278114,
+   "falta_essencial": 0.4552110703406799,
+   "vr_preso": 0,
+   "producao": 176767014.27479422,
+   "mercado_ouro": 22251080.34798157,
+   "cambio_rodadas": 18.85792349726776,
+   "cambio_ordens": 87.40437158469945,
+   "vol_coin": 0.045385502199061095,
+   "vol_ipc": 0.06789942663237411,
+   "velocidade": 0.12319819639027066,
+   "massa_por_ativo": 6227.547919592842
+  },
+  "max": {
+   "ipc_anual": 0.09759676365926029,
+   "ipc_medio": 55.71442775762656,
+   "drenos_fontes": 0.8614788709494304,
+   "frac_teto": 0.2775630425347331,
+   "premium_dias": 21.527084897199252,
+   "massa_premiums": 0.9275280755602403,
+   "massa_estab_premiums": 2.16338165248062,
+   "top10": 0.4344609375804014,
+   "top1": 0.0842944506109996,
+   "gini": 0.5518245732306293,
+   "premium_via_ouro": 0.4225780016026792,
+   "coins_trocas": 0.005468023197319053,
+   "basicos_piso": 0.7667129314968367,
+   "salario_topo": 231.41343205069217,
+   "dia_teto_reais": 9.199761066565518,
+   "lucro_fazenda_mes": 19.675160953828843,
+   "preco_coin": 60.03583606557377,
+   "premium_ouro": 12007.167213114755,
+   "renda_mediana": 553.8885447041586,
+   "falta_essencial": 0.4693460647123828,
+   "vr_preso": 0,
+   "producao": 181531856.32111067,
+   "mercado_ouro": 24503441.284966286,
+   "cambio_rodadas": 19.338797814207652,
+   "cambio_ordens": 97.97814207650273,
+   "vol_coin": 0.05107458136335181,
+   "vol_ipc": 0.0897471799211819,
+   "velocidade": 0.13603267299719102,
+   "massa_por_ativo": 7508.217797910108
+  },
+  "passa": [
+   6,
+   6,
+   5
+  ],
+  "d100": [
+   {
+    "casual": 159,
+    "regular": 124,
+    "hardcore": 95,
+    "n": {
+     "casual": 865,
+     "regular": 1361,
+     "hardcore": 783
+    }
+   },
+   {
+    "casual": 159,
+    "regular": 124,
+    "hardcore": 95,
+    "n": {
+     "casual": 825,
+     "regular": 1427,
+     "hardcore": 748
+    }
+   },
+   {
+    "casual": 159,
+    "regular": 124,
+    "hardcore": 95,
+    "n": {
+     "casual": 859,
+     "regular": 1423,
+     "hardcore": 792
+    }
+   }
+  ],
+  "contadores": [
+   {
+    "bazarVendas": 125,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1298,
+    "coinsTrocaBypass": 1915520.5157999967,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 118,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1540,
+    "coinsTrocaBypass": 1652335.4440000013,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 82,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 1186,
+    "coinsTrocaBypass": 2118011.9221999994,
+    "coinsItens": 0
+   }
+  ]
+ },
+ {
+  "id": "r2b_paridade_1_reescalada",
+  "nome": "R2b — 1 Coin = R$ 1,00 (11), limites reescalados",
+  "grupo": "reconciliacao",
+  "sementes": [
+   42,
+   7,
+   2026
+  ],
+  "media": {
+   "ipc_anual": 0.07355128882309787,
+   "ipc_medio": 41.7580859354506,
+   "drenos_fontes": 0.8578819824168722,
+   "frac_teto": 0.2194336739949639,
+   "premium_dias": 18.201688938117595,
+   "massa_premiums": 0.7246218164512843,
+   "massa_estab_premiums": 1.5588725335103746,
+   "top10": 0.35804752737962886,
+   "top1": 0.07066500332830226,
+   "gini": 0.48133018750492074,
+   "premium_via_ouro": 0.456551237650034,
+   "coins_trocas": 0.007683717061770868,
+   "basicos_piso": 0.8106653422138628,
+   "salario_topo": 118.12092461155454,
+   "dia_teto_reais": 4.729236605799834,
+   "lucro_fazenda_mes": 16.272038708289895,
+   "preco_coin": 514.8788524590163,
+   "premium_ouro": 10297.577049180327,
+   "renda_mediana": 567.4897672343697,
+   "falta_essencial": 0.28235999579542065,
+   "vr_preso": 0,
+   "producao": 175883530.4924021,
+   "mercado_ouro": 23096474.62660704,
+   "cambio_rodadas": 19.801457194899818,
+   "cambio_ordens": 103.08743169398906,
+   "vol_coin": 0.050110774391885465,
+   "vol_ipc": 0.0714467965572383,
+   "velocidade": 0.12203980568641797,
+   "massa_por_ativo": 7216.816002234504
+  },
+  "min": {
+   "ipc_anual": -0.12536868434889037,
+   "ipc_medio": 38.97432198252156,
+   "drenos_fontes": 0.8421870271231392,
+   "frac_teto": 0.2096461785112357,
+   "premium_dias": 16.693271617948664,
+   "massa_premiums": 0.704030378099141,
+   "massa_estab_premiums": 1.4640749097232637,
+   "top10": 0.349365424334223,
+   "top1": 0.06937283064915051,
+   "gini": 0.471259580982095,
+   "premium_via_ouro": 0.44611286516510845,
+   "coins_trocas": 0.006543917406295405,
+   "basicos_piso": 0.7994737972458135,
+   "salario_topo": 94.01031906470804,
+   "dia_teto_reais": 3.7798664100658796,
+   "lucro_fazenda_mes": 14.811685053357483,
+   "preco_coin": 453.18726775956287,
+   "premium_ouro": 9063.745355191257,
+   "renda_mediana": 545.3927235027824,
+   "falta_essencial": 0.2385807084120839,
+   "vr_preso": 0,
+   "producao": 173324738.16892704,
+   "mercado_ouro": 22532485.446185593,
+   "cambio_rodadas": 18.704918032786885,
+   "cambio_ordens": 99.26229508196721,
+   "vol_coin": 0.043336004279641294,
+   "vol_ipc": 0.05913632716935283,
+   "velocidade": 0.11251733376815488,
+   "massa_por_ativo": 6644.645103637534
+  },
+  "max": {
+   "ipc_anual": 0.20273224010220559,
+   "ipc_medio": 44.753543856230756,
+   "drenos_fontes": 0.866756181960673,
+   "frac_teto": 0.2250995156969995,
+   "premium_dias": 19.445323996708662,
+   "massa_premiums": 0.7623315581294944,
+   "massa_estab_premiums": 1.668132157417951,
+   "top10": 0.36588921936667895,
+   "top1": 0.07167003886920482,
+   "gini": 0.4912247267969096,
+   "premium_via_ouro": 0.4766493684841266,
+   "coins_trocas": 0.009319032421821917,
+   "basicos_piso": 0.8265870204360496,
+   "salario_topo": 137.86268026965809,
+   "dia_teto_reais": 5.511484827247244,
+   "lucro_fazenda_mes": 18.233266804837097,
+   "preco_coin": 577.8244808743169,
+   "premium_ouro": 11556.489617486339,
+   "renda_mediana": 597.9858615956257,
+   "falta_essencial": 0.30563345621980537,
+   "vr_preso": 0,
+   "producao": 180220751.93972522,
+   "mercado_ouro": 23856282.612939727,
+   "cambio_rodadas": 20.3551912568306,
+   "cambio_ordens": 107.62295081967213,
+   "vol_coin": 0.05766009090886216,
+   "vol_ipc": 0.08168049989359483,
+   "velocidade": 0.1287467257118596,
+   "massa_por_ativo": 8034.611712291177
+  },
+  "passa": [
+   6,
+   7,
+   6
+  ],
+  "d100": [
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 986,
+     "regular": 1434,
+     "hardcore": 731
+    }
+   },
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 1026,
+     "regular": 1413,
+     "hardcore": 713
+    }
+   },
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 1031,
+     "regular": 1418,
+     "hardcore": 688
+    }
+   }
+  ],
+  "contadores": [
+   {
+    "bazarVendas": 31,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 0,
+    "coinsTrocaBypass": 3162352.1220000004,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 50,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 0,
+    "coinsTrocaBypass": 2352876.0379999997,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 58,
+    "bazarBloqueadas": 0,
+    "vendasAbaixoMin": 0,
+    "coinsTrocaBypass": 2342058.6999999993,
+    "coinsItens": 0
+   }
+  ]
+ },
+ {
+  "id": "r2c_paridade_1_sem_reescalar",
+  "nome": "R2c — 1 Coin = R$ 1,00 com os limites do 07",
+  "grupo": "reconciliacao",
+  "sementes": [
+   42,
+   7,
+   2026
+  ],
+  "media": {
+   "ipc_anual": 0.09990930349646154,
+   "ipc_medio": 41.125455230123976,
+   "drenos_fontes": 0.8610226212491762,
+   "frac_teto": 0.23160702901085764,
+   "premium_dias": 13.656002871671001,
+   "massa_premiums": 1.0162087837842533,
+   "massa_estab_premiums": 2.256982429672357,
+   "top10": 0.3681504611850987,
+   "top1": 0.07028425390771463,
+   "gini": 0.4899568518851975,
+   "premium_via_ouro": 0.4907708833274406,
+   "coins_trocas": 0.005939417756614325,
+   "basicos_piso": 0.8060283757455026,
+   "salario_topo": 175.12575345732148,
+   "dia_teto_reais": 7.034268690227539,
+   "lucro_fazenda_mes": 21.58582699572831,
+   "preco_coin": 389.69562841530063,
+   "premium_ouro": 7793.912568306011,
+   "renda_mediana": 570.5687771060066,
+   "falta_essencial": 0.29701225561859085,
+   "vr_preso": 0,
+   "producao": 173359021.47682706,
+   "mercado_ouro": 22995419.519733597,
+   "cambio_rodadas": 20.29872495446266,
+   "cambio_ordens": 90.52823315118398,
+   "vol_coin": 0.042584291049168325,
+   "vol_ipc": 0.06513408389512905,
+   "velocidade": 0.12049155337740251,
+   "massa_por_ativo": 7255.480656883457
+  },
+  "min": {
+   "ipc_anual": -0.1007547086985705,
+   "ipc_medio": 37.983660106180324,
+   "drenos_fontes": 0.8542927933936603,
+   "frac_teto": 0.21143343231076303,
+   "premium_dias": 10.44344512241395,
+   "massa_premiums": 0.7844263357088227,
+   "massa_estab_premiums": 1.6977944289058318,
+   "top10": 0.34435974897809507,
+   "top1": 0.06591994370272182,
+   "gini": 0.4668370357376693,
+   "premium_via_ouro": 0.47982586925684184,
+   "coins_trocas": 0.0037102014819597614,
+   "basicos_piso": 0.7912299008872435,
+   "salario_topo": 115.35096300660382,
+   "dia_teto_reais": 4.607324182201418,
+   "lucro_fazenda_mes": 18.524863192030228,
+   "preco_coin": 284.7551366120219,
+   "premium_ouro": 5695.102732240437,
+   "renda_mediana": 548.8169009832362,
+   "falta_essencial": 0.24032732952881183,
+   "vr_preso": 0,
+   "producao": 172067883.94617674,
+   "mercado_ouro": 22565347.34544438,
+   "cambio_rodadas": 19.628415300546447,
+   "cambio_ordens": 84.48087431693989,
+   "vol_coin": 0.04127987492420122,
+   "vol_ipc": 0.05782431977355014,
+   "velocidade": 0.11808087020908009,
+   "massa_por_ativo": 7170.504468209518
+  },
+  "max": {
+   "ipc_anual": 0.30782661093178265,
+   "ipc_medio": 44.99038576399349,
+   "drenos_fontes": 0.8696458658401205,
+   "frac_teto": 0.24392992688458634,
+   "premium_dias": 16.628268526039836,
+   "massa_premiums": 1.3538508797866176,
+   "massa_estab_premiums": 3.064382005526406,
+   "top10": 0.3918941886817895,
+   "top1": 0.07317278066052736,
+   "gini": 0.5113336920929316,
+   "premium_via_ouro": 0.49665111995196837,
+   "coins_trocas": 0.007744067663927119,
+   "basicos_piso": 0.8245067817659426,
+   "salario_topo": 253.41294282903243,
+   "dia_teto_reais": 10.200815339449376,
+   "lucro_fazenda_mes": 27.68073768297238,
+   "preco_coin": 485.24568306010934,
+   "premium_ouro": 9704.913661202185,
+   "renda_mediana": 586.0759562373966,
+   "falta_essencial": 0.35431729404286116,
+   "vr_preso": 0,
+   "producao": 175809993.49779752,
+   "mercado_ouro": 23277824.723382033,
+   "cambio_rodadas": 21.147540983606557,
+   "cambio_ordens": 99.04371584699453,
+   "vol_coin": 0.044748886218521196,
+   "vol_ipc": 0.0733838142859788,
+   "velocidade": 0.1238534180027195,
+   "massa_por_ativo": 7401.2523197156515
+  },
+  "passa": [
+   6,
+   6,
+   5
+  ],
+  "d100": [
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 1002,
+     "regular": 1447,
+     "hardcore": 716
+    }
+   },
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 965,
+     "regular": 1390,
+     "hardcore": 691
+    }
+   },
+   {
+    "casual": 149,
+    "regular": 123,
+    "hardcore": 102,
+    "n": {
+     "casual": 1021,
+     "regular": 1420,
+     "hardcore": 728
+    }
+   }
+  ],
+  "contadores": [
+   {
+    "bazarVendas": 0,
+    "bazarBloqueadas": 302,
+    "vendasAbaixoMin": 6410,
+    "coinsTrocaBypass": 2733023.127999999,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 0,
+    "bazarBloqueadas": 291,
+    "vendasAbaixoMin": 8167,
+    "coinsTrocaBypass": 2552938.5999999978,
+    "coinsItens": 0
+   },
+   {
+    "bazarVendas": 0,
+    "bazarBloqueadas": 299,
+    "vendasAbaixoMin": 7906,
+    "coinsTrocaBypass": 1877661.5999999996,
+    "coinsItens": 0
+   }
+  ]
+ }
+]

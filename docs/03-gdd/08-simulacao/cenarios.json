@@ -1,0 +1,291 @@
+{
+  "_sobre": "Cenários da simulação. 'mudancas' é mesclado sobre parametros.json (só as chaves listadas mudam). Grupos: base, estresse (os 12 do 07 §13 e extras do 11 e do 13), reconciliacao (as 4 decisões pedidas ao 08) e sensibilidade.",
+  "cenarios": [
+    {
+      "id": "base",
+      "grupo": "base",
+      "nome": "Cenário base (configuração recomendada)",
+      "descricao": "Configuração final recomendada: teto em VR fixo (trabalho embutido) com portão de saída e crédito dos insumos; indexação dos insumos de NPC de até ±10% por mês na 1ª Era; Selo com o custo do 07 (30 mil ouro + 20 mil VR) que mantém o tier de produção; ouro de encomenda só a partir do 14º dia da conta; ~27 a 30 mil ativos; bots do 13 (3% de automação, 0,5% de fazendas).",
+      "mudancas": {}
+    },
+    {
+      "id": "e01_crescimento",
+      "grupo": "estresse",
+      "nome": "E1 — Crescimento normal (entrada 50% maior)",
+      "descricao": "07 §13, cenário 1. A Cidade cresce: entrada de contas verificadas 50% acima do base.",
+      "mudancas": {"populacao": {"entrada_por_dia": 2250}}
+    },
+    {
+      "id": "e02_sem_novos",
+      "grupo": "estresse",
+      "nome": "E2 — 90 dias sem jogador novo",
+      "descricao": "07 §13, cenário 2 (G03). Nenhuma conta nova do dia 120 ao 210.",
+      "mudancas": {"populacao": {"dias_sem_entrada": [120,210]}}
+    },
+    {
+      "id": "e03_evasao50",
+      "grupo": "estresse",
+      "nome": "E3 — Evasão de 50% ao mês",
+      "descricao": "07 §13, cenário 3. A evasão mensal das contas estabelecidas dobra (25% → 50%) a partir do dia 120.",
+      "mudancas": {"populacao": {"evasao_extra": {"inicio": 120, "fim": 365, "mensal": 0.5}}}
+    },
+    {
+      "id": "e04_bots20",
+      "grupo": "estresse",
+      "nome": "E4 — Bots em 20% das contas (identidades de terceiros)",
+      "descricao": "07 §13, cenário 4. Fazendas com identidades alugadas em 20% das contas ativas.",
+      "mudancas": {"bots": {"fazenda_frac": 0.2}}
+    },
+    {
+      "id": "e05_onda_pagantes",
+      "grupo": "estresse",
+      "nome": "E5 — Onda de pagantes",
+      "descricao": "07 §13, cenário 5, e 11 §9 (estresse 1). Do dia 150 ao 210, as doações dobram, 10% de quem não pagava passa a doar e metade dos Coins vai ao Câmbio.",
+      "mudancas": {
+        "eventos": {"onda_pagantes": {"inicio": 150, "fim": 210, "mult_doacao": 2, "novos_pagantes": 0.1, "parcela_venda": 0.5}}
+      }
+    },
+    {
+      "id": "e06_dupe",
+      "grupo": "estresse",
+      "nome": "E6 — Dupe de 20% da massa em 24 h",
+      "descricao": "07 §13, cenário 6. No dia 200, 20 contas criam 20% da massa de ouro. O disjuntor (alarme de +2% em 24 h) congela o resto depois que 25% vazou para quem vendeu a preço de mercado.",
+      "mudancas": {"eventos": {"dupe": {"dia": 200, "frac": 0.2, "contas": 20, "disjuntor": true, "vazamento": 0.25}}}
+    },
+    {
+      "id": "e06b_dupe_sem_disjuntor",
+      "grupo": "estresse",
+      "nome": "E6b — Dupe de 20% sem disjuntor",
+      "descricao": "Variante do E6: todo o ouro duplicado entra na economia.",
+      "mudancas": {"eventos": {"dupe": {"dia": 200, "frac": 0.2, "contas": 20, "disjuntor": false, "vazamento": 1}}}
+    },
+    {
+      "id": "e07_feira_4_8",
+      "grupo": "estresse",
+      "nome": "E7 — Conselho leva a Feira a 4% e depois a 8%",
+      "descricao": "07 §13, cenário 7, e 09 §5. Feira a 4% do dia 91 ao 181 e a 8% do dia 182 em diante.",
+      "mudancas": {"eventos": {"feira_taxas": [[91,0.04],[182,0.08]]}}
+    },
+    {
+      "id": "e08_fronteira40",
+      "grupo": "estresse",
+      "nome": "E8 — A Fronteira puxa 40% da atividade",
+      "descricao": "07 §13, cenário 8. Nas semanas de Fronteira, 40% das horas de fila de quem adere vão para expedições na Névoa (desgaste 1,5×, sem produção negociável).",
+      "mudancas": {"social": {"fronteira": {"desvio_atividade": 0.4}}}
+    },
+    {
+      "id": "e09_troca_3",
+      "grupo": "estresse",
+      "nome": "E9 — Coins na Troca a 3% (sem a proposta de 12%)",
+      "descricao": "07 §13, cenário 9. Coins e Baú lacrado pagam 3% por lado na Troca (bíblia); mede a fuga do Câmbio. É também a reconciliação 4.",
+      "mudancas": {"taxas": {"troca_coins": 0.03, "bau_lacrado": 0.06}}
+    },
+    {
+      "id": "e10_sem_credito",
+      "grupo": "estresse",
+      "nome": "E10 — Sem o crédito dos insumos no portão",
+      "descricao": "07 §13, cenário 10. O artesão que compra insumos gasta cota com o valor inteiro do produto.",
+      "mudancas": {"teto": {"credito_insumos": false}}
+    },
+    {
+      "id": "e11_contestacoes",
+      "grupo": "estresse",
+      "nome": "E11 — Onda de contestações (1,5% por 30 dias)",
+      "descricao": "07 §13, cenário 11, e 13 §12.1. 1,5% das doações feitas do dia 150 ao 180 são contestadas no banco.",
+      "mudancas": {"eventos": {"contestacao_onda": {"inicio": 150, "fim": 180, "taxa": 0.015}}}
+    },
+    {
+      "id": "e12_despejo",
+      "grupo": "estresse",
+      "nome": "E12 — Despejo do estoque guardado",
+      "descricao": "07 §13, cenário 12. A partir do dia 200, metade dos Coins parados é vendida no Câmbio em 7 dias.",
+      "mudancas": {"eventos": {"despejo_guardados": {"dia": 200, "frac": 0.5, "dias": 7}}}
+    },
+    {
+      "id": "x13_bots_estresse",
+      "grupo": "estresse",
+      "nome": "X1 — Estresse de bots do 13 (10% + 3%, detecção pela metade)",
+      "descricao": "13 §12.1: automação em 10%, fazendas em 3%, detecção de fazendas a 30% por onda e recuperação de 40%.",
+      "mudancas": {
+        "bots": {
+          "automacao_frac": 0.1,
+          "fazenda_frac": 0.03,
+          "deteccao_fazenda": {"intervalo": 21, "taxa": 0.3},
+          "fiscalizacao_recuperacao": 0.4
+        }
+      }
+    },
+    {
+      "id": "x14_catastrofe",
+      "grupo": "estresse",
+      "nome": "X2 — Catástrofe da verificação",
+      "descricao": "13 §12.1: 15% das contas novas são falsas por 14 dias (dia 100 ao 113); onda de banimento no dia 121 pega 90%.",
+      "mudancas": {"bots": {"catastrofe": {"inicio": 100, "dias": 14, "frac_novas": 0.15, "ban_dia": 121, "ban_frac": 0.9}}}
+    },
+    {
+      "id": "x15_fuga_pagantes",
+      "grupo": "estresse",
+      "nome": "X3 — Fuga dos doadores",
+      "descricao": "11 §9, estresse 2: a partir do dia 150, metade das doações deixa de acontecer.",
+      "mudancas": {"eventos": {"fuga_pagantes": {"inicio": 150, "frac": 0.5}}}
+    },
+    {
+      "id": "r1a_ferramenta_nao_acelera",
+      "grupo": "reconciliacao",
+      "nome": "R1a — Ferramenta não acelera (02)",
+      "descricao": "Reconciliação 1. Domínio até +10%; a ferramenta é só portão de tier (igual ao base).",
+      "mudancas": {}
+    },
+    {
+      "id": "r1b_ferramenta_acelera",
+      "grupo": "reconciliacao",
+      "nome": "R1b — Ferramenta acelera a fila (05/06, até 1,72×)",
+      "descricao": "Reconciliação 1. Domínio até +30% e ferramenta até +32% (bônus médio de 4/12/24% por perfil).",
+      "mudancas": {"progressao": {"ferramenta_acelera": true}}
+    },
+    {
+      "id": "r1c_acelera_coef56",
+      "grupo": "reconciliacao",
+      "nome": "R1c — Ferramenta acelera, curva com coeficiente 5,6",
+      "descricao": "Reconciliação 1, alternativa do 02 §13.3: mantém a aceleração e sobe o coeficiente da curva de 5 para 5,6.",
+      "mudancas": {"progressao": {"ferramenta_acelera": true, "xp_coef_oficio": 5.6}}
+    },
+    {
+      "id": "r2a_paridade_010",
+      "grupo": "reconciliacao",
+      "nome": "R2a — 1 Coin = R$ 0,10 (07)",
+      "descricao": "Reconciliação 2. Paridade do 07 com as regras do Câmbio do 07.",
+      "mudancas": {"coins": {"coins_por_real": 10}}
+    },
+    {
+      "id": "r2b_paridade_1_reescalada",
+      "grupo": "reconciliacao",
+      "nome": "R2b — 1 Coin = R$ 1,00 (11), limites reescalados",
+      "descricao": "Reconciliação 2. Paridade do 11; ordem mínima 1 Coin, máxima 200, limite semanal 200, lance mínimo do Bazar 30.",
+      "mudancas": {
+        "coins": {"coins_por_real": 1},
+        "cambio": {"ordem_min": 1, "ordem_max": 200, "limite_compra_semana": 200},
+        "bazar": {"lance_min_coins": 30}
+      }
+    },
+    {
+      "id": "r2c_paridade_1_sem_reescalar",
+      "grupo": "reconciliacao",
+      "nome": "R2c — 1 Coin = R$ 1,00 com os limites do 07",
+      "descricao": "Reconciliação 2. Paridade do 11 sem reescalar as regras do 07 (ordem mínima 10 Coins = R$ 10; lance mínimo do Bazar 300 Coins = R$ 300).",
+      "mudancas": {"coins": {"coins_por_real": 1}}
+    },
+    {
+      "id": "r3a_vr_mercado_portao",
+      "grupo": "reconciliacao",
+      "nome": "R3a — Teto em VR de mercado, portão de saída (07)",
+      "descricao": "Reconciliação 3. O desenho original do 07: VR = preço de mercado, portão de saída, crédito dos insumos.",
+      "mudancas": {"teto": {"medida": "vr_mercado", "excedente": "portao"}}
+    },
+    {
+      "id": "r3b_vr_fixo_portao",
+      "grupo": "reconciliacao",
+      "nome": "R3b — Teto em VR de trabalho embutido, portão de saída",
+      "descricao": "Reconciliação 3. VR fixo de lançamento (trabalho embutido do 05/06) com o portão do 07 — é a configuração do base.",
+      "mudancas": {"teto": {"medida": "vr_fixo", "excedente": "portao"}}
+    },
+    {
+      "id": "r3c_nasce_preso",
+      "grupo": "reconciliacao",
+      "nome": "R3c — Excedente nasce preso (05/06)",
+      "descricao": "Reconciliação 3. Regra do 05 §9 e do 06 §2.3: toda produção conta no teto do dia (VR fixo, sem crédito); o que passa nasce preso.",
+      "mudancas": {"teto": {"medida": "vr_fixo", "excedente": "preso", "credito_insumos": false}}
+    },
+    {
+      "id": "r3d_unidades",
+      "grupo": "reconciliacao",
+      "nome": "R3d — Teto contado em unidades",
+      "descricao": "Reconciliação 3. O teto conta unidades físicas (1 unidade-referência = 1 ouro de VR); as fazendas passam a fabricar peças, que valem muito por unidade.",
+      "mudancas": {"teto": {"medida": "unidades"}, "bots": {"estagio_fazenda": "equip"}}
+    },
+    {
+      "id": "r4a_troca_coins_12",
+      "grupo": "reconciliacao",
+      "nome": "R4a — Coins na Troca a 12% (07)",
+      "descricao": "Reconciliação 4. Igual ao base.",
+      "mudancas": {"taxas": {"troca_coins": 0.12, "bau_lacrado": 0.12}}
+    },
+    {
+      "id": "r4b_troca_coins_3",
+      "grupo": "reconciliacao",
+      "nome": "R4b — Coins na Troca a 3% (bíblia)",
+      "descricao": "Reconciliação 4. Igual ao E9.",
+      "mudancas": {"taxas": {"troca_coins": 0.03, "bau_lacrado": 0.06}}
+    },
+    {
+      "id": "s1_refeicoes_4",
+      "grupo": "sensibilidade",
+      "nome": "S1 — 4 refeições por hora de combate (06)",
+      "descricao": "Sensibilidade pedida pelo diretor: o 06 contava 4 refeições por hora; o 04 (que vale) conta 1.",
+      "mudancas": {"consumo": {"refeicoes_por_hora": 4}}
+    },
+    {
+      "id": "s2_sem_politica",
+      "grupo": "sensibilidade",
+      "nome": "S2 — Sem a política de encomendas elásticas",
+      "descricao": "Desliga o ajuste mensal do orçamento das encomendas (07 §4.7).",
+      "mudancas": {"politica": {"ativa": false}}
+    },
+    {
+      "id": "s3_disposicao_dobro",
+      "grupo": "sensibilidade",
+      "nome": "S3 — Disposição a pagar pelo premium em dobro",
+      "descricao": "Quem não paga aceita gastar o dobro de dias de renda pelo premium (24 em vez de 12 na mediana). Mede quanto o critério de 12 a 20 dias depende de comportamento.",
+      "mudancas": {"coins": {"disposicao_mediana_dias": 24}}
+    },
+    {
+      "id": "s4_selo_barato",
+      "grupo": "sensibilidade",
+      "nome": "S4 — Selo de 10 mil ouro + 10 mil VR",
+      "descricao": "Alternativa testada: Selo mais barato que o do 07, para poupar o capital de giro dos mestres de topo.",
+      "mudancas": {"drenos": {"selo_custo_ouro": 10000, "selo_custo_vra": 10000}}
+    },
+    {
+      "id": "s6_selo_fecha_tier",
+      "grupo": "sensibilidade",
+      "nome": "S6 — Selo fecha os tiers T4–T6 (02 original)",
+      "descricao": "O Selo volta o ofício ao 30 e fecha T4 a T6 até o mestre subir de novo (02 §9.2).",
+      "mudancas": {"progressao": {"selo_mantem_tier": false}}
+    },
+    {
+      "id": "s7_indexacao_07",
+      "grupo": "sensibilidade",
+      "nome": "S7 — Indexação dos insumos a ±2% ao mês desde o lançamento (07)",
+      "descricao": "Sem a indexação mais rápida na 1ª Era.",
+      "mudancas": {"drenos": {"indexacao_max_mes_era1": 0.02}}
+    },
+    {
+      "id": "s8_teto_inclinacao_25",
+      "grupo": "sensibilidade",
+      "nome": "S8 — Teto 600 + 25n + 25m (sugestão do 07 §3.6)",
+      "descricao": "Corta a inclinação do teto para baixar o salário-teto do topo.",
+      "mudancas": {"teto": {"por_nivel": 25, "por_selo": 25}}
+    },
+    {
+      "id": "s9_encomenda_conta_nova",
+      "grupo": "sensibilidade",
+      "nome": "S9 — Ouro de encomenda desde o 2º dia da conta",
+      "descricao": "Sem a carência de 14 dias no ouro das encomendas (proposta deste módulo, a partir da regra de conta nova do 13).",
+      "mudancas": {"social": {"encomenda_idade_min": 0}}
+    },
+    {
+      "id": "s5_semente_7",
+      "grupo": "sensibilidade",
+      "nome": "S5 — Outra semente (7)",
+      "descricao": "Mesma configuração do base com outra semente, para medir o ruído do modelo.",
+      "mudancas": {"simulacao": {"semente": 7}}
+    },
+    {
+      "id": "s10_semente_2026",
+      "grupo": "sensibilidade",
+      "nome": "S10 — Outra semente (2026)",
+      "descricao": "Mesma configuração do base com a semente 2026.",
+      "mudancas": {"simulacao": {"semente": 2026}}
+    }
+  ]
+}

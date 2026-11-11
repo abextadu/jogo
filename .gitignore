@@ -30,3 +30,6 @@ tmp/
 
 # Configurações locais do Claude Code
 .claude/settings.local.json
+
+# Resultados brutos da simulação (regeneráveis com node sim.js --todos)
+docs/03-gdd/08-simulacao/resultados/*.csv
