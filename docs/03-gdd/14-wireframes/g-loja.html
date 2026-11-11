@@ -83,7 +83,7 @@ hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
 details{border:1.5px solid var(--tinta);border-radius:8px;padding:0 10px}
 summary{min-height:44px;display:flex;align-items:center;font-weight:600;cursor:pointer}
 details ul{margin:0 0 10px;padding-left:18px}
-.lacre{border-width:2px;border-style:solid;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px var(--tinta)}
+.premium{border-width:2px;border-style:solid;box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 4px var(--tinta)}
 .pix{display:grid;place-items:center;min-height:150px;border:1.5px dashed var(--linha);border-radius:8px;font-size:13px;color:var(--cinza)}
 </style>
 </head>
@@ -91,43 +91,55 @@ details ul{margin:0 0 10px;padding-left:18px}
 <div class="doc">
   <header class="doc-topo">
     <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
-    <h1>(g) Loja — Alvará em R$, cosméticos e Baú do Mascate com chances</h1>
-    <p>Aberta pelo saldo de Alvará no cabeçalho ou por Você › Loja. Todos os preços, limites e chances são exemplos a definir no módulo 11 [H].</p>
+    <h1>(g) Loja — doação que credita Coins, cosméticos e Baú Misterioso com chances</h1>
+    <p>Aberta pelo saldo de Coins no cabeçalho ou por Você › Loja. Paridade, faixas, preços e limites do módulo 11 (10 Coins = R$ 1,00 na doação); chances e prazos de carência são exemplos [H].</p>
   </header>
 
   <div class="grade">
     <div class="telas">
       <section class="celular" aria-label="Wireframe: Loja">
         <header class="cab">
-          <div class="lugar"><strong>Loja</strong><small>Preços em reais, com Pix</small></div>
-          <a class="saldo" href="#" aria-label="Alvará: 2"><span class="ico" aria-hidden="true">A</span>2</a>
-          <a class="btn" href="a-arraial.html" aria-label="Fechar a Loja">Fechar</a>
+          <div class="lugar"><strong>Loja</strong><small>Preços em Coins, com o valor em reais</small></div>
+          <a class="saldo" href="#" aria-label="Coins: 240"><span class="ico" aria-hidden="true">C</span>240</a>
+          <a class="btn" href="a-cidade.html" aria-label="Fechar a Loja">Fechar</a>
         </header>
         <main class="conteudo">
-          <!-- Teto de gasto -->
+          <!-- Teto de doação -->
           <section class="cartao" aria-labelledby="t-teto">
-            <p class="rot">Seu limite de gasto <span class="n" aria-hidden="true">1</span></p>
-            <h2 id="t-teto">Neste mês: R$ 39,80 de R$ 300,00</h2>
-            <div class="barra" role="img" aria-label="13% do limite mensal usado"><i style="width:13%"></i></div>
-            <p class="legenda">Baixar o limite vale na hora; subir leva 7 dias [H].</p>
-            <div class="acoes"><a class="btn" href="#">Ajustar limite</a><a class="btn" href="#">Histórico de compras</a></div>
+            <p class="rot">Seu teto de doação <span class="n" aria-hidden="true">1</span></p>
+            <h2 id="t-teto">Neste mês: R$ 40 de R$ 250</h2>
+            <div class="barra" role="img" aria-label="16% do teto mensal de doação usado"><i style="width:16%"></i></div>
+            <p class="legenda">Baixar o teto vale na hora; subir para R$ 600 ou R$ 1.200 só por pedido, com espera.</p>
+            <div class="acoes"><a class="btn" href="#">Ajustar teto</a><a class="btn" href="#">Histórico de doações</a></div>
           </section>
 
-          <!-- Alvará -->
-          <section class="cartao lacre" aria-labelledby="t-alv">
-            <p class="rot">Alvará <span class="n" aria-hidden="true">2</span></p>
+          <!-- Coins por doação -->
+          <section class="cartao premium" aria-labelledby="t-coins">
+            <p class="rot">Coins por doação <span class="n" aria-hidden="true">2</span></p>
             <div class="produto">
-              <div class="img">folha com lacre de cera</div>
+              <div class="img">moeda hexagonal com coroa</div>
               <div>
-                <h2 id="t-alv" style="margin:0">1 Alvará</h2>
-                <p class="preco">R$ 19,90</p>
-                <p>Vale 30 dias de conveniência ou serve para comprar cosméticos. É seu: pode ser transferido a outro jogador ou trocado por ouro no Câmbio (taxa de 12%, destruída).</p>
+                <h2 id="t-coins" style="margin:0">Doe em reais e receba Coins</h2>
+                <p class="preco">10 Coins = R$ 1,00</p>
+                <p>Em todas as faixas, sem bônus. Os Coins são seus: compram conveniência, cosméticos e Baús nesta loja, podem ser transferidos a outro jogador ou trocados por ouro no Câmbio (taxa de 12%, destruída).</p>
               </div>
             </div>
-            <div class="acoes"><a class="btn pri larga" href="#pagar">Comprar 1 Alvará · R$ 19,90</a></div>
-            <p class="legenda">Pix ou cartão. Pago com cartão, o Alvará pode ser transferido depois de 7 dias; com Pix, depois de 1 dia [H]. <span class="n" aria-hidden="true">3</span></p>
+            <table>
+              <caption>Faixas de doação</caption>
+              <thead><tr><th scope="col">Doação</th><th scope="col" class="num">Você recebe</th><th scope="col">Cartão</th></tr></thead>
+              <tbody>
+                <tr><td>R$ 5</td><td class="num">50 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 10</td><td class="num">100 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 20</td><td class="num">200 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 50</td><td class="num">500 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 100</td><td class="num">1.000 Coins</td><td>até 3x sem juros</td></tr>
+                <tr><td>R$ 250</td><td class="num">2.500 Coins</td><td>até 3x sem juros</td></tr>
+              </tbody>
+            </table>
+            <div class="acoes"><a class="btn pri larga" href="#pagar">Doar R$ 20 · receber 200 Coins</a><a class="btn larga" href="#">Outro valor</a></div>
+            <p class="legenda">Pix ou cartão. Coins doados com cartão podem ir ao Câmbio ou à Troca depois de 7 dias; com Pix, depois de 1 dia [H, a reconciliar com o módulo 13]. <span class="n" aria-hidden="true">3</span></p>
             <details>
-              <summary>O que o Alvará nunca compra <span class="n" aria-hidden="true" style="margin-left:6px">4</span></summary>
+              <summary>O que os Coins nunca compram <span class="n" aria-hidden="true" style="margin-left:6px">4</span></summary>
               <ul>
                 <li>Renda, XP ou poder</li>
                 <li>Filas, offline ou automação</li>
@@ -140,9 +152,9 @@ details ul{margin:0 0 10px;padding-left:18px}
           <!-- Conveniência -->
           <section class="cartao" aria-labelledby="t-conv">
             <p class="rot">Conveniência <span class="n" aria-hidden="true">5</span></p>
-            <h2 id="t-conv">30 dias de conveniência · consome 1 Alvará (R$ 19,90)</h2>
-            <p class="legenda">O conteúdo é do módulo 11. Exemplos da zona verde e amarela: temas de interface, predefinições de fila salvas, histórico pessoal detalhado, cosmético do mês.</p>
-            <div class="acoes"><a class="btn" href="#">Ver o que inclui</a><a class="btn" href="#">Ativar</a></div>
+            <h2 id="t-conv">30 dias de conveniência · 200 Coins (R$ 20 em doação)</h2>
+            <p class="legenda">Também 15 dias por 100 Coins ou 90 dias por 600 Coins, sem desconto por quantidade. O conteúdo é do módulo 11. Exemplos da zona verde e amarela: temas de interface, predefinições de fila salvas, histórico pessoal detalhado, cosmético do mês.</p>
+            <div class="acoes"><a class="btn" href="#">Ver o que inclui</a><a class="btn" href="#">Ativar · 200 Coins</a></div>
           </section>
 
           <!-- Cosméticos -->
@@ -151,26 +163,26 @@ details ul{margin:0 0 10px;padding-left:18px}
             <div class="cosmeticos">
               <article class="cosmetico">
                 <div class="img">fachada de oficina</div>
-                <strong>Fachada "Taipa e cal"</strong>
-                <span>1 Alvará · <strong>R$ 19,90</strong></span>
+                <strong>Fachada "Enxaimel"</strong>
+                <span>200 Coins · <strong>R$ 20</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
               <article class="cosmetico">
                 <div class="img">aparência de ajudante</div>
-                <strong>Tiana com avental de chita</strong>
-                <span>1 Alvará · <strong>R$ 19,90</strong></span>
+                <strong>Brida com avental de couro</strong>
+                <span>200 Coins · <strong>R$ 20</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
               <article class="cosmetico">
                 <div class="img">decoração de casa</div>
-                <strong>Rede de varanda</strong>
-                <span>1 Alvará · <strong>R$ 19,90</strong></span>
+                <strong>Tapeçaria de caça</strong>
+                <span>100 Coins · <strong>R$ 10</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
               <article class="cosmetico">
-                <div class="img">roupa do personagem</div>
-                <strong>Gibão de couro bordado</strong>
-                <span>2 Alvarás · <strong>R$ 39,80</strong></span>
+                <div class="img">traje do personagem</div>
+                <strong>Conjunto "Cavaleiro do Inverno"</strong>
+                <span>400 Coins · <strong>R$ 40</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
             </div>
@@ -179,12 +191,12 @@ details ul{margin:0 0 10px;padding-left:18px}
 
           <!-- Baú -->
           <section class="cartao" aria-labelledby="t-bau">
-            <p class="rot">Baú do Mascate <span class="n" aria-hidden="true">7</span></p>
+            <p class="rot">Baú Misterioso <span class="n" aria-hidden="true">7</span></p>
             <div class="produto">
-              <div class="img">baú de mascate</div>
+              <div class="img">baú com cadeado</div>
               <div>
-                <h2 id="t-bau" style="margin:0">1 Baú · 1 Alvará (R$ 19,90)</h2>
-                <p>Sempre um item cosmético ou decorativo. Nunca poder.</p>
+                <h2 id="t-bau" style="margin:0">1 Baú · 50 Coins (R$ 5 em doação)</h2>
+                <p>Sempre um item cosmético ou decorativo. Nunca poder. Todo item do Baú também é vendido direto nesta loja, com preço fixo.</p>
               </div>
             </div>
             <table>
@@ -198,28 +210,29 @@ details ul{margin:0 0 10px;padding-left:18px}
               </tbody>
             </table>
             <div class="acoes"><a class="btn" href="#">Ver os 48 itens e a chance de cada um</a></div>
-            <p>Este mês: <strong>2 Baús</strong> abertos, de um limite de 10 [H]. <span class="n" aria-hidden="true">8</span></p>
-            <div class="acoes"><a class="btn pri larga" href="#pagar">Comprar 1 Baú · R$ 19,90</a></div>
-            <p class="legenda">Ao abrir, o item aparece na hora, sem roleta. Baús também são vendidos por outros jogadores na Feira, por ouro.</p>
+            <p>Este mês: <strong>2 Baús</strong> comprados, de um limite de 20. A cada 10 Baús sem item Raro ou melhor, o décimo traz um. <span class="n" aria-hidden="true">8</span></p>
+            <div class="acoes"><a class="btn pri larga" href="#">Comprar 1 Baú · 50 Coins (R$ 5)</a></div>
+            <p class="legenda">Ao abrir, o item aparece na hora, sem roleta. Baús lacrados também são vendidos por outros jogadores na Feira, por ouro.</p>
           </section>
 
-          <!-- Confirmação de pagamento -->
+          <!-- Confirmação da doação -->
           <section class="cartao" id="pagar" aria-labelledby="t-pag">
-            <p class="rot">Exemplo: confirmação de pagamento <span class="n" aria-hidden="true">9</span></p>
-            <h2 id="t-pag">Você vai pagar R$ 19,90</h2>
+            <p class="rot">Exemplo: confirmação da doação <span class="n" aria-hidden="true">9</span></p>
+            <h2 id="t-pag">Você vai doar R$ 20,00</h2>
             <table>
               <tbody>
-                <tr><th scope="row">Produto</th><td>1 Alvará</td></tr>
+                <tr><th scope="row">Você recebe</th><td>200 Coins</td></tr>
                 <tr><th scope="row">Forma</th><td>Pix</td></tr>
-                <tr><th scope="row">Limite do mês depois desta compra</th><td>R$ 59,70 de R$ 300,00</td></tr>
+                <tr><th scope="row">Teto do mês depois desta doação</th><td>R$ 60 de R$ 250</td></tr>
               </tbody>
             </table>
+            <div class="aviso" role="note" style="margin-top:8px"><strong>Doação, sem reembolso.</strong> Se o pagamento for contestado no banco ou no cartão, a conta fica suspensa até ser regularizada.</div>
             <div class="pix" style="margin-top:8px">código Pix (copia e cola) e QR code</div>
-            <p class="legenda">O Alvará chega quando o Pix for confirmado, normalmente em segundos.</p>
-            <div class="acoes"><a class="btn pri" href="#">Gerar Pix</a><a class="btn" href="#">Pagar com cartão</a><a class="btn" href="#">Cancelar</a></div>
+            <p class="legenda">Os Coins chegam quando o Pix for confirmado, normalmente em segundos.</p>
+            <div class="acoes"><a class="btn pri" href="#">Gerar Pix</a><a class="btn" href="#">Doar com cartão</a><a class="btn" href="#">Cancelar</a></div>
           </section>
 
-          <p class="legenda" style="text-align:center">Preços em reais, com impostos incluídos [H, validar com advogado e contador]. Nenhum preço desta loja tem contagem regressiva. <span class="n" aria-hidden="true">10</span></p>
+          <p class="legenda" style="text-align:center">Valores em reais [H, validar com advogado e contador, inclusive o tratamento como doação]. Nenhum preço desta loja tem contagem regressiva. <span class="n" aria-hidden="true">10</span></p>
         </main>
       </section>
     </div>
@@ -227,18 +240,18 @@ details ul{margin:0 0 10px;padding-left:18px}
     <aside class="notas" aria-labelledby="t-notas">
       <h2 id="t-notas">Notas de design</h2>
       <ol>
-        <li><span class="n">1</span><p><strong>O limite de gasto vem antes de qualquer produto.</strong> Teto padrão para todos; baixar é imediato e subir tem espera (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06</a>; salvaguarda S5). Os valores são do módulo 11.</p></li>
-        <li><span class="n">2</span><p><strong>Preço em R$ grande e primeiro.</strong> O Alvará é o único produto comprado com dinheiro, e o preço em reais aparece como o CDC pede: claro e ostensivo (art. 31; validar com advogado). Na arte final, a cor lacre marca tudo que envolve dinheiro real.</p></li>
-        <li><span class="n">3</span><p><strong>A carência por meio de pagamento é dita antes da compra</strong> (salvaguarda S2), não descoberta depois. Os prazos são dos módulos 11 e 13.</p></li>
-        <li><span class="n">4</span><p><strong>O que o Alvará nunca compra, na própria loja.</strong> A zona vermelha (piso P7) escrita onde a tentação existe. É a "carta pública de monetização" da pesquisa.</p></li>
-        <li><span class="n">5</span><p><strong>Conveniência sem multiplicador.</strong> O que entra aqui passa pelo teste das três perguntas da pesquisa (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §3.4</a>).</p></li>
-        <li><span class="n">6</span><p><strong>Todo preço em Alvará tem o R$ ao lado</strong> (princípio 6). "Provar" antes de comprar evita a compra por impulso que vira arrependimento. Se o Alvará for divisível, o módulo 11 decide; a regra do R$ ao lado continua.</p></li>
-        <li><span class="n">7</span><p><strong>As chances estão na tela de compra,</strong> não atrás de um link: categoria, porcentagem e quantos itens há em cada uma, mais a lista completa a um toque. É o piso exigido pela Apple (3.1.1) e o que a condenação da Riot no TJDFT mandou fazer (<a href="../../01-pesquisa/05b-rmt-legal-brasil.md">05b</a>). O conteúdo é sempre cosmético (decisão do checkpoint 2).</p></li>
-        <li><span class="n">8</span><p><strong>Limite de Baús e contador do mês à vista;</strong> um Baú por compra, sem "pacote de 10 com desconto"; abertura imediata, sem roleta nem "quase ganhou". A loja não mostra o valor em ouro dos itens do Baú, para a abertura não virar aposta. Nada disso tira o Baú da zona de risco jurídico (risco assumido; <strong>validar com advogado</strong>).</p></li>
-        <li><span class="n">9</span><p><strong>Confirmação com o limite atualizado.</strong> O jogador vê quanto do teto sobra depois da compra. Pix primeiro, porque é como o brasileiro paga (<a href="../../01-pesquisa/08-mercado-posicionamento.md">08, §2.2</a>).</p></li>
+        <li><span class="n">1</span><p><strong>O teto de doação vem antes de qualquer produto.</strong> Teto padrão de R$ 250 por mês para todos; baixar é imediato e subir tem espera (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06</a>; salvaguarda S5). Os valores são do <a href="../11-monetizacao.md">módulo 11</a>.</p></li>
+        <li><span class="n">2</span><p><strong>Paridade fixa, grande e primeiro.</strong> 10 Coins por R$ 1,00 em todas as faixas, sem bônus: o preço em reais de qualquer coisa é o número de Coins dividido por dez. O valor aparece como o CDC pede, claro e ostensivo (art. 31; validar com advogado). Na arte final, a cor púrpura e a moeda hexagonal marcam tudo que envolve dinheiro real.</p></li>
+        <li><span class="n">3</span><p><strong>A carência por meio de pagamento é dita antes da doação</strong> (salvaguarda S2), não descoberta depois. Os prazos são dos módulos 11 e 13.</p></li>
+        <li><span class="n">4</span><p><strong>O que os Coins nunca compram, na própria loja.</strong> A zona vermelha (piso P7) escrita onde a tentação existe. É a "carta pública de monetização" da pesquisa.</p></li>
+        <li><span class="n">5</span><p><strong>Conveniência sem multiplicador.</strong> O que entra aqui passa pelo teste das três perguntas da pesquisa (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §3.4</a>). O tempo custa o mesmo em qualquer quantidade.</p></li>
+        <li><span class="n">6</span><p><strong>Todo preço em Coins tem o R$ ao lado</strong> (princípio 6). "Provar" antes de comprar evita a compra por impulso que vira arrependimento.</p></li>
+        <li><span class="n">7</span><p><strong>As chances estão na tela de compra,</strong> não atrás de um link: categoria, porcentagem e quantos itens há em cada uma, mais a lista completa a um toque. É o piso exigido pela Apple (3.1.1) e o que a condenação da Riot no TJDFT mandou fazer (<a href="../../01-pesquisa/05b-rmt-legal-brasil.md">05b</a>). O conteúdo é sempre cosmético (decisão do checkpoint 2), e a venda direta de cada item põe teto no prêmio (módulo 11). As chances desta tela são exemplo.</p></li>
+        <li><span class="n">8</span><p><strong>Limite de Baús, contador do mês e garantia à vista;</strong> um Baú por compra, sem "pacote de 10 com desconto"; abertura imediata, sem roleta nem "quase ganhou". A loja não mostra o valor em ouro dos itens do Baú, para a abertura não virar aposta. Nada disso tira o Baú da zona de risco jurídico (risco assumido; <strong>validar com advogado</strong>).</p></li>
+        <li><span class="n">9</span><p><strong>Confirmação com o teto atualizado e a regra da doação.</strong> O jogador vê quanto do teto sobra e lê, antes de pagar, que não há reembolso e que a contestação suspende a conta até regularizar (decisão do Gabriel, bíblia §5). Pix primeiro, porque é como o brasileiro paga (<a href="../../01-pesquisa/08-mercado-posicionamento.md">08, §2.2</a>).</p></li>
         <li><span class="n">10</span><p><strong>Sem contagem regressiva, sem "de/por" falso, sem oferta relâmpago.</strong> A oferta por tempo limitado está na lista de práticas predatórias (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §2.3</a>). Recusá-la nos tira da média do mercado; é o preço da promessa.</p></li>
       </ol>
-      <p class="rodape">Acessibilidade: a tabela de chances tem legenda e cabeçalhos; os botões de compra dizem o produto e o preço no próprio texto ("Comprar 1 Baú · R$ 19,90"), para que o leitor de tela não anuncie só "Comprar".</p>
+      <p class="rodape">Acessibilidade: as tabelas de faixas e de chances têm legenda e cabeçalhos; os botões dizem o produto e o preço no próprio texto ("Comprar 1 Baú · 50 Coins (R$ 5)"), para que o leitor de tela não anuncie só "Comprar".</p>
     </aside>
   </div>
 </div>

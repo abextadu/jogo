@@ -130,13 +130,25 @@
 
 > Interfaces entre módulos, propostas de mudança na bíblia e conflitos, registrados à medida que os relatórios chegam. Servem à simulação (módulo 08) e à revisão de consistência do fim da Fase 3.
 
-## 14 — Arte e UI (concluído em 2026-11-11)
+## 14 — Arte e UI em pixel art (reescrito em 2026-11-11)
 
-**Direção de arte recomendada: "Folheto" (xilogravura de cordel)** — tinta sobre papel, duas chapas de cor por região; a Bruma é papel em branco que apaga a gravura, e cada obra concluída "entinta" o mapa; encantados e assombrados se distinguem por textura (tinta limpa ou borrada), o que funciona para daltônicos; mapa do Arraial na grade modular da direção "Ladrilho". Placar: Folheto 38, Ladrilho 34, Aquarela de rio 23. Lastro: registro do cordel no Iphan (2018), J. Borges, Samico, Movimento Armorial; nos jogos, Pentiment e Darkest Dungeon. Proposta: encomendar 3 a 6 gravuras reais por Era a xilogravuristas, pagos e creditados. Tipografia OFL: Londrina Solid, Gabarito, Atkinson Hyperlegible Next.
+**Direção recomendada: "Maquete"** — pixel art isométrica (grade 32 × 16 px) só na Cidade, no mapa da Névoa e na Fronteira; criaturas, personagens e itens em retratos e ícones frontais (mais baratos); paleta própria de 32 cores com rampa reservada para a Névoa; animação curta (2 a 4 quadros). Venceu "Miniatura" (16 × 16 de cima, mais barata, mas genérica e parecida com Stardew e Tibia) e "Alta definição" (cara demais). Por quê: é a que mais se afasta do Tibia (32 × 32 visto de cima); dá o gancho do vídeo de 10 s (a Névoa recua e a cidade aparece); põe "a cidade é de todos" na primeira imagem; cabe em 3 pessoas de arte, com 35 a 65 dias-pessoa por Era [H].
+- **Névoa:** pontilhado com três estados (encoberta, avistada, liberta), preso ao mapa e não à tela.
+- **Criaturas corrompidas:** cinco sinais que não dependem de cor (silhueta, contorno partido, marca nos olhos, fiapos de névoa, rótulo).
+- **Identidade:** interface inspirada em manuscritos medievais iluminados, com marginália no Relatório da volta; o tema musical da Cidade ganha um instrumento a cada obra.
+- **Fontes OFL:** Jacquarda Bastarda 9 (títulos), Pixelify Sans (rótulos), Atkinson Hyperlegible Next (texto).
+- **UI:** mantida; novidades: arte sempre em escala inteira, mapa com dois zooms e "Ver como lista", aba "Névoa", Coins em púrpura com moeda hexagonal, Bazar de Personagens só em "Você".
+- **Wireframes:** `a-cidade.html`, `b-retorno.html`, `c-bolsa-feira.html`, `d-obra-prima.html`, `e-cerco-inscricao.html`, `f-conselho.html`, `g-loja.html` (refeita com doação: 10 Coins = R$ 1,00, faixas de R$ 5 a R$ 250, teto de R$ 250/mês, Baú a 50 Coins com limite de 20/mês e garantia no décimo; paridade a reconciliar pela simulação).
+- **Propostas na bíblia:** offline só de leitura (já em R12); detalhar a seção 6.8 com a "Maquete"; registrar a gramática visual da Névoa e das criaturas corrompidas.
+- **Riscos:** custo do isométrico; mudança de estilo no meio da produção; pontilhado cansando a vista; ser lido como Habbo ou "mais um medieval em pixel"; escala quebrada borrando no Android; toque impreciso nos lotes em losango.
+
+## 14 — Arte e UI, versão "Folheto" (descartada em 2026-11-11 pela mudança de tema)
+
+**Direção de arte (descartada): "Folheto" (xilogravura de cordel)** — tinta sobre papel, duas chapas de cor por região; a Bruma é papel em branco que apaga a gravura, e cada obra concluída "entinta" o mapa; encantados e assombrados se distinguem por textura (tinta limpa ou borrada), o que funciona para daltônicos; mapa do Arraial na grade modular da direção "Ladrilho". Placar: Folheto 38, Ladrilho 34, Aquarela de rio 23. Lastro: registro do cordel no Iphan (2018), J. Borges, Samico, Movimento Armorial; nos jogos, Pentiment e Darkest Dungeon. Proposta: encomendar 3 a 6 gravuras reais por Era a xilogravuristas, pagos e creditados. Tipografia OFL: Londrina Solid, Gabarito, Atkinson Hyperlegible Next.
 
 **UI:** cinco abas (Arraial, Oficina, Mercado, Bruma, Você); ações frequentes a até 2 toques; Folheto da volta sem "coletar" nem "dobrar"; valor "previsto" × "confirmado pelo servidor"; R$ ao lado de todo preço em Alvará e limite de gasto no topo da loja; chances do Baú na tela de compra, abertura sem roleta, sem mostrar valor em ouro; no máximo 4 avisos por dia, silêncio das 22h às 8h; WCAG 2.2 AA, alvos de 44 px, "modo tranquilo" na obra-prima; PWA com offline só de leitura.
 
-**Wireframes:** `14-wireframes/index.html` + 7 telas (a-arraial a g-loja). Preços, limites e chances são [H] a reconciliar com 02, 06, 07, 09, 11 e 13.
+**Wireframes (versão antiga):** substituídos pelos da versão em pixel art acima.
 
 **Propostas na bíblia (aplicadas pelo diretor em 2026-11-11):** "Folheto da volta" no glossário; "desbravar" trocado por "reencontrar e curar"; "encantados" e "Pindorama" marcados como provisórios até a consultoria cultural. **Pendente:** registrar "offline só de leitura" como decisão vigente (reconciliar com o 13).
 

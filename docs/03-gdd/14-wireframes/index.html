@@ -44,23 +44,23 @@ footer{margin-top:24px;font-size:13px;color:var(--cinza)}
   <p class="sub">Projeto Ofício (nome provisório) · Fase 3, GDD · módulo 14 · novembro de 2026</p>
 
   <div class="aviso" role="note">
-    <p><strong>Isto é documentação de interface, não código do jogo.</strong> São caixas, textos e hierarquia, em HTML simples, sem bibliotecas nem fontes externas. A arte final (xilogravura, papel, cores da direção "Folheto") não está aqui. Nomes, preços, prazos e chances são exemplos [H], a reconciliar com os módulos indicados em cada tela.</p>
+    <p><strong>Isto é documentação de interface, não código do jogo.</strong> São caixas, textos e hierarquia, em HTML simples, sem bibliotecas nem fontes externas. A arte final (pixel art isométrica, paleta, molduras e fontes da direção "Maquete") não está aqui. Nomes, preços, prazos e chances são exemplos [H], a reconciliar com os módulos indicados em cada tela.</p>
   </div>
 
   <h2>As telas</h2>
   <ul class="telas">
-    <li><a href="a-arraial.html"><span class="letra" aria-hidden="true">a</span><span><strong>Arraial: cidade e oficina</strong><span class="d">Tela inicial: mapa de lotes e a Bruma, agenda por prazo, filas com as duas taxas, teto negociável.</span></span></a></li>
-    <li><a href="b-retorno.html"><span class="letra" aria-hidden="true">b</span><span><strong>Folheto da volta</strong><span class="d">A tela de retorno do ausente como presente: plano e gargalo, linha do tempo, nada a coletar.</span></span></a></li>
+    <li><a href="a-cidade.html"><span class="letra" aria-hidden="true">a</span><span><strong>Cidade: maquete e oficina</strong><span class="d">Tela inicial: maquete de lotes e a Névoa, agenda por prazo, filas com as duas taxas, teto negociável.</span></span></a></li>
+    <li><a href="b-retorno.html"><span class="letra" aria-hidden="true">b</span><span><strong>Relatório da volta</strong><span class="d">A tela de retorno do ausente como presente: plano e gargalo, linha do tempo, nada a coletar.</span></span></a></li>
     <li><a href="c-bolsa-feira.html"><span class="letra" aria-hidden="true">c</span><span><strong>Bolsa e Feira</strong><span class="d">Livro de ordens legível sem cor, posição na fila, taxas e líquido; anúncios com durabilidade.</span></span></a></li>
     <li><a href="d-obra-prima.html"><span class="letra" aria-hidden="true">d</span><span><strong>Obra-prima</strong><span class="d">Três etapas decididas por toque, sem reflexo; modo tranquilo; resultado com a marca do mestre.</span></span></a></li>
     <li><a href="e-cerco-inscricao.html"><span class="letra" aria-hidden="true">e</span><span><strong>Inscrição no cerco</strong><span class="d">Sem plantão: posto, equipamento, suprimentos, guarnição da guilda e o que falta à defesa.</span></span></a></li>
-    <li><a href="f-camara.html"><span class="letra" aria-hidden="true">f</span><span><strong>Câmara</strong><span class="d">Eleição com uma pessoa, um voto; votações com a faixa constitucional e o voto nominal dos vereadores.</span></span></a></li>
-    <li><a href="g-loja.html"><span class="letra" aria-hidden="true">g</span><span><strong>Loja</strong><span class="d">Limite de gasto, Alvará em R$ com Pix, cosméticos com R$ ao lado, Baú com a tabela de chances.</span></span></a></li>
+    <li><a href="f-conselho.html"><span class="letra" aria-hidden="true">f</span><span><strong>Conselho</strong><span class="d">Eleição com uma pessoa, um voto; votações com a faixa constitucional e o voto nominal dos conselheiros.</span></span></a></li>
+    <li><a href="g-loja.html"><span class="letra" aria-hidden="true">g</span><span><strong>Loja</strong><span class="d">Teto de doação, doação em R$ que credita Coins (Pix primeiro), preços em Coins com R$ ao lado, Baú Misterioso com a tabela de chances.</span></span></a></li>
   </ul>
 
   <h2>Como ler</h2>
   <div class="legenda">
-    <div><span class="amostra-img" aria-hidden="true"></span><span>Caixa tracejada: lugar de imagem (na arte final, uma gravura).</span></div>
+    <div><span class="amostra-img" aria-hidden="true"></span><span>Caixa tracejada: lugar de imagem (na arte final, pixel art).</span></div>
     <div><span class="n" aria-hidden="true">1</span><span>Círculo amarelo numerado: corresponde a uma nota de design ao lado da tela (no celular, abaixo).</span></div>
     <div><span class="amostra-btn" aria-hidden="true">Ação</span><span>Botão preenchido: a ação principal da tela. Só há uma por cartão.</span></div>
     <div><span class="amostra-btn sec" aria-hidden="true">Ação</span><span>Botão vazado: ação secundária. Todos os alvos têm 44 px ou mais.</span></div>
@@ -69,21 +69,21 @@ footer{margin-top:24px;font-size:13px;color:var(--cinza)}
 
   <h2>Mapa de navegação</h2>
   <div class="mapa">
-    <p>Ao abrir o jogo depois de 1 h ou mais: <a href="b-retorno.html">Folheto da volta</a> → <a href="a-arraial.html">Arraial</a>.</p>
-    <p>Cabeçalho fixo em todas as telas: ouro · Alvará (→ <a href="g-loja.html">Loja</a>) · Recados · Conversa.</p>
+    <p>Ao abrir o jogo depois de 1 h ou mais: <a href="b-retorno.html">Relatório da volta</a> → <a href="a-cidade.html">Cidade</a>.</p>
+    <p>Cabeçalho fixo em todas as telas: ouro · Coins (→ <a href="g-loja.html">Loja</a>) · Recados · Conversa.</p>
     <ul>
-      <li><span class="aba">Arraial</span> (início) — <a href="a-arraial.html">cidade e oficina</a>
+      <li><span class="aba">Cidade</span> (início) — <a href="a-cidade.html">maquete e oficina</a>
         <ul>
-          <li>Agenda → <a href="e-cerco-inscricao.html">inscrição no cerco</a> · encomenda · <a href="f-camara.html">Câmara</a></li>
+          <li>Agenda → <a href="e-cerco-inscricao.html">inscrição no cerco</a> · encomenda · <a href="f-conselho.html">Conselho</a></li>
           <li>Cartão da oficina → <a href="d-obra-prima.html">obra-prima</a> · ajustar fila</li>
         </ul>
       </li>
       <li><span class="aba">Oficina</span> — ofícios, filas, receitas, <a href="d-obra-prima.html">obra-prima</a>, ajudantes, inventário</li>
-      <li><span class="aba">Mercado</span> — <a href="c-bolsa-feira.html">Bolsa e Feira</a> · Pregão · Câmbio · Troca</li>
-      <li><span class="aba">Bruma</span> — expedições, vocação, masmorras, Travessia (a partir da 2ª Era)</li>
-      <li><span class="aba">Você</span> — personagem, guilda, títulos e Mérito, Recados, <a href="g-loja.html">Loja</a>, Cartório, configurações</li>
+      <li><span class="aba">Mercado</span> — <a href="c-bolsa-feira.html">Bolsa e Feira</a> · Leilão · Câmbio · Troca</li>
+      <li><span class="aba">Névoa</span> — mapa da Névoa, expedições, vocação, masmorras, Fronteira (a partir da 2ª Era)</li>
+      <li><span class="aba">Você</span> — personagem, guilda, títulos e Mérito, Recados, <a href="g-loja.html">Loja</a>, Bazar de Personagens, configurações</li>
     </ul>
-    <p class="sub">Regra dos dois toques: qualquer ação frequente fica a no máximo dois toques do Arraial; a confirmação de uma ação de valor não conta (documento 14, seção 2.3).</p>
+    <p class="sub">Regra dos dois toques: qualquer ação frequente fica a no máximo dois toques da Cidade; a confirmação de uma ação de valor não conta (documento 14, seção 2.3).</p>
   </div>
 
   <footer>
