@@ -1,5 +1,32 @@
 # Notas de integração do GDD (arquivo de trabalho)
 
+## 05 e 06 — Itens e ofícios (concluídos em 2026-11-11, com tema medieval)
+
+**Decisões centrais [H]:**
+- **Materiais T1–T6 (lista fechada):** metais cobre, ferro, aço, prata, platina, aldarita (liga própria, muda junto com o nome do mundo); madeiras pinho, bétula, carvalho, freixo, teixo, ébano. A partir do T3, as ligas puxam material dos tiers de baixo. Vetados: mithril, adamantita, runita, oricalco.
+- **Sem raridade sorteada:** a variação vem só da qualidade. O Único tem um traço que é uma troca. O Lendário só de T4 a T6, no máximo 24 por Era por Cidade e 1 por mestre, e quebra em ~88 h de uso. **Nenhum monstro solta equipamento pronto.**
+- **Poder:** `PI = 10 × 1,6^(T−1)`; a obra-prima dá +25% e nunca alcança a Comum do tier seguinte.
+- **Durabilidade:** peça nova 120 pontos (ferramenta 300), perde 10 por hora de uso; cada reparo tira 20% da durabilidade original e consome kits feitos por artesãos; 3 reparos, depois quebra e some. Nada se desgasta parado.
+- **Obra-prima:** a fila prepara, o mestre ativo faz o acabamento em 4 etapas de decisão sem cronômetro, com sistema anti-frustração publicado. A sessão ativa de coleta é o **Faro**. Tudo gasta **Inspiração**, que acumula 1 por hora com teto igual ao offline.
+- **Oficina da Cidade (NPC):** vende a 2× o valor de referência, com limite diário; tudo sai preso à conta.
+- **Aprendiz (teto 30):** só T1–T2 e só Comum; o T3 exige nível 35.
+- **Cosmético:** consumido ao ser aplicado, entra na coleção; o Baú Misterioso só tem visuais e decoração.
+
+**Interfaces para a simulação:**
+- Coleta T1/T2: 450/321 por hora (Colheita 600/429). Transformação T1: 144 lingotes, 225 tábuas, 80 couros ou 90 tecidos por hora. Criação: espada 25/35 min, couraça 30/42 min; Alquimia e Culinária 240/171 por hora. Do T3 em diante, tempos do T1 × 1,8; 2,3; 2,9; 3,75.
+- Receitas T1–T2 completas no 06 §11; T3–T6 no §12; trabalho embutido por item no §11.5.
+- Reparo: kits = maior insumo da receita ÷ 8 (espada de ferro = 2 kits = 8 lingotes + 4 carvões); um reparo custa 23–38% do trabalho da peça.
+- Vida útil: Comum 33,6 h, obra-prima 43,7 h (até 54,6 h), lendário 88 h, ferramenta 84 h; na mistura de referência, a Comum dura 28 h.
+- Consumo do combate: de 12,4 min de ofício por hora (T1) a 49 min (T6), ~56% em equipamento; cada ofício fica entre 5,6% e 13,1% das horas exigidas (meta 8,3%); vocações a ±14% umas das outras.
+- Drops pedidos ao 04, por hora de combate: 3,5 peles, 6 carnes, 3,5 cinzas de névoa.
+- Balcões: Bolsa para fungíveis (brutos, insumos, consumíveis Comum e Fino, kits, reagentes, materiais raros, peças Comuns novas); Feira para o que tem estado próprio; Leilão para Únicos, lendários e relíquias; venda a NPC só para brutos e insumos T1–T2, pedra e carvão.
+
+**Propostas de mudança na bíblia:** consumíveis com 2 graus (Comum e Fino); âncoras de item (poder por tier, durabilidade, reparos, 24 lendários por Era); teto de emissão medido em valor de referência, com item feito de insumo preso nascendo preso; peças Comuns novas na Bolsa; tempos por tipo de ação (3–30 s só para coleta; criação de 5 a 115 min); níveis por tier 1, 15, 35, 55, 75, 90; platina como T5; glossário (Inspiração, Faro e outros 13).
+
+**Conflitos a reconciliar:** âncora de 3–30 s × transformação T5–T6 (lingote de aldarita 94 s) e criação; 4 qualidades × 2 nos consumíveis; peles por tier dependem do bestiário do 04; troca de ofício mestre (02); Bancada das Lendas e quantidades das Obras (09); relíquias por Era (10); faltam do 07 o ouro por minuto de referência e o valor dos drops. Ver também o conflito do 02 sobre a ferramenta que acelera a fila (até 1,72×).
+
+**Riscos:** num servidor jovem (T1–T2), o combate absorve só ~20% da produção (pede Obras pesadas no início e o teto de emissão); gargalo no Curtume (peles dependem do combate); obra-prima e Baú lidos como jogo de azar (risco assumido); nomes genéricos parecendo clone; complexidade para o novato.
+
 ## 01 e 02 — Loops e progressão (concluídos em 2026-11-11, com nomes novos)
 
 **Decisões centrais [H]** (contas feitas num modelo de 420 dias em passos de 5 min):

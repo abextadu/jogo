@@ -5,11 +5,11 @@
 
 ## Resumo
 
-- **Seis tiers, lista fechada.** Metais: cobre, ferro, aço, itaúna, itaberaba e ferro-estrela. Madeiras: cedro, peroba, ipê, jacarandá, pau-ferro e baraúna. Fibras, peles, ervas, alimentos e peixes também ganham nome por tier (seção 2). A partir do T3, as ligas puxam material dos tiers de baixo, para que nenhum tier morra.
-- **Não existe raridade sorteada.** A variação de um item vem da qualidade de crafting (Comum, Bom, Fino, Obra-prima), que nasce de decisão, e de duas categorias especiais: o **Único** (obra-prima com traço, que muda o jeito de jogar e não aumenta o poder) e o **Lendário** (contado: no máximo 24 por Era por Arraial). **Nenhum monstro solta equipamento pronto:** todo equipamento é feito por jogador.
+- **Seis tiers, lista fechada.** Metais: cobre, ferro, aço, prata, platina e **aldarita** (a liga rara própria do jogo). Madeiras: pinho, bétula, carvalho, freixo, teixo e ébano. Fibras, peles, ervas, alimentos e peixes também ganham nome por tier (seção 2). A partir do T3, as ligas puxam material dos tiers de baixo, para que nenhum tier morra.
+- **Não existe raridade sorteada.** A variação de um item vem da qualidade de crafting (Comum, Bom, Fino, Obra-prima), que nasce de decisão, e de duas categorias especiais: o **Único** (obra-prima com traço, que muda o jeito de jogar e não aumenta o poder) e o **Lendário** (contado: no máximo 24 por Era por Cidade). **Nenhum monstro solta equipamento pronto:** todo equipamento é feito por jogador.
 - **O tier manda, a qualidade refina.** Cada tier multiplica o poder por 1,6. A obra-prima vale +25%, e uma obra-prima nunca alcança uma peça Comum do tier seguinte.
 - **Tudo se gasta, de forma previsível.** Uma peça perde 10 pontos de durabilidade por hora de uso. Cada reparo consome kits feitos por artesãos e tira 20% da durabilidade máxima original. Depois do 3º reparo, a peça quebra e some. Vida útil de referência: **34 h de uso para uma peça Comum, 44 h para uma obra-prima e 88 h para um lendário.** Nada se desgasta parado no baú.
-- **Cosmético nunca vira poder.** O Baú do Mascate só tem visuais, decoração e aparências de ajudante. Ao ser aplicado, o cosmético vira coleção da conta e sai do mercado. Isso cumpre o "tudo que se negocia se gasta" (P3).
+- **Cosmético nunca vira poder.** O Baú Misterioso só tem visuais, decoração e aparências de ajudante. Ao ser aplicado, o cosmético vira coleção da conta e sai do mercado. Isso cumpre o "tudo que se negocia se gasta" (P3).
 - **O negociável tem origem limpa (P2).** A produção da fila é negociável até o teto de emissão da conta, contado em valor de referência. O que passa do teto, o que vem das oficinas NPC e o que for feito com insumo preso fica preso à conta.
 
 ## 1. Princípios que este módulo garante
@@ -31,20 +31,22 @@ O nível exigido vale para a receita (ofício) e para usar a peça (vocação). 
 
 | Tier | Nível | Metal (lingote) | Minério | Madeira | Fibra | Pele (combate) | Erva | Alimento | Peixe | Refeição | Gema |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| T1 | 1 | Cobre | Minério de cobre | Cedro | Algodão | Cateto | Erva-cidreira | Mandioca | Lambari | Pirão | Quartzo |
-| T2 | 15 | Ferro | Minério de ferro | Peroba | Juta | Javali | Boldo | Milho | Traíra | Baião de dois | Quartzo |
-| T3 | 35 | Aço (liga) | Minério de manganês + ferro | Ipê | Sisal | Queixada | Guaco | Feijão | Tucunaré | Feijão tropeiro | Ametista |
-| T4 | 55 | Itaúna | Minério de itaúna | Jacarandá | Caroá | Jacaré | Jambu | Cacau | Dourado | Moqueca | Ametista |
-| T5 | 75 | Itaberaba | Minério de itaberaba | Pau-ferro | Buriti | Sucuri | Jaborandi | Açaí | Pintado | Tacacá | Turmalina |
-| T6 | 90 | Ferro-estrela | Estilhaço de ferro-estrela | Baraúna | Tucum | Fera-da-bruma | Unha-de-gato | Cupuaçu | Pirarucu | Barreado | Turmalina |
+| T1 | 1 | Cobre | Minério de cobre | Pinho | Cânhamo | Javali | Camomila | Nabo | Perca | Caldo | Quartzo |
+| T2 | 15 | Ferro | Minério de ferro | Bétula | Linho | Lobo | Sálvia | Cevada | Carpa | Ensopado | Quartzo |
+| T3 | 35 | Aço (liga) | Minério negro + minério de ferro | Carvalho | Algodão | Urso | Arruda | Trigo | Truta | Torta de caça | Ametista |
+| T4 | 55 | Prata | Minério de prata | Freixo | Seda | Basilisco | Beladona | Fava | Salmão | Assado com ervas | Ametista |
+| T5 | 75 | Platina | Minério de platina | Teixo | Cardo-prateado | Serpe | Mandrágora | Uva | Esturjão | Guisado do castelo | Safira |
+| T6 | 90 | Aldarita | Fragmento de aldarita | Ébano | Seda-de-névoa | Dragão | Lírio-da-névoa | Maçã-dourada | Enguia-da-névoa | Festim real | Safira |
 
-**Insumos sem tier** (servem a todos os tiers e dão trabalho útil a quem está começando): **pedra** (Mineração), **casca** e **resina** (Lenhadoria), **carvão** (Fundição, feito só de cedro ou peroba), **escama** (subproduto da Pesca) e **cinza de bruma** (solta pelos assombrados, com tier).
+**Insumos sem tier** (servem a todos os tiers e dão trabalho útil a quem está começando): **pedra** (Mineração), **casca** e **resina** (Lenhadoria), **carvão** (Fundição, feito só de pinho ou bétula) e **escama** (subproduto da Pesca). A **cinza de névoa** (com tier) é solta pelas criaturas corrompidas.
 
 **Como os nomes foram escolhidos** [H]:
-- **Metais.** Os três primeiros são reais e reconhecíveis. O aço é liga, e por isso o T3 consome minério de ferro do T2. **Itaúna** e **itaberaba** vêm de topônimos de origem tupi, que costumam ser traduzidos como "pedra preta" e "pedra que brilha" [NV]; dão nome a um metal escuro e denso e a um metal claro e luminoso. O **ferro-estrela** é ferro meteórico das crateras que as Obras revelam ao empurrar a Bruma, inspirado em meteoritos de ferro como o do Bendegó [NV].
-- **Madeiras.** Seguem a sugestão da bíblia (cedro, ipê, jacarandá, pau-ferro), completadas com peroba e baraúna (braúna), árvore do sertão famosa pela dureza [NV]. **Ficam de fora** o pau-brasil, símbolo da exploração colonial (a bíblia manda evitar esse tema), e a araucária, ameaçada e identitária do Sul.
-- **Fauna.** Os animais caçáveis são *feras*, bichos tocados pela Bruma. **Os encantados nunca são esfolados:** libertar um assombrado rende cinza de bruma e Mérito, nunca pele. Os nomes de fauna e flora passam pela revisão de sensibilidade cultural e ambiental do módulo 14.
-- **Refeições.** Um prato por região do Brasil: litoral (pirão), Nordeste (baião), Sudeste (tropeiro), Bahia e Espírito Santo (moqueca), Norte (tacacá) e Sul (barreado).
+- **Metais.** Os cinco primeiros são materiais clássicos da fantasia, reconhecíveis sem explicação. O aço é liga de ferro com **minério negro** (rico em carvão), por isso o T3 consome minério de ferro do T2. A prata tem o papel clássico de metal contra mortos-vivos e criaturas corrompidas. A **aldarita** é a liga rara própria do jogo: só se forma onde a Névoa recuou, e seus fragmentos aparecem nas crateras que as Obras revelam. O nome vem de Aldária, nome provisório do mundo, e muda junto com ele.
+- **Madeiras.** Seguem a sugestão da bíblia (carvalho, freixo, teixo, ébano), da mais macia à mais rara: pinho, bétula, carvalho, freixo (cabos e hastes), teixo (o arco longo clássico) e ébano.
+- **Fibras, ervas e peixes dos tiers altos.** Plantas e bichos da própria Aldária, tocados pela Névoa (seda-de-névoa, lírio-da-névoa, enguia-da-névoa), ao lado de itens clássicos de lenda (cardo-prateado, mandrágora, maçã-dourada).
+- **Fauna.** As peles vêm de feras do bestiário clássico (javali, lobo, urso, basilisco, serpe, dragão). As criaturas corrompidas (orcs, goblins, mortos-vivos e outras) soltam cinza de névoa, não pele. O bestiário é do [04](04-combate.md); os nomes acima devem ser reconciliados com ele.
+- **O que fica de fora.** Nomes próprios de materiais de outros jogos e obras conhecidas (mithril, adamantita, runita, oricalco e afins), como manda a bíblia (seção 3).
+- **Refeições.** Pratos de taverna, do caldo ao festim real.
 
 ### 2.2 Ligas: os tiers de baixo nunca morrem
 
@@ -52,17 +54,17 @@ O nível exigido vale para a receita (ofício) e para usar a peça (vocação). 
 |---|---|---|
 | Cobre (T1) | 3 minérios de cobre + 2 carvões | Lenhadoria T1–T2 (carvão) |
 | Ferro (T2) | 3 minérios de ferro + 2 carvões | idem |
-| Aço (T3) | 1 minério de manganês + 2 minérios de ferro + 3 carvões | **Mineração T2** |
-| Itaúna (T4) | 3 minérios de itaúna + 3 carvões + 1 pedra (fundente) | pedra |
-| Itaberaba (T5) | 2 minérios de itaberaba + 1 lingote de aço + 4 carvões | **Fundição T3 e Mineração T2** |
-| Ferro-estrela (T6) | 2 estilhaços de ferro-estrela + 1 lingote de itaúna + 4 carvões | **Fundição T4** |
+| Aço (T3) | 1 minério negro + 2 minérios de ferro + 3 carvões | **Mineração T2** |
+| Prata (T4) | 3 minérios de prata + 3 carvões + 1 pedra (fundente) | pedra |
+| Platina (T5) | 2 minérios de platina + 1 lingote de aço + 4 carvões | **Fundição T3 e Mineração T2** |
+| Aldarita (T6) | 2 fragmentos de aldarita + 1 lingote de prata + 4 carvões | **Fundição T4** |
 
 O couro segue a mesma lógica: 1 casca por couro em T1–T2, 2 em T3–T4 e 3 em T5–T6.
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
-| Ligas e insumos sem tier que puxam material dos tiers de baixo | [F] No Shop Titans, itens antigos viram insumo e moeda de troca e mantêm o mercado ativo ([C06](../01-pesquisa/fichas/C06-shop-titans.md)); [H] o aço como liga de ferro é intuitivo | Tier velho com preço zero, coletor iniciante sem freguês | O novato coleta pedra, casca, resina e cedro, que todo tier precisa; o veterano compra | Cadeia comprida demais assusta; um gargalo no T2 trava o T5 (mitigação: oficinas NPC, [06](06-oficios-e-coleta.md) seção 8) |
-| Nomes com raiz brasileira, sem pau-brasil, sem esfolar encantados | Bíblia, seção 3 | Identidade, e não cair em caricatura nem em símbolo colonial | Curiosidade ("o que é baraúna?") | Etimologia ou ecologia contestada; revisão de sensibilidade no 14 |
+| Ligas e insumos sem tier que puxam material dos tiers de baixo | [F] No Shop Titans, itens antigos viram insumo e moeda de troca e mantêm o mercado ativo ([C06](../01-pesquisa/fichas/C06-shop-titans.md)); [H] o aço como liga de ferro é intuitivo | Tier velho com preço zero, coletor iniciante sem freguês | O novato coleta pedra, casca, resina e pinho, que todo tier precisa; o veterano compra | Cadeia comprida demais assusta; um gargalo no T2 trava o T5 (mitigação: oficinas NPC, [06](06-oficios-e-coleta.md) seção 8) |
+| Nomes de fantasia clássica, com uma liga rara própria e nada copiado de outro jogo | Bíblia, seções 3, 6.5 e 9 | Legibilidade imediata para o público do gênero, sem risco de propriedade intelectual | Entender a escada de tiers sem tutorial (pinho, carvalho, ébano) | Parecer genérico ("mais um clone"); a identidade vem da aldarita, dos materiais da Névoa e da direção de arte do [14](14-arte-e-ui.md) |
 
 ## 3. Raridade: a variação nasce de decisão, não de sorteio
 
@@ -82,16 +84,16 @@ O couro segue a mesma lógica: 1 casca por couro em T1–T2, 2 em T3–T4 e 3 em
 | Categoria | Como nasce | Onde se negocia |
 |---|---|---|
 | Peça de mercado (Comum, Bom, Fino, Obra-prima) | Fila de um ofício e, para as três qualidades de cima, uma sessão de obra-prima | Bolsa (Comum nova) ou Feira (seção 9) |
-| **Único** | Obra-prima excepcional, com insumo nobre (seção 7.1) | Feira ou Pregão |
-| **Lendário** | Obra-prima com Relíquia da Travessia, contada por Era (seção 7.2) | Pregão |
-| Matéria rara, insumo nobre, reagente, Relíquia da Travessia | Insumos especiais das sessões ativas e da Travessia ([06](06-oficios-e-coleta.md), seção 6) | Bolsa (relíquia: Pregão) |
+| **Único** | Obra-prima excepcional, com insumo nobre (seção 7.1) | Feira ou Leilão |
+| **Lendário** | Obra-prima com Relíquia da Fronteira, contada por Era (seção 7.2) | Leilão |
+| Matéria rara, insumo nobre, reagente, Relíquia da Fronteira | Insumos especiais das sessões ativas e da Fronteira ([06](06-oficios-e-coleta.md), seção 6) | Bolsa (relíquia: Leilão) |
 | Peça de oficina | Comprada da oficina NPC de reforço, pior que a Comum | Não se negocia |
 
-**Regra-mãe:** os monstros soltam materiais (pele, carne, cinza de bruma, matéria rara de elite), ouro e Mérito. **Nunca equipamento pronto.** A reconciliar com o [04](04-combate.md).
+**Regra-mãe:** os monstros soltam materiais (pele, carne, cinza de névoa, matéria rara de elite), ouro e Mérito. **Nunca equipamento pronto.** A reconciliar com o [04](04-combate.md).
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
-| Sem raridade sorteada; Único e Lendário como categorias de origem | Albion ([F02](../01-pesquisa/fichas/F02-albion-online.md)); FFXIV e SWG ([03, §7](../01-pesquisa/03-alem-do-idle.md)); diferencia-se do Path of Exile ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)) | Mercado fragmentado, crafting sem valor, craft como aposta | Especializar-se e fazer bem, não "rolar até sair" | Perde-se a emoção do drop raro; ela é compensada pelo Faro, pelo Único e pela Travessia |
+| Sem raridade sorteada; Único e Lendário como categorias de origem | Albion ([F02](../01-pesquisa/fichas/F02-albion-online.md)); FFXIV e SWG ([03, §7](../01-pesquisa/03-alem-do-idle.md)); diferencia-se do Path of Exile ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)) | Mercado fragmentado, crafting sem valor, craft como aposta | Especializar-se e fazer bem, não "rolar até sair" | Perde-se a emoção do drop raro; ela é compensada pelo Faro, pelo Único e pela Fronteira |
 | Nenhum monstro solta equipamento pronto | Black Market do Albion ([F02](../01-pesquisa/fichas/F02-albion-online.md)) | Equipamento surgindo do nada e matando quem fabrica | Toda peça em uso tem um artesão por trás | O combate parece menos recompensador; compensado por drops de material com valor de mercado |
 
 ## 4. Famílias de itens e atributos
@@ -100,12 +102,12 @@ O couro segue a mesma lógica: 1 casca por couro em T1–T2, 2 em T3–T4 e 3 em
 
 Seis espaços de combate, mais a ferramenta do ofício em uso e os consumíveis. A reconciliar com o [03](03-personagem.md) (atributos de personagem) e o [04](04-combate.md) (como cada número entra no combate).
 
-| Espaço | Guardião | Caçador | Encantador | Erveiro | Batedor |
+| Espaço | Cavaleiro | Caçador | Mago | Druida | Ladino |
 |---|---|---|---|---|---|
-| Arma | Espada (Ferraria) | Arco (Carpintaria) | Cajado, de duas mãos (Carpintaria) | Bordão (Carpintaria) | Facão (Ferraria) |
-| Mão secundária | Escudo (Carpintaria) | Aljava (Alfaiataria) | — (o cajado ocupa as duas mãos) | Bornal (Alfaiataria) | Lamparina (Ferraria) |
+| Arma | Espada (Ferraria) | Arco (Carpintaria) | Cajado, de duas mãos (Carpintaria) | Bordão (Carpintaria) | Adaga (Ferraria) |
+| Mão secundária | Escudo (Carpintaria) | Aljava (Alfaiataria) | — (o cajado ocupa as duas mãos) | Bornal (Alfaiataria) | Lanterna (Ferraria) |
 | Cabeça, corpo, mãos, pés | Armadura pesada (Ferraria) | Armadura média de couro (Alfaiataria) | Armadura leve de tecido (Alfaiataria) | Armadura leve de tecido | Armadura média de couro |
-| Consumível de vocação | Óleo de arma | Flechas | Pó de encanto | Unguento | Farofa de trilha |
+| Consumível de vocação | Óleo de arma | Flechas | Pó arcano | Unguento | Ração de viagem |
 
 Todo personagem também usa **refeições** e **poções de cura**, e uma **ferramenta** para cada ofício que exerce.
 
@@ -124,9 +126,9 @@ Por que 1,6 [H]: a obra-prima (+25%) fica sempre abaixo da Comum do tier seguint
 | Família | Atributo principal | Fórmula | T1 | T2 | T3 | T4 | T5 | T6 |
 |---|---|---|---|---|---|---|---|---|
 | Espada | Dano por golpe | 1,00 × PI | 10 | 16 | 26 | 41 | 66 | 105 |
-| Facão | Dano por golpe | 0,85 × PI | 8,5 | 13,6 | 22,1 | 34,9 | 56,1 | 89,3 |
+| Adaga | Dano por golpe | 0,85 × PI | 8,5 | 13,6 | 22,1 | 34,9 | 56,1 | 89,3 |
 | Arco | Dano por disparo | 0,95 × PI | 9,5 | 15,2 | 24,7 | 39,0 | 62,7 | 99,8 |
-| Cajado (2 mãos) | Dano de encanto | 1,40 × PI | 14 | 22,4 | 36,4 | 57,4 | 92,4 | 147 |
+| Cajado (2 mãos) | Dano arcano | 1,40 × PI | 14 | 22,4 | 36,4 | 57,4 | 92,4 | 147 |
 | Bordão | Dano + Cura | 0,70 × PI + 0,60 × PI | 7 + 6 | 11,2 + 9,6 | 18,2 + 15,6 | 28,7 + 24,6 | 46,2 + 39,6 | 73,5 + 63 |
 | Escudo | Defesa | 0,60 × PI | 6 | 9,6 | 15,6 | 24,6 | 39,6 | 63 |
 | Armadura pesada (4 peças) | Defesa total | 3,0 × PI | 30 | 48 | 78 | 123 | 198 | 315 |
@@ -134,7 +136,7 @@ Por que 1,6 [H]: a obra-prima (+25%) fica sempre abaixo da Comum do tier seguint
 | Armadura leve (4 peças) | Defesa total | 1,5 × PI | 15 | 24 | 39 | 62 | 99 | 158 |
 
 - **Divisão da armadura:** corpo 40%, cabeça 20%, mãos 20%, pés 20%. Exemplo: couraça de ferro (T2) = 48 × 0,4 = 19,2 de defesa.
-- **Ritmo de ataque** (golpes por minuto: espada 30, facão 40, arco 24, cajado 20, bordão 30) e **conversão em dano real** ficam com o [04](04-combate.md). Os fatores acima são o orçamento de poder de cada família, não o balanceamento final.
+- **Ritmo de ataque** (golpes por minuto: espada 30, adaga 40, arco 24, cajado 20, bordão 30) e **conversão em dano real** ficam com o [04](04-combate.md). Os fatores acima são o orçamento de poder de cada família, não o balanceamento final.
 
 ### 4.4 Atributo secundário por família
 
@@ -143,17 +145,17 @@ O secundário é um percentual fixo por família, multiplicado pela qualidade e 
 | Família | Secundário (Comum) | Para que serve |
 |---|---|---|
 | Espada | Bloqueio 6% | Linha de frente |
-| Facão | Crítico 8% | Dano explosivo do Batedor |
+| Adaga | Crítico 8% | Dano explosivo do Ladino |
 | Arco | Precisão 6% | Dano à distância estável |
 | Cajado | Área 10% (parte do dano que atinge os vizinhos do alvo) | Controle e dano em área |
 | Bordão | Alívio 5% (chance de limpar uma condição ao curar) | Suporte |
 | Escudo | Bloqueio 8% | Linha de frente |
 | Aljava | Precisão 5%; leva até 300 flechas | Autonomia do Caçador no offline |
-| Lamparina | Achados 8%; visão na Bruma | Exploração e achados raros |
+| Lanterna | Achados 8%; visão na Névoa | Exploração e achados raros |
 | Bornal | Cura 8%; +1 consumível automático | Suporte no offline |
 | Armadura pesada | Firmeza 6% (resiste a empurrão e atordoamento) | Cercos |
-| Armadura média | Esquiva 6% | Caçador e Batedor |
-| Armadura leve | Foco 8% (amplia encanto e cura) | Encantador e Erveiro |
+| Armadura média | Esquiva 6% | Caçador e Ladino |
+| Armadura leve | Foco 8% (amplia magia e cura) | Mago e Druida |
 
 ### 4.5 Ferramentas
 
@@ -178,7 +180,7 @@ O secundário é um percentual fixo por família, multiplicado pela qualidade e 
 | **Fino** | ×1,16 | ×1,2 | 1 | **Só na obra-prima**, entre 70 e 99 pontos |
 | **Obra-prima** | ×1,25 | ×1,3 | 2, mais 1 a cada 10 pontos acima de 100 (máximo 5) | **Só na obra-prima**, a partir de 100 pontos |
 
-- **Ponto de acabamento.** O artesão escolhe, ao fim da sessão, onde aplicar cada ponto: **+1 ponto percentual no secundário** da família (ex.: Crítico do facão de 8% para 9%) ou **+5% de durabilidade máxima** (a "têmpera"). É assim que o ativo personaliza a peça, como na experimentação do Star Wars Galaxies ([03, §7](../01-pesquisa/03-alem-do-idle.md)), sem ganhar poder bruto além do teto de +25%.
+- **Ponto de acabamento.** O artesão escolhe, ao fim da sessão, onde aplicar cada ponto: **+1 ponto percentual no secundário** da família (ex.: Crítico da adaga de 8% para 9%) ou **+5% de durabilidade máxima** (a "têmpera"). É assim que o ativo personaliza a peça, como na experimentação do Star Wars Galaxies ([03, §7](../01-pesquisa/03-alem-do-idle.md)), sem ganhar poder bruto além do teto de +25%.
 - **Assinatura.** Fino e Obra-prima levam o nome do artesão. A reputação vira marca no mercado ([03, §7](../01-pesquisa/03-alem-do-idle.md)).
 - **Exemplo (espada de ferro, T2):** Comum, 16 de dano e 6% de Bloqueio; Bom, 17,3 e 6,5%; Fino, 18,6 e 7,0%, mais 1 ponto; Obra-prima, 20,0 e 7,5%, mais 2 a 5 pontos. Uma espada de aço Comum (T3) tem 26 de dano: a obra-prima de ferro não alcança o tier seguinte.
 
@@ -205,7 +207,7 @@ O secundário é um percentual fixo por família, multiplicado pela qualidade e 
 ### 6.1 Regras
 
 1. **Unidade:** ponto de durabilidade (pd). Equipamento de combate nasce com **D0 = 120 pd**; ferramenta, com **D0 = 300 pd**.
-2. **Desgaste só no uso:** 10 pd por hora de uso normal. Multiplicadores de atividade: combate comum ×1,0; masmorra e Travessia ×1,5; cerco ×2,0; ferramenta em fila de ofício ×1,0; sessão de Faro, 2 pd por golpe (20 pd num desmoronamento). Item no baú, ou equipado com a fila parada, não perde nada. A reconciliar com o [04](04-combate.md).
+2. **Desgaste só no uso:** 10 pd por hora de uso normal. Multiplicadores de atividade: combate comum ×1,0; masmorra e Fronteira ×1,5; cerco ×2,0; ferramenta em fila de ofício ×1,0; sessão de Faro, 2 pd por golpe (20 pd num desmoronamento). Item no baú, ou equipado com a fila parada, não perde nada. A reconciliar com o [04](04-combate.md).
 3. **Reparo:** devolve a durabilidade até o novo máximo, consome kits de reparo e tira **20% da durabilidade máxima original**. Uma peça aceita **3 reparos**. No 4º zero, ela **quebra e some**.
 4. **Peça zerada com reparo disponível fica inoperante, não quebra.** Ela espera o reparo, manual ou automático. Só a última vida termina em quebra.
 5. **Kits:** cada reparo consome `K = arredondar(maior quantidade de um insumo na receita ÷ 8)` kits do mesmo tier, no mínimo 1, mais uma pequena **taxa de bancada em ouro, destruída** (valor no [07](07-economia.md)).
@@ -227,19 +229,19 @@ Lendário: `D0 × 1,5`, perda de 10% por reparo e 6 reparos, ou seja, `vida = 4,
 
 | Fase | Durabilidade máxima | Horas de uso normal | Custo da fase |
 |---|---|---|---|
-| Nova | 120 × 1,2 × 1,05 = **151 pd** | 15,1 h | A espada: 16 lingotes de ferro + 2 cabos de peroba + 2 couros de javali |
+| Nova | 120 × 1,2 × 1,05 = **151 pd** | 15,1 h | A espada: 16 lingotes de ferro + 2 cabos de bétula + 2 couros de lobo |
 | 1º reparo | 151 × 0,8 = 121 pd | 12,1 h | 2 kits de metal T2 = 8 lingotes de ferro + 4 carvões |
 | 2º reparo | 151 × 0,6 = 91 pd | 9,1 h | idem |
 | 3º reparo (última vida) | 151 × 0,4 = 60 pd | 6,0 h | idem |
-| **Total** | 423 pd | **42,3 h** (35,3 h na mistura de referência) | 40 lingotes de ferro (120 minérios), 92 carvões (46 toras de cedro ou peroba), 2 cabos, 2 couros |
+| **Total** | 423 pd | **42,3 h** (35,3 h na mistura de referência) | 40 lingotes de ferro (120 minérios), 92 carvões (46 toras de pinho ou bétula), 2 cabos, 2 couros |
 
-**A decisão do jogador.** Em trabalho embutido (06, seção 11.4), a espada de ferro Comum vale cerca de 60 minutos de ofício e dá 12 h na primeira vida (5 min/h). O 3º reparo custa 2 kits (cerca de 14 minutos) por 6 h (2,4 min/h). Reparar compensa sempre, mas cada vez menos. A última vida é o momento de encomendar a próxima peça.
+**A decisão do jogador.** Em trabalho embutido ([06](06-oficios-e-coleta.md), seção 11.5), a espada de ferro Comum vale cerca de 60 minutos de ofício e dá 12 h na primeira vida (5 min/h). O 3º reparo custa 2 kits (cerca de 14 minutos) por 6 h (2,4 min/h). Reparar compensa sempre, mas cada vez menos. A última vida é o momento de encomendar a próxima peça.
 
 ### 6.4 Kits de reparo
 
 | Kit | Receita (tier n) | Quem faz | Repara |
 |---|---|---|---|
-| Kit de metal | 4 lingotes + 2 carvões | Ferraria | Armas de metal, armadura pesada, lamparina, ferramentas de metal |
+| Kit de metal | 4 lingotes + 2 carvões | Ferraria | Armas de metal, armadura pesada, lanterna, ferramentas de metal |
 | Kit de costura | 2 couros + 2 tecidos + 4 linhas | Alfaiataria | Armaduras média e leve, aljava, bornal, fole |
 | Kit de marcenaria | 4 tábuas + 2 resinas | Carpintaria | Arco, escudo, cajado, bordão, vara de pesca, tear, pilão |
 
@@ -255,7 +257,7 @@ Kits por reparo de cada peça: [06](06-oficios-e-coleta.md), tabela 11.3. Exempl
 
 ### 6.6 Vida útil de referência (para a simulação)
 
-Mistura de referência [H]: 70% de combate comum, 20% de masmorra ou Travessia e 10% de cerco, o que dá `10 × (0,7 + 0,2 × 1,5 + 0,1 × 2) = 12 pd/h`.
+Mistura de referência [H]: 70% de combate comum, 20% de masmorra ou Fronteira e 10% de cerco, o que dá `10 × (0,7 + 0,2 × 1,5 + 0,1 × 2) = 12 pd/h`.
 
 | Item | Dmax(0) | Vida em uso normal (10 pd/h) | Vida na mistura (12 pd/h) |
 |---|---|---|---|
@@ -290,51 +292,51 @@ Mistura de referência [H]: 70% de combate comum, 20% de masmorra ou Travessia e
 | Traço (família) | Ganho | Custo |
 |---|---|---|
 | Canto do ferro (espada) | +8% de dano em cerco | −4% de dano fora do cerco |
-| Sombra mansa (facão) | +10% de achados na Bruma | −5% de crítico |
+| Sombra mansa (adaga) | +10% de achados na Névoa | −5% de crítico |
 | Vento de través (arco) | +6% de precisão em masmorra | −6% de dano em cerco |
-| Brasa de vaga-lume (cajado) | +1 alvo atingido na área a cada 2 encantos | −8% de dano no alvo principal |
-| Chá de vó (bordão) | +10% de cura em aliados abaixo de 30% de vida | −5% de dano |
-| Couro de mateiro (gibão) | +6% de esquiva | −6% de defesa |
-| Muralha do vau (couraça) | +10% de firmeza em cerco | +10% de desgaste |
-| Mão de mateiro (machado) | +15% de chance de matéria rara no Faro | −5% de velocidade na fila |
+| Centelha errante (cajado) | +1 alvo atingido na área a cada 2 magias | −8% de dano no alvo principal |
+| Mão curadora (bordão) | +10% de cura em aliados abaixo de 30% de vida | −5% de dano |
+| Couro de andarilho (gibão) | +6% de esquiva | −6% de defesa |
+| Muralha de Pedraforte (couraça) | +10% de firmeza em cerco | +10% de desgaste |
+| Mão de lenhador (machado) | +15% de chance de matéria rara no Faro | −5% de velocidade na fila |
 
 ### 7.2 Lendário: contado, nomeado e finito
 
 | Regra | Valor [H] |
 |---|---|
 | Tiers | Só T4, T5 e T6 |
-| Receita | Uma peça preparada para obra-prima, mais **1 Relíquia da Travessia** do tier, **2 insumos nobres** da linha da peça, 2 reagentes e 10 de Inspiração, feita na **Bancada das Lendas**, prédio aberto por uma Obra (a reconciliar com o [09](09-social.md)) |
+| Receita | Uma peça preparada para obra-prima, mais **1 Relíquia da Fronteira** do tier, **2 insumos nobres** da linha da peça, 2 reagentes e 10 de Inspiração, feita na **Bancada das Lendas**, prédio aberto por uma Obra (a reconciliar com o [09](09-social.md)) |
 | Quem forja | Mestre com nível igual ou maior que o da receita + 10; **no máximo 1 lendário por mestre por Era** |
 | Sessão | 5 etapas, em vez de 4. Sucesso a partir de 120 pontos, sem trincar. Se falhar, a peça sai obra-prima (ou Comum, se trincar), **a relíquia volta ao dono** e os insumos nobres e reagentes são consumidos |
-| **Limite** | **No máximo 24 lendários forjados por Era em cada Arraial** (8 de T4, 8 de T5 e 8 de T6), com contador público. Cada relíquia vale por duas Eras (a de origem e a seguinte) e depois vira decoração presa à conta |
+| **Limite** | **No máximo 24 lendários forjados por Era em cada Cidade** (8 de T4, 8 de T5 e 8 de T6), com contador público. Cada relíquia vale por duas Eras (a de origem e a seguinte) e depois vira decoração presa à conta |
 | Poder | ×1,30 (a obra-prima tem ×1,25), 5 pontos de acabamento e 1 efeito lendário da lista da família |
 | Durabilidade | D0 × 1,5; cada reparo tira 10%; 6 reparos; cerca de 88 h de uso normal |
-| Memória | O forjador dá o nome. O **Livro de Lendas do Arraial** registra o forjador, a expedição da Travessia que achou a relíquia, os donos, os feitos (cercos, chefes) e o fim |
-| Fim | Ao quebrar, vira **Relíquia partida** (decoração presa ao último dono) e a página do Livro se fecha. Em vida, pode ser aposentado e doado ao Salão do Arraial, o que rende Mérito (a reconciliar com o [09](09-social.md)) |
-| Mercado | Pregão (e Troca, sob o risco de troca do [13](13-anti-abuso.md)) |
-| Era 1 | Não há lendários. Os primeiros nascem da 1ª Travessia, na 2ª Era |
+| Memória | O forjador dá o nome. O **Livro de Lendas da Cidade** registra o forjador, a expedição da Fronteira que achou a relíquia, os donos, os feitos (cercos, chefes) e o fim |
+| Fim | Ao quebrar, vira **Relíquia partida** (decoração presa ao último dono) e a página do Livro se fecha. Em vida, pode ser aposentado e doado ao Salão da Cidade, o que rende Mérito (a reconciliar com o [09](09-social.md)) |
+| Mercado | Leilão (e Troca, sob o risco de troca do [13](13-anti-abuso.md)) |
+| Era 1 | Não há lendários. Os primeiros nascem da 1ª Fronteira, na 2ª Era |
 
 **Efeitos lendários** (exemplos; a lista é pública e fechada por família):
-- *Guardião do Vau* (couraça): quando o dono defende um cerco, a guarnição dele recebe +5% de defesa.
+- *Bastião de Pedraforte* (couraça): quando o dono defende um cerco, a guarnição dele recebe +5% de defesa.
 - *Flecha que volta* (aljava): 20% das flechas disparadas voltam à aljava.
-- *Facho do Batedor* (lamparina): na Travessia, a expedição do dono revela uma região vizinha a mais no mapa coletivo.
+- *Facho do Ladino* (lanterna): na Fronteira, a expedição do dono revela uma região vizinha a mais no mapa coletivo.
 
-**De onde vêm as relíquias:** das metas coletivas e dos destaques da Travessia. Proposta para o [10](10-live-ops.md): 12 relíquias por metas coletivas do servidor e 12 por destaques individuais e de guilda.
+**De onde vêm as relíquias:** das metas coletivas e dos destaques da Fronteira. Proposta para o [10](10-live-ops.md): 12 relíquias por metas coletivas do servidor e 12 por destaques individuais e de guilda.
 
 ### 7.3 Comparação
 
 | | Obra-prima | Único | Lendário |
 |---|---|---|---|
 | Poder sobre a Comum | +25% | +25% e um traço de troca | +30%, 5 pontos e um efeito |
-| Limite | Inspiração do artesão | Raridade natural (2% a 5% das sessões boas) | 24 por Era por Arraial; 1 por mestre por Era |
+| Limite | Inspiração do artesão | Raridade natural (2% a 5% das sessões boas) | 24 por Era por Cidade; 1 por mestre por Era |
 | Exige | Sessão ativa | Sessão de 130 pontos ou mais, com insumo nobre | Relíquia, 2 insumos nobres, Bancada das Lendas |
 | Vida útil (uso normal) | 44 a 55 h | 44 a 55 h | cerca de 88 h |
-| Onde se vende | Feira | Feira ou Pregão | Pregão |
+| Onde se vende | Feira | Feira ou Leilão | Leilão |
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
 | Único com traço horizontal e sem limite | [H] Lei do mercado complementar (lei 14, [02](../01-pesquisa/02-padroes-matriz-leis.md)); assinatura do artesão ([03, §7](../01-pesquisa/03-alem-do-idle.md)) | Desejo por algo raro sem criar poder que se compra | Caçar a sessão perfeita e escolher o traço para o próprio estilo | Um traço "obrigatório" para cerco; revisar a lista a cada Era, com aviso |
-| Lendário contado por Era, com relíquia da Travessia e fim certo | [F] Tetos e eventos públicos para itens de topo no Black Desert ([F08](../01-pesquisa/fichas/F08-black-desert.md)); temporadas que devolvem cosmético e relíquia ([02-conceito](../02-conceito.md)) | Topo de equipamento que se acumula para sempre e concentra poder | A Travessia abastece a cidade; o forjador vira personagem da história do servidor | Guildas ricas compram todas as relíquias; mitigado pelo limite de 1 lendário por mestre por Era, pelo fim em cerca de 88 h e pelo Pregão público |
+| Lendário contado por Era, com relíquia da Fronteira e fim certo | [F] Tetos e eventos públicos para itens de topo no Black Desert ([F08](../01-pesquisa/fichas/F08-black-desert.md)); temporadas que devolvem cosmético e relíquia ([02-conceito](../02-conceito.md)) | Topo de equipamento que se acumula para sempre e concentra poder | A Fronteira abastece a cidade; o forjador vira personagem da história do servidor | Guildas ricas compram todas as relíquias; mitigado pelo limite de 1 lendário por mestre por Era, pelo fim em cerca de 88 h e pelo Leilão público |
 | Relíquia volta ao dono quando a forja falha | [F] O "pity" do Black Desert, em que o azar tem fim conhecido ([F08](../01-pesquisa/fichas/F08-black-desert.md)) | Perder um item contado por um sorteio | Tentar sem medo, com custo real nos insumos nobres | Tentativas demais travam a relíquia; ela expira em duas Eras |
 
 ## 8. Cosméticos
@@ -353,51 +355,51 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 
 | Fonte | Negociável? | Observação |
 |---|---|---|
-| Baú do Mascate | Sim, fechado ou como item antes de aplicar | Alvará na loja ou ouro no mercado (decisão do checkpoint 1) |
-| Loja de cosméticos (venda direta por Alvará) | Sim, antes de aplicar | Conteúdo e preço no [11](11-monetizacao.md) |
-| Travessia | Não | Cosméticos de temporada presos à conta; o RMT fica fora da temporada (lei 22) |
+| Baú Misterioso | Sim, fechado ou como item antes de aplicar | Coins na loja ou ouro no mercado (decisão do checkpoint 1) |
+| Loja de cosméticos (venda direta por Coins) | Sim, antes de aplicar | Conteúdo e preço no [11](11-monetizacao.md) |
+| Fronteira | Não | Cosméticos de temporada presos à conta; o RMT fica fora da temporada (lei 22) |
 | Mérito e títulos da cidade | Não | Reconhecimento cívico |
-| **Moda do Arraial** (feita por ofícios) | Sim, enquanto nova | Seção 8.5 |
+| **Moda da Cidade** (feita por ofícios) | Sim, enquanto nova | Seção 8.5 |
 | Troféus (peças aposentadas) e Relíquia partida | Não | Seção 6.5 e 7.2 |
 
-### 8.4 Baú do Mascate
+### 8.4 Baú Misterioso
 
 **Conteúdo (sempre item, sempre cosmético ou decorativo):**
 
 | Categoria | Exemplos |
 |---|---|
-| Aparência de arma e de armadura | Espada de São João (com fitas de festa junina), couraça de escamas de pirarucu, cajado de mandacaru |
-| Conjunto visual de roupa | Gibão de vaqueiro do sertão, túnica de rendeira |
-| Decoração da casa | Rede de dormir bordada, oratório de madeira, luminária de lamparina de cobre, tapete de renda |
-| Aparência de ajudante | Ajudante com chapéu de couro, ajudante pescador com puçá |
-| Efeito visual | Rastro de vaga-lumes, brilho de lamparina |
-| Moldura de perfil e emote | Moldura de azulejo, emote "puxar o fole" |
+| Aparência de arma e de armadura | Espada da festa da colheita (com fitas de trigo), couraça de escamas de dragão, cajado de galho retorcido |
+| Conjunto visual de roupa | Gibão de patrulheiro da Fronteira, túnica de bordadeira |
+| Decoração da casa | Tapeçaria bordada, estante de pergaminhos, candelabro de cobre, tapete de lã |
+| Aparência de ajudante | Ajudante com capuz de viajante, ajudante pescador com rede |
+| Efeito visual | Rastro de vaga-lumes, brilho de lanterna |
+| Moldura de perfil e emote | Moldura de vitral, emote "puxar o fole" |
 
 **Faixas e chances publicadas** [H; o [11](11-monetizacao.md) fixa os números]:
 
 | Faixa | Chance |
 |---|---|
 | Simples | 65% |
-| Caprichado | 27% |
+| Refinado | 27% |
 | Raro | 7% |
 | Raríssimo | 1% |
 
 - **Garantia:** depois de 19 Baús seguidos sem Raro ou Raríssimo, o 20º garante um dos dois. O contador é da conta e aparece na tela.
-- **Coleção por Era:** cada Era traz uma coleção temática. Para não criar medo de perder (FOMO), coleções antigas voltam num "Arquivo do Mascate" depois de 12 meses, como o Legacy Vault do IdleMMO ([C04](../01-pesquisa/fichas/C04-idlemmo.md)).
-- **Nunca no Baú:** nada da seção 8.1, nem kit, reagente, material, ouro, Alvará, relíquia, Inspiração, fila ou tempo de offline.
+- **Coleção por Era:** cada Era traz uma coleção temática. Para não criar medo de perder (FOMO), coleções antigas voltam num "Arquivo do Baú" depois de 12 meses, como o Legacy Vault do IdleMMO ([C04](../01-pesquisa/fichas/C04-idlemmo.md)).
+- **Nunca no Baú:** nada da seção 8.1, nem kit, reagente, material, ouro, Coins, relíquia, Inspiração, fila ou tempo de offline.
 - **Teto de gasto e chances publicadas** (salvaguarda S5): no [11](11-monetizacao.md).
-- **Jurídico.** Uma caixa paga, com sorte e com conteúdo que se revende por ouro (e o ouro tem preço em reais via Alvará) reúne pagamento, sorte e prêmio com valor econômico. Normas: Lei de Contravenções Penais, art. 50 (jogo de azar); Lei 15.211/2025 (ECA Digital), art. 2º, IV, e art. 20, que vedam caixas de recompensa em jogos acessíveis a menores; aqui, o jogo é 18+ com idade verificada ([05b](../01-pesquisa/05b-rmt-legal-brasil.md)). É decisão do Gabriel, com risco assumido (bíblia, seção 5). **Validar com advogado.**
+- **Jurídico.** Uma caixa paga com Coins (que vêm de doação em reais) ou com ouro (que se troca por Coins no Câmbio), com sorte e com conteúdo que se revende por ouro, reúne pagamento, sorte e prêmio com valor econômico. Normas: Lei de Contravenções Penais, art. 50 (jogo de azar); Lei 15.211/2025 (ECA Digital), art. 2º, IV, e art. 20, que vedam caixas de recompensa em jogos acessíveis a menores; aqui, o jogo é 18+ com idade verificada ([05b](../01-pesquisa/05b-rmt-legal-brasil.md)). É decisão do Gabriel, com risco assumido (bíblia, seção 5). **Validar com advogado.**
 
-### 8.5 Moda do Arraial: cosmético feito por ofício, que se gasta
+### 8.5 Moda da Cidade: cosmético feito por ofício, que se gasta
 
-- **O que é:** roupas e acessórios de festa sem nenhum atributo, feitos pela Alfaiataria com tecido, linha, corante (Alquimia) e, nas versões finas, renda (Tecelagem). Exemplos: traje de quadrilha, chapéu de couro de vaqueiro, vestido de chita.
+- **O que é:** roupas e acessórios de festa sem nenhum atributo, feitos pela Alfaiataria com tecido, linha, corante (Alquimia) e, nas versões finas, brocado (Tecelagem). Exemplos: traje da festa da colheita, manto da festa de inverno, máscara da noite dos mortos, faixa do aniversário da Cidade.
 - **Desgaste:** a peça é negociável enquanto nova. Ao ser vestida, prende-se à conta e **dura 30 dias de uso** (dias em que esteve vestida). Depois, puiu.
 - **Por que existe:** dá demanda à Tecelagem, à Alfaiataria e à Alquimia fora do combate, deixa o artesão vender estilo, e não poder, e cumpre o P3. Receitas no [06](06-oficios-e-coleta.md), seção 12.
-- **Temas sazonais** (festa junina, festas regionais) passam pela revisão de sensibilidade cultural do [14](14-arte-e-ui.md).
+- **Temas sazonais:** as festas de fantasia medieval da bíblia (colheita, inverno, mortos, aniversário da Cidade e outras). O visual passa pela revisão de semelhança com outros jogos do [14](14-arte-e-ui.md).
 
 ### 8.6 Decoração da casa
 
-- **Fontes:** móveis feitos por ofício (Carpintaria: mesa, cadeira de balanço, oratório; Tecelagem: rede de dormir, tapete; Ferraria: luminária de cobre), o Baú, os troféus e as relíquias partidas.
+- **Fontes:** móveis feitos por ofício (Carpintaria: mesa, cadeira de balanço, estante de pergaminhos; Tecelagem: tapeçaria, tapete; Ferraria: candelabro de cobre), o Baú, os troféus e as relíquias partidas.
 - **Colocar prende:** um móvel negociável, ao ser colocado na casa, prende-se a ela e sai do mercado.
 - **Zero vantagem de jogo,** como diz a seção 8.1. A casa é vitrine, memória e lugar de visita.
 
@@ -405,7 +407,7 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 |---|---|---|---|---|
 | Cosmético nunca vira poder, nem se desmonta | [F] Roupa virando Cron Stone no Black Desert ([F08](../01-pesquisa/fichas/F08-black-desert.md)); insight 24 ([00](../01-pesquisa/00-sintese.md)) | Rótulo de *pay-to-win* | Comprar identidade, e não vantagem | Pressão comercial para "só um bônus pequeno"; a regra entra na carta pública de monetização |
 | Aplicar consome e prende no guarda-roupa | [H] P3 aplicado a um item negociável | Cosmético eterno circulando sem dreno | Colecionar; o mercado de cosméticos se renova a cada Era | Quem aplica por engano perde o item; pedir confirmação ao aplicar |
-| Moda do Arraial com 30 dias de uso | [H] Demanda fora do combate para a cadeia têxtil | Tecelagem e Alfaiataria dependentes só da guerra | Vestir-se para eventos e encomendar roupa de festa | Concorrer com o Baú; a Moda é mais barata e efêmera, o Baú é permanente |
+| Moda da Cidade com 30 dias de uso | [H] Demanda fora do combate para a cadeia têxtil | Tecelagem e Alfaiataria dependentes só da guerra | Vestir-se para eventos e encomendar roupa de festa | Concorrer com o Baú; a Moda é mais barata e efêmera, o Baú é permanente |
 
 ## 9. O que é negociável e o que fica preso à conta (piso P2)
 
@@ -415,17 +417,17 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 | Matérias raras, insumos nobres, o acréscimo de qualidade da obra-prima e o lote Fino (nascem de ação ativa e não contam no teto) | Tudo comprado nas **oficinas NPC de reforço** |
 | Equipamentos e ferramentas, novos ou usados (a peça usada vale pelo que resta) | Tudo feito com **pelo menos um insumo preso** ("o vínculo contamina") |
 | Únicos e lendários (com registro público) | Inspiração, Mérito, Marcos, Selo de mestre, títulos e ajudantes |
-| Relíquias da Travessia, até expirarem | Cosméticos aplicados (guarda-roupa), móveis colocados, Moda vestida, troféus e relíquias partidas |
+| Relíquias da Fronteira, até expirarem | Cosméticos aplicados (guarda-roupa), móveis colocados, Moda vestida, troféus e relíquias partidas |
 | Cosméticos ainda não aplicados (Baú fechado ou aberto, loja, Moda nova) | Recompensas de primeira semana e kit inicial do onboarding ([12](12-onboarding.md)) |
-| Ouro e Alvará (bíblia) | Cosméticos de Travessia e de Mérito |
+| Ouro e Coins (bíblia) | Cosméticos de Fronteira e de Mérito |
 
 **Como o teto de emissão se aplica aos itens** (números no [07](07-economia.md)):
-1. **Contado em valor de referência (VR),** e não em unidades. O VR de cada item é o trabalho embutido nele, em minutos de ofício, convertido em ouro por uma taxa de referência do 07. A tabela de trabalho embutido está no [06](06-oficios-e-coleta.md), seção 11.4. Contar em VR impede contornar o teto fabricando poucas peças caras.
+1. **Contado em valor de referência (VR),** e não em unidades. O VR de cada item é o trabalho embutido nele, em minutos de ofício, convertido em ouro por uma taxa de referência do 07. A tabela de trabalho embutido está no [06](06-oficios-e-coleta.md), seção 11.5. Contar em VR impede contornar o teto fabricando poucas peças caras.
 2. **A fila emite.** Cada unidade que a fila produz soma o seu VR à conta do dia. Enquanto houver espaço, nasce negociável; depois, nasce presa. A peça preparada para obra-prima conta pelo VR da versão Comum. O que a sessão ativa acrescenta não conta.
 3. **O ausente decide antes de sair** o que fazer quando bater o teto: continuar produzindo preso (para uso próprio e Encomendas), trocar a fila para uma atividade de progresso ou doar o excedente às Obras, que o transformam em Mérito.
 4. **O vínculo contamina.** Sem essa regra, o excedente preso viraria peça negociável na etapa seguinte da cadeia, e o teto vazaria. Reparar uma peça com kit preso é permitido, porque o reparo não cria item.
 
-**Exemplo.** A ferreira Zefa bate o teto do dia às 15 h. A espada que sai às 16 h nasce presa: ela pode usá-la, entregá-la numa Encomenda da cidade ou doá-la a uma Obra, mas não pode vendê-la. Os lingotes que ela comprou na Bolsa continuam negociáveis enquanto estiverem no baú. Se ela tivesse usado um lingote da oficina NPC, a espada nasceria presa mesmo antes do teto.
+**Exemplo.** A ferreira Edda bate o teto do dia às 15 h. A espada que sai às 16 h nasce presa: ela pode usá-la, entregá-la numa Encomenda da cidade ou doá-la a uma Obra, mas não pode vendê-la. Os lingotes que ela comprou na Bolsa continuam negociáveis enquanto estiverem no baú. Se ela tivesse usado um lingote da oficina NPC, a espada nasceria presa mesmo antes do teto.
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
@@ -441,18 +443,19 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 | [04 — Combate](04-combate.md) | PI por tier, fatores de família, desgaste por atividade (×1,0 / ×1,5 / ×2,0), proibição de equipamento como drop | Drops de material por hora (o [06](06-oficios-e-coleta.md), seção 9.4, pede cerca de 3,5 peles, 6 carnes e 3,5 cinzas por hora de combate) |
 | [07 — Economia](07-economia.md) | Regras de durabilidade e reparo (o dreno principal), classes de balcão (seção 9 e [06](06-oficios-e-coleta.md), seção 7), regra de vínculo, VR em minutos de ofício | Ouro por minuto de referência, valor do teto de emissão, taxa de bancada |
 | [08 — Simulação](08-simulacao.md) | D0 = 120 pd (300 nas ferramentas), 10 pd/h, 3 reparos de −20%, kits por reparo, mistura de atividades, vida útil (tabela 6.6), distribuição de qualidades, 24 lendários por Era, chances do Baú | — |
-| [10 — Live-ops](10-live-ops.md) | Relíquias por Era, coleções do Mascate, Moda sazonal | Calendário de Travessias e de eventos |
+| [10 — Live-ops](10-live-ops.md) | Relíquias por Era, coleções do Baú, Moda sazonal | Calendário de Fronteiras e de eventos |
 | [11 — Monetização](11-monetizacao.md) | Conteúdo e faixas do Baú; regra de ouro dos cosméticos | Preços, teto de gasto |
-| [13 — Anti-abuso](13-anti-abuso.md) | Vínculo, oficina NPC presa, lendários no Pregão | Risco de troca para peças caras |
-| [14 — Arte e UI](14-arte-e-ui.md) | Guarda-roupa, troféus, Livro de Lendas, selo de negociável nas pilhas | Revisão de sensibilidade dos nomes |
+| [13 — Anti-abuso](13-anti-abuso.md) | Vínculo, oficina NPC presa, lendários no Leilão | Risco de troca para peças caras |
+| [14 — Arte e UI](14-arte-e-ui.md) | Guarda-roupa, troféus, Livro de Lendas, selo de negociável nas pilhas, ícones em pixel art de cada material por tier | Revisão de semelhança dos nomes e visuais com outros jogos |
 
 ## 11. Propostas de mudança na bíblia
 
 1. **[proposta de mudança na bíblia] Consumíveis com dois graus** (Comum e Fino), e não quatro. Motivo: liquidez da Bolsa (seção 5.3).
-2. **[proposta de mudança na bíblia] Novos números-âncora em 6.5:** `PI(T) = 10 × 1,6^(T−1)`; D0 = 120 pd (ferramentas 300); desgaste de 10 pd por hora de uso; 3 reparos de −20% cada; vida de referência de 34 h para Comum e 44 h para obra-prima; 24 lendários por Era por Arraial.
+2. **[proposta de mudança na bíblia] Novos números-âncora em 6.5:** `PI(T) = 10 × 1,6^(T−1)`; D0 = 120 pd (ferramentas 300); desgaste de 10 pd por hora de uso; 3 reparos de −20% cada; vida de referência de 34 h para Comum e 44 h para obra-prima; 24 lendários por Era por Cidade.
 3. **[proposta de mudança na bíblia] Teto de emissão medido em valor de referência** (trabalho embutido), com a regra "o vínculo contamina". A reconciliar com o 07.
 4. **[proposta de mudança na bíblia] Bolsa também para peças Comuns novas** (são fungíveis), o que dá ao volume do ausente um mercado líquido. A reconciliar com o 07.
-5. **[proposta de mudança na bíblia] Termos novos no glossário:** Inspiração, Faro, kit de reparo, matéria rara, insumo nobre, reagente, Relíquia da Travessia, Único, Lendário, guarda-roupa, Moda do Arraial, Oficina do Arraial, valor de referência (VR), troféu e Livro de Lendas.
+5. **[proposta de mudança na bíblia] Lista fechada de materiais em 6.5:** a tabela 2.1 (cobre, ferro, aço, prata, platina, aldarita; pinho, bétula, carvalho, freixo, teixo, ébano; e as demais linhas) substitui os exemplos da bíblia. Como a bíblia sugeria cinco metais para seis tiers, a platina entra como T5.
+6. **[proposta de mudança na bíblia] Termos novos no glossário:** Inspiração, Faro, kit de reparo, matéria rara, insumo nobre, reagente, Relíquia da Fronteira, Único, Lendário, guarda-roupa, Moda da Cidade, Oficina da Cidade, valor de referência (VR), troféu e Livro de Lendas.
 
 ## Como isso pode dar errado
 
@@ -462,11 +465,11 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 | **O desgaste parece imposto artificial** | Jogadores rejeitam degradação que não vem do uso, como no Ultima Online ([04a, §4.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)). | Nada se desgasta parado; o custo por hora aparece na tela da atividade, ao lado do ganho por hora. |
 | **Drenos fracos ou fortes demais** | A vida útil de 34 h e o custo de reparo estão errados para a economia real. | Todos os parâmetros vão para a simulação (08); mudanças só entre Eras, com aviso e dados (lei 21). |
 | **A obra-prima vira requisito** | Masmorras e cercos calibrados para equipamento Fino. | O 04 calibra o conteúdo pela peça Comum do tier; a qualidade é margem de conforto, não chave. |
-| **O lendário concentra poder e vira alvo de RMT** | Uma guilda compra todas as relíquias e equipa só os seus. | Limite de 24 por Era e de 1 por mestre; efeito modesto (+5% sobre a obra-prima); fim em cerca de 88 h; Pregão público e risco de troca. |
+| **O lendário concentra poder e vira alvo de RMT** | Uma guilda compra todas as relíquias e equipa só os seus. | Limite de 24 por Era e de 1 por mestre; efeito modesto (+5% sobre a obra-prima); fim em cerca de 88 h; Leilão público e risco de troca. |
 | **Cosmético vira poder por pressão comercial** | Um bônus de decoração "só de conforto" entra para vender mais. | A regra de ouro (8.1) entra na carta pública de monetização; qualquer exceção exige anúncio público. |
 | **O Baú é questionado juridicamente** | Caixa paga, com sorte e prêmio revendável (LCP, art. 50; Lei 15.211/2025, art. 20). | Jogo 18+ verificado; chances publicadas; garantia; teto de gasto; conteúdo só cosmético; decisão registrada do Gabriel. **Validar com advogado.** |
 | **A Feira fragmentada esconde o bom negócio** | Qualidades, acabamentos e vidas restantes geram milhares de anúncios únicos. | Valor estimado por qualidade e vida restante (à moda do Milky Way Idle, [C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); filtros; Comum nova na Bolsa. |
 | **"O vínculo contamina" é mal entendido** | O jogador mistura uma pilha presa na receita e perde a venda. | Selo visível em cada pilha; a receita avisa antes de produzir; uma opção "nunca usar insumo preso em produção para venda". |
-| **Nomes e fauna geram polêmica** | Caçar jacaré e sucuri, ou usar topônimos indígenas, é criticado. | Fauna tratada como feras tocadas pela Bruma; revisão de sensibilidade cultural e ambiental no 14 antes de fechar os nomes; lista de substitutos pronta. |
+| **Nomes genéricos ou parecidos com outro jogo** | Cobre, ferro, carvalho e dragão são comuns no gênero, e um nome de material ou visual de item acaba igual ao de outro jogo (risco de "mais um clone" e de propriedade intelectual, bíblia, seção 3). | Liga rara e materiais da Névoa com nomes próprios (aldarita, seda-de-névoa, lírio-da-névoa); lista de nomes proibidos (mithril, adamantita, runita, oricalco e afins); revisão de semelhança no 14 antes de fechar nomes e ícones. |
 | **Bots no Faro e na obra-prima** | Um script joga as sessões melhor que o humano. | A Inspiração limita o volume por conta (um bot rende o mesmo que um humano); a conta é um adulto verificado (P8). |
 
