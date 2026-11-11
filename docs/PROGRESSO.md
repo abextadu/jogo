@@ -1,69 +1,53 @@
 # Progresso do projeto
 
-> Atualizado em: 2026-11-06 · Dono do produto: Gabriel · Estúdio: Claude
+> Atualizado em: 2026-11-11 · Dono do produto: Gabriel · Estúdio: Claude
 > Este arquivo é a fonte da verdade sobre onde paramos. Qualquer sessão nova começa por aqui.
 
 ## Fase atual
 
-**Fase 1 — Pesquisa profunda: em andamento.** Próximo marco: 🛑 checkpoint da Fase 1.
+**Fase 1 — Pesquisa profunda: concluída.** 🛑 **Checkpoint da Fase 1 aguardando as decisões do Gabriel.** A Fase 2 só começa com o ok dele.
 
 | Fase | Entregável | Status |
 |---|---|---|
-| 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | 🟡 Em andamento |
+| 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · 🛑 checkpoint pendente |
 | 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ⚪ Não iniciada |
 | 3. GDD + simulação da economia | `docs/03-gdd/` | ⚪ Não iniciada |
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
 
-## Plano da Fase 1
+## Pendências: decisões do checkpoint da Fase 1
 
-Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa/METODOLOGIA.md`](01-pesquisa/METODOLOGIA.md).
+Detalhe, opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintese.md), seção "Checkpoint da Fase 1".
 
-- **Onda 1 (em paralelo):** 17 pesquisadores escrevem 47 fichas de jogos (grupos A a G) e 7 pesquisadores escrevem os estudos que não dependem das fichas: teoria do design idle, além do idle, jurídico Brasil, jurídico global e pagamentos, monetização e retenção, técnica, mercado e posicionamento.
-- **Onda 2 (depois das fichas de MMOs, idles multiplayer e casos de alerta):** economia (fontes e drenos, inflação; mercados, proteções e bots) e RMT (modelos, mercado paralelo e recomendação). Esses estudos leem as fichas para não refazer pesquisa.
-- **Fechamento:** mapa do gênero, padrões + matriz + leis do design idle, síntese com os 30 insights e checkpoint.
+| # | Decisão | Recomendação do estúdio | Decisão do Gabriel |
+|---|---|---|---|
+| 1 | Até onde vai o dinheiro real | (A) Dinheiro só entra: token-item revendável por ouro uma vez; nada de saque, leilão em reais, crédito em reais ou venda de contas | — |
+| 2 | Aleatoriedade paga | (A) Nenhuma, nem com dinheiro nem com ouro | — |
+| 3 | Para quem é o jogo | (A) Para todos, com modo protegido para menores; vender token e comprar acima de um teto só para adulto verificado | — |
+| 4 | Onde e como lançamos | (A) Brasil primeiro, bilíngue, servidor no Brasil, Pix, PWA; Steam e lojas depois, sem RMT nas lojas | — |
+| 5 | Quando trazer advogado | (A) Agora, em paralelo à Fase 2, com as 8 perguntas que travam o GDD | — |
 
-**Execução:** lotes de 6 pesquisadores. Quando um termina, entra o próximo da fila.
+## Entregáveis da Fase 1
 
-- **Prontas:** 39 de 47 fichas. Grupos completos: B (6), C (6), F (9), G (7). Parciais: A (A01–A06), D (D01–D02), E (E01–E03). Estudos prontos: teoria do design idle (02a), jurídico Brasil (05b). Gravados em parte: além do idle (03), jurídico global (05c), técnica (07).
-- **Faltam 8 fichas:** Kittens Game (A07), Trimps (A08), Egg Inc. (A09), radar 2023–2026 (A10), Kingdom of Loathing (D03), OGame (D04), Travian (D05), 4ª ficha de mobile AFK (E04).
-- **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
-- **Estudos prontos:** 01 (mapa do gênero), 02 (padrões, matriz e leis), 02a, 03, 04a, 04b, 05b, 05c, 06, 07.
-- **Rodando no Opus:** mercado e posicionamento (08), RMT — modelos e mercado paralelo (05a) e recomendação (05d).
-- **Grupo E completo** (E04 = Capybara Go!, escolhido por dados de receita).
-- **Prontas depois do último balanço:** Egg Inc. (A09), Capybara Go! (E04), Kittens Game (A07), Trimps (A08), OGame (D04), Travian (D05), radar 2023–2026 (A10) e duas fichas extras do radar: Scapewatch (A11) e Deep Vein Idle (A12), idle MMOs lançados em set/2026 e Kingdom of Loathing (D03) — **todas as 47 planejadas + 2 extras = 49 fichas.** Índice em [`01-pesquisa/01-mapa-do-genero.md`](01-pesquisa/01-mapa-do-genero.md).
-- **Estudos gravados em parte (2026-11-11):** além do idle (03), fontes e drenos (04a), jurídico global (05c), monetização (06), técnica (07), mercado (08).
-- **Fila:** nenhuma. Depois dos estudos: 02 (padrões, matriz e leis), 00 (síntese) e checkpoint.
+Índice completo das fichas: [`01-pesquisa/01-mapa-do-genero.md`](01-pesquisa/01-mapa-do-genero.md).
 
-## Checklist de entregáveis da Fase 1
-
-**Fichas (47)**
-- [ ] A — Idle/incremental: Cookie Clicker, Clicker Heroes, AdVenture Capitalist, Realm Grinder, NGU Idle, Antimatter Dimensions, Kittens Game, Trimps, Egg Inc., nova onda 2023–2026
-- [ ] B — Idle RPG single-player: Melvor Idle, Legends of IdleOn, Idle Champions, Soda Dungeon, Idle Slayer, Tap Titans 2
-- [ ] C — Idle multiplayer com economia: Milky Way Idle, Idle Clans, Idlescape, IdleMMO, SimpleMMO, Shop Titans
-- [ ] D — Navegador duradouros: Torn, Shakes & Fidget, Kingdom of Loathing, OGame, Travian
-- [ ] E — Mobile AFK: AFK Arena/AFK Journey, Idle Heroes, Legend of Mushroom, +1
-- [ ] F — MMOs: EVE Online, Albion Online, RuneScape/OSRS, Tibia, Path of Exile, World of Warcraft, Guild Wars 2, Black Desert, Throne and Liberty/Lost Ark
-- [ ] G — Casos de alerta: Diablo III (casa de leilão), Entropia Universe, Axie Infinity/Web3, New World, Banana/Bongo Cat, idles que morreram, economias que colapsaram
-
-**Estudos**
-- [ ] 02a — Teoria do design idle
-- [ ] 03 — Além do idle (1.3)
-- [ ] 04a — Economia: fontes, drenos, inflação, concentração (1.4)
-- [ ] 04b — Economia: modelos de mercado, proteções, bots (1.4)
-- [ ] 05a — RMT: modelos e mercado paralelo (1.5)
-- [ ] 05b — RMT: jurídico Brasil (1.5)
-- [ ] 05c — RMT: jurídico global, meios de pagamento e lojas (1.5)
-- [ ] 05d — RMT: recomendação (1.5)
-- [ ] 06 — Monetização e retenção (1.6)
-- [ ] 07 — Técnica de idles online (1.7)
-- [ ] 08 — Mercado e posicionamento (1.8)
-
-**Fechamento**
-- [ ] 01 — Mapa do gênero (índice das fichas)
-- [ ] 02 — Padrões, matriz comparativa e leis do design idle (1.2)
-- [ ] 00 — Síntese: resumo executivo + 30 insights ranqueados
-- [ ] 🛑 Checkpoint da Fase 1
+- [x] **49 fichas** (47 planejadas + 2 extras) em `01-pesquisa/fichas/`, grupos A a G
+- [x] `00-sintese.md` — resumo executivo, 30 insights ranqueados e checkpoint
+- [x] `01-mapa-do-genero.md` — índice das fichas
+- [x] `02-padroes-matriz-leis.md` — padrões, matriz de 56 jogos e 22 leis
+- [x] `02a-teoria-design-idle.md` — teoria do design idle
+- [x] `03-alem-do-idle.md` — 18 mecânicas de outros gêneros
+- [x] `04a-economia-fontes-drenos-inflacao.md` — fontes, drenos, inflação, concentração
+- [x] `04b-economia-mercados-protecoes-bots.md` — mercados, proteções, bots
+- [x] `05a-rmt-modelos-mercado-paralelo.md` — modelos de RMT e mercado paralelo
+- [x] `05b-rmt-legal-brasil.md` — jurídico Brasil
+- [x] `05c-rmt-legal-global-pagamentos.md` — jurídico global, pagamentos e lojas
+- [x] `05d-rmt-recomendacao.md` — recomendação de RMT
+- [x] `06-monetizacao-retencao.md` — monetização e retenção
+- [x] `07-tecnica-idles-online.md` — técnica de idles online
+- [x] `08-mercado-posicionamento.md` — mercado e posicionamento
+- [x] `_notas-de-sintese.md` — achados de cada relatório, com links (arquivo de trabalho)
+- [ ] 🛑 Checkpoint da Fase 1 (decisões acima)
 
 ## Decisões tomadas
 
@@ -71,15 +55,17 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 |---|---|---|
 | 2026-11-06 | Acesso à web confirmado: a pesquisa usa fontes reais, com link. | Claude |
 | 2026-11-06 | Repositório: https://github.com/abextadu/jogo (branch `main`). Commits com o e-mail privado (noreply) do GitHub. | Gabriel |
-| 2026-11-06 | Pesquisa em duas ondas, com subagentes em paralelo, seguindo `METODOLOGIA.md`. | Claude |
-| 2026-11-07 | Fichas secundárias (idle clássicos, incrementais de nicho, idle RPGs II, mobile AFK, OGame/Travian, radar 2023–2026) pesquisadas com o Sonnet; o resto segue no Opus. | Gabriel |
-| 2026-11-06 | Ampliação da lista de jogos além do mínimo pedido: Egg Inc., Shop Titans, Guild Wars 2, Black Desert, Throne and Liberty/Lost Ark, Entropia Universe, Axie Infinity/Web3, New World, Banana/Bongo Cat e radar 2023–2026. | Claude |
+| 2026-11-06 | Pesquisa com subagentes em paralelo, seguindo `METODOLOGIA.md`. | Claude |
+| 2026-11-06 | Ampliação da lista de jogos além do mínimo pedido (Egg Inc., Shop Titans, GW2, Black Desert, Throne and Liberty/Lost Ark, Entropia, Axie/Web3, New World, Banana/Bongo Cat, radar 2023–2026). | Claude |
+| 2026-11-07 | Fichas secundárias pesquisadas com o Sonnet; o resto no Opus. | Gabriel |
 
-## Pendências e decisões aguardando o Gabriel
+## Lições de processo (para as próximas fases)
 
-- Nenhuma por enquanto. As decisões da Fase 1 serão apresentadas no checkpoint.
+- Muitos subagentes em paralelo no Opus esgotam o limite de uso de 5 horas rapidamente. Funcionou melhor: lotes de 6 a 10, gravação de cada arquivo assim que fica pronto e Sonnet para tarefas secundárias.
+- Reddit, várias wikis e o JSON de reviews do Steam bloqueiam a leitura automática; os atalhos que funcionaram estão na seção 3 da `METODOLOGIA.md`.
 
 ## Registro
 
-- **2026-11-06** — Estrutura criada (`docs/`, `PROGRESSO.md`, `CLAUDE.md`, `METODOLOGIA.md`). Git inicializado. Onda 1 da pesquisa iniciada.
-- **2026-11-07** — A primeira rodada foi interrompida antes de gravar arquivos. Pesquisa retomada em lotes de 6, com gravação a cada ficha concluída (`METODOLOGIA.md`, seção 10).
+- **2026-11-06** — Estrutura criada (`docs/`, `PROGRESSO.md`, `CLAUDE.md`, `METODOLOGIA.md`). Git inicializado. Pesquisa iniciada.
+- **2026-11-07 a 2026-11-11** — Pesquisa em lotes, com várias pausas por limite de uso. 49 fichas e 11 estudos concluídos e versionados.
+- **2026-11-11** — Matriz, padrões, leis e síntese com 30 insights concluídos. Checkpoint da Fase 1 apresentado ao Gabriel.

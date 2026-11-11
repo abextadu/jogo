@@ -24,12 +24,12 @@ O ranking pesa quanto o insight muda o conceito, a economia e a viabilidade do j
 
 | # | Insight | Evidência | Implicação direta |
 |---|---|---|---|
-| 1 | **Dinheiro entra, circula e não sai.** O token negociável por ouro é o RMT oficial que sobrevive; saque e leilão em dinheiro fracassaram. | [F] Dos 16 jogos da matriz com token, 12 estão estáveis ou crescendo; dos 6 com saque ou leilão em dinheiro, 5 estão em declínio ([02](02-padroes-matriz-leis.md)); Diablo III, Entropia e Axie ([G01](fichas/G01-diablo-3-casa-de-leilao.md), [G02](fichas/G02-entropia-universe.md), [G03](fichas/G03-axie-infinity-e-web3.md)) | RMT do lançamento: token comprado do estúdio e negociável por ouro. Nada de saque. Modelo completo em [05d](05d-rmt-recomendacao.md). |
+| 1 | **Dinheiro entra, circula e não sai.** O token negociável por ouro é o RMT oficial que sobrevive; saque e leilão em dinheiro fracassaram. | [F] Dos 16 jogos da matriz com token, 12 estão estáveis ou crescendo; dos 6 com saque ou leilão em dinheiro, 5 estão em declínio ([02](02-padroes-matriz-leis.md)); Diablo III, Entropia e Axie ([G01](fichas/G01-diablo-3-casa-de-leilao.md), [G02](fichas/G02-entropia-universe.md), [G03](fichas/G03-axie-infinity-e-web3.md)) | RMT do lançamento: um token-item comprado em reais que vale conforto e cosmético (nunca poder), vendável por ouro uma única vez, numa bolsa só na web, com preço publicado como índice. Nada de saque, leilão em reais, crédito em reais ou venda de contas ([05d](05d-rmt-recomendacao.md)). Todos os modelos em que o dinheiro saiu foram revertidos, vendidos ou terceirizados ([05a](05a-rmt-modelos-mercado-paralelo.md)). |
 | 2 | **Sorteio pago está vedado a menores no Brasil desde 17/3/2026, e sorteio pago com saque reúne os elementos de jogo de azar.** | [F] Lei 15.211 (ECA Digital), art. 20; Decreto 12.880; LCP, art. 50; TJDFT condenou a Riot a R$ 15 milhões (jun/2026) ([05b](05b-rmt-legal-brasil.md)). Lá fora, loot box vira jogo de azar quando o prêmio vale dinheiro ([05c](05c-rmt-legal-global-pagamentos.md)) | Zero sorteio pago. Probabilidades publicadas para qualquer aleatoriedade grátis. Validar com advogado. |
 | 3 | **O tempo ausente deve gerar só progresso preso à conta.** Se o tempo passivo gera algo vendável, bots capturam o valor. | [F] No Banana, ~2/3 dos jogadores eram bots; no Bongo Cat, ~metade ([G05](fichas/G05-banana-e-bongo-cat.md)); o Pixels perdeu 74% dos diários quando mudou as recompensas ([G03](fichas/G03-axie-infinity-e-web3.md)); as mesas de missões do WoW emitiam ouro ([F06](fichas/F06-world-of-warcraft.md)) | Eixo do design: o ausente produz progresso pessoal; o negociável nasce de ação ativa verificada ou de produção limitada por tempo. |
 | 4 | **Números em duas velocidades.** Renda exponencial num mercado comum é inflação embutida. | [F] Inflação estrutural do SimpleMMO ([C05](fichas/C05-simplemmo.md)); teto de 2,1 bilhões de gp do OSRS ([F03](fichas/F03-runescape-e-osrs.md)); [H] leis 5 e 6 ([02a](02a-teoria-design-idle.md)) | O exponencial vive no pessoal (níveis, prestígio); o mercado negocia bens em unidades que cabem na cabeça. Reset pessoal nunca apaga bens negociáveis. |
 | 5 | **Mercado entre jogadores exige destruição real de itens; a taxa é só ajuste fino.** | [F] Perda de itens em 16 dos 29 jogos com mercado e em 1 dos 27 sem ([02](02-padroes-matriz-leis.md)); o EVE destruiu ~1,14 quatrilhão de ISK em bens em 2025 ([F01](fichas/F01-eve-online.md)); lá o imposto de transação era menos de 1/5 das fontes ([04a](04a-economia-fontes-drenos-inflacao.md)) | Desgaste, consumo no crafting e perda opcional em zonas de risco como drenos principais. |
-| 6 | **O canal oficial só esvazia o mercado negro se for mais barato e mais seguro.** | [F] Os Bonds derrubaram a riqueza do gold farming em mais de 80% em um mês, mas o ouro clandestino do OSRS ainda sai a 45% do preço do Bond ([F03](fichas/F03-runescape-e-osrs.md)); o Donator Pack do Torn sai por menos da metade do preço de sites de RMT ([D01](fichas/D01-torn.md)); no Brasil, a GGMAX vende itens de mais de 150 jogos ([08](08-mercado-posicionamento.md)) | Precificar o token contra o mercado cinza e monitorar o preço do nosso ouro lá fora. |
+| 6 | **O canal oficial só esvazia o mercado negro se for mais barato e mais seguro.** | [F] Os Bonds derrubaram a riqueza do gold farming em mais de 80% em um mês, mas o ouro clandestino do OSRS ainda sai a 45% do preço do Bond ([F03](fichas/F03-runescape-e-osrs.md)); o Donator Pack do Torn sai por menos da metade do preço de sites de RMT ([D01](fichas/D01-torn.md)); no Brasil, a GGMAX vende itens de mais de 150 jogos ([08](08-mercado-posicionamento.md)) | Precificar o token contra o mercado cinza e monitorar o preço do nosso ouro lá fora. A evidência de que o canal oficial esvazia o paralelo é fina (só o caso dos Bonds tem antes/depois), então isso se mede desde o alfa ([05a](05a-rmt-modelos-mercado-paralelo.md)). |
 | 7 | **RMT oficial só funciona com repressão permanente a bots.** | [F] Albion bane 12 a 21 mil contas por mês em 2026 ([F02](fichas/F02-albion-online.md)); o Lost Ark baniu mais de 1 milhão no primeiro mês ([F09](fichas/F09-throne-and-liberty-e-lost-ark.md)); processos contra fabricantes de bots funcionam ([04b](04b-economia-mercados-protecoes-bots.md)) | Operação antibot e anti-DDoS desde o dia 1; punir o vendedor, não o comprador; detecção por grafo de transferências. |
 | 8 | **O preço do token em ouro é o termômetro público da economia, junto com uma cesta de preços.** | [F] Cowbells de ~200 mil para ~1,2 milhão em 19 meses ([C01](fichas/C01-milky-way-idle.md)); WoW Token de 30 mil para 185–400 mil ([F06](fichas/F06-world-of-warcraft.md)); o token também mede a própria oferta ([04a](04a-economia-fontes-drenos-inflacao.md)) | Índice público do token, cesta de preços, massa monetária e velocidade da moeda num painel diário com alarme. |
 | 9 | **A inflação mais violenta é a do lançamento.** | [F] Guild Wars 2: ~+400% ao ano até 2015 e ~6% depois; MWI: ~+200% ao ano ([04a](04a-economia-fontes-drenos-inflacao.md), [F07](fichas/F07-guild-wars-2.md)) | Fontes apertadas no lançamento; meta provisória de inflação de um dígito ao ano, a calibrar na Fase 3. |
@@ -88,6 +88,44 @@ Os três conceitos da Fase 2 vão variar na fantasia, na estrutura e no tipo de 
 - servidor autoritativo com ledger;
 - PWA primeiro;
 - pacote Brasil.
+
+## 🛑 Checkpoint da Fase 1: decisões para o Gabriel
+
+**1. Até onde vai o dinheiro real?** Este é o ponto em que a pesquisa mais se afasta da ideia inicial de um RMT que movimenta e escoa a economia.
+- **(A) Dinheiro só entra. ← recomendado**
+  - Um token-item vendido em reais e revendável por ouro uma única vez.
+  - A taxa em ouro de cada venda é destruída, então o RMT continua escoando riqueza.
+  - Saque, leilão em reais, crédito em reais e venda de contas ficam fora do roadmap, com as condições de reavaliação escritas ([05d](05d-rmt-recomendacao.md)).
+- (B) A, mais um bazar oficial de contas pago em token, entre 18 e 24 meses (modelo Tibia).
+- (C) Mercado com saque em dinheiro via parceiro licenciado.
+- *Por quê:* (A) é o único modelo sem luz vermelha em nenhum critério. Os modelos em que o dinheiro sai foram revertidos (Station Exchange, Diablo III, Tilia), e saque exige licença financeira no Brasil e fora. (B) pode vir depois, se (A) funcionar. (C) transforma o estúdio em instituição financeira.
+
+**2. Vai existir alguma aleatoriedade paga?**
+- **(A) Nenhuma, nem com dinheiro nem com ouro; drops grátis com chances publicadas. ← recomendado**
+- (B) Caixas compradas só com ouro.
+- (C) Caixas pagas só para adultos verificados.
+- *Por quê:* com token, o ouro tem preço em reais. (B) e (C) aproximam o jogo do jogo de azar no Brasil e fora, e a loot box está vedada a menores no Brasil desde mar/2026.
+
+**3. Para quem é o jogo?**
+- **(A) Para todos, com modo protegido ativo por padrão para menores. Comprar acima de um teto e vender token por ouro só para adulto verificado. ← recomendado**
+- (B) O jogo inteiro só para maiores de 18.
+- (C) Sem verificação de idade, só controle parental.
+- *Por quê:* (A) concentra a fricção em quem converte dinheiro e funciona como custo de conta contra bots. (B) corta público e ainda exige verificação. (C) esbarra no ECA Digital, com fiscalização da ANPD a partir de jan/2027.
+
+**4. Onde e como lançamos?**
+- **(A) Brasil primeiro, bilíngue (PT-BR e inglês) desde o dia 1. ← recomendado**
+  - Servidor no Brasil, preço em real e Pix.
+  - PWA no navegador, no desktop e no celular.
+  - Steam e lojas de apps depois, sem RMT dentro das lojas.
+- (B) Global desde o dia 1, com servidor nos EUA ou na Europa, web e Steam.
+- (C) Web e apps nas lojas já no lançamento.
+- *Por quê:* o brasileiro vira maioria quando o MMO chega localizado e perto (Tibia, Ragnarok); as reviews negativas em português do Albion reclamam de ping e de preço em dólar. As lojas empurram o RMT para a web, e o teto do nicho pede custo baixo.
+
+**5. Quando trazemos um advogado?**
+- **(A) Agora, em paralelo à Fase 2: parecer sobre as 8 perguntas que travam o GDD ([05d](05d-rmt-recomendacao.md), §8) antes de começar a Fase 3. ← recomendado**
+- (B) Só antes de construir os pagamentos (Fase 5).
+- (C) Seguir sem parecer e ajustar depois.
+- *Por quê:* o modelo de RMT condiciona o GDD inteiro, e as normas mudam em semanas (MP 1.394, ANPD, Digital Fairness Act). Mudar a economia depois de desenhada é caro.
 
 ## Como isso pode dar errado
 
