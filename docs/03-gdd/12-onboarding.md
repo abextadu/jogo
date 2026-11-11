@@ -84,4 +84,396 @@
 
 > **Quatro perguntas** — Referência: demo jogável antes da conta nos portais ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3) e o progresso doado do lava-rápido (Nunes e Drèze, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.3); diferencia-se dos jogos que pedem documento na porta · Problema: a etapa mais cara do funil, em desistência e em reais · Comportamento: só verifica quem já quer ficar; quem verifica entende a verificação como parte da promessa do jogo · Risco: o prólogo pode ser lido como isca ("joguinho grátis e depois pedem documento"); por isso o aviso vem no segundo zero, e não no minuto 5.
 
-<!-- continua -->
+## 3. Os primeiros 5 minutos: o prólogo "A Travessia do Vau"
+
+### 3.1 Passo a passo
+
+[H] O prólogo roda no aparelho, sem conta. Ensina quatro coisas: o ofício (coletar e transformar), a fila (o trabalho continua sem você), o combate por regras e a ausência. Os tempos de ação são mais curtos que os do jogo (a bíblia, §6.1, prevê de 3 a 30 s por unidade), para caber o serrote de segundos do primeiro minuto.
+
+| Tempo | O que acontece | O que o jogador faz | Regra que aprende | Emoção | Metas visíveis |
+|---|---|---|---|---|---|
+| 0:00 | Tela de entrada: nome do jogo, idioma (PT-BR ou inglês) e o aviso "Para maiores de 18. Para entrar no Arraial, confirmamos a sua idade uma vez, em cerca de 2 minutos. O prólogo é livre." | Toca "Atravessar o Vau" | A verificação existe, e se sabe quando vem | Confiança | — |
+| 0:10 | A margem de um rio, a Bruma atrás, um grupo de sobreviventes e um barqueiro | Escolhe uma de três aparências ("dá para mudar depois") | — | Curiosidade | — |
+| 0:20 | "O fogo vai apagar. Precisamos de lenha." | Toca para cortar lenha; cada uma das 5 primeiras unidades sai em 1 s | Ação gera recurso | Competência imediata | Minutos: "Lenha para o fogo: 0/10" |
+| 0:40 | Depois da 5ª unidade, o personagem continua sozinho, com a estimativa na tela: "seu personagem segue trabalhando" | Assiste à fila encher | **A fila: o trabalho continua sem você** | Alívio ("ah, é um idle") | Minutos: "Lenha: 6/10 (≈ 15 s)" |
+| 1:10 | O fogo acende. "A balsa tem um buraco. Precisamos de tábuas." Aparece a Carpintaria: lenha vira tábua | Escolhe a receita; a fila mostra "8 tábuas em 40 s" | **Transformação:** um ofício alimenta o outro | Progresso | Minutos: "Remendar a balsa: 0/8 tábuas"; Horas: "Chegar ao Arraial" |
+| 2:00 | No meio do rio, um assombrado ataca: um encantado do rio tomado pela Bruma (o módulo 14 escolhe a figura, com revisão de sensibilidade cultural) | Escolhe uma regra de duas: "proteger a balsa" ou "afastar o assombrado"; o combate é automático, por 20 s | **Combate por regras,** sem reflexo | Tensão | — |
+| 2:40 | O assombrado enfraquece e aparece a opção "libertar". A Bruma se desfaz, o encantado volta a ser o que era e deixa uma escama que brilha | Toca "libertar" | Os inimigos são encantados corrompidos; libertar é recompensa (bíblia, §3) | Assombro, compaixão | — |
+| 3:20 | A balsa chega à margem e se vê o **Arraial real**, ao longe, com dados ao vivo: "Arraial do Vau: 2.873 moradores acordados agora. Obra da Muralha: 61%." Passam feitos recentes de jogadores reais, com apelidos | Entrega as tábuas que sobraram "para a Obra" | **A cidade é real e é de todos** | Pertencimento | Dias: "Sua casa no Arraial" |
+| 4:00 | "A noite cai. Você pode descansar: seu personagem continua cortando lenha." A noite passa em 8 segundos, com o rótulo "simulação: 8 horas em 8 segundos" | Toca "Descansar" | **A ausência rende** | Surpresa | — |
+| 4:10 | Tela de retorno de demonstração: "Enquanto você dormia: 380 lenhas e 1 nível de Lenhadoria. Nada se perdeu." | Lê | **O ausente nunca perde; a tela de retorno mostra o plano** | Alívio, vontade de ver de novo | — |
+| 4:40 | "Para entrar no Arraial: crie a sua conta e confirme a idade (cerca de 2 minutos). Vão junto: os seus níveis de Lenhadoria e Carpintaria, a escama do encantado e o seu nome no Livro da Obra." | "Entrar no Arraial" ou "Agora não" (o prólogo fica salvo no aparelho por 7 dias) | Progresso doado | Investimento | Minutos: "Entrar no Arraial (≈ 2 min)"; Horas: "Sua primeira venda"; Dias: "Sua casa no Arraial" |
+
+### 3.2 Regras do prólogo
+
+- **Nada do que o prólogo "produz" vira bem negociável.** As 380 lenhas da noite encenada são demonstração. Ao entrar, o servidor concede um **kit fixo, igual para todos**: os níveis do prólogo (Lenhadoria 3, Carpintaria 2), a escama (cosmético preso à conta) e uma contribuição fixa para a Obra em nome do jogador. *Por quê:* o prólogo roda no aparelho, e um script poderia falsificar o que ele diz ter produzido (P2 e P9; a reconciliar com o módulo 13).
+- **Os dados ao vivo do Arraial** são só leitura e só públicos: número de moradores acordados, andamento da Obra e feitos com o apelido público de cada jogador. O jogador do Arraial pode tirar o próprio apelido do mural (opção de privacidade).
+- **O mesmo prólogo serve de demo** no Steam e nos portais de navegador ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3 e implicação 4), com o mesmo aviso de idade na entrada.
+- **Carga leve:** o prólogo precisa abrir rápido num celular barato, pela rede móvel (alvo de tamanho no módulo 14 e no 04).
+
+> **Quatro perguntas** — Referência: Candy Box e Universal Paperclips (o botão que vira mundo, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2); o rested XP do WoW reformulado como bônus ([03](../01-pesquisa/03-alem-do-idle.md)), para ensinar a ausência pelo lado bom · Problema: em 5 minutos, mostrar o que é o jogo (idle, ofício, cidade) e por que vale verificar a idade · Comportamento: o jogador entra no Arraial já sabendo que pode sair sem perder nada · Risco: a noite encenada pode confundir ("já passou um dia?"); por isso o rótulo de simulação, e a primeira volta real repete a tela com os números reais.
+
+## 4. A chegada ao Arraial (minutos 5 a 12)
+
+| Tempo | Passo | Desenho [H] |
+|---|---|---|
+| ~5:00 | **Conta** | E-mail ou login social; cerca de 1 minuto |
+| ~6:00 | **Verificação de idade** | Seção 2.4; mediana de 2 minutos |
+| ~8:00 | **Nome do personagem** | Único no Arraial; sugestões com nomes do mundo |
+| ~8:30 | **O barqueiro deixa o jogador no Vau** | Primeira vista de perto da praça, com outros jogadores passando (avatares e apelidos reais) |
+| ~9:00 | **O Livro da Obra** | "Seu nome está no Livro da Obra da Muralha." A contribuição fixa do prólogo vira o primeiro Mérito. É o primeiro "a cidade me reconhece" |
+| ~9:30 | **A casa** | Um lote numa rua de recém-chegados, perto da praça. Casa básica, que se decora depois |
+| ~10:00 | **O painel das três metas** | Aparece pela primeira vez, com uma frase: "Estas são as suas próximas metas: uma para agora, uma para hoje, uma para a semana." |
+| ~10:30 | **Calouro** | O jogador recebe o selo de calouro por 7 dias (seção 8.5). Explicação em uma linha: "Nos primeiros 7 dias, você tem faixas próprias nas encomendas e no cerco." |
+
+## 5. A primeira hora: três atos
+
+[H] A primeira hora é uma sequência de **atos**, não um relógio. Cada ato tem uma regra nova e termina num ponto de parada. Quem sai depois do primeiro ato recebe o segundo na volta, pela tela de retorno (seção 6).
+
+### 5.1 Ato 1 — A primeira fila de verdade (minutos 12 a 20)
+
+| Passo | Desenho [H] |
+|---|---|
+| **A Mesa de Ofícios** | Os quatro ofícios de coleta (Mineração, Lenhadoria, Pesca, Colheita) aparecem abertos como aprendiz. Os de transformação e de criação aparecem com uma frase cada, abertos ao alcançar o material (Carpintaria já veio do prólogo) |
+| **A primeira fila real** | O jogador escolhe o que coletar e por quanto tempo. A fila agora é do servidor (P9) e respeita o offline base de 24 h (bíblia, §6.1) |
+| **As duas taxas, visíveis** | "Com você aqui: 10 por minuto. Enquanto você estiver fora: 8 por minuto. Até 24 h de trabalho guardado." (números a reconciliar com o módulo 02; a regra das duas taxas visíveis vem do piso P12) |
+| **Ponto de parada 1** | "Pronto. Você pode fechar o jogo agora: o trabalho continua. Ou siga para a praça e venda o que tem." Os dois botões têm o mesmo peso visual |
+
+### 5.2 Ato 2 — A primeira venda e a primeira compra (minutos 20 a 35)
+
+**A primeira venda é para uma pessoa [H].** A praça mostra uma vista da Bolsa chamada "Pedidos do Arraial": as ordens de compra abertas para bens básicos, com o nome de quem compra. Exemplo: "Cida, do Curtume, compra 40 lenhas a 3 ouro cada." O jogador vende para uma pessoa com nome e recebe o ouro.
+
+- **A taxa explicada uma vez:** "6 ouro de taxa foram destruídos. É assim que o ouro mantém o valor." (Taxa da Bolsa de 5% na venda, bíblia, §6.6.)
+- **Proteção do calouro:** se a ordem estiver muito abaixo do preço de referência das últimas 24 horas, a tela avisa ("esta oferta paga 40% abaixo do normal") antes de vender. *Por quê:* o recém-chegado não conhece preços e é a vítima natural da ordem de compra predatória.
+- **Se o livro estiver vazio,** a venda vai ao comprador NPC (venda a NPC da bíblia, §6.6), por preço baixo e decrescente. A tela diz que é um NPC e que os jogadores pagam melhor.
+- **A Bolsa é o único balcão do Ato 2.** A Feira aparece só para comprar; o Pregão e o Câmbio vêm depois (seção 9.2).
+
+**A primeira compra é de um artesão [H].** O painel das três metas aponta a próxima ferramenta ("Machado de cedro: +25% na Lenhadoria"). A Feira lista os machados à venda com o nome de quem fez, a qualidade e a durabilidade.
+
+- **Depois da compra:** "Feito por Ana, mestre de Ferraria. Você não fabrica isto: alguém do Arraial fabricou." É a lição do pilar 1 ("ninguém faz tudo") em uma frase.
+- **O desgaste aparece na hora:** "Tudo se gasta. Este machado aguenta cerca de 20 horas de trabalho. Depois, reparo ou um novo." (pilar 2; números no módulo 05).
+- **Se não houver machado de jogador à venda,** a oficina NPC de reforço vende um, de qualidade Comum e pelo preço teto ([conceito](../02-conceito.md), "Como isso pode dar errado").
+- **O serrote cai:** com o machado, a fila acelera 25%, e o painel mostra a meta seguinte mais perto.
+
+> **Quatro perguntas** — Referência: o mercado como o recurso mais elogiado do Milky Way Idle ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); a quebra que sustenta o artesão no Shop Titans ([C06](../01-pesquisa/fichas/C06-shop-titans.md)); diferencia-se dos idles em que o mercado é opcional e anônimo · Problema: ensinar interdependência e desgaste sem tutorial de texto · Comportamento: o jogador vê, desde o minuto 20, que vende para gente e compra de gente, e que o que compra acaba · Risco: num Arraial com poucos jogadores, os "Pedidos do Arraial" ficam vazios e a lição se perde; por isso o comprador NPC e a oficina de reforço, e a métrica "primeira venda para jogador" (seção 10.3).
+
+### 5.3 Ato 3 — A vocação e o plano da noite (minutos 35 a 50)
+
+**Quando e como se escolhe a vocação [H].** No fim da primeira sessão, quando a Bruma deixa assombrados na mata da margem e o Curtume pede peles. A escolha vem depois de o jogador já ter visto o combate por regras no prólogo e já ter vendido e comprado, então ele sabe o que a cidade precisa.
+
+| Elemento | Desenho [H] |
+|---|---|
+| A tela de escolha | As 5 vocações da bíblia (§6.4), cada uma com uma demonstração de 15 segundos, o papel em uma linha e **o que ela traz para a cidade**: Guardião (linha de frente no cerco), Caçador (peles e carnes para o Curtume e a Culinária), Encantador (controle e dano em área), Erveiro (cura, venenos e suporte), Batedor (exploração e achados raros na Bruma) |
+| Troca | **Livre até o nível 10 de vocação** (a reconciliar com o módulo 03); depois, com custo em ouro definido no módulo 03, nunca em Alvarás (trocar de vocação é decisão de poder, zona vermelha da loja) |
+| A primeira caça | Uma expedição curta, com uma regra a escolher ("recuar com 30% de vida"); resultado em 60 segundos: peles e XP de vocação |
+
+**O plano da noite [H].** Com uma fila só (bíblia, §6.1), a primeira decisão de ausente é real: "Durante a noite: **coletar** (renda segura) ou **caçar** (peles e XP de vocação; se a regra mandar recuar, a caça volta mais cedo)". A tela mostra o que o jogador vai encontrar na volta, com estimativa. É a lei do plano ([02a](../01-pesquisa/02a-teoria-design-idle.md), lei 8) na primeira sessão.
+
+**Ponto de parada 2 (o mais importante do jogo):** "Até amanhã? A sua fila tem 24 horas. Nada se perde." Com a opção de ligar o aviso de "fila terminou" (desligado por padrão; nada de notificação promocional, nunca).
+
+> **Quatro perguntas** — Referência: a escolha de classe dos RPGs, adiada até depois do primeiro contato, e as regras de recuo antes de partir do conceito Fronteira ([conceito](../02-conceito.md), §3); diferencia-se da classe escolhida na tela de criação, antes de qualquer contexto · Problema: uma escolha de identidade informada, e um motivo para voltar · Comportamento: o jogador sai da primeira sessão com um plano e uma curiosidade (o que a caça trouxe?) · Risco: a primeira sessão fica longa (cerca de 50 minutos com o prólogo); por isso os três pontos de parada e a regra de que o Ato 3 pode chegar na segunda sessão.
+
+## 6. A primeira volta do ausente: a tela de retorno
+
+[H] A tela de retorno é a peça mais vista do jogo: o ausente típico a vê de duas a seis vezes por dia (bíblia, §6.1). A primeira vez ensina o contrato do idle com números reais.
+
+### 6.1 Blocos, nesta ordem
+
+| # | Bloco | Conteúdo | Regra |
+|---|---|---|---|
+| 1 | **Quanto tempo e o que se perdeu** | "Você ficou fora 7 h 40 min. Nada se perdeu." | A frase "nada se perdeu" sempre aparece, porque é sempre verdade (pilar 4) |
+| 2 | **O que o seu plano rendeu** | Itens, XP de ofício e de vocação, níveis, com a barra das duas taxas: "Fora, você rendeu 80% do ritmo ativo." | Honestidade sobre a taxa do ausente (P12); números a reconciliar com o módulo 02 |
+| 3 | **O que aconteceu no Arraial** | A Obra avançou (com a parte do jogador), um anúncio seu vendeu, o cerco de sábado está com inscrições abertas até sexta às 20h | No máximo três linhas; o resto num "ver mais" |
+| 4 | **Uma regra nova** | Só uma por volta. Na primeira volta: a encomenda (seção 7.1) | Lei da regra nova; nunca duas novidades na mesma tela |
+| 5 | **Até três ações sugeridas** | "Renovar a fila", "Vender o excedente", "Participar da encomenda" | Sugestões, nunca obrigações |
+| 6 | **As três metas, atualizadas** | Com a nova estimativa | — |
+
+**O que nunca aparece na tela de retorno:** loja, Alvará, doação, Baú, oferta, contagem regressiva, "você perdeu X por não estar aqui". *Por quê:* é a tela de maior atenção do jogo, e por isso a mais tentadora para vender; usá-la para vender ensinaria que voltar custa dinheiro ([11](11-monetizacao.md), §7.2).
+
+**Quando o teto do offline é atingido:** "A sua fila parou às 3h10, quando chegou ao limite de 24 horas. O limite sobe até 72 horas jogando." Sem culpa e sem oferta (o teto nunca está à venda).
+
+### 6.2 Exemplo da primeira volta
+
+> **Bom dia. Você ficou fora 7 h 40 min. Nada se perdeu.**
+> Sua caça na mata trouxe **14 peles**, **3 carnes** e **2 níveis de Caçador**. Fora, você rendeu 80% do ritmo de quem fica olhando.
+> **No Arraial:** a Obra da Muralha foi a 62% (uma tábua dela é sua). As inscrições para o cerco de sábado vão até sexta às 20h.
+> **Novidade: a Câmara abriu uma encomenda.** O Arraial precisa de 5.000 tábuas e 800 peles até sábado. A sua parte pode ser pequena: a nota é medida pelo seu tamanho, não pelo dos veteranos. [Participar]
+> [Renovar a fila] [Vender peles na Bolsa] [Ver a encomenda]
+> **Agora:** Curtir 14 peles (≈ 6 min) · **Hoje:** Caçador nível 8 (≈ 3 h, também fora) · **Esta semana:** Sua primeira entrega na encomenda (até sábado)
+
+> **Quatro perguntas** — Referência: a simulação de 24 h na volta do Melvor ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)); o diário de bordo dos conceitos Casas da Maré e Fronteira ([conceito](../02-conceito.md)); diferencia-se da tela de "bem-vindo de volta" com oferta, comum no mobile · Problema: o ausente precisa ver a consequência do plano e ter um motivo para a próxima decisão · Comportamento: a volta vira o momento de decidir, e não de recolher · Risco: a tela vira um relatório longo e ninguém lê; por isso os limites de três linhas e uma novidade.
+
+## 7. O primeiro dia (sessões 2 a 4, do D0 ao D1)
+
+[H] Uma regra nova por sessão. A ordem abaixo é a padrão; se o jogador pular uma sessão, a regra seguinte espera a próxima volta.
+
+| Sessão | Regra nova | Momento-chave | Três metas (agora / hoje / semana) |
+|---|---|---|---|
+| 2 (primeira volta) | **Encomenda** | Entra na encomenda da cidade com uma parte do tamanho dele | Curtir peles / Caçador 8 / primeira entrega |
+| 3 | **Obra-prima** | A primeira obra-prima guiada (seção 7.2) | Cabo Fino / Carpintaria 12 / primeira entrega |
+| 4 | **Reparo e padrinho** | O machado chega a 40% de durabilidade: o reparo consome material e reduz a durabilidade máxima (bíblia, §6.5). Um padrinho se oferece | Reparar o machado / Lenhadoria 15 / primeira entrega |
+
+### 7.1 A primeira encomenda
+
+| Elemento | Desenho [H] |
+|---|---|
+| Qual encomenda | A encomenda da cidade em andamento (prazo de 3 a 7 dias, bíblia, §6.1). Não há encomenda de tutorial: o calouro entra na de verdade |
+| A faixa de calouro | Nos 7 primeiros dias, a parte sugerida é pequena (por exemplo, 30 tábuas e 10 peles), proporcional ao que a fila dele produz em uma noite |
+| A nota | **Relativa à capacidade do jogador**, não absoluta: o calouro que entrega o que pode tira nota alta. *Por quê:* com nota absoluta, os veteranos tiram todas as notas altas, e o calouro aprende que a encomenda não é para ele. A reconciliar com o módulo 09, dono das regras da encomenda |
+| A entrega | Pode ser planejada: a fila da noite entrega sozinha na encomenda ("enviar à encomenda ao terminar"). O ausente que planeja participa |
+| O resultado | No fim do prazo, a tela de retorno mostra a nota, a parte do jogador no todo e a recompensa (Mérito e itens presos, a definir nos módulos 07 e 09) |
+
+> **Quatro perguntas** — Referência: os contratos cooperativos do Egg, Inc., com prazo e nota individual ([A09](../01-pesquisa/fichas/A09-egg-inc.md)), o laço social mais forte do gênero ([00](../01-pesquisa/00-sintese.md), insight 19) · Problema: dar ao calouro, no primeiro dia, um lugar no destino comum (pilar 3) · Comportamento: o jogador planeja a noite pensando na cidade · Risco: o calouro sente que a parte dele é irrelevante; por isso a nota relativa e o "uma tábua dela é sua" na tela de retorno.
+
+### 7.2 A primeira obra-prima
+
+[H] Na terceira sessão, um pedido da praça: "A ferreira precisa de um cabo de qualidade Fina." A obra-prima guiada dura cerca de 2 minutos, com três decisões (as do conceito: reagentes, temperatura, acabamento; mecânica no módulo 06). O resultado sai **Fino**, enquanto o mesmo cabo feito na fila sai **Comum**. A tela explica: "O ativo ganha qualidade; o ausente ganha volume. Os dois têm mercado." (pilar 2 do conceito; P12).
+
+O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se não houver) por um preço visivelmente melhor que o Comum. É o primeiro "valeu a pena ficar uns minutos".
+
+### 7.3 O padrinho
+
+[H] Na quarta sessão, um jogador veterano voluntário se oferece como **padrinho** ou **madrinha**: responde dúvidas por mensagem, mostra a guilda dele e recebe Mérito e um título quando o afilhado chega à cidadania (seção 8.5). O calouro pode aceitar, recusar ou trocar. A reconciliar com o módulo 09.
+
+- **Quem pode ser padrinho:** cidadão há pelo menos 30 dias, sem sanção, com no máximo 3 afilhados ao mesmo tempo.
+- **O padrinho não ganha ouro nem Alvará** pelo afilhado. *Por quê:* recompensa em bem negociável criaria fazenda de afilhados; com uma conta por adulto verificado (P8), a fazenda é difícil, mas o incentivo precisa ser de status.
+- **A trava de calouro protege o afilhado:** nos 7 primeiros dias, o calouro tem limite baixo para enviar ouro e Alvarás pela Troca. *Por quê:* golpes de "eu te ajudo, me manda o ouro" miram o recém-chegado; o limite também atrapalha contas mulas. A reconciliar com os módulos 07 e 13, respeitando a transferência livre.
+
+## 8. A primeira semana (D1 a D7)
+
+### 8.1 Dia a dia
+
+[H] "Nenhum muro sério antes do D7" (bíblia, §6.2). Os dias são típicos; o jogo segue o ritmo do jogador.
+
+| Dia típico | Regra nova | Momento-chave | Três metas (agora / hoje / semana) |
+|---|---|---|---|
+| D1 | Encomenda, obra-prima, reparo (seção 7) | Primeira entrega com nota | Ver seção 7 |
+| D2 | **Ajudante** | Contrata o primeiro ajudante com o ouro das vendas (a reconciliar com o módulo 03) | Contratar ajudante / Curtume 15 / primeira nota da encomenda |
+| D2 a D4 | **Ofício mestre** | Ao bater no nível 30, o teto de aprendiz (seção 8.2) | Declarar mestre / ofício a 32 / segundo mestre |
+| D3 | **Câmbio, Alvará, Cartório e IPA** (explicação única, seção 8.4) | O painel do IPA na praça | — |
+| D3 a D6 | **Cerco** | Abastecimento ou guarnição (seção 8.3) | Entregar flechas / inscrever-se / cerco de sábado |
+| D4 a D5 | **Pregão e guilda** | O primeiro lance; convite para uma guilda (o padrinho pode convidar) | — |
+| D5 a D6 | **Obra e Câmara** | Contribuição grande para a Obra; a Câmara aparece, com os vereadores e as pautas | Contribuir / — / cidadania |
+| D7 | **Cidadania** | Seção 8.5 | Primeira votação / — / próxima Era ou segunda fila |
+
+### 8.2 Os ofícios mestres: escolher quando se precisa
+
+**Quando [H].** Até o nível 30, todo ofício é de aprendiz, e o jogador experimenta quantos quiser. **Para passar do 30 num ofício, ele o declara mestre.** A escolha aparece sozinha, no momento em que importa, e não numa tela de criação. Com a curva do módulo 02, isso deve acontecer entre o D2 e o D4 no primeiro ofício (a reconciliar com o módulo 02).
+
+**Como: a Mesa de Ofícios [H].**
+
+| Elemento | Desenho [H] |
+|---|---|
+| Para cada um dos 12 ofícios | Quantos mestres o Arraial tem, as ordens de compra abertas e o preço médio dos produtos contra os últimos 30 dias, os níveis atuais do jogador e uma frase sobre o que o ofício alimenta ("o Curtume abastece a Alfaiataria e o cerco") |
+| "O Arraial precisa de" | Destaque para os 2 ou 3 ofícios com mais falta. Atualiza uma vez por dia, para que todos não corram para o mesmo ofício na mesma hora |
+| A declaração | "Declarar mestre de Curtume." O nome entra no Livro do Arraial, público. É um momento de identidade, com cerimônia curta |
+| O segundo ofício mestre | Mesma regra: no 30 do segundo ofício |
+| Período de experiência | **Nos 7 dias depois da primeira declaração, uma troca grátis** de ofício mestre. O que acontece com os níveis acima de 30 do ofício trocado fica para o módulo 02 |
+
+> **Quatro perguntas** — Referência: a interdependência forçada do conceito ([conceito](../02-conceito.md), pilar 1); o medo de escolha irreversível ([02a](../01-pesquisa/02a-teoria-design-idle.md), §4.2); diferencia-se dos idles em que o jogador faz tudo sozinho ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)) · Problema: o gargalo de ofício (se ninguém domina couro, todos travam, [conceito](../02-conceito.md), "Riscos") e a escolha às cegas · Comportamento: o jogador escolhe pelo gosto e pela falta que a cidade tem, e sente que preenche um lugar · Risco: o efeito manada (todos escolhem o ofício "em falta" e ele fica lotado); a atualização diária e os dados de mestres por ofício reduzem o efeito, e a simulação deve testá-lo.
+
+### 8.3 O primeiro cerco
+
+**O problema.** O cerco é semanal, com inscrição até 24 h antes (bíblia, §6.1). Quem chega na sexta perde a inscrição do sábado e espera uma semana.
+
+**A solução [H]: duas portas.**
+
+| Porta | Quem | Até quando | O que faz |
+|---|---|---|---|
+| **Abastecimento** | Qualquer jogador, inclusive o calouro no primeiro dia | Até o início do cerco | Entrega flechas, tábuas, comida e unguentos à muralha. Conta como participação: Mérito, feito do passe ([11](11-monetizacao.md), §6.2) e a cidadania |
+| **Guarnição** | Quem tem vocação | Inscrição até 24 h antes | Um posto na defesa, com as regras de combate do jogador. O calouro tem uma faixa de postos de reserva, de menor risco |
+
+**O relato do cerco.** O resultado é assíncrono e chega na tela de retorno, contando a parte do jogador: "As suas 200 flechas abateram 14 assombrados na muralha norte." *Por quê:* o artesão que nunca lutou também defendeu a cidade, e o pilar 1 aparece no momento de maior tensão da semana.
+
+> **Quatro perguntas** — Referência: a guerra com inscrição do Shakes & Fidget ([D02](../01-pesquisa/fichas/D02-shakes-and-fidget.md)) e as raids curtas do Tap Titans 2 ([B06](../01-pesquisa/fichas/B06-tap-titans-2.md)) · Problema: um evento semanal com hora marcada exclui quem chega no dia errado · Comportamento: o calouro participa da primeira defesa com o que produz · Risco: o abastecimento vira a única forma de participar, e o calouro nunca experimenta a guarnição; a meta da semana aponta a inscrição do cerco seguinte.
+
+### 8.4 O dinheiro na primeira semana
+
+[H] O que aparece e o que não aparece:
+
+| Quando | O que aparece | O que nunca aparece |
+|---|---|---|
+| D0 a D2 | A loja existe no menu, como qualquer outro lugar da praça | Pop-up, pacote de iniciante, oferta com relógio, oferta na tela de retorno |
+| D3 | **Uma explicação única, em contexto:** quando o jogador abre o Câmbio pela primeira vez (ou no D3, se não abrir antes), um quadro de 30 segundos explica o Alvará (doação, 1 Alvará = R$ 1,00, sem reembolso), o Câmbio (Alvará por ouro), o Cartório e o IPA, com o link para a carta pública ([11](11-monetizacao.md), §10). A explicação diz também que dá para conseguir Alvarás com ouro | Qualquer insistência depois disso |
+| D7 | Nada novo | — |
+
+**O que não vira meta:** a doação na primeira semana não tem alvo (seção 10.4).
+
+### 8.5 A cidadania no D7 **[proposta de mudança na bíblia]**
+
+[H] O calouro vira **cidadão do Arraial** quando se cumprem duas condições:
+1. **7 dias desde a chegada** (corridos, sem precisar entrar todo dia; não é sequência de login);
+2. **pelo menos uma contribuição à cidade:** uma entrega numa encomenda, um abastecimento ou posto no cerco, ou uma contribuição à Obra.
+
+**O que a cidadania dá:** voto na Câmara (uma pessoa, um voto, bíblia, glossário), o título "Cidadão do Vau", o fim das faixas e da trava de calouro, e, depois de 30 dias como cidadão, o direito de ser padrinho.
+
+*Por quê:* a cidadania é a meta de dias da primeira semana, ligada à fantasia (a cidade de todos) e à regra (o voto). A carência de 7 dias também protege a Câmara de contas recém-criadas e das compradas no Cartório (o [conceito](../02-conceito.md) já previa carência para votar). **Proposta para o glossário:** "**Calouro** — status dos 7 primeiros dias, com faixas próprias e trava de envio" e "**Cidadão** — status depois da cidadania, com voto na Câmara". A reconciliar com o módulo 09.
+
+### 8.6 A reentrada de quem some
+
+[H] Quem volta depois de semanas vê uma tela de retorno longa, com o trabalho limitado ao teto do offline (nada se perde além do teto), um resumo do que mudou ("uma Era nova começou; a regra nova é esta") e as três metas recalculadas. O Passe da Era não expira, e o teto semanal acumulado espera por ele ([11](11-monetizacao.md), §6.1). Nenhuma oferta de "volta".
+
+## 9. O ritmo de desbloqueios
+
+### 9.1 O serrote
+
+[H] A lei do serrote pede calibrar o tempo até a próxima compra que importa, por faixas, e derrubar a espera com multiplicadores e desbloqueios antes que ela vire muro ([02a](../01-pesquisa/02a-teoria-design-idle.md), §2.4 e lei 1). Alvos para o módulo 02 e para a simulação:
+
+| Faixa | Alvo de espera até a próxima compra ou desbloqueio significativo [H] | Exemplo |
+|---|---|---|
+| Minuto 0 a 1 | 5 a 15 segundos | Lenha para o fogo |
+| Minutos 1 a 5 | 20 a 60 segundos | Tábuas da balsa |
+| Primeira hora | 3 a 8 minutos | Machado de cedro, a primeira caça |
+| Horas 1 a 24 | Uma a duas por sessão de 5 a 15 min, e uma "de ausente", de 1 a 8 horas | Nível de ofício, a primeira entrega |
+| D2 a D7 | Uma a duas compras grandes por sessão e um marco de dias | Ajudante, ofício mestre, cerco, cidadania |
+| Semana 2 em diante | Um marco por semana | Segunda fila, novo tier de material (a reconciliar com o módulo 02) |
+
+**A fórmula da espera:** `espera = custo ÷ (produção por minuto × multiplicador)`.
+
+*Exemplo calculado:* o machado de cedro custa o equivalente a 40 tábuas, e a fila produz 8 tábuas por minuto: `40 ÷ (8 × 1,00) = 5 min`, dentro da faixa da primeira hora. Com o machado (+25%), a ferramenta seguinte custa 150 tábuas: `150 ÷ (8 × 1,25) = 15 min`. A espera triplica, e o jogador passa para a faixa de "uma a duas por sessão", com a ausência ajudando. O módulo 02 fecha as curvas; este exemplo só mostra o formato.
+
+### 9.2 Mapa de desbloqueios
+
+| Momento [H] | Regra nova | Fica visível | Fica escondido ou cinza |
+|---|---|---|---|
+| Prólogo | Fila, transformação, combate por regras, ausência | — | Tudo o mais |
+| Chegada | A casa, o Livro da Obra, o painel das três metas | A praça | Mercado e vocação |
+| Ato 1 | A fila do servidor, as duas taxas | Os 4 ofícios de coleta | Os outros 8 ofícios, com uma frase cada |
+| Ato 2 | Bolsa (venda) e Feira (compra), desgaste | "Pedidos do Arraial" | Pregão, Câmbio, Troca, Cartório |
+| Ato 3 | Vocação, plano da noite | A mata da margem | Masmorras, Travessia |
+| Sessão 2 | Encomenda | A Câmara, só como quem abriu a encomenda | — |
+| Sessão 3 | Obra-prima | — | — |
+| Sessão 4 | Reparo, padrinho | — | — |
+| D2 | Ajudante | — | — |
+| D2 a D4 | Ofício mestre (no nível 30) | A Mesa de Ofícios completa | — |
+| D3 | Câmbio, Alvará, Cartório, IPA | A loja já estava no menu desde o início | — |
+| D3 a D6 | Cerco (abastecimento e guarnição) | — | — |
+| D4 a D5 | Pregão, Troca, guilda | — | — |
+| D5 a D6 | Obra e Câmara (completa) | — | — |
+| D7 | Cidadania | Voto | — |
+| Depois da cidadania | Travessia (a partir da 2ª Era) | — | — |
+
+**O jogador pode abrir antes o que está cinza.** O cinza é sugestão de ordem, não trava: quem conhece o gênero e quer ir ao Pregão no primeiro dia pode. O que muda é o que o jogo apresenta e explica. *Por quê:* o desbloqueio como usabilidade, deixando o jogador esconder ou mostrar sistemas (Alharthi et al., [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2). As exceções que travam de verdade são as que protegem: a trava de calouro na Troca e o voto antes da cidadania.
+
+### 9.3 O painel das três metas
+
+[H] Sempre visível (no celular, recolhido numa faixa no alto da tela). Três linhas: **Agora** (minutos), **Hoje** (horas) e **Esta semana** (dias).
+
+**Regras:**
+1. **Barra honesta e estimativa em tempo real**, contando a taxa do ausente ("≈ 3 h, também com você fora"), como no Kittens Game ([02a](../01-pesquisa/02a-teoria-design-idle.md), §2.4).
+2. **Nenhuma meta exige doação,** e nenhuma meta aponta para a loja.
+3. **A meta de dias é sempre da cidade ou de identidade** (a entrega da encomenda, o cerco, a cidadania, o ofício mestre), nunca de número puro.
+4. **O jogador pode fixar uma meta própria** no lugar de uma sugerida.
+5. **Progresso doado com honestidade:** a meta pode começar "já iniciada" (o kit do prólogo conta), mas nunca esconde o custo real (o padrão obscuro do [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.3).
+
+## 10. Métricas e alvos
+
+[H] Todos os alvos são hipóteses a validar no alfa. Os benchmarks vêm do [06](../01-pesquisa/06-monetizacao-retencao.md), §4.1, e são quase todos de celular, medidos a partir da instalação; o nosso funil tem um filtro (o prólogo e a verificação) que os benchmarks não têm.
+
+### 10.1 O funil do primeiro dia
+
+| Etapa | A cada 100 que começam o prólogo [H] | Conversão da etapa | Alarme |
+|---|---|---|---|
+| Começa o prólogo | 100 | — | — |
+| Conclui o prólogo | 75 | 75% | abaixo de 60% |
+| Cria a conta | 55 | 73% | abaixo de 55% |
+| Começa a verificação | 52 | 95% | abaixo de 85% |
+| **Conclui a verificação** | **40** | **77%** | **abaixo de 65%** |
+| Primeira fila real | 39 | 98% | abaixo de 95% |
+| Primeira venda | 35 | 90% | abaixo de 80% |
+| Primeira compra | 32 | 91% | abaixo de 80% |
+| Escolhe a vocação | 30 | 94% | abaixo de 85% |
+| Faz o plano da noite | 29 | 97% | abaixo de 90% |
+
+*Por que 77% na verificação:* no experimento da Carnegie Mellon, com pouca motivação, a desistência foi de 49% na estimativa facial e de 73% a 77% no documento (seção 2.1). O nosso jogador já investiu 5 minutos e sabe o que ganha; o alvo supõe que esse investimento reduz a desistência a um quarto. É a premissa mais frágil do funil, e o alfa precisa medi-la por método.
+
+### 10.2 Retenção
+
+| Métrica | Alvo na base verificada [H] | Alarme | Equivalente desde o início do prólogo | Benchmarks do [06](../01-pesquisa/06-monetizacao-retencao.md) |
+|---|---|---|---|---|
+| **D1** | **≥ 50%** | abaixo de 40% | ~20% | Mobile 2025: top 25% pouco acima de 30%, top 1% de 64% a 68%. PC 2025: top 25% de 15% a 16%, top 1% de 50% a 60%. Idles mobile 2020: top 25% 39,4% |
+| **D7** | **≥ 25%** | abaixo de 18% | ~10% | Mobile 2025: top 25% de 6% a 7%, top 10% de 11% a 12%. PC 2025: top 1% acima de 20% |
+| **D30** | **≥ 12%** | abaixo de 8% | ~4,8% | Mobile 2025: top 25% de 1,6% a 1,8%, top 1% de 13% a 15%. PC 2025: top 1% ~10% |
+| **DAU/MAU** | **≥ 30%** | abaixo de 20% | — | Idles mobile 2020: 18%. PC 2025: mediana de 4% a 5% |
+
+**Leitura [H].** Na base verificada, os alvos ficam perto do top 1% do PC e do celular. Isso se justifica pelo filtro: quem chega verificado já jogou, já investiu e já aceitou uma etapa que metade das pessoas recusa. Medidos desde o início do prólogo, os alvos de D7 e D30 ficam acima do quartil superior do celular, e o de D1 fica abaixo, porque a verificação custa gente no primeiro dia. Esses alvos são coerentes com as premissas da projeção de receita do cenário base ([11](11-monetizacao.md), §8.1: DAU/MAU de 30% e contas novas de 35% do MAU por mês).
+
+### 10.3 Indicadores de saúde do onboarding
+
+| Indicador | Alvo [H] | O que o alarme diz |
+|---|---|---|
+| Tempo mediano da chegada até a primeira venda | ≤ 15 min | O Ato 2 está longe ou confuso |
+| Primeira venda feita a um jogador (e não ao NPC) | ≥ 70% | Falta liquidez de ordens de compra para bens básicos; a lição do pilar 1 se perde |
+| Sessões que terminam num ponto de parada com plano feito | ≥ 70% | O jogo não está ensinando a sair |
+| Calouros com parte numa encomenda até o D2 | ≥ 60% | A encomenda não chega ou não convence |
+| Ofício mestre declarado até o D5 | ≥ 60% | A curva até o 30 está lenta, ou a escolha assusta |
+| Troca de ofício no período de experiência | entre 5% e 20% | Acima de 25%, a escolha está mal informada; abaixo de 2%, a troca está escondida |
+| Participação no primeiro cerco (abastecimento ou guarnição) até o D7 | ≥ 50% | O cerco não aparece para o calouro |
+| Cidadãos no D7, entre os verificados no D0 | ≥ 30% | A meta da semana não está funcionando |
+| Nota da tela de retorno (pesquisa de um toque na terceira volta) | ≥ 4 de 5 | A tela está longa ou não mostra o plano |
+
+### 10.4 O que não vira meta
+
+[H] Algumas métricas são observadas, mas **não têm alvo**, porque um alvo nelas empurraria para padrões obscuros:
+
+| Métrica | Por que sem alvo | Quando investigar |
+|---|---|---|
+| Doação na primeira semana | Meta de conversão no começo é o que cria o pacote de iniciante com relógio | Se passar de 8% dos verificados: pode ser sinal de pressão |
+| Tempo de sessão | Aumentar o tempo de tela não é objetivo num idle | Se a mediana passar de 30 min depois do D3: sinal de obrigação |
+| Sessões por dia | Idem | Se a mediana passar de 8: sinal de ansiedade de plantão |
+| Abertura de notificações | Notificação é serviço, não alavanca (Decreto 12.880, art. 9º) | — |
+
+### 10.5 Como medir
+
+- **Eventos** (no PostgreSQL desde o alfa, como recomenda o [06](../01-pesquisa/06-monetizacao-retencao.md), "Implicações"): início e fim do prólogo, conta criada, verificação (início, sucesso, falha, abandono, **por método**), chegada, primeira fila, primeira venda (para jogador ou NPC, com o tempo), primeira compra, vocação escolhida, plano da noite, cada volta (com o tempo de ausência), primeira encomenda, primeira obra-prima, ofício mestre declarado, troca no período de experiência, primeiro cerco (por porta), cidadania.
+- **Coortes** por dia de chegada, origem (demo do Steam, portal, criador de conteúdo, busca), aparelho e idioma.
+- **Playtests gravados** nos três marcos (5 minutos, 1 hora, 1 dia), com adultos que nunca jogaram idle e com veteranos de MMO, os dois públicos centrais do [08](../01-pesquisa/08-mercado-posicionamento.md) (§3.6).
+
+## 11. Interfaces com outros módulos
+
+| Módulo | O que o onboarding precisa dele |
+|---|---|
+| 01 — loops | A sessão típica e o dia do ausente, para encaixar as sessões 2 a 4 |
+| 02 — progressão | Curvas que levem um ofício ao 30 entre o D2 e o D4; as duas taxas; o offline de 24 h; a declaração de ofício mestre no 30; o que acontece na troca do período de experiência; a segunda fila como marco de semana |
+| 03 — personagem | Demonstração de cada vocação; troca livre até o nível 10; o primeiro ajudante no D2 |
+| 04 — combate | A regra de recuo; o combate do prólogo; a porta de abastecimento e a reserva de calouro no cerco |
+| 05 — itens | Durabilidade do primeiro machado; a escama do prólogo; a regra do lacre |
+| 06 — ofícios | A Mesa de Ofícios; a obra-prima guiada; as receitas do prólogo |
+| 07 — economia | Ordens de compra de bens básicos suficientes para o calouro; venda a NPC no piso; oficina NPC de reforço; aviso de ordem predatória; trava de calouro |
+| 09 — social | Padrinho, calouro, cidadão; nota relativa na encomenda; carência do voto |
+| 11 — monetização | Nenhuma loja no caminho; a explicação única do D3; nenhuma oferta na tela de retorno |
+| 13 — anti-abuso | Método de verificação com mediana de 2 minutos e custo-alvo de R$ 0,40 a R$ 1,00; o kit fixo do prólogo; a trava de calouro |
+| 14 — arte e UI | O prólogo leve; o painel das três metas; a tela de retorno; o modo canto de tela; a revisão cultural do encantado do prólogo |
+
+## Propostas de mudança na bíblia
+
+1. **[proposta de mudança na bíblia] Decisão do checkpoint 1 (jogo 18+):** acrescentar "Antes da verificação, só um prólogo de demonstração, sem conta, sem interação entre jogadores, sem compra e sem bem negociável" (seção 2.3). **Validar com advogado.**
+2. **[proposta de mudança na bíblia] Glossário:** incluir **Calouro** (status dos 7 primeiros dias, com faixas próprias nas encomendas e no cerco e trava de envio na Troca) e **Cidadão** (status depois da cidadania, com voto na Câmara). A reconciliar com o módulo 09.
+3. **[proposta de mudança na bíblia] Ofício mestre:** a definição do glossário passa a dizer quando a escolha acontece: "declarado ao atingir o teto de aprendiz (30), com uma troca grátis nos 7 dias seguintes à primeira declaração". A reconciliar com o módulo 02.
+
+## Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| **A verificação derruba o funil** | A desistência real fica perto dos 49% a 77% do experimento da Carnegie Mellon, e o jogo perde metade de quem queria entrar | Verificar depois do prólogo; método mais leve que o módulo 13 aceitar; medir por método no alfa; alternativa para quem falha; acompanhar o token etário que o governo estuda ([Contábeis, 3/12/2025](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/)) |
+| **O prólogo é lido como isca** | "Joguinho grátis, e depois pedem documento" | O aviso de idade e verificação vem no segundo zero, não no minuto 5; o texto explica o porquê (uma pessoa, uma conta) |
+| **O prólogo sem verificação contraria a decisão 18+** | Um regulador ou o próprio Gabriel entende que o prólogo é "o jogo" | Proposta explícita para o diretor (seção 2.3); prólogo sem conta, sem interação, sem compra; **validar com advogado**; se recusada, a opção (A) e o custo correspondente no [11](11-monetizacao.md), §8.5 |
+| **O Arraial está vazio para o calouro** | Sem ordens de compra de bens básicos e sem machados à venda, as primeiras trocas são com NPC | Comprador NPC e oficina de reforço; indicador "primeira venda para jogador"; o módulo 07 deve garantir demanda de bens básicos (por exemplo, encomendas e Obras que consomem lenha e pedra) |
+| **Ordens predatórias contra o calouro** | Veteranos põem ordens de compra muito abaixo do preço para pegar quem não sabe | Aviso de preço na venda; a vista "Pedidos do Arraial" ordena pelo melhor preço |
+| **Golpe do padrinho** | O "padrinho" pede ouro ou Alvarás ao afilhado | Padrinho sem ganho em bem negociável; trava de calouro na Troca; denúncia com um toque; padrinho só cidadão há 30 dias e sem sanção |
+| **Primeira sessão longa demais** | Prólogo, chegada e três atos somam cerca de 50 minutos, e o jogador cansa no meio | Três pontos de parada; qualquer ato pode chegar na volta; medir o abandono por ato |
+| **Arrependimento da vocação ou do ofício** | A escolha não era o que o jogador esperava | Troca livre de vocação até o nível 10; troca grátis de ofício no período de experiência; alarme se as trocas passarem de 25% |
+| **Efeito manada na Mesa de Ofícios** | Todos escolhem o ofício "em falta", que fica lotado, e outro passa a faltar | Atualização diária; número de mestres por ofício à vista; a simulação testa a oscilação |
+| **O calouro se sente pobre num Arraial maduro** | Veteranos com capital dominam encomendas e cercos | Nota relativa na encomenda; faixas de calouro; a Travessia como recomeço justo a partir da 2ª Era ([conceito](../02-conceito.md), §3) |
+| **A tela de retorno vira relatório** | Linhas demais, ninguém lê, e a regra nova se perde | Limite de três linhas por bloco e uma novidade por volta; nota da tela no indicador de saúde |
+| **A noite encenada confunde** | O jogador acha que passou um dia de verdade, ou que o jogo "mente" sobre o tempo | Rótulo "simulação"; a primeira volta real repete a tela com números reais |
+| **Alvos de retenção otimistas demais** | Os alvos na base verificada estão perto do top 1% de PC e celular | Tratar como hipótese; alarmes definidos; replanejar a receita se o alfa mostrar números menores ([11](11-monetizacao.md), §8.6) |
+| **Alvo de métrica vira padrão obscuro** | Alguém cria meta de conversão no D1 ou de tempo de sessão | A lista do que não vira meta (seção 10.4) faz parte do documento e da carta pública |
+
+## Fontes novas deste módulo
+
+As demais fontes estão nos estudos e fichas da Fase 1 citados ao longo do texto. Acessadas em novembro de 2026.
+
+1. [Eric Goldman, "How Often Do Consumers Balk at Doing Online Age Authentication?", Technology & Marketing Law Blog](https://blog.ericgoldman.org/archives/2026/05/how-often-do-consumers-balk-at-doing-online-age-authentication.htm) — blog de professor de direito, que resume o estudo da Carnegie Mellon (ConPro 2026) e os relatórios do piloto euCONSENT — 26/5/2026. Os números vêm do resumo; não lemos os artigos originais.
+2. [Tecnoblog — MPDFT acusa Serpro de usar dados da CNH sem autorização (preços do Datavalid)](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/) — imprensa — 19/6/2019.
+3. [Contábeis — Governo estuda criar token etário digital](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/) — imprensa — 3/12/2025.

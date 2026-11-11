@@ -12,7 +12,7 @@
   2. **O ativo ganha outra coisa, não "o mesmo, mais rápido".** O ganho de volume do ativo tem teto baixo e conhecido (no máximo 2 h por dia de bancada ativa, que somam de +2% a +6,5% de volume num dia). O ganho de verdade do ativo é qualidade (obra-prima), achados, mercado e cidade.
   3. **Tudo o que é coletivo aceita contribuição planejada.** Encomendas, Obras e cercos recebem entregas automáticas e inscrições prévias. Ninguém precisa estar online num horário marcado.
 - **Sete escalas:** segundos (o tique da fila e o lance), minutos (a sessão), horas (a ausência), dias (encomendas, Obras, nível), semanas (cerco, tier novo), Eras (~13 semanas: ameaça nova, regra nova, eleição) e Travessias (10 a 12 semanas, a partir da 2ª Era).
-- **O dia típico** mostra que o casual (2 sessões curtas) produz cerca de 65% do volume do hardcore no ofício principal e chega ao primeiro 100 no D141, contra o D95 do hardcore. A diferença entre eles está menos no volume e mais em qualidade, mercado e cidade.
+- **O dia típico** mostra que o casual (2 sessões curtas) produz cerca de dois terços do volume do hardcore no ofício principal e chega ao primeiro 100 no D141, contra o D95 do hardcore. A diferença entre eles está menos no volume e mais em qualidade, mercado e cidade.
 
 ## 1. O loop central
 
@@ -87,7 +87,7 @@ A fila calcula no servidor, por eventos, a mesma produção com o jogador presen
 Cada fila mostra dois números, sempre [H]:
 
 - **Taxa ausente:** o rendimento da fila no piloto automático. Começa em **70%** do ritmo nominal da ação e sobe até **100%** jogando, em seis marcos de +5% (detalhe no [02](02-progressao.md), seção 8).
-- **Taxa ativa:** o rendimento da fila quando o jogador assume a **bancada ativa**, um modo em que a cada 45 s aparece um **lance**: uma escolha curta entre duas ou três opções. **Firme** rende 100%. **Forçar** rende 125% e gasta a ferramenta em dobro. **Garimpar** (na coleta) ou **apurar** (na transformação e na criação) rende 75%, mas quadruplica a chance de achado ativo ou de subir a qualidade.
+- **Taxa ativa:** o rendimento da fila quando o jogador assume a **bancada ativa**, um modo em que a cada 45 s aparece um **lance**: uma escolha curta entre duas ou três opções. **Firme** rende 100% do ritmo nominal. **Forçar** rende 125% e gasta a ferramenta em dobro. **Garimpar** (na coleta) ou **apurar** (na transformação e na criação) rende 75%, mas quadruplica a chance de achado ativo ou de subir a qualidade.
 
 A bancada ativa vale para uma fila por vez ("você só tem duas mãos") e conta no máximo **2 h por dia**. Sem resposta por dois lances seguidos, a fila volta sozinha à taxa ausente, sem perda.
 
@@ -114,7 +114,7 @@ Os achados do ausente são reagentes e peças de coleção **presos à conta** (
 
 ### L4. Relatório de volta: a consequência do plano
 
-Toda volta abre com um relatório curto, em três linhas e um detalhe opcional: o que foi planejado, o que rendeu e o gargalo. Exemplo (números ilustrativos): "Você deixou Mineração e Fundição por 9 h. Rendeu 2.005 minérios T4 e 120 mil XP de Mineração. A Fundição parou às 4h10: ela consome minério mais rápido do que a Mineração produz. Sugestão: comprar minério na Bolsa ou pôr uma segunda etapa na fila."
+Toda volta abre com um relatório curto, em três linhas e um detalhe opcional: o que foi planejado, o que rendeu e o gargalo. Exemplo (números ilustrativos): "Você deixou Mineração e Fundição por 9 h. Rendeu 2.005 minérios T4 e 120 mil XP de Mineração. A Fundição parou às 4h10, quando acabou o estoque de minério T3. Sugestão: comprar minério T3 na Bolsa ou pôr uma etapa de T3 na Mineração."
 
 - **Referência:** o modal de progresso offline do Milky Way Idle ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); a leitura do [02a](../01-pesquisa/02a-teoria-design-idle.md), seção 6.2: sem retorno, a ausência vira loteria.
 - **Problema:** o jogador não atribuir o resultado a si mesmo.
@@ -197,10 +197,10 @@ A Travessia não consome as filas da cidade. Ela roda numa trilha sazonal à par
 |---|---|
 | **O que faz** | Nada: o plano trabalha. Filas na taxa ausente; ordens executam; expedições avançam com as regras de recuo; entregas automáticas pingam na encomenda; achados do ausente rolam a cada hora contínua. |
 | **Decisão** | Já foi tomada antes de sair (seção 5). |
-| **O que ganha** | Volume e XP. Exemplo: o regular no D30, com Mineração 60 e taxa ausente de 90%, dorme 9 h e acorda com 2.005 minérios T4 e 120 mil XP de Mineração (cálculo no [02](02-progressao.md), seção 3.4). Mais as vendas feitas pelas ordens e os achados. |
+| **O que ganha** | Volume e XP. Exemplo: o regular no D30, com Mineração 60 e taxa ausente de 90%, dorme 9 h e acorda com 2.005 minérios T4 e 120 mil XP de Mineração (cálculo no [02](02-progressao.md), seção 2.3). Mais as vendas feitas pelas ordens e os achados. |
 | **Ausente × ativo** | Quem volta mais vezes ajusta mais vezes (reage a preço, troca uma etapa), mas não produz mais por hora de fila. A Bolsa não pode premiar velocidade de clique (módulo 07; [04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). |
 
-**O teto de offline** [H]: 24 h para todos no início, até 72 h conquistadas jogando ([02](02-progressao.md), seção 7). A tela de saída mostra a hora em que cada fila vai parar e por quê ("fila 2 para às 3h40: acaba o minério"). Depois do teto, a fila não corta seco: rende 25% por mais 12 h ([proposta](02-progressao.md), seção 7.3).
+**O teto de offline** [H]: 24 h para todos no início, até 72 h conquistadas jogando ([02](02-progressao.md), seção 7). A tela de saída mostra a hora em que cada fila vai parar e por quê ("fila 2 para às 3h40: acaba o minério"). Proposta em análise: depois do teto, a fila não corta seco e rende 25% por mais 12 h ([02](02-progressao.md), seção 7.3).
 
 ### 3.4 Dias (1 a 7 dias)
 
@@ -224,7 +224,7 @@ A Travessia não consome as filas da cidade. Ela roda numa trilha sazonal à par
 
 | | |
 |---|---|
-| **O que faz** | Enfrenta a ameaça nova da Era (um tipo de assombrado nos cercos) e joga com a regra nova; elege a Câmara (a cada 2 meses); completa Obras grandes que empurram a Bruma e abrem regiões. No fim da 1ª Era, o regular está perto do 90 no ofício principal e o hardcore perto do 95. |
+| **O que faz** | Enfrenta a ameaça nova da Era (um tipo de assombrado nos cercos) e joga com a regra nova; elege a Câmara (a cada 2 meses); completa Obras grandes que empurram a Bruma e abrem regiões. No fim da 1ª Era, o regular está perto do 90 no ofício principal e o hardcore perto do 98. |
 | **Decisão** | O voto; que Obra priorizar; trocar ou não um ofício mestre (uma troca por Era, [02](02-progressao.md), seção 5.3); quando tomar o Selo de mestre. |
 | **O que ganha** | Títulos e cosméticos da Era, regiões novas, Mérito e, para quem chega ao 100, a camada do Selo. |
 | **Ausente × ativo** | O voto fica aberto por dias. A regra nova é anunciada com uma Era de antecedência, para o plano de ninguém ser punido (lei 8). |
@@ -268,20 +268,20 @@ Os três dias se passam no **D30**, no meio da 1ª Era. Os números vêm do mode
 
 ### 4.2 Regular: Tião, 4 sessões por dia
 
-**Perfil:** Mineração (~60, T4) e Fundição (~47); vocação Guardião (~52). Três filas (a terceira chegou ontem, D29,7). Taxa ausente de 90%. Teto de offline de 48 h.
+**Perfil:** Mineração (~60, T4) e Fundição (~44); vocação Guardião (~52). Três filas (a terceira chegou ontem, D29,7). Taxa ausente de 90%. Teto de offline de 48 h.
 
 | Hora | Duração | O que faz | Decisão |
 |---|---|---|---|
-| 07h00 | 5 min | Relatório: a Fundição parou às 4h10, porque consome minério mais rápido do que a Mineração produz. Põe uma ordem de compra de minério na Bolsa. | Comprar insumo ou reduzir a Fundição. |
+| 07h00 | 5 min | Relatório: a Fundição parou às 4h10, quando acabou o minério T3. A Fundição dele ainda não chega ao T4 (abre no 50), e a Mineração já está no T4. Põe uma ordem de compra de minério T3 e uma de venda do minério T4 na Bolsa. | Comprar minério T3 ou pôr a Mineração no T3 por algumas horas (perde a venda do T4). |
 | 12h30 | 10 min | Vende lingotes T3 na Bolsa; entrega lingotes à encomenda da guilda; usa 10 min de bancada ativa na Mineração, garimpando atrás de gemas. | Onde pôr as mãos; quanto da produção vai à guilda. |
 | 18h30 | 12 min | Prepara o cerco: compra poções de uma alquimista; leva a couraça a um ferreiro para consertar (o conserto consome material e reduz a durabilidade máxima). Faz duas obras-primas de lingote. | Consertar ou trocar a couraça; que papel assumir no cerco. |
-| 23h00 | 5 min | Plano da noite: Mineração; Fundição com a etapa "se acabar o minério, fundir o estoque de T3"; Guardião em expedição. | — |
+| 23h00 | 5 min | Plano da noite: Mineração no T4; Fundição com a etapa "se acabar o minério T3, fundir o estoque de T2"; Guardião em expedição. | — |
 
-**Por que funciona para ele** [H]: duas filas encadeadas (coleta + transformação) dão a Tião uma cadeia própria curta, mas ele depende do mercado para equilibrá-la. A terceira fila liberou a vocação para rodar sempre, e o cerco passou a render peles que ele vende ao Curtume.
+**Por que funciona para ele** [H]: duas filas encadeadas (coleta + transformação) dão a Tião uma cadeia própria curta, mas os tiers dos dois ofícios não andam juntos, e ele depende do mercado para equilibrar a cadeia. É a interdependência aparecendo dentro de um jogador só. A terceira fila liberou a vocação para rodar sempre, e o cerco passou a render peles que ele vende ao Curtume.
 
 ### 4.3 Hardcore: Lia, muitas sessões e obras-primas
 
-**Perfil:** Ferraria (~66, T4) e Alquimia (~52); vocação Batedor (~56). Três filas desde o D23,5. Taxa ausente de 90%. Teto de offline de 60 h.
+**Perfil:** Ferraria (~65, T4) e Alquimia (~51); vocação Batedor (~56). Três filas desde o D23,5. Taxa ausente de 90%. Teto de offline de 60 h.
 
 | Período | O que faz | Decisão |
 |---|---|---|
@@ -303,7 +303,7 @@ Os três dias se passam no **D30**, no meio da 1ª Era. Os números vêm do mode
 | XP por dia no ofício principal | ~212 mil | ~282 mil | ~346 mil |
 | Obras-primas · bancada ativa | 1 · 10 min | 2 · 25 min | 8 · 90 min |
 | Mérito por dia (provisório, módulo 09) | ~20 | ~40 | ~100 |
-| Nível do ofício principal no D30 | ~56 | ~60 | ~66 |
+| Nível do ofício principal no D30 | ~56 | ~60 | ~65 |
 | Primeiro 100 de ofício mestre | D141 | D116 | D95 |
 
 **Leitura** [H]: o hardcore joga ~7 vezes mais tempo de tela que o casual e tem ~1,5 vez o volume dele no ofício principal. A física da fila (uma por atividade, 24 h por dia no máximo) é o que mantém essa razão pequena, e é ela que segura a emissão quando a população cresce (lei 6). O que o hardcore ganha a mais é qualidade (8 obras-primas por dia), informação de mercado e Mérito.

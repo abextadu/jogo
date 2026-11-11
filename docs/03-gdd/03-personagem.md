@@ -60,14 +60,15 @@ O personagem é a soma de três identidades: **como luta** (a vocação), **o qu
 
 | Derivado | Fórmula [H] | Observação |
 |---|---|---|
-| **Vida máxima (PV)** | `PV = 60 + 10 × VIG + 5 × nível + PV do equipamento` | O nível dá uma base para quem não investe em VIG. |
-| **Ataque (ATQ)** | `ATQ = dano da arma × (1 + atributo da arma / 100)` | O atributo da arma é FOR nas pesadas, DES nas leves e nos arcos, SAB nos cajados e nas lanternas. |
-| **Defesa (DEF)** | soma da DEF das peças de armadura e da secundária | Uso no dano: ver [04-combate](04-combate.md), seção 4. |
-| **Crítico** | `chance = 5% + 0,1% × DES` (máx. 50%); dano × 1,5 | O Batedor pode chegar a × 2,0 pelo caminho. |
-| **Esquiva** | `0,1% × DES + bônus da armadura` (leve 5%, média 3%, pesada 0%; máx. 30%) | |
-| **Bloqueio** (com escudo) | `15% + 0,1% × FOR` (máx. 40%); o golpe bloqueado causa 30% do dano | Só com escudo na secundária. |
-| **Clareza (CLA)** | `CLA = SAB + clareza do foco` | Dano contra a barra de Bruma dos encantados ([04-combate](04-combate.md), seção 5). |
-| **Firmeza** | `0,2% × (VIG + SAB)` (máx. 50%) | Chance de resistir a um estado negativo. |
+| **Vida máxima (PV)** | `PV = 60 + 10 × VIG + 5 × nível` | O nível dá uma base para quem não investe em VIG. O módulo 05 não dá PV às peças. |
+| **Ataque (ATQ)** | `ATQ = atributo principal da arma × (1 + atributo do personagem / 100)` | O atributo principal da arma vem do [05-itens](05-itens.md), seção 4.3. O atributo do personagem é FOR na espada, DES no facão e no arco, SAB no cajado e no bordão. |
+| **Defesa (DEF)** | soma da defesa das peças de armadura e do escudo ([05-itens](05-itens.md), seção 4.3) | Uso no dano: ver [04-combate](04-combate.md), seção 4. |
+| **Precisão** | secundário do arco (05) | Soma no acerto. |
+| **Crítico** | `chance = 5% + 0,1% × DES + secundário de crítico do facão` (máx. 50%); dano × 1,5 | O Batedor pode chegar a × 2,0 pelo caminho. |
+| **Esquiva** | `0,1% × DES + secundário de esquiva da armadura média` (máx. 30%) | |
+| **Bloqueio** | `secundário de bloqueio da espada e do escudo + 0,1% × FOR` (máx. 40%); o golpe bloqueado causa 30% do dano | Guardião. |
+| **Clareza (CLA)** | `CLA = (SAB + 0,5 × atributo principal do cajado ou do bordão) × (1 + Foco da armadura leve)` | Dano contra a barra de Bruma dos encantados ([04-combate](04-combate.md), seção 5). |
+| **Firmeza** | `0,2% × (VIG + SAB) + secundário de firmeza da armadura pesada` (máx. 50%) | Chance de resistir a um estado negativo. |
 | **Ânimo** | começa a luta em 30, +10 por ação básica, máx. 100 | O recurso das habilidades. Zera entre lutas. |
 | **Regeneração fora de luta** | 1% do PV por segundo; **2% com refeição** | É a principal razão de comer (seção 4.2). |
 
@@ -75,35 +76,28 @@ O personagem é a soma de três identidades: **como luta** (a vocação), **o qu
 
 ## 4. Como equipamento, comida e poções modificam o personagem
 
-### 4.1 Equipamento: seis casas
+### 4.1 Equipamento: as seis casas do 05 e a casa da dádiva
 
-| Casa | O que vai nela | Quem faz (a reconciliar com 05 e 06) |
-|---|---|---|
-| **Arma** | Espada, maça, machado, facão, arco, cajado, bordão | Ferraria (metal), Carpintaria (arcos, cajados, cabos) |
-| **Secundária** | Escudo, aljava, lanterna, bornal, segunda faca | Carpintaria (escudo, aljava), Ferraria (lanterna, faca), Alfaiataria (bornal) |
-| **Cabeça** | Elmo, chapéu de couro, lenço | Ferraria (pesada), Alfaiataria (média e leve) |
-| **Corpo** | Couraça, gibão de couro, veste | Ferraria (pesada), Alfaiataria com Curtume (média) e com Tecelagem (leve) |
-| **Pés** | Botas, alpercatas | Alfaiataria com Curtume |
-| **Amuleto** | Uma **dádiva** de um encantado libertado | Ninguém: vem da libertação ([04-combate](04-combate.md), seção 5) e fica **presa à conta** |
+As casas, as famílias de peça, os números por tier e a qualidade são do [05-itens](05-itens.md), seção 4. Este módulo usa esses números e propõe uma sétima casa.
 
-[H] **Quatro perguntas sobre o amuleto preso à conta.** *Referência:* os itens presos à conta do Loot 2.0 do Diablo III ([00-sintese](../01-pesquisa/00-sintese.md), insight 3, e [G01](../01-pesquisa/fichas/G01-diablo-3-casa-de-leilao.md)). *Problema:* as cinco casas negociáveis concentram o poder no mercado; uma casa pessoal garante que uma parte do poder vem da história do próprio jogador. *Comportamento:* libertar encantados, e não só dispersá-los. *Risco:* a dádiva certa vira obrigação. Mitigação: as dádivas são laterais (um efeito contra uma família de assombrados, uma resistência), e nenhuma vale mais que uma peça de tier acima.
+| Casa | Guardião | Caçador | Encantador | Erveiro | Batedor |
+|---|---|---|---|---|---|
+| **Arma** | Espada (Ferraria) | Arco (Carpintaria) | Cajado de duas mãos (Carpintaria) | Bordão (Carpintaria) | Facão (Ferraria) |
+| **Secundária** | Escudo (Carpintaria) | Aljava, leva até 300 flechas (Alfaiataria) | — (o cajado ocupa as duas mãos) | Bornal (Alfaiataria) | Lamparina (Ferraria) |
+| **Cabeça, corpo, mãos, pés** | Armadura pesada (Ferraria) | Armadura média de couro (Alfaiataria) | Armadura leve de tecido (Alfaiataria) | Armadura leve | Armadura média |
+| **Dádiva** (proposta) | Uma **dádiva** de um encantado libertado: não é feita por ninguém, vem da libertação ([04-combate](04-combate.md), seção 5) e fica **presa à conta** | | | | |
+
+**[proposta para o módulo 05]** Acrescentar a **casa da dádiva** às seis casas de combate.
+
+[H] **Quatro perguntas sobre a casa da dádiva, presa à conta.** *Referência:* os itens presos à conta do Loot 2.0 do Diablo III ([00-sintese](../01-pesquisa/00-sintese.md), insight 3, e [G01](../01-pesquisa/fichas/G01-diablo-3-casa-de-leilao.md)). *Problema:* as seis casas negociáveis concentram o poder no mercado; uma casa pessoal garante que uma parte do poder vem da história do próprio jogador. *Comportamento:* libertar encantados, e não só dispersá-los. *Risco:* a dádiva certa vira obrigação. Mitigação: as dádivas são laterais (um efeito contra uma família de assombrados, uma resistência), e nenhuma vale mais que uma peça de tier acima.
 
 **Qualquer vocação veste qualquer peça.** A vocação tem bônus de proficiência no seu tipo de armadura (seção 5). [H] Restringir por classe divide a demanda e esvazia livros na Bolsa e na Feira; liberar com bônus mantém a identidade sem fatiar o mercado.
 
-**Números de referência por tier** [H], a reconciliar com o módulo 05:
-
-| Tier | Dano da arma | DEF do conjunto (armadura média) | PV do conjunto |
-|---|---|---|---|
-| T1 | 10 | 12 | 20 |
-| T2 | 18 | 22 | 35 |
-| T3 | 30 | 36 | 55 |
-| T4 | 48 | 56 | 80 |
-| T5 | 72 | 84 | 110 |
-| T6 | 105 | 120 | 150 |
-
-- Armadura **pesada**: DEF × 1,4, sem esquiva. Armadura **leve**: DEF × 0,7, esquiva +5% e +SAB por tier (+2 por tier).
-- **Qualidade** multiplica os números da peça: Comum × 1,00 · Bom × 1,08 · Fino × 1,16 · Obra-prima × 1,30.
-- **Desgaste:** abaixo de 20% de durabilidade, a peça perde 15% dos números; a 0% fica **avariada** e não dá nada até o reparo. Ela só some pelo ciclo de reparos ([00-biblia](00-biblia.md), 6.5). As taxas por hora estão no [04-combate](04-combate.md), seção 8.
+**Números usados aqui** (do [05-itens](05-itens.md), seções 4 e 5):
+- **Poder de item por tier:** `PI(T) = 10 × 1,6^(T − 1)`: 10, 16, 26, 41, 66 e 105 de T1 a T6. A arma tem atributo principal igual a um fator vezes o PI (espada 1,00; facão 0,85; arco 0,95; cajado 1,40; bordão 0,70 de dano e 0,60 de cura). A defesa das quatro peças de armadura é 3,0 × PI (pesada), 2,2 × PI (média) ou 1,5 × PI (leve); o escudo, 0,6 × PI.
+- **Secundários** por família: bloqueio (espada e escudo), crítico (facão), precisão (arco e aljava), área (cajado), alívio (bordão), achados e visão na Bruma (lamparina), cura (bornal), firmeza (pesada), esquiva (média) e foco (leve).
+- **Qualidade** multiplica principal e secundário: Comum × 1,00 · Bom × 1,08 · Fino × 1,16 · Obra-prima × 1,25.
+- **Durabilidade e reparo:** as regras são as do 05 (120 pontos de durabilidade na peça Comum, 10 por hora de combate, 3 reparos). A peça zerada fica inoperante até o reparo e só some no fim do ciclo de reparos ([00-biblia](00-biblia.md), 6.5). Os ajustes por vocação e por situação estão no [04-combate](04-combate.md), seção 8.
 
 ### 4.2 Comida: a refeição
 
@@ -111,7 +105,7 @@ O personagem é a soma de três identidades: **como luta** (a vocação), **o qu
 - **Consumo:** 1 porção por hora de combate, por combatente. **O ajudante também come** (seção 9).
 - **Efeito principal:** a regeneração fora de luta sobe de 1% para 2% do PV por segundo. É isso que separa uma expedição que dura a noite de uma que gasta o cinto de poções na primeira hora.
 - **Efeito do prato:** +4 / +6 / +9 / +12 / +16 / +20 num atributo (T1 a T6), vezes o multiplicador de qualidade. Cada receita escolhe o atributo, e algumas trocam o bônus por um efeito (resistência a peçonha, +ânimo inicial). Exemplos de nomes, a fechar no módulo 06: paçoca de carne (FOR), peixe na folha de bananeira (DES), caldo de piranha (VIG), tacacá (SAB).
-- **Sem refeição:** nada de ruim acontece além de a regeneração ficar lenta. O personagem gasta duas a três vezes mais poções ([04-combate](04-combate.md), seção 8).
+- **Sem refeição:** nada de ruim acontece além de a regeneração ficar lenta. O personagem gasta cerca de duas vezes mais poções ([04-combate](04-combate.md), seção 8).
 
 [H] **Quatro perguntas.** *Referência:* a comida com Auto Eat do Melvor, que é consumida quando a vida cai a 20% ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)). *Diferença:* aqui a comida é sustento por hora, não cura de emergência; a cura de emergência é a poção. Assim, Culinária e Alquimia vendem coisas diferentes e competem pela mesma decisão ("como-me-sustento"). *Problema:* comida que só cura vira apenas uma poção pior. *Comportamento:* uma demanda constante e previsível por Culinária (uma porção por hora, por combatente) e uma demanda de pico por Alquimia. *Risco:* a refeição vira imposto obrigatório. Mitigação: sem ela o jogo funciona, só custa mais poções; a escolha é qual consumível comprar.
 
@@ -134,17 +128,18 @@ O personagem é a soma de três identidades: **como luta** (a vocação), **o qu
 ### 4.4 Exemplo completo — Caçador nível 30
 
 - **Atributos:** 29 pontos fixos (60% DES, 40% VIG: 17 e 12) e 29 livres (20 em DES e 9 em VIG). Fica DES 42, VIG 26, FOR 5, SAB 5.
-- **Equipamento:** arco T3 Bom (dano 30 × 1,08 = 32,4; intervalo de 2,8 s) e conjunto de couro médio T3 Bom (DEF 36 × 1,08 ≈ 39; PV 55 × 1,08 ≈ 59).
+- **Equipamento** (números do 05): arco T3 Bom (dano 0,95 × 26 × 1,08 = 26,7; precisão 6% × 1,08 = 6,5%; um disparo a cada 2,5 s) e armadura média de couro T3 Bom nas quatro peças (defesa 2,2 × 26 × 1,08 ≈ 62; esquiva 6% × 1,08 = 6,5%).
 - **Refeição:** peixe na folha T3 Comum (+9 DES).
 
 | Derivado | Conta | Resultado |
 |---|---|---|
-| PV | 60 + 10 × 26 + 5 × 30 + 59 | **529** |
-| ATQ | 32,4 × (1 + (42 + 9) / 100) | **48,9** |
+| PV | 60 + 10 × 26 + 5 × 30 | **470** |
+| ATQ | 26,7 × (1 + (42 + 9) / 100) | **40,3** |
 | Crítico | 5% + 0,1% × 51 | **10,1%** |
-| Esquiva | 0,1% × 51 + 3% | **8,1%** |
-| DEF | | **39** |
-| Dano básico por segundo, antes da defesa do alvo | 48,9 × (1 + 0,101 × 0,5) / 2,8 | **≈ 18,3** |
+| Precisão | | **6,5%** |
+| Esquiva | 0,1% × 51 + 6,5% | **11,6%** |
+| DEF | | **62** |
+| Dano básico por segundo, antes da defesa do alvo | 40,3 × (1 + 0,101 × 0,5) / 2,5 | **≈ 16,9** |
 
 A conta contra um alvo de verdade, com defesa e crítico, está no [04-combate](04-combate.md), seção 4.
 
@@ -165,7 +160,7 @@ A conta contra um alvo de verdade, com defesa e crítico, está no [04-combate](
 **Como ler cada ficha.** Toda vocação tem: a fantasia em uma frase; o papel em expedições, masmorras e cercos; os atributos; o que veste e de que ofícios é freguesa; o **olhar de colheita** (o multiplicador de drops por família de material, detalhado no [04-combate](04-combate.md), seção 7); a **mecânica-assinatura**; 6 habilidades ativas e 3 passivas no lançamento; e 3 caminhos (seção 6).
 
 **Regras comuns às habilidades** [H]:
-- As ativas abrem nos níveis de vocação 1, 5, 10, 20, 35 e 50; as passivas, nos níveis 15, 30 e 45.
+- As ativas abrem nos níveis de vocação 1, 5, 10, 20, 35 e 50; as passivas, nos níveis 15, 30 e 45. A ordem das tabelas não é a ordem de abertura, que fica para os módulos 02 e 12, com uma regra: até o nível 10, cada vocação já tem uma habilidade de cada função central (no Encantador, uma de cada família de canto; no Encantador e no Erveiro, uma de clareza).
 - Toda habilidade conhecida fica disponível. Quem decide o uso são as **regras de combate** ([04-combate](04-combate.md), seção 3), e o limite real é o número de casas de regra, não uma barra de atalhos.
 - Custo em ânimo e recarga em segundos. Potência em % do ATQ (ou da CLA, quando é clareza).
 

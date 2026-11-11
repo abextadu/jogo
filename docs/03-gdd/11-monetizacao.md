@@ -408,7 +408,7 @@ A soma dos limites (15) passa do teto (10), para dar escolha. **Venda no mercado
 
 **O teto limita a doação em reais, não o uso de Alvarás.** Alvarás recebidos de outros jogadores (Câmbio, Troca, Cartório) não contam no teto de quem os recebe; contam no teto de quem doou. Os limites de Alvarás por conta no Câmbio são assunto do módulo 07.
 
-**O que isso faz com as baleias [H].** Com o teto, o maior doador possível doa R$ 14.400 por ano. Na Jagex, os tetos eram de £1.000 por semana e £5.000 por mês ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)). No cenário base da seção 8, o 1% que mais doa responde por cerca de 12% da receita, contra 48% da receita vinda de 0,19% dos jogadores no F2P mobile medido pela Swrve ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.3). É o objetivo: a receita não depende de quem perdeu o controle.
+**O que isso faz com as baleias [H].** Com o teto, o maior doador possível doa R$ 14.400 por ano. Na Jagex, os tetos eram de £1.000 por semana e £5.000 por mês ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)). No cenário base da seção 8, o 1% que mais doa responde por cerca de 11% da receita, contra 48% da receita vinda de 0,19% dos jogadores no F2P mobile medido pela Swrve ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.3). É o objetivo: a receita não depende de quem perdeu o controle.
 
 ### 7.2 Ferramentas de cuidado, ligadas por padrão
 
@@ -527,7 +527,7 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 
 ### 8.4 Deduções, custos e o que a receita paga
 
-[H] Deduções sobre a receita bruta: impostos ~12% ([NV]: depende do regime, Simples Nacional ou Lucro Presumido, e da transição para IBS e CBS; **validar com contador**; a projeção não inclui ITCMD, ver a seção 2.6); meios de pagamento ~3% (seção 2.3); perdas por contestação não regularizada ~1,5%. Receita líquida ≈ 83,5% da bruta.
+[H] Deduções sobre a receita bruta: impostos ~12% ([NV]: depende do regime, Simples Nacional ou Lucro Presumido, e da transição para IBS e CBS; **validar com contador**; a projeção não inclui o efeito do risco registrado na seção 2.6); meios de pagamento ~3% (seção 2.3); perdas por contestação não regularizada ~1,5%. Receita líquida ≈ 83,5% da bruta.
 
 **Custo de uma pessoa na equipe [F + H]:** agregadores de salário põem a média de desenvolvedor de jogos no Brasil em ~R$ 8.200 por mês, somando todos os níveis ([Contabilizei](https://www.contabilizei.com.br/contabilidade-online/quanto-ganha-um-desenvolvedor-de-jogos-confira/)), e o sênior em ~R$ 11.450 ([Jornal Contábil](https://jornalcontabil.com.br/noticia/voce-sabe-quanto-ganha-um-desenvolvedor-de-jogos-confira/)). São fontes comerciais, de baixa confiança, e outras fontes divergem muito. [H] Com encargos, benefícios e equipamento (~1,7 vez o salário), usamos **R$ 14 mil por pessoa por mês**.
 
@@ -622,4 +622,122 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 - Limites de Alvarás por conta no Câmbio (o [05d](../01-pesquisa/05d-rmt-recomendacao.md) sugere simular tetos semanais de venda e mensais de compra) **a reconciliar com o módulo 07**, respeitando a decisão de transferência livre. Com o Alvará divisível, os limites passam a ser em quantidade de Alvarás, não em unidades de token.
 - O Baú não pode derrubar o preço da decoração feita pelos ofícios (seção 5.8).
 
-<!-- continua -->
+## 10. A carta pública de monetização
+
+[H] Texto para a página do jogo e para a tela "Como o jogo se paga", acessível da loja. Versão 0: **revisar com advogado antes de publicar**, porque a carta é um compromisso público e pode ser lida como oferta (CDC, art. 30). O [06](../01-pesquisa/06-monetizacao-retencao.md) ("Como isso pode dar errado", item 11) lembra que o contrato público pode virar armadilha se for impreciso.
+
+---
+
+> ### Como o Arraial se paga, e o que nunca vamos vender
+>
+> O Arraial é de quem joga. Esta carta diz, sem letra miúda, como o jogo se paga. Se um dia ela mudar, você vai saber com 30 dias de antecedência, com os motivos e os números.
+>
+> **Doação e Alvarás**
+> - Quem quiser apoiar o jogo faz uma **doação** e recebe **Alvarás**: **1 Alvará para cada R$ 1,00**, em qualquer valor. Não há bônus escondido nem pacote "mais vantajoso": o preço é sempre o mesmo.
+> - **Doações não são reembolsadas.** Por isso, antes de cada doação, mostramos o total do mês e o seu limite.
+> - **Se um pagamento for contestado no banco** (estorno do cartão ou devolução do Pix), **a conta fica suspensa até a regularização**, com o pagamento do valor contestado. Nada da conta é apagado, e a suspensão não é mostrada a ninguém.
+> - Quem não quer doar pode conseguir Alvarás com ouro ganho jogando, no Câmbio.
+>
+> **O que os Alvarás compram**
+> - **Conveniência:** 20 Alvarás por 30 dias. Inclui um cosmético novo a cada 30 dias, que fica com você para sempre, mais espaço no guarda-roupa, cômodos de decoração na casa, festas para os amigos, um painel do seu patrimônio e temas de interface. A lista completa está na loja.
+> - **Cosméticos:** aparências, decoração, visuais de ajudante, gestos.
+> - **O Passe da Era:** uma trilha de recompensas cosméticas. Ele não expira. Passes antigos continuam à venda e podem ser completados quando você quiser.
+> - **O Baú do Mascate:** uma caixa com um cosmético ou decoração sorteados. As chances exatas de cada item estão na tela do Baú e nesta página. **Todo item do Baú também é vendido diretamente, com preço fixo**, então você nunca precisa contar com a sorte para ter o que quer. Há limite de Baús por mês.
+>
+> **O que nunca vendemos**
+> - Tempo: horas de offline, filas, aceleração.
+> - Automação.
+> - Renda, XP, nível, poder de combate ou qualidade de fabricação.
+> - Espaço de armazenamento, vagas ou destaque no mercado, taxas menores.
+> - Reparo ou qualquer alívio do desgaste.
+> - Mérito, voto, título de conquista ou lugar em ranking.
+>
+> Também não damos Alvará nem Baú de graça em eventos, porque isso desvaloriza o que outros jogadores doaram.
+>
+> **A espera é igual para todos.** Todo mundo tem 24 horas de trabalho guardado quando está fora, e pode chegar a 72 horas jogando. Ninguém compra mais. Sair do jogo nunca faz você perder o que tem.
+>
+> **Limites que protegem você**
+> - O teto de doação é de **R$ 250 por mês**, igual para todos. Para aumentar, você pede e espera alguns dias. Para diminuir, o efeito é imediato.
+> - Você pode **fechar a loja para você** por 30, 90 ou 180 dias, ou de vez.
+> - As suas doações do mês, do ano e da vida da conta ficam sempre à vista.
+> - Não usamos contagem regressiva, oferta "só para você" nem notificação de promoção.
+> - O jogo é só para maiores de 18 anos, com idade confirmada. Uma pessoa, uma conta.
+>
+> **O dinheiro, o ouro e as trocas**
+> - O estúdio não compra de volta Alvarás, ouro, itens ou contas, e não paga dinheiro a jogadores.
+> - O Cartório é o único lugar oficial de venda de contas. O pagamento é em Alvarás, e a taxa de 10% é destruída.
+> - Trocas por dinheiro entre jogadores, fora do jogo, não são intermediadas nem garantidas por nós, e não damos suporte a elas. Não temos parceria nem integração com sites de venda de itens. Uso de bot é proibido.
+> - Todas as taxas em ouro são destruídas. O estúdio não ganha ouro.
+> - **Não prometemos renda.** Ninguém deve jogar este jogo para ganhar dinheiro.
+>
+> **Preços e mudanças**
+> - A paridade de 1 Alvará por R$ 1,00 e os preços da loja não sobem nos primeiros 12 meses. Depois, nunca acima da inflação oficial (IPCA) do período, e sempre com 30 dias de aviso.
+> - Nada que for tirado do jogo grátis volta à venda.
+>
+> **Transparência**
+> Todo mês publicamos um relatório com o preço do Alvará em ouro, o ouro criado e destruído, quanto da conveniência foi obtida com ouro, a diferença de progresso entre quem doa e quem não doa, as chances dos Baús e os banimentos por bot e fraude.
+
+---
+
+## 11. Decisões que este módulo pede ao diretor
+
+[H] Até cinco, cada uma com opções e a recomendação.
+
+1. **Preço da conveniência.** (A) 20 Alvarás por 30 dias ← recomendado; (B) 15; (C) 25. *Por quê:* fica entre o Torn e o IdleMMO em preço regional, sem baratear o ouro nem empurrar para o mercado cinza (seção 2.2).
+2. **Bônus nas faixas maiores de doação.** (A) Sem bônus: 1 Alvará = R$ 1,00 sempre ← recomendado; (B) bônus de 5% a partir de R$ 100 e de 10% em R$ 250. *Por quê:* (A) mantém o preço em reais legível sem conta e não barateia o ouro de quem doa muito; (B) é o padrão do mercado, aumenta a doação média e deixa o "P2W de capital" um pouco mais barato.
+3. **Todo item do Baú também à venda diretamente.** (A) Sim, com preço fixo, e o item comum custando o mesmo que o Baú ← recomendado; (B) só os itens Raro ou melhor; (C) Baú com itens exclusivos. *Por quê:* (A) põe teto no prêmio e piso no resultado, enfraquecendo dois lados do triângulo de risco jurídico (seção 5.1); (C) é o desenho que gerou a revolta da licença de montaria no Guild Wars 2.
+4. **Teto de doação padrão.** (A) R$ 250 por mês, com níveis de R$ 600 e R$ 1.200 por pedido e com espera ← recomendado; (B) R$ 500; (C) R$ 150. *Por quê:* R$ 250 cobre o gasto mensal de 77% dos jogadores ouvidos pela Serasa; (B) dobra a exposição dos vulneráveis, num jogo sem reembolso; (C) corta a maior faixa de doação e obriga quem doa para o trimestre a pedir aumento.
+5. **Passe da Era.** (A) Separado da conveniência, por 20 Alvarás ← recomendado; (B) incluso na conveniência (como propôs o [06](../01-pesquisa/06-monetizacao-retencao.md)). *Por quê:* (A) dá a quem só quer a coleção da Era um produto próprio e cria um segundo uso do Alvará, o que sustenta o preço dele em ouro.
+
+## Propostas de mudança na bíblia
+
+1. **[proposta de mudança na bíblia] Glossário:** incluir **Passe da Era** (o passe da temporada, um por Era, sem expirar, pago em Alvarás) e **feito** (unidade de progresso do Passe da Era; não é moeda). O nome "feito" evita colisão com **Marcos**, a moeda da Travessia.
+2. **[proposta de mudança na bíblia] Regra do lacre** como complemento do piso P3 para bens que não se desgastam: cosmético negociável (do Baú ou feito por jogadores) circula lacrado e fica preso à conta quando aplicado. A reconciliar com os módulos 05 e 07.
+3. **[proposta de mudança na bíblia] Números-âncora, §6.7:** trocar "preço em reais a definir no módulo 11 (faixa a testar: R$ 14,90 a R$ 24,90 por 30 dias de conveniência)" por: 1 Alvará = R$ 1,00 na doação, sem bônus; conveniência a 20 Alvarás por 30 dias; Baú a 5 Alvarás; Passe da Era a 20 Alvarás; teto de doação padrão de R$ 250 por mês.
+
+## Conflitos e pontos a reconciliar
+
+| Ponto | Onde está o conflito | Como este módulo tratou |
+|---|---|---|
+| Sorteio pago | O [06](../01-pesquisa/06-monetizacao-retencao.md) (princípio 3) e o [05d](../01-pesquisa/05d-rmt-recomendacao.md) (§4.1, item 7) recomendavam nenhum sorteio pago; o Gabriel decidiu pelo Baú | Segue a decisão; salvaguardas da seção 5 |
+| Token como item indivisível, de uma revenda só, sem troca direta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §4.1, que pôs a moeda premium transferível em luz amarela (arranjo de pagamento, moeda paralela); a bíblia decidiu Alvará como moeda divisível e transferível | Segue a bíblia; limites por conta e carência ficam para os módulos 07 e 13 |
+| Reembolso de 7 dias | O [06](../01-pesquisa/06-monetizacao-retencao.md) (princípio 10) e o [05d](../01-pesquisa/05d-rmt-recomendacao.md) (§5.8) recomendavam reembolsar o não usado; o Gabriel decidiu sem reembolso | Segue a decisão; risco registrado uma vez (seção 2.6); proteção antes da doação (seção 7.2) |
+| Resposta à contestação | O [05d](../01-pesquisa/05d-rmt-recomendacao.md) (§5.4) propunha revogar só o token contestado, sem bloquear a conta inteira; o Gabriel decidiu suspender a conta até regularizar | Segue a decisão; desenho com regularização imediata, nada apagado e discrição (seção 7.4) |
+| Passe incluso na assinatura | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 5 | Separado (decisão 5) |
+| Cosmético da loja preso × Baú negociável | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 7 × decisão do Gabriel | Loja presa; Baú lacrado e negociável; preso ao aplicar |
+| Limites de Alvarás no Câmbio por conta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.3 × transferência livre | A reconciliar com o módulo 07 |
+| Verificação de idade antes de jogar | Bíblia: jogo inteiro 18+ | O [12](12-onboarding.md) propõe um prólogo sem conta antes da verificação, para decisão do diretor |
+| Lugar do Baú fechado no mercado (Bolsa?) | Módulo 07 | A reconciliar |
+
+## Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| **O Baú é lido como jogo de azar** | Pagamento, sorte e prêmio negociável com RMT aberto: o triângulo da LCP, art. 50, e da tese de Nova York contra a Valve ([05b](../01-pesquisa/05b-rmt-legal-brasil.md), §3) | Venda direta de todo item, piso igual ao preço, teto de compra e de abertura, chances exatas, sem apresentação de cassino. Interruptor para desligar o Baú por país. Risco assumido pelo Gabriel; **validar com advogado** antes do lançamento |
+| **Gateway ou loja recusa o jogo por causa do Baú** | Provedores restringem caixa paga com prêmio de valor ([05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)) | Aprovação do modelo por escrito com dois provedores (R9 do [05d](../01-pesquisa/05d-rmt-recomendacao.md)); versão de loja de apps sem Baú e sem Câmbio |
+| **O Alvará vira moeda paralela** | Divisível e transferível, ele passa a pagar coisas entre jogadores fora dos balcões, ou a circular por Pix no RMT informal, e se aproxima de "arranjo de pagamento" ou "ativo virtual" (Lei 14.478), luz amarela no [05d](../01-pesquisa/05d-rmt-recomendacao.md) (candidato b) | O Câmbio como canal principal, a taxa de 3% em ouro na Troca, limites por conta (módulo 07), detecção por grafo (módulo 13); **validar com advogado** |
+| **A suspensão por contestação é lida como abusiva** | Bloquear a conta de quem contestou cobranças fez parte do acordo de US$ 245 milhões da Epic com a FTC ([06](../01-pesquisa/06-monetizacao-retencao.md), §2.1); no Brasil, pode esbarrar no CDC (arts. 42 e 51) | Aviso claro antes de toda doação e na carta; nada é apagado; regularização imediata; suspensão discreta; atendimento humano; **validar com advogado** |
+| **Sem reembolso, mais gente contesta no banco** | O jogador arrependido, sem caminho no estúdio, vai direto ao banco; a taxa de disputas sobe perto do limite das bandeiras (1,5%) | Proteção antes da doação (seção 7.2); disjuntor; medir a taxa de contestação por meio de pagamento todo mês |
+| **A conveniência vale pouco** | Sem bônus de XP, pouca gente gasta Alvará em conveniência; o Alvará vira só "ouro comprado"; o preço dele em ouro cai, e o doador recebe menos ouro por real | Cenário de estresse 3 (seção 9); reforçar com mais cosmético e mais vida social, nunca com resultado; medir a parcela de gasto em conveniência todo mês |
+| **A conveniência escorrega para resultado** | Pressão para incluir "só um pouquinho" de offline, de fila ou de taxa menor | Teste das quatro perguntas por alguém de fora do time de receita; a carta pública lista o que nunca se vende |
+| **P2W de capital pelo Câmbio** | O doador alto vende Alvarás e compra o mercado ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)) | Teto de doação; sem bônus por volume; limites por conta no Câmbio (módulo 07); publicar a diferença de patrimônio entre quem doa e quem não doa |
+| **Cartão roubado vira Pix pelo RMT informal** | Fraudador doa com cartão de terceiro, transfere os Alvarás e os vende por Pix fora do jogo antes do estorno | Carência de transferência por meio de pagamento (S2, módulo 13); suspensão da conta contestante; congelamento rastreado no livro-razão; disjuntor |
+| **A verificação de idade inviabiliza a conta** | A R$ 1,00 por conta nova, consome 25% da receita no base e 70% no pessimista (seção 8.5) | Prólogo sem conta antes da verificação ([12](12-onboarding.md)); negociação por volume; métodos combinados (módulo 13); acompanhar o token etário público; reserva de lançamento |
+| **O teto empurra para o mercado cinza** | Quem quer gastar mais compra ouro ou Alvarás por Pix de outros jogadores | Medir o preço do nosso ouro no mercado cinza; canal oficial mais seguro; teto ampliado por pedido |
+| **O pessimista acontece** | 2 mil simultâneos, 2% de conversão e ARPPU de R$ 25 não pagam nem a verificação | Decidir, antes de construir, qual equipe mínima o Gabriel banca sem receita; medir no alfa o DAU por simultâneo e a conversão; plano B dentro da carta: mais cosmético, expansões de conteúdo cosmético, versão Steam |
+| **Pix Automático esquecido** | O jogador doa meses sem jogar, e sem reembolso | Aviso 3 dias antes de cada cobrança, cancelamento com um toque, pausa; renovação da conveniência desligada por padrão |
+| **Especulação com itens lacrados** | Lendários lacrados guardados como reserva de valor | Teto de valor pela venda direta; o lacre tira o item do mercado quando usado; edições nunca retiradas |
+| **O Baú derruba o artesão da decoração** | Cosméticos do Baú inundam o mercado e competem com o que os ofícios fabricam | Monitorar preços (módulo 07); moldes da trilha grátis do passe dão aos ofícios uma linha própria; ajustar o volume de decoração nas edições |
+| **A carta pública vira armadilha** | Um compromisso impreciso impede uma correção necessária (o token no WoW Classic, [F06](../01-pesquisa/fichas/F06-world-of-warcraft.md)) | Texto revisado por advogado; listas exatas do que é proibido e do que é permitido; mudanças só a favor do jogador |
+| **Pressão por receita muda a cultura** | Anos de vendas de atalho no RS3 sob donos sucessivos ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)) | Indicadores de justiça na mesma reunião que a receita ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 12); a carta pública como freio |
+
+## Fontes novas deste módulo
+
+As demais fontes estão nos estudos e fichas da Fase 1 citados ao longo do texto. Acessadas em novembro de 2026.
+
+1. [Mercado Pago — Link de pagamento (taxas de Pix, cartão e parcelamento)](https://www.mercadopago.com.br/ferramentas-para-vender/link-de-pagamento) — oficial (empresa) — sem data de vigência na página.
+2. [Tecnoblog — MPDFT acusa Serpro de usar dados da CNH sem autorização (preços do Datavalid)](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/) — imprensa — 19/6/2019.
+3. [Contábeis — Governo estuda criar token etário digital](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/) — imprensa — 3/12/2025.
+4. [Let's Money — Bancos podem validar idade para o ECA Digital via Open Finance](https://www.letsmoney.com.br/noticias/bancos-validar-idade-eca-digital-open-finance/) — imprensa — 18/3/2026, atualizada em 12/9/2026.
+5. [Contabilizei — Quanto ganha um desenvolvedor de jogos](https://www.contabilizei.com.br/contabilidade-online/quanto-ganha-um-desenvolvedor-de-jogos-confira/) — blog comercial — sem data visível (baixa confiança).
+6. [Jornal Contábil — Quanto ganha um desenvolvedor de jogos](https://jornalcontabil.com.br/noticia/voce-sabe-quanto-ganha-um-desenvolvedor-de-jogos-confira/) — imprensa especializada — sem data visível (baixa confiança).

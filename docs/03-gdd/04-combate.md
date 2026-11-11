@@ -160,7 +160,7 @@ Todo encantado corrompido tem **Vida** e **Bruma**. A Bruma vale de 50% a 70% da
 
 | Resultado | Quando acontece | O que rende |
 |---|---|---|
-| **Libertado** | A Bruma zera antes da Vida | A luta acaba na hora. O encantado volta a ser quem era e agradece. Rende **dádiva** (chance), **Mérito**, avanço na **Bruma da região** (−3 pontos por libertação comum, −15 por um encantado maior), entrada no bestiário e, nos maiores, uma carta de contratação de ajudante ([03-personagem](03-personagem.md), seção 9.3). Quase tudo é **preso à conta** ou é bem público. |
+| **Libertado** | A Bruma zera antes da Vida | A luta acaba na hora. O encantado volta a ser quem era e agradece. Rende **dádiva** (chance), **Mérito**, avanço na **Bruma da região** (−0,5 ponto por libertação comum, −15 por um encantado maior; 7.1), entrada no bestiário e, nos maiores, uma carta de contratação de ajudante ([03-personagem](03-personagem.md), seção 9.3). Quase tudo é **preso à conta** ou é bem público. |
 | **Dispersado** | A Vida zera antes | O corpo de Bruma se desfaz e o encantado foge para o fundo da mata, ainda tomado; volta mais tarde. Rende **essência de Bruma** e restos negociáveis (Alquimia). |
 
 **A decisão está nas regras.** Para libertar, o grupo precisa de clareza (Encantador, Erveiro, óleo de clareza) e precisa **segurar o dano físico** ("QUANDO alvo é encantado → não usar Talho pesado"). Dispersar é cerca de 1,5 a 2 vezes mais rápido.
@@ -212,7 +212,7 @@ Chance de dádiva: 10% por libertação de encantado comum; **garantida na prime
 | **Vigia** | Os arredores, na semana do cerco | Pontos de vigia para o Presságio (11.2) | Revela o cerco |
 | **Travessia** | A terra nova da temporada | Marcos e mapa | A partir da 2ª Era; módulo 10 |
 
-**A Bruma da região** (0 a 100) muda a mistura de inimigos. Ela sobe 2 pontos por dia sozinha, desce com limpeza, libertação e obras, e sobe 15 pontos numa região de fora quando a cidade perde um cerco (11.5).
+**A Bruma da região** (0 a 100) muda a mistura de inimigos. Ela sobe 3 pontos por dia sozinha. Desce com a limpeza (1 ponto a cada 100 almas que recebem descanso), com a libertação (0,5 ponto por encantado comum; 15 por um encantado maior) e com as obras. Sobe 15 pontos numa região de fora quando a cidade perde um cerco (11.5). O piso é 10: a Bruma nunca some de todo, a não ser onde as obras a empurram. [H] As taxas escalam com a população e se calibram no módulo 08.
 
 | Bruma da região | Bichos | Almas | Encantados | Observação |
 |---|---|---|---|---|
@@ -235,13 +235,14 @@ Chance de dádiva: 10% por libertação de encantado comum; **garantida na prime
 
 [H] **No jogo:**
 - Cada região tem uma **pressão de caça** de 0 a 100%, **comum ao servidor inteiro**.
-- Cada bicho abatido soma 0,02 ponto (o Caçador soma 0,014, pela *Caça de respeito*). A região descansa 5 pontos por hora. Uma região aguenta uns 250 abates por hora (cerca de quatro caçadores em tempo integral) sem subir.
+- Cada região tem uma **capacidade** de abates por hora, recalculada todo dia: 1,5 vez a parte que lhe caberia se a caça daquele tier se espalhasse igualmente pelas regiões abertas do tier (pelos abates das últimas 24 h). Assim a regra escala com a população do servidor.
+- **Variação por hora:** `20 × (abates na última hora / capacidade − 1)` pontos. Abaixo da capacidade, a região descansa; acima, a pressão sobe. Cada abate do Caçador conta 0,7 (a *Caça de respeito*).
 - **Rendimento dos bichos** (pele, carne, matéria dura): `multiplicador = 1 − 0,5 × (pressão / 100)²`. Com 50%, rende 87,5%; com 80%, 68%; com 100%, 50%.
 - **A partir de 80%, a Caipora se zanga:** encontros com a **Caipora tomada** (elite) começam a aparecer. Libertá-la derruba a pressão da região para 20% (um bem público) e rende dádiva; dispersá-la derruba para 60%, por pouco tempo.
-- **Presente à Caipora:** antes de caçar, o jogador pode deixar um presente (uma refeição Fina ou melhor), e a pressão que ele gera cai pela metade naquela expedição. É um dreno da Culinária. Usar fumo, como na tradição, ou só comida fica para a consultoria cultural (seção 15).
+- **Presente à Caipora:** antes de caçar, o jogador pode deixar um presente (uma refeição Fina ou melhor), e os abates dele contam metade naquela expedição. É um dreno da Culinária. Usar fumo, como na tradição, ou só comida fica para a consultoria cultural (seção 15).
 - **Nas regras:** "QUANDO a pressão passar de 70% → Plano B".
 
-**Exemplo:** doze caçadores na Várzea, 750 abates por hora, somam 15 pontos e a região descansa 5: +10 por hora. Começando em 20%, a pressão chega a 80% em 6 h. Às 3 h da manhã, as regras dos caçadores ausentes os levam ao Plano B, e a Várzea descansa.
+**Exemplo:** a Várzea tem capacidade de 1.000 abates por hora. Numa noite em que muita gente a escolhe, ela recebe 1.500 por hora: a pressão sobe 20 × (1,5 − 1) = 10 pontos por hora e vai de 20% a 80% em 6 h. Às 3 h da manhã, as regras dos ausentes os levam ao Plano B, a Várzea fica abaixo da capacidade e descansa.
 
 [H] **Quatro perguntas.** *Referência:* o estado de mundo por região, movido pela soma do idle de todos ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 15), e a própria lenda. *Diferença:* a regulação do farm vira folclore e bem público, e não um "rendimento decrescente" escondido. *Problema:* o farm concentrado num ponto (o terreno do bot), preços que despencam e um mundo que não reage. *Comportamento:* espalhar a caça, rodar entre regiões, libertar a Caipora como serviço à cidade. *Risco:* um grupo grande esgota uma região para atrapalhar os outros. Mitigação: o efeito máximo é −50%, a região descansa sozinha, a libertação zera o problema e os Planos B levam os caçadores para outro lugar.
 
@@ -560,4 +561,191 @@ Por **1.000 jogadores ativos**, numa semana normal [H] (a reconciliar com 06, 07
 
 [H] *Referência:* a guerra com inscrição do Shakes & Fidget ([D02](../01-pesquisa/fichas/D02-shakes-and-fidget.md)), os dois ataques do Clash of Clans, as janelas anunciadas do EVE ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 1) e as metas comunitárias, a mecânica de outros gêneros com melhor relação entre benefício e risco ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), ranking). *Diferença:* o cerco **consome o que a cidade produziu** (Arsenal, kits da Guarda, Muralha), os Batedores revelam o que vem, a dificuldade se ajusta ao resultado, e quem falta não pesa. *Problema:* um momento coletivo sem plantão e um dreno coletivo que pareça contribuição, e não imposto. *Comportamento:* uma semana com ritmo (vigiar, produzir, inscrever, assistir se quiser); artesãos que nunca lutam também defendem a cidade pelo Arsenal. *Risco:* ver a seção 15.
 
-<!-- PARTE 4 -->
+## 12. Bestiário inicial
+
+### 12.1 Regras de respeito
+
+1. **Os encantados não são monstros.** Nunca morrem: dispersam-se ou libertam-se. Os verbos do jogo são *libertar*, *sarar*, *dispersar* e *dar descanso*. Nunca *matar*, *exorcizar* ou *caçar* um encantado.
+2. **A Bruma corrompe de fora.** A corrupção nunca é culpa nem natureza do encantado, e a Bruma não se associa a nenhum povo.
+3. **O bestiário separa "A lenda" de "Em Pindorama".** A primeira parte conta o que a tradição registra, com a fonte; a segunda, a nossa reinterpretação. O jogo não deve ensinar invenção como se fosse tradição.
+4. **Ficam fora** as entidades cultuadas em religiões vivas e as figuras com carga racial, de escravidão ou de misoginia, até uma revisão com consultoria (12.5).
+5. **Sem sexualização.** A Mãe-d'água do jogo é a avó-d'água dos pescadores, não a sereia sensual do século XIX.
+6. **Consultoria** com folcloristas e com representantes de povos indígenas e de comunidades tradicionais antes de fechar arte e textos ([00-biblia](00-biblia.md), seção 3; módulo 14).
+
+[F] As fontes abaixo são verbetes da Wikipedia que remetem a obras de referência (sobretudo o *Dicionário do folclore brasileiro* e a *Geografia dos mitos brasileiros*, de Luís da Câmara Cascudo). [H] Antes do texto final do bestiário, cada lenda deve ser conferida na obra original, e a consultoria deve validar a reinterpretação.
+
+### 12.2 Encantados corrompidos (podem ser libertados)
+
+**Curupira** — Capoeira do Vau e Mata Funda · elite de T1 a T4
+- *A lenda:* entidade tupi, protetora das matas e dos animais, de cabelo cor de fogo e pés virados para trás, que deixam rastros falsos. Engana com assobios e imitações de voz humana. Faz pactos com caçadores em troca de comida sem pimenta nem alho e de sigilo. A primeira menção escrita é de Anchieta, em 30/5/1560 ([Wikipedia](https://pt.wikipedia.org/wiki/Curupira), com base em Cascudo, Barbosa Rodrigues, Couto de Magalhães e Navarro).
+- *Em Pindorama:* guardião das trilhas. Tomado pela Bruma, confunde quem entra na mata.
+- *Em combate:* enquanto ele estiver tomado, a região inteira dá desnorteio (+50% no tempo de procura); 20% dos golpes contra ele erram, enganados pelos rastros falsos. Fraco contra clareza.
+- *Libertação:* dádiva *Fio de cabelo do Curupira*. Fiel ao pacto da lenda: deixar um **prato sem pimenta nem alho** (Culinária) antes da expedição tira o desnorteio da região naquela expedição.
+
+**Caipora** — todas as regiões de caça · elite que surge com pressão de caça ≥ 80%
+- *A lenda:* "habitante do mato" (do tupi *ka'a* + *pora*), protetora dos animais. Monta um porco-do-mato (queixada ou cateto), castiga sobretudo quem abate além do necessário, desorienta o caçador imitando sons da mata e aceita presentes, como fumo de corda deixado numa árvore ([Wikipedia](https://pt.wikipedia.org/wiki/Caipora), com base em Navarro e Cascudo).
+- *Em Pindorama:* a guardiã da Lei da Caipora (7.3).
+- *Em combate:* chega montada numa queixada tomada. A cada 20 s, *afugenta*: os bichos do encontro fogem sem deixar drop. Fraca contra clareza; resiste a peçonha.
+- *Libertação:* a pressão de caça da região cai para 20%, para todo o servidor. Dádiva: quem a libertou gera 20% menos pressão.
+
+**Boitatá** — Campos · encantado maior, T3
+- *A lenda:* cobra de fogo, ligada ao fogo-fátuo, que guarda campos e matas e queima quem lhes ateia fogo. Na versão do Sul registrada por Simões Lopes Neto, a boiguaçu, faminta depois de uma enchente e de uma noite sem fim, comeu os olhos dos animais e ficou luminosa; quem a encontra deve ficar imóvel, sem respirar e de olhos fechados. Anchieta registrou seres de fogo em 1560 ([Wikipedia](https://pt.wikipedia.org/wiki/Boitat%C3%A1)).
+- *Em Pindorama:* a luz que guardava os campos. Tomada pela Bruma, ela própria queima o capim.
+- *Em combate:* o *Olhar de brasa* (10.1). Resiste a fogo, é fraca contra lama, e a clareza vale × 1,2 contra ela.
+- *Libertação:* a luz do Boitatá volta a guardar os campos: a Bruma dos Campos cai 15 pontos e uma área nova se abre.
+
+**Mãe-d'água (a Uiara)** — Várzea e rios · elite de T1 a T3
+- *A lenda:* a Uiara (do tupi) é uma protetora dos peixes e das águas, anterior à Iara. Segundo Cascudo, a Iara-sereia é a mãe-d'água "dos brancos", vinda das sereias europeias e popularizada no século XIX pela literatura (Gonçalves Dias, 1851; José de Alencar, 1871). No rio São Francisco, a mãe-d'água é uma "avó-d'água" que rege a sorte dos pescadores; no Amazonas, é a cobra-d'água, a Boiúna ([Wikipedia](https://pt.wikipedia.org/wiki/Iara)).
+- *Em Pindorama:* a avó-d'água que rege a sorte da pesca. Tomada, o canto dela faz os barcos se perderem.
+- *Em combate:* o *canto* deixa encantado (3 s) quem tem pouca Firmeza; a *correnteza* empurra. Fraca contra clareza.
+- *Libertação:* dádiva e "a sorte volta ao rio" (um pequeno bônus de Pesca na região por 3 dias, a reconciliar com 06). **A arte a mostra idosa, nunca sexualizada.**
+
+**Boiúna (a Cobra Grande)** — Rios · encantado maior, T3 e T5
+- *A lenda:* serpente enorme e escura dos rios amazônicos, também chamada mãe-do-rio. Vira embarcações, imita barcos e assume forma de mulher. Em Belém, diz-se que dorme sob a cidade ([Wikipedia](https://pt.wikipedia.org/wiki/Boiuna); a página tem problemas de verificabilidade, então é preciso conferir em Cascudo).
+- *Em Pindorama:* a dona do rio grande.
+- *Em combate:* o *Banzeiro* (10.1); imune a enleio.
+- *Libertação:* o rio volta a ser navegável e abre uma área nova (a reconciliar com 06).
+
+**Mapinguari** — Mata Funda · encantado maior, T4
+- *A lenda:* criatura da Amazônia, peluda e fedorenta, de pés virados, unhas em gancho e boca que vai do nariz ao estômago. Os pelos o deixam quase à prova de bala, exceto perto do umbigo. Cascudo achou a lenda relativamente recente (aparece nos relatos de seringueiros, não nos cronistas coloniais) e a viu como composta de figuras mais antigas, entre elas o Curupira. Houve até a hipótese de uma preguiça-gigante sobrevivente, defendida por David Oren ([Wikipedia em inglês](https://en.wikipedia.org/wiki/Mapinguari), citando Cascudo, *Dicionário do folclore brasileiro*, 1962, pp. 456–457).
+- *Em Pindorama:* o velho da Mata Funda. Tomado, grita e derruba árvores.
+- *Em combate:* ponto fraco no umbigo, fedor e grito (10.1).
+- *Libertação:* a Bruma da Mata Funda cai 15 pontos e uma área nova se abre.
+
+**Mãe-do-ouro** — Serra das Lavras · encantado maior, T4
+- *A lenda:* uma bola de fogo, ou uma mulher, que indica onde há ouro e onde ele não deve ser explorado; ligada ao ciclo do ouro dos séculos XVII e XVIII ([Wikipedia em inglês](https://en.wikipedia.org/wiki/M%C3%A3e-do-Ouro) e [Toda Matéria](https://www.todamateria.com.br/mae-de-ouro/), lidas via resumo de busca). Numa versão difundida, ela faz desabar a mina de um senhor cruel.
+- *Em Pindorama:* a guardiã das lavras. Tomada, faz desabar as galerias.
+- *Em combate:* *Desabamento* e *Clarão de ouro* (10.1).
+- *Libertação:* dádiva e área nova. [H] **Proposta para o módulo 06:** a Mãe-do-ouro pode regular a Mineração como a Caipora regula a caça.
+- *Cuidado:* a versão do senhor cruel vem da história da escravidão. O jogo usa só a guardiã das minas e não transforma a escravidão em enredo.
+
+### 12.3 Almas e assombrações (dar descanso)
+
+**Corpo-seco e o Bradador** — Sudeste · chefe da masmorra *Casarão do Corpo-seco*
+- *A lenda:* o homem que espalhou males e maltratou a própria mãe; morto, a terra o repeliu, e nem Deus nem o diabo o aceitaram (Basílio de Magalhães, citado por Cascudo). O corpo ressequido vaga à noite. Quando o espírito deixa o corpo, recebe o nome de Bradador no Paraná, em Santa Catarina e em parte do interior paulista ([Wikipedia](https://pt.wikipedia.org/wiki/Corpo-seco)).
+- *Em combate:* duas fases. O Corpo-seco tem DEF alta e é fraco contra fogo. Quando ele cai, o Bradador se solta e grita: medo em área.
+- *Desfecho:* dar descanso. Rende relíquias das cidades de outrora.
+
+**Pisadeira** — pousos das expedições longas · encontro raro "da madrugada" (10.2)
+- *A lenda:* mulher muito magra, de dedos longos e unhas grandes, que vive nos telhados e, de madrugada, pisa no peito de quem dormiu de barriga cheia; o verbete a associa à paralisia do sono. É mais conhecida em São Paulo e em parte de Minas Gerais ([Wikipedia](https://pt.wikipedia.org/wiki/Pisadeira_(folclore)), citando uma revisão na *Frontiers in Psychology*, 2016).
+- *Em combate:* ataca no intervalo entre as lutas, quando o grupo está regenerando: *peso no peito* corta a regeneração pela metade por 1 min. Fiel à lenda, prefere quem está com refeição ativa. O Chá de raiz e a Firmeza a afastam.
+- *Desfecho:* dar descanso. Rende itens de coleção. A arte não deve tratá-la como "bruxa".
+
+**Lobisomem** — Sertão e vilas · elite noturna
+- *A lenda (versão brasileira):* o sétimo filho de uma sequência do mesmo sexo (ou o oitavo, depois de sete irmãs); em algumas regiões, a transformação acontece à meia-noite de sexta-feira, numa encruzilhada, e ele volta a ser homem antes do amanhecer. Prata e fogo aparecem como formas de detê-lo ([Wikipedia](https://pt.wikipedia.org/wiki/Lobisomem), citando Simões Lopes Neto, 1913). A origem é europeia.
+- *Em Pindorama:* uma pessoa tomada pela Bruma.
+- *Em combate:* rápido, sangra o alvo, fraco contra prata (óleo de prata) e fogo.
+- *Desfecho:* quando a Vida zera, ele volta à forma humana e foge. Ninguém morre.
+
+**Visagens** — regiões com Bruma alta e cercos · inimigo comum
+- *A palavra:* visagem é termo corrente no Pará para aparição. Em Belém, o Cortejo Visagento conta "histórias das visagens, assombrações e lendas da região" ([Portal Amazônia](https://portalamazonia.com/cultura/cortejo-visagento-se-torna-tradicao-de-dia-das-bruxas-em-homenagem-ao-folclore-amazonico/)).
+- *Em Pindorama:* formas sem nome que a Bruma faz das lembranças das cidades engolidas.
+- *Em combate:* em bandos, fracas contra clareza.
+- *Desfecho:* dar descanso. Rendem essência e relíquias.
+
+### 12.4 Bichos tomados pela Bruma (caça)
+
+| Bicho | Regiões | Rende | Comportamento [H] |
+|---|---|---|---|
+| Queixada tomada | Capoeira do Vau, Mata Funda | Pele, carne | Em bando (2 a 4), com investida |
+| Veado tomado | Campos | Pele, carne, chifre (matéria dura) | Foge: se não cair em 15 s, o encontro acaba (Tiro na perna resolve) |
+| Jacaré tomado | Várzea, rios | Pele (couro), carne, dentes | DEF alta, lento, dá o bote |
+| Jararaca tomada | Capoeira, Campos | Peçonha (Alquimia) | Pequena, peçonhenta; o Erveiro tira mais |
+| Tatu tomado | Campos, Serra | Casco (matéria dura), carne | DEF muito alta; perfuração × 1,5 |
+
+[H] **Espécies emblemáticas ficam fora da caça**, mesmo tomadas pela Bruma: onça, lobo-guará, boto e araras. Além do respeito à fauna, isso evita que o jogo pareça glamourizar a caça de animais silvestres, proibida no Brasil ([Lei 5.197/1967](https://www.planalto.gov.br/ccivil_03/leis/l5197.htm)).
+
+### 12.5 O que fica fora do bestiário de inimigos, e por quê
+
+| Figura | Motivo [H, salvo indicação] | Caminho |
+|---|---|---|
+| **Saci** | Menino negro de uma perna só: risco alto de caricatura racial, que a bíblia manda evitar | Candidato a aliado ou NPC, depois da consultoria |
+| **Mula-sem-cabeça** | A lenda costuma ser contada como castigo de uma mulher que se envolveu com um padre [NV: conhecimento prévio, não conferido nesta fase]: moral de culpa feminina | Fora |
+| **Boto** | Lenda de sedução de moças em festas, com temas de consentimento; e o boto é um animal real [NV] | Fora como inimigo |
+| **Iara-sereia** | Construção literária do século XIX (12.2) | Substituída pela Mãe-d'água |
+| **Comadre Fulozinha** | [F] Cultuada na Jurema, na Paraíba, como entidade de caráter ambíguo ([Wikipedia](https://pt.wikipedia.org/wiki/Comadre_Fulozinha)): religião viva | Fora |
+| **Negrinho do Pastoreio** | Lenda de uma criança escravizada e martirizada [NV] | Fora |
+| **Anhangá, Jurupari, Tupã** | Entidades de cosmologias indígenas, várias demonizadas pelos jesuítas; usá-las exigiria consulta aos povos | Fora |
+| **Orixás, voduns, caboclos e encantados da Mina, da Umbanda, da Jurema e da pajelança** | Religiões vivas | Fora, sempre |
+| **Ipupiara** | Registro de cronistas coloniais (Gândavo, 1564, em São Vicente), com uma narrativa de captura por um capitão ([artigo na revista Estação Científica, Unifap](https://periodicos.unifap.br/estacaocientifica/article/download/648/463/2049), lido via resumo de busca) | Candidata a criatura do litoral, depois de revisão |
+| **Matinta Perera** | Associação a acusações de bruxaria contra mulheres idosas [NV] | Revisão antes de usar |
+
+## 13. Interfaces com outros módulos
+
+| Para | O quê | Valor [H] |
+|---|---|---|
+| **06, 07, 08** | **Comida por hora de combate** | 1 refeição por combatente (o personagem e cada ajudante) |
+| | **Poções por hora** | ~3 na margem 0 (1 na +1; 8 na −1); × 2 sem refeição; × 0,7 com Erveiro no grupo; por vocação, de × 0,5 (Erveiro) a × 1,2 (Batedor) |
+| | **Consumíveis vocacionais por hora** | Flechas: 1 feixe · óleo de lamparina: 1 frasco · ervas frescas: ~6 · tochas: 1 (Bruma ≥ 40) |
+| | Outros consumíveis | Óleos de arma, tônicos, antídotos, água de clareza: de 0 a 3 por hora, conforme as regras e a região |
+| **05, 07, 08** | **Desgaste por hora** (de 100 pontos) | Arma 2,5 · armadura e secundária 2,0 (Guardião 3,0) · pés 1,5 (Batedor 2,25) · derrota −5 · margem +1 × 0,6, margem −1 × 1,5 |
+| | Ciclo de vida | Reparo tira 10 pontos do máximo; 5 reparos; 450 pontos no total ≈ 180 h de combate para uma arma ≈ 30 dias a 6 h por dia |
+| | Cerco e masmorra | 8 pontos por peça no cerco; 4 por corrida de masmorra |
+| **06, 07, 08** | **Drops por hora** | ~100 abates por hora, sozinho, na margem 0. Por abate de bicho: pele 0,40 · carne 0,50 · matéria dura 0,25 · peçonha, resina e sementes 0,05 · essência 0,02 · achado 0,002. Por alma: essência 0,5 · relíquia 0,05 · achado 0,006. Multiplicadores por vocação na seção 7.4. Pressão de caça tira até 50%. **Ouro: zero** |
+| **07, 09** | **O que o cerco consome** (por 1.000 ativos, por semana) | ~8.000 provisões · ~8 kits da Guarda (mais os que faltarem) · ~1.000 tábuas, 500 lingotes e 200 blocos de pedra · ~32 peças-equivalentes de desgaste dos defensores · metade dos cintos reservados |
+| **07, 09** | **Mérito do cerco** | 80 a 140 por defensor; fornecedor pelo preço de referência, 100% para produção própria e 50% para itens comprados, taxa pela metade acima de 300 por semana |
+| **02** | XP | A curva de XP de vocação por hora de combate é do módulo 02; este módulo assume que a XP por hora cai com a margem negativa e com o ausente igual ao ativo |
+| **09** | Câmara | Horário do cerco (dentro de faixa), Rigor, plano de defesa (até 5 regras), Encomendas de cerco e de reparo |
+| **10** | Live-ops | Um encantado maior por ciclo; ameaça nova por Era (F_ref × 1,2); a Travessia reusa as expedições |
+| **12** | Onboarding | Modelos de regras; primeira expedição guiada; primeira libertação guiada (o Curupira) |
+| **13** | Anti-abuso | Semente registrada e diário reproduzível; cargas com teto; baú pela metade fora da faixa; Mérito pela metade em item comprado |
+| **14** | Arte e UI | Editor de regras por blocos; diário de expedição; barras de Vida e Bruma; as duas taxas (ausente 100%, ativa até 125%) |
+
+## 14. Propostas de mudança na bíblia
+
+1. **[proposta de mudança na bíblia] Glossário:** incluir *Regras* (os gatilhos de combate), *Plano B*, *Bruma da região*, *Pressão de caça* (a Lei da Caipora), *Libertar* e *Dispersar*, *Arrancada*, *Encruzilhada*, *Presságio*, *Arsenal*, *Guarda do Arraial* e *Integridade*.
+2. **[proposta de mudança na bíblia] Seção 3:** os assombrados têm três origens (bichos tomados, almas e encantados corrompidos), e só os encantados podem ser libertados (5.1).
+3. **[proposta de mudança na bíblia] Seção 6.6** (com o módulo 07): **o combate não solta ouro.**
+4. **[proposta de mudança na bíblia] Seção 6.1:** o cerco se resolve em 2 h, num horário escolhido pela Câmara dentro de uma faixa; a inscrição fecha 24 h antes, como já está.
+5. **[proposta de mudança na bíblia] Seção 6.5:** fixar o ponto de partida em **5 reparos**, com −10 pontos de máximo por reparo.
+6. **[proposta de mudança na bíblia] Seção 5:** registrar que **quem não se inscreve no cerco não luta e não pesa** no cálculo.
+7. **[proposta de mudança na bíblia] Glossário, verbete Mérito:** incluir a **libertação de encantados** entre as fontes de Mérito, porque ela empurra a Bruma da região, que é um bem público.
+
+## 15. Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| **Regras viram programação** | O casual abre o editor, vê condições e prioridades e desiste. | Modelos prontos por vocação, editor por blocos, diário que mostra qual regra disparou e uma sugestão ("você usou 14 poções; experimente a regra X"). |
+| **Simulação cara** | Milhares de expedições offline em passos de 0,1 s pesam na VPS. | Simulação por eventos (só nos instantes em que alguém age) e cálculo na volta, como no Melvor ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)); o desenho fica para a Fase 4. |
+| **O ativo atropela o ausente** | As janelas ativas rendem tanto que perdê-las parece castigo. | Teto de +25%, cargas acumuláveis, "paciência da mata" exclusiva do ausente e medição no módulo 08. |
+| **O ausente acorda com tudo parado** | Uma regra ruim faz a expedição parar às 2 h da manhã. | Plano B, recuo padrão a 15 pontos de durabilidade e mochila que nunca encerra a expedição. |
+| **Bots na caça** | Contas farmam a mesma região 24 h por dia. | Pressão de caça regional, teto de emissão por conta, adulto verificado (P8), cargas com teto e detecção por padrão de fluxo ([04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). |
+| **Ninguém liberta** | Dispersar rende mais por hora e a libertação vira enfeite. | Mérito, dádiva, recuo da Bruma da região e cartas de ajudante; o módulo 08 iguala o valor por hora dos dois caminhos. |
+| **Griefing com a pressão de caça** | Uma guilda esgota uma região para prejudicar outra. | O efeito máximo é −50%, a região descansa sozinha, a libertação da Caipora zera o problema e os Planos B espalham os caçadores. |
+| **Cerco virar conta resolvida** | A comunidade descobre a composição ótima e o cerco perde a graça. | Presságio variável, ameaça nova por Era, Rigor, Clarões e tetos nos marcos. |
+| **Cerco dominado por baleias ou por uma guilda** | Quem tem mais equipamento leva todo o Mérito. | Mérito comprimido (o mais forte ganha 1,7 vez o novato), PC medido contra um padrão e capacidade por posto. |
+| **Espiral de derrotas** | A cidade perde, a Guarda enfraquece, a cidade perde de novo. | F_ref × 0,85 depois da Queda, Encomenda de reparo com Mérito × 1,5 e nenhuma perda de obra ou de bônus. |
+| **Comprar Mérito com Alvará** | Alvará → ouro → itens → Arsenal → Mérito. | Item comprado vale 50%, preço de referência do sistema e taxa pela metade acima de 300 por semana (a fechar com 07 e 09). |
+| **Fuso horário** | O sábado às 20 h de Brasília exclui quem joga de outro fuso. | A defesa é assíncrona; os Clarões são um bônus pequeno; a Câmara pode mudar o horário dentro da faixa. |
+| **Abuso da cópia congelada** | Inscrever-se com o melhor equipamento e vendê-lo em seguida. | Desgaste e cinto cobrados no momento do compromisso. |
+| **Carregamento pago em masmorras** | Um jogador forte "carrega" um fraco em troca de ouro ou dinheiro. | Baú pela metade fora da faixa recomendada e detecção de padrões. |
+| **Pico de carga no cerco** | O servidor inteiro olha o mesmo cerco no sábado à noite. | As cópias estão congeladas desde T−24 h, então o servidor pré-calcula a parte determinística; ao vivo, só os Clarões. [F] A infraestrutura que cai no dia do evento é o alerta do Pokémon GO em Chicago, 2017 ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 10). |
+| **Folclore mal usado** | Uma figura vira caricatura, ou uma entidade sagrada vira inimigo. | Regras de respeito (12.1), lista do que fica fora (12.5), "A lenda" separada de "Em Pindorama", conferência nas obras originais e consultoria antes da arte. |
+| **Narrativa colonial disfarçada** | "Espíritos nativos transformados em monstros que os heróis purificam" repete a demonização jesuítica. | A Bruma não é nativa nem estrangeira, os encantados são protetores legítimos e o verbo é *libertar*, nunca *exorcizar*; a revisão de sensibilidade olha esse ponto especificamente. |
+
+## Fontes
+
+**Fichas e estudos do projeto:** [B01 Melvor Idle](../01-pesquisa/fichas/B01-melvor-idle.md), [B02 Legends of IdleOn](../01-pesquisa/fichas/B02-legends-of-idleon.md), [B03 Idle Champions](../01-pesquisa/fichas/B03-idle-champions.md), [B06 Tap Titans 2](../01-pesquisa/fichas/B06-tap-titans-2.md), [C01 Milky Way Idle](../01-pesquisa/fichas/C01-milky-way-idle.md), [D02 Shakes & Fidget](../01-pesquisa/fichas/D02-shakes-and-fidget.md), [00-sintese](../01-pesquisa/00-sintese.md), [02-padroes-matriz-leis](../01-pesquisa/02-padroes-matriz-leis.md), [03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), [04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md).
+
+**Fontes externas novas** (acessadas em novembro de 2026):
+1. [Final Fantasy XII](https://en.wikipedia.org/wiki/Final_Fantasy_XII) — Wikipedia — sistema de gambits.
+2. [Final Fantasy XII/Gambits](https://strategywiki.org/wiki/Final_Fantasy_XII/Gambits) — StrategyWiki — ordem de prioridade e casas.
+3. [Milky Way Idle na Steam](https://store.steampowered.com/app/3224420/Milky_Way_Idle/) — oficial — combate com gatilhos (via [C01](../01-pesquisa/fichas/C01-milky-way-idle.md)).
+4. [Curupira](https://pt.wikipedia.org/wiki/Curupira) — Wikipedia — com base em Cascudo, Barbosa Rodrigues, Couto de Magalhães, Navarro e na carta de Anchieta de 1560.
+5. [Caipora](https://pt.wikipedia.org/wiki/Caipora) — Wikipedia — com base em Navarro, Cascudo e Benatte (*Revista de História da Biblioteca Nacional*, 2010).
+6. [Boitatá](https://pt.wikipedia.org/wiki/Boitat%C3%A1) — Wikipedia — com base em Cascudo, Simões Lopes Neto (*Lendas do Sul*, 1913) e Anchieta.
+7. [Iara](https://pt.wikipedia.org/wiki/Iara) — Wikipedia — com base em Cascudo (*Dicionário do folclore brasileiro*; *Geografia dos mitos brasileiros*).
+8. [Boiuna](https://pt.wikipedia.org/wiki/Boiuna) — Wikipedia — página com problemas de verificabilidade; conferir na obra original.
+9. [Mapinguari](https://en.wikipedia.org/wiki/Mapinguari) — Wikipedia em inglês — com base em Cascudo (1962, pp. 456–457; 1976) e Oren (1993, 2001).
+10. [Mãe-do-Ouro](https://en.wikipedia.org/wiki/M%C3%A3e-do-Ouro) — Wikipedia em inglês — lida via resumo de busca.
+11. [Mãe de ouro](https://www.todamateria.com.br/mae-de-ouro/) — Toda Matéria — divulgação, lida via resumo de busca.
+12. [Corpo-seco](https://pt.wikipedia.org/wiki/Corpo-seco) — Wikipedia — com base em Cascudo (*Geografia dos mitos brasileiros*) e Basílio de Magalhães.
+13. [Pisadeira (folclore)](https://pt.wikipedia.org/wiki/Pisadeira_(folclore)) — Wikipedia — cita a revisão "Sleep Paralysis in Brazilian Folklore and Other Cultures" (*Frontiers in Psychology*, 2016).
+14. [Lobisomem](https://pt.wikipedia.org/wiki/Lobisomem) — Wikipedia — versão brasileira com base em Simões Lopes Neto.
+15. [Comadre Fulozinha](https://pt.wikipedia.org/wiki/Comadre_Fulozinha) — Wikipedia — página com poucas referências.
+16. [Cortejo Visagento](https://portalamazonia.com/cultura/cortejo-visagento-se-torna-tradicao-de-dia-das-bruxas-em-homenagem-ao-folclore-amazonico/) — Portal Amazônia — uso do termo "visagem".
+17. [Ipupiara](https://periodicos.unifap.br/estacaocientifica/article/download/648/463/2049) — revista *Estação Científica* (Unifap) — lido via resumo de busca.
+18. [Lei nº 5.197/1967](https://www.planalto.gov.br/ccivil_03/leis/l5197.htm) — Planalto — proteção à fauna, art. 1º.
+
+**Lacunas:** não conferimos as lendas diretamente nas obras de Câmara Cascudo (só pelos verbetes que as citam); o ponto fraco do Mapinguari no umbigo vem da Wikipedia em inglês citando Cascudo; a Mãe-do-ouro e o Ipupiara foram lidos só por resumo de busca; as marcações [NV] da seção 12.5 (Mula-sem-cabeça, Boto, Negrinho do Pastoreio, Matinta Perera) são conhecimento prévio a conferir na consultoria.
+

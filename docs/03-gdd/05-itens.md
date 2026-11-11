@@ -278,4 +278,195 @@ Mistura de referência [H]: 70% de combate comum, 20% de masmorra ou Travessia e
 | Reparo com kits feitos por artesãos, não com ouro de NPC | [F] Reparo com kits no Shop Titans ([C06](../01-pesquisa/fichas/C06-shop-titans.md)); [H] dreno de material, e não de moeda | Reparo que só drena ouro e não dá trabalho a ninguém | Ferraria, Alfaiataria e Carpintaria têm freguês mesmo sem peça nova | Falta de kit trava o reparo; há kit na oficina NPC de reforço |
 | Reparo automático grátis; peça zerada fica inoperante, não quebra | Insight 13 ([00](../01-pesquisa/00-sintese.md)); [F] o Shop Titans monetiza o alívio da quebra ([C06](../01-pesquisa/fichas/C06-shop-titans.md)) | O ausente acordar sem equipamento | Decidir a regra antes de sair | A regra mal configurada gasta kits caros; mostrar a estimativa de gasto ao configurar |
 
-<!-- continua -->
+## 7. Únicos e lendários
+
+### 7.1 Único: muda o jeito de jogar, não o tamanho do poder
+
+- **Como nasce:** sessão de obra-prima de criação que chega a **130 pontos de qualidade ou mais, usando um insumo nobre**. O artesão escolhe **1 entre 3 traços** sorteados da lista pública da família da peça e dá nome a ela (nome moderado).
+- **Atributos:** os de uma obra-prima (×1,25 e pontos de acabamento) **mais o traço**. O traço é uma troca: ganha num contexto e perde noutro, de 5% a 10%. Nunca é aumento puro.
+- **Sem limite por Era.** O Único é raro por construção. A meta é de 2% a 5% das sessões de mestres bem preparados (nível da receita + 10, com insumo nobre e reagente) [H, calibrar no alfa]. Como o traço é horizontal, um Único a mais não desequilibra o combate.
+- **Durabilidade e fim:** os de uma obra-prima. O Único quebra como qualquer peça, e o registro fica no perfil do artesão.
+
+| Traço (família) | Ganho | Custo |
+|---|---|---|
+| Canto do ferro (espada) | +8% de dano em cerco | −4% de dano fora do cerco |
+| Sombra mansa (facão) | +10% de achados na Bruma | −5% de crítico |
+| Vento de través (arco) | +6% de precisão em masmorra | −6% de dano em cerco |
+| Brasa de vaga-lume (cajado) | +1 alvo atingido na área a cada 2 encantos | −8% de dano no alvo principal |
+| Chá de vó (bordão) | +10% de cura em aliados abaixo de 30% de vida | −5% de dano |
+| Couro de mateiro (gibão) | +6% de esquiva | −6% de defesa |
+| Muralha do vau (couraça) | +10% de firmeza em cerco | +10% de desgaste |
+| Mão de mateiro (machado) | +15% de chance de matéria rara no Faro | −5% de velocidade na fila |
+
+### 7.2 Lendário: contado, nomeado e finito
+
+| Regra | Valor [H] |
+|---|---|
+| Tiers | Só T4, T5 e T6 |
+| Receita | Uma peça preparada para obra-prima, mais **1 Relíquia da Travessia** do tier, **2 insumos nobres** da linha da peça, 2 reagentes e 10 de Inspiração, feita na **Bancada das Lendas**, prédio aberto por uma Obra (a reconciliar com o [09](09-social.md)) |
+| Quem forja | Mestre com nível igual ou maior que o da receita + 10; **no máximo 1 lendário por mestre por Era** |
+| Sessão | 5 etapas, em vez de 4. Sucesso a partir de 120 pontos, sem trincar. Se falhar, a peça sai obra-prima (ou Comum, se trincar), **a relíquia volta ao dono** e os insumos nobres e reagentes são consumidos |
+| **Limite** | **No máximo 24 lendários forjados por Era em cada Arraial** (8 de T4, 8 de T5 e 8 de T6), com contador público. Cada relíquia vale por duas Eras (a de origem e a seguinte) e depois vira decoração presa à conta |
+| Poder | ×1,30 (a obra-prima tem ×1,25), 5 pontos de acabamento e 1 efeito lendário da lista da família |
+| Durabilidade | D0 × 1,5; cada reparo tira 10%; 6 reparos; cerca de 88 h de uso normal |
+| Memória | O forjador dá o nome. O **Livro de Lendas do Arraial** registra o forjador, a expedição da Travessia que achou a relíquia, os donos, os feitos (cercos, chefes) e o fim |
+| Fim | Ao quebrar, vira **Relíquia partida** (decoração presa ao último dono) e a página do Livro se fecha. Em vida, pode ser aposentado e doado ao Salão do Arraial, o que rende Mérito (a reconciliar com o [09](09-social.md)) |
+| Mercado | Pregão (e Troca, sob o risco de troca do [13](13-anti-abuso.md)) |
+| Era 1 | Não há lendários. Os primeiros nascem da 1ª Travessia, na 2ª Era |
+
+**Efeitos lendários** (exemplos; a lista é pública e fechada por família):
+- *Guardião do Vau* (couraça): quando o dono defende um cerco, a guarnição dele recebe +5% de defesa.
+- *Flecha que volta* (aljava): 20% das flechas disparadas voltam à aljava.
+- *Facho do Batedor* (lamparina): na Travessia, a expedição do dono revela uma região vizinha a mais no mapa coletivo.
+
+**De onde vêm as relíquias:** das metas coletivas e dos destaques da Travessia. Proposta para o [10](10-live-ops.md): 12 relíquias por metas coletivas do servidor e 12 por destaques individuais e de guilda.
+
+### 7.3 Comparação
+
+| | Obra-prima | Único | Lendário |
+|---|---|---|---|
+| Poder sobre a Comum | +25% | +25% e um traço de troca | +30%, 5 pontos e um efeito |
+| Limite | Inspiração do artesão | Raridade natural (2% a 5% das sessões boas) | 24 por Era por Arraial; 1 por mestre por Era |
+| Exige | Sessão ativa | Sessão de 130 pontos ou mais, com insumo nobre | Relíquia, 2 insumos nobres, Bancada das Lendas |
+| Vida útil (uso normal) | 44 a 55 h | 44 a 55 h | cerca de 88 h |
+| Onde se vende | Feira | Feira ou Pregão | Pregão |
+
+| Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
+|---|---|---|---|---|
+| Único com traço horizontal e sem limite | [H] Lei do mercado complementar (lei 14, [02](../01-pesquisa/02-padroes-matriz-leis.md)); assinatura do artesão ([03, §7](../01-pesquisa/03-alem-do-idle.md)) | Desejo por algo raro sem criar poder que se compra | Caçar a sessão perfeita e escolher o traço para o próprio estilo | Um traço "obrigatório" para cerco; revisar a lista a cada Era, com aviso |
+| Lendário contado por Era, com relíquia da Travessia e fim certo | [F] Tetos e eventos públicos para itens de topo no Black Desert ([F08](../01-pesquisa/fichas/F08-black-desert.md)); temporadas que devolvem cosmético e relíquia ([02-conceito](../02-conceito.md)) | Topo de equipamento que se acumula para sempre e concentra poder | A Travessia abastece a cidade; o forjador vira personagem da história do servidor | Guildas ricas compram todas as relíquias; mitigado pelo limite de 1 lendário por mestre por Era, pelo fim em cerca de 88 h e pelo Pregão público |
+| Relíquia volta ao dono quando a forja falha | [F] O "pity" do Black Desert, em que o azar tem fim conhecido ([F08](../01-pesquisa/fichas/F08-black-desert.md)) | Perder um item contado por um sorteio | Tentar sem medo, com custo real nos insumos nobres | Tentativas demais travam a relíquia; ela expira em duas Eras |
+
+## 8. Cosméticos
+
+### 8.1 Regra de ouro: cosmético nunca vira poder
+
+Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de offline, fila ou qualquer vantagem de jogo. Nenhum cosmético **se desmonta** ou vira insumo de receita, reparo, Obra ou Encomenda. [F] No Black Desert, roupas pagas viravam Cron Stones (material de aprimoramento), e é isso que cola o rótulo de *pay-to-win* desde 2016 ([F08](../01-pesquisa/fichas/F08-black-desert.md)). Essa regra vale também para a decoração da casa: decoração não dá bônus de "conforto" nem de descanso.
+
+### 8.2 Guarda-roupa da conta: aplicar é consumir
+
+- Todo cosmético negociável é um item até ser **aplicado**. Ao aplicar, o item é consumido e a aparência entra no **guarda-roupa** da conta, para sempre e presa a ela.
+- Do guarda-roupa, a aparência pode ser posta sobre qualquer peça da família compatível e trocada à vontade, de graça.
+- **Por que assim:** o Baú é negociável (decisão do Gabriel), e o piso diz que tudo que se negocia se gasta (P3). Aplicar tira o item do mercado; a coleção fica com o jogador.
+
+### 8.3 De onde vêm os cosméticos
+
+| Fonte | Negociável? | Observação |
+|---|---|---|
+| Baú do Mascate | Sim, fechado ou como item antes de aplicar | Alvará na loja ou ouro no mercado (decisão do checkpoint 1) |
+| Loja de cosméticos (venda direta por Alvará) | Sim, antes de aplicar | Conteúdo e preço no [11](11-monetizacao.md) |
+| Travessia | Não | Cosméticos de temporada presos à conta; o RMT fica fora da temporada (lei 22) |
+| Mérito e títulos da cidade | Não | Reconhecimento cívico |
+| **Moda do Arraial** (feita por ofícios) | Sim, enquanto nova | Seção 8.5 |
+| Troféus (peças aposentadas) e Relíquia partida | Não | Seção 6.5 e 7.2 |
+
+### 8.4 Baú do Mascate
+
+**Conteúdo (sempre item, sempre cosmético ou decorativo):**
+
+| Categoria | Exemplos |
+|---|---|
+| Aparência de arma e de armadura | Espada de São João (com fitas de festa junina), couraça de escamas de pirarucu, cajado de mandacaru |
+| Conjunto visual de roupa | Gibão de vaqueiro do sertão, túnica de rendeira |
+| Decoração da casa | Rede de dormir bordada, oratório de madeira, luminária de lamparina de cobre, tapete de renda |
+| Aparência de ajudante | Ajudante com chapéu de couro, ajudante pescador com puçá |
+| Efeito visual | Rastro de vaga-lumes, brilho de lamparina |
+| Moldura de perfil e emote | Moldura de azulejo, emote "puxar o fole" |
+
+**Faixas e chances publicadas** [H; o [11](11-monetizacao.md) fixa os números]:
+
+| Faixa | Chance |
+|---|---|
+| Simples | 65% |
+| Caprichado | 27% |
+| Raro | 7% |
+| Raríssimo | 1% |
+
+- **Garantia:** depois de 19 Baús seguidos sem Raro ou Raríssimo, o 20º garante um dos dois. O contador é da conta e aparece na tela.
+- **Coleção por Era:** cada Era traz uma coleção temática. Para não criar medo de perder (FOMO), coleções antigas voltam num "Arquivo do Mascate" depois de 12 meses, como o Legacy Vault do IdleMMO ([C04](../01-pesquisa/fichas/C04-idlemmo.md)).
+- **Nunca no Baú:** nada da seção 8.1, nem kit, reagente, material, ouro, Alvará, relíquia, Inspiração, fila ou tempo de offline.
+- **Teto de gasto e chances publicadas** (salvaguarda S5): no [11](11-monetizacao.md).
+- **Jurídico.** Uma caixa paga, com sorte e com conteúdo que se revende por ouro (e o ouro tem preço em reais via Alvará) reúne pagamento, sorte e prêmio com valor econômico. Normas: Lei de Contravenções Penais, art. 50 (jogo de azar); Lei 15.211/2025 (ECA Digital), art. 2º, IV, e art. 20, que vedam caixas de recompensa em jogos acessíveis a menores; aqui, o jogo é 18+ com idade verificada ([05b](../01-pesquisa/05b-rmt-legal-brasil.md)). É decisão do Gabriel, com risco assumido (bíblia, seção 5). **Validar com advogado.**
+
+### 8.5 Moda do Arraial: cosmético feito por ofício, que se gasta
+
+- **O que é:** roupas e acessórios de festa sem nenhum atributo, feitos pela Alfaiataria com tecido, linha, corante (Alquimia) e, nas versões finas, renda (Tecelagem). Exemplos: traje de quadrilha, chapéu de couro de vaqueiro, vestido de chita.
+- **Desgaste:** a peça é negociável enquanto nova. Ao ser vestida, prende-se à conta e **dura 30 dias de uso** (dias em que esteve vestida). Depois, puiu.
+- **Por que existe:** dá demanda à Tecelagem, à Alfaiataria e à Alquimia fora do combate, deixa o artesão vender estilo, e não poder, e cumpre o P3. Receitas no [06](06-oficios-e-coleta.md), seção 12.
+- **Temas sazonais** (festa junina, festas regionais) passam pela revisão de sensibilidade cultural do [14](14-arte-e-ui.md).
+
+### 8.6 Decoração da casa
+
+- **Fontes:** móveis feitos por ofício (Carpintaria: mesa, cadeira de balanço, oratório; Tecelagem: rede de dormir, tapete; Ferraria: luminária de cobre), o Baú, os troféus e as relíquias partidas.
+- **Colocar prende:** um móvel negociável, ao ser colocado na casa, prende-se a ela e sai do mercado.
+- **Zero vantagem de jogo,** como diz a seção 8.1. A casa é vitrine, memória e lugar de visita.
+
+| Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
+|---|---|---|---|---|
+| Cosmético nunca vira poder, nem se desmonta | [F] Roupa virando Cron Stone no Black Desert ([F08](../01-pesquisa/fichas/F08-black-desert.md)); insight 24 ([00](../01-pesquisa/00-sintese.md)) | Rótulo de *pay-to-win* | Comprar identidade, e não vantagem | Pressão comercial para "só um bônus pequeno"; a regra entra na carta pública de monetização |
+| Aplicar consome e prende no guarda-roupa | [H] P3 aplicado a um item negociável | Cosmético eterno circulando sem dreno | Colecionar; o mercado de cosméticos se renova a cada Era | Quem aplica por engano perde o item; pedir confirmação ao aplicar |
+| Moda do Arraial com 30 dias de uso | [H] Demanda fora do combate para a cadeia têxtil | Tecelagem e Alfaiataria dependentes só da guerra | Vestir-se para eventos e encomendar roupa de festa | Concorrer com o Baú; a Moda é mais barata e efêmera, o Baú é permanente |
+
+## 9. O que é negociável e o que fica preso à conta (piso P2)
+
+| Negociável | Preso à conta |
+|---|---|
+| Brutos, insumos, consumíveis, kits e reagentes produzidos **dentro** do teto de emissão do dia | A mesma produção **acima** do teto do dia |
+| Matérias raras, insumos nobres, o acréscimo de qualidade da obra-prima e o lote Fino (nascem de ação ativa e não contam no teto) | Tudo comprado nas **oficinas NPC de reforço** |
+| Equipamentos e ferramentas, novos ou usados (a peça usada vale pelo que resta) | Tudo feito com **pelo menos um insumo preso** ("o vínculo contamina") |
+| Únicos e lendários (com registro público) | Inspiração, Mérito, Marcos, Selo de mestre, títulos e ajudantes |
+| Relíquias da Travessia, até expirarem | Cosméticos aplicados (guarda-roupa), móveis colocados, Moda vestida, troféus e relíquias partidas |
+| Cosméticos ainda não aplicados (Baú fechado ou aberto, loja, Moda nova) | Recompensas de primeira semana e kit inicial do onboarding ([12](12-onboarding.md)) |
+| Ouro e Alvará (bíblia) | Cosméticos de Travessia e de Mérito |
+
+**Como o teto de emissão se aplica aos itens** (números no [07](07-economia.md)):
+1. **Contado em valor de referência (VR),** e não em unidades. O VR de cada item é o trabalho embutido nele, em minutos de ofício, convertido em ouro por uma taxa de referência do 07. A tabela de trabalho embutido está no [06](06-oficios-e-coleta.md), seção 11.4. Contar em VR impede contornar o teto fabricando poucas peças caras.
+2. **A fila emite.** Cada unidade que a fila produz soma o seu VR à conta do dia. Enquanto houver espaço, nasce negociável; depois, nasce presa. A peça preparada para obra-prima conta pelo VR da versão Comum. O que a sessão ativa acrescenta não conta.
+3. **O ausente decide antes de sair** o que fazer quando bater o teto: continuar produzindo preso (para uso próprio e Encomendas), trocar a fila para uma atividade de progresso ou doar o excedente às Obras, que o transformam em Mérito.
+4. **O vínculo contamina.** Sem essa regra, o excedente preso viraria peça negociável na etapa seguinte da cadeia, e o teto vazaria. Reparar uma peça com kit preso é permitido, porque o reparo não cria item.
+
+**Exemplo.** A ferreira Zefa bate o teto do dia às 15 h. A espada que sai às 16 h nasce presa: ela pode usá-la, entregá-la numa Encomenda da cidade ou doá-la a uma Obra, mas não pode vendê-la. Os lingotes que ela comprou na Bolsa continuam negociáveis enquanto estiverem no baú. Se ela tivesse usado um lingote da oficina NPC, a espada nasceria presa mesmo antes do teto.
+
+| Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
+|---|---|---|---|---|
+| Teto em VR com vínculo que contamina | Lei 16 ([02](../01-pesquisa/02-padroes-matriz-leis.md)); [F] Banana e Bongo Cat dominados por bots ([G05](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)) | Farm automático virando oferta sem limite no mercado | Produzir o negociável com cuidado e dar destino útil ao excedente (Obras) | Regra difícil de entender; a interface mostra o "selo" de cada pilha e a barra do teto do dia |
+| Equipamento usado continua negociável | [F] O equipamento circula e se perde no Albion ([F02](../01-pesquisa/fichas/F02-albion-online.md)) | Novato sem acesso a equipamento bom e barato | Mercado de usados; vender a peça antes da última vida | Lavagem de valor por peças usadas a preço absurdo; faixa de preço pelo valor estimado e risco de troca ([C04](../01-pesquisa/fichas/C04-idlemmo.md)) |
+
+## 10. Interfaces com outros módulos
+
+| Módulo | O que este módulo entrega | O que precisa receber |
+|---|---|---|
+| [02 — Progressão](02-progressao.md) | Níveis de tier (1, 15, 35, 55, 75, 90); aprendiz só faz Comum; Selo de mestre pode mudar uma regra de item (sugestão: peças assinadas por um Selo aceitam 4 reparos) | Curva de nível; teto de offline, que limita a Inspiração |
+| [03 — Personagem](03-personagem.md) | Espaços de equipamento, classes de armadura por vocação, secundários | Como Defesa, Esquiva, Foco e Firmeza entram nos atributos |
+| [04 — Combate](04-combate.md) | PI por tier, fatores de família, desgaste por atividade (×1,0 / ×1,5 / ×2,0), proibição de equipamento como drop | Drops de material por hora (o [06](06-oficios-e-coleta.md), seção 9.4, pede cerca de 3,5 peles, 6 carnes e 3,5 cinzas por hora de combate) |
+| [07 — Economia](07-economia.md) | Regras de durabilidade e reparo (o dreno principal), classes de balcão (seção 9 e [06](06-oficios-e-coleta.md), seção 7), regra de vínculo, VR em minutos de ofício | Ouro por minuto de referência, valor do teto de emissão, taxa de bancada |
+| [08 — Simulação](08-simulacao.md) | D0 = 120 pd (300 nas ferramentas), 10 pd/h, 3 reparos de −20%, kits por reparo, mistura de atividades, vida útil (tabela 6.6), distribuição de qualidades, 24 lendários por Era, chances do Baú | — |
+| [10 — Live-ops](10-live-ops.md) | Relíquias por Era, coleções do Mascate, Moda sazonal | Calendário de Travessias e de eventos |
+| [11 — Monetização](11-monetizacao.md) | Conteúdo e faixas do Baú; regra de ouro dos cosméticos | Preços, teto de gasto |
+| [13 — Anti-abuso](13-anti-abuso.md) | Vínculo, oficina NPC presa, lendários no Pregão | Risco de troca para peças caras |
+| [14 — Arte e UI](14-arte-e-ui.md) | Guarda-roupa, troféus, Livro de Lendas, selo de negociável nas pilhas | Revisão de sensibilidade dos nomes |
+
+## 11. Propostas de mudança na bíblia
+
+1. **[proposta de mudança na bíblia] Consumíveis com dois graus** (Comum e Fino), e não quatro. Motivo: liquidez da Bolsa (seção 5.3).
+2. **[proposta de mudança na bíblia] Novos números-âncora em 6.5:** `PI(T) = 10 × 1,6^(T−1)`; D0 = 120 pd (ferramentas 300); desgaste de 10 pd por hora de uso; 3 reparos de −20% cada; vida de referência de 34 h para Comum e 44 h para obra-prima; 24 lendários por Era por Arraial.
+3. **[proposta de mudança na bíblia] Teto de emissão medido em valor de referência** (trabalho embutido), com a regra "o vínculo contamina". A reconciliar com o 07.
+4. **[proposta de mudança na bíblia] Bolsa também para peças Comuns novas** (são fungíveis), o que dá ao volume do ausente um mercado líquido. A reconciliar com o 07.
+5. **[proposta de mudança na bíblia] Termos novos no glossário:** Inspiração, Faro, kit de reparo, matéria rara, insumo nobre, reagente, Relíquia da Travessia, Único, Lendário, guarda-roupa, Moda do Arraial, Oficina do Arraial, valor de referência (VR), troféu e Livro de Lendas.
+
+## Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| **A quebra vira frustração** | O jogador perde a obra-prima favorita "sem aviso", como nas queixas do Shop Titans ([C06](../01-pesquisa/fichas/C06-shop-titans.md)). | Desgaste previsível e visível, aviso na última vida, aposentadoria a qualquer momento, registro de serviço, reparo automático grátis. |
+| **O desgaste parece imposto artificial** | Jogadores rejeitam degradação que não vem do uso, como no Ultima Online ([04a, §4.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)). | Nada se desgasta parado; o custo por hora aparece na tela da atividade, ao lado do ganho por hora. |
+| **Drenos fracos ou fortes demais** | A vida útil de 34 h e o custo de reparo estão errados para a economia real. | Todos os parâmetros vão para a simulação (08); mudanças só entre Eras, com aviso e dados (lei 21). |
+| **A obra-prima vira requisito** | Masmorras e cercos calibrados para equipamento Fino. | O 04 calibra o conteúdo pela peça Comum do tier; a qualidade é margem de conforto, não chave. |
+| **O lendário concentra poder e vira alvo de RMT** | Uma guilda compra todas as relíquias e equipa só os seus. | Limite de 24 por Era e de 1 por mestre; efeito modesto (+5% sobre a obra-prima); fim em cerca de 88 h; Pregão público e risco de troca. |
+| **Cosmético vira poder por pressão comercial** | Um bônus de decoração "só de conforto" entra para vender mais. | A regra de ouro (8.1) entra na carta pública de monetização; qualquer exceção exige anúncio público. |
+| **O Baú é questionado juridicamente** | Caixa paga, com sorte e prêmio revendável (LCP, art. 50; Lei 15.211/2025, art. 20). | Jogo 18+ verificado; chances publicadas; garantia; teto de gasto; conteúdo só cosmético; decisão registrada do Gabriel. **Validar com advogado.** |
+| **A Feira fragmentada esconde o bom negócio** | Qualidades, acabamentos e vidas restantes geram milhares de anúncios únicos. | Valor estimado por qualidade e vida restante (à moda do Milky Way Idle, [C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); filtros; Comum nova na Bolsa. |
+| **"O vínculo contamina" é mal entendido** | O jogador mistura uma pilha presa na receita e perde a venda. | Selo visível em cada pilha; a receita avisa antes de produzir; uma opção "nunca usar insumo preso em produção para venda". |
+| **Nomes e fauna geram polêmica** | Caçar jacaré e sucuri, ou usar topônimos indígenas, é criticado. | Fauna tratada como feras tocadas pela Bruma; revisão de sensibilidade cultural e ambiental no 14 antes de fechar os nomes; lista de substitutos pronta. |
+| **Bots no Faro e na obra-prima** | Um script joga as sessões melhor que o humano. | A Inspiração limita o volume por conta (um bot rende o mesmo que um humano); a conta é um adulto verificado (P8). |
+
