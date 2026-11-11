@@ -1,6 +1,6 @@
 # GDD 01 — Loops por escala de tempo
 
-> **Escopo.** O que o jogador faz, decide e ganha em cada escala de tempo, dos segundos às Travessias, e como o ausente e o ativo convivem em cada uma. Inclui o diagrama do loop central, o dia típico de três perfis e a lista do que se decide antes de sair (lei do plano).
+> **Escopo.** O que o jogador faz, decide e ganha em cada escala de tempo, dos segundos às Fronteiras, e como o ausente e o ativo convivem em cada uma. Inclui o diagrama do loop central, o dia típico de três perfis e a lista do que se decide antes de sair (lei do plano).
 > **Depende de:** [00 — Bíblia](00-biblia.md). **Alimenta:** [02 — Progressão](02-progressao.md) e os módulos 04, 06, 07, 08, 09, 10 e 12.
 > **Etiquetas:** [F] fato com fonte · [H] proposta do estúdio · [NV] não verificado. **Todo número é [H] até a simulação (módulo 08).** As fórmulas e as contas dos números de progressão citados aqui estão no [02](02-progressao.md).
 
@@ -11,7 +11,7 @@
   1. **A fila não sabe se a aba está aberta.** O cálculo é o mesmo online e offline, feito no servidor. Ficar olhando a tela não rende nada a mais.
   2. **O ativo ganha outra coisa, não "o mesmo, mais rápido".** O ganho de volume do ativo tem teto baixo e conhecido (no máximo 2 h por dia de bancada ativa, que somam de +2% a +6,5% de volume num dia). O ganho de verdade do ativo é qualidade (obra-prima), achados, mercado e cidade.
   3. **Tudo o que é coletivo aceita contribuição planejada.** Encomendas, Obras e cercos recebem entregas automáticas e inscrições prévias. Ninguém precisa estar online num horário marcado.
-- **Sete escalas:** segundos (o tique da fila e o lance), minutos (a sessão), horas (a ausência), dias (encomendas, Obras, nível), semanas (cerco, tier novo), Eras (~13 semanas: ameaça nova, regra nova, eleição) e Travessias (10 a 12 semanas, a partir da 2ª Era).
+- **Sete escalas:** segundos (o tique da fila e o lance), minutos (a sessão), horas (a ausência), dias (encomendas, Obras, nível), semanas (cerco, tier novo), Eras (~13 semanas: ameaça nova, regra nova, eleição) e Fronteiras (10 a 12 semanas, a partir da 2ª Era).
 - **O dia típico** mostra que o casual (2 sessões curtas) produz cerca de dois terços do volume do hardcore no ofício principal e chega ao primeiro 100 no D141, contra o D95 do hardcore. A diferença entre eles está menos no volume e mais em qualidade, mercado e cidade.
 
 ## 1. O loop central
@@ -33,7 +33,7 @@
                               │
                               ▼
    ┌────────────────────────────────────────────────────────────────────┐
-   │  VOLTA (segundos) — relatório de volta                             │
+   │  VOLTA (segundos) — Relatório da volta                             │
    │  "você planejou X, rendeu Y, o gargalo foi Z" · três metas         │
    └──────────────────────────┬─────────────────────────────────────────┘
                               │
@@ -41,7 +41,7 @@
    ┌────────────────────────────────────────────────────────────────────┐
    │  SESSÃO ATIVA (5 a 15 min)                                         │
    │  obra-prima (qualidade) · bancada ativa (lances, achados ativos)   │
-   │  Bolsa, Feira, Pregão · encomendas · Obra · preparo do cerco       │
+   │  Bolsa, Feira, Leilão · encomendas · Obra · preparo do cerco       │
    └──────────────────────────┬─────────────────────────────────────────┘
                               │
                               ▼
@@ -64,7 +64,7 @@ O loop econômico, que o módulo 07 detalha, é a parte do motor coletivo que ma
 
 ```
   fila de coleta ──► fila de transformação ──► fila de criação ──► uso
-       ▲                   (Bolsa)                (Feira/Pregão)      │
+       ▲                   (Bolsa)                (Feira/Leilão)      │
        │                                                              ▼
        └──── demanda ◄──── reparo (consome material) ◄──── desgaste e quebra
 ```
@@ -91,6 +91,8 @@ Cada fila mostra dois números, sempre [H]:
 
 A bancada ativa vale para uma fila por vez ("você só tem duas mãos") e conta no máximo **2 h por dia**. Sem resposta por dois lances seguidos, a fila volta sozinha à taxa ausente, sem perda.
 
+**A reconciliar com o 06:** o [06](06-oficios-e-coleta.md) criou o **Faro** (a sessão ativa de quem coleta) e o lote fino, pagos com Inspiração, que fazem o papel do lance garimpar/apurar. A recomendação ([02](02-progressao.md), seção 13.3) é a bancada ativa ficar só com firme e forçar; nesse caso, onde este módulo diz "achados ativos", leia-se o que o Faro rende.
+
 - **Referência:** a taxa AFK separada, visível e melhorável do IdleOn (base de 20%, até ~85%) ([B02](../01-pesquisa/fichas/B02-legends-of-idleon.md)). **Diferencia-se** dele em três pontos: a taxa ausente começa alta (70%), chega a 100% e nunca está à venda (o IdleOn vende "+30% AFK gains"). E o "ativo" é uma decisão, não um cliente aberto.
 - **Problema:** dar sentido à presença sem punir a ausência. Também segura a emissão no lançamento: com todos começando em 70%, a fonte começa apertada, como pede o insight 9 da [síntese](../01-pesquisa/00-sintese.md).
 - **Comportamento:** o ativo escolhe onde vale a pena pôr as mãos (um veio, uma fornada); o ausente vê a própria oficina ficar mais eficiente com o tempo.
@@ -103,7 +105,7 @@ A bancada ativa vale para uma fila por vez ("você só tem duas mãos") e conta 
 | **Obra-prima:** a única forma de chegar à qualidade Obra-prima (bíblia, 6.5). | **Volume contínuo** de até 72 h sem ninguém olhar. |
 | **Achados ativos:** materiais raros que saem dos lances de garimpar. | **Achados do ausente:** a cada hora contínua na mesma atividade, chance de `mín(h, 20)%` de um achado preso à conta (ex.: 8 h seguidas = 36% somados; 24 h = 2,9 achados) [H]. |
 | **Mercado com informação fresca:** reagir a um preço, comprar um insumo na hora. | **Ordens persistentes:** vender e comprar por preço-limite sem estar online. |
-| **Janelas ativas** dos cercos e das crises da Travessia, com bônus. | **Versão automática** das mesmas janelas, com o resultado do plano e sem bônus. |
+| **Janelas ativas** dos cercos e das crises da Fronteira, com bônus. | **Versão automática** das mesmas janelas, com o resultado do plano e sem bônus. |
 
 Os achados do ausente são reagentes e peças de coleção **presos à conta** (P2 do [conceito](../02-conceito.md)). Uma parte deles só serve na obra-prima do próprio jogador: o ausente encontra, e o ativo usa. Isso liga as duas taxas em vez de opô-las. O conteúdo exato dos achados fica com o módulo 06.
 
@@ -112,14 +114,14 @@ Os achados do ausente são reagentes e peças de coleção **presos à conta** (
 - **Comportamento:** deixar a mesma atividade rodando a noite toda (paciência) e guardar a sessão ativa para a obra-prima e o mercado.
 - **Risco:** regras de exclusividade pouco intuitivas, que exigem wiki (o efeito colateral do IdleOn). Mitigação: os dois números e os dois tipos de achado aparecem na própria tela da fila.
 
-### L4. Relatório de volta: a consequência do plano
+### L4. Relatório da volta: a consequência do plano
 
 Toda volta abre com um relatório curto, em três linhas e um detalhe opcional: o que foi planejado, o que rendeu e o gargalo. Exemplo (números ilustrativos): "Você deixou Mineração e Fundição por 9 h. Rendeu 2.005 minérios T4 e 120 mil XP de Mineração. A Fundição parou às 4h10, quando acabou o estoque de minério T3. Sugestão: comprar minério T3 na Bolsa ou pôr uma etapa de T3 na Mineração."
 
 - **Referência:** o modal de progresso offline do Milky Way Idle ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); a leitura do [02a](../01-pesquisa/02a-teoria-design-idle.md), seção 6.2: sem retorno, a ausência vira loteria.
 - **Problema:** o jogador não atribuir o resultado a si mesmo.
 - **Comportamento:** ajustar o plano a cada volta, aprendendo com o gargalo.
-- **Risco:** o relatório vira sermão ou propaganda. Mitigação: três linhas, sem oferta da loja na tela de volta.
+- **Risco:** o relatório vira sermão ou propaganda. Mitigação: três linhas e a linha do tempo como detalhe opcional, sem oferta da loja no Relatório da volta.
 
 ### L5. Uma fila por atividade
 
@@ -148,14 +150,14 @@ Não existe prêmio por entrar todo dia, nem sequência de dias ("streak") que s
 - **Comportamento:** voltar porque há uma meta quase cumprida (lei das três metas), não por medo de perder.
 - **Risco:** perder uma alavanca de retenção comprovada no mobile. Mitigação: as três metas visíveis (seção 3.8) e as cadências coletivas fazem o papel de puxar a volta.
 
-### L8. A Travessia roda numa trilha própria [proposta, a reconciliar com o módulo 10]
+### L8. A Fronteira roda numa trilha própria [proposta, a reconciliar com o módulo 10]
 
-A Travessia não consome as filas da cidade. Ela roda numa trilha sazonal à parte (as expedições da Travessia), abastecida com suprimentos e equipamentos feitos na cidade. Assim, a temporada soma ao jogo em vez de competir com os ofícios.
+A Fronteira não consome as filas da cidade. Ela roda numa trilha sazonal à parte (as expedições da Fronteira), abastecida com suprimentos e equipamentos feitos na cidade. Assim, a temporada soma ao jogo em vez de competir com os ofícios.
 
 - **Referência:** as Leagues do OSRS, mundo paralelo que não reseta o principal ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)); o risco de esvaziar a cidade, registrado no [conceito](../02-conceito.md), seção 7.
-- **Problema:** se a Travessia usar as mesmas filas, quem entra nela atrasa os ofícios, e quem fica na cidade perde a temporada.
-- **Comportamento:** participar das duas coisas; a Travessia vira cliente dos ofícios.
-- **Risco:** a trilha extra aumentar a emissão total na temporada. Mitigação: o que a Travessia produz é Marcos e relíquias presos à conta e à temporada (glossário da bíblia); o que vem da cidade para a Travessia é consumido lá (dreno).
+- **Problema:** se a Fronteira usar as mesmas filas, quem entra nela atrasa os ofícios, e quem fica na cidade perde a temporada.
+- **Comportamento:** participar das duas coisas; a Fronteira vira cliente dos ofícios.
+- **Risco:** a trilha extra aumentar a emissão total na temporada. Mitigação: o que a Fronteira produz é Marcos e relíquias presos à conta e à temporada (glossário da bíblia); o que vem da cidade para a Fronteira é consumido lá (dreno).
 
 ## 3. Loops por escala de tempo
 
@@ -166,8 +168,8 @@ A Travessia não consome as filas da cidade. Ela roda numa trilha sazonal à par
 | Horas | 2 a 72 h | A ausência | (decidida antes de sair) |
 | Dias | 1 a 7 dias | Encomendas, Obras, níveis, ferramentas | Em que encomenda entrar? |
 | Semanas | 1 a 4 semanas | Cerco, tier novo, filas e offline | Inscrever-se no cerco, com que papel? |
-| Eras | ~13 semanas | Ameaça, regra nova, Câmara, Selo | Tomar o Selo agora ou depois? |
-| Travessias | 10 a 12 semanas | A terra nova e a cidadela | Até onde levar a expedição? |
+| Eras | ~13 semanas | Ameaça, regra nova, Conselho, Selo | Tomar o Selo agora ou depois? |
+| Fronteiras | 10 a 12 semanas | A terra nova e a cidadela | Até onde levar a expedição? |
 
 ### 3.1 Segundos (3 a 45 s)
 
@@ -184,12 +186,12 @@ A Travessia não consome as filas da cidade. Ela roda numa trilha sazonal à par
 
 | | |
 |---|---|
-| **O que faz** | Lê o relatório de volta; recolhe; ajusta filas, etapas e regras; mexe no mercado (ordens na Bolsa, anúncios na Feira, lances no Pregão); faz obras-primas (2 a 5 min cada); entrega à encomenda; doa à Obra; prepara o cerco; vota. |
+| **O que faz** | Lê o Relatório da volta; ajusta filas, etapas e regras; mexe no mercado (ordens na Bolsa, anúncios na Feira, lances no Leilão); faz obras-primas (2 a 5 min cada); entrega à encomenda; doa à Obra; prepara o cerco; vota. |
 | **Decisão** | O que produzir a seguir; vender, guardar, usar ou doar; em que peça arriscar uma obra-prima e com que reagentes; o preço-limite das ordens; o que consertar. |
 | **O que ganha** | Ouro, peças de qualidade, Mérito, nota na encomenda e a próxima meta de minutos. |
 | **Ausente × ativo** | A sessão do casual tem a mesma forma da do hardcore, só mais curta: ler, decidir, sair. Nada na sessão tem cronômetro contra o jogador. A obra-prima pode ser pausada e retomada; o servidor guarda o estado por 24 h [H]. |
 
-**Ordem da sessão** [H], pensada para caber em 5 minutos no celular: (1) relatório de volta; (2) recolher e vender; (3) uma decisão do dia (encomenda, obra-prima ou mercado); (4) plano para sair. Os passos 3 e 4 têm atalho: "repetir o plano anterior".
+**Ordem da sessão** [H], pensada para caber em 5 minutos no celular: (1) Relatório da volta (não há nada a coletar: o que a fila fez já está no inventário); (2) vender, guardar ou usar; (3) uma decisão do dia (encomenda, obra-prima ou mercado); (4) plano para sair. Os passos 3 e 4 têm atalho: "repetir o plano anterior".
 
 ### 3.3 Horas: a ausência (2 a 72 h)
 
@@ -224,19 +226,19 @@ A Travessia não consome as filas da cidade. Ela roda numa trilha sazonal à par
 
 | | |
 |---|---|
-| **O que faz** | Enfrenta a ameaça nova da Era (um tipo de assombrado nos cercos) e joga com a regra nova; elege a Câmara (a cada 2 meses); completa Obras grandes que empurram a Bruma e abrem regiões. No fim da 1ª Era, o regular está perto do 90 no ofício principal e o hardcore perto do 98. |
+| **O que faz** | Enfrenta a ameaça nova da Era (um tipo novo de criatura corrompida pela Névoa nos cercos) e joga com a regra nova; elege o Conselho (a cada 2 meses); completa Obras grandes que empurram a Névoa e abrem regiões. No fim da 1ª Era, o regular está perto do 90 no ofício principal e o hardcore perto do 98. |
 | **Decisão** | O voto; que Obra priorizar; trocar ou não um ofício mestre (uma troca por Era, [02](02-progressao.md), seção 5.3); quando tomar o Selo de mestre. |
 | **O que ganha** | Títulos e cosméticos da Era, regiões novas, Mérito e, para quem chega ao 100, a camada do Selo. |
 | **Ausente × ativo** | O voto fica aberto por dias. A regra nova é anunciada com uma Era de antecedência, para o plano de ninguém ser punido (lei 8). |
 
-### 3.7 Travessias (10 a 12 semanas, a partir da 2ª Era)
+### 3.7 Fronteiras (10 a 12 semanas, a partir da 2ª Era)
 
 | | |
 |---|---|
-| **O que faz** | Manda expedições à terra nova que a Bruma revelou, numa trilha própria (L8); abastece a expedição com suprimentos da cidade; enfrenta crises (janelas ativas de 10 a 15 min); a guilda corre para a cidadela no fim. |
+| **O que faz** | Manda expedições à terra nova que a Névoa revelou, numa trilha própria (L8); abastece a expedição com suprimentos da cidade; enfrenta crises (janelas ativas de 10 a 15 min); a guilda corre para a cidadela no fim. |
 | **Decisão** | Grupo, suprimentos, rota e regras de recuo; quanto da produção da cidade mandar; se arrisca uma rota perigosa. |
 | **O que ganha** | Marcos (presos à conta e à temporada), títulos, cosméticos e relíquias que voltam para a cidade. O nome do descobridor fica gravado no mapa. |
-| **Ausente × ativo** | A expedição roda offline e volta com um diário. Quem não está na crise recebe a versão automática dela, sem o bônus. O módulo 10 desenha a Travessia. |
+| **Ausente × ativo** | A expedição roda offline e volta com um diário. Quem não está na crise recebe a versão automática dela, sem o bônus. O módulo 10 desenha a Fronteira. |
 
 ### 3.8 As três metas sempre visíveis
 
@@ -268,27 +270,27 @@ Os três dias se passam no **D30**, no meio da 1ª Era. Os números vêm do mode
 
 ### 4.2 Regular: Tião, 4 sessões por dia
 
-**Perfil:** Mineração (~60, T4) e Fundição (~44); vocação Guardião (~52). Três filas (a terceira chegou ontem, D29,7). Taxa ausente de 90%. Teto de offline de 48 h.
+**Perfil:** Mineração (~60, T4) e Fundição (~44); vocação Cavaleiro (~52). Três filas (a terceira chegou ontem, D29,7). Taxa ausente de 90%. Teto de offline de 48 h.
 
 | Hora | Duração | O que faz | Decisão |
 |---|---|---|---|
 | 07h00 | 5 min | Relatório: a Fundição parou às 4h10, quando acabou o minério T3. A Fundição dele ainda não chega ao T4 (abre no 50), e a Mineração já está no T4. Põe uma ordem de compra de minério T3 e uma de venda do minério T4 na Bolsa. | Comprar minério T3 ou pôr a Mineração no T3 por algumas horas (perde a venda do T4). |
 | 12h30 | 10 min | Vende lingotes T3 na Bolsa; entrega lingotes à encomenda da guilda; usa 10 min de bancada ativa na Mineração, garimpando atrás de gemas. | Onde pôr as mãos; quanto da produção vai à guilda. |
 | 18h30 | 12 min | Prepara o cerco: compra poções de uma alquimista; leva a couraça a um ferreiro para consertar (o conserto consome material e reduz a durabilidade máxima). Faz duas obras-primas de lingote. | Consertar ou trocar a couraça; que papel assumir no cerco. |
-| 23h00 | 5 min | Plano da noite: Mineração no T4; Fundição com a etapa "se acabar o minério T3, fundir o estoque de T2"; Guardião em expedição. | — |
+| 23h00 | 5 min | Plano da noite: Mineração no T4; Fundição com a etapa "se acabar o minério T3, fundir o estoque de T2"; Cavaleiro em expedição. | — |
 
 **Por que funciona para ele** [H]: duas filas encadeadas (coleta + transformação) dão a Tião uma cadeia própria curta, mas os tiers dos dois ofícios não andam juntos, e ele depende do mercado para equilibrar a cadeia. É a interdependência aparecendo dentro de um jogador só. A terceira fila liberou a vocação para rodar sempre, e o cerco passou a render peles que ele vende ao Curtume.
 
 ### 4.3 Hardcore: Lia, muitas sessões e obras-primas
 
-**Perfil:** Ferraria (~65, T4) e Alquimia (~51); vocação Batedor (~56). Três filas desde o D23,5. Taxa ausente de 90%. Teto de offline de 60 h.
+**Perfil:** Ferraria (~65, T4) e Alquimia (~51); vocação Ladino (~56). Três filas desde o D23,5. Taxa ausente de 90%. Teto de offline de 60 h.
 
 | Período | O que faz | Decisão |
 |---|---|---|
-| Manhã (3 sessões de 5 a 15 min) | Compra lingotes T4 na Bolsa (de mineiros e fundidores como Tião); faz 3 obras-primas de lâmina T4; põe as Finas na Feira e a única Obra-prima no Pregão. | Que atributo buscar na obra-prima; a que preço vender; Feira ou Pregão. |
+| Manhã (3 sessões de 5 a 15 min) | Compra lingotes T4 na Bolsa (de mineiros e fundidores como Tião); faz 3 obras-primas de lâmina T4; põe as Finas na Feira e a única Obra-prima no Leilão. | Que atributo buscar na obra-prima; a que preço vender; Feira ou Leilão. |
 | Tarde (3 a 4 sessões) | 90 min de bancada ativa somados ao longo do dia (forçando a Ferraria quando há encomenda com prazo); mais 3 obras-primas; organiza a encomenda da guilda e confere a nota de cada membro. | Forçar (mais rápido, gasta o martelo em dobro) ou firme; quem da guilda precisa de ajuda. |
-| Noite (3 sessões) | Alquimia produz poções para o cerco (demanda alta perto do sábado); debate a Obra da vez na Câmara; 2 obras-primas; monta a guarnição da guilda para o cerco. | Que Obra defender; quantas poções fazer para vender e quantas para a guilda. |
-| Antes de dormir | Plano de 8 h para as 3 filas, com etapas de reserva; a expedição do Batedor vai a uma área de risco médio da Bruma, com regra de recuo. | Arriscar a área mais rica ou não. |
+| Noite (3 sessões) | Alquimia produz poções para o cerco (demanda alta perto do sábado); debate a Obra da vez no Conselho; 2 obras-primas; monta a guarnição da guilda para o cerco. | Que Obra defender; quantas poções fazer para vender e quantas para a guilda. |
+| Antes de dormir | Plano de 8 h para as 3 filas, com etapas de reserva; a expedição do Ladino vai a uma área de risco médio da Névoa, com regra de recuo. | Arriscar a área mais rica ou não. |
 
 **Por que funciona para ela** [H]: o ofício de criação depende de insumos e de decisões, então recompensa quem volta muitas vezes. A vantagem dela não está no volume (só ~15% mais horas de fila que Tião no ofício principal), mas na qualidade, no mercado e na liderança.
 
@@ -311,7 +313,7 @@ Os três dias se passam no **D30**, no meio da 1ª Era. Os números vêm do mode
 ### 4.5 O que muda no começo e depois do 100
 
 - **D1 a D7:** uma fila só até a primeira semana (a 2ª chega entre o D4 e o D7), taxa ausente de 70% a 75%, teto de 24 h. A decisão central é como dividir a única fila entre o ofício e a vocação. A semana termina na **virada do 30**: o primeiro ofício chega ao teto de aprendiz, o jogador escolhe o primeiro ofício mestre, ganha a 2ª fila, o tier T3 e mais 5% de taxa ausente, tudo no mesmo dia (D4 a D7). É a primeira virada de paradigma do jogo ([02a](../01-pesquisa/02a-teoria-design-idle.md), seção 3.2).
-- **Depois do D100:** a taxa ausente chega a 95% e depois a 100%; o teto de offline chega a 72 h; a Travessia começou no D91, com a 2ª Era. O regular chega ao 100 no D116, acumula Maestria e pode tomar o primeiro Selo de mestre por volta do D131 ([02](02-progressao.md), seção 9).
+- **Depois do D100:** a taxa ausente chega a 95% e depois a 100%; o teto de offline chega a 72 h; a Fronteira começou no D91, com a 2ª Era. O regular chega ao 100 no D116, acumula Maestria e pode tomar o primeiro Selo de mestre por volta do D131 ([02](02-progressao.md), seção 9).
 
 ## 5. Antes de sair: o que o jogador decide (lei do plano)
 
@@ -325,12 +327,12 @@ Toda decisão desta lista tem um **padrão seguro**: se o jogador sair sem mexer
 | 4 | Ordens na Bolsa e anúncios na Feira (preço-limite, quantidade, validade) | Livro de ofertas e preço de referência | Nenhuma ordem nova | 07 |
 | 5 | Venda a NPC (o piso) | Preço decrescente do dia | Nada vai ao NPC sem ordem | 07 |
 | 6 | Entregas a encomendas (percentual da produção, teto) | Nota prevista | As entregas já combinadas seguem | 09 |
-| 7 | Destino do excedente acima do teto de emissão negociável: fica preso à conta ou vai para uma Obra (vira Mérito) | Quanto falta para o teto do dia | Fica preso à conta e pode ser usado nas próprias receitas | 07 |
+| 7 | Destino do que passar da cota de venda (o teto de emissão do 07 é um portão de saída, e a cota acumula até 3 dias): guardar para uso próprio, vender depois, entregar à encomenda ou doar a uma Obra (vira Mérito) | Cota disponível e quanto da produção já a consome | Fica na conta, para uso próprio ou venda nos dias seguintes | 07 |
 | 8 | Expedição: grupo, suprimentos, rota, regras de recuo | Risco estimado e consumo de suprimentos | Recuar a 50% de vida; nunca gastar o último consumível | 04 |
 | 9 | Cerco: inscrição, papel, equipamento e consumíveis separados | O prazo da inscrição (até 24 h antes) | Sem inscrição; a guarnição NPC defende | 04 |
 | 10 | Obra-prima pendente | A obra-prima pausada fica guardada por 24 h | Nada se perde | 06 |
-| 11 | Voto na Câmara, se houver eleição aberta | O prazo | Sem voto | 09 |
-| 12 | Travessia (a partir da 2ª Era): suprimentos e regras da expedição | Diário previsto | A expedição recua com segurança | 10 |
+| 11 | Voto no Conselho, se houver eleição aberta | O prazo | Sem voto | 09 |
+| 12 | Fronteira (a partir da 2ª Era): suprimentos e regras da expedição | Diário previsto | A expedição recua com segurança | 10 |
 
 Duas regras protegem o plano [H]:
 
@@ -343,13 +345,13 @@ Duas regras protegem o plano [H]:
 |---|---|
 | **02 Progressão** | Duas taxas (ausente 70% → 100%; ativa 100%, 125% ou 75% conforme o lance); bancada ativa de no máximo 2 h/dia; uma fila por atividade; teto de offline 24 h → 72 h. |
 | **04 Combate** | A expedição é uma atividade de fila; regras de recuo com padrão seguro (50% de vida); cerco com inscrição até 24 h antes e janela de comando opcional de 10 a 15 min, com bônus. |
-| **06 Ofícios** | Lance a cada 45 s; achados ativos (garimpar ×4) e achados do ausente (`mín(h, 20)%` por hora contínua), parte deles usável só na obra-prima do próprio jogador; obra-prima pausável por 24 h. |
-| **07 Economia** | Torneira de NPC diária e decrescente; teto de emissão negociável com destino do excedente escolhido antes de sair; Bolsa sem vantagem por velocidade. |
+| **06 Ofícios** | Lance a cada 45 s; achados do ausente (`mín(h, 20)%` por hora contínua), parte deles usável só na obra-prima do próprio jogador; obra-prima pausável por 24 h. A reconciliar: o lance garimpar/apurar contra o Faro e o lote fino do 06. |
+| **07 Economia** | Torneira de NPC diária e decrescente; destino do excedente escolhido antes de sair, compatível com o portão de saída do 07; Bolsa sem vantagem por velocidade. |
 | **08 Simulação** | Perfis: casual 2 sessões/dia, regular 4, hardcore ~10; horas de fila por dia no ofício principal: 17 / 20,5 / 23,5; obras-primas por dia: 1 / 2 / 8; bancada ativa: 10 / 25 / 90 min; volume relativo 66 / 87 / 100. O bot tem o teto físico do hardcore: 3 filas × 24 h e 2 h de bancada ativa. |
 | **09 Social** | Encomendas com entrega automática e nota individual pelo que foi entregue; Mérito por dia provisório de 20 / 40 / 100 por perfil; voto assíncrono. |
-| **10 Live-ops** | Travessia em trilha própria, sem consumir filas (proposta); regra de Era anunciada com uma Era de antecedência. |
+| **10 Live-ops** | Fronteira em trilha própria, sem consumir filas (proposta); regra de Era anunciada com uma Era de antecedência. |
 | **12 Onboarding** | Ordem da sessão em quatro passos; a primeira semana termina na virada do 30. |
-| **14 Arte e UI** | Relatório de volta em três linhas; as duas taxas em toda tela de fila; as três barras de meta; a tela de saída com a hora de parada de cada fila. |
+| **14 Arte e UI** | Relatório da volta em três linhas; as duas taxas em toda tela de fila; as três barras de meta; a tela de saída com a hora de parada de cada fila. |
 
 ## Como isso pode dar errado
 
@@ -358,12 +360,12 @@ Duas regras protegem o plano [H]:
 | **A bancada ativa vira obrigação** | O hardcore sente que "perde" se não usar as 2 h diárias, e o jogo vira plantão. | Ganho de volume pequeno e publicado (+2% a +6,5% num dia); achados ativos úteis, mas não essenciais; medir no alfa quantos usam o teto todo dia e baixá-lo se virar regra. |
 | **Bot nos lances** | Um script responde lances 2 h por dia, todo dia. | O ganho é pequeno; teto de emissão negociável por conta; detecção por regularidade dos lances e pelo fluxo de valor ([04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)); conta = adulto verificado (P8). |
 | **A sessão não cabe em 5 minutos** | Decisões demais (filas, etapas, mercado, encomenda, cerco) cansam o casual no celular. | Ordem da sessão em quatro passos; "repetir o plano"; padrões seguros; teste de usabilidade com o perfil casual. |
-| **Relatório de volta vira ruído** | Texto demais, ou o relatório vira vitrine de oferta. | Três linhas e detalhe opcional; nada da loja na tela de volta. |
+| **Relatório da volta vira ruído** | Texto demais, ou o relatório vira vitrine de oferta. | Três linhas e detalhe opcional; nada da loja no Relatório da volta. |
 | **Paridade quebra** | Um evento esquecido no cálculo por eventos faz o offline render mais (ou menos) que o online, e o mercado explora a diferença. | Teste automático de paridade a cada mudança de regra; alarme quando a emissão offline por hora divergir da online ([07](../01-pesquisa/07-tecnica-idles-online.md)). |
 | **Paciência premia nunca mudar** | Os achados do ausente fazem o jogador deixar a mesma fila por semanas e parar de decidir. | A chance tem teto de 20% por hora; os achados servem à obra-prima (puxam para o ativo); a meta de dias pede tier novo e troca de receita. |
 | **Sem login diário, a retenção cai** | Sem a sequência diária, parte do público não cria o hábito. | Medir D1, D7 e D30 no alfa; reforçar as três metas e as cadências coletivas; se faltar hábito, usar eventos com janela de dias, nunca sequência que se perde. |
 | **Carona nas entregas automáticas** | Contas que entram na encomenda, deixam uma regra mínima e colhem a recompensa do grupo. | Nota individual pelo valor entregue; recompensa proporcional; o líder da encomenda pode remover inativos (módulo 09). |
 | **Cerco em horário ruim** | Um horário fixo exclui quem trabalha à noite ou vive em outro fuso. | Inscrição até 24 h antes; defesa assíncrona; janela de comando opcional; horários rotativos ou mais de uma janela (módulo 04). |
-| **A Travessia sobrecarrega o plano** | Mais uma trilha para planejar, além das filas da cidade. | A expedição da Travessia tem plano simples, padrão seguro e "repetir"; participar é opcional. |
+| **A Fronteira sobrecarrega o plano** | Mais uma trilha para planejar, além das filas da cidade. | A expedição da Fronteira tem plano simples, padrão seguro e "repetir"; participar é opcional. |
 | **"A aba não importa" esvazia a presença** | Se ficar online não rende nada, o jogador ativo não vê razão para voltar mais vezes. | O ativo tem ganhos que só ele tem (qualidade, achados ativos, mercado, comando no cerco, liderança); medir se o regular encontra motivo para a 3ª e a 4ª sessões. |
 

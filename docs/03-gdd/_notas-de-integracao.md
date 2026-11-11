@@ -1,5 +1,35 @@
 # Notas de integração do GDD (arquivo de trabalho)
 
+## 01 e 02 — Loops e progressão (concluídos em 2026-11-11, com nomes novos)
+
+**Decisões centrais [H]** (contas feitas num modelo de 420 dias em passos de 5 min):
+- **Duas taxas:** a fila não muda com a aba aberta; a taxa ausente começa em 70% e sobe a 100% em seis marcos de +5%; a taxa ativa só vale na "bancada ativa" (um lance a cada 45 s: firme 100% ou forçar 125%, que gasta a ferramenta em dobro), até 2 h/dia; o ganho de volume do ativo fica entre +2,1% e +6,5% do dia.
+- **Filas:** de 1 a 3 em paralelo, uma por atividade, nunca duas no mesmo ofício.
+- **Curvas:** ofício `XP(n) = 5 × n^2,75`; vocação `4 × n^2,75`. Primeiro 100: hardcore D95, regular D116, casual D141. Primeiro 30 entre D4 e D7.
+- **Teto de aprendiz:** o ofício vira mestre no 30; a XP depois do 30 vai para uma reserva (equivalente ao 40). Troca de mestre: uma grátis nos 7 dias após a primeira escolha, depois uma por Era.
+- **Prestígio:** 1 ponto de Maestria a cada 400 mil XP; o Selo de mestre volta o ofício ao 30, dá uma regra nova e multiplica a XP desse ofício (×2, ×4, ×8, ×16, ×32); ganho por ciclo de +200% a +107%; ciclos de 66, 41, 28 e 22 dias. O multiplicador acelera o nível, nunca as unidades por hora.
+- Sem prêmio de login diário. Maior espera sem desbloqueio: 36 h na 1ª semana, 4 dias depois.
+
+**Interfaces para a simulação:**
+- Coleta T1–T6: 6/9/12/16/22/30 s por unidade; XP/h por tier de 6.000 a 22.800.
+- `unidades/h = 3.600 ÷ t × domínio (≤ 1,10) × taxa`. Exemplo: regular no D30 produz 222,75 minérios T4/h (4.571/dia).
+- Teto por conta e dia de um mesmo bem: T1 15.840, T6 3.168.
+- Perfis casual/regular/hardcore: eficiência 75/90/98%; 17/20,5/23,5 h de fila por dia no ofício principal; 1/2/8 obras-primas/dia; Mérito 20/40/100/dia.
+- Depois de cada Selo, janela sem T4–T6 (o regular fica 32 dias sem T6 após o Selo I).
+- Para o teto do 07 (`teto = 600 + 30n + 50m`): m = soma dos graus de Selo (0 a 10); n deve usar o maior nível já alcançado.
+
+**Propostas de mudança na bíblia:** glossário (taxa ausente/ativa, bancada ativa, lance, etapas, nível total); filas paralelas, uma por atividade; depois do teto de offline, mais 12 h a 25% em vez de corte seco; ações longas para equipamento; definição de Maestria e Selo; pista de ≥ 90 dias mesmo para o hardcore.
+
+**Conflitos para a revisão de consistência:**
+- **O mais grave:** no 05/06, a ferramenta acelera a fila até 1,72× o nominal, e o hardcore chega ao 100 no D81 (abaixo de 90). Recomendação do 02: ferramenta não acelera; alternativa: subir o coeficiente da curva para ~5,6 (o casual iria ao ~D160).
+- Níveis de tier do 06 (35/55/75/90): adotáveis, com datas ~5% mais tardias.
+- "Faro" e "Inspiração" do 06 duplicam o lance garimpar/apurar do 02; proposta: deixar só firme e forçar.
+- Excedente: o 06 diz que "nasce preso", o 07 usa portão de saída; o 02 seguiu o 07.
+- 06: "habilidades abrem no nível 10 do ofício mestre" está ambíguo.
+- 12: pede o primeiro 30 entre D2 e D4 (um bônus de calouro ×1,6 resolveria) e mostra taxas "com você aqui / fora 80%", o que contradiz a regra de que a aba aberta não muda nada.
+
+**Riscos:** Selos simultâneos esvaziarem a oferta de T6; os 70% iniciais lidos como castigo; regras do Selo reduzindo drenos; a 3ª fila do casual (D50) depender de Mérito; perfis não medidos.
+
 ## 07 — Economia: revisão para coins e contestação (2026-11-11)
 
 - **Alvará em unidades inteiras, creditado por doação** [H]: 1 Alvará ≈ R$ 0,10; premium de 30 dias ≈ 200 Alvarás (faixa 149–249); Baú ≈ 40 Alvarás; preço de abertura esperado ≈ 75 ouro por Alvará. Gastar na loja destrói o Alvará (dreno). Cada doação vira um lote no livro-razão com sua carência; a loja gasta primeiro o saldo em carência e a transferência só sai do saldo livre.

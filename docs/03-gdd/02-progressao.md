@@ -9,7 +9,7 @@
 
 - **Curva de ofício:** `XP(n) = 5 × n^2,75` (XP para subir do nível n ao n+1). São 41,4 milhões de XP e **2.190 horas de fila a 100%** do 1 ao 100. **Primeiro 100 de ofício mestre: D95 no hardcore, D116 no regular, D141 no casual.** A pista de ≥ 90 dias vale até para o hardcore.
 - **Sem muro antes do D7:** o regular chega ao 30 no D5,5, com um nível a cada 6 a 15 horas na primeira semana e no máximo 36 h sem algum desbloqueio que importa.
-- **Curva de vocação:** `XP_voc(n) = 4 × n^2,75` (80% da de ofício). Regular no 100 de vocação no D134, sem contar cerco e Travessia.
+- **Curva de vocação:** `XP_voc(n) = 4 × n^2,75` (80% da de ofício). Regular no 100 de vocação no D134, sem contar cerco e Fronteira.
 - **Teto de aprendiz (30):** ofícios não mestres vão até o 30 e fazem os tiers T1 a T3. A XP depois do 30 vai para uma reserva de até 861 mil XP (o caminho do 30 ao 40), que vale se o ofício virar mestre.
 - **Filas 1 → 3:** a 2ª no primeiro 30 de ofício (regular: D5,5), a 3ª com ofício mestre 60, vocação 40 e 1.000 de Mérito (regular: D29,7). Uma fila por atividade.
 - **Offline 24 h → 72 h:** quatro degraus de +12 h (regular: D10, D26, D50 e D65).
@@ -17,13 +17,14 @@
 - **Maestria:** depois do 100, cada 400 mil XP vira 1 ponto de Maestria (~0,8 dia no regular); técnicas aos 5, 10 e 20 pontos.
 - **Selo de mestre:** com 20 pontos no ciclo, o jogador pode passar a oficina: o ofício volta ao 30, ganha um grau do Selo, uma regra nova e um multiplicador de XP nesse ofício de ×2, ×4, ×8, ×16 e ×32 (graus I a V). Ganho por ciclo: +200%, +133%, +114% e +107% em Maestria acumulada. Ciclos de 66, 41, 28 e 22 dias no regular.
 - **Duas velocidades:** o pessoal cresce exponencialmente (multiplicador do Selo, Maestria acumulada, XP por nível); o negociável fica limitado (unidades por hora ≤ 1,10 × o nominal, uma fila por ofício, 3 filas por conta).
+- **Conflito principal com os módulos paralelos (seção 13.3):** se a ferramenta acelerar a fila como propõem o 05 e o 06 (até 1,72 × o nominal), o hardcore chega ao 100 no D81 e quebra a pista; a recomendação é a ferramenta não acelerar. Os níveis de tier do 06 (35, 55, 75, 90) podem ser adotados sem mexer na curva.
 
 ## 1. Os eixos de progressão
 
 | Eixo | Alcance | Como sobe | Forma de crescimento | Negociável? |
 |---|---|---|---|---|
 | **Nível de ofício** | 1–100 (mestre); 1–30 (aprendiz) | XP da fila e da obra-prima | Custo por nível cresce como `n^2,75` | Não |
-| **Nível de vocação** | 1–100 | Expedição, cerco, Travessia | Idem, 80% do custo | Não |
+| **Nível de vocação** | 1–100 | Expedição, cerco, Fronteira | Idem, 80% do custo | Não |
 | **Tier de material** | T1–T6 | Níveis 1, 15, 30, 50, 70 e 85 | Degraus | Os bens do tier, sim |
 | **Domínio do tier** | +0% a +10% de velocidade | Níveis acima do desbloqueio do tier | Linear, com teto | Não (o efeito no volume tem teto) |
 | **Taxa ausente** | 70% → 100% | Seis marcos | Degraus, com teto | Não |
@@ -35,7 +36,7 @@
 | **Maestria** | pontos sem teto | XP além do 100 | Linear no ciclo, multiplicada pelo Selo | Não |
 | **Selo de mestre** | graus I–V no lançamento | Passar a oficina (reset ao 30) | Exponencial (×2 por grau) | Não |
 
-**Tudo nesta tabela é preso à conta e nada está à venda** (zona vermelha, P7 do [conceito](../02-conceito.md)). O Alvará não toca em nenhum eixo (decisão do checkpoint 2, bíblia seção 5).
+**Tudo nesta tabela é preso à conta e nada está à venda** (zona vermelha, P7 do [conceito](../02-conceito.md)). Os Coins não tocam em nenhum eixo (decisão do checkpoint 2, bíblia seção 5).
 
 ## 2. O ritmo da fila
 
@@ -59,7 +60,7 @@
 - **Comportamento:** escolher o ofício pelo papel na cidade e pelo estilo de jogo (coleta roda sozinha; criação pede insumo e decisão; ver o [01](01-loops.md), seção 4).
 - **Risco:** a XP igual esconde diferenças reais de esforço (a criação exige comprar insumos). Mitigação: a recompensa da criação vem em ouro e qualidade, não em XP.
 
-**Nota para o módulo 06** [a reconciliar com o 06]: os tempos acima são de coleta e cabem na faixa da bíblia (3 a 30 s por unidade). Equipamento tende a precisar de ações mais longas (por exemplo, 60 a 300 s por peça) para o volume de armas e armaduras caber na demanda. Como a XP/h não depende do tempo da ação, isso não afeta este módulo.
+**Nota para o módulo 06** [a reconciliar com o 06]: os tempos acima são de coleta e cabem na faixa da bíblia (3 a 30 s por unidade). O [06](06-oficios-e-coleta.md), escrito em paralelo, propõe outros tempos (coleta de 8 s no T1 a 30 s no T6; criação de equipamento de 5 a 115 minutos por peça) e outros níveis de tier (35, 55, 75 e 90 no lugar de 30, 50, 70 e 85). **Os tempos de ação são do 06 e devem prevalecer;** como a XP/h deste módulo não depende do tempo da ação, a curva não muda com eles. A diferença nos níveis de tier e na velocidade está na seção 13.3.
 
 ### 2.2 Domínio do tier
 
@@ -67,7 +68,7 @@
 
 Exemplo: Mineração 57, tier T4 (desbloqueado no 50): `dom = 1 + 0,01 × 7 = 1,07`, ou seja, 7% mais rápido que o nominal. No 60, chega a 1,10 e para. No 70, o T5 abre e o domínio recomeça do zero no tier novo.
 
-O domínio vale para velocidade (unidades e XP). **A ferramenta não acelera** [H, a reconciliar com o módulo 05]: a ferramenta do tier é o que permite o ritmo nominal; uma ferramenta de tier abaixo rende −20% por tier de diferença, e sem ferramenta a fila rende −50%. A qualidade da ferramenta (Comum a Obra-prima) muda a durabilidade e a chance de achado, não a velocidade. Isso mantém a velocidade da fila com um teto único e conhecido (1,10 × o nominal), o que importa para a emissão.
+O domínio vale para velocidade (unidades e XP). **A ferramenta não acelera** [H, em conflito com os módulos 05 e 06; ver a seção 13.3]: a ferramenta do tier é o portão que permite trabalhar naquele tier (regra do [05](05-itens.md), seção 4.5, que adotamos), e a qualidade dela (Comum a Obra-prima) muda a durabilidade e a chance de achado, não a velocidade. Isso mantém a velocidade da fila com um teto único e conhecido (1,10 × o nominal), o que importa para a emissão e para a pista de conteúdo.
 
 - **Referência:** o OGame, em que a produção cresce bem mais devagar que o custo e em unidades iguais para todos ([02a](../01-pesquisa/02a-teoria-design-idle.md), seção 9.4); a lei 6 (custo exponencial, fonte linear).
 - **Problema:** cada bônus de velocidade empilhado (nível, ferramenta, técnica) multiplica a emissão do veterano; com três ou quatro fontes de +15%, a fila do veterano renderia o dobro da do novato no mesmo tier.
@@ -127,7 +128,7 @@ Exemplos: `XP(1) = 5`; `XP(10) = 5 × 10^2,75 = 5 × 562,3 = 2.812`; `XP(60) = 3
 
 **Horas de fila por dia no ofício principal**, depois da 2ª fila: casual 17,1 h; regular 20,5 h; hardcore 23,5 h. O teto físico é 24 h: a fila é uma por atividade.
 
-**XP de obra-prima** [H]: cada obra-prima rende a XP de 15 minutos de fila do tier da peça, e só as **8 primeiras do dia** rendem XP (as seguintes rendem a peça e a qualidade). Sem esse teto, a XP ativa viraria o atalho principal para o 100 e quebraria a pista. A obra-prima também consome insumo, o que já limita o número.
+**XP de obra-prima** [H]: cada obra-prima rende a XP de 15 minutos de fila do tier da peça, e só as **8 primeiras do dia** rendem XP (as seguintes rendem a peça e a qualidade). Sem esse teto, a XP ativa viraria o atalho principal para o 100 e quebraria a pista. A obra-prima também consome insumo, o que já limita o número. **Nota [a reconciliar com o 06]:** o [06](06-oficios-e-coleta.md), seção 2.4, limita as sessões ativas com a **Inspiração** (+1 por hora, teto igual ao teto de offline; obra-prima de 3 a 5). Com 24 de Inspiração por dia, o hardcore faz no máximo ~6 obras-primas de T3–T4, menos que as 8 do modelo. As datas do hardcore ficam, portanto, um pouco mais tardias que as da tabela 3.4, o que só aumenta a folga da pista.
 
 ### 3.4 Tabela nível → tempo acumulado (ofício mestre principal)
 
@@ -166,9 +167,11 @@ Exemplos: `XP(1) = 5`; `XP(10) = 5 × 10^2,75 = 5 × 562,3 = 2.812`; `XP(60) = 3
 |---|---|---|
 | ≥ 90 dias de jogo normal até o primeiro 100 de ofício mestre | Regular D116; casual D141; **até o hardcore leva 95 dias** | Cumpre, com folga de 5 dias no hardcore |
 | Nenhum muro sério antes do D7 | Regular chega ao 30 no D5,5; na semana 1, um nível a cada 6 a 15 h e no máximo 36 h sem desbloqueio (seção 11) | Cumpre |
-| Era de ~13 semanas | No fim da 1ª Era (D91), o regular está perto do 90 e o hardcore perto do 98; o primeiro 100 do servidor cai na 1ª semana da 2ª Era, junto com a primeira Travessia | Coerente |
+| Era de ~13 semanas | No fim da 1ª Era (D91), o regular está perto do 90 e o hardcore perto do 98; o primeiro 100 do servidor cai na 1ª semana da 2ª Era, junto com a primeira Fronteira | Coerente |
 
 **Leitura da bíblia** [H]: "jogo normal" foi lido como o perfil regular. Cumprimos também a leitura mais dura (o primeiro 100 do servidor só depois do D90), porque a vantagem do hardcore no ofício principal é de apenas ~22% sobre o regular: a fila é uma por atividade e roda no máximo 24 h por dia.
+
+**A virada do 30 mais cedo (pedido do módulo 12)** [H]: o [12](12-onboarding.md) pede o primeiro 30 entre o D2 e o D4. Se o diretor preferir isso ao D4–D7 deste módulo, basta um **bônus de calouro** de XP ×1,6 no primeiro ofício até ele chegar ao 30. No modelo, o 30 vai para o D4,3 (casual), D3,5 (regular) e D2,6 (hardcore), e o 100 adianta menos de 2 dias (regular: do D115,8 ao D113,9). Com ×2,0, o 30 cai no D3,5 / D2,8 / D2,1. A pista continua cumprida nos dois casos.
 
 **Botões de ajuste para o módulo 08:** o coeficiente `5` desloca todas as datas na mesma proporção (no modelo, com 5,5 no lugar de 5, o 100 do regular foi do D115,8 ao D127,4: +10,0%). O expoente `2,75` muda a forma: maior atrasa o fim mais que o começo. A eficiência do plano e a taxa ausente são as premissas de que as datas mais dependem; se o alfa medir eficiências diferentes, recalibrar o coeficiente, não as regras.
 
@@ -184,11 +187,11 @@ Exemplo: `XP_voc(40) = 4 × 40^2,75 = 4 × 25.449 = 101.795 XP`. Total até o 10
 
 A expedição é uma atividade de fila (ver o [01](01-loops.md), seção 2, L5). As regiões de expedição seguem os mesmos degraus dos tiers (abrem na vocação 1, 15, 30, 50, 70 e 85) e a mesma XP/h por degrau da tabela 2.1 [H, a reconciliar com o módulo 04]. O "encontro" faz o papel da ação, e a XP de cada encontro segue a regra da seção 2.1.
 
-**Por que 80%** [H]: a vocação recebe menos horas de fila que o ofício principal (30% da fila única no começo, 50% da 2ª fila, 70% a 75% da 3ª). Com a curva mais barata, ela anda perto do ofício principal, e o jogador chega à primeira Travessia (D91) com a vocação perto do 77 (casual), do 85 (regular) ou do 90 (hardcore), antes de contar a XP do cerco.
+**Por que 80%** [H]: a vocação recebe menos horas de fila que o ofício principal (30% da fila única no começo, 50% da 2ª fila, 70% a 75% da 3ª). Com a curva mais barata, ela anda perto do ofício principal, e o jogador chega à primeira Fronteira (D91) com a vocação perto do 77 (casual), do 85 (regular) ou do 90 (hardcore), antes de contar a XP do cerco.
 
 ### 4.2 Tabela nível → tempo acumulado (só expedição)
 
-O modelo conta só a XP da fila de expedição. O cerco e a Travessia também dão XP de vocação (módulos 04 e 10); por isso, estas datas são o limite mais lento.
+O modelo conta só a XP da fila de expedição. O cerco e a Fronteira também dão XP de vocação (módulos 04 e 10); por isso, estas datas são o limite mais lento.
 
 | Nível | XP para o próximo | XP acumulado | Horas de expedição a 100% | Casual | Regular | Hardcore |
 |---|---|---|---|---|---|---|
@@ -205,12 +208,12 @@ O modelo conta só a XP da fila de expedição. O cerco e a Travessia também d�
 
 ### 4.3 Depois do 100
 
-A bíblia reserva a Maestria aos ofícios mestres (seção 6.2). **Recomendação** [H, a reconciliar com o módulo 03]: no lançamento, a vocação para de subir no 100; a expedição segue rendendo peles, carnes e achados. O crescimento depois do 100 vem de equipamento e de build (módulo 03), e a Travessia dá a progressão sazonal. Se o módulo 03 quiser uma camada além do 100 para a vocação, ela deve seguir as regras da seção 9 (prestígio que muda uma regra), com mudança na bíblia.
+A bíblia reserva a Maestria aos ofícios mestres (seção 6.2). **Recomendação** [H, a reconciliar com o módulo 03]: no lançamento, a vocação para de subir no 100; a expedição segue rendendo peles, carnes e achados. O crescimento depois do 100 vem de equipamento e de build (módulo 03), e a Fronteira dá a progressão sazonal. Se o módulo 03 quiser uma camada além do 100 para a vocação, ela deve seguir as regras da seção 9 (prestígio que muda uma regra), com mudança na bíblia.
 
 - **Referência:** o personagem único com vocação fixa (decisão do checkpoint 2); a camada de temporada como prestígio coletivo (lei 12).
 - **Problema:** dar ritmo de combate parecido com o de ofício, sem que a vocação roube fila do ofício.
-- **Comportamento:** usar a 3ª fila para a vocação e chegar à Travessia pronto para ela.
-- **Risco:** a vocação "acabar" no D115 a D166 e o combate perder meta. Mitigação: a Travessia (a partir do D91) e o equipamento que se desgasta mantêm o combate com objetivo.
+- **Comportamento:** usar a 3ª fila para a vocação e chegar à Fronteira pronto para ela.
+- **Risco:** a vocação "acabar" no D115 a D166 e o combate perder meta. Mitigação: a Fronteira (a partir do D91) e o equipamento que se desgasta mantêm o combate com objetivo.
 
 ## 5. Ofício mestre e teto de aprendiz
 
@@ -232,7 +235,8 @@ Na prática, a primeira vaga é preenchida na virada do 30 (D4 a D7, conforme o 
 
 ### 5.3 Trocar de ofício mestre
 
-- **Uma troca por Era** [H]. O ofício que deixa de ser mestre fica **adormecido**: guarda o nível, a Maestria e os Selos, mas trabalha como aprendiz (T1 a T3) até voltar a ser mestre.
+- **Período de experiência** (proposta do [12](12-onboarding.md), que adotamos): uma troca grátis nos 7 dias seguintes à primeira declaração. O ofício trocado fica adormecido como abaixo, sem perder nada.
+- **Depois, uma troca por Era** [H]. O ofício que deixa de ser mestre fica **adormecido**: guarda o nível, a Maestria e os Selos, mas trabalha como aprendiz (T1 a T3) até voltar a ser mestre.
 - O novo mestre parte do nível que tiver (no mínimo 30) mais a reserva.
 - A conquista feita com o ofício antigo (fila, offline, taxa) não se perde: os requisitos contam o maior nível já alcançado.
 
@@ -263,7 +267,7 @@ A soma dos níveis dos 12 ofícios, de 12 (todos no 1) a **500** (dois mestres n
 
 1. O personagem tem de **1 a 3 filas em paralelo**.
 2. **Cada fila roda uma atividade diferente:** um ofício ou uma expedição. Duas filas nunca rodam o mesmo ofício.
-3. Filas **nunca estão à venda**. O Alvará e o Baú do Mascate não dão fila (zona vermelha).
+3. Filas **nunca estão à venda**. Os Coins e o Baú Misterioso não dão fila (zona vermelha).
 4. **Fila conquistada é permanente.** O Selo, a troca de ofício mestre ou qualquer reset não tiram fila, porque os requisitos contam o maior nível já alcançado.
 
 ### 6.2 Como se conquistam
@@ -282,14 +286,14 @@ Dentro de cada fila, as **etapas** encadeiam ações em sequência ("minerar 1.0
 
 | O que a fila ganha | Requisito | Regular |
 |---|---|---|
-| 2 etapas por fila; "repetir até N"; "entregar X% à encomenda ou à Obra"; **proteções ligadas:** pular a etapa sem insumo, usar a ferramenta reserva, recuar a expedição | Início | D0 |
+| 2 etapas por fila; "repetir até N"; "entregar X% à encomenda ou à Obra"; regras de destino do excedente do [07](07-economia.md) ("quando o estoque de X passar de N, doar à Obra" ou "vender ao NPC"); **proteções ligadas:** pular a etapa sem insumo, usar a ferramenta reserva, recuar a expedição | Início | D0 |
 | 3 etapas por fila | Nível total 150 | D21 |
 | 4 etapas por fila | Nível total 250 | D41,5 |
-| 5 etapas e regras condicionais ("se o estoque de X passar de N, troque para Y") | Selo grau I, opção "Oficina de mestre" (seção 9.2) | D131 |
+| 5 etapas e regras condicionais de produção ("se o estoque de X passar de N, troque a receita para Y") | Selo grau I, opção "Oficina de mestre" (seção 9.2) | D131 |
 
 **Princípio** [H]: **proteção é padrão; otimização se conquista.** As regras que evitam perda vêm ligadas no primeiro dia. As que otimizam se conquistam jogando.
 
-**Limite** [H]: nenhuma regra de fila compra ou vende no mercado. O mercado só recebe ordens postas pelo jogador, que ficam abertas enquanto ele está fora. É a política "leitura liberada, escrita humana" ([07](../01-pesquisa/07-tecnica-idles-online.md)).
+**Limite** [H]: nenhuma regra de fila compra ou vende nos balcões entre jogadores (Bolsa, Feira, Leilão, Câmbio). Esses balcões só recebem ordens postas pelo jogador, que ficam abertas enquanto ele está fora. A venda ao NPC e a doação à Obra podem ser regras de fila, porque não disputam preço com ninguém. É a política "leitura liberada, escrita humana" ([07](../01-pesquisa/07-tecnica-idles-online.md)).
 
 ### 6.4 As quatro perguntas
 
@@ -305,7 +309,7 @@ Dentro de cada fila, as **etapas** encadeiam ações em sequência ("minerar 1.0
 1. O relógio de ausência começa na última ação do jogador. Quando ele volta, o relógio zera.
 2. As filas produzem até o **teto de offline**. Depois, param (com o rabo da seção 7.3, se aprovado).
 3. Ordens de mercado, entregas já feitas, prazos de encomenda e o cerco não dependem do teto: as ordens ficam abertas, e o cerco usa a inscrição.
-4. A fila também para antes do teto se o insumo acabar e não houver etapa seguinte; o relatório de volta explica.
+4. A fila também para antes do teto se o insumo acabar e não houver etapa seguinte; o Relatório da volta explica.
 5. O cálculo é feito no servidor, por eventos, na hora em que alguém precisa do estado ([07](../01-pesquisa/07-tecnica-idles-online.md)).
 6. O teto nunca está à venda e é igual para todos no início: **24 h**.
 
@@ -341,7 +345,7 @@ Depois do teto, a fila não corta seco: **segue por mais 12 h a 25% da taxa ause
 - **Referência:** o Melvor, com 24 h simuladas na volta ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)); o KoL, que acumula até 5 dias de turnos ([D03](../01-pesquisa/fichas/D03-kingdom-of-loathing.md)). **Diferencia-se** do MWI, que cortou o offline de 16 para 10 h e vende cada hora extra até 72 h ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)).
 - **Problema:** o ausente precisa de folga para o fim de semana e a viagem, mas todo aumento de teto é política monetária: o IdleMMO previu uma "enxurrada de itens" ao ampliar o seu ([04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), seção 5.1).
 - **Comportamento:** pausas saudáveis sem medo; o teto maior como conquista de quem se envolveu com o jogo.
-- **Risco:** uma ausência de 72 h despeja de uma vez três dias de produção no mercado. Mitigação: o teto de emissão negociável é contado por dia de produção (o servidor sabe quando cada unidade nasceu), então 72 h fora valem três tetos diários, não um teto gigante [a reconciliar com o módulo 07].
+- **Risco:** uma ausência de 72 h despeja de uma vez três dias de produção no mercado. Mitigação: o [07](07-economia.md), seção 3, resolve com o teto como **portão de saída**: a cota enche 1/24 por hora, acumula até 3 dias (o mesmo que o offline máximo) e só é gasta quando o valor sai da conta. Quem volta de 72 h pode vender três dias de cota, não mais.
 
 ## 8. As duas taxas visíveis: ausente e ativa
 
@@ -389,6 +393,8 @@ O hardcore chega ao 95% depois do regular porque põe menos fila nos aprendizes 
 | **Garimpar** (coleta) / **Apurar** (transformação e criação) | 75% | Chance de achado ativo ×4 (coleta), ou chance de a peça da fila subir de qualidade ×4 (demais) | Quando o achado ou a qualidade valem mais que o volume |
 
 Regras [H]: um lance a cada 45 s; uma fila por vez na bancada ativa; **no máximo 2 h por dia por conta**; sem resposta em dois lances seguidos, a fila volta à taxa ausente sem perda. A chance-base dos achados e da qualidade é do módulo 06.
+
+**A reconciliar com o 06** (seção 13.3): o [06](06-oficios-e-coleta.md) criou o Faro e o lote fino, sessões pagas com Inspiração que fazem o papel do lance garimpar/apurar. A recomendação é tirar esse lance e deixar a bancada ativa só com firme e forçar. Os números de volume da seção 8.3 não mudam, porque já usam o lance forçar.
 
 ### 8.3 Quanto o ativo ganha em volume (exemplo calculado)
 
@@ -441,9 +447,9 @@ Na ficção, o mestre passa a oficina a um aprendiz e recomeça como oficial, ag
 |---|---|---|---|
 | I | Oficina | **Oficina de mestre:** a fila desse ofício ganha a 5ª etapa e regras condicionais | **Mão firme:** a obra-prima desse ofício ganha um passo de decisão a mais |
 | II | Ensino | **Aprendizes:** até 2 jogadores tomados como aprendizes ganham +50% de XP nesse ofício até o 30; o mestre ganha Mérito quando cada um chega ao 30 | **Conserto de mestre:** os consertos que você faz reduzem menos a durabilidade máxima da peça (um serviço que outros jogadores procuram) |
-| III | Assinatura | **Receita de assinatura:** uma variante exclusiva de receita T5 ou T6, escolhida entre duas | **Marca do mestre:** suas peças levam seu nome e o grau do Selo, visíveis na Feira e no Pregão |
+| III | Assinatura | **Receita de assinatura:** uma variante exclusiva de receita T5 ou T6, escolhida entre duas | **Marca do mestre:** suas peças levam seu nome e o grau do Selo, visíveis na Feira e no Leilão |
 | IV | Reforja | **Reforja sem perda:** reforjar uma peça não arrisca destruí-la (o exemplo do [conceito](../02-conceito.md)); o material da reforja continua sendo consumido | **Fusão:** fundir duas peças gastas numa só, com a durabilidade máxima restaurada; as duas peças somem (dreno) |
-| V | Lenda | **Nome na Obra:** seu nome gravado numa Obra concluída do Arraial (cosmético) | **Obra-prima nomeada:** suas obras-primas recebem nome e história, rastreados no livro-razão (cosmético) |
+| V | Lenda | **Nome na Obra:** seu nome gravado numa Obra concluída da Cidade (cosmético) | **Obra-prima nomeada:** suas obras-primas recebem nome e história, rastreados no livro-razão (cosmético) |
 
 ### 9.3 Ganho por ciclo e duração dos ciclos
 
@@ -480,7 +486,7 @@ Três jogadas possíveis [H]: **alternar** os dois ofícios mestres (um no Selo,
 
 1. **Maestria:** contínua, sem reset. Pontos e três técnicas por ciclo.
 2. **Selo de mestre:** o reset do ofício ao 30. **Cinco graus no lançamento;** proposta de um grau novo a cada 1 ou 2 Eras, sempre com uma regra nova (lei 2; insight 17 da [síntese](../01-pesquisa/00-sintese.md)). No regular, o grau V chega no D287, no começo da 4ª Era.
-3. **Era e Travessia:** o prestígio coletivo, sem reset pessoal, com fim digno a cada temporada (lei 12). Desenho no módulo 10.
+3. **Era e Fronteira:** o prestígio coletivo, sem reset pessoal, com fim digno a cada temporada (lei 12). Desenho no módulo 10.
 
 ### 9.6 As quatro perguntas
 
@@ -505,7 +511,7 @@ O piso P1 do [conceito](../02-conceito.md) pede que o pessoal possa crescer sem 
 | | | Ganho de volume do ativo | ≤ +6,5% do dia (cai para +2,1% no fim) |
 | | | Achados do ausente | ≤ 20% por hora contínua |
 | | | Venda a NPC | Preço decrescente por volume do dia (módulo 07) |
-| | | Emissão negociável por conta e dia | Teto do módulo 07, contado por dia de produção |
+| | | Emissão negociável por conta e dia | Teto linear do módulo 07 (portão de saída; cota acumula até 3 dias) |
 
 **O exemplo que resume a regra** [H]: um mestre no Selo V tem multiplicador ×32 e sobe do 30 ao 100 em 3 dias. Mas, no T6, a fila dele produz os mesmos 132 minérios por hora (no máximo) que a de qualquer outro mestre acima do 95. O exponencial acelera o nível, não a torneira.
 
@@ -519,16 +525,16 @@ A lei 1 do [02](../01-pesquisa/02-padroes-matriz-leis.md) pede calibrar a espera
 |---|---|---|---|---|---|
 | **1ª sessão** (0–15 min) | Um nível a cada 1 a 3 min (do 2 ao 7) | Primeira receita, primeira venda, primeiro lance | < 5 min | Nenhuma: o jogo dá a ferramenta T1 | Lance · nível 8 · 2ª fila |
 | **1ª hora** | Um nível a cada 10 a 20 min (até o ~9) | Receita do nível 9; primeira ordem na Bolsa; primeira encomenda aberta | ~40 min | Insumo ou ferramenta T1 melhor: minutos de renda | Venda · nível 10 · tier T2 |
-| **Resto do D1** | Um nível a cada 1 a 5 h (até o ~17) | T2 no 15; receitas no 12 e no 15; o primeiro relatório de volta | 10 h (a noite) | Ferramenta T2: ~meio dia de vendas | Obra-prima · receita · virada do 30 |
+| **Resto do D1** | Um nível a cada 1 a 5 h (até o ~17) | T2 no 15; receitas no 12 e no 15; o primeiro Relatório da volta | 10 h (a noite) | Ferramenta T2: ~meio dia de vendas | Obra-prima · receita · virada do 30 |
 | **D2 a D7** | Um nível a cada 6 a 15 h (17 → 30) | +5% de taxa (D2); **virada do 30 (D5,5):** ofício mestre, 2ª fila, T3, +5%; primeiro cerco (D7) | 36 h | Ferramenta T3: 1 a 2 dias de renda | Encomenda · nível · virada do 30 |
 | **D8 a D30** | Um nível a cada 8 a 34 h (30 → 60) | +5% (D7,5); 36 h de offline (D10); 2º mestre (D13,6); T4 (D18); 3ª etapa (D21); 48 h (D26,5); 3ª fila e +5% (D29,7) | 52 h | Ferramenta T4: ~3 dias de renda | Mercado · nível · T4 e 3ª fila |
 | **D31 a D91** (1ª Era) | Um nível a cada 32 a 59 h (60 → ~88) | 4ª etapa (D41,5); T5 (D46,5); +5% (D48); 60 h (D50); 72 h (D65); T6 (D77); fim da Era (D91) | 4 dias | Ferramenta T5: ~5 dias; T6: ~7 dias | Obra-prima T5 · nível · T6 e 72 h |
-| **D92 a D182** (2ª Era) | Um nível a cada 52 a 74 h até o 100 (D116); depois, um ponto de Maestria a cada ~0,8 dia | Travessia (D91); 100 e taxa 100% (D116); técnicas (D120, D123); Selo I (D131); volta ao T4, T5 e T6 (D136, D149, D163); 2º mestre no 100 (D140) | 4 dias | Insumos de obra-prima T6; doações à Obra | Obra-prima T6 · ponto de Maestria · Selo I |
-| **D183 em diante** | Ciclos de Selo de 66, 41, 28 e 22 dias | Selos II a V (D197, D238, D266, D287); Eras e Travessias | 4 dias | Insumos e equipamento de reposição | Mercado · volta ao T6 · próximo Selo |
+| **D92 a D182** (2ª Era) | Um nível a cada 52 a 74 h até o 100 (D116); depois, um ponto de Maestria a cada ~0,8 dia | Fronteira (D91); 100 e taxa 100% (D116); técnicas (D120, D123); Selo I (D131); volta ao T4, T5 e T6 (D136, D149, D163); 2º mestre no 100 (D140) | 4 dias | Insumos de obra-prima T6; doações à Obra | Obra-prima T6 · ponto de Maestria · Selo I |
+| **D183 em diante** | Ciclos de Selo de 66, 41, 28 e 22 dias | Selos II a V (D197, D238, D266, D287); Eras e Fronteiras | 4 dias | Insumos e equipamento de reposição | Mercado · volta ao T6 · próximo Selo |
 
 **Regra de cadência** [H], para os módulos 06 e 10 cumprirem, medida **no perfil casual** (o mais lento): no máximo uma noite sem algo novo no D1; no máximo 2 dias na primeira semana; no máximo 4 dias no primeiro mês; no máximo 7 dias depois. No modelo, o casual fica dentro disso: maior espera de 9 h no D1, 37 h na semana 1, 4 dias no mês 1 e 6 dias depois (as encomendas dele fecham a cada ~6 dias). O regular fica bem abaixo: 10 h, 36 h, 52 h e 4 dias.
 
-**O muro de tempo previsto** [H]: do 90 ao 100 (D88 a D116 no regular), um nível leva 2 a 3 dias. É a faixa mais lenta da curva. Ela é segurada pela meta de dias (o 100 abre a Maestria) e pela Travessia, que começa no D91. É um muro do tipo 2 da taxonomia do [02a](../01-pesquisa/02a-teoria-design-idle.md), seção 8: curto, só de espera, sem botão de pagar ao lado.
+**O muro de tempo previsto** [H]: do 90 ao 100 (D88 a D116 no regular), um nível leva 2 a 3 dias. É a faixa mais lenta da curva. Ela é segurada pela meta de dias (o 100 abre a Maestria) e pela Fronteira, que começa no D91. É um muro do tipo 2 da taxonomia do [02a](../01-pesquisa/02a-teoria-design-idle.md), seção 8: curto, só de espera, sem botão de pagar ao lado.
 
 **A compra que importa.** O preço em ouro é do módulo 07; este módulo fixa os **alvos de tempo** que a simulação deve acertar: a ferramenta do tier novo deve custar de meio dia (T2) a ~7 dias (T6) da renda líquida típica do jogador naquela faixa. E, para o desgaste sustentar a demanda, **uma ferramenta deve durar de 3 a 7 dias de fila contínua** [H, a reconciliar com o módulo 05].
 
@@ -538,10 +544,10 @@ A lei 1 do [02](../01-pesquisa/02-padroes-matriz-leis.md) pede calibrar a espera
 
 | Parâmetro | Valor [H] | Seção |
 |---|---|---|
-| Tempo por ação na coleta, T1 a T6 | 6, 9, 12, 16, 22 e 30 s | 2.1 |
+| Tempo por ação na coleta, T1 a T6 | 6, 9, 12, 16, 22 e 30 s (se prevalecerem os do 06: 8 a 30 s na coleta, 6 a 22,5 s na Colheita; a XP/h por tier não muda) | 2.1, 13.3 |
 | XP por ação na coleta | 10, 20, 36, 60, 110 e 190 | 2.1 |
 | XP/h por tier (todas as atividades) | 6.000, 8.000, 10.800, 13.500, 18.000 e 22.800 | 2.1 |
-| Níveis de desbloqueio dos tiers | 1, 15, 30, 50, 70 e 85 (ofício e vocação) | 2.1, 4.1 |
+| Níveis de desbloqueio dos tiers | 1, 15, 30, 50, 70 e 85 (ofício e vocação); recomendado adotar os do 06 (1, 15, 35, 55, 75, 90), com datas ~5% mais tardias | 2.1, 4.1, 13.3 |
 | Domínio | `1 + 0,01 × mín(n − n_tier, 10)` | 2.2 |
 | Produção da fila | `unidades/h = 3.600 ÷ t × dom × taxa`; 1 unidade por ação | 2.3 |
 | Unidades/h por fila | T1: 420 (70%, sem domínio) a 660 (100%, domínio máximo); T6: 84 a 132 | 2.1, 10 |
@@ -559,7 +565,7 @@ A lei 1 do [02](../01-pesquisa/02-padroes-matriz-leis.md) pede calibrar a espera
 | Selo | Mínimo `20 × 2^(g−1)`; `mult = 1 + acumulada ÷ 20`; volta ao 30; janelas sem T4, T5 e T6 da tabela 9.3 | 9.2, 9.3 |
 | Achados do ausente | `mín(h, 20)%` por hora contínua; ~2,9 por dia de fila contínua; presos à conta | [01](01-loops.md), L3 |
 | Bot | Teto físico do hardcore com eficiência de 100%: não produz mais por conta | 3.3 |
-| Pagante | Os mesmos números do perfil de atividade dele: o Alvará não muda nenhum número deste módulo | 1 |
+| Pagante | Os mesmos números do perfil de atividade dele: os Coins não mudam nenhum número deste módulo | 1 |
 
 **O que a simulação precisa testar primeiro** [H]: (1) a oferta de T4 a T6 com mestres chegando aos tiers nas datas da tabela 3.4 e saindo deles nas janelas do Selo; (2) a emissão total com a taxa ausente subindo de 70% a 100% ao longo da 1ª Era; (3) a sensibilidade das datas à eficiência do plano.
 
@@ -568,20 +574,20 @@ A lei 1 do [02](../01-pesquisa/02-padroes-matriz-leis.md) pede calibrar a espera
 | Módulo | O que este módulo fixa ou pede |
 |---|---|
 | **03 Personagem** | Vocação sem camada além do 100 no lançamento (4.3); os ajudantes não mexem na taxa ausente nem nas filas. |
-| **04 Combate** | Expedição como atividade de fila; regiões nos mesmos degraus dos tiers; XP de vocação do cerco e da Travessia somada à da fila. |
-| **05 Itens** | A ferramenta não acelera: o tier dá o ritmo nominal, tier abaixo −20% por tier, sem ferramenta −50%; a qualidade muda durabilidade e achado; alvo de 3 a 7 dias de fila por ferramenta; técnica Mão leve (−15% de desgaste). |
+| **04 Combate** | Expedição como atividade de fila; regiões nos mesmos degraus dos tiers; XP de vocação do cerco e da Fronteira somada à da fila. |
+| **05 Itens** | A ferramenta é portão de tier (regra do 05) e não acelera (conflito na seção 13.3); a qualidade muda durabilidade e achado; alvo de 3 a 7 dias de fila por ferramenta (o 05 dá 84 h à Comum e 109 h à Obra-prima, dentro do alvo); técnica Mão leve (−15% de desgaste). |
 | **06 Ofícios** | XP/h igual por tier (a XP por ação segue o tempo da ação); equipamento pode ter ações de 60 a 300 s; receitas a cada 3 níveis até o 30 e a cada 5 depois; menu de regras do Selo adaptado a cada ofício; XP da obra-prima. |
-| **07 Economia** | Teto de emissão contado por dia de produção; destino do excedente; janelas do Selo como choque de oferta de T6; alvos de preço de ferramenta em dias de renda (seção 11). |
+| **07 Economia** | Na fórmula `teto(n, m) = 600 + 30 × n + 50 × m` do 07: **`m` = soma dos graus do Selo nos dois ofícios mestres (0 a 10 no lançamento: 5 graus × 2)**, e **`n` deve usar o maior nível já alcançado**, senão o Selo (que volta o ofício ao 30) cortaria o teto de quem toma prestígio. Também: destino do excedente; janelas do Selo como choque de oferta de T6; alvos de preço de ferramenta em dias de renda (seção 11). |
 | **09 Social** | Mérito como requisito de progressão (300, 1.000 e 2.000); a opção Aprendizes do Selo II. |
-| **10 Live-ops** | Um grau novo de Selo a cada 1 ou 2 Eras; Travessia em trilha própria, sem consumir filas. |
-| **11 Monetização** | Zona vermelha deste módulo: filas, etapas e regras, teto de offline, taxa ausente, bancada ativa, XP, Maestria e Selo. Nada disso entra no Alvará, no Baú ou no passe. |
+| **10 Live-ops** | Um grau novo de Selo a cada 1 ou 2 Eras; Fronteira em trilha própria, sem consumir filas. |
+| **11 Monetização** | Zona vermelha deste módulo: filas, etapas e regras, teto de offline, taxa ausente, bancada ativa, XP, Maestria e Selo. Nada disso se compra com Coins nem entra no Baú Misterioso ou no passe. |
 | **12 Onboarding** | Nível 5 em ~4 min e 7 em ~14 min na primeira sessão; a virada do 30 entre o D4 e o D7. |
 
 ## 13. Propostas de mudança na bíblia e pontos a reconciliar
 
 ### 13.1 Propostas [proposta de mudança na bíblia]
 
-1. **Glossário:** incluir **taxa ausente**, **taxa ativa**, **bancada ativa**, **lance**, **achados** (ativos e do ausente), **etapas** e **regras de fila**, **nível total**, **reserva do aprendiz**, **pontos de Maestria**, **grau do Selo** e **relatório de volta**.
+1. **Glossário:** incluir **taxa ausente**, **taxa ativa**, **bancada ativa**, **lance**, **achados** (ativos e do ausente), **etapas** e **regras de fila**, **nível total**, **reserva do aprendiz**, **pontos de Maestria**, **grau do Selo** (o **Relatório da volta** já entrou no glossário na revisão de 2026-11-11).
 2. **Definição de Fila:** "De 1 a 3 filas paralelas por personagem; cada uma roda uma atividade diferente (nunca duas no mesmo ofício); dentro de cada fila, etapas em sequência."
 3. **6.1, offline:** acrescentar o rabo de 12 h a 25% da taxa ausente depois do teto.
 4. **6.1, ação básica:** "3 a 30 s por unidade" vale para coleta, transformação e consumíveis; equipamento pode levar de 60 a 300 s por peça (a confirmar no módulo 06).
@@ -596,8 +602,23 @@ A lei 1 do [02](../01-pesquisa/02-padroes-matriz-leis.md) pede calibrar a espera
 | As duas taxas do pilar 4 e do P12 contra a paridade online/offline recomendada no estudo técnico ([07](../01-pesquisa/07-tecnica-idles-online.md)). | O cálculo é o mesmo online e offline; a taxa só muda na bancada ativa, que é um modo explícito, com decisões e teto diário ([01](01-loops.md), L1 e L2). |
 | O conceito diz que o Selo "reseta o ofício", e a pesquisa alerta para o medo do "superprestígio" que reduz o poder ([02a](../01-pesquisa/02a-teoria-design-idle.md), seção 4.2). | O reset vai ao 30, não ao 1; o jogador vê a projeção antes; ficar no 100 continua valendo. |
 | O [02a](../01-pesquisa/02a-teoria-design-idle.md) prefere rendimento decrescente a corte seco; a bíblia fixa tetos de 24 h e 72 h. | Mantidos os tetos; proposto o rabo de 12 h a 25% (seção 7.3). |
-| O teto de emissão é "por conta e por dia" (bíblia 6.6), mas uma ausência de 72 h entrega três dias de produção de uma vez. | Contar o teto por dia de produção (seção 7.4), a reconciliar com o módulo 07. |
+| O teto de emissão é "por conta e por dia" (bíblia 6.6), mas uma ausência de 72 h entrega três dias de produção de uma vez. | Resolvido pelo 07: portão de saída com cota que acumula até 3 dias (seção 7.4). |
 | O exemplo do conceito ("reforjar sem perda") reduz a destruição de itens, que é dreno (P3). | Mantido como opção do grau IV, com material consumido, ao lado de uma opção que é dreno (Fusão); o módulo 08 mede o efeito. |
+
+### 13.3 Reconciliação com os módulos escritos em paralelo
+
+Os módulos 05, 06, 07 e 12 foram escritos ao mesmo tempo que este. As divergências abaixo foram medidas no modelo de bolso (datas do primeiro 100 de ofício mestre) e ficam para a decisão do diretor.
+
+| Tema | Este módulo | Outro módulo | Efeito medido | Recomendação |
+|---|---|---|---|---|
+| **Velocidade da fila** | Domínio até +10%; a ferramenta não acelera; fila ≤ 1,10 × o nominal | [05](05-itens.md) 4.5 e [06](06-oficios-e-coleta.md) 2.2: domínio até +30% sobre o nível da receita; ferramenta +10% por tier acima (até +20%) e +0% a +12% pela qualidade; fila até 1,72 × o nominal | Com os tiers e o domínio do 06, sem a ferramenta acelerar: casual D149, regular D122, hardcore D100 (pista cumprida). Somando a ferramenta (bônus de 4%, 12% e 24% por perfil): casual D143, regular D109, **hardcore D81, abaixo do mínimo de 90** | **A ferramenta não acelera:** fica como portão de tier, durabilidade e achado. A velocidade comprada no mercado vira vantagem do rico em XP e em volume ao mesmo tempo (lei 14 e lei 6). Se o diretor mantiver a velocidade por ferramenta, o coeficiente da curva sobe para ~5,6 (o hardcore volta ao ~D90 e o casual vai ao ~D160), e a simulação precisa considerar filas até 1,72 × o nominal |
+| **Níveis dos tiers** | 1, 15, 30, 50, 70, 85; o aprendiz faz T1 a T3 | [06](06-oficios-e-coleta.md) 2.1: 1, 15, 35, 55, 75, 90 (+2 ou +5 por peça); o aprendiz faz T1 e T2 | Datas cerca de 5% mais tardias (linha acima); a interdependência fica mais forte, porque o T3 já é de mestre | **Adotar os níveis do 06**, que é o dono das receitas. As tabelas 2.1 e 3.4 trocam 30, 50, 70 e 85 por 35, 55, 75 e 90; a curva de XP não muda; os marcos que citam o 30 (teto de aprendiz) ficam |
+| **Sessões ativas** | Bancada ativa com lances firme, forçar e garimpar/apurar, até 2 h/dia | [06](06-oficios-e-coleta.md) 2.4 e 6.4: Faro (coleta), obra-prima, obra-prima de transformação e lote fino, pagos com **Inspiração** (+1 por hora) | Com 24 de Inspiração por dia, o hardcore faz ~6 obras-primas, não 8: datas um pouco mais tardias | **Unificar:** o lance garimpar/apurar sai, porque o Faro e o lote fino fazem esse papel; a bancada ativa fica com firme e forçar e continua sendo a "taxa ativa" visível que o P12 exige. A proposta de glossário "achados ativos" passa a ser o que o Faro rende |
+| **Quando o mestre ganha as habilidades** | O ofício vira mestre no 30 | [06](06-oficios-e-coleta.md) 2.1: obra-prima, Faro e lote fino "abrem no nível 10 do ofício mestre"; [12](12-onboarding.md): declaração no 30 | — | Esclarecer no 06 se "nível 10" quer dizer 10 níveis depois da declaração (o 40). Recomendação: abrir na declaração (30), para a virada do 30 entregar a primeira obra-prima |
+| **Teto de emissão** | Segue o 07 | [06](06-oficios-e-coleta.md) 2.3: "o que passa do teto nasce preso"; [07](07-economia.md) 3.2: portão de saída, nada nasce preso | — | Seguir o 07, que é o dono do teto; o 06 precisa ser alinhado |
+| **As duas taxas na tela** | Taxa ausente de 70% a 100%; a aba aberta não muda nada; o ativo é a bancada ativa | [12](12-onboarding.md) 5.1: "com você aqui: 10 por minuto; fora: 8 por minuto"; volta: "fora, você rendeu 80% do ritmo ativo" | — | Ajustar o texto do 12: "Na bancada: 10 por minuto. No piloto automático: 7 por minuto (ritmo da oficina: 70%, sobe jogando)". Estar presente sem decidir não muda a taxa (L1 do [01](01-loops.md)) |
+| **Primeiro 30** | D4 a D7 | [12](12-onboarding.md): D2 a D4 | Bônus de calouro ×1,6 leva o 30 a D2,6–D4,3, com o 100 adiantando menos de 2 dias | Decisão do diretor (seção 3.5). Recomendação: adotar o bônus ×1,6 só se o alfa mostrar evasão antes do 30 |
+| **Troca de ofício mestre** | Uma por Era | [12](12-onboarding.md): troca grátis nos 7 dias seguintes à primeira declaração | — | Adotado (seção 5.3) |
 
 ## Como isso pode dar errado
 
