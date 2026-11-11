@@ -290,3 +290,72 @@ Três jeitos de resolver os drops do ausente:
   - **Resolve** a raspagem descontrolada e dá aos jogadores-economistas o que eles querem.
   - **Incentiva** ferramentas comunitárias e transparência, que aumentam a retenção do perfil "economista".
   - **Risco:** ferramentas de leitura muito boas viram vantagem de quem as usa (informação é poder no mercado), e a fronteira entre "mostrar" e "decidir por você" é móvel; as regras precisam ser vivas, como as da Jagex.
+
+## 6. Escala
+
+### 6.1 Quanto os idle MMOs realmente rodam
+
+| Jogo | Escala divulgada | Equipe | Infraestrutura conhecida |
+|---|---|---|---|
+| IdleMMO | "Jogando agora: 6.391" no contador do site (6/nov/2026) | 3 desenvolvedores | Um servidor em Londres, com latência admitida para Índia e Sudeste Asiático ([C04, §9](fichas/C04-idlemmo.md)) |
+| Milky Way Idle | Pico de 3.310 simultâneos no Steam (mai/2025); média de 781 (out/2026) | 2 pessoas | Servidor único e sem reset ([C01, §9 e §10](fichas/C01-milky-way-idle.md)) |
+| Idle Clans | Pico de 1.053 no Steam (jun/2026); ~8,9 mil MAU no Android (estimativa de terceiro) | Desenvolvedor solo / Isam Games Oy | Cliente em Unity ([C02, §7.3 e §9](fichas/C02-idle-clans.md)) |
+| SimpleMMO | Mais de 1 milhão de registrados (jul/2023); um jogador relatou nunca ter visto mais de ~500 online (2022) | Na prática, 1 pessoa | Não divulgada ([C05, §9](fichas/C05-simplemmo.md)) |
+| EVE Online | Recorde de 65.303 simultâneos num só servidor, o Tranquility (5/mai/2013) | Estúdio grande | Servidor único para o mundo inteiro ([F01, §9](fichas/F01-eve-online.md)) |
+| Old School RuneScape | Pico de 240.756 simultâneos (ago/2025) | ~700 funcionários na Jagex | Mundos de até 2.000 jogadores (membros) ou 1.400 (gratuitos) ([F03, §9](fichas/F03-runescape-e-osrs.md); [OSRS Wiki, World 400](https://oldschool.runescape.wiki/w/World_400)) |
+| Lichess (xadrez, navegador) | Mais de 12 bilhões de partidas guardadas | Organização sem fins lucrativos | Scala 3 sobre um Play 2.8 modificado, MongoDB, e um servidor de WebSocket separado (lila-ws) que conversa com o principal via Redis ([GitHub do lila](https://github.com/lichess-org/lila)) |
+
+- **Stacks dos idle MMOs: não encontradas.** Procurei a tecnologia de servidor do IdleMMO, do SimpleMMO e do Idle Clans (blogs, páginas de produto, busca geral) e não achei nada publicado além do cliente Unity do Idle Clans.
+- [F] Na página de discussão da wiki do OSRS sobre mundos, um comentário sugere que alguns mundos gratuitos (talvez todos) aceitam só 1.000 jogadores ([OSRS Wiki, discussão](https://oldschool.runescape.wiki/w/Talk:World)); trate os limites como aproximados. [H] Pela conta simples, o pico de 2025 pedia mais de 120 mundos cheios.
+- [H] **Leitura:** os líderes do nosso subgênero rodam com 1 a 3 pessoas e um servidor, e a escala deles se mede em milhares de simultâneos, não em centenas de milhares. Num idle, cada jogador gera poucos comandos por minuto, e a carga pesada aparece em três lugares: mercado, eventos sincronizados (chefe mundial, início de temporada, reset diário) e liquidações em massa. A capacidade real precisa ser medida com teste de carga desses três cenários, não estimada.
+
+### 6.2 Servidor por tique ou por eventos
+
+- [F] **O tique do OSRS.** O tique de 0,6 segundo é a unidade fundamental de tempo do jogo, e fica mais longo em mundos cheios: de 0,616 a 0,618 s no World 302, contra 0,606 a 0,611 s em mundos mais vazios ([OSRS Wiki, Game tick](https://oldschool.runescape.wiki/w/Game_tick)).
+- [F] **A dilatação do tempo do EVE.** Em 2011, a CCP apresentou a *Time Dilation* para lidar com batalhas de frota enormes sem travar o servidor ([CCP Veritas, 22/abr/2011](https://eveonline.com/article/introducing-time-dilation-tidi)). Ela age por nó (a máquina que hospeda aquela parte do espaço), desacelera o tempo até 10% (um segundo de jogo vira dez de relógio) e não afeta o horário do servidor usado por treino de skills e indústria ([EVE University](https://wiki.eveuniversity.org/Time_Dilation)). [H] Repare na separação: o combate roda em tique e pode desacelerar; os cronômetros de longo prazo (o "idle" do EVE) correm pelo relógio do servidor e não sofrem com a carga.
+- [H] **Para um idle, o padrão é por eventos.** Um servidor por tique gasta CPU com cada personagem a cada tique, mesmo quando nada muda. O idle pede o contrário:
+  - **liquidação sob demanda:** o estado de cada personagem só é calculado quando alguém precisa dele (o próprio jogador abre o jogo, outro jogador interage, um ranking fecha), pelo modelo híbrido da seção 1.1;
+  - **eventos com prazo agendados:** fim de leilão, expiração de ordem, aparição de chefe, fim de temporada e o aviso "sua fila terminou" entram numa agenda de jobs;
+  - **tique só onde há tempo real:** janelas ativas (raid, chefe mundial, PvP síncrono) rodam num processo ou "sala" próprio, com tique, e devolvem o resultado ao ledger no fim.
+- [H] O "servidor que nunca para" do Idlescape (1.1) é o modelo de tique aplicado a um idle, e mostra o custo: cada reinício exige refazer as sessões de todo mundo.
+- [H] **As quatro perguntas, para o servidor por eventos:**
+  - **Inspira-se** na separação do EVE (combate em tique, cronômetros no relógio do servidor) e se diferencia do Idlescape.
+  - **Resolve** o custo proporcional a jogadores ausentes e a fragilidade de reinícios.
+  - **Incentiva** a pensar cada sistema como "o que muda, e quando".
+  - **Risco:** o gatilho que ninguém dispara. Se o ranking semanal depende de liquidar todos os personagens, um job precisa fazê-lo; esquecer isso produz rankings com dados velhos.
+
+### 6.3 Filas de jobs para a liquidação e os prazos
+
+- [F] O PostgreSQL serve de fila com `SKIP LOCKED` (5.2). O cuidado está nas transações longas: em 2015, Brandur Leach mostrou que uma única transação aberta impede a limpeza de linhas mortas; no teste, a limpeza manual achou 247.311 versões mortas que não podiam ser removidas, o tempo para travar um job ficou até 15 vezes maior e, a ~50 jobs por segundo, a fila acumulou 60 mil jobs em uma hora. Mitigações: matar transações longas, travar jobs com predicados mais específicos, travar em lote, ou manter só uma tabela de "pendentes" transacional e mover os jobs em lote para uma fila em Redis ([brandur.org, 18/mai/2015](https://brandur.org/postgres-queues)).
+- [H] **Quatro tipos de job, quatro cuidados:**
+  1. **Liquidação no login:** síncrona e rápida (milissegundos com o modelo híbrido). Não deve depender de fila.
+  2. **Prazos** (leilão, expiração, chefe): agendados pelo horário do servidor e idempotentes, porque podem rodar duas vezes depois de uma queda; um processo "completador", como o de Brandur para as chaves de idempotência (2.4), varre o que ficou para trás.
+  3. **Avisos** ("sua fila termina às 14h"): agendados para o horário previsto e reagendados quando o plano muda; se o aviso sair errado, o jogador perde a confiança no aviso.
+  4. **Relatórios da economia:** fora do horário de pico, numa réplica de leitura.
+- [H] **O "estouro da manhã".** Reset diário no mesmo minuto para todo mundo produz um pico de logins, liquidações e avisos. Espalhar o horário por conta (ou por fuso) e acrescentar variação aleatória às novas tentativas (2.4) achata o pico.
+
+### 6.4 WebSocket e cache
+
+- [F] **WebSocket em vários nós.** Com o Socket.IO, o *long-polling* exige "sessões grudadas" (cada cliente sempre no mesmo nó), mas WebSocket puro não, porque a conexão é única e persistente; para mandar uma mensagem a todos ou a uma sala com vários nós, é preciso um adaptador (por exemplo, Redis) que repasse as mensagens entre servidores ([documentação do Socket.IO](https://socket.io/docs/v4/using-multiple-nodes/)).
+- [F] O Lichess separou o servidor de WebSocket (lila-ws) da aplicação principal, e os dois conversam via Redis ([GitHub do lila](https://github.com/lichess-org/lila)).
+- [H] **O padrão para nós:** um "portão" de conexões (muitas conexões, nenhuma regra de jogo) separado do serviço de jogo e economia (regras e transações), com publicação de eventos entre eles (ordem executada, fila terminou, mensagem de chat). No idle, o WebSocket serve a avisos e chat, não à jogabilidade; se cair, o jogo continua com consultas periódicas.
+- [H] **Cache só para leitura:** catálogo de itens, rankings, perfis públicos e o retrato do livro de ofertas de cada item. Saldo e posse nunca vêm do cache numa escrita (5.1, item 6). [F] O Milky Way Idle publica o mercado em JSON de hora em hora, com atraso e aleatoriedade "para evitar manipulação" ([C01, §6.2](fichas/C01-milky-way-idle.md)); [H] o retrato público com atraso faz as vezes de cache e de defesa.
+
+### 6.5 Quando o PostgreSQL vira gargalo
+
+- [F] **Conexões.** A documentação recomenda limitar conexões e usar um pool ([transaction-iso](https://www.postgresql.org/docs/current/transaction-iso.html)). No PgBouncer, o modo "por transação" empresta a conexão só durante a transação, mas não funciona com variáveis de sessão (SET/RESET), LISTEN, cursores WITH HOLD, PREPARE/DEALLOCATE em SQL, travas consultivas de sessão e LOAD; instruções preparadas no nível do protocolo funcionam se `max_prepared_statements` for maior que zero ([PgBouncer](https://www.pgbouncer.org/features.html)). [H] Isso afeta o desenho: travas consultivas de sessão (5.2) não combinam com esse modo; use as de transação.
+- [F] **Linhas quentes.** Escritas concorrentes na mesma entidade, com trava por linha, degradam o desempenho e viram gargalo sob carga ([Azure, Event Sourcing](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)). [H] No jogo, as linhas quentes são contadores globais: o estoque comum de um evento do servidor (como o do Idle Clans, [C02, §4](fichas/C02-idle-clans.md)), a vida de um chefe mundial, o cofre de uma guilda grande, o pote de buffs coletivos. Saídas: dividir o contador em N linhas somadas na leitura, ou acumular lançamentos e consolidar de tempos em tempos.
+- [H] **O ledger só cresce.** Conta ilustrativa: 10 mil contas ativas, uma liquidação por hora, 20 lançamentos por liquidação = 4,8 milhões de linhas por dia, cerca de 1,75 bilhão por ano. Particionar o ledger por tempo e arquivar partições antigas é decisão de dia 1, não de ano 2.
+- [H] **Ordem de escalada,** do mais barato ao mais caro: índices e planos de consulta → pool de conexões → réplica de leitura para rankings, histórico e relatórios → particionamento do ledger → um processo em memória por mercado, com um único escritor por item e gravação no PostgreSQL antes de confirmar → divisão por conta (*sharding*), só em escala muito maior.
+
+### 6.6 Docker Swarm numa VPS
+
+- [F] **Quórum.** Um swarm com N gerentes tolera (N − 1)/2 falhas permanentes (5 gerentes toleram 2); número par não ajuda (4 toleram o mesmo que 3). Sem quórum, não dá para criar, mover ou atualizar tarefas, mas as que já rodam continuam. A Docker recomenda espalhar os gerentes por pelo menos três zonas e fazer backup do estado do swarm ([documentação do Docker](https://docs.docker.com/engine/swarm/admin_guide/)).
+- [F] **Futuro do Swarm.** A Mirantis, dona do produto, promete suporte integral ao Swarm até pelo menos 2030, como parte do Mirantis Kubernetes Engine 3 ([Mirantis](https://www.mirantis.com/blog/mirantis-guarantees-long-term-support-for-swarm/)).
+- [F] **Ataques.** Os servidores do Albion sofreram DDoS logo depois de ondas de banimento de RMT, com cerca de um dia de instabilidade em jul/2025 ([F02, §10](fichas/F02-albion-online.md)).
+- [H] **Implicações para a infraestrutura do dono:**
+  - **Uma VPS não tem alta disponibilidade.** O Swarm num nó só dá ergonomia (stack declarativa, atualização gradual com checagem de saúde, segredos, rede interna), não tolerância a falha. Alta disponibilidade de verdade pede 3 nós em datacenters diferentes.
+  - **O banco não pode "passear".** O PostgreSQL deve ficar fixo num nó com volume local (restrição de posicionamento), com réplica em outra máquina e backup contínuo fora dela (4.5); o Swarm não deve reagendá-lo sozinho para outro nó sem os dados.
+  - **WebSocket puro dispensa sessão grudada** (6.4), o que simplifica o balanceamento interno.
+  - **Proteção contra DDoS na borda** (um serviço de proxy na frente da VPS) e plano de resposta antes da primeira onda de banimentos, porque o caso do Albion mostra que ela atrai retaliação.
+  - **Horizonte:** o suporte da Mirantis vai até 2030, e um MMO bem-sucedido vive mais que isso. Containers e configuração declarativa mantêm aberta a migração futura para Kubernetes.
