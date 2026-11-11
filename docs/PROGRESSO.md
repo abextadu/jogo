@@ -5,15 +5,25 @@
 
 ## Fase atual
 
-**Fase 2 — Conceito: entregue.** 🛑 **Checkpoint da Fase 2 aguardando o Gabriel:** escolher o conceito e responder as 5 decisões de [`02-conceito.md`](02-conceito.md), seção 8. Recomendação do estúdio: Cidade dos Ofícios como núcleo, com a Fronteira como temporada.
+**Fase 3 — GDD + simulação da economia: em andamento.** O checkpoint da Fase 2 foi aprovado pelo Gabriel em 2026-11-11 (as 5 recomendações).
+
+### Decisões do checkpoint da Fase 2 (2026-11-11, aprovadas como recomendado)
+
+| # | Decisão |
+|---|---|
+| 1 | Conceito: **Cidade dos Ofícios** como núcleo, **Fronteira** como camada de temporada a partir da 2ª temporada, **Casas da Maré** como expansão futura. |
+| 2 | Identidade do mundo: fantasia original com **raízes brasileiras** (rios, mata, sertão, litoral, folclore reinterpretado, sem caricatura). |
+| 3 | O token compra **conforto e cosmético** (assinatura de conveniência, visuais, passe da temporada); nunca renda, XP ou poder. |
+| 4 | **Um personagem por conta**, com companheiros NPC contratados e não negociáveis. |
+| 5 | **Sem PvP direto no lançamento;** competição assíncrona (cercos, rankings de guilda, corrida da Fronteira). |
 
 A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11-11, com ajustes (tabela abaixo).
 
 | Fase | Entregável | Status |
 |---|---|---|
 | 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
-| 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Entregue · 🛑 checkpoint pendente |
-| 3. GDD + simulação da economia | `docs/03-gdd/` | ⚪ Não iniciada |
+| 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Concluída · checkpoint aprovado |
+| 3. GDD + simulação da economia | `docs/03-gdd/` | 🟡 Em andamento |
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
 

@@ -221,6 +221,8 @@ O que isso entrega frente à concorrência: um idle MMO em que o servidor é uma
 
 ## 8. 🛑 Checkpoint da Fase 2: decisões para o Gabriel
 
+> **Decidido em 2026-11-11:** o Gabriel aprovou as 5 recomendações (opção A em todas).
+
 **1. Qual conceito?**
 - **(A) Cidade dos Ofícios como núcleo, com a Fronteira como temporada a partir da segunda temporada, e as Casas da Maré como expansão futura. ← recomendado**
 - (B) Cidade dos Ofícios sozinha, sem temporadas.
