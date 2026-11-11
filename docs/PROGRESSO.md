@@ -5,12 +5,12 @@
 
 ## Fase atual
 
-**Fase 1 — Pesquisa profunda: concluída.** 🛑 **Checkpoint da Fase 1 decidido pelo Gabriel em 2026-11-11, com ajustes** (tabela abaixo). Antes da Fase 2: confirmar a leitura de "sem limite de tempo de conta" e a salvaguarda das caixas pagas.
+**Fase 2 — Conceito: em andamento.** A Fase 1 foi concluída e o checkpoint foi decidido pelo Gabriel em 2026-11-11, com ajustes (tabela abaixo).
 
 | Fase | Entregável | Status |
 |---|---|---|
-| 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · 🛑 checkpoint pendente |
-| 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ⚪ Não iniciada |
+| 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
+| 2. Conceito (3 conceitos) | `docs/02-conceito.md` | 🟡 Em andamento |
 | 3. GDD + simulação da economia | `docs/03-gdd/` | ⚪ Não iniciada |
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
@@ -21,15 +21,13 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 
 | # | Decisão | Recomendação do estúdio | **Decisão do Gabriel** |
 |---|---|---|---|
-| 1 | Até onde vai o dinheiro real | (A) Dinheiro só entra; token revendável por ouro uma vez | **(B) ajustada:** token oficial + bazar oficial de contas, sem limite de tempo de conta; **tokens e ouro transferíveis livremente entre jogadores; RMT informal deixado em aberto** (o estúdio não intermedia nem proíbe) |
-| 2 | Aleatoriedade paga | (A) Nenhuma | **(C) ajustada:** caixas pagas (adultos), compráveis com token **ou** ouro, no estilo "mystic bag" |
+| 1 | Até onde vai o dinheiro real | (A) Dinheiro só entra; token revendável por ouro uma vez | **(B) ajustada:** token oficial + **bazar oficial de contas desde o lançamento**; **tokens e ouro transferíveis livremente entre jogadores; RMT informal deixado em aberto** (o estúdio não intermedia nem proíbe) |
+| 2 | Aleatoriedade paga | (A) Nenhuma | **(C) ajustada:** caixas compráveis **com token** e **com ouro no mercado**; o conteúdo é sempre **item**. Referência citada: RubinOT. Salvaguarda S1 (conteúdo preso à conta) não adotada; risco jurídico assumido pelo Gabriel |
 | 3 | Para quem é o jogo | (A) Todos, com modo protegido | **(B):** jogo inteiro só para maiores de 18 |
 | 4 | Onde e como lançamos | (A) Brasil primeiro, bilíngue, PWA, Pix | **(A)** |
 | 5 | Quando trazer advogado | (A) Agora, em paralelo à Fase 2 | **(C):** seguir sem parecer jurídico e ajustar depois |
 
-**Pendências antes da Fase 2:**
-- Confirmar a leitura de "sem limite de tempo de conta": bazar de contas desde o lançamento (sem esperar 18–24 meses) e/ou nenhuma idade mínima de conta para negociar.
-- Escolher a salvaguarda das caixas pagas: conteúdo preso à conta, ou caixa só com ouro, ou manter como decidido.
+**Confirmações (2026-11-11):** "sem limite de tempo de conta" = bazar de contas desde o lançamento. Caixas compráveis com token e com ouro no mercado, conteúdo em itens, sem a salvaguarda S1. As salvaguardas S2–S5 (carência do token por meio de pagamento, taxa em ouro nas transferências, termos de uso sobre o RMT informal, probabilidades publicadas e teto de gasto) entram como padrão de desenho na Fase 2, sujeitas ao checkpoint.
 
 ## Entregáveis da Fase 1
 
@@ -63,7 +61,7 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 | 2026-11-06 | Ampliação da lista de jogos além do mínimo pedido (Egg Inc., Shop Titans, GW2, Black Desert, Throne and Liberty/Lost Ark, Entropia, Axie/Web3, New World, Banana/Bongo Cat, radar 2023–2026). | Claude |
 | 2026-11-07 | Fichas secundárias pesquisadas com o Sonnet; o resto no Opus. | Gabriel |
 | 2026-11-11 | RMT: token oficial + bazar oficial de contas; tokens e ouro transferíveis livremente; RMT informal em aberto. | Gabriel |
-| 2026-11-11 | Caixas pagas no estilo "mystic bag", compráveis com token ou ouro. | Gabriel |
+| 2026-11-11 | Caixas compráveis com token e com ouro no mercado, conteúdo sempre em itens (referência: RubinOT). Bazar de contas desde o lançamento. | Gabriel |
 | 2026-11-11 | Jogo inteiro para maiores de 18. | Gabriel |
 | 2026-11-11 | Lançamento: Brasil primeiro, bilíngue (PT-BR e inglês), servidor no Brasil, Pix, PWA; Steam e lojas depois. | Gabriel |
 | 2026-11-11 | Seguir sem parecer jurídico por enquanto; ajustar depois. | Gabriel |

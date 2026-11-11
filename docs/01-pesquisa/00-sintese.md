@@ -131,8 +131,8 @@ Os três conceitos da Fase 2 vão variar na fantasia, na estrutura e no tipo de 
 
 | # | Decisão |
 |---|---|
-| 1 | **(B) ajustada.** Token oficial e bazar oficial de contas, sem limite de tempo de conta. Tokens e ouro transferíveis livremente entre jogadores; o RMT informal fica em aberto (o estúdio não intermedia nem proíbe). |
-| 2 | **(C) ajustada.** Caixas pagas no estilo "mystic bag", compráveis com token ou com ouro. |
+| 1 | **(B) ajustada.** Token oficial e bazar oficial de contas desde o lançamento. Tokens e ouro transferíveis livremente entre jogadores; o RMT informal fica em aberto (o estúdio não intermedia nem proíbe). |
+| 2 | **(C) ajustada.** Caixas compráveis com token e com ouro no mercado; o conteúdo é sempre item (referência citada: RubinOT). A salvaguarda S1 abaixo não foi adotada: risco assumido pelo Gabriel. |
 | 3 | **(B).** O jogo inteiro é para maiores de 18. |
 | 4 | **(A).** Brasil primeiro, bilíngue, servidor no Brasil, Pix, PWA; Steam e lojas depois. |
 | 5 | **(C).** Seguir sem parecer jurídico e ajustar depois. |
