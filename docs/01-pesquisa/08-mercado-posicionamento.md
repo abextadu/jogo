@@ -6,7 +6,12 @@
 
 ## Resumo executivo
 
-(em redação — preenchido ao final)
+- **O gênero cresce em oferta, não em dinheiro.** O RPG mobile caiu 15,4% em 2025 (AppMagic), e o idle RPG de celular é negócio de gacha, aquisição paga e Ásia. No Steam, os lançamentos com a tag Idler foram de 329 (2023) para 940 (2025) e já são 1.566 em 2026, com taxa de acerto ainda acima da média. Portais de navegador têm dezenas de milhões de usuários por mês, mas vivem de anúncio e sessão curta.
+- **O nicho de idle MMO é pequeno e feito por equipes minúsculas.** Os puros têm centenas a poucos milhares de simultâneos; os casos de cinco dígitos (Torn, IdleOn) têm algo além do idle. Em 2026 chegaram uma onda de solos "scapelike" e o *Melvor Idle 2*, publicado pela Jagex (pista confirmada), que segue solo.
+- **O Brasil é mercado de volume e de MMO.** 75,3% jogam (PGB 2026), o celular lidera (44,1%), o PT-BR é o 5º idioma do Steam (4,46%) e o Pix tem 42% do e-commerce. O brasileiro vira maioria quando o MMO chega localizado e perto (Tibia ~45%, Ragnarok LATAM mais de 80%) e aparece até sem tradução (3,4% das reviews do IdleOn). Comprar e vender contas e gold por reais já é prática comum, com escrow e Pix. A receita por jogador é baixa: a América Latina tem 11% dos jogadores e 4% da receita.
+- **Hipóteses:** ligas sazonais (H5) e "Brasil como cabeça de ponte" (H3) têm a evidência mais forte; RMT só se sustenta como "dinheiro entra, não sai" (H2); economia como conteúdo (H6) e confiança como produto (H7) servem a um núcleo; PWA (H4) é requisito, não bandeira; guerra de território (H1) só assíncrona, sazonal e opcional.
+- **A lacuna:** nenhum idle combina economia profunda, temporadas, rivalidade de guildas assíncrona e pacote Brasil (idioma, servidor, Pix, comunidade). O IdleMMO é o que chega mais perto no desenho.
+- **Maior risco:** o teto do nicho e a receita baixa por jogador. O jogo precisa ser viável com poucos milhares de simultâneos.
 
 ## 1. Tamanho e tendências do gênero
 
@@ -58,7 +63,7 @@ Números das fichas (todos com fonte nas fichas; tipos de métrica diferentes, e
 - **[F] Sequência do Melvor confirmada (a pista do outro pesquisador procede):** a Jagex anunciou em 29/10/2026 que publica *Melvor Idle 2: A RuneScape Adventure*, com Early Access em 17/11/2026; a demo teve mais de 50 mil downloads e pico acima de 7.200 simultâneos no Steam Next Fest de out/2026; o jogo segue single-player, com "recursos sociais básicos" (amigos, perfis na nuvem, presença) ([Jagex, 29/10/2026](https://www.jagex.com/news/jagex-announces-partnership-with-games-by-malcs-to-publish-idle-adventure-sequel-melvor-idle-2-a-runescape-adventure); [RuneScape News](https://secure.runescape.com/m=news/introducing-melvor-idle-2---a-runescape-adventure); detalhes em [B01](fichas/B01-melvor-idle.md)).
 - **[F] Os vizinhos ativos são uma ou duas ordens de grandeza maiores:** o OSRS bateu ~240 mil simultâneos em ago/2025 ([F03](fichas/F03-runescape-e-osrs.md)); o Tibia teve mais de 100 mil ativos por dia em 2020 ([F04](fichas/F04-tibia.md)).
 - **[F] A onda "scapelike" de 2026:** o agregador Scapelikes lista dezenas de idle MMOs de navegador lançados em 2026, quase todos pequenos; só IdleWorlds, Deep Vein e Binxonia mencionam mercado de jogadores ([Scapelikes](https://scapelikes.com/), via [A10](fichas/A10-nova-onda-idle-2023-2026.md)). No celular, há estreantes que já prometem guerra de guildas e economia de jogadores, como *Rangard: Idle MMORPG* (nota ~3,5 com menos de 20 avaliações na App Store dos EUA — [App Store](https://apps.apple.com/us/app/id6753210334)).
-- **[H] Leitura.** O idle MMO "puro" no Steam vive na casa das centenas a poucos milhares de simultâneos. Os dois casos de cinco dígitos (Torn e IdleOn) têm algo além do idle: o Torn tem facções, crimes, guerras e uma economia de 20 anos; o IdleOn tem multiplataforma e conteúdo enorme. Quase todos os concorrentes são feitos por uma a três pessoas, com servidor único, sem pagamento local e, em parte, sem português (seção 2.6). A barra de qualidade é baixa e a entrada de novos solos é rápida (A10), mas o teto de demanda provado também é baixo: ninguém mostrou ainda que um idle MMO com economia passa de dezenas de milhares de jogadores diários.
+- **[H] Leitura.** O idle MMO "puro" no Steam vive na casa das centenas a poucos milhares de simultâneos. Os dois casos de cinco dígitos (Torn e IdleOn) têm algo além do idle: o Torn tem facções, crimes, guerras e uma economia de 20 anos; o IdleOn tem multiplataforma e conteúdo enorme. Quase todos os concorrentes são feitos por uma a três pessoas, com servidor único, sem pagamento local e, em parte, sem português (seção 2.6). A barra de qualidade é baixa e a entrada de novos solos é rápida ([A10](fichas/A10-nova-onda-idle-2023-2026.md)), mas o teto de demanda provado também é baixo: ninguém mostrou ainda que um idle MMO com economia passa de dezenas de milhares de jogadores diários.
 
 ## 2. Público brasileiro vs. global
 
@@ -66,7 +71,7 @@ Números das fichas (todos com fonte nas fichas; tipos de métrica diferentes, e
 
 - **[F] Pesquisa Game Brasil 2026 (13ª edição, SX Group e Go Gamers, com Blend New Research e ESPM):** 75,3% dos brasileiros de 16 a 55 anos dizem jogar, contra 82,8% em 2025. O celular é a plataforma preferida de 44,1%, o console de 24% e o PC de 21,1%. A geração Z (16–29) passou a ser o maior grupo (36,5%), à frente dos millennials (33,7%); mulheres são 52,8%; a classe média (B2, C1, C2), 54,9%. Para 80,7%, o jogo é a principal forma de entretenimento. Preço baixo ou promoção é o primeiro motivo para recomprar um jogo (44%). Amostra de 7.115 pessoas, coletada de 5 a 13/3/2026 ([Meio & Mensagem, 9/4/2026](https://www.meioemensagem.com.br/marketing/apos-pico-numero-de-jogadores-brasileiros-cai-segundo-pgb); [Omelete](https://www.omelete.com.br/games/pesquisa-game-brasil-2026-ia-jogos)). A matéria não traz dados de meios de pagamento nem de gasto médio.
 - **[F] Newzoo (atualização de ago/2026, citada pela gamescom latam):** o mercado global fechou 2025 em US$ 201,6 bilhões (+9,1%) e deve ir a US$ 213,9 bilhões em 2026 (+6,1%), com o mobile em US$ 121,1 bilhões. A América Latina deve fazer US$ 9,3 bilhões (+7,9%) com 394 milhões de jogadores em 2026: 11% dos jogadores do mundo e só 4% da receita ([gamescom latam](https://latam.gamescom.global/en/the-global-gaming-market-in-2026/)).
-- **[F] Brasil em dinheiro:** cerca de US$ 3,8 bilhões em 2026, pela projeção de uma consultoria de pagamentos analisada pela EBANX ([PocketGamer.biz, 1/10/2026](https://www.pocketgamer.biz/netease-games-club-partners-with-ebanx-projecting-84bn-in-latam-revenue-this-year/)). Outra compilação fala em US$ 2,52 bilhões em 2025 e em 103 a 115 milhões de jogadores, o 5º maior contingente de jogadores online do mundo, sem citar a fonte do valor ([Allcorrect, 9/9/2025](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/)). Consultorias de mercado divergem por uma ordem de grandeza (de US$ 0,36 bilhão a US$ 5,64 bilhões em 2025: [6Wresearch](https://www.6wresearch.com/industry-report/brazil-gaming-market-outlook), [IMARC](https://www.imarcgroup.com/brazil-gaming-market)). Não achei o recorte de games do Brasil na edição 2025–2029 da PwC (a página da PwC Brasil retornou 403).
+- **[F] Brasil em dinheiro:** cerca de US$ 3,8 bilhões em 2026, pela projeção de uma consultoria de pagamentos analisada pela EBANX ([PocketGamer.biz, 1/10/2026](https://www.pocketgamer.biz/netease-games-club-partners-with-ebanx-projecting-84bn-in-latam-revenue-this-year/)). Outra compilação fala em US$ 2,52 bilhões em 2025 e em 103 a 115 milhões de jogadores, o 5º maior contingente de jogadores online do mundo, sem citar a fonte do valor ([Allcorrect, 9/9/2025](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/)). Consultorias de mercado divergem por mais de uma ordem de grandeza (de US$ 0,36 bilhão a US$ 5,64 bilhões em 2025: [6Wresearch](https://www.6wresearch.com/industry-report/brazil-gaming-market-outlook), [IMARC](https://www.imarcgroup.com/brazil-gaming-market)). Não achei o recorte de games do Brasil na edição 2025–2029 da PwC (a página da PwC Brasil retornou 403).
 - **[F] O que o Brasil mais baixa e mais paga no celular (2025, AppMagic, via Allcorrect):** em downloads, Roblox, Free Fire, Block Blast!, Subway Surfers e Minecraft; em receita, Roblox, Free Fire, Coin Master, Candy Crush Saga e Royal Match ([Allcorrect](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/)).
 - **[F] No PC, o português do Brasil é o 5º idioma do Steam:** 4,46% dos usuários em out/2026, à frente de alemão (2,89%), japonês (2,47%) e francês (2,41%), atrás de inglês, chinês simplificado, russo e espanhol da Espanha ([Steam Hardware & Software Survey, out/2026](https://store.steampowered.com/hwsurvey/)). A participação oscila de mês a mês com o peso da China na amostra.
 - **[H] Leitura.** O Brasil é mercado de volume e de celular, com receita por jogador baixa (o retrato da América Latina: 11% dos jogadores, 4% da receita). Um jogo que nasce para o Brasil precisa de custo por usuário baixo (servidor barato, sem aquisição paga cara) e de muitos pagantes pequenos, não de baleias. O PC brasileiro também é relevante: quase 1 em cada 20 usuários do Steam.
@@ -82,7 +87,7 @@ Números das fichas (todos com fonte nas fichas; tipos de métrica diferentes, e
 
 ### 2.3 Sensibilidade a preço e preços regionais
 
-- **[F] O preço em dólar é queixa explícita:** no Albion, uma das 10 reviews negativas mais úteis do ano em português reclama do preço só em dólar ([F02](fichas/F02-albion-online.md)). No Tibia, a ficha registra o peso do preço em euro e a origem da BoaCompra como revendedora local ([F04](fichas/F04-tibia.md)).
+- **[F] O preço em dólar é queixa explícita:** no Albion, uma das 10 reviews negativas mais úteis do ano em português reclama do preço só em dólar ([F02](fichas/F02-albion-online.md)). No Tibia, a ficha trata o preço em euro como peso para o brasileiro [H] e registra, sem confirmar, que a revendedora local BoaCompra teria nascido do jogo ([F04](fichas/F04-tibia.md)).
 - **[F] O Steam já pratica preço regional forte para o Brasil:** o *Melvor Idle* custa US$ 9,99 nos EUA e R$ 32,99 no Brasil ([B01](fichas/B01-melvor-idle.md); [Steam](https://store.steampowered.com/app/1267910/?l=brazilian)). Guias de terceiros dizem que o preço recomendado pela Valve para o Brasil fica tipicamente 50% a 70% abaixo do preço em dólar ([Steam Page Analyzer](https://www.steampageanalyzer.com/blog/steam-regional-pricing-guide)), e que a política de 2024 aceita um piso de 0,5x para o Brasil ([Marix](https://marix.app/library/guides/steam-regional-pricing-policy-2026-changes)). [NV] Não confirmei isso na documentação do Steamworks.
 - **[F] Preço baixo é o principal gatilho de compra** de quem recompra jogos (44%, PGB 2026 — [Meio & Mensagem](https://www.meioemensagem.com.br/marketing/apos-pico-numero-de-jogadores-brasileiros-cai-segundo-pgb)).
 - **[H] Leitura.** Preço em real, com pacotes pequenos (de poucos reais) e valores pensados para o poder de compra local, não convertidos do dólar. Isso também é defesa econômica: preço oficial alto empurra o jogador para o mercado paralelo, e o RMT ilegal vende ouro a uma fração do preço oficial (no OSRS, ~45% — [F03](fichas/F03-runescape-e-osrs.md)). Com economia global e preços regionais, surge um risco de arbitragem: o brasileiro compra o token barato e vende ouro para quem paga em dólar. Isso exige token com preço único em ouro e limites de compra (ver seção "Como isso pode dar errado").
@@ -121,7 +126,7 @@ Números das fichas (todos com fonte nas fichas; tipos de métrica diferentes, e
 | Referência: usuários do Steam com idioma PT-BR | — | — | — | — | 4,46% ([pesquisa de out/2026](https://store.steampowered.com/hwsurvey/)) |
 
   A leitura é tentativa (o hábito de escrever review varia por país): o brasileiro aparece perto da sua fatia do Steam num idle gratuito mesmo sem tradução (IdleOn), some num idle pago mesmo traduzido (Melvor) e passa de duas vezes a sua fatia num MMO gratuito, traduzido e com comunidade local (Albion). Grátis para começar pesa mais que a tradução; tradução com comunidade multiplica.
-- **[F] Onde há português e servidor, o brasileiro aparece em massa:** no Albion, o português é o 3º idioma das reviews (10.974, 85% positivas, ~10,6% do total) ([F02](fichas/F02-albion-online.md)); no Tibia, o Brasil tem ~45% dos jogadores e 32 dos 90 mundos ([F04](fichas/F04-tibia.md)).
+- **[F] Onde há servidor e comunidade, o brasileiro aparece em massa:** no Tibia, o Brasil tem ~45% dos jogadores e 32 dos 90 mundos ([F04](fichas/F04-tibia.md)); no Albion, as reviews em português são 85% positivas, contra 74% das anglófonas ([F02](fichas/F02-albion-online.md)).
 - **[H] Leitura.** Traduzir não basta (o Idle Clans e o Melvor têm PT-BR e nenhum virou "o idle MMO do Brasil"); a vantagem está no pacote: idioma, servidor com ping baixo no Brasil, preço em real, Pix, suporte e comunidade (Discord, criadores de conteúdo) em português. Nenhum concorrente do nicho tem esse pacote.
 
 ### 2.7 Estúdios brasileiros de sucesso (e um fracasso instrutivo)
@@ -184,19 +189,197 @@ Cinco segmentos, cada um com onde está, o que quer, o que rejeita e o encaixe n
 
 ## 4. Lacunas que ninguém ocupa: hipóteses e evidências
 
-(em pesquisa)
+**Método e limites.** Para cada hipótese, procurei evidência de demanda (reviews, comportamento, números de jogadores) e evidência contra. O Reddit bloqueou o acesso direto e as buscas por threads de pedidos ("is there an idle MMO with…") devolveram sobretudo páginas de jogos novos, não conversas; por isso, quase toda a demanda abaixo é **revelada** (o que os jogadores fazem e reclamam), não **declarada**. Tendências de busca (Google Trends) não foram obtidas: a ferramenta exige JavaScript e não há série pública citável; usei como substitutos as tags do Steam e a contagem de reviews por idioma.
+
+### H1. Idle MMO com guerra de território de verdade
+
+- **A favor.** [F] Os idles com vida social mais densa têm alguma forma de guerra entre guildas: o Torn (guerras de território de até três dias, com rackets) passou de 100 mil ativos por dia; o IdleMMO tem conquista de zonas por atividade e guerra de vilas opcional; o SimpleMMO tem guerras que terminam em 1.000 abates ou rendição, com temporadas de guilda ([03](03-alem-do-idle.md); [D01](fichas/D01-torn.md); [C04](fichas/C04-idlemmo.md); [C05](fichas/C05-simplemmo.md)). [F] Estreantes de 2025–2026 já anunciam guerra de guildas como argumento de venda (*Rangard* — [App Store](https://apps.apple.com/us/app/id6753210334)). [F] O brasileiro já jogou estratégia de navegador com território em massa (Tribal Wars, seção 2.4).
+- **Contra.** [F] Território com renda vira bola de neve e monopólio: no Albion, 7 das 10 negativas mais úteis do ano citam o domínio das grandes guildas; no New World, uma companhia chegou a deter todos os territórios de um servidor ([03](03-alem-do-idle.md)). [F] A guerra ao vivo cobra presença: as chains e guerras do Torn geram escalas de plantão no Discord e esgotamento ([D01](fichas/D01-torn.md)). [F] A teoria do gênero diz que hora marcada é o que o idle não pode exigir ([02a](02a-teoria-design-idle.md)). [F] O estudo de mecânicas de fora do idle pôs território em último na ordem de implantação, pelo custo e pelo risco ([03](03-alem-do-idle.md)).
+- **Veredito: parcialmente sustentada.** [H] Há demanda por **rivalidade entre guildas com desfecho**, desde que seja assíncrona, sazonal, opcional e decidida por um orçamento de ações (modelo Clash of Clans/Torn), com janelas anunciadas e cofre protegido (modelo EVE Equinox). "Território de verdade", com renda permanente e perda para quem está fora, não tem evidência de demanda no público idle e tem muita evidência de dano. Não é o pilar do posicionamento; é uma camada para o veterano brasileiro de MMO e para guildas organizadas.
+
+### H2. Economia profunda com RMT legal e transparente
+
+- **A favor.** [F] O token negociável é aceito pelo jogador gratuito: 65,2% dos jogadores do IdleMMO obtiveram a membership com ouro ([C04](fichas/C04-idlemmo.md)). [F] O leilão oficial de personagens do Tibia movimentou 721 milhões de TC em 2025 e rende ~13% da receita da CipSoft ([F04](fichas/F04-tibia.md)). [F] O canal legal derrubou o gold farming do RuneScape em mais de 80% em um mês ([F03](fichas/F03-runescape-e-osrs.md)). [F] No Milky Way Idle, o mercado é o recurso mais elogiado ([C01](fichas/C01-milky-way-idle.md)). [C] No Brasil, comprar e vender conta e gold por reais já tem infraestrutura com escrow e Pix (seção 2.5). [F] Mercado paralelo aparece sozinho quando há itens raros, mesmo sem RMT oficial (Grow a Garden, no Roblox — [A10](fichas/A10-nova-onda-idle-2023-2026.md)).
+- **Contra.** [F] Saque em reais operado pelo estúdio e sorteio pago junto com saque são luz vermelha no Brasil ([05b](05b-rmt-legal-brasil.md)). [F] Idle + dinheiro atrai bots: ~2/3 dos jogadores do Banana eram bots ([G05](fichas/G05-banana-e-bongo-cat.md)). [F] Token oficial não acaba com o RMT ilegal (o mercado negro do OSRS vende a ~45% do preço oficial — [F03](fichas/F03-runescape-e-osrs.md)). [F] Comprar premium sem limite para pagar itens caros é lido como P2W ([C01](fichas/C01-milky-way-idle.md)). [F] O mercado do Diablo III esvaziou o drop ([notas, G01](_notas-de-sintese.md)).
+- **Veredito: sustentada na forma "dinheiro entra, não sai".** [H] A evidência apoia token de tempo ou de conveniência negociável por ouro, mercado profundo em moeda do jogo e, no máximo, leilão de contas ou itens via instituição autorizada com split, nunca saque pela conta do estúdio. A palavra "transparente" também tem apoio: índices públicos (o MER do EVE, o economista do Torn, o JSON do MWI) geram confiança ([F01](fichas/F01-eve-online.md); [D01](fichas/D01-torn.md); [C01](fichas/C01-milky-way-idle.md)). O que não tem apoio é RMT como promessa de renda.
+
+### H3. Idle MMO pensado primeiro para o Brasil
+
+- **A favor.** [F] O brasileiro vira maioria quando o MMO chega localizado e perto: ~45% do Tibia, mais de 80% do Ragnarok LATAM (seção 2.4). [F] O português do Brasil é o 5º idioma do Steam (4,46%) e aparece no IdleOn mesmo sem tradução (1.114 reviews, ~3,4% do total) (seções 2.1 e 2.6). [F] As queixas brasileiras são exatamente as que um estúdio local resolve: ping, quedas e preço em dólar ([F02](fichas/F02-albion-online.md)). [F] Pix em 42% do e-commerce e 60 milhões de pessoas sem cartão (seção 2.2). [H] Nenhum concorrente do nicho mostra o pacote completo (idioma + servidor + Pix + comunidade), pelo que conferimos (seções 2.6 e 5). [F] O navegador ainda é plataforma de 23% dos jogos feitos no Brasil (seção 2.7).
+- **Contra.** [F] Receita por jogador baixa: a América Latina tem 11% dos jogadores e 4% da receita (seção 2.1). [F] A fatia de brasileiros que jogam caiu de 82,8% para 75,3% em um ano (PGB 2026). [F] Tradução sozinha não fez do Melvor nem do Idle Clans "o idle do Brasil" (seção 2.6). [F] O grande MMO brasileiro (Taikodom) fracassou (seção 2.7). [H] Uma economia só de brasileiros pode ficar pequena e rasa demais para o mercado e os leilões funcionarem.
+- **Veredito: sustentada como cabeça de ponte, não como teto.** [H] O Brasil é o lugar onde podemos ser o melhor em algo que ninguém oferece, com o custo de aquisição mais baixo (comunidade, criadores e servidores locais). Mas o jogo precisa nascer bilíngue (PT-BR e inglês), com uma economia que aceite o resto do mundo depois e uma monetização que funcione com muitos pagantes pequenos.
+
+### H4. PWA de qualidade que funciona igual no celular e no desktop
+
+- **A favor.** [F] O celular é a plataforma preferida no Brasil (44,1%), e o PC brasileiro pesa no Steam (seção 2.1). [F] Os concorrentes se espalham entre web, Steam e apps nativos, com bugs típicos dessa costura (tela preta ao voltar do segundo plano no IdleMMO; conexão e save como queixa nº 1 do Melvor) ([C04](fichas/C04-idlemmo.md); [B01](fichas/B01-melvor-idle.md)). [F] A loja própria virou padrão no mobile: 74% dos 50 maiores jogos mobile têm web store em 2026 (12% em 2019), 47% de 5.339 jogadores compraram direto do desenvolvedor no último ano e o direto ao consumidor movimentou ~US$ 17 bilhões em 2025, ~15% das compras em apps ([Bain, 18/8/2026](https://www.bain.com/insights/game-distribution-half-your-players-already-buy-direct-gaming-report-2026/)). [F] No Brasil, o acordo da Apple com o CADE (aprovado em dez/2025, em vigor desde jun/2026) permite link externo para pagamento, mas com comissão de 15%; a comissão da App Store é de 25% (10% em programas especiais) mais 5% de processamento ([MacMagazine, 23/12/2025](https://macmagazine.com.br/post/2025/12/23/apple-permitira-compras-externas-e-lojas-alternativas-a-app-store-no-brasil/); [Portal Tela, 18/6/2026](https://www.portaltela.com/noticias/politica/2026/06/18/apple-libera-sistema-de-pagamentos-em-apps-no-brasil-apos-acordo-com-o-cade/)). Num PWA, o Pix vai direto, sem loja no meio. [F] O iPhone aceita push de web apps instalados na Tela de Início desde o iOS 16.4 ([WebKit, 16/2/2023](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/); detalhes técnicos em [07](07-tecnica-idles-online.md)). [F] O modo "canto de tela" vende milhões de cópias no desktop ([A10](fichas/A10-nova-onda-idle-2023-2026.md)).
+- **Contra.** [F] No iPhone, a instalação do PWA é manual e o push só funciona depois dela ([07](07-tecnica-idles-online.md)). [H] Sem presença nas lojas, perde-se a busca da Play Store e da App Store, que é onde o brasileiro acha Free Fire e Roblox. [H] Nenhum jogador pede "PWA": pedem a mesma conta no celular e no PC (o Idle Clans e o IdleOn fazem isso com apps nativos — [C02](fichas/C02-idle-clans.md); [B02](fichas/B02-legends-of-idleon.md)).
+- **Veredito: sustentada como requisito de produto e de margem, não como diferencial que o jogador percebe.** [H] O PWA é o que permite Pix sem comissão, um único cliente e atualização instantânea; o jogador vai perceber "funciona igual em qualquer lugar e não trava". Empacotar para a Google Play (TWA) e para o Steam cobre a descoberta ([07](07-tecnica-idles-online.md)).
+
+### H5. Ligas sazonais num idle MMO
+
+- **A favor.** [F] É a hipótese com mais evidência: as Leagues do OSRS deram 210 mil simultâneos na Liga V e ~241 mil em 2025 ([F03](fichas/F03-runescape-e-osrs.md)); o recomeço "Fresh Start" do New World trouxe mais gente (137.755) que a expansão paga (77.642) ([G04](fichas/G04-new-world.md)); no Tibia, o gasto num serviço de consumíveis triplica nos meses de mundo novo (€ 81 mil contra € 26 mil) ([F04](fichas/F04-tibia.md)). [C] Os veteranos do Milky Way Idle reclamam da falta de wipe e do monopólio dos "top players" ([C01](fichas/C01-milky-way-idle.md)). [F] Torneios semanais em grupos de 30, por liga, deram ao *The Tower* uma camada competitiva barata ([A10](fichas/A10-nova-onda-idle-2023-2026.md)). [F] O IdleMMO já usa temporadas de guilda de 60 dias ([C04](fichas/C04-idlemmo.md)).
+- **Contra.** [F] Base pequena dividida em modos gera livros de ordens rasos (Idlescape: Legacy, Pre-Launch e Ironman ao mesmo tempo — [C03](fichas/C03-idlescape.md)). [F] A evasão depois da estreia é brutal (o PoE1 caiu de 184 mil para 16 mil no pico mensal em dois meses — [notas, F05](_notas-de-sintese.md)). [F] O custo de criar cada temporada se repete ([F03](fichas/F03-runescape-e-osrs.md)).
+- **Veredito: sustentada.** [H] A forma com mais apoio é a do OSRS: mundos sazonais paralelos que não resetam o mundo principal e devolvem só cosmético e prestígio, com ganchos depois da 4ª semana. Para a economia, a temporada resolve o problema de capital acumulado dos veteranos sem confisco. O cuidado é não dividir a população além do que os livros de ordens aguentam.
+
+### H6. "Economia como conteúdo" (estilo EVE) em formato idle
+
+- **A favor.** [F] No MWI, a especialização via mercado é o que os jogadores apontam como diferença em relação ao Melvor, e o mercado é o tema mais elogiado ([C01](fichas/C01-milky-way-idle.md)). [F] O Torn sustenta 20 anos e 100 mil ativos por dia com uma economia tratada como coisa séria (economista, metas, relatórios) e conteúdo feito por jogadores (jornal, golpes legalizados, ferramentas pela API) ([D01](fichas/D01-torn.md)). [F] No Albion e no MWI, jogadores constroem ferramentas e bases de dados de preço por conta própria ([F02](fichas/F02-albion-online.md); [C01](fichas/C01-milky-way-idle.md)). [F] A subcategoria "Economy" dentro do Idler cresceu 187% em lançamentos em 2026 (seção 1.2), sinal de que desenvolvedores apostam no tema.
+- **Contra.** [F] O jogador de economia é minoria (o EVE nunca passou de 65 mil simultâneos) ([F01](fichas/F01-eve-online.md)). [F] Mercado profundo concentra poder em quem tem capital e tempo online, e scripts ganham de quem joga sem ferramenta ([C01](fichas/C01-milky-way-idle.md); [D01](fichas/D01-torn.md)). [F] Mercado exige população: com base pequena, o livro fica raso ([C03](fichas/C03-idlescape.md)).
+- **Veredito: sustentada como diferencial para um núcleo.** [H] Num idle, a economia pode ser o "jogo ativo" de quem gosta de decidir, enquanto o ausente produz. Funciona se o jogador casual participar sem ser engolido (ordens de compra persistentes, bandas de preço, limites para contas novas) e se a economia for narrada (relatório mensal, índice do token, histórias de mercado).
+
+### H7 (extra). Confiança como produto: um idle online em que dá para confiar
+
+- **A favor.** [F] Quem escreve as reviews negativas dos idles são veteranos, e eles reclamam de traição (save perdido, monetização, moderação), não de tédio ([notas, B01–B02](_notas-de-sintese.md)). [F] O nicho tem histórico de cheats e saves editáveis (Melvor), injetor público de cheats (IdleOn), bans em massa (MWI: 500+ contas principais), dupes (New World) e economia que morreu com a empresa (Idlescape) ([B01](fichas/B01-melvor-idle.md); [B02](fichas/B02-legends-of-idleon.md); [C01](fichas/C01-milky-way-idle.md); [G04](fichas/G04-new-world.md); [C03](fichas/C03-idlescape.md)). [F] O IdleMMO ganhou confiança explicando decisões econômicas com dados ([C04](fichas/C04-idlemmo.md)).
+- **Contra.** [H] Confiança não aparece em trailer; só vira vantagem com o tempo, e uma falha grave (dupe, vazamento) apaga anos de reputação.
+- **Veredito: sustentada como lacuna real e pouco visível.** [H] Equipes de uma a três pessoas não conseguem bancar servidor autoritativo, anti-bot, ledger auditável, suporte em português e relatório econômico público ao mesmo tempo. Um estúdio que trate isso como produto ocupa um espaço que os solos não alcançam, e é o pré-requisito para qualquer RMT oficial.
+
+### Placar das hipóteses
+
+| Hipótese | Evidência de demanda | Evidência contra | Veredito [H] |
+|---|---|---|---|
+| H1 Guerra de território | média (Torn, IdleMMO, SimpleMMO) | forte (bola de neve, plantão, hora marcada) | parcial: só assíncrona, sazonal e opcional |
+| H2 Economia profunda + RMT legal | forte (token aceito, Char Bazaar, mercado cinza no Brasil) | forte no saque (jurídico, bots) | sustentada no modelo "dinheiro entra, não sai" |
+| H3 Pensado primeiro para o Brasil | forte (Tibia, Ragnarok, Albion, IdleOn sem tradução) | média (receita baixa por jogador) | sustentada como cabeça de ponte |
+| H4 PWA de qualidade | média (celular, lojas próprias, comissões) | média (descoberta, instalação no iPhone) | sustentada como requisito, não como bandeira |
+| H5 Ligas sazonais | forte (OSRS, New World, Tibia, MWI) | média (fragmentação, evasão) | sustentada |
+| H6 Economia como conteúdo | média-forte (MWI, Torn, ferramentas de jogadores) | média (nicho, concentração) | sustentada para um núcleo |
+| H7 Confiança como produto | média (queixas de veteranos, histórico de falhas) | baixa | sustentada, pouco visível |
 
 ## 5. Mapa competitivo
 
-(em pesquisa)
+Posições a partir das fichas e das linhas da matriz de cada uma; a posição exata nos eixos é julgamento do estúdio [H].
+
+### 5.1 Mapa A: idle ↔ ativo × solo ↔ social/economia
+
+```
+                          SOCIAL / ECONOMIA PROFUNDA
+                                     ▲
+     ○ EVE      ○ Albion             │                 ● Torn (semi-idle)
+                                     │        ● SimpleMMO          ● Milky Way Idle
+     ○ OSRS        ○ Tibia           │                        ● IdleMMO
+                                     │            ● Shop Titans       ● Idle Clans
+                ○ Ragnarok LATAM     │                 ● Deep Vein      ● Idlescape
+                                     │
+                                     │                  ● IdleOn      ● Scapewatch
+  ATIVO ◄────────────────────────────┼─────────────────────────────────────────► IDLE
+                                     │
+                                     │            ● AFK Journey / Legend of Mushroom (gacha)
+                                     │                         ● Melvor Idle / Melvor Idle 2
+                                     │                                 ● Bongo Cat / Banana (*)
+                                     ▼
+                                    SOLO
+
+  ○ MMO ativo   ● idle ou semi-idle
+  (*) solo no jogo, mas o drop vira dinheiro no Mercado da Comunidade Steam (G05)
+```
+
+**Leitura [H].** O quadrante "idle + social/economia" não está vazio: tem uma dúzia de jogos. Mas todos são de equipes de uma a três pessoas (exceto Torn e Shop Titans), quase todos sem guerra entre guildas e sem temporadas, e nenhum com o pacote Brasil. A lacuna não é um ponto vazio neste mapa; está nas dimensões que ele não mostra. Por isso, o mapa B.
+
+### 5.2 Mapa B: profundidade da economia × pacote Brasil
+
+```
+  PACOTE BRASIL
+  (idioma + servidor perto + pagamento local + comunidade)
+        ▲
+  pleno │   ○ Tibia (servidores "-bra", ~45% BR)
+        │   ○ Ragnarok LATAM (>80% BR)                         ┌──────────────────────────┐
+        │                                                      │  LACUNA: idle + economia │
+        │                                                      │  profunda + pacote Brasil│
+        │                                                      └──────────────────────────┘
+ idioma │   ● Melvor   ● Scapewatch        ● Idle Clans          ○ Albion (sem servidor
+        │                                                          na América do Sul)
+        │
+ nada   │   ● IdleOn (mesmo assim 3,4%     ● Deep Vein (?) ● IdleMMO (?)  ● Milky Way Idle
+ visto  │     das reviews em PT-BR)                         ● Torn (?)     ● Shop Titans (?)
+        └──────────────────────────────────────────────────────────────────────────────►
+          nenhuma / troca leve              livro de ordens         livro + token + leilão
+                                   PROFUNDIDADE DA ECONOMIA ENTRE JOGADORES
+```
+
+Fontes das posições: idiomas na seção 2.6; servidores e base brasileira nas seções 2.4 e [F04](fichas/F04-tibia.md), [F02](fichas/F02-albion-online.md), [C04](fichas/C04-idlemmo.md) (servidor em Londres); economia nas linhas da matriz das fichas. "?" = não verificado (idiomas do Shop Titans, do IdleMMO, do Deep Vein e do Torn não foram conferidos).
+
+**Leitura [H].** O canto de cima à direita só tem MMOs ativos e antigos (Tibia, de 1997; Ragnarok, de 2002). Nenhum idle combina economia profunda com servidor, pagamento e comunidade brasileiros. É o espaço mais claro do mercado.
+
+### 5.3 Quem tem o quê
+
+| Jogo | Mercado entre jogadores | Token / RMT oficial | Guerra entre guildas | Temporadas | PT-BR | Servidor ou pagamento local no Brasil | Equipe |
+|---|---|---|---|---|---|---|---|
+| Milky Way Idle | Livro | Token | Não | Não | Não | Não encontrado | 2 |
+| Idle Clans | Livro | Token | Não | Não | Sim | Não encontrado | 1 |
+| IdleMMO | Listagem + livro + leilão | Token | Conquista por atividade + guerra de vilas opcional | Sim (guildas, 60 dias) | ? | Não (servidor em Londres) | 3 |
+| SimpleMMO | Troca + listagem | Token | Sim (assíncrona) | Sim | ? | Não encontrado | 1 |
+| Torn | Troca + listagem + leilão | Token (points) | Sim (território, até 3 dias) | Não | ? | Não encontrado | ~50 |
+| Legends of IdleOn | Troca leve | Não | Não | Sim | Não | Não encontrado | dev solo [NV] |
+| Melvor Idle / Melvor Idle 2 | Não | Não | Não | Não | Sim (Melvor 1) | Não | pequena + Jagex |
+| Scapewatch | ? | Não | Não | Não | Sim | Não encontrado | 1 |
+| Deep Vein Idle | Troca + livro | Não | Não | Não | ? | Não encontrado | pequena |
+| Shop Titans | Livro | Token (gemas) | Não | Não | ? | Não encontrado | Kabam |
+| Albion Online (ativo) | Livro + troca | Token (Gold) | Sim (território) | Sim | Sim | Não (queixa de ping) | Sandbox/Stillfront |
+| Tibia (ativo) | Troca + listagem + leilão | Token + personagem + saque indireto | Síncrono | Não (mundos novos como quase-temporadas) | ? | Sim (32 mundos "-bra") | CipSoft |
+
+Fontes: linhas da matriz e seções das fichas [C01](fichas/C01-milky-way-idle.md), [C02](fichas/C02-idle-clans.md), [C04](fichas/C04-idlemmo.md), [C05](fichas/C05-simplemmo.md), [D01](fichas/D01-torn.md), [B02](fichas/B02-legends-of-idleon.md), [B01](fichas/B01-melvor-idle.md), [A11](fichas/A11-scapewatch.md), [A12](fichas/A12-deep-vein-idle.md), [C06](fichas/C06-shop-titans.md), [F02](fichas/F02-albion-online.md), [F04](fichas/F04-tibia.md); idiomas conferidos nas páginas do Steam (seção 2.6). "Não encontrado" = procurei nas fichas e não há menção a servidor ou pagamento brasileiro.
+
+**Onde há espaço [H]:** nenhuma linha tem, ao mesmo tempo, economia profunda com token, rivalidade entre guildas assíncrona, temporadas, pacote Brasil e uma equipe capaz de manter segurança e conteúdo. O IdleMMO é o que chega mais perto no desenho (conquista, temporadas, token, mercado completo), e por isso é o concorrente a estudar de perto; falta-lhe o Brasil e a escala de equipe.
 
 ## Implicações para o nosso jogo
 
-(em redação)
+Todas são análise do estúdio [H], para alimentar a Fase 2. Para cada uma: em que referência se inspira (ou de qual se diferencia), que problema resolve, que comportamento incentiva e que risco cria.
+
+1. **Posicionamento-candidato: "o idle MMO de economia viva que respeita o seu tempo, feito no Brasil e aberto ao mundo".**
+   - *Inspira-se em* Torn (economia séria e social que dura décadas), Milky Way Idle (mercado como coração) e Tibia/Ragnarok (o Brasil como maioria); *diferencia-se* dos scapelikes solo, que não têm economia robusta nem segurança, e do *Melvor Idle 2*, que segue solo.
+   - *Resolve* a lacuna do mapa B: ninguém junta idle, economia profunda e pacote Brasil.
+   - *Incentiva* a entrada do veterano brasileiro sem tempo e do jogador de economia global.
+   - *Risco:* nicho com teto baixo (ver abaixo).
+2. **Ordem de público: veteranos brasileiros de MMO, depois grinders e jogadores de economia globais, com o AFK de celular como volume e os puristas como formadores de opinião.**
+   - *Inspira-se* na trajetória do Tibia e do Ragnarok no Brasil e na do MWI no Steam.
+   - *Resolve* a aquisição sem mídia paga: comunidade, criadores de conteúdo e servidores brasileiros custam menos que disputar instalações com Lilith e Habby.
+   - *Incentiva* uma comunidade PT-BR forte desde o primeiro dia, que puxa o resto.
+   - *Risco:* segmentos com desejos opostos (seção 3.6).
+3. **Pacote Brasil completo, não só tradução:** servidor em São Paulo, texto nativo em PT-BR, preço em real com pacotes de poucos reais, Pix (e Pix Automático para VIP), parcelamento só nos pacotes maiores, suporte e Discord em português; inglês desde o dia 1.
+   - *Inspira-se* nas queixas do Albion (ping e dólar), na adoção de Pix por Ragnarok Origin e NetEase e no peso do Pix (42% do e-commerce, 60 milhões sem cartão).
+   - *Resolve* as barreiras que estrangeiros não removem.
+   - *Incentiva* muitos pagantes pequenos, que é o que o mercado brasileiro sustenta (América Latina: 11% dos jogadores, 4% da receita).
+   - *Risco:* arbitragem do token entre regiões e receita por jogador baixa.
+4. **Web primeiro (PWA), com Steam e Google Play (TWA) como vitrines:**
+   - *Inspira-se* na migração do mobile para lojas próprias (74% dos 50 maiores jogos) e no acordo Apple–CADE, que ainda cobra 15% sobre link externo no Brasil.
+   - *Resolve* margem (Pix direto, sem loja no meio), cliente único e atualização instantânea ([07](07-tecnica-idles-online.md)).
+   - *Incentiva* a compra direta e o jogo em segundo plano no desktop (modo "canto de tela" — [A10](fichas/A10-nova-onda-idle-2023-2026.md)).
+   - *Risco:* descoberta fraca fora das lojas e instalação manual no iPhone.
+5. **Temporadas paralelas como motor de retorno e rivalidade de guildas assíncrona como camada sazonal, não como pilar:**
+   - *Inspira-se* nas Leagues do OSRS, no Fresh Start do New World e nas guerras de dias do Torn; *diferencia-se* do território com renda permanente do Albion e do New World.
+   - *Resolve* capital acumulado dos veteranos (queixa do MWI) e dá desfecho à rivalidade.
+   - *Incentiva* o retorno a cada temporada e a coordenação de guilda sem plantão.
+   - *Risco:* fragmentar uma base pequena (Idlescape) e virar bola de neve (Albion).
+6. **Economia narrada e confiança como produto:** relatório econômico público, índice do preço do token, política de moderação e de monetização publicadas, servidor autoritativo e ledger auditável.
+   - *Inspira-se* no MER do EVE, no economista do Torn e no blog econômico do IdleMMO.
+   - *Resolve* a desconfiança dos veteranos, que escrevem as reviews negativas do gênero.
+   - *Incentiva* o jogador de economia a produzir conteúdo (análises, guias, ferramentas de leitura).
+   - *Risco:* custo de operação contínuo; transparência expõe erros em público.
+7. **RMT no lançamento só no modelo "dinheiro entra, não sai"**, competindo com o mercado cinza brasileiro em segurança e preço:
+   - *Inspira-se* no Bond do RuneScape, na membership do IdleMMO e no Char Bazaar do Tibia (este só depois de parecer jurídico — [05b](05b-rmt-legal-brasil.md)).
+   - *Resolve* a demanda real de comprar com dinheiro sem abrir a porta jurídica do saque.
+   - *Incentiva* quem paga a financiar quem joga (ouro por token).
+   - *Risco:* o mercado cinza continuar mais barato; bots atrás de qualquer coisa negociável.
+8. **Identidade própria, para não ser "mais um scapelike":**
+   - *Inspira-se* nos idles do Steam que vendem por um "truque" legível em vídeo ([A10](fichas/A10-nova-onda-idle-2023-2026.md)); *diferencia-se* da estética RuneScape que todos os solos copiam.
+   - *Resolve* a crítica nº 1 do Idle Clans ("clone do Melvor") e a saturação do terreno.
+   - *Incentiva* descoberta por criadores de conteúdo e uma demo forte no Steam Next Fest (a do *Melvor Idle 2* teve mais de 50 mil downloads).
+   - *Risco:* tema original exige mais arte e mais tempo.
 
 ## Como isso pode dar errado
 
-(em redação)
+1. **O nicho tem teto baixo.** [F] Os idle MMOs puros vivem em centenas a poucos milhares de simultâneos (MWI: média de 781; Idle Clans: 661; Scapewatch: ~2 mil no Steam) (seção 1.4). Podemos fazer o melhor do gênero e parar em 3 mil. *Mitigação:* custo de operação compatível com esse cenário (infra própria), metas de sucesso realistas e validação cedo com playtest e demo; Torn e IdleOn mostram que passar de 10 mil exige algo além do idle (social denso, multiplataforma).
+2. **O Brasil vira gueto.** [H] Economia só de brasileiros pode ficar rasa, e servidor em São Paulo e comunidade em português afastam estrangeiros. *Mitigação:* bilíngue desde o dia 1; núcleo idle que tolera latência; janelas ativas em mais de um horário; um mundo econômico global, sem dividir por idioma.
+3. **Receita por jogador baixa com custos em dólar.** [F] A América Latina gera 4% da receita mundial com 11% dos jogadores; o tíquete médio do Pix é menor que o do cartão (seções 2.1 e 2.2). *Mitigação:* infra própria com custo previsível; não depender de baleias; aceitar cartão parcelado nos pacotes maiores; vender também para fora do Brasil.
+4. **Arbitragem do token entre regiões.** [H] Se o token custa menos em real, o brasileiro compra barato e vende o ouro para quem paga em dólar, e o preço regional vira fonte de RMT cinza internacional. *Mitigação:* preço regional só em itens não negociáveis (cosméticos, conveniência), token com preço equivalente em todas as regiões ou com limite diário por conta e trava de revenda.
+5. **O mercado cinza brasileiro vence o oficial.** [C] Marketplaces com escrow e Pix já existem (seção 2.5). Se o canal oficial for caro, lento ou burocrático, a demanda continua lá fora; se o estúdio punir o comprador, perde jogadores (o dilema do Tibia com bots — [F04](fichas/F04-tibia.md)). *Mitigação:* canal oficial mais barato e seguro, punição ao vendedor, política publicada antes do lançamento.
+6. **Corrida com solos e com a Jagex.** [F] Solos lançam idle MMOs de navegador em pouco mais de um ano (o Scapewatch começou em ago/2025 e saiu em set/2026 — [A10](fichas/A10-nova-onda-idle-2023-2026.md)), e o *Melvor Idle 2* chega com a marca RuneScape. *Mitigação:* competir onde os solos não alcançam (economia segura, Brasil, temporadas, confiança), não em quantidade de skills.
+7. **Segmentos em conflito.** [H] O purista odeia online obrigatório, o jogador de economia quer risco e perda, o AFK de celular quer simplicidade e o veterano brasileiro quer guerra. *Mitigação:* núcleo idle que funciona sem mercado nem guerra; camadas opcionais; temporadas e mundos com regras diferentes para apetites diferentes (modelo dos tipos de mundo do Tibia).
+8. **Território vira bola de neve ou plantão.** [F] Albion e New World (seção 4, H1). *Mitigação:* guerra assíncrona, sazonal e opcional, com orçamento de ações, janelas anunciadas e cofre protegido ([03](03-alem-do-idle.md)).
+9. **Contar com a receita do AFK de celular sem poder usar a monetização dele.** [F] O gacha pago está vetado a menores no Brasil e exige verificação de idade ([05b](05b-rmt-legal-brasil.md)); a aquisição paga encareceu (seção 1.1). *Mitigação:* tratar o celular como canal de entrada, não como modelo de negócio; monetização de conveniência e cosmético.
+10. **Decidir com números frágeis.** [F] Boa parte dos números deste estudo é declaração de empresa (Poki, CrazyGames, GGMAX) ou estimativa de terceiro (AppMagic, Sensor Tower, Steam Page Analyzer, consultorias com divergência de 15 vezes). *Mitigação:* decisões que sobrevivam a erro de ±50%; medir com dados próprios (lista de desejos no Steam, playtest, cadastro antecipado).
+11. **O mercado brasileiro esfria.** [F] A fatia de brasileiros que jogam caiu de 82,8% para 75,3% entre as PGB de 2025 e 2026 (seção 2.1). *Mitigação:* acompanhar a PGB 2027 antes de dimensionar metas; o público de MMO é um nicho estável dentro do total (Tibia e Ragnarok atravessaram 20 anos).
+12. **Regras de pagamento e de plataforma mudam.** [F] O acordo Apple–CADE vale por três anos; o MED 2.0 do Pix pode alcançar contas posteriores numa fraude ([05b](05b-rmt-legal-brasil.md)); um provedor único de pagamento travou o Idlescape por mais de um ano ([C03](fichas/C03-idlescape.md)). *Mitigação:* mais de um provedor, retenção de bens comprados há pouco, monitoramento das regras de lojas e do BCB.
 
 ## Fontes
 

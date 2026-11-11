@@ -28,8 +28,8 @@ Protocolo de pesquisa, etiquetas de evidência e mapa de arquivos: [`01-pesquisa
 - **Prontas:** 39 de 47 fichas. Grupos completos: B (6), C (6), F (9), G (7). Parciais: A (A01–A06), D (D01–D02), E (E01–E03). Estudos prontos: teoria do design idle (02a), jurídico Brasil (05b). Gravados em parte: além do idle (03), jurídico global (05c), técnica (07).
 - **Faltam 8 fichas:** Kittens Game (A07), Trimps (A08), Egg Inc. (A09), radar 2023–2026 (A10), Kingdom of Loathing (D03), OGame (D04), Travian (D05), 4ª ficha de mobile AFK (E04).
 - **Notas de síntese:** achados de cada relatório em [`01-pesquisa/_notas-de-sintese.md`](01-pesquisa/_notas-de-sintese.md).
-- **Estudos prontos:** 02a, 03, 05b, 05c, 07.
-- **Rodando no Opus:** monetização e retenção (06), mercado e posicionamento (08); **onda 2:** economia — fontes, drenos e inflação (04a), mercados, proteções e bots (04b), RMT — modelos e mercado paralelo (05a) e recomendação (05d).
+- **Estudos prontos:** 01 (mapa do gênero), 02 (padrões, matriz e leis), 02a, 03, 04b, 05b, 05c, 06, 07.
+- **Rodando no Opus:** mercado e posicionamento (08), fontes, drenos e inflação (04a), RMT — modelos e mercado paralelo (05a) e recomendação (05d).
 - **Grupo E completo** (E04 = Capybara Go!, escolhido por dados de receita).
 - **Prontas depois do último balanço:** Egg Inc. (A09), Capybara Go! (E04), Kittens Game (A07), Trimps (A08), OGame (D04), Travian (D05), radar 2023–2026 (A10) e duas fichas extras do radar: Scapewatch (A11) e Deep Vein Idle (A12), idle MMOs lançados em set/2026 e Kingdom of Loathing (D03) — **todas as 47 planejadas + 2 extras = 49 fichas.** Índice em [`01-pesquisa/01-mapa-do-genero.md`](01-pesquisa/01-mapa-do-genero.md).
 - **Estudos gravados em parte (2026-11-11):** além do idle (03), fontes e drenos (04a), jurídico global (05c), monetização (06), técnica (07), mercado (08).
