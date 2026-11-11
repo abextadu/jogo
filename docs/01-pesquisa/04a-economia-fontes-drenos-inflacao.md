@@ -111,7 +111,7 @@
 
 **Leitura [H]:**
 
-- **O token mede duas coisas ao mesmo tempo:** a inflação da moeda e a oferta e a demanda do próprio token. Em três casos o token caiu enquanto a massa de moeda crescia: EVE em 2025–26 (PLEX grátis e mercado global), Torn em 2016–22 (rota de jogo pelo museu) e OSRS em 2026. Mais pagantes (MWI depois do Steam) ou mais usos para o token (saldo Battle.net no WoW) também mexem no preço sem que a moeda mude. Ler o token como índice de preços puro leva a diagnóstico errado; ele precisa de uma cesta de bens e da massa monetária ao lado.
+- **O token mede duas coisas ao mesmo tempo:** a inflação da moeda e a oferta e a demanda do próprio token. Em três casos o token caiu enquanto a massa de moeda crescia: EVE em 2025–26 (PLEX grátis e mercado global), Torn em 2016–22 (rota de jogo pelo museu) e OSRS em 2026, num jogo cuja própria desenvolvedora admite que os drenos não acompanham a entrada de gold. Mais pagantes (MWI depois do Steam) ou mais usos para o token (saldo Battle.net no WoW) também mexem no preço sem que a moeda mude. Ler o token como índice de preços puro leva a diagnóstico errado; ele precisa de uma cesta de bens e da massa monetária ao lado.
 - **A inflação mais destrutiva é a do lançamento.** No GW2 o ouro perdeu ~98% do valor em dólar nos primeiros 2,5 anos e depois passou a inflar ~6% ao ano. É a melhor referência de longo prazo da amostra.
 - **WoW e Albion vivem com ~20% ao ano.** Nenhum dos dois quebrou, mas o custo em ouro de tudo o que o token compra subiu na mesma proporção para quem não paga.
 - **Régua provisória** para a nossa simulação: um dígito por ano contra o token é saudável; dois dígitos, inflação crônica; três dígitos, problema de lançamento ou de desenho (o MWI).
@@ -123,7 +123,7 @@
 - [F] **EVE, 2025–2026:** a massa de ISK subiu 7,5% em 12 meses até nov/2025 ([Nosy Gamer](https://nosygamer.blogspot.com/2025/12/eve-onlines-november-2025-monthly.html)). Em 12 meses até fev/2026, o índice de minerais caiu ~52%, o de naves ~21% e o de módulos ~13%, e a velocidade do ISK seguiu em queda ([TAGN, post de 13/03/2026](https://tagn.wordpress.com/category/eve-online/eve-monthly-economic-report/)). O MER publica um gráfico de velocidade da moeda entre seus 23 gráficos ([MER set/2026](https://www.eveonline.com/news/view/monthly-economic-report-september-2026)).
 - [H] **Leitura pela equação de trocas (M·V = P·Q):** se os jogadores entesouram (V cai) e a produção cresce (Q sobe, com mais mineração, automação ou bots), os preços caem mesmo com a massa subindo. A massa isolada não diz se há inflação. Num idle esse quadro é o padrão: Q cresce sozinho, porque a produção roda 24 horas, e V tende a ser baixo, porque o jogador está ausente e a carteira acumula. O dinheiro parado pode voltar de uma vez: o "Active ISK Delta" do EVE, o ISK que entra e sai com jogadores que voltam ou se afastam, foi de +82,2 tri em ago/2026 a −144,7 tri em set/2026 ([MER set/2026](https://www.eveonline.com/news/view/monthly-economic-report-september-2026)).
 - [H] **Conta de ordem de grandeza (EVE, jan/2026):** o gasto no mercado foi de ~841 tri de ISK (533,2 tri em itens de jogo, 132,5 tri em acessórios ligados à loja e 175,1 tri em PLEX, segundo o [Nosy Gamer](https://nosygamer.blogspot.com/2026/02/a-different-look-at-eve-onlines-monthly.html)). Isso equivale a ~32% da massa de nov/2025 (2.614,5 tri): um giro de mercado de ~3,9 vezes por ano. As fontes do mês (203,6 tri) somaram ~7,8% do estoque.
-- [F] **Torn:** o banco central do jogo trabalha com meta explícita de expansão monetária abaixo de 20% ao ano, "para evitar hiperinflação". A oferta cresceu 15,8% em 2016 e 16,3% em 2018, e o economista mediu o impacto de uma feature nova (+0,2% da massa) antes de lançá-la ([D01](fichas/D01-torn.md); [Review 2016](https://www.torn.com/economic_reports/2016review.pdf); [TCT, 2019](https://torncitynewspaper.blogspot.com/2019/08/economic-report-summary.html)).
+- [F] **Torn:** o banco central do jogo trabalha com meta explícita de expansão monetária abaixo de 20% ao ano, para evitar hiperinflação. A oferta cresceu 15,8% em 2016 e 16,3% em 2018, e o economista mediu o impacto de uma feature nova (+0,2% da massa) antes de lançá-la ([D01](fichas/D01-torn.md); [Review 2016](https://www.torn.com/economic_reports/2016review.pdf); [TCT, 2019](https://torncitynewspaper.blogspot.com/2019/08/economic-report-summary.html)).
 - [F] **Black Desert:** com a renda diária de prata por jogador ativo multiplicada por 5 a 6 em quatro anos, a Pearl Abyss desvalorizou a prata frente aos itens pagos, subindo o teto em 94% de uma vez ([aviso oficial, set/2023](https://www.naeu.playblackdesert.com/News/Detail?groupContentNo=5896)).
 - [F] **EverQuest II (2009):** com 314 milhões de transações de quatro meses, Castronova e colegas viram agregados (produção, consumo, massa monetária) que se comportam como os de economias reais, mas com oscilações bem maiores ([USC Annenberg](https://annenberg.usc.edu/node/18646); [registro do artigo](https://vivo.colorado.edu/display/pubid_147301)). Segundo a imprensa, a inflação passou de 50% em cinco meses quando os jogadores correram para itens novos ([IBTimes](https://ibtimes.com/virtual-economies-videogames-used-case-studies-333430)); não conferi no texto do artigo.
 
@@ -180,7 +180,7 @@ O texto fundador do modelo de torneira e ralo, apresentado na Computer Game Deve
 
 ### 4.2 Raph Koster
 
-- [F] Koster, que dirigiu o design do UO, descreve a economia do jogo como "radicalmente subsidiada", com lojas de NPC funcionando como torneira de ouro e drenos fracos demais, mesmo com desgaste de itens. O câmbio ficou em ~200 de ouro por dólar durante anos e depois caiu para cerca de um centésimo. A inflação é cara de corrigir porque recompensas, preços de casas e custos fixos estão todos na moeda, e os jogos online costumam fechar o ciclo com um wipe ([Koster, "The evolution of UO's economy"](https://www.raphkoster.com/?p=16263), via [02a](02a-teoria-design-idle.md)).
+- [F] Koster, que escreve a partir do próprio trabalho no UO, descreve a economia do jogo como "radicalmente subsidiada", com lojas de NPC funcionando como torneira de ouro e drenos fracos demais, mesmo com desgaste de itens. O câmbio ficou em ~200 de ouro por dólar durante anos e depois caiu para cerca de um centésimo. A inflação é cara de corrigir porque recompensas, preços de casas e custos fixos estão todos na moeda, e os jogos online costumam fechar o ciclo com um wipe ([Koster, "The evolution of UO's economy"](https://www.raphkoster.com/?p=16263), via [02a](02a-teoria-design-idle.md)).
 - [F] No ensaio "Economies in a virtual setting", ele conta que o UO abandonou a simulação econômica realista porque não era divertida: lojas abarrotadas, falências e oscilações de preço desestabilizavam o jogo. Os jogadores esperam vender o que fabricam a preço estável e tratam a falta de lucro como bug. A preocupação que sobrou com a economia movida por jogadores é se o novato ainda consegue os bens para começar ([raphkoster.com](https://raphkoster.com/gaming/economy.shtml)).
 - [F] Nas "Laws of Online World Design", a economia de torneira e ralo é aquela em que o novo é gerado, se acumula no jogo e sai por um ralo; no vocabulário dele, *sink* é o reservatório, não o dreno (resumo de busca de [raphkoster.com/gaming/laws.shtml](https://raphkoster.com/gaming/laws.shtml)). [H] Hoje *sink* virou sinônimo de dreno. Neste estudo, "dreno" é sempre o que destrói.
 - [H] **O que importa para nós:** inflação é barata de criar e cara de desfazer. Como tudo está cotado na moeda, revertê-la exige reprecificar o mundo inteiro ou recomeçar do zero.
@@ -204,10 +204,10 @@ O texto fundador do modelo de torneira e ralo, apresentado na Computer Game Deve
 | Quem | Onde e quando | O que fez | Lição para nós |
 |---|---|---|---|
 | **Eyjólfur Guðmundsson** | CCP, contratado em jun/2007; saiu em 2014 | [F] Boletim trimestral sobre inflação, crescimento e preços, com índices de minerais, produtos primários, secundários e bens de consumo. Frase de apresentação: "Economic information is the lifeblood of the game" ([CCP, 27/06/2007](https://community.eveonline.com/news/news-channels/press-releases/eve-online-appoints-in-world-economist-1); [Engadget](https://www.engadget.com/2008-11-17-making-money-eve-economic-review-reviewed.html); [F01](fichas/F01-eve-online.md)) | [H] O mesmo dado para todos, publicado com regularidade, é parte do jogo |
-| **CCP Quant, CCP Larrikin e o EVE Online Economic Council** | CCP, 2016–2026 | [F] MER mensal com 23 gráficos (fontes e drenos, massa monetária, velocidade, índices, destruição) e dados brutos em zip; pesquisas de percepção sobre bots ([MER set/2026](https://www.eveonline.com/news/view/monthly-economic-report-september-2026); [Q1 2020](https://www.eveonline.com/article/qcig37/Q1%20Economy%20Review)) | [H] Publicar dados brutos expõe erros (um blogueiro achou um erro de 9% na massa, segundo o [Nosy Gamer](https://nosygamer.blogspot.com/2025/12/eve-onlines-november-2025-monthly.html)), mas dá auditoria de graça |
+| **CCP Quant, CCP Larrikin e o EVE Online Economic Council** | CCP; MER assinado por Quant (2017) e Larrikin (2018), hoje pelo conselho, que já existia em 2020 | [F] MER mensal com 23 gráficos (fontes e drenos, massa monetária, velocidade, índices, destruição) e dados brutos em zip; pesquisas de percepção sobre bots ([MER set/2026](https://www.eveonline.com/news/view/monthly-economic-report-september-2026); [Q1 2020](https://www.eveonline.com/article/qcig37/Q1%20Economy%20Review)) | [H] Publicar dados brutos expõe erros (um blogueiro achou um erro de 9% na massa, segundo o [Nosy Gamer](https://nosygamer.blogspot.com/2025/12/eve-onlines-november-2025-monthly.html)), mas dá auditoria de graça |
 | **John Smith** | ArenaNet, 2012–2017 | [F] Definiu exploit como laço que cria valor sem custo e leva à hiperinflação; usou receitas temporárias na Mystic Forge para absorver excedentes; em 2015 pôs a escassez no centro, cortou a principal fonte de ouro e avisou que viria instabilidade ([blog, 2012](https://guildwars2.com/en/news/john-smith-on-the-state-of-the-guild-wars-2-economy/); [blog, 2015](https://www.guildwars2.com/en/news/the-guild-wars-2-heart-of-thorns-economy)) | [H] Decisão impopular chega com o porquê e com aviso |
 | **Yanis Varoufakis** | Valve, 2012 | [F] Estudou o escambo do Team Fortress 2 com dados de preço completos. Esperava que um item virasse moeda, mas o escambo seguiu dominante; montou um índice de potencial de arbitragem (nov/2011 a mai/2012) e recomendou mostrar os preços correntes dos itens populares, para aumentar as trocas e reduzir a arbitragem ([texto original, espelho](https://gwern.net/doc/economics/2012-varoufakis-teamfortress2arbitrage.html); [Engadget](https://www.engadget.com/2012-06-25-valve-economist-examines-tf2s-sophisticated-barter-system.html)) | [H] Transparência de preço é política econômica: tira a renda de quem vive da informação |
-| **Lt_Wolf** | Torn, relatórios de 2016 a 2019 | [F] Meta de expansão monetária abaixo de 20% ao ano; impacto de feature medido antes do lançamento ([D01](fichas/D01-torn.md)) | [H] Meta pública e análise de impacto prévia |
+| **Lt_Wolf** | Torn; assinou o relatório de 2019 (a série pública começou em 2016) | [F] Meta de expansão monetária abaixo de 20% ao ano; impacto de feature medido antes do lançamento ([D01](fichas/D01-torn.md)) | [H] Meta pública e análise de impacto prévia |
 | **Economistas contratados pela Jagex** | OSRS, 2021 | [F] Ajudaram a montar o pacote contra a inflação: imposto no GE, item sink pago pela arrecadação, ampliação do banco por ~888 mi de ouro no total e um item decorativo de ouro para as casas; só os dois últimos iriam a voto ([mmofallout, 04/11/2021](https://mmofallout.com/jagex-hires-real-world-economists-in-runescape)) | [H] Drenos em pacote, com o que é política monetária fora do voto |
 | **Ramin Shokrizade** (externo) | Crítica ao GW2, 2013 | [F] Chamou o mercado de itens antes do fim de jogo de um dos piores que estudou e elogiou a moeda "apertada", o câmbio de gemas como dreno e as moedas de prestígio ([Game Developer](https://www.gamedeveloper.com/design/guild-wars-2-economy-review)) | [H] Cada faixa do jogo precisa de demanda própria |
 
@@ -255,13 +255,13 @@ Exemplo numérico com E = 1 bilhão por dia:
 | Cenário | Parâmetros | M\* (equilíbrio) | Tempo característico | Leitura |
 |---|---|---|---|---|
 | Só taxa de mercado | a = 0; τ = 5%; V = 1% ao dia (giro de ~3,7 vezes por ano, perto do EVE); s = 0 | 2 trilhões (2.000 dias de emissão) | ~5,5 anos | A massa cresce quase em linha reta por anos: inflação contínua |
-| + consumo embutido | a = 70% | 600 bilhões | ~5,5 anos | O nível cai a 30%, e o crescimento inicial também |
-| + dreno de estoque | a = 0; s = 0,1% ao dia | ~667 bilhões | ~1,8 ano | O dreno de estoque encurta o caminho até o equilíbrio |
+| + consumo embutido | a = 70%; τ, V e s como acima | 600 bilhões | ~5,5 anos | O nível cai a 30%, e o crescimento inicial também |
+| + dreno de estoque | a = 0; s = 0,1% ao dia; τ e V como acima | ~667 bilhões | ~1,8 ano | O dreno de estoque encurta o caminho até o equilíbrio |
 
 Três conclusões [H]:
 
 1. **A taxa de mercado é fraca como dreno principal de um idle**, porque V é baixo. Ela é ótima como freio de especulação e de spam, e ruim como âncora monetária. O EVE confirma em escala: o imposto de transação de mar/2025 (37 tri de ISK por mês) equivale a menos de um quinto das fontes de jan/2026 (203,6 tri), meses diferentes ([F01](fichas/F01-eve-online.md)).
-2. **A alavanca mais forte é a**, o consumo ligado à própria atividade: ele cresce junto com a emissão sem ajuste manual. É o que fazem as orbs do PoE e o aprimoramento do BDO.
+2. **A alavanca mais forte é o parâmetro a**, o consumo ligado à própria atividade: ele cresce junto com a emissão sem ajuste manual. É o que fazem as orbs do PoE e o aprimoramento do BDO.
 3. **O dreno de estoque é necessário para limitar o acúmulo**, mas, num idle, aluguel e decaimento punem o ausente. Ele precisa vir como compra desejada (luxo, projeto de longo prazo, temporada), não como taxa sobre quem está fora.
 
 E o mais importante: **E não é constante.** Ela cresce com o número de contas e com a emissão por conta. Se a emissão por conta crescer exponencialmente com a progressão, M\* cresce exponencialmente, e nenhuma taxa resolve. Daí a regra das duas velocidades.
@@ -336,7 +336,7 @@ O [02a, seção 9.5](02a-teoria-design-idle.md) propõe seis princípios, que es
 | Quem | O que publica | Frequência | Como coleta | Observação |
 |---|---|---|---|---|
 | **EVE Online Economic Council** (MER) | [F] 23 gráficos: mineração, produção, destruição, fontes e drenos, massa, velocidade, índices; dados brutos em zip | Mensal | Servidor | [F] O de setembro de 2026 saiu em 14/10/2026 ([MER](https://www.eveonline.com/news/view/monthly-economic-report-september-2026)); blogs como o [Nosy Gamer](https://nosygamer.blogspot.com/2026/02/a-different-look-at-eve-onlines-monthly.html) reprocessam os dados |
-| **Torn** (Economic Review) | [F] Massa, meta de expansão, preço do point | Anual (2016 a 2019) | Servidor | [D01](fichas/D01-torn.md); o PDF de 2016 devolveu 403 nesta pesquisa |
+| **Torn** (Economic Review) | [F] Massa, meta de expansão, preço do point | Relatórios de 2016 e 2019, pelo menos | Servidor | [D01](fichas/D01-torn.md); o PDF de 2016 devolveu 403 nesta pesquisa |
 | **Albion Online Data Project** | [F] Preços correntes e históricos por item e cidade, e o preço do Gold, via API REST | Contínua | Cliente comunitário que lê o tráfego de rede e envia as ordens que o jogador abriu; não é afiliado à Sandbox, que aceita a leitura, mas não a modificação ([site](https://www.albion-online-data.com/)) | A Sandbox não publica relatório próprio ([F02](fichas/F02-albion-online.md)) |
 | **OSRS, API oficial do GE** | [F] Preço diário de 180 dias por item ([exemplo: Bond](https://secure.runescape.com/m=itemdb_oldschool/api/graph/13190.json)) | Diária | Servidor | — |
 | **OSRS Wiki, Real-time Prices** | [F] Último preço e séries de 5 minutos e 1 hora | Contínua | Negociações enviadas por usuários do RuneLite; API gratuita desde a parceria de 2021 ([RuneLite](https://runelite.net/blog/show/2021-03-08-Wiki-Ge-Partnership); [cliente de terceiros](https://github.com/elertan/osrs-wiki-prices)) | Não oficial, mas é a fonte que a comunidade usa |
@@ -441,4 +441,104 @@ Regras públicas de política monetária, para publicar antes do lançamento. A 
 | **Teto offline como inflação disfarçada** | Ampliar o tempo idle aumenta a oferta, como o IdleMMO admitiu | Toda mudança de teto passa pelo artigo 3 |
 | **Economista sem poder** | Metas de receita passam por cima da política monetária | A constituição vale também para a monetização; mudança só pelo artigo 12 |
 
-<!-- PARTE 6 GRAVADA. Falta: lista de fontes e resumo executivo. -->
+## Fontes
+
+Todos os links foram acessados em novembro de 2026.
+
+**Literatura e academia**
+
+1. [Simpson, "The In-game Economics of Ultima Online"](https://gwern.net/doc/economics/1999-04-07-simpson-theingameconomicsofultimaonline.html) — artigo, CGDC (espelho) — 1999/2000.
+2. [Koster, "The evolution of UO's economy"](https://www.raphkoster.com/?p=16263) — blog do autor — 2002.
+3. [Koster, "Economies in a virtual setting"](https://raphkoster.com/gaming/economy.shtml) — ensaio do autor — sem data (site 1998–2010).
+4. [Koster, "Laws of Online World Design"](https://raphkoster.com/gaming/laws.shtml) — ensaio do autor (lido via trecho de busca).
+5. [Castronova, *Virtual Worlds: A First-Hand Account...*, CESifo WP 618](https://www.cesifo.org/DocDL/cesifo_wp618.pdf) — artigo — dez/2001.
+6. [Edward Castronova](https://en.wikipedia.org/wiki/Edward_Castronova) — Wikipedia.
+7. ["As real as real?" (Castronova et al., *New Media & Society*)](https://vivo.colorado.edu/display/pubid_147301) — registro do artigo — 2009.
+8. [USC Annenberg sobre o estudo do EverQuest II](https://annenberg.usc.edu/node/18646) — universidade — 2009.
+9. [IBTimes, "Virtual economies in videogames used as case studies"](https://ibtimes.com/virtual-economies-videogames-used-case-studies-333430) — imprensa.
+10. [Lehdonvirta e Castronova, *Virtual Economies* (DOI)](https://doi.org/10.7551/mitpress/9525.001.0001) — livro, MIT Press — 2014.
+11. [Oxford Internet Institute, página do livro](https://www.oii.ox.ac.uk/?p=9173) — universidade — 2014.
+12. [Antoine Buteau, resumo de *Virtual Economies*](https://www.antoinebuteau.com/virtual-economies-book-summary/) — resumo de terceiro.
+13. [Hooper, "EVE Online: The Worlds of Wealth and War"](https://dl.digra.org/index.php/dl/article/view/1187) — artigo, DiGRA — 2020.
+14. [PlayLab (Universidade de Tampere), "The dedicated get richer"](https://blogs.tuni.fi/playlab/game-research-highlights/the-dedicated-get-richer/) — blog acadêmico — 06/05/2021.
+15. [Hogan-Hennessy, Xenopoulos e Silva, "Market Interventions in a Large-Scale Virtual Economy"](https://arxiv.org/abs/2210.07970) — preprint, arXiv — 14/10/2022.
+16. [Alharthi et al., taxonomia dos incrementais (CHI 2018)](https://par.nsf.gov/servlets/purl/10061230) — artigo — 2018.
+17. [Varoufakis, "Arbitrage and Equilibrium in the Team Fortress 2 Economy"](https://gwern.net/doc/economics/2012-varoufakis-teamfortress2arbitrage.html) — blog da Valve (espelho) — 2012.
+18. [Equation of exchange](https://en.wikipedia.org/wiki/Equation_of_exchange) e [Gini coefficient](https://en.wikipedia.org/wiki/Gini_coefficient) — Wikipedia.
+
+**Oficiais (estúdios, relatórios e APIs)**
+
+19. [CCP, "EVE Online Appoints In-World Economist"](https://community.eveonline.com/news/news-channels/press-releases/eve-online-appoints-in-world-economist-1) — oficial — 27/06/2007.
+20. [EVE, Monthly Economic Report de setembro de 2026](https://www.eveonline.com/news/view/monthly-economic-report-september-2026) — oficial — 14/10/2026.
+21. [EVE, Ecosystem Outlook](https://eveonline.com/article/qm06cu/) — oficial — 27/12/2020.
+22. [EVE, Q1 2020 Economy Review](https://www.eveonline.com/article/qcig37/Q1%20Economy%20Review) — oficial — 2020.
+23. [CCP, "The Massacre of M2-XFE"](https://www.eveonline.com/news/view/the-massacre-of-m2-xfe) — oficial — 04/02/2021.
+24. [Jagex, Grand Exchange Tax & Item Sink](https://secure.runescape.com/m=news/grand-exchange-tax--item-sink?oldschool=1) — oficial — dez/2021.
+25. [Jagex, imposto de 2%](https://secure.runescape.com/m=news/yama-cas--more?oldschool=true) — oficial — 29/05/2025.
+26. [Jagex, ofertas acima do teto de 32 bits](https://secure.runescape.com/m=news/ge-improvements-beyond-max-cash?oldschool=1) — oficial — 30/09/2026.
+27. [API oficial do GE do OSRS, Bond (item 13190)](https://secure.runescape.com/m=itemdb_oldschool/api/graph/13190.json) — dados oficiais — mai a nov/2026.
+28. [Manual do Tibia](https://www.tibia.com/gameguides/?subtopic=manual&section=characters) — oficial.
+29. [John Smith, "On the state of the Guild Wars 2 economy"](https://guildwars2.com/en/news/john-smith-on-the-state-of-the-guild-wars-2-economy/) — oficial — 14/09/2012.
+30. [ArenaNet, "The Guild Wars 2: Heart of Thorns Economy"](https://www.guildwars2.com/en/news/the-guild-wars-2-heart-of-thorns-economy) — oficial — 12/10/2015.
+31. [API do GW2, câmbio de gemas](https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=1000000) — dados oficiais — 07/11/2026.
+32. [Wiki oficial do GW2, Trading Post](https://wiki.guildwars2.com/wiki/Trading_Post), [Gift of Fortune](https://wiki.guildwars2.com/wiki/Gift_of_Fortune) e [análise histórica do câmbio](https://wiki.guildwars2.com/wiki/User:1Maven/Currency_exchange_historic_data_analysis) — wiki oficial.
+33. [Black Desert, aviso de set/2023](https://www.naeu.playblackdesert.com/News/Detail?groupContentNo=5896) e [wiki de aprimoramento](https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=48) — oficial.
+34. [Blizzard, PTR 2.4 do Diablo II: Resurrected](https://news.blizzard.com/en-us/article/23762796) — oficial — mar/2022.
+35. [Blizzard, fórum: API do WoW Token na China](https://us.forums.blizzard.com/en/blizzard/t/world-of-warcraft-classic-api-update-wow-token-data-in-china/4960) e [preço do token](https://us.forums.blizzard.com/en/wow/t/wow-token-price-hike/1965815) — fórum oficial.
+36. [Torn Economic Review 2016](https://www.torn.com/economic_reports/2016review.pdf) — oficial (403 nesta pesquisa; dados via [D01](fichas/D01-torn.md)) — 2016.
+37. [Wiki do Torn, Item Market](https://wiki.torn.com/wiki/Item_Market) — wiki oficial.
+38. [Galahad Creative, "IdleMMO Economic Changes"](https://www.galahadcreative.com/blog/idlemmo-economic-changes/) — oficial — 21/03/2026.
+39. [Galahad Creative, "Let's talk about idle times"](https://www.galahadcreative.com/blog/lets-talk-about-idle-times/) — oficial — 11/03/2025.
+40. [Galahad Creative, retrospectiva 2022 do SimpleMMO](https://www.galahadcreative.com/blog/simplemmo-looking-back-on-2022-a-year-in-review/) e [log de atualizações](https://web.simple-mmo.com/updates) — oficial.
+41. [Wiki do IdleMMO, Market](https://support.idle-mmo.com/wiki/economy-and-trading/market) — wiki oficial.
+42. [Milky Way Idle, `marketplace.json`](https://www.milkywayidle.com/game_data/marketplace.json), [wiki do Marketplace](https://milkywayidle.wiki.gg/wiki/Marketplace) e [enquete oficial sobre Cowbells](https://steamcommunity.com/app/3224420/discussions/0/600776571073120773) — oficial — 2025–2026.
+43. [Wiki do Idle Clans, Player market](https://idleclans.wiki/w/Player_market) e [Premium](https://idleclans.wiki/w/Premium_membership_token) — wiki.
+44. [Eltharyon (Sandbox), taxa sobre a compra de Gold zerada](https://devtrackers.gg/albion/p/5596ca00-gold-market-purchase-fee-set-to-0) — dev tracker — 2023.
+45. [R v Lakeman [2026] EWCA Crim 4](https://caselaw.nationalarchives.gov.uk/ewca/crim/2026/4) — decisão judicial — 13/01/2026.
+
+**Imprensa e blogs especializados**
+
+46. [Felix Salmon, "Virtual Deflation"](https://www.felixsalmon.com/2007/11/virtual-deflation/) — blog — 15/11/2007.
+47. [Engadget, "EVE Economic Review Reviewed"](https://www.engadget.com/2008-11-17-making-money-eve-economic-review-reviewed.html) — imprensa — 17/11/2008.
+48. [Engadget, Varoufakis e o TF2](https://www.engadget.com/2012-06-25-valve-economist-examines-tf2s-sophisticated-barter-system.html) — imprensa — 25/06/2012.
+49. [Nosy Gamer, jan/2026 do EVE](https://nosygamer.blogspot.com/2026/02/a-different-look-at-eve-onlines-monthly.html), [nov/2025](https://nosygamer.blogspot.com/2025/12/eve-onlines-november-2025-monthly.html), [mar/2025](https://nosygamer.blogspot.com/2025/04/a-look-at-active-isk-delta-in-march-2025.html) e [PLEX](https://nosygamer.blogspot.com/2025/04/new-changes-to-plex.html) — blog — 2025–2026.
+50. [TAGN, categoria do MER](https://tagn.wordpress.com/category/eve-online/eve-monthly-economic-report/) — blog — 2026.
+51. [PC Gamer, ISK destruído em 2025](https://www.pcgamer.com/games/mmo/eve-online-players-destroyed-1-142-260-784-813-930-isk-worth-of-ships-in-2025-which-according-to-my-caveman-level-maths-amounts-to-over-usd6-million-lost-to-the-void/) — imprensa — 2026.
+52. [Mein-MMO, crise do EVE em 2021](https://mein-mmo.de/en/mmorpg-eve-online-is-in-crisis-lowest-player-numbers-in-15-years,697861) — imprensa — 11/07/2021.
+53. [Mein-MMO, taxa do TL](https://mein-mmo.de/en/throne-and-liberty-auction-house-what-are-you-actually-paying-the-luzent-tax-for,1188334) — imprensa — 26/11/2024.
+54. [Mein-MMO, prata do BDO](https://mein-mmo.de/en/mmorpg-black-desert-makes-changes-to-in-game-currency-players-immediately-complain-about-pay2win,821091) — imprensa — 05/05/2022.
+55. [Mein-MMO, Krono do EverQuest](https://mein-mmo.de/en/the-economy-of-a-large-old-mmorpg-is-currently-being-destroyed-someone-gave-me-a-million-gold-as-a-welcome,1061366) — imprensa — 26/11/2023.
+56. [Mein-MMO, ouro do New World](https://mein-mmo.de/en/players-are-allegedly-exploiting-a-bug-in-new-world-raking-in-endless-amounts-of-gold-thanks-to-server-transfer,738789) — imprensa — 21/10/2021.
+57. [Siliconera, ouro do Lost Ark](https://www.siliconera.com/major-lost-ark-update-to-introduce-changes-in-earning-gold/) — imprensa — 15/11/2022.
+58. [Kotaku, infográfico de John Smith](https://kotaku.com/the-guild-wars-2-economy-as-seen-by-its-dark-and-myster-5937545) — imprensa — 24/08/2012.
+59. [Game Developer, crítica de Shokrizade ao GW2](https://www.gamedeveloper.com/design/guild-wars-2-economy-review) — imprensa — 2013.
+60. [Game Informer, taxas do leilão do Diablo III](https://www.gameinformer.com/b/news/archive/2012/05/01/blizzard-details-diablo-iii-auction-house-fees.aspx) — imprensa — 01/05/2012.
+61. [Shacknews, Loot 2.0](https://www.shacknews.com/article/83266/diablo-3-patch-201-deploys-with-loot-20) — imprensa — 2014.
+62. [Slashdot, dupe do EverQuest II](https://games.slashdot.org/story/05/08/16/1927252/crackers-slam-eq2-economy) — imprensa — 16/08/2005.
+63. [Espelho do Slashdot, Koster sobre o SWG](https://slashdot.mozz.us/stories/04/05/10/0338234/?score=3) — imprensa (lido via trecho de busca) — 2004.
+64. [mmofallout, economistas contratados pela Jagex](https://mmofallout.com/jagex-hires-real-world-economists-in-runescape) — imprensa — 04/11/2021.
+65. [Naavik, Axie Infinity parte 2](https://naavik.co/deep-dives/axie-infinity-part-2/) — análise — 2022.
+66. [Wowhead, token acima de 400 mil](https://www.wowhead.com/news/wow-token-price-breaks-400k-all-time-high-in-north-america-335416) — imprensa — 09/10/2023.
+67. [GamingOnLinux, Black Market do Albion](https://gamingonlinux.com/2017/06/albion-onlines-new-black-market-feature-is-sounding-really-interesting) — imprensa — 02/06/2017.
+68. [RuneLite, parceria com a wiki para preços do GE](https://runelite.net/blog/show/2021-03-08-Wiki-Ge-Partnership) — blog do cliente — 08/03/2021.
+
+**Comunidade, wikis e dados de terceiros**
+
+69. [Albion Online Data Project](https://www.albion-online-data.com/) e [API de preços do Gold, 2021](https://west.albion-online-data.com/api/v2/stats/gold.json?date=11-07-2021&end_date=11-08-2021) e [2026](https://west.albion-online-data.com/api/v2/stats/gold.json?count=24) — dados comunitários.
+70. [AlbionMarket.gg](https://albionmarket.gg/guides/black-market-flipping) e [itemku](https://www.itemku.com/en/blog/albion-online/albion-online-regear-guide-estimating-silver-needed-after-pvp-losses/3945/) — guias da comunidade — 2026.
+71. [EVE University, Tax](https://wiki.eveuniversity.org/Tax) — wiki da comunidade.
+72. [warcraft.wiki.gg, Money](https://warcraft.wiki.gg/wiki/Money) e [WoW Token](https://warcraft.wiki.gg/wiki/WoW_Token) — wiki.
+73. [wow.gg, preço do token](https://wow.gg/auction-house/token) — dados de terceiros — nov/2026.
+74. [Maxroll, Currency Exchange do PoE](https://maxroll.gg/poe/currency/currency-exchange-market) — guia.
+75. [TibiaQA, preço das blessings](https://www.tibiaqa.com/3324/whats-the-price-of-a-blessing?show=3325) — site de fãs — 2019.
+76. [Exevo Pan, relatório financeiro de 2025 do Char Bazaar](https://www.exevopan.com/blog/financial-report-2025) — dados de terceiros.
+77. [Torn City Times, fev/2019](https://torncitynewspaper.blogspot.com/2019/02/market-report-february.html), [ago/2019](https://torncitynewspaper.blogspot.com/2019/08/economic-report-summary.html) e [abr/2022](https://torncitynewspaper.blogspot.com/2022/05/market-report-april.html) — jornal da comunidade.
+78. [Guia "Using the Market" do Shop Titans](https://shopkeeper.neocities.org/docs/personal-guides/guide-market) — guia de jogador.
+79. [Thread do Steam sobre o preço das Cowbells](https://steamcommunity.com/app/3224420/discussions/0/600784500009537616/) — comunidade.
+80. [EverQuest Guides, Krono de Oakwynd](https://www.everquestguides.com/everquest-articles/oakwynd-krono-price-tracking-post-duplication-hack/) — site de fã — 01/12/2023.
+81. [osrs-wiki-prices (cliente de terceiros)](https://github.com/elertan/osrs-wiki-prices) e [módulo PowerShell do WoW Token](https://www.powershellgallery.com/packages/BlizzWoWRetailGameData/3.5/Content/Get-WoWTokenIndex.ps1) — código de terceiros.
+
+**Fontes internas**
+
+82. Fichas [C01](fichas/C01-milky-way-idle.md), [C02](fichas/C02-idle-clans.md), [C03](fichas/C03-idlescape.md), [C04](fichas/C04-idlemmo.md), [C05](fichas/C05-simplemmo.md), [C06](fichas/C06-shop-titans.md), [D01](fichas/D01-torn.md), [F01](fichas/F01-eve-online.md), [F02](fichas/F02-albion-online.md), [F03](fichas/F03-runescape-e-osrs.md), [F04](fichas/F04-tibia.md), [F05](fichas/F05-path-of-exile.md), [F06](fichas/F06-world-of-warcraft.md), [F07](fichas/F07-guild-wars-2.md), [F08](fichas/F08-black-desert.md), [F09](fichas/F09-throne-and-liberty-e-lost-ark.md), [G01](fichas/G01-diablo-3-casa-de-leilao.md), [G02](fichas/G02-entropia-universe.md), [G03](fichas/G03-axie-infinity-e-web3.md), [G04](fichas/G04-new-world.md), [G05](fichas/G05-banana-e-bongo-cat.md), [G06](fichas/G06-idles-que-morreram.md), [G07](fichas/G07-economias-que-colapsaram.md).
+83. [02a — Teoria do design idle](02a-teoria-design-idle.md), seção 9, e [_notas-de-sintese](_notas-de-sintese.md).

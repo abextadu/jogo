@@ -31,7 +31,7 @@
 - **[F] Lançamentos com a tag Idler por ano:** 84 (2020), 245 (2021), 266 (2022), 329 (2023), 572 (2024), 940 (2025) e 1.566 em 2026 até 27/9, +150% sobre as mesmas semanas de 2025. São 6.747 páginas com a tag, 4.122 lançadas e 2.625 ainda por lançar ([Steam Page Analyzer, 27/9/2026](https://www.steampageanalyzer.com/niches/idler)). É um rastreador de terceiros que lê a busca pública do Steam; a tag é dada pela comunidade.
 - **[F] A taxa de acerto ainda é maior que a média do Steam.** Na safra jan/2024–jun/2025, 5,6% dos jogos Idler chegaram a 1.000 reviews, contra 4,2% no Steam inteiro; a mediana foi de 22 reviews, contra 11; o preço mediano dos pagos foi US$ 3,99, e 26,1% eram gratuitos (mesma fonte). A subcategoria "Economy" dentro do Idler teve 46 jogos nessa safra (8,7% chegaram a 1.000 reviews) e já soma 89 lançamentos em 2026, contra 31 nas mesmas semanas de 2025.
 - **[F] Dinheiro no Steam idle (estimativas da AppMagic, abr/2026):** o *IdleOn* fez mais de US$ 22 milhões em 2025 e ~US$ 59 milhões acumulados; *The Farmer Was Replaced*, US$ 6,8 milhões; *Cast n Chill* e *Spirit City*, US$ 5,3 milhões cada em 2025 ([AppMagic](https://appmagic.rocks/research/idle-steam-games-2026), via [A10](fichas/A10-nova-onda-idle-2023-2026.md)). Os premium baratos têm cauda curta: *Gnorp Apologue* perdeu ~95% do pico em três anos e *Nodebuster* ~97% em dois ([A10](fichas/A10-nova-onda-idle-2023-2026.md)).
-- **[F] Os maiores lançamentos recentes** (desde set/2025) são o *IdleOn* 1.0 (21.812 reviews, 75% positivas), *TBH: Task Bar Hero* (8.435, 62%), *Scritchy Scratchy*, *Berry Bury Berry*, *Bills Must Be Paid*, *Upload Labs*, *Shelldiver* e *The Farmer Was Replaced* (mesma fonte). A tag "Desktop Companion", criada pela Valve em mai/2026, cresceu 616% em 2026: é a onda dos jogos de barra de tarefas que começou com *Banana* e *Bongo Cat* ([G05](fichas/G05-banana-e-bongo-cat.md)).
+- **[F] Os maiores lançamentos recentes** (desde set/2025) são o *IdleOn* 1.0 (21.812 reviews, 75% positivas), *TBH: Task Bar Hero* (8.435, 62%), *Scritchy Scratchy*, *Berry Bury Berry*, *Bills Must Be Paid*, *Upload Labs*, *Shelldiver* e *The Farmer Was Replaced* (mesma fonte). A tag "Desktop Companion", criada pela Valve em mai/2026, aparece em 136 lançamentos Idler de 2026 contra 19 nas mesmas semanas de 2025 (+616%), em parte porque a tag é nova: é a onda dos jogos de barra de tarefas que começou com *Banana* e *Bongo Cat* ([G05](fichas/G05-banana-e-bongo-cat.md)).
 - **[F] Idle MMO ainda é fatia pequena da tag.** Uma busca no Steam por Idler + Massively Multiplayer retornou 194 resultados em 8/11/2026 ([busca no Steam](https://store.steampowered.com/search/?tags=615955%2C128&category1=998&ndl=1)), contra mais de 4 mil jogos Idler lançados. Entre os primeiros resultados há muitos idles chineses de cultivo e "lendas", e estreantes de 2026 como *Scapewatch: Idle MMO* (25/9/2026) e *idle.am – lofi idle mmo* (2/10/2026). [H] A busca pode incluir páginas ainda não lançadas, então trate o 194 como ordem de grandeza.
 - **[H] Leitura.** A oferta de idles no Steam quase triplicou de 2023 para 2025 e acelera em 2026. Um idle genérico some na prateleira. O que ainda tem pouca gente é a interseção idle + MMO + economia, e quem está lá é quase sempre equipe de uma a três pessoas (seção 1.4).
 
@@ -278,27 +278,26 @@ Posições a partir das fichas e das linhas da matriz de cada uma; a posição e
 ### 5.2 Mapa B: profundidade da economia × pacote Brasil
 
 ```
-  PACOTE BRASIL
-  (idioma + servidor perto + pagamento local + comunidade)
+  PRESENÇA NO BRASIL
         ▲
-  pleno │   ○ Tibia (servidores "-bra", ~45% BR)
-        │   ○ Ragnarok LATAM (>80% BR)                         ┌──────────────────────────┐
-        │                                                      │  LACUNA: idle + economia │
-        │                                                      │  profunda + pacote Brasil│
-        │                                                      └──────────────────────────┘
- idioma │   ● Melvor   ● Scapewatch        ● Idle Clans          ○ Albion (sem servidor
-        │                                                          na América do Sul)
-        │
- nada   │   ● IdleOn (mesmo assim 3,4%     ● Deep Vein (?) ● IdleMMO (?)  ● Milky Way Idle
- visto  │     das reviews em PT-BR)                         ● Torn (?)     ● Shop Titans (?)
-        └──────────────────────────────────────────────────────────────────────────────►
-          nenhuma / troca leve              livro de ordens         livro + token + leilão
-                                   PROFUNDIDADE DA ECONOMIA ENTRE JOGADORES
+ servidor│   ○ Tibia (32 mundos "-bra", ~45% BR)              ┌──────────────────────────────┐
+ e base  │   ○ Ragnarok LATAM (>80% BR)                       │ LACUNA: idle + economia      │
+ BR      │                                                    │ profunda + idioma + servidor │
+         │                                                    │ + Pix + comunidade no Brasil │
+         │                                                    └──────────────────────────────┘
+ só      │   ● Melvor   ● Scapewatch       ● Idle Clans          ○ Albion (sem servidor
+ idioma  │                                                         na América do Sul)
+         │
+ nada    │   ● IdleOn (mesmo assim 3,4%    ● Deep Vein (?)  ● IdleMMO (?)  ● Milky Way Idle
+ visto   │     das reviews em PT-BR)                         ● Torn (?)     ● Shop Titans (?)
+         └──────────────────────────────────────────────────────────────────────────────►
+           nenhuma / troca leve             livro de ordens         livro + token + leilão
+                                  PROFUNDIDADE DA ECONOMIA ENTRE JOGADORES
 ```
 
-Fontes das posições: idiomas na seção 2.6; servidores e base brasileira nas seções 2.4 e [F04](fichas/F04-tibia.md), [F02](fichas/F02-albion-online.md), [C04](fichas/C04-idlemmo.md) (servidor em Londres); economia nas linhas da matriz das fichas. "?" = não verificado (idiomas do Shop Titans, do IdleMMO, do Deep Vein e do Torn não foram conferidos).
+Fontes das posições: idiomas na seção 2.6; servidores e base brasileira nas seções 2.4 e [F04](fichas/F04-tibia.md), [F02](fichas/F02-albion-online.md), [C04](fichas/C04-idlemmo.md) (servidor em Londres); economia nas linhas da matriz das fichas. "?" = não verificado (idiomas do Shop Titans, do IdleMMO, do Deep Vein e do Torn não foram conferidos). No Tibia e no Ragnarok LATAM, não conferi o idioma do cliente nem os meios de pagamento; a posição se apoia na base brasileira e, no Tibia, nos mundos sul-americanos.
 
-**Leitura [H].** O canto de cima à direita só tem MMOs ativos e antigos (Tibia, de 1997; Ragnarok, de 2002). Nenhum idle combina economia profunda com servidor, pagamento e comunidade brasileiros. É o espaço mais claro do mercado.
+**Leitura [H].** A faixa de cima só tem MMOs ativos e antigos (o Tibia é de 1997; o Ragnarok chegou ao Brasil em 2004). Nenhum idle combina economia profunda com servidor, pagamento e comunidade brasileiros. É o espaço mais claro do mercado.
 
 ### 5.3 Quem tem o quê
 
@@ -383,4 +382,78 @@ Todas são análise do estúdio [H], para alimentar a Fase 2. Para cada uma: em 
 
 ## Fontes
 
-(lista completa ao final)
+Todas acessadas em novembro de 2026. "Via busca" = lida só pelo trecho do buscador.
+
+**Gênero e nicho (seção 1)**
+
+1. [AppMagic: Mobile Games Monetization Report 2025](https://gamedevreports.substack.com/p/appmagic-mobile-games-monetization) — GameDev Reports, resumo de relatório (estimativa de terceiro) — 4/12/2025.
+2. [AppMagic: idle games no Steam, 2026](https://appmagic.rocks/research/idle-steam-games-2026) — dados (estimativa de terceiro), via ficha A10 — 28/4/2026.
+3. [AFK Arena celebrates seventh anniversary and over $1.5bn](https://www.pocketgamer.biz/afk-arena-celebrates-seventh-anniversary-and-over-15bn-in-lifetime-earnings/) — PocketGamer.biz, com dados da AppMagic — 9/4/2026.
+4. [Revenue for Legend of Mushroom neared $300 million](https://wnhub.io/news/finance/item-43484) — WN Hub, com dados da Sensor Tower — 20/5/2024.
+5. [Top Idle RPGs on Android in the US: Q2 2025](https://sensortower.com/blog/2025-q2-android-top-5-idle%20rpg-revenue-us-6040bbc2241bc16eb883a0cb) — Sensor Tower (dados) — 2025.
+6. [Idler Games on Steam: 2026 Niche Data](https://www.steampageanalyzer.com/niches/idler) — Steam Page Analyzer (dados de terceiro) — 27/9/2026.
+7. [Busca no Steam: Idler + Massively Multiplayer](https://store.steampowered.com/search/?tags=615955%2C128&category1=998&ndl=1) — Steam (dados oficiais) — consultada em 8/11/2026.
+8. [Inside Poki's vision for the future of browser gaming](https://www.mgoddess.com/news/inside-poki-s-vision-for-the-future-of-browser-gaming/?lang=en) — imprensa (número declarado pela empresa) — 2026, via busca.
+9. [Poki hits 1 billion monthly plays](https://techfundingnews.com/browser-gaming-website-poki-won-big-at-the-dutch-game-awards-celebrating-hitting-1-billion-monthly-plays/) — Tech Funding News — 2025, via busca.
+10. [The huge, hidden web game market no one talks about](https://www.gamedeveloper.com/business/the-huge-hidden-web-game-market-no-one-talks-about-and-how-to-get-in-) — Game Developer (artigo de executivo da Playgama) — 15/4/2025.
+11. [CrazyGames hits 35M users](https://gamesbeat.com/crazygames-hits-35m-users-for-browser-games-and-launches-social-multiplayer-features/) — GamesBeat — 2025, via busca.
+12. [Jagex announces partnership… Melvor Idle 2: A RuneScape Adventure](https://www.jagex.com/news/jagex-announces-partnership-with-games-by-malcs-to-publish-idle-adventure-sequel-melvor-idle-2-a-runescape-adventure) — oficial — 29/10/2026 (via ficha B01).
+13. [Introducing Melvor Idle 2 – A RuneScape Adventure](https://secure.runescape.com/m=news/introducing-melvor-idle-2---a-runescape-adventure) — oficial — 29/10/2026 (via ficha B01).
+14. [Scapelikes](https://scapelikes.com/) — agregador de idle MMOs — via ficha A10.
+15. [Rangard: Idle MMORPG](https://apps.apple.com/us/app/id6753210334) — App Store (EUA) — nov/2026, via busca.
+
+**Brasil (seção 2)**
+
+16. [Após pico, número de jogadores brasileiros cai, segundo PGB](https://www.meioemensagem.com.br/marketing/apos-pico-numero-de-jogadores-brasileiros-cai-segundo-pgb) — Meio & Mensagem (Pesquisa Game Brasil 2026) — 9/4/2026.
+17. [Pesquisa Game Brasil 2026 destaca preocupação com IA](https://www.omelete.com.br/games/pesquisa-game-brasil-2026-ia-jogos) — Omelete — 2026, via busca.
+18. [The global gaming market in 2026](https://latam.gamescom.global/en/the-global-gaming-market-in-2026/) — gamescom latam, com dados da Newzoo (atualização de ago/2026) — sem data na página.
+19. [NetEase Games Club partners with EBANX](https://www.pocketgamer.biz/netease-games-club-partners-with-ebanx-projecting-84bn-in-latam-revenue-this-year/) — PocketGamer.biz — 1/10/2026.
+20. [Brazil Gaming Market 2025](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/) — Allcorrect (compilação de terceiros; cita AppMagic e dados do setor) — 9/9/2025.
+21. [Brazil Gaming Market Outlook](https://www.6wresearch.com/industry-report/brazil-gaming-market-outlook) — 6Wresearch (consultoria) — via busca.
+22. [Brazil Gaming Market](https://www.imarcgroup.com/brazil-gaming-market) — IMARC (consultoria) — via busca.
+23. [Steam Hardware & Software Survey](https://store.steampowered.com/hwsurvey/) — Valve (dados oficiais) — out/2026.
+24. [Pix ganha o volume, cartão segue com o faturamento](https://www.vtex.com/pt-br/noticias/pix-avanca-mas-cartao-resiste-no-e-commerce) — VTEX (cita Global Payments Report 2026, Appmax, Nuvemshop, Visa) — 24/9/2026.
+25. [Pagamentos por Pix dominam 42% do e-commerce nacional em 2025](https://panoramafarmaceutico.com.br/pagamentos-por-pix-dominam-42-do-e-commerce-nacional-em-2025/) — Panorama Farmacêutico — 2026, via busca.
+26. [Ragnarok Origin: ROO agora aceita Pix](https://www.prnewswire.com/br/comunicados-para-a-imprensa/ragnarok-origin-roo-agora-aceita-pix-como-forma-de-pagamento-302118355.html) — PR Newswire (comunicado) — abr/2024, via busca.
+27. [NetEase e EBANX: Pix em games na América Latina](https://www.letsmoney.com.br/noticias/netease-ebanx-pix-games-america-latina/) — Let's Money — 2026, via busca.
+28. [Melvor Idle na loja brasileira](https://store.steampowered.com/app/1267910/?l=brazilian) — Steam — nov/2026.
+29. [Steam regional pricing guide](https://www.steampageanalyzer.com/blog/steam-regional-pricing-guide) — guia de terceiro — via busca.
+30. [Steam Regional Pricing in 2026](https://marix.app/library/guides/steam-regional-pricing-policy-2026-changes) — guia de terceiro — via busca.
+31. [Ragnarok Online Brasil anuncia encerramento dos servidores após 22 anos](https://criticalhits.com.br/games/ragnarok-online-brasil-anuncia-encerramento-dos-servidores-apos-22-anos/) — Critical Hits — 2026, via busca.
+32. [Fim do Ragnarok Brasil](https://www.exitlag.com/news/pt/fim-do-ragnarok-brasil/) — ExitLag — 2026, via busca.
+33. [Ragnarok Online LATAM completa um ano](https://www.portaltela.com/noticias/geral/2026/06/03/ragnarok-online-latam-completa-um-ano-com-a-maior-atualizacao-brasil-no-centro/) — Portal Tela — 3/6/2026.
+34. [Free Fire cresce 40% e leva Garena ao maior resultado desde 2021](https://www.freefiremania.com.br/noticia/free-fire-cresce-garena-maior-resultado-2021.html) — Free Fire Mania (site de fãs sobre o balanço da Sea Limited) — 2026, via busca.
+35. [Descaso da InnoGames com os travamentos do Tribal Wars brasileiro](https://www.change.org/p/descaso-da-inno-games-com-os-travamentos-do-tribal-wars-brasileiro) — Change.org (comunidade) — sem data, via busca.
+36. [Tribal Wars – Você já jogou?](https://www.gamevicio.com/?p=16921) — GameVicio — sem data, via busca.
+37. [GGMAX — Torne-se vendedor](https://ggmax.com.br/torne-se-vendedor) e [blog GGMAX](https://ggmax.com.br/blog/5-dicas-para-vender-sua-conta-de-jogo-online-rapidamente) — empresa — via busca (a página de categorias retornou 403).
+38. [Conheça a GGMAX](https://observatoriodegames.com.br/mercado/conheca-a-ggmax-o-marketplace-que-promove-a-compra-e-venda-de-ativos-digitais-com-seguranca) — Observatório de Games (publieditorial) — 31/5/2022.
+39. [ElojobMax — contas à venda](https://elojobmax.com.br/contas) — loja — via busca.
+40. [NTSkins](https://csmarketcap.com/markets/ntskins) — csmarketcap (dados de terceiro) — via busca.
+41. [Bleik Store](https://steamcommunity.com/groups/bleikstore) — grupo da comunidade Steam — via busca.
+42. [Rich Brazilian wants to buy the strongest hero in German MMORPG](https://mein-mmo.de/en/rich-brazilian-wants-to-buy-the-strongest-hero-in-german-mmorpg-owner-has-been-playing-him-for-16-years-demands-100000-e,970159) — Mein-MMO — data não verificada, via busca.
+43. [Brasileiro rico quer comprar segundo herói mais forte do Tibia](https://www.xataka.com.br/diversos/sua-dona-joga-com-ele-ha-16-anos-e-exige-quase-r-570-mil-este-brasileiro-rico-quer-comprar-segundo-heroi-mais-forte-do-tibia) — Xataka Brasil — data não verificada, via busca.
+44. [Milky Way Idle na loja brasileira](https://store.steampowered.com/app/3224420/Milky_Way_Idle/?l=brazilian) — Steam — 8/11/2026.
+45. [Guild Expansion, Additional Localizations](https://steamcommunity.com/ogg/3224420/announcements/detail/675126099358778792) — anúncio oficial do Milky Way Idle — jul/2026 (corpo não legível).
+46. [IdleOn na loja brasileira](https://store.steampowered.com/app/1476970/?l=brazilian) — Steam — 8/11/2026.
+47. [Idle Clans na loja brasileira](https://store.steampowered.com/app/2103530/?l=brazilian) — Steam — 8/11/2026.
+48. [Scapewatch: Idle MMO](https://store.steampowered.com/app/4671380/) — Steam — nov/2026.
+49. [Histograma de reviews do IdleOn](https://store.steampowered.com/appreviewhistogram/1476970?l=brazilian&review_score_preference=0) e [do Melvor Idle](https://store.steampowered.com/appreviewhistogram/1267910?l=brazilian&review_score_preference=0) — Steam (dados oficiais) — nov/2026.
+50. [Wildlife Studios recebe aporte de US$ 120 milhões e passa a valer US$ 3 bi](https://startups.com.br/noticias/wildlife-studios-recebe-aporte-de-us-120-milhoes-e-passa-a-valer-us-3-bi) — Startups.com.br — data não verificada (o aporte é provavelmente de dez/2020 [NV]), via busca.
+51. [Wildlife Studios — newsroom](https://newsroom.wildlifestudios.com/news) — oficial — via busca.
+52. [Taikodom é lançado oficialmente hoje](https://www.gamevicio.com/?p=5846) e [Taikodom, game 100% brasileiro, sai já em outubro](https://www.gamevicio.com/?p=5653) — GameVicio — 2008, via busca.
+53. [Taikodom](https://en.wikipedia.org/wiki/Taikodom) — Wikipedia — via busca.
+
+**Segmentos e hipóteses (seções 3 e 4)**
+
+54. [r/incremental_games](https://gummysearch.com/r/incremental_games) — GummySearch (dados de terceiro) — sem data de coleta, via busca.
+55. [Incremental Games](https://incrementalgames.org/) — agregador — via busca.
+56. [Brighter Shores — SteamCharts](https://steamcharts.com/app/2791440) — dados — nov/2026.
+57. [Brighter Shores](https://en.wikipedia.org/wiki/Brighter_Shores) — Wikipedia (cita PC Gamer e Eurogamer).
+58. [Game Distribution: Half Your Players Already Buy Direct](https://www.bain.com/insights/game-distribution-half-your-players-already-buy-direct-gaming-report-2026/) — Bain & Company — 18/8/2026.
+59. [Apple permitirá compras externas e lojas alternativas à App Store no Brasil](https://macmagazine.com.br/post/2025/12/23/apple-permitira-compras-externas-e-lojas-alternativas-a-app-store-no-brasil/) — MacMagazine — 23/12/2025.
+60. [Apple libera sistema de pagamentos em apps no Brasil após acordo com o Cade](https://www.portaltela.com/noticias/politica/2026/06/18/apple-libera-sistema-de-pagamentos-em-apps-no-brasil-apos-acordo-com-o-cade/) — Portal Tela — 18/6/2026, via busca.
+61. [Web Push for Web Apps on iOS and iPadOS](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/) — WebKit (oficial) — 16/2/2023.
+
+**Documentos internos citados**
+
+Fichas [A10](fichas/A10-nova-onda-idle-2023-2026.md), [A11](fichas/A11-scapewatch.md), [A12](fichas/A12-deep-vein-idle.md), [B01](fichas/B01-melvor-idle.md), [B02](fichas/B02-legends-of-idleon.md), [C01](fichas/C01-milky-way-idle.md) a [C06](fichas/C06-shop-titans.md), [D01](fichas/D01-torn.md), [E01](fichas/E01-afk-arena-e-afk-journey.md), [E03](fichas/E03-legend-of-mushroom.md), [F01](fichas/F01-eve-online.md) a [F04](fichas/F04-tibia.md), [G03](fichas/G03-axie-infinity-e-web3.md), [G04](fichas/G04-new-world.md), [G05](fichas/G05-banana-e-bongo-cat.md); estudos [02a](02a-teoria-design-idle.md), [03](03-alem-do-idle.md), [05b](05b-rmt-legal-brasil.md), [07](07-tecnica-idles-online.md); [notas de síntese](_notas-de-sintese.md) (achados de F05 e G01 citados por elas).
