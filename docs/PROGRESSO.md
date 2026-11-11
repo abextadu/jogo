@@ -32,7 +32,9 @@
 
 - **Bíblia do GDD:** [`03-gdd/00-biblia.md`](03-gdd/00-biblia.md) ✅ — visão, mundo provisório (Pindorama, Arraial, Bruma), glossário oficial, números-âncora e mapa dos módulos.
 - **Módulos em paralelo (rodando):** 01 loops + 02 progressão; 03 personagem + 04 combate; 05 itens + 06 ofícios; 07 economia; 09 social + 10 live ops; 11 monetização + 12 onboarding; 13 anti-abuso; 14 arte e UI com wireframes HTML.
-- **Depois:** 08 simulação da economia em Node.js (6 a 12 meses; populações casual, hardcore, pagante e bot), ajustes de parâmetros, revisão de consistência entre módulos, índice e checkpoint da Fase 3.
+- **Prontos (2026-11-11):** 01, 02, 05, 06, 07, 09, 10, 11, 12, 13 (todos já no tema medieval).
+- **Rodando:** 03 personagem + 04 combate (bestiário medieval); 14 arte em pixel art; **08 simulação da economia** em Node.js (12 meses; casual, regular, hardcore, pagante e bot; decide por cenário a ferramenta que acelera a fila, a paridade do Coin, o teto em unidades ou valor e a taxa da Troca de Coins).
+- **Depois:** revisão de consistência entre módulos (conflitos em [`03-gdd/_notas-de-integracao.md`](03-gdd/_notas-de-integracao.md)), índice e checkpoint da Fase 3.
 
 A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11-11, com ajustes (tabela abaixo).
 
