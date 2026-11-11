@@ -3,6 +3,7 @@
 > **Escopo.** O único código permitido antes da Fase 5: uma simulação de 12 meses de uma Cidade, em passos diários, que testa a economia desenhada no [07](07-economia.md) com as interfaces de [02](02-progressao.md), [04](04-combate.md), [05](05-itens.md), [06](06-oficios-e-coleta.md), [09](09-social.md), [10](10-live-ops.md), [11](11-monetizacao.md), [12](12-onboarding.md) e [13](13-anti-abuso.md). Toma quatro decisões de reconciliação e devolve uma tabela de parâmetros para o diretor aplicar nos módulos.
 > **Arquivos:** [`08-simulacao/`](08-simulacao/) — `sim.js` (modelo), `relatorio.js`, `parametros.json`, `cenarios.json`, [`README.md`](08-simulacao/README.md) e [`resultados/`](08-simulacao/resultados/) (CSV por cenário, `resumo.json` e o [**relatório com os gráficos**](08-simulacao/resultados/relatorio.html)).
 > **Etiquetas:** [F] fato com fonte · [H] proposta ou premissa do estúdio · [NV] não verificado. **Todo resultado aqui é [H]:** é o que um modelo com premissas de comportamento declaradas produz, não uma previsão. O que vale mais são as **direções** (o que sobe, o que quebra, o que conserta) e as **contradições entre metas**, que o modelo mostra com clareza.
+> **Checkpoint 3 (2026-11-11):** os resultados abaixo são da **1ª rodada**, feita com identidade verificada (conta-fazenda cara) e carência do Coin por meio de pagamento. O Gabriel tirou as duas. A **2ª rodada**, no início da Fase 4, refaz o modelo sem elas, com D15, D16 e o bônus da refeição (seção "2ª rodada", no fim deste módulo).
 
 ## 0. Resumo executivo
 

@@ -1,13 +1,13 @@
 # GDD 12 — Onboarding
 
-> **Escopo.** Os primeiros 5 minutos, a primeira hora, o primeiro dia e a primeira semana, passo a passo: onde entra a verificação de idade, quando se escolhem a vocação e os ofícios mestres, a primeira fila, a primeira volta do ausente, a primeira venda e compra, a primeira encomenda, o primeiro cerco, o ritmo de desbloqueios e as métricas.
+> **Escopo.** Os primeiros 5 minutos, a primeira hora, o primeiro dia e a primeira semana, passo a passo: a entrada sem verificação de idade, quando se escolhem a vocação e os ofícios mestres, a primeira fila, a primeira volta do ausente, a primeira venda e compra, a primeira encomenda, o primeiro cerco, o ritmo de desbloqueios e as métricas.
 > **Depende de:** [00 — bíblia](00-biblia.md), dos módulos 01 (loops) e 02 (progressão). Onde precisa de um número desses módulos, usa o número-âncora da bíblia ou marca "a reconciliar com o módulo X".
 > **Base:** [02a — teoria do design idle](../01-pesquisa/02a-teoria-design-idle.md) (lei do serrote, lei da regra nova, lei das três metas, lei do ausente que não perde), [06 — monetização e retenção](../01-pesquisa/06-monetizacao-retencao.md) (métricas), [05b — jurídico Brasil](../01-pesquisa/05b-rmt-legal-brasil.md) (ECA Digital, Decreto 12.880), [08 — mercado e posicionamento](../01-pesquisa/08-mercado-posicionamento.md) e o [conceito](../02-conceito.md).
 > **Etiquetas:** [F] fato com fonte · [C] consenso da comunidade · [H] proposta ou hipótese do estúdio · [NV] não verificado. **Todo tempo, nível e alvo deste módulo é [H] até a simulação e os playtests.**
 
 ## Resumo
 
-- **O jogador joga antes de se identificar.** Um prólogo de 5 minutos, sem conta, ensina a fila, o ofício, o combate por regras e a ausência. **A verificação de idade entra na chegada à Cidade**, quando o jogador já investiu e já sabe o que ganha ao ficar. Fora do prólogo, tudo exige adulto verificado. É a única mudança proposta sobre uma decisão do Gabriel (seção 2), e é também o que mais reduz o custo de verificação calculado no [11](11-monetizacao.md), §8.5.
+- **O jogador joga antes de criar conta.** Um prólogo de 5 minutos, sem conta, ensina a fila, o ofício, o combate por regras e a ausência. **A conta é criada na chegada à Cidade**, em cerca de 1 minuto, quando o jogador já investiu e já sabe o que ganha ao ficar. **Não há verificação de idade** (decisão do Gabriel no checkpoint 3); o jogo é 18+ pelos termos de uso (seção 2).
 - **Cinco momentos que só este jogo tem:**
   1. No minuto 4, o jogador vê a Cidade real, com moradores e a Obra em andamento, e a sua contribuição entra no Livro da Obra assim que ele chega.
   2. A primeira noite é encenada: oito horas em oito segundos, com o Relatório da volta, para que o jogador entenda o contrato do idle antes de sair pela primeira vez.
@@ -16,7 +16,7 @@
   5. A primeira semana termina na cidadania, que dá voto no Conselho.
 - **O onboarding é uma sequência de atos, não um relógio:** uma regra nova por ato, e cada ato termina num ponto natural de parada. O jogo diz, em voz alta, que o jogador pode sair.
 - **Nenhuma loja no caminho:** sem pacote de iniciante, sem pop-up, sem oferta no Relatório da volta. Os Coins são explicados uma vez, no D3, em contexto.
-- **Alvos** [H]: 40 de cada 100 que começam o prólogo chegam verificados à Cidade. Na base verificada, D1 ≥ 50%, D7 ≥ 25% e D30 ≥ 12%. São metas próximas do top 1% do PC, justificadas pelo filtro do prólogo e da verificação (seção 10).
+- **Alvos** [H]: 50 de cada 100 que começam o prólogo chegam à Cidade com conta. Entre os que criam conta, D1 ≥ 45%, D7 ≥ 22% e D30 ≥ 10%. São metas altas para o gênero, justificadas pelo filtro do prólogo (seção 10).
 
 ## 1. Princípios
 
@@ -33,56 +33,42 @@
 | 7 | **Nenhuma loja no caminho** | O pacote de iniciante com relógio é o padrão do topo do mobile e o que recusamos ([06](../01-pesquisa/06-monetizacao-retencao.md), §3.1); a primeira impressão de "F2P só no nome" é a que mata ([C02](../01-pesquisa/fichas/C02-idle-clans.md)) | [11](11-monetizacao.md), §7.2 |
 | 8 | **Escolha irreversível só depois de experimentar.** Vocação com troca livre no começo; ofícios mestres declarados no teto de aprendiz, com período de experiência | Medo de escolha irreversível afasta ([02a](../01-pesquisa/02a-teoria-design-idle.md), §4.2) | — |
 
-> **Quatro perguntas (do onboarding como um todo)** — Referência: Candy Box e Universal Paperclips (um botão que vira um mundo, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2); Egg, Inc. (contratos cooperativos desde cedo, [A09](../01-pesquisa/fichas/A09-egg-inc.md)); diferencia-se dos idle MMOs que abrem com a grade de skills e o mercado vazio · Problema: ensinar um jogo com 12 ofícios, 5 vocações, 5 balcões e uma cidade sem soterrar o jogador, e fazer a verificação de idade valer a pena · Comportamento: o jogador entende o contrato do idle (sair rende), faz o primeiro negócio com uma pessoa e volta para a primeira encomenda · Risco: atos demais na primeira sessão; por isso cada ato é um ponto de saída, e a próxima regra pode chegar na volta.
+> **Quatro perguntas (do onboarding como um todo)** — Referência: Candy Box e Universal Paperclips (um botão que vira um mundo, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2); Egg, Inc. (contratos cooperativos desde cedo, [A09](../01-pesquisa/fichas/A09-egg-inc.md)); diferencia-se dos idle MMOs que abrem com a grade de skills e o mercado vazio · Problema: ensinar um jogo com 12 ofícios, 5 vocações, 5 balcões e uma cidade sem soterrar o jogador, e fazer a conta valer a pena · Comportamento: o jogador entende o contrato do idle (sair rende), faz o primeiro negócio com uma pessoa e volta para a primeira encomenda · Risco: atos demais na primeira sessão; por isso cada ato é um ponto de saída, e a próxima regra pode chegar na volta.
 
-## 2. Onde entra a verificação de idade
+## 2. A entrada, sem verificação de idade
 
-### 2.1 A fricção, em números
+### 2.1 A decisão
 
-- **[F] Quanto as pessoas desistem.** Um estudo da Carnegie Mellon com um pesquisador de Princeton (ConPro 2026) mediu a desistência diante de barreiras de idade antes de assistir a trechos de filmes para adultos: 1% com autodeclaração, 14% com estimativa por e-mail, **49% com estimativa facial** e **73% a 77% com documento de identidade**, conforme as garantias de privacidade oferecidas. Os autores concluem que métodos robustos podem ser ineficazes na prática se os usuários se recusarem a cumpri-los ([Eric Goldman, Technology & Marketing Law Blog, 26/5/2026](https://blog.ericgoldman.org/archives/2026/05/how-often-do-consumers-balk-at-doing-online-age-authentication.htm); lido no resumo do blog, não no artigo).
-- **[F] Quanto as pessoas esperam.** No piloto europeu euCONSENT, 85% disseram que não esperariam mais de 5 minutos por uma autenticação; 12% dos adultos não concluíram a autenticação e a reautenticação; 21% relataram problema técnico (mesma fonte).
-- **[F] Quanto custa.** Em 2019, o Datavalid do Serpro cobrava R$ 0,80 por validação cadastral e R$ 1,68 por biometria facial, na faixa de até 999 consultas ([Tecnoblog, 19/6/2019](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/)). [H] No cenário base do [11](11-monetizacao.md), §8.5, a R$ 1,00 por conta nova, a verificação consome cerca de 25% da receita bruta.
-- **[F] O que a lei pede.** Verificação sem autodeclaração para funções restritas; dados usados só para essa finalidade, com minimização e eliminação imediata das imagens de documentos (Decreto 12.880, art. 24, §3º, [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2).
+**Checkpoint 3 (2026-11-11), decisão do Gabriel:** nenhuma verificação de idade, em nenhum momento. O jogo continua 18+ pelos termos de uso (decisão 3 do checkpoint 1), sem conferência. Saem do onboarding a etapa de verificação, o custo por conta nova e a tela de privacidade do documento.
 
-[H] **Leitura:** o experimento da Carnegie Mellon mede gente com pouca motivação, diante de um clipe de filme. No nosso caso, a motivação pode ser bem maior se o jogador já jogou, já investiu e entende o que ganha ao entrar. A verificação precisa chegar **depois do investimento e antes de qualquer coisa restrita**.
+- **[F] O que a decisão tira do funil.** Um estudo da Carnegie Mellon com um pesquisador de Princeton (ConPro 2026) mediu a desistência diante de barreiras de idade: 1% com autodeclaração, 14% com estimativa por e-mail, 49% com estimativa facial e 73% a 77% com documento de identidade ([Eric Goldman, Technology & Marketing Law Blog, 26/5/2026](https://blog.ericgoldman.org/archives/2026/05/how-often-do-consumers-balk-at-doing-online-age-authentication.htm); lido no resumo do blog, não no artigo). Era a etapa mais cara do funil, em gente e em reais.
+- **[F] O risco que fica (registrado uma vez, assumido pelo Gabriel).** O ECA Digital proíbe caixas de recompensa em jogos de acesso provável por menores e exige de quem as oferece verificação de idade sem autodeclaração, ou a função desligada por padrão (Lei 15.211/2025, art. 20; Decreto 12.880/2026, arts. 18 e 23; [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2). Sem verificação, o Baú Misterioso fica nesse caso. **Validar com advogado.**
 
-### 2.2 As opções
+### 2.2 O prólogo continua, sem conta
 
-| Opção | Onde a verificação entra | A favor | Contra |
-|---|---|---|---|
-| (A) Na porta | Antes de qualquer jogo | Cumpre a decisão do jogo 18+ ao pé da letra | Pede o passo mais caro (49% a 77% de desistência) a quem nem sabe o que o jogo é; paga a verificação de quem só está olhando |
-| **(B) Depois do prólogo** | Ao fim de um prólogo de 5 min, sem conta, sem interação entre jogadores, sem compra e sem economia; verifica-se para entrar na Cidade | O jogador já investiu (progresso doado, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.3); só verifica quem quer ficar, o que corta custo; o prólogo também serve de demo no Steam e nos portais ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3) | Há 5 min de jogo sem verificação: é uma leitura da decisão "jogo inteiro 18+" que o Gabriel precisa aprovar; precisa de **validar com advogado** |
-| (C) Depois do primeiro dia, em modo visitante | O visitante entra na Cidade sem chat, mercado nem troca, por 24 h | Fricção ainda menor | O visitante estaria no mundo compartilhado, onde o ECA Digital pesa (interação entre usuários, art. 21, [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2); contraria a decisão 18+ |
-| (D) Só na primeira compra ou transferência | Verifica-se para pagar ou negociar | A menor fricção | Contraria a decisão 18+ e desfaz a barreira contra bots e multicontas (P8) |
+[H] O prólogo deixa de ser o filtro antes da verificação e fica como **abertura e demo**: o jogador joga antes de criar conta, investe 5 minutos e entende o que ganha ao ficar (progresso doado, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.3). O mesmo prólogo serve de demo no Steam e nos portais ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3). Condições:
 
-### 2.3 Recomendação: (B), verificar na chegada à Cidade **[proposta de mudança na bíblia]**
-
-**[H] A proposta:** o jogo inteiro continua 18+ com idade verificada. O que fica antes da verificação é um **prólogo**, com estas condições:
 - não tem conta nem coleta dados pessoais; o progresso fica salvo só no aparelho, por 7 dias;
 - não tem chat, troca, mercado, loja, Baú nem qualquer interação com outros jogadores;
 - mostra a Cidade real só como leitura (número de moradores acordados, andamento da Obra, feitos recentes com o apelido público de cada jogador);
-- não produz nada negociável: ao entrar, o servidor concede um kit fixo, igual para todos (seção 3.2), e não importa o que o aparelho diz ter produzido. Isso fecha a porta para script que falsifique o prólogo (a reconciliar com o módulo 13);
+- não produz nada negociável: ao entrar, o servidor concede um kit fixo, igual para todos (seção 3.2), e não importa o que o aparelho diz ter produzido. Isso fecha a porta para script que falsifique o prólogo ([13](13-anti-abuso.md));
 - não tem notificação, recompensa por tempo de uso nem contagem regressiva;
-- a tela de entrada avisa desde o primeiro segundo: "Para maiores de 18. Para entrar na Cidade, confirmamos a sua idade uma vez, em cerca de 2 minutos."
+- a tela de entrada diz desde o primeiro segundo: "Para maiores de 18."
 
-**Texto proposto para a bíblia (§5, decisão do checkpoint 1):** "Jogo inteiro 18+, com idade verificada. Antes da verificação, só um prólogo de demonstração, sem conta, sem interação entre jogadores, sem compra e sem bem negociável." **Validar com advogado** que o prólogo não é "acesso" de menor a funcionalidade restrita (o FAQ da ANPD diz que a vedação expressa ligada a jogos é a loot box, [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2).
-
-### 2.4 Como a etapa de verificação é desenhada
+### 2.3 Como a criação da conta é desenhada
 
 | Elemento | Desenho [H] |
 |---|---|
 | Momento | Minuto ~5, logo depois da tela "Entrar na Cidade", e antes de qualquer função da Cidade |
-| Ordem | (1) conta (e-mail ou login social, ~1 min); (2) verificação (~2 min); (3) nome do personagem |
-| Tempo-alvo | Mediana ≤ 2 min e 95% em ≤ 5 min (o limite de paciência do euCONSENT) |
-| Método | Escolhido no módulo 13. O onboarding exige: funciona no celular, num só fluxo, sem baixar app, com uma alternativa para quem falha no primeiro método |
-| O porquê, na tela | "Uma pessoa, uma conta. É assim que o mercado fica sem bots e o voto no Conselho vale." A verificação é apresentada como a promessa anti-bot do jogo, que é verdadeira (P8), e não como burocracia |
-| Privacidade, na tela | "Não guardamos foto de documento. Guardamos só que você é maior de idade." (Decreto 12.880, art. 24, §3º; o texto exato depende do método; validar com advogado) |
-| Barra de progresso | Três passos, com o tempo restante |
+| Ordem | (1) conta: e-mail ou login social, aceitação dos termos (que dizem que o jogo é 18+) e a chave de recuperação, mostrada uma vez (~1 min); (2) nome do personagem |
+| Tempo-alvo | Mediana ≤ 1 min |
+| O porquê, na tela | "Uma pessoa, uma conta: é a regra da Cidade." A regra é cobrada por detecção, não por documento ([13](13-anti-abuso.md), §4.2) |
+| Chave de recuperação | "Guarde esta chave. Com ela você recupera a conta se perder a senha ou o aparelho." Botões para copiar e baixar; o jogo não mostra de novo ([13](13-anti-abuso.md), §4.3) |
+| Barra de progresso | Dois passos, com o tempo restante |
 | O que vai junto | A tela lembra o que espera do outro lado: o nível de ofício do prólogo, a escama da criatura libertada (cosmético preso) e a contribuição para a Obra com o nome do jogador |
-| Falha | Nova tentativa, método alternativo, atendimento humano em português; mensagem sem culpa |
-| "Agora não" | A conta fica criada e travada; o prólogo continua salvo por 7 dias; **um único** e-mail de lembrete depois de 24 h e nenhum outro (sem notificação excessiva, Decreto 12.880, art. 9º) |
+| "Agora não" | O prólogo continua salvo no aparelho por 7 dias. Sem conta, não há e-mail de lembrete |
 
-> **Quatro perguntas** — Referência: demo jogável antes da conta nos portais ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3) e o progresso doado do lava-rápido (Nunes e Drèze, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.3); diferencia-se dos jogos que pedem documento na porta · Problema: a etapa mais cara do funil, em desistência e em reais · Comportamento: só verifica quem já quer ficar; quem verifica entende a verificação como parte da promessa do jogo · Risco: o prólogo pode ser lido como isca ("joguinho grátis e depois pedem documento"); por isso o aviso vem no segundo zero, e não no minuto 5.
+> **Quatro perguntas** — Referência: demo jogável antes da conta nos portais ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3) e o progresso doado do lava-rápido (Nunes e Drèze, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.3) · Problema: pedir cadastro a quem nem sabe o que o jogo é · Comportamento: só cria conta quem já quer ficar, com pouca fricção · Risco: sem verificação, nada impede menores de entrar; o risco jurídico está na seção 2.1.
 
 ## 3. Os primeiros 5 minutos: o prólogo "A balsa para Pedraforte"
 
@@ -92,7 +78,7 @@
 
 | Tempo | O que acontece | O que o jogador faz | Regra que aprende | Emoção | Metas visíveis |
 |---|---|---|---|---|---|
-| 0:00 | Tela de entrada: nome do jogo, idioma (PT-BR ou inglês) e o aviso "Para maiores de 18. Para entrar na Cidade, confirmamos a sua idade uma vez, em cerca de 2 minutos. O prólogo é livre." | Toca "Embarcar na balsa" | A verificação existe, e se sabe quando vem | Confiança | — |
+| 0:00 | Tela de entrada: nome do jogo, idioma (PT-BR ou inglês) e o aviso "Para maiores de 18. O prólogo é livre, sem conta." | Toca "Embarcar na balsa" | O jogo é para adultos, e começa sem cadastro | Confiança | — |
 | 0:10 | A margem de um rio, a Névoa atrás, um grupo de sobreviventes e um barqueiro | Escolhe uma de três aparências ("dá para mudar depois") | — | Curiosidade | — |
 | 0:20 | "O fogo vai apagar. Precisamos de lenha." | Toca para cortar lenha; cada uma das 5 primeiras unidades sai em 1 s | Ação gera recurso | Competência imediata | Minutos: "Lenha para o fogo: 0/10" |
 | 0:40 | Depois da 5ª unidade, o personagem continua sozinho, com a estimativa na tela: "seu personagem segue trabalhando" | Assiste à fila encher | **A fila: o trabalho continua sem você** | Alívio ("ah, é um idle") | Minutos: "Lenha: 6/10 (≈ 15 s)" |
@@ -102,24 +88,23 @@
 | 3:20 | A balsa chega à margem e se vê a **Cidade real**, ao longe, com dados ao vivo: "Pedraforte: 2.873 moradores acordados agora. Obra da Muralha: 61%." Passam feitos recentes de jogadores reais, com apelidos | Entrega as tábuas que sobraram "para a Obra" | **A cidade é real e é de todos** | Pertencimento | Dias: "Sua casa na Cidade" |
 | 4:00 | "A noite cai. Você pode descansar: seu personagem continua cortando lenha." A noite passa em 8 segundos, com o rótulo "simulação: 8 horas em 8 segundos" | Toca "Descansar" | **A ausência rende** | Surpresa | — |
 | 4:10 | Relatório da volta de demonstração: "Enquanto você dormia: 380 lenhas e 1 nível de Lenhadoria. Nada se perdeu." | Lê | **O ausente nunca perde; o Relatório da volta mostra o plano** | Alívio, vontade de ver de novo | — |
-| 4:40 | "Para entrar na Cidade: crie a sua conta e confirme a idade (cerca de 2 minutos). Vão junto: os seus níveis de Lenhadoria e Carpintaria, a escama da criatura libertada e o seu nome no Livro da Obra." | "Entrar na Cidade" ou "Agora não" (o prólogo fica salvo no aparelho por 7 dias) | Progresso doado | Investimento | Minutos: "Entrar na Cidade (≈ 2 min)"; Horas: "Sua primeira venda"; Dias: "Sua casa na Cidade" |
+| 4:40 | "Para entrar na Cidade: crie a sua conta (cerca de 1 minuto). Vão junto: os seus níveis de Lenhadoria e Carpintaria, a escama da criatura libertada e o seu nome no Livro da Obra." | "Entrar na Cidade" ou "Agora não" (o prólogo fica salvo no aparelho por 7 dias) | Progresso doado | Investimento | Minutos: "Entrar na Cidade (≈ 1 min)"; Horas: "Sua primeira venda"; Dias: "Sua casa na Cidade" |
 
 ### 3.2 Regras do prólogo
 
-- **Nada do que o prólogo "produz" vira bem negociável.** As 380 lenhas da noite encenada são demonstração. Ao entrar, o servidor concede um **kit fixo, igual para todos**: os níveis do prólogo (Lenhadoria 3, Carpintaria 2), a escama (cosmético preso à conta) e uma contribuição fixa para a Obra em nome do jogador. *Por quê:* o prólogo roda no aparelho, e um script poderia falsificar o que ele diz ter produzido (P2 e P9; a reconciliar com o módulo 13).
+- **Nada do que o prólogo "produz" vira bem negociável.** As 380 lenhas da noite encenada são demonstração. Ao entrar, o servidor concede um **kit fixo, igual para todos**: os níveis do prólogo (Lenhadoria 3, Carpintaria 2), a escama (cosmético preso à conta) e uma contribuição fixa para a Obra em nome do jogador. *Por quê:* o prólogo roda no aparelho, e um script poderia falsificar o que ele diz ter produzido (P2 e P9; [13](13-anti-abuso.md)).
 - **Os dados ao vivo da Cidade** são só leitura e só públicos: número de moradores acordados, andamento da Obra e feitos com o apelido público de cada jogador. O jogador da Cidade pode tirar o próprio apelido do mural (opção de privacidade).
 - **O mesmo prólogo serve de demo** no Steam e nos portais de navegador ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.3 e implicação 4), com o mesmo aviso de idade na entrada.
 - **Carga leve:** o prólogo precisa abrir rápido num celular barato, pela rede móvel (alvo de tamanho no módulo 14 e no 04).
 
-> **Quatro perguntas** — Referência: Candy Box e Universal Paperclips (o botão que vira mundo, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2); o rested XP do WoW reformulado como bônus ([03](../01-pesquisa/03-alem-do-idle.md)), para ensinar a ausência pelo lado bom · Problema: em 5 minutos, mostrar o que é o jogo (idle, ofício, cidade) e por que vale verificar a idade · Comportamento: o jogador entra na Cidade já sabendo que pode sair sem perder nada · Risco: a noite encenada pode confundir ("já passou um dia?"); por isso o rótulo de simulação, e a primeira volta real repete a tela com os números reais.
+> **Quatro perguntas** — Referência: Candy Box e Universal Paperclips (o botão que vira mundo, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2); o rested XP do WoW reformulado como bônus ([03](../01-pesquisa/03-alem-do-idle.md)), para ensinar a ausência pelo lado bom · Problema: em 5 minutos, mostrar o que é o jogo (idle, ofício, cidade) e por que vale criar a conta · Comportamento: o jogador entra na Cidade já sabendo que pode sair sem perder nada · Risco: a noite encenada pode confundir ("já passou um dia?"); por isso o rótulo de simulação, e a primeira volta real repete a tela com os números reais.
 
 ## 4. A chegada à Cidade (minutos 5 a 12)
 
 | Tempo | Passo | Desenho [H] |
 |---|---|---|
-| ~5:00 | **Conta** | E-mail ou login social; cerca de 1 minuto |
-| ~6:00 | **Verificação de idade** | Seção 2.4; mediana de 2 minutos |
-| ~8:00 | **Nome do personagem** | Único na Cidade; sugestões com nomes do mundo |
+| ~5:00 | **Conta** | E-mail ou login social, termos (18+) e chave de recuperação (seção 2.3); cerca de 1 minuto. Sem verificação de idade |
+| ~6:00 | **Nome do personagem** | Único na Cidade; sugestões com nomes do mundo |
 | ~8:30 | **O barqueiro deixa o jogador no cais de Pedraforte** | Primeira vista de perto da praça, com outros jogadores passando (avatares e apelidos reais) |
 | ~9:00 | **O Livro da Obra** | "Seu nome está no Livro da Obra da Muralha." A contribuição fixa do prólogo vira o primeiro Mérito. É o primeiro "a cidade me reconhece" |
 | ~9:30 | **A casa** | Um lote numa rua de recém-chegados, perto da praça. Casa básica, que se decora depois |
@@ -239,8 +224,8 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 [H] Na quarta sessão, um jogador veterano voluntário se oferece como **padrinho** ou **madrinha**: responde dúvidas por mensagem, mostra a guilda dele e recebe Mérito e um título quando o afilhado chega à cidadania (seção 8.5). O calouro pode aceitar, recusar ou trocar. A reconciliar com o módulo 09.
 
 - **Quem pode ser padrinho:** cidadão há pelo menos 30 dias, sem sanção, com no máximo 3 afilhados ao mesmo tempo.
-- **O padrinho não ganha ouro nem Coins** pelo afilhado. *Por quê:* recompensa em bem negociável criaria fazenda de afilhados; com uma conta por adulto verificado (P8), a fazenda é difícil, mas o incentivo precisa ser de status.
-- **A trava de calouro protege o afilhado:** nos 7 primeiros dias, o calouro tem limite baixo para enviar ouro e Coins pela Troca. *Por quê:* golpes de "eu te ajudo, me manda o ouro" miram o recém-chegado; o limite também atrapalha contas mulas. A reconciliar com os módulos 07 e 13, respeitando a transferência livre.
+- **O padrinho não ganha ouro nem Coins** pelo afilhado. *Por quê:* recompensa em bem negociável criaria fazenda de afilhados; sem verificação de identidade (checkpoint 3), contas falsas custam quase nada, então o incentivo precisa ser de status.
+- **Aviso, não trava, para o afilhado:** na primeira Troca unilateral do calouro, a tela lembra que o estúdio nunca pede ouro e que padrinho não cobra nada. *Por quê:* golpes de "eu te ajudo, me manda o ouro" miram o recém-chegado. A trava de envio prevista antes saiu no checkpoint 3 (transferência imediata, sem freios).
 
 ## 8. A primeira semana (D1 a D7)
 
@@ -308,9 +293,9 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 1. **7 dias desde a chegada** (corridos, sem precisar entrar todo dia; não é sequência de login);
 2. **pelo menos uma contribuição à cidade:** uma entrega numa encomenda, um abastecimento ou posto no cerco, ou uma contribuição à Obra.
 
-**O que a cidadania dá:** voto no Conselho (uma pessoa, um voto, bíblia, glossário), o título "Cidadão de Pedraforte", o fim das faixas e da trava de calouro, e, depois de 30 dias como cidadão, o direito de ser padrinho.
+**O que a cidadania dá:** voto no Conselho (uma conta cidadã, um voto; [09](09-social.md)), o título "Cidadão de Pedraforte", o fim das faixas de calouro, e, depois de 30 dias como cidadão, o direito de ser padrinho.
 
-*Por quê:* a cidadania é a meta de dias da primeira semana, ligada à fantasia (a cidade de todos) e à regra (o voto). A carência de 7 dias também protege o Conselho de contas recém-criadas e das compradas no Bazar de Personagens (o [conceito](../02-conceito.md) já previa carência para votar). **Proposta para o glossário:** "**Calouro** — status dos 7 primeiros dias, com faixas próprias e trava de envio" e "**Cidadão** — status depois da cidadania, com voto no Conselho". A reconciliar com o módulo 09.
+*Por quê:* a cidadania é a meta de dias da primeira semana, ligada à fantasia (a cidade de todos) e à regra (o voto). A carência de 7 dias também protege o Conselho de contas recém-criadas e das compradas no Bazar de Personagens (o [conceito](../02-conceito.md) já previa carência para votar). **Proposta para o glossário:** "**Calouro** — status dos 7 primeiros dias, com faixas próprias" e "**Cidadão** — status depois da cidadania, com voto no Conselho". A reconciliar com o módulo 09.
 
 ### 8.6 A reentrada de quem some
 
@@ -357,7 +342,7 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 | D7 | Cidadania | Voto | — |
 | Depois da cidadania | Fronteira (a partir da 2ª Era) | — | — |
 
-**O jogador pode abrir antes o que está cinza.** O cinza é sugestão de ordem, não trava: quem conhece o gênero e quer ir ao Leilão no primeiro dia pode. O que muda é o que o jogo apresenta e explica. *Por quê:* o desbloqueio como usabilidade, deixando o jogador esconder ou mostrar sistemas (Alharthi et al., [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2). As exceções que travam de verdade são as que protegem: a trava de calouro na Troca e o voto antes da cidadania.
+**O jogador pode abrir antes o que está cinza.** O cinza é sugestão de ordem, não trava: quem conhece o gênero e quer ir ao Leilão no primeiro dia pode. O que muda é o que o jogo apresenta e explica. *Por quê:* o desbloqueio como usabilidade, deixando o jogador esconder ou mostrar sistemas (Alharthi et al., [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2). A exceção que trava de verdade é a que protege o Conselho: o voto só depois da cidadania.
 
 ### 9.3 O painel das três metas
 
@@ -372,7 +357,7 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 
 ## 10. Métricas e alvos
 
-[H] Todos os alvos são hipóteses a validar no alfa. Os benchmarks vêm do [06](../01-pesquisa/06-monetizacao-retencao.md), §4.1, e são quase todos de celular, medidos a partir da instalação; o nosso funil tem um filtro (o prólogo e a verificação) que os benchmarks não têm.
+[H] Todos os alvos são hipóteses a validar no alfa. Os benchmarks vêm do [06](../01-pesquisa/06-monetizacao-retencao.md), §4.1, e são quase todos de celular, medidos a partir da instalação; o nosso funil tem um filtro (o prólogo) que os benchmarks não têm.
 
 ### 10.1 O funil do primeiro dia
 
@@ -380,27 +365,25 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 |---|---|---|---|
 | Começa o prólogo | 100 | — | — |
 | Conclui o prólogo | 75 | 75% | abaixo de 60% |
-| Cria a conta | 55 | 73% | abaixo de 55% |
-| Começa a verificação | 52 | 95% | abaixo de 85% |
-| **Conclui a verificação** | **40** | **77%** | **abaixo de 65%** |
-| Primeira fila real | 39 | 98% | abaixo de 95% |
-| Primeira venda | 35 | 90% | abaixo de 80% |
-| Primeira compra | 32 | 91% | abaixo de 80% |
-| Escolhe a vocação | 30 | 94% | abaixo de 85% |
-| Faz o plano da noite | 29 | 97% | abaixo de 90% |
+| **Cria a conta** | **50** | **67%** | **abaixo de 50%** |
+| Primeira fila real | 49 | 98% | abaixo de 95% |
+| Primeira venda | 44 | 90% | abaixo de 80% |
+| Primeira compra | 40 | 91% | abaixo de 80% |
+| Escolhe a vocação | 38 | 94% | abaixo de 85% |
+| Faz o plano da noite | 37 | 97% | abaixo de 90% |
 
-*Por que 77% na verificação:* no experimento da Carnegie Mellon, com pouca motivação, a desistência foi de 49% na estimativa facial e de 73% a 77% no documento (seção 2.1). O nosso jogador já investiu 5 minutos e sabe o que ganha; o alvo supõe que esse investimento reduz a desistência a um quarto. É a premissa mais frágil do funil, e o alfa precisa medi-la por método.
+*Por que 67% na conta:* sem verificação (checkpoint 3), a única barreira é o cadastro. A versão anterior, com verificação, previa 55 contas e 40 verificados a cada 100; tirar a verificação recupera parte dessa perda, mas não toda, porque quem não ia verificar também desiste do cadastro com mais facilidade. É a premissa a medir primeiro no alfa.
 
 ### 10.2 Retenção
 
-| Métrica | Alvo na base verificada [H] | Alarme | Equivalente desde o início do prólogo | Benchmarks do [06](../01-pesquisa/06-monetizacao-retencao.md) |
+| Métrica | Alvo entre os que criam conta [H] | Alarme | Equivalente desde o início do prólogo | Benchmarks do [06](../01-pesquisa/06-monetizacao-retencao.md) |
 |---|---|---|---|---|
-| **D1** | **≥ 50%** | abaixo de 40% | ~20% | Mobile 2025: top 25% pouco acima de 30%, top 1% de 64% a 68%. PC 2025: top 25% de 15% a 16%, top 1% de 50% a 60%. Idles mobile 2020: top 25% 39,4% |
-| **D7** | **≥ 25%** | abaixo de 18% | ~10% | Mobile 2025: top 25% de 6% a 7%, top 10% de 11% a 12%. PC 2025: top 1% acima de 20% |
-| **D30** | **≥ 12%** | abaixo de 8% | ~4,8% | Mobile 2025: top 25% de 1,6% a 1,8%, top 1% de 13% a 15%. PC 2025: top 1% ~10% |
+| **D1** | **≥ 45%** | abaixo de 35% | ~22% | Mobile 2025: top 25% pouco acima de 30%, top 1% de 64% a 68%. PC 2025: top 25% de 15% a 16%, top 1% de 50% a 60%. Idles mobile 2020: top 25% 39,4% |
+| **D7** | **≥ 22%** | abaixo de 15% | ~11% | Mobile 2025: top 25% de 6% a 7%, top 10% de 11% a 12%. PC 2025: top 1% acima de 20% |
+| **D30** | **≥ 10%** | abaixo de 7% | ~5% | Mobile 2025: top 25% de 1,6% a 1,8%, top 1% de 13% a 15%. PC 2025: top 1% ~10% |
 | **DAU/MAU** | **≥ 30%** | abaixo de 20% | — | Idles mobile 2020: 18%. PC 2025: mediana de 4% a 5% |
 
-**Leitura [H].** Na base verificada, os alvos ficam perto do top 1% do PC e do celular. Isso se justifica pelo filtro: quem chega verificado já jogou, já investiu e já aceitou uma etapa que metade das pessoas recusa. Medidos desde o início do prólogo, os alvos de D7 e D30 ficam acima do quartil superior do celular, e o de D1 fica abaixo, porque a verificação custa gente no primeiro dia. Esses alvos são coerentes com as premissas da projeção de receita do cenário base ([11](11-monetizacao.md), §8.1: DAU/MAU de 30% e contas novas de 35% do MAU por mês).
+**Leitura [H].** Entre os que criam conta, os alvos ficam abaixo dos da versão com verificação (D1 50%, D7 25%, D30 12%), porque o filtro ficou mais fraco: entra também quem desistiria diante do documento. Continuam altos para o gênero, justificados pelo prólogo: quem cria conta já jogou e já investiu. Medidos desde o início do prólogo, ficam parecidos com os anteriores, porque entra mais gente. Esses alvos são coerentes com as premissas da projeção de receita do cenário base ([11](11-monetizacao.md), §8.1: DAU/MAU de 30% e contas novas de 35% do MAU por mês).
 
 ### 10.3 Indicadores de saúde do onboarding
 
@@ -413,7 +396,7 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 | Ofício mestre declarado até o D5 | ≥ 60% | A curva até o 30 está lenta, ou a escolha assusta |
 | Troca de ofício no período de experiência | entre 5% e 20% | Acima de 25%, a escolha está mal informada; abaixo de 2%, a troca está escondida |
 | Participação no primeiro cerco (abastecimento ou guarnição) até o D7 | ≥ 50% | O cerco não aparece para o calouro |
-| Cidadãos no D7, entre os verificados no D0 | ≥ 30% | A meta da semana não está funcionando |
+| Cidadãos no D7, entre as contas criadas no D0 | ≥ 30% | A meta da semana não está funcionando |
 | Nota do Relatório da volta (pesquisa de um toque na terceira volta) | ≥ 4 de 5 | A tela está longa ou não mostra o plano |
 
 ### 10.4 O que não vira meta
@@ -422,14 +405,14 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 
 | Métrica | Por que sem alvo | Quando investigar |
 |---|---|---|
-| Doação na primeira semana | Meta de conversão no começo é o que cria o pacote de iniciante com relógio | Se passar de 8% dos verificados: pode ser sinal de pressão |
+| Doação na primeira semana | Meta de conversão no começo é o que cria o pacote de iniciante com relógio | Se passar de 8% das contas: pode ser sinal de pressão |
 | Tempo de sessão | Aumentar o tempo de tela não é objetivo num idle | Se a mediana passar de 30 min depois do D3: sinal de obrigação |
 | Sessões por dia | Idem | Se a mediana passar de 8: sinal de ansiedade de plantão |
 | Abertura de notificações | Notificação é serviço, não alavanca (Decreto 12.880, art. 9º) | — |
 
 ### 10.5 Como medir
 
-- **Eventos** (no PostgreSQL desde o alfa, como recomenda o [06](../01-pesquisa/06-monetizacao-retencao.md), "Implicações"): início e fim do prólogo, conta criada, verificação (início, sucesso, falha, abandono, **por método**), chegada, primeira fila, primeira venda (para jogador ou NPC, com o tempo), primeira compra, vocação escolhida, plano da noite, cada volta (com o tempo de ausência), primeira encomenda, primeira obra-prima, ofício mestre declarado, troca no período de experiência, primeiro cerco (por porta), cidadania.
+- **Eventos** (no PostgreSQL desde o alfa, como recomenda o [06](../01-pesquisa/06-monetizacao-retencao.md), "Implicações"): início e fim do prólogo, início, abandono e fim da criação de conta, chave de recuperação baixada ou copiada, chegada, primeira fila, primeira venda (para jogador ou NPC, com o tempo), primeira compra, vocação escolhida, plano da noite, cada volta (com o tempo de ausência), primeira encomenda, primeira obra-prima, ofício mestre declarado, troca no período de experiência, primeiro cerco (por porta), cidadania.
 - **Coortes** por dia de chegada, origem (demo do Steam, portal, criador de conteúdo, busca), aparelho e idioma.
 - **Playtests gravados** nos três marcos (5 minutos, 1 hora, 1 dia), com adultos que nunca jogaram idle e com veteranos de MMO, os dois públicos centrais do [08](../01-pesquisa/08-mercado-posicionamento.md) (§3.6).
 
@@ -443,35 +426,34 @@ O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se 
 | 04 — combate | A regra de recuo; o combate do prólogo; a porta de abastecimento e a reserva de calouro no cerco |
 | 05 — itens | Durabilidade do primeiro machado; a escama do prólogo; a regra do lacre |
 | 06 — ofícios | A Mesa de Ofícios; a obra-prima guiada; as receitas do prólogo |
-| 07 — economia | Ordens de compra de bens básicos suficientes para o calouro; venda a NPC no piso; oficina NPC de reforço; aviso de ordem predatória; trava de calouro |
+| 07 — economia | Ordens de compra de bens básicos suficientes para o calouro; venda a NPC no piso; oficina NPC de reforço; aviso de ordem predatória |
 | 09 — social | Padrinho, calouro, cidadão; nota relativa na encomenda; carência do voto |
 | 11 — monetização | Nenhuma loja no caminho; a explicação única do D3; nenhuma oferta no Relatório da volta |
-| 13 — anti-abuso | Método de verificação com mediana de 2 minutos e custo-alvo de R$ 0,40 a R$ 1,00; o kit fixo do prólogo; a trava de calouro |
+| 13 — anti-abuso | Criação de conta sem verificação, com chave de recuperação (checkpoint 3); o kit fixo do prólogo |
 | 14 — arte e UI | O prólogo leve; o painel das três metas; o Relatório da volta; o modo canto de tela; a criatura do prólogo, com desenho próprio e revisão de semelhança |
 
 ## Propostas de mudança na bíblia
 
-1. **[proposta de mudança na bíblia] Decisão do checkpoint 1 (jogo 18+):** acrescentar "Antes da verificação, só um prólogo de demonstração, sem conta, sem interação entre jogadores, sem compra e sem bem negociável" (seção 2.3). **Validar com advogado.**
-2. **[proposta de mudança na bíblia] Glossário:** incluir **Calouro** (status dos 7 primeiros dias, com faixas próprias nas encomendas e no cerco e trava de envio na Troca) e **Cidadão** (status depois da cidadania, com voto no Conselho). A reconciliar com o módulo 09.
+1. **Encerrada no checkpoint 3.** A proposta de prólogo antes da verificação perdeu o objeto: o Gabriel decidiu que não há verificação de idade. O prólogo sem conta continua (seção 2.2).
+2. **[proposta de mudança na bíblia] Glossário:** incluir **Calouro** (status dos 7 primeiros dias, com faixas próprias nas encomendas e no cerco; a trava de envio na Troca saiu no checkpoint 3) e **Cidadão** (status depois da cidadania, com voto no Conselho). A reconciliar com o módulo 09.
 3. **[proposta de mudança na bíblia] Ofício mestre:** a definição do glossário passa a dizer quando a escolha acontece: "declarado ao atingir o teto de aprendiz (30), com uma troca grátis nos 7 dias seguintes à primeira declaração". A reconciliar com o módulo 02.
 
 ## Como isso pode dar errado
 
 | Risco | Como acontece | Mitigação |
 |---|---|---|
-| **A verificação derruba o funil** | A desistência real fica perto dos 49% a 77% do experimento da Carnegie Mellon, e o jogo perde metade de quem queria entrar | Verificar depois do prólogo; método mais leve que o módulo 13 aceitar; medir por método no alfa; alternativa para quem falha; acompanhar o token etário que o governo estuda ([Contábeis, 3/12/2025](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/)) |
-| **O prólogo é lido como isca** | "Joguinho grátis, e depois pedem documento" | O aviso de idade e verificação vem no segundo zero, não no minuto 5; o texto explica o porquê (uma pessoa, uma conta) |
-| **O prólogo sem verificação contraria a decisão 18+** | Um regulador ou o próprio Gabriel entende que o prólogo é "o jogo" | Proposta explícita para o diretor (seção 2.3); prólogo sem conta, sem interação, sem compra; **validar com advogado**; se recusada, a opção (A) e o custo correspondente no [11](11-monetizacao.md), §8.5 |
+| **Menores entram sem barreira** | Sem verificação (checkpoint 3), o aviso "para maiores de 18" é a única barreira; menores chegam ao chat, ao mercado e ao Baú pago | Risco assumido pelo Gabriel. Salvaguardas opcionais, não aplicadas: verificar só quem compra ou abre o Baú, ou Baú desligado por padrão no Brasil (Lei 15.211/2025, art. 20; Decreto 12.880/2026, arts. 18 e 23). **Validar com advogado** |
+| **Contas falsas entram tão fácil quanto jogadores** | O cadastro de 1 minuto serve também a fazendas de bots | O prólogo não dá nada negociável; kit fixo; rampa de conta nova e detecção ([13](13-anti-abuso.md), §2.2 e §4.2) |
 | **A Cidade está vazia para o calouro** | Sem ordens de compra de bens básicos e sem machados à venda, as primeiras trocas são com NPC | Comprador NPC e oficina de reforço; indicador "primeira venda para jogador"; o módulo 07 deve garantir demanda de bens básicos (por exemplo, encomendas e Obras que consomem lenha e pedra) |
 | **Ordens predatórias contra o calouro** | Veteranos põem ordens de compra muito abaixo do preço para pegar quem não sabe | Aviso de preço na venda; a vista "Pedidos da Cidade" ordena pelo melhor preço |
-| **Golpe do padrinho** | O "padrinho" pede ouro ou Coins ao afilhado | Padrinho sem ganho em bem negociável; trava de calouro na Troca; denúncia com um toque; padrinho só cidadão há 30 dias e sem sanção |
+| **Golpe do padrinho** | O "padrinho" pede ouro ou Coins ao afilhado | Padrinho sem ganho em bem negociável; aviso na primeira Troca unilateral do calouro; denúncia com um toque; padrinho só cidadão há 30 dias e sem sanção |
 | **Primeira sessão longa demais** | Prólogo, chegada e três atos somam cerca de 50 minutos, e o jogador cansa no meio | Três pontos de parada; qualquer ato pode chegar na volta; medir o abandono por ato |
 | **Arrependimento da vocação ou do ofício** | A escolha não era o que o jogador esperava | Troca livre de vocação até o nível 10; troca grátis de ofício no período de experiência; alarme se as trocas passarem de 25% |
 | **Efeito manada na Mesa de Ofícios** | Todos escolhem o ofício "em falta", que fica lotado, e outro passa a faltar | Atualização diária; número de mestres por ofício à vista; a simulação testa a oscilação |
 | **O calouro se sente pobre numa Cidade madura** | Veteranos com capital dominam encomendas e cercos | Nota relativa na encomenda; faixas de calouro; a Fronteira como recomeço justo a partir da 2ª Era ([conceito](../02-conceito.md), §3) |
 | **O Relatório da volta fica longo demais** | Linhas demais, ninguém lê, e a regra nova se perde | Limite de três linhas por bloco e uma novidade por volta; nota da tela no indicador de saúde |
 | **A noite encenada confunde** | O jogador acha que passou um dia de verdade, ou que o jogo "mente" sobre o tempo | Rótulo "simulação"; a primeira volta real repete a tela com números reais |
-| **Alvos de retenção otimistas demais** | Os alvos na base verificada estão perto do top 1% de PC e celular | Tratar como hipótese; alarmes definidos; replanejar a receita se o alfa mostrar números menores ([11](11-monetizacao.md), §8.6) |
+| **Alvos de retenção otimistas demais** | Os alvos entre os que criam conta continuam altos para o gênero | Tratar como hipótese; alarmes definidos; replanejar a receita se o alfa mostrar números menores ([11](11-monetizacao.md), §8.6) |
 | **Alvo de métrica vira padrão obscuro** | Alguém cria meta de conversão no D1 ou de tempo de sessão | A lista do que não vira meta (seção 10.4) faz parte do documento e da carta pública |
 
 ## Fontes novas deste módulo

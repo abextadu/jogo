@@ -3,7 +3,7 @@
 > **Escopo.** As quatro moedas, o teto de emissão negociável, a tabela de fontes e drenos de ouro e de itens, os cinco canais de troca (Bolsa, Feira, Leilão, Câmbio e Troca), o Coin, o Bazar de Personagens, o Baú Misterioso, as alavancas contra inflação e manipulação, a constituição econômica da Cidade, o painel diário e a lista de parâmetros para a simulação (módulo 08).
 > **Base:** [bíblia](00-biblia.md) (glossário, seção 6.6 e regras da seção 8), [conceito](../02-conceito.md) (piso P1–P12), [PROGRESSO](../PROGRESSO.md) (decisões do Gabriel), [04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), [04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md), [05d](../01-pesquisa/05d-rmt-recomendacao.md), [00-sintese](../01-pesquisa/00-sintese.md) e as leis 15 a 22 do [02](../01-pesquisa/02-padroes-matriz-leis.md).
 > **Etiquetas:** [F] fato com fonte · [C] consenso da comunidade · [H] proposta do estúdio · [NV] não verificado. **Todo número deste módulo é [H] até a simulação.** Onde ele depende de outro módulo escrito em paralelo, aparece "a reconciliar com o módulo X".
-> **Decisões que este módulo não reabre:** Coins (moeda divisível) creditados por doação em reais, sem reembolso; conta suspensa até regularizar quando a doação é contestada no banco (chargeback, MED); Coins e ouro transferíveis livremente; RMT informal não intermediado nem proibido; Bazar de Personagens desde o lançamento; Baú comprável com Coins e negociável por ouro, com conteúdo em itens; jogo 18+ com idade verificada; sem parecer jurídico (risco assumido pelo Gabriel). Onde uma dessas decisões cria tensão com a pesquisa, o módulo registra a tensão e desenha a mitigação, sem mudar a decisão.
+> **Decisões que este módulo não reabre:** Coins (moeda divisível) creditados por doação em reais, sem reembolso; conta suspensa até regularizar quando a doação é contestada no banco (chargeback, MED); Coins e ouro transferíveis livremente; RMT informal não intermediado nem proibido; Bazar de Personagens desde o lançamento; Baú comprável com Coins e negociável por ouro, com conteúdo em itens; jogo 18+ pelos termos, sem verificação de idade, e transferência imediata, sem carência (checkpoint 3); sem parecer jurídico (risco assumido pelo Gabriel). Onde uma dessas decisões cria tensão com a pesquisa, o módulo registra a tensão e desenha a mitigação, sem mudar a decisão.
 
 ## 0. Resumo
 
@@ -15,7 +15,7 @@
 6. **Bazar de Personagens:** vende o personagem, não o cidadão. Vão junto o progresso, os ajudantes, a casa, os cosméticos aplicados e o equipamento em uso, que fica preso ao comprador por 30 dias. Ficam com o vendedor o Mérito, o ouro, o Coin e o armazém. A taxa de 10% é paga em Coins e destruída. O anúncio só abre depois de um aviso de 72 h ao dono da conta (seção 7).
 7. **Baú Misterioso:** custa 5 Coins (R$ 5, preço do 11; revisão de consistência: R17), publica a tabela de chances com garantia, tem tiragem máxima para o topo e teto de compra e de abertura por mês. Seu conteúdo é negociável até ser aplicado, e aplicar prende o item à conta, o que funciona como dreno de cosméticos (seção 8).
 8. **Constituição pública de 14 artigos:** a meta do IPC vai de 0% a +8% ao ano. O Conselho mexe só na Feira, nas prioridades das encomendas e na escolha da obra. Política monetária não vai a voto (seção 11).
-9. **Coins como moeda divisível:** a doação credita Coins (**1 Coin = R$ 1,00, em unidades inteiras**; premium de 30 dias por 20 Coins; revisão de consistência: R17). O gasto na loja destrói o Coin, que é o dreno dele. A carência vale por lote de doação, e a doação contestada no banco suspende a conta até ela regularizar. Quem recebeu de boa-fé fica com o que recebeu (seção 6).
+9. **Coins como moeda divisível:** a doação credita Coins (**1 Coin = R$ 1,00, em unidades inteiras**; premium de 30 dias por 20 Coins; revisão de consistência: R17). O gasto na loja destrói o Coin, que é o dreno dele. Os Coins doados podem ser transferidos na hora, sem carência (checkpoint 3), e a doação contestada no banco suspende a conta até ela regularizar. Quem recebeu de boa-fé fica com o que recebeu (seção 6).
 
 ## 1. Premissas e escala
 
@@ -141,9 +141,9 @@ A produção acima do teto não se perde. Ela fica na conta, de origem, e tem qu
 ### 3.6 O salário-teto do farmer
 
 [H] Com o Coin a R$ 1,00 e a ~750 ouro (o premium de 30 dias a 20 Coins, R$ 20 e ~15.000 ouro; revisão de consistência: R17), 1 ouro vale ~R$ 0,0013. Uma conta mediana que vendesse todo o teto renderia ~R$ 2,80 por dia (~R$ 84 por mês) a preço oficial. Uma conta no topo renderia ~R$ 163 por mês brutos e ~R$ 105 líquidos de insumos e desgaste (~35% de custo). No RMT informal, o ouro costuma sair abaixo do oficial: no OSRS, a 45% do Bond ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)). Isso deixa o salário de uma conta no topo entre R$ 50 e R$ 75 por mês.
-- **Restrição de desenho [H] (revisão de consistência: R20):** o **lucro de uma conta-fazenda** (conta verificada de terceiro que farma, vende o que pode e repassa o ouro no mercado cinza) fica **em até ~R$ 15 por mês**, medido no painel (seção 12.2). Acima disso, alugar a identidade verificada de um terceiro (o "laranja") passa a compensar. No cenário base da simulação, a fazenda rende ~R$ 16 por mês (R$ 15,50 a R$ 17,50 entre sementes), no limite ([08](08-simulacao.md), seção 7.1).
-- **O salário-teto do topo deixou de ser meta.** No modelo, ele fica em R$ 130 a R$ 160 por mês, mas a conta de topo leva ~100 dias para existir e é única por pessoa: o risco do laranja está na fazenda, não no topo. A simulação também desaconselha baixar a inclinação do teto (de 30 para 25 por nível), porque isso traz de volta a escassez de T5–T6 ([08](08-simulacao.md), iteração 11). O salário-teto continua no painel como indicador interno (revisão de consistência: R20).
-- **Barreiras somadas:** a identidade verificada (P8), os ~90 dias até o nível 100 (bíblia 6.2), a rampa de conta nova, a detecção por fluxo (seção 10) e o ouro de encomenda só a partir do 14º dia da conta (seção 4.1; revisão de consistência: R23).
+- **Restrição de desenho [H] (revisão de consistência: R20):** o **lucro de uma conta-fazenda** (conta de terceiro que farma, vende o que pode e repassa o ouro no mercado cinza) fica **em até ~R$ 15 por mês**, medido no painel (seção 12.2). **Sem verificação (checkpoint 3),** abrir contas falsas custa quase nada, e a meta ganha uma segunda régua, de escala: **o que as fazendas extraem fica abaixo de 3% do valor negociável emitido no mês** ([13](13-anti-abuso.md), §2.2). No cenário base da simulação, a fazenda rende ~R$ 16 por mês (R$ 15,50 a R$ 17,50 entre sementes), no limite ([08](08-simulacao.md), seção 7.1).
+- **O salário-teto do topo deixou de ser meta.** No modelo, ele fica em R$ 130 a R$ 160 por mês, mas a conta de topo leva ~100 dias para existir: o risco está na fazenda de muitas contas novas, não no topo. A simulação também desaconselha baixar a inclinação do teto (de 30 para 25 por nível), porque isso traz de volta a escassez de T5–T6 ([08](08-simulacao.md), iteração 11). O salário-teto continua no painel como indicador interno (revisão de consistência: R20).
+- **Barreiras somadas:** os ~90 dias até o nível 100 (bíblia 6.2), a rampa de conta nova, a detecção por fluxo (seção 10) e o ouro de encomenda só a partir do 14º dia da conta (seção 4.1; revisão de consistência: R23). A identidade verificada saiu no checkpoint 3.
 
 ### 3.7 Quatro perguntas (portão de saída)
 
@@ -254,7 +254,7 @@ Ficam fora da conta diária: o **Baú Misterioso** (cosméticos, conforme os pag
 | **Mediano** | `n ≈ 50`, 2 filas, 3 a 4 sessões | 2.100 |
 | **Hardcore** | `n ≈ 85`, 3 filas, 6 sessões, obras-primas frequentes | 3.150 |
 | **Pagante** | Mediano que doa ~R$ 40 por mês (~40 Coins; revisão de consistência: R17), gasta metade na loja e vende metade no Câmbio | 2.100 |
-| **Bot** | Conta verificada de terceiro, 3 filas, vende até o teto todo dia, sem luxo nem obra | até 4.100 |
+| **Bot** | Conta falsa de terceiro, 3 filas, vende até o teto todo dia, sem luxo nem obra | até 4.100 |
 
 **Modelo de bolso por conta ativa** ([04a, §5.2](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)): `dM/dt = (1 − a) × E − (τ × V + s) × M`, com equilíbrio `M* = (1 − a) × E ÷ (τ × V + s)`.
 
@@ -430,7 +430,7 @@ A Troca é livre por decisão do Gabriel: nenhum limite de valor, nenhuma proibi
 | **Formato** | Proposta assíncrona: um lado monta a oferta, e o outro aceita em até 24 horas. Tudo o que está na proposta fica reservado até aceitar, recusar ou expirar |
 | **Taxa** | **Cada lado paga 3% do valor de mercado do que recebe,** em ouro, destruído (mínimo de 1 ouro). Uma troca equilibrada custa ~6% no total, como a Bolsa; um presente custa 3% a quem recebe. Qualquer lado pode assumir a taxa do outro |
 | **Valor de mercado** | Preço de mercado da Bolsa para commodities (revisão de consistência: R18); valor estimado da Feira para itens únicos; ouro pelo valor de face; item sem estimativa pelo maior entre o valor declarado e um piso por tier |
-| **Coins na Troca** | Quem recebe paga **12% do preço do Câmbio vezes a quantidade**, em ouro. Adotado na bíblia, seção 6.6 (revisão de consistência: R19; com 3%, o Câmbio fica sem negócio em 21 de 24 rodadas e os Coins chegam a 9,6% das Trocas, [08](08-simulacao.md), decisão 4). Com o Coin divisível, essa taxa também impede que ele vire a moeda em que se cotam os itens entre jogadores (seção 6.2). Só sai Coins do saldo livre, fora da carência |
+| **Coins na Troca** | Quem recebe paga **12% do preço do Câmbio vezes a quantidade**, em ouro. Adotado na bíblia, seção 6.6 (revisão de consistência: R19; com 3%, o Câmbio fica sem negócio em 21 de 24 rodadas e os Coins chegam a 9,6% das Trocas, [08](08-simulacao.md), decisão 4). Com o Coin divisível, essa taxa também impede que ele vire a moeda em que se cotam os itens entre jogadores (seção 6.2). Sem carência: qualquer Coin do saldo pode sair (checkpoint 3) |
 | **Contestação no banco** | Se a doação de quem deu o Coin for contestada (chargeback, MED), quem recebeu de boa-fé fica com ele, e a conta que contestou fica suspensa até regularizar (seção 6.4). Com sinais de fraude organizada, o caso cai no nível 3 abaixo |
 | **Baú lacrado na Troca** | Quem recebe paga **12% do preço de mercado** do Baú. Adotado na bíblia, seção 6.6 (revisão de consistência: R18 e R19) |
 | **Cota** | Dar item de origem consome cota de quem dá (seção 3.3) |
@@ -482,9 +482,9 @@ A Troca é livre por decisão do Gabriel: nenhum limite de valor, nenhuma proibi
   - A simulação mostrou que a economia é a mesma com R$ 0,10 ou R$ 1,00 por Coin, desde que as regras escritas em Coins sejam divididas por 10; o que muda é que o preço em reais fica visível sem conta ([08](08-simulacao.md), decisão 2). As regras deste módulo já estão em Coins de R$ 1,00.
 - **Sem reembolso** por parte do estúdio.
 - **Nunca de graça:** não é prêmio de evento, de ranking nem de Fronteira. Compensação por manutenção vem em dias de premium presos, nunca em Coins. [F] O PLEX caiu de ~6 para ~4,5 milhões de ISK com distribuição gratuita e a unificação do mercado ([05d](../01-pesquisa/05d-rmt-recomendacao.md), "Como isso pode dar errado").
-- **Rastreio por lote.** Cada doação gera um lote no livro-razão, com valor, meio de pagamento, data e carência.
-  - No saldo, os Coins são iguais entre si. Mas o livro-razão sabe de que lote saiu cada unidade transferida, e é isso que permite a carência (6.3) e a regra de contestação (6.4).
-  - **Ordem de uso:** o gasto na loja consome primeiro o saldo em carência. A transferência sai só do saldo livre, do lote mais antigo para o mais novo.
+- **Rastreio por lote.** Cada doação gera um lote no livro-razão, com valor, meio de pagamento e data.
+  - No saldo, os Coins são iguais entre si. Mas o livro-razão sabe de que lote saiu cada unidade transferida, e é isso que permite a regra de contestação (6.4) e o rastreio da fraude.
+  - **Ordem de uso:** gasto e transferência saem do lote mais antigo para o mais novo. Não há carência (checkpoint 3, seção 6.3).
 - **Validar com advogado:**
   - Chamar o pagamento de doação não muda a natureza de compra perante o CDC (Lei 8.078/1990, art. 49, arrependimento de 7 dias). Também pode atrair ITCMD e conflitar com as regras dos provedores de pagamento. O alerta já está registrado no [PROGRESSO](../PROGRESSO.md), e o risco foi assumido pelo Gabriel.
   - Uma moeda divisível que paga outros jogadores na Troca se afasta do circuito fechado (Lei 12.865/2013, art. 6º, §3º) e se aproxima de ativo virtual (Lei 14.478/2022, art. 3º) ([05b](../01-pesquisa/05b-rmt-legal-brasil.md)).
@@ -494,27 +494,20 @@ A Troca é livre por decisão do Gabriel: nenhum limite de valor, nenhuma proibi
 | Uso | Efeito | Observação |
 |---|---|---|
 | **Gastar na loja** | Premium (conveniência por tempo), cosméticos, Baú Misterioso e outros itens de conforto e cosmético | O Coin gasto na loja é **destruído**: é o dreno do Coin. O conteúdo do premium fica com o módulo 11. **Nunca:** desconto de taxa, teto ou cota maior, filas, offline, vagas de ordem, renda, XP ou poder ([05d, §5.2](../01-pesquisa/05d-rmt-recomendacao.md): desconto de taxa favorece quem já é rico, [F08](../01-pesquisa/fichas/F08-black-desert.md)) |
-| **Comprar Baús** | 5 Coins por Baú (seção 8; revisão de consistência: R17) | O Baú comprado com saldo em carência herda a carência |
-| **Dar lance no Bazar de Personagens** | Pagamento de personagens (seção 7) | Só com saldo livre |
+| **Comprar Baús** | 5 Coins por Baú (seção 8; revisão de consistência: R17) | Sem carência (checkpoint 3) |
+| **Dar lance no Bazar de Personagens** | Pagamento de personagens (seção 7) | Com qualquer saldo |
 | **Vender no Câmbio** | Em unidades, por ouro de outro jogador, menos 12% | Seção 5.4 |
 | **Trocar na Troca** | Por qualquer coisa | 12% do preço do Câmbio vezes a quantidade, pago por quem recebe (seção 5.6; revisão de consistência: R19) |
 
 - **Estoque:** `Coins em circulação = doados − gastos na loja − destruídos no Bazar de Personagens`. Publicado de forma agregada (6.6). Como moeda, o Coin pode ser guardado sem prazo. O estoque parado é demanda futura da loja e oferta futura do Câmbio, e o painel o acompanha.
 - **Risco novo: moeda paralela.** Divisível e livre, o Coin pode virar a moeda em que se cotam os itens caros entre jogadores, fora do ouro. Foi o que aconteceu com o pergaminho do IdleMMO e com a "dolarização" do Throne and Liberty ([04b, §5.1](../01-pesquisa/04b-economia-mercados-protecoes-bots.md); [05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). Defesas: balcões só em ouro (5.0), 12% em qualquer troca de Coins (5.6) e índice publicado em ouro.
 
-### 6.3 Carência por lote e meio de pagamento (salvaguarda S2)
+### 6.3 Sem carência (checkpoint 3)
 
-Antes da **primeira transferência** (Câmbio, Troca, lance no Bazar de Personagens), cada lote de Coins cumpre uma carência que depende do meio de pagamento. Durante a carência, os Coins do lote podem ser gastos na loja, mas não transferidos. Depois dela, circulam livremente para sempre (decisão do Gabriel).
+**Decisão do Gabriel (2026-11-11):** nenhum freio na transferência. Os Coins doados podem ir ao Câmbio, à Troca, ao Baú e ao Bazar de Personagens na hora, por qualquer meio de pagamento. A carência por lote (salvaguarda S2) saiu do jogo.
 
-| Situação | Carência [H] | Referência |
-|---|---|---|
-| Pix, conta com histórico limpo | 72 horas | [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) |
-| Cartão, conta com histórico limpo | 7 dias | Coins do Tibia transferíveis conforme o meio de pagamento ([F04](../01-pesquisa/fichas/F04-tibia.md)) |
-| Primeira doação da conta, qualquer meio | 7 dias | Trava de 72 h do MWI; retenção de 7 dias da Steam ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)) |
-| Doação fora do padrão da conta ou com sinal de risco | Até 30 dias | GGMAX retém de 7 a 30 dias ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)) |
-
-- [F] Nenhuma carência cobre o prazo inteiro de contestação: cerca de 120 dias no cartão e até 80 dias no MED do Pix ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)). [H] A carência barra a fraude rápida, e o resto fica com a regra de contestação.
-- **Baús comprados com saldo em carência** e o conteúdo deles herdam a carência que falta: não se vendem nem se trocam antes do fim.
+- [F] Nenhuma carência cobriria o prazo inteiro de contestação: cerca de 120 dias no cartão e até 80 dias no MED do Pix ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)).
+- **Consequência registrada uma vez [H]:** sem carência, cartão roubado vira Coins vendidos no Câmbio ou transferidos em minutos; os Coins seguem circulando sem dinheiro por trás, e o estorno cai sobre o estúdio. Defesas que não atrasam a transferência: autenticação do emissor, teto de compras nas primeiras 24 horas, disjuntor de pagamentos e rastreio da fraude organizada pelo livro-razão ([13](13-anti-abuso.md), seção 6).
 
 ### 6.4 Contestação forçada pelo banco (chargeback e MED)
 
@@ -525,11 +518,11 @@ Como ela se aplica a uma moeda que circula [H]:
 2. **Quem recebeu de boa-fé fica com o que recebeu:** Coins numa Troca, ouro de uma venda no Câmbio, um personagem no Bazar de Personagens. O estúdio absorve a perda; nada é tirado de terceiros por causa da contestação de outro.
 3. **Regularizou, a suspensão cai,** e a conta volta com o que tinha.
 4. **Fraude organizada é outro caso.** Quando a contestação vem com sinais de fraude (cartão de terceiro, funil de contas, risco de troca nível 3), as contas que receberam o valor entram em revisão. **A reconciliar com o módulo 13.**
-5. **Disjuntor:** se as disputas passarem de um limiar interno (bem abaixo do 1,5% das bandeiras, [05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §5.1), as transferências de Coins (Câmbio, Troca, Bazar de Personagens) são suspensas. O gasto na loja continua.
+5. **Disjuntor de pagamentos:** se as disputas passarem de um limiar interno (bem abaixo do 1,5% das bandeiras, [05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §5.1), a doação por cartão é suspensa, primeiro para contas sem histórico e depois para todas; o Pix continua ([13](13-anti-abuso.md), seção 6.4). As transferências de Coins não param (checkpoint 3).
 
 **Efeito na economia.** Os Coins contestados que já foram transferidos seguem circulando sem dinheiro por trás. A massa ativa de ouro e de Coins cai pelo que fica congelado nas contas suspensas. A simulação modela os dois efeitos (parâmetro 45 e cenário 11 da seção 13).
 
-**Por que a carência continua necessária.** A suspensão não pesa para quem usa cartão roubado: o fraudador abandona a conta. A carência impede que ele transfira antes de a vítima perceber.
+**Limite da suspensão sem carência.** A suspensão não pesa para quem usa cartão roubado: o fraudador abandona a conta, e o valor já saiu. Sem carência (checkpoint 3), essa perda é do estúdio; o rastreio pelo livro-razão pune quem participou da fraude e remove o que foi recebido sem contrapartida ([13](13-anti-abuso.md), seção 5.3).
 
 **Tensão registrada.** O [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md) recomendava revogar só o valor contestado, sem bloquear a conta inteira, porque a FTC condenou a Epic por bloquear contas inteiras depois de contestações ([05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §3.1). A decisão do Gabriel suspende a conta, mas devolve tudo ao regularizar. **Validar com advogado** a suspensão e o congelamento de saldo diante do CDC (art. 51, cláusulas abusivas). Risco assumido pelo Gabriel.
 
@@ -565,7 +558,7 @@ Como ela se aplica a uma moeda que circula [H]:
 
 - **Leilão em Coins** de 3 ou 7 dias, com lance inicial de pelo menos **30 Coins (R$ 30)**, incremento de 5% (mínimo de 1 Coin) e lance máximo automático (revisão de consistência: R17; sem dividir por 10, o lance mínimo viraria R$ 300 e o Bazar não teria venda no ano, [08](08-simulacao.md), decisão 2).
 - **Prorrogação** de 30 minutos para lance no fim, até 24 horas no total.
-- **Garantia de 100%** em Coins do saldo livre, fora da carência; lances irrevogáveis.
+- **Garantia de 100%** em Coins do saldo; lances irrevogáveis.
 - [F] O Char Bazaar do Tibia funciona com taxa de 50 TC, comissão de 12%, pagamento só com coins transferíveis e reserva de 10% do lance. Em 2025 movimentou 721,4 milhões de TC, com ~98,7 milhões em taxas, cerca de 13% da receita da CipSoft pela estimativa de terceiros ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)).
 
 ### 7.2 Taxas
@@ -595,14 +588,14 @@ Como ela se aplica a uma moeda que circula [H]:
 
 ### 7.4 Quem pode vender [H]
 
-- Conta com pelo menos 30 dias e 40 horas de jogo ativo verificado (sessões com decisões, não cliente aberto).
+- Conta com pelo menos 30 dias e 40 horas de jogo ativo medido (sessões com decisões, não cliente aberto).
 - Segundo fator de autenticação ativo há pelo menos 14 dias, sem troca de e-mail, senha ou segundo fator nos últimos 14 dias.
-- Personagem fora de guilda, sem mandato no Conselho, sem encomenda ativa, sem suspensão por contestação, sem investigação aberta e sem Coins em carência.
+- Personagem fora de guilda, sem mandato no Conselho, sem encomenda ativa, sem suspensão por contestação e sem investigação aberta.
 - Uma venda a cada 60 dias por conta.
 
 ### 7.5 Quem pode comprar
 
-- **Uma identidade verificada = uma conta = um personagem ativo** (P8 e decisão 4 do checkpoint 2). Para receber o personagem, a conta do comprador precisa estar vaga:
+- **Uma pessoa = uma conta = um personagem ativo** (decisão 4 do checkpoint 2; sem verificação de identidade desde o checkpoint 3, a regra é cobrada por detecção, [13](13-anti-abuso.md), §4.2). Para receber o personagem, a conta do comprador precisa estar vaga:
   - uma conta nova;
   - uma conta cujo personagem foi vendido no Bazar de Personagens;
   - ou uma conta cujo personagem foi encerrado pelo dono (os bens negociáveis ficam na conta).
@@ -613,18 +606,18 @@ Como ela se aplica a uma moeda que circula [H]:
 
 - **Aviso de 72 horas:** ao criar o anúncio, o dono da conta recebe aviso por e-mail e no segundo fator, com cancelamento em um clique. O leilão só abre depois disso. É a janela contra o roubo de conta.
 - **Liquidação atômica** no livro-razão. O personagem muda de conta, e nenhuma senha, e-mail ou documento muda de mãos. As sessões do vendedor no personagem são encerradas. [F] Antes do Char Bazaar, compradores acionavam a recuperação de conta para confirmar a posse, e o comércio corria no eBay com golpe e banimento ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)).
-- **Os Coins recebidos pelo vendedor ficam retidos por 7 dias.** Se, em até 30 dias, ficar provado que a venda veio de conta invadida, o personagem volta ao dono legítimo, e os Coins retidos voltam ao comprador. Depois disso, o caso segue o artigo 12 da constituição.
+- **Os Coins recebidos pelo vendedor entram na hora** (checkpoint 3: sem retenção). Se, em até 30 dias, ficar provado que a venda veio de conta invadida, o personagem volta ao dono legítimo, e os Coins são devolvidos ao comprador pelo rastreio do livro-razão, até onde for possível recuperá-los; o que já saiu de boa-fé fica com quem recebeu, e a diferença é do estúdio. Depois disso, o caso segue o artigo 12 da constituição.
 - **Contestação no banco depois da liquidação** (seção 6.4):
   - Se a doação que pagou os lances do comprador for contestada, o vendedor de boa-fé fica com os Coins, e a conta compradora fica suspensa até regularizar, com o personagem.
   - Se a contestação for de doações do próprio vendedor, a conta dele fica suspensa, mas a venda não se desfaz: o comprador de boa-fé fica com o personagem.
-- **Vender a conta fora do Bazar de Personagens continua proibido,** não por ser RMT (o RMT informal está em aberto), mas porque significa entregar a identidade verificada de outra pessoa. Isso quebra a regra de idade (P8) e a barreira contra multicontas.
+- **Vender a conta fora do Bazar de Personagens continua proibido,** não por ser RMT (o RMT informal está em aberto), mas porque a conta é pessoal e a recuperação volta para o dono original, que guarda a chave de recuperação ([13](13-anti-abuso.md), §7.3). Quem compra por fora compra o risco.
 
 ### 7.7 Quatro perguntas
 
 - **Referência:** Char Bazaar do Tibia ([F04](../01-pesquisa/fichas/F04-tibia.md); [05a, §3.C](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). *Diferença:* o cofre e a cidadania não vão junto, e há um aviso de 72 horas ao dono.
 - **Problema:** o mercado cinza de contas, com golpe de recuperação e venda da identidade de outra pessoa.
 - **Comportamento:** investir no personagem como patrimônio e "realizar" o progresso ao sair, em vez de abandonar a conta.
-- **Risco:** num idle, vender a conta é vender tempo ausente acumulado, que é o que um bot produz de graça ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). Mitigação: 40 horas de jogo ativo verificado, uma venda a cada 60 dias, identidade verificada e detecção de nivelamento automatizado. **Validar com advogado** a natureza jurídica da venda de personagem e a suspensão por contestação (CDC, arts. 49 e 51).
+- **Risco:** num idle, vender a conta é vender tempo ausente acumulado, que é o que um bot produz de graça ([05a](../01-pesquisa/05a-rmt-modelos-mercado-paralelo.md)). Mitigação: 40 horas de jogo ativo medido, uma venda a cada 60 dias e detecção de nivelamento automatizado. **Validar com advogado** a natureza jurídica da venda de personagem e a suspensão por contestação (CDC, arts. 49 e 51).
 
 ## 8. Baú Misterioso
 
@@ -672,7 +665,7 @@ Como ela se aplica a uma moeda que circula [H]:
 - **Comportamento:** colecionar séries, negociar duplicatas, exibir o raro.
 - **Risco, o maior do módulo:** pagamento (Coins, ou ouro que vale reais) + sorte + prêmio com valor de mercado (o conteúdo é negociável, e o RMT informal está aberto). É a configuração que o estudo jurídico marcou como luz vermelha ([00-sintese](../01-pesquisa/00-sintese.md), "O que muda com essas decisões"):
   - Lei de Contravenções Penais (Decreto-Lei 3.688/1941), art. 50;
-  - ECA Digital (Lei 15.211/2025), art. 20, que veda caixas de recompensa em jogos de acesso provável por crianças e adolescentes. O jogo 18+ com idade verificada reduz esse risco, mas não o elimina numa PWA aberta;
+  - ECA Digital (Lei 15.211/2025), art. 20, que veda caixas de recompensa em jogos de acesso provável por crianças e adolescentes. Sem verificação de idade (checkpoint 3), o 18+ fica só nos termos, e o MJSP já disse que a classificação 18 não substitui a verificação (NT 55/2026; [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2). Risco assumido pelo Gabriel;
   - tese de Nova York contra a Valve; recusa de gateways e de lojas.
   - **Validar com advogado.** Risco assumido pelo Gabriel (salvaguarda S1 não adotada).
   - Mitigação econômica: conteúdo sem poder, aplicar prende, garantia e tiragem publicadas, tetos e um interruptor que torna o conteúdo preso por país, se a lei mudar ([05d](../01-pesquisa/05d-rmt-recomendacao.md), "Como isso pode dar errado", item 9).
@@ -747,7 +740,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | 6 | Piso de NPC abaixo do custo | Preço-base de 40% do VR, com curva logarítmica | 4.2 |
 | 7 | Limite de compra por janela | Itens críticos a cada 4 horas; Coins, 200 unidades por semana no Câmbio (revisão de consistência: R17) | 5.1, 5.4 |
 | 8 | Negociável e preso separados, com teto | Portão de saída com cota | 3 |
-| 9 | Custo de conta para dar valor | Idade verificada para todos, rampa da cota em 30 dias e condições do Bazar de Personagens | 3.4, 7.4 |
+| 9 | Custo de conta para dar valor | Rampa da cota em 30 dias, ouro de encomenda a partir do 14º dia e condições do Bazar de Personagens (sem verificação, checkpoint 3) | 3.4, 7.4 |
 | 10 | Risco de troca por par e direção | Sem exigir equilíbrio (a Troca é livre); níveis com retenção só em padrão de fraude | 5.5 |
 | 11 | Grafo de transferências | Pontuação de mula, funil e bot; revisão humana; apelação em português; relatório trimestral de banimentos | 5.5; **módulo 13** |
 | 12 | Regras públicas antes do lançamento | Proibidos: bots, multicontas, manipulação coordenada, exploits, fraude de pagamento e venda de identidade. RMT informal: não proibido e não intermediado; golpes no informal sem suporte (S4) | 11 |
@@ -791,7 +784,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **3. Emissão** | O ouro só nasce nas fontes listadas na seção 4.1. O teto de emissão e sua fórmula são públicos. Nenhuma fonte negociável cresce exponencialmente com o nível. Toda mudança de fonte, de teto ou do offline vem com análise de impacto publicada | Lei 16; IdleMMO e SimpleMMO ([04a, §5.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
 | **4. Drenos e taxas** | Lista pública de drenos. Toda taxa em ouro é destruída, nunca receita. Mudança de taxa com 30 dias de aviso e rampa de no máximo 1 ponto por mês. O destino visível das taxas é a obra | Bíblia 6.6; rampa do Torn; revolta no EVE e no OSRS |
 | **5. Mesma taxa** | Item por ouro custa ~6% em qualquer canal; Coins e Baú lacrado, 12%; presente, 3% | Seção 5.6 |
-| **6. Coins** | Moeda em unidades que nasce só de doação em reais, sem reembolso, e nunca é dada de graça. Gasta na loja, é destruída. O estúdio nunca compra nem vende no Câmbio. A regra da rodada (banda, desempate, frequência) é pública. A carência por lote é publicada. A doação contestada no banco suspende a conta até regularizar, e quem recebeu de boa-fé fica com o que recebeu | Seção 6; PLEX ([04a, §3.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)); decisões do Gabriel |
+| **6. Coins** | Moeda em unidades que nasce só de doação em reais, sem reembolso, e nunca é dada de graça. Gasta na loja, é destruída. O estúdio nunca compra nem vende no Câmbio. A regra da rodada (banda, desempate, frequência) é pública. Não há carência na transferência. A doação contestada no banco suspende a conta até regularizar, e quem recebeu de boa-fé fica com o que recebeu | Seção 6; PLEX ([04a, §3.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)); decisões do Gabriel |
 | **7. Bazar de Personagens** | Regras de venda, o que vai e o que fica, taxa de 10% destruída e aviso de 72 horas | Seção 7 |
 | **8. Baú e escassez prometida** | Tabela de chances, garantia e tiragem publicadas antes da venda de cada série. A tiragem do topo nunca aumenta sem 60 dias de aviso. Teto de compra e de abertura | Seção 8; Trade Up do CS2 |
 | **9. Conselho** | Mexe só nas faixas da tabela abaixo. Política monetária (teto, NPC, insumos, Câmbio, Coins, Bazar de Personagens, Baú) não vai a voto | O OSRS não pôs o imposto em votação ([04a, §4.5](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
@@ -859,7 +852,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **Risco de troca** | Contas nos níveis 2 e 3, retenções, apelações, reversões | Diária | — | Relatório trimestral |
 | **Disputas de pagamento** | Chargebacks e MED ÷ doações; contas suspensas e regularizadas; Coins contestados que já tinham sido transferidos | Diária | Acima de 0,5% | Interno; agregado no relatório |
 | **Mercado cinza** | Preço do nosso ouro em reais em sites de terceiros ÷ preço via Coin | Semanal | Abaixo de 60% do oficial | Interno; tendência no relatório |
-| **Lucro da conta-fazenda** (meta; revisão de consistência: R20) | Lucro em reais de uma conta verificada que farma e vende o que pode, com a rampa de conta nova, as taxas e o ouro vendido no mercado cinza | Mensal | Acima de ~R$ 15 por mês | Interno; tendência no relatório |
+| **Lucro da conta-fazenda** (meta; revisão de consistência: R20) | Lucro em reais de uma conta de fazenda que farma e vende o que pode, com a rampa de conta nova, as taxas e o ouro vendido no mercado cinza | Mensal | Acima de ~R$ 15 por mês | Interno; tendência no relatório |
 | **Salário-teto** | Teto do topo × reais por ouro | Mensal | Indicador, sem meta (seção 3.6; revisão de consistência: R20) | Interno |
 | **Poder vindo do mercado** | Fração do equipamento em uso que foi comprada | Mensal | Acima de 50% | Interno |
 | **Pagante e não pagante** | Diferença de progresso mediano | Mensal | — | Sim ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 12) |
@@ -879,7 +872,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | 1 | Ativos por dia por Cidade | 30.000 | 15.000 a 50.000 | 1.1 |
 | 2 | Mix de perfis | Casual 50%, mediano 35%, hardcore 10%, bot 5% | Bot de 0% a 20% | 4.6 |
 | 3 | Pagantes (sobrepostos aos perfis) | 8% dos ativos; ~R$ 40 doados por mês (~40 Coins); 50% vendidos | 4% a 15%; R$ 15 a R$ 100; 20% a 80% | 4.6 |
-| 4 | Entrada de contas novas por dia | **~1.500 contas verificadas por dia** (~5% dos ativos), com a curva de retenção do 12; 4.000 por dia nos 14 dias de estreia. O "1,5% dos ativos por dia" sustentaria só ~9 mil ativos (revisão de consistência: R26) | 0 (90 dias sem novos) a +50% | — |
+| 4 | Entrada de contas novas por dia | **~1.500 contas novas por dia** (~5% dos ativos), com a curva de retenção do 12; 4.000 por dia nos 14 dias de estreia. O "1,5% dos ativos por dia" sustentaria só ~9 mil ativos (revisão de consistência: R26) | 0 (90 dias sem novos) a +50% | — |
 | 5 | Evasão mensal | 25% | 10% a 50% | — |
 | **Teto de emissão** | | | | |
 | 6 | Base do teto | 600 | 300 a 1.000 | 3.4 |
@@ -925,7 +918,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | 40 | Banda | ±3% por rodada; ±10% por dia | ±1% a ±5%; ±5% a ±20% | 5.4 |
 | 41 | Tamanho de ordem e limite de compra | 1 a 200 Coins por ordem; 200 por conta a cada 7 dias (revisão de consistência: R17) | 50 a 1.000 por semana | 5.4 |
 | 42 | Preço de abertura do Coin | 750 ouro (premium de 30 dias ≈ 15.000; revisão de consistência: R17) | 400 a 1.500 | 1.2 |
-| 43 | Carência por lote | Pix 72 h; cartão 7 dias; risco até 30 dias | 0 a 14 dias | 6.3 |
+| 43 | Carência por lote | 0 (checkpoint 3) | — | 6.3 |
 | 44 | Teto de doação | R$ 250 por mês; níveis de R$ 600 e R$ 1.200 por pedido (revisão de consistência: D8) | R$ 150 a R$ 1.200 | 6.5; **módulo 11** |
 | 45 | Contestação no banco | 0,3% das doações contestadas; 50% das contas suspensas regularizam em 30 dias; 60% dos Coins contestados já transferidos | 0% a 1,5%; 0% a 100%; 0% a 100% | 6.4 |
 | 46 | Coins guardados | 20% dos doados ficam parados mais de 30 dias | 0% a 60% | 6.2 |
@@ -976,7 +969,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **09 Social** | Mérito (curva e uso); poderes e faixas do Conselho; banco da guilda; encomendas e obras |
 | **10 Live ops** | Marcos e suprimentos da Fronteira; relíquias; festas da Cidade; série do Baú por Era; benefícios das obras sem multiplicar fontes |
 | **11 Monetização** | Coins por real e pacotes de doação; preço do premium e do Baú em Coins; conteúdo do premium; teto de doação |
-| **13 Anti-abuso** | Sinais e níveis do risco de troca; grafo; carência por lote; contestação (suspensão até regularizar, no lugar da dívida em ouro) e revisão de fraude organizada; sanções de exploit; segurança do Bazar de Personagens |
+| **13 Anti-abuso** | Sinais e níveis do risco de troca; grafo; contestação (suspensão até regularizar, no lugar da dívida em ouro) e revisão de fraude organizada; sanções de exploit; segurança do Bazar de Personagens |
 | **14 Arte e UI** | Telas da cota e da volta; Bolsa com posição na fila; rodada do Câmbio; Troca com desequilíbrio; pré-vitrine da Feira |
 
 ## 15. Propostas de mudança na bíblia
@@ -997,7 +990,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | Risco | Como acontece | Mitigação |
 |---|---|---|
 | **Teto visto como castigo** | O produtor pesado vê a cota acabar e sente que perde produção, a queixa nº 1 dos idles online | Portão de saída (nada nasce preso); acúmulo de 3 dias; crédito dos insumos; excedente que vira obra e Mérito na tela de volta; meta de 10% a 30% no teto |
-| **Teto frouxo demais** | Contas verificadas de terceiros ("laranjas") farmam até o teto e vendem ouro por Pix | Lucro da conta-fazenda até ~R$ 15 por mês, medido (R20); rampa de 30 dias; ouro de encomenda só a partir do 14º dia (R23); ~90 dias até o nível 100; grafo de funil; cenário 4 da simulação |
+| **Teto frouxo demais** | Contas falsas, baratas sem verificação (checkpoint 3), farmam até o teto e vendem ouro por Pix | Lucro da conta-fazenda até ~R$ 15 por mês, medido (R20); rampa de 30 dias; ouro de encomenda só a partir do 14º dia (R23); ~90 dias até o nível 100; grafo de funil; cenário 4 da simulação |
 | **Bug no portão vira dupe** | Um erro no crédito dos insumos ou na reserva de cota emite valor negociável sem limite | Cota no livro-razão com conciliação contínua; testes de propriedade na Fase 5; disjuntor por item |
 | **Deflação dos básicos** | A produção de 24 horas cresce com as contas, e minério e madeira caem até o piso do NPC | Obras sem limite; encomendas elásticas; festas de consumo; alarme de 1,3 vez o piso |
 | **Espiral dos insumos indexados** | O IPC sobe, o insumo sobe, o custo de produzir sobe e o IPC sobe de novo | Insumo fora da cesta do IPC; indexação parcial, com teto de ±2% por mês depois da 1ª Era; o insumo mais caro também destrói mais ouro (efeito contrário). Na 1ª Era, o risco é o inverso: indexação lenta demais trava a criação, e por isso ela vai até ±10% ao mês (R21) |
@@ -1005,15 +998,15 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **Coins dispara em ouro** | Inflação de lançamento, como no GW2, ou o gasto na loja e o Bazar de Personagens destruindo Coins tiram a rota do não pagante | Lançar apertado; leitura junto da cesta; meta de 12 a 20 dias de renda para o premium; destruição medida em separado |
 | **O Coin despenca** | Onda de pagantes, teto de doação alto demais ou um estoque guardado despejado de uma vez, e o pagante não vê valor em vender. No base da simulação, o Coin cai devagar o ano inteiro (o premium vai de 27 para 13 dias de renda) | Teto de doação; nenhum Coin grátis; novos usos de Coins na loja no 2º ano, sempre conforto e cosmético ([11](11-monetizacao.md); R27); estoque parado no painel; banda do Câmbio; cenário 12 |
 | **O Coin vira moeda paralela** | Divisível e livre, ele passa a cotar os itens caros entre jogadores, fora do ouro (o pergaminho do IdleMMO) | Balcões só em ouro; 12% em toda troca de Coins; índice em ouro; alarme acima de 10% das Trocas de itens pagas em Coins |
-| **Fraude com cartão roubado sai de graça** | A suspensão não pesa para quem abandona a conta, e os Coins que ela já transferiu ficam sem lastro | Carência por lote; teto de doação; disjuntor por taxa de disputas; revisão das contas receptoras em padrão de fraude (módulo 13); cenário 11 |
+| **Fraude com cartão roubado sai de graça** | A suspensão não pesa para quem abandona a conta, e os Coins que ela já transferiu ficam sem lastro; sem carência (checkpoint 3), isso acontece em minutos | Autenticação do emissor; teto de compras nas primeiras 24 horas; teto de doação; disjuntor por taxa de disputas; revisão das contas receptoras em padrão de fraude (módulo 13); cenário 11 |
 | **Suspensão contestada** | A FTC condenou a Epic por bloquear contas inteiras depois de contestações; o jogador honesto que contestou por engano perde o acesso a tudo | Suspensão reversível ao regularizar, com tudo devolvido; nada tirado de terceiros de boa-fé; aviso claro antes da doação; **validar com advogado** (CDC, art. 51) |
 | **"Doação" sem reembolso questionada** | O rótulo não afasta o direito de arrependimento (CDC, art. 49), pode atrair ITCMD e conflitar com as regras dos provedores de pagamento | Alerta registrado no PROGRESSO; risco assumido pelo Gabriel; **validar com advogado** |
 | **Pay-to-win de capital** | O pagante vende Coins e compra o mercado inteiro de ouro | Teto de doação; limite de compra por janela; o mercado negocia insumos e equipamento que se gasta; diferença pagante × não pagante publicada |
 | **Arbitragem entre canais** | Se a taxa de 12% sobre Coins e Baú lacrado na Troca for afrouxada, o Coin passa a ser trocado por ouro na Troca a 6%, e o índice e o dreno do Câmbio somem | 12% em todo canal, adotado (R19); cenário 9 da simulação; publicar o índice também com as trocas de Coins na Troca |
-| **Troca livre como lavanderia** | Mulas, cartão roubado, conta invadida esvaziada por presentes | Carência S2 por lote; risco de troca com retenção nos padrões de fraude; grafo; suspensão da conta que contesta, até regularizar |
-| **Bazar de Personagens vira fábrica ou rota de roubo** | Personagens upados por automação; conta invadida vendida | 40 horas ativas; uma venda a cada 60 dias; aviso de 72 horas; Coins do vendedor retidos 7 dias; reversão em 30 dias |
+| **Troca livre como lavanderia** | Mulas, cartão roubado, conta invadida esvaziada por presentes | Risco de troca como sinal; grafo; revisão das saídas grandes; remoção do valor de origem ilícita; suspensão da conta que contesta, até regularizar (sem carência nem retenção, checkpoint 3) |
+| **Bazar de Personagens vira fábrica ou rota de roubo** | Personagens upados por automação; conta invadida vendida | 40 horas ativas; uma venda a cada 60 dias; aviso de 72 horas; reversão em 30 dias pelo livro-razão (sem retenção dos Coins do vendedor, checkpoint 3) |
 | **Baú lido como jogo de azar** | Pagamento + sorte + prêmio com valor em dinheiro; gateway ou loja recusa; ação judicial | Conteúdo sem poder; chances e tiragem publicadas; tetos; interruptor por país que prende o conteúdo; **validar com advogado** (LCP, art. 50; Lei 15.211/2025, art. 20); risco assumido pelo Gabriel |
-| **Baú como canal de lavagem** | Cartão roubado → Coins → Baús → ouro | Baú herda a carência do lote; taxa de 12%; teto de compra |
+| **Baú como canal de lavagem** | Cartão roubado → Coins → Baús → ouro | Taxa de 12%; teto de compra; rastreio por lote no livro-razão |
 | **Golpes no RMT informal** | O estúdio não intermedia, e o jogador lesado chega ao suporte sem solução | Termos claros (S4); avisos na Troca; o Câmbio e o Bazar de Personagens como rotas seguras e baratas |
 | **Conselho capturado** | Uma guilda rica elege conselheiros e leva a Feira ao extremo da faixa | Faixa estreita, 1 ponto por mandato, 30 dias de aviso; política monetária fora do voto |
 | **Concentração por idade de conta** | A renda acompanha o tempo de calendário, e quem chegou primeiro domina | Teto linear; drenos progressivos e de topo; Mérito da Era; Fronteira como recomeço; concentração por coorte no painel |

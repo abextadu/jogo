@@ -249,3 +249,14 @@
 - Proporcionalidade da biometria segundo a ANPD.
 - Limites e carências × "transferível livremente".
 - Funil de entrada × "jogo inteiro 18+".
+
+## Checkpoint 3 (2026-11-11): o que mudou depois da revisão
+
+Decisões do Gabriel (detalhe no [PROGRESSO](../PROGRESSO.md)): sem verificação de idade alguma; transferência de Coins e ouro imediata, sem freios; GDD aprovado; equipe mínima.
+
+- **Saíram do GDD:** verificação de idade e de identidade (12, 13), cofres de identidade e reverificação (13), carência do Coin por lote e meio de pagamento (07, 11, 13, 14, wireframe da loja), limite de saída de conta nova (13), retenção de saída em aparelho novo e de valor recebido de conta suspeita (13, 09), trava de envio do calouro na Troca (12, bíblia), retenção dos Coins do vendedor no Bazar de Personagens (07).
+- **Ficaram:** teto de emissão e rampa de conta nova (limitam a produção que sai, não a transferência), ouro de encomenda a partir do 14º dia, taxas, autenticação do emissor, teto de compras nas primeiras 24 h, disjuntor de pagamentos (agora suspende a doação por cartão, nunca a transferência), detecção, revisão e reversão pelo livro-razão do valor de origem ilícita provada, limites do cofre da guilda (permissões internas da guilda).
+- **Mudou:** "uma pessoa, uma conta ativa" é cobrada por detecção (13, §4.2); o voto do Conselho é "uma conta cidadã, um voto", com revisão de contas ligadas (09); recuperação por chave de recuperação (13, §7.3); negócio refeito sem a verificação: o base paga ~7 pessoas (11, §8.4); funil e retenção do 12 refeitos.
+- **Conflitos em aberto acima:** os quatro foram encerrados pelo checkpoint 3.
+
+**D19 (pendente, resolver na Fase 4).** O modelo do Bazar de Personagens diverge entre o 07 (§7.5 e §7.6: o personagem muda para uma conta vaga do comprador e nenhuma credencial muda de mãos; sem "guardar" o personagem antigo) e o 13 (§7.5: a conta inteira muda de dono, com e-mail, senha, 2FA e chave de recuperação novos; aposentadoria da conta antiga, reativável a cada 90 dias), e a bíblia adotou a aposentadoria no glossário. A arquitetura (modelo de dados de conta e personagem) precisa escolher um.

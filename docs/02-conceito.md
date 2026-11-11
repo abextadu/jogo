@@ -14,7 +14,7 @@
 | P5 | **Token oficial** comprado em reais, transferível livremente; bazar oficial de contas desde o lançamento; RMT informal não intermediado pelo estúdio. | Decisão 1 |
 | P6 | **Caixas** compráveis com token e com ouro no mercado; conteúdo sempre em itens; probabilidades publicadas e teto de gasto. | Decisão 2; salvaguarda S5 |
 | P7 | **Zona vermelha fora da loja:** teto de offline, filas, automação, taxa do ausente e poder direto. | Lei 13; [06](01-pesquisa/06-monetizacao-retencao.md) |
-| P8 | **Jogo 18+ com idade verificada:** cada conta é um adulto identificado, o que também é a principal barreira contra bots e multicontas. | Decisão 3 |
+| P8 | **Jogo 18+ com idade verificada:** cada conta é um adulto identificado, o que também é a principal barreira contra bots e multicontas. *(Alterado no checkpoint 3: o jogo é 18+ só pelos termos, sem verificação de idade; ver a [bíblia](03-gdd/00-biblia.md), seção 5.)* | Decisão 3 |
 | P9 | **Servidor autoritativo e livro-razão** de partidas dobradas para toda moeda e todo item. | Lei 15; [07](01-pesquisa/07-tecnica-idles-online.md) |
 | P10 | **Brasil primeiro, bilíngue,** PWA no navegador, Pix, servidor no Brasil. | Decisão 4 |
 | P11 | **Constituição econômica pública,** índice do token e relatório mensal. | Lei 21; [04a](01-pesquisa/04a-economia-fontes-drenos-inflacao.md) |

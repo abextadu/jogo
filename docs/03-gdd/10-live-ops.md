@@ -357,7 +357,7 @@ O jornal semanal dentro do jogo, montado pelo sistema e revisado pela equipe [H]
 
 [H] São de 6 a 8 pessoas. É o custo real de um jogo de serviço, e ele precisa entrar no plano de negócio do módulo 11. [F] O "custo alto para operar" dos eventos ao vivo é a principal ressalva do estudo [além do idle](../01-pesquisa/03-alem-do-idle.md) (§10).
 
-**Plano enxuto para 4 pessoas** [H] (revisão de consistência: D12). O cenário base do [11](11-monetizacao.md) (seção 8.4) paga de 3 a 4 pessoas além do Gabriel, menos que a equipe acima. Enquanto a receita não passar disso, a operação roda assim:
+**Plano enxuto para 4 pessoas** [H] (revisão de consistência: D12). Sem a verificação de idade (checkpoint 3), o cenário base do [11](11-monetizacao.md) (seção 8.4) paga ~7 pessoas, mas a equipe decidida no checkpoint 3 é mínima: Gabriel + Claude no código e no design, com arte em pixel art e moderação terceirizadas por demanda. O plano enxuto vale para essa equipe; a operação roda assim:
 
 | Função | Pessoas | O que muda |
 |---|---|---|
@@ -486,6 +486,6 @@ O que os módulos 07 e 08 precisam simular [H]:
 | **Erro cultural ou de semelhança** | Uma festa ou uma criatura é lida como paródia de rito religioso real ou como cópia de outro jogo | Formas seculares, sem ritos; nomes e símbolos próprios; revisão de sensibilidade e de semelhança antes de cada festa e cada Era; a comunidade co-cria (concurso de lendas). |
 | **O público de língua inglesa não se reconhece** | O calendário parece traduzido ou genérico demais | Cada festa tem um gancho universal (colheita, torneio, máscaras, inverno, Halloween); textos e momentos ao vivo em EN; moderação nos dois idiomas. |
 | **População baixa para a Fronteira** | Com poucos milhares de ativos, o mapa não anda e o final não sai | Custo dos hexágonos escalado pela população; limiar de 1.500 ativos e Fronteira curta (§10). |
-| **Custo de operação subestimado (risco de negócio; revisão de consistência: D12)** | De 6 a 8 pessoas para operar é muito para um estúdio pequeno, e o cenário base do 11 paga só 3 a 4 | Plano enxuto para 4 pessoas (§8.1): Eras mais sistêmicas, menos conteúdo narrativo novo por Era; automatizar o Diário e o Boletim; começar com menos festas (2 no ano 1); medir a receita real no alfa antes de contratar. |
+| **Custo de operação subestimado (risco de negócio; revisão de consistência: D12)** | De 6 a 8 pessoas para operar é muito para a equipe mínima do checkpoint 3 (Gabriel + Claude, com terceirizados); o cenário base do 11 paga ~7 sem a verificação | Plano enxuto para 4 pessoas (§8.1): Eras mais sistêmicas, menos conteúdo narrativo novo por Era; automatizar o Diário e o Boletim; começar com menos festas (2 no ano 1); medir a receita real no alfa antes de contratar. |
 | **Métrica de vaidade** | Otimizar DAU com obrigações e notificações | Alarmes de fadiga e de sessões demais; a pesquisa de satisfação pesa tanto quanto o DAU; no máximo 1 aviso por semana. |
 

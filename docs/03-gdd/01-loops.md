@@ -358,7 +358,7 @@ Duas regras protegem o plano [H]:
 | Risco | Como acontece | Mitigação |
 |---|---|---|
 | **A bancada ativa vira obrigação** | O hardcore sente que "perde" se não usar as 2 h diárias, e o jogo vira plantão. | Ganho de volume pequeno e publicado (+2% a +6,5% num dia); achados ativos úteis, mas não essenciais; medir no alfa quantos usam o teto todo dia e baixá-lo se virar regra. |
-| **Bot nos lances** | Um script responde lances 2 h por dia, todo dia. | O ganho é pequeno; teto de emissão negociável por conta; detecção por regularidade dos lances e pelo fluxo de valor ([04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)); conta = adulto verificado (P8). |
+| **Bot nos lances** | Um script responde lances 2 h por dia, todo dia. | O ganho é pequeno; teto de emissão negociável por conta; detecção por regularidade dos lances e pelo fluxo de valor ([04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)); rampa de conta nova ([13](13-anti-abuso.md), §2.2). |
 | **A sessão não cabe em 5 minutos** | Decisões demais (filas, etapas, mercado, encomenda, cerco) cansam o casual no celular. | Ordem da sessão em quatro passos; "repetir o plano"; padrões seguros; teste de usabilidade com o perfil casual. |
 | **Relatório da volta vira ruído** | Texto demais, ou o relatório vira vitrine de oferta. | Três linhas e detalhe opcional; nada da loja no Relatório da volta. |
 | **Paridade quebra** | Um evento esquecido no cálculo por eventos faz o offline render mais (ou menos) que o online, e o mercado explora a diferença. | Teste automático de paridade a cada mudança de regra; alarme quando a emissão offline por hora divergir da online ([07](../01-pesquisa/07-tecnica-idles-online.md)). |

@@ -5,9 +5,35 @@
 
 ## Fase atual
 
-**Fase 3 — GDD + simulação da economia: entregue.** 🛑 **Checkpoint da Fase 3 aguardando o Gabriel:** 5 decisões em [`03-gdd/resumo-e-checkpoint.md`](03-gdd/resumo-e-checkpoint.md) (prólogo sem conta, freios temporários na transferência, custo da verificação de idade, como seguir com a economia, quem constrói e opera). GDD completo no [índice](03-gdd/README.md).
+**Fase 4 — Arquitetura técnica: em andamento.** O checkpoint da Fase 3 foi decidido pelo Gabriel em 2026-11-11 (tabela abaixo): sem verificação de idade alguma, transferência imediata sem freios, GDD aprovado com segunda rodada de simulação no início da Fase 4, e equipe mínima (Gabriel + Claude). O GDD foi ajustado a essas decisões. Entregável: [`04-arquitetura.md`](04-arquitetura.md).
 
 O checkpoint da Fase 2 foi aprovado pelo Gabriel em 2026-11-11 (as 5 recomendações).
+
+### Decisões do checkpoint da Fase 3 (2026-11-11)
+
+Opções e justificativas em [`03-gdd/resumo-e-checkpoint.md`](03-gdd/resumo-e-checkpoint.md).
+
+| # | Decisão | Recomendação do estúdio | **Decisão do Gabriel** |
+|---|---|---|---|
+| 1 | Prólogo de 5 min sem conta antes da verificação de idade | (A) Sim | **Sem verificação alguma** |
+| 2 | Freios temporários na transferência de Coins e ouro | (A) Carência dos Coins doados + limite de saída de conta nova | **(C) Nenhum freio: transferência imediata** |
+| 3 | Custo da verificação de idade | (A) Verificar todos, prólogo como filtro, negociar preço | **Nenhuma verificação** |
+| 4 | Economia saudável só em parte | (A) Aprovar o GDD e fazer a 2ª rodada de simulação no início da Fase 4 | **(A)** |
+| 5 | Quem constrói e opera | (A) Gabriel + Claude; arte e moderação terceirizadas; plano enxuto | **(A)** |
+
+**O que muda no GDD:**
+- **Não existe verificação de idade** em nenhum momento: nem na entrada, nem para doar, abrir o Baú, usar o Bazar de Personagens ou recuperar a conta. A decisão 3 do checkpoint 1 (jogo só para maiores de 18) não foi alterada: o 18+ fica nos termos de uso, sem conferência.
+- **"Uma pessoa, uma conta ativa"** continua como regra dos termos, mas passa a ser cobrada por detecção (aparelho, meio de pagamento, rede e comportamento), não por identidade verificada.
+- **Transferência de Coins e ouro imediata:** saem a carência por meio de pagamento, o limite de saída de conta nova, a retenção de saída em aparelho novo e os limites do risco de troca. Ficam as taxas (Troca, Coins na Troca a 12%), a detecção e a reversão pelo livro-razão depois do fato (fraude provada, roubo provado, duplicação).
+- **O prólogo** continua como abertura do jogo, sem conta (módulo 12); a conta é criada ao chegar à Cidade, sem verificação.
+- **Negócio:** sai o custo da verificação; o cenário base passa a pagar ~7 pessoas em vez de 3 a 4 (módulo 11, seção 8).
+- **Segunda rodada da simulação (Fase 4):** carência zero, custo de conta falsa perto de zero para fazendas de bots e ataque de cartões sem carência, além de D15, D16 e o bônus da refeição.
+
+**Alerta registrado uma vez (risco assumido pelo Gabriel):**
+- **ECA Digital.** Baú pago sem verificação de idade é o caso que a lei proíbe: caixas de recompensa são vedadas em jogos de acesso provável por menores ([Lei 15.211/2025, art. 20](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm)); quem as oferece deve verificar a idade sem autodeclaração ou bloquear a função por padrão ([Decreto 12.880/2026, arts. 18 e 23](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D12880.htm)); o MJSP já disse que a classificação 18 não substitui a verificação ([NT 55/2026](https://www.gov.br/mj/pt-br/assuntos/noticias/mjsp-pede-a-anpd-que-monitore-jogos-eletronicos-com-caixas-de-recompensa-que-nao-implementaram-verificacao-de-idade)). A fiscalização da ANPD começa em janeiro de 2027, com multa de até 10% do faturamento ou R$ 50 milhões por infração e possível suspensão (art. 35). Salvaguardas opcionais, **não aplicadas**: verificar a idade só de quem compra ou abre o Baú, ou deixar o Baú desligado por padrão no Brasil. **Validar com advogado.**
+- **Fraude de pagamento.** Sem carência, cartão roubado vira Coins transferidos e vendidos por Pix na mesma hora; o estorno cai sobre o estúdio, e suspender a conta contestante não recupera os Coins. Acima do limite de contestação das bandeiras, o estúdio pode perder o cartão. Ficam a autenticação do emissor (3DS), o disjuntor de pagamentos e o Pix como meio principal.
+- **Bots e multicontas.** Sem identidade verificada, uma conta falsa custa quase nada; a defesa passa a ser o teto de emissão, a rampa de conta nova e a detecção. A 2ª rodada mede o lucro de fazendas grandes.
+- **Roubo de conta.** Sem retenção de saída, quem rouba a senha esvazia a conta na hora; ficam o segundo fator, os alertas e a reversão do roubo provado pelo livro-razão.
 
 ### Decisões do checkpoint da Fase 2 (2026-11-11, aprovadas como recomendado)
 
@@ -44,8 +70,8 @@ A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11
 |---|---|---|
 | 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
 | 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Concluída · checkpoint aprovado |
-| 3. GDD + simulação da economia | `docs/03-gdd/` | ✅ Entregue · 🛑 checkpoint pendente |
-| 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
+| 3. GDD + simulação da economia | `docs/03-gdd/` | ✅ Concluída · checkpoint decidido |
+| 4. Arquitetura técnica | `docs/04-arquitetura.md` | 🔵 Em andamento |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
 
 ## Decisões do checkpoint da Fase 1 (2026-11-11)
@@ -98,6 +124,8 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 | 2026-11-11 | Jogo inteiro para maiores de 18. | Gabriel |
 | 2026-11-11 | Lançamento: Brasil primeiro, bilíngue (PT-BR e inglês), servidor no Brasil, Pix, PWA; Steam e lojas depois. | Gabriel |
 | 2026-11-11 | Seguir sem parecer jurídico por enquanto; ajustar depois. | Gabriel |
+| 2026-11-11 | Sem verificação de idade alguma; transferência de Coins e ouro imediata, sem freios. | Gabriel |
+| 2026-11-11 | GDD aprovado; 2ª rodada de simulação no início da Fase 4; equipe mínima (Gabriel + Claude, arte e moderação terceirizadas). | Gabriel |
 
 ## Lições de processo (para as próximas fases)
 
@@ -110,3 +138,4 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 - **2026-11-07 a 2026-11-11** — Pesquisa em lotes, com várias pausas por limite de uso. 49 fichas e 11 estudos concluídos e versionados.
 - **2026-11-11** — Matriz, padrões, leis e síntese com 30 insights concluídos. Checkpoint da Fase 1 apresentado e decidido pelo Gabriel, com ajustes.
 - **2026-11-11** — Fase 2: três conceitos (Casas da Maré, Fronteira, Cidade dos Ofícios), comparação, recomendação e checkpoint em `02-conceito.md`.
+- **2026-11-11** — Fase 3: bíblia, 14 módulos, simulação da economia em Node.js, wireframes, revisão de consistência e checkpoint. Checkpoint decidido pelo Gabriel: sem verificação de idade, transferência imediata, GDD aprovado, equipe mínima. GDD ajustado; Fase 4 iniciada.

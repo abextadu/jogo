@@ -469,7 +469,7 @@ O laço vai de 1 a 5 e sobe com as horas de expedição juntos e com as Encruzil
 
 ### 9.6 Por que não lutam no cerco
 
-[H] O cerco é o momento cívico do jogo: um adulto verificado, um defensor ([00-biblia](00-biblia.md), P8). Se os ajudantes lutassem, quem tem mais ajudantes defenderia mais, e "um adulto, um personagem" viraria "um adulto, três combatentes". A parte NPC do cerco é a **Guarda da Cidade**, que pertence à cidade e é equipada com o que a cidade produz ([04-combate](04-combate.md), seção 11.3).
+[H] O cerco é o momento cívico do jogo: uma conta, um defensor ([00-biblia](00-biblia.md), seção 5: um personagem por conta). Se os ajudantes lutassem, quem tem mais ajudantes defenderia mais, e "uma conta, um personagem" viraria "uma conta, três combatentes". A parte NPC do cerco é a **Guarda da Cidade**, que pertence à cidade e é equipada com o que a cidade produz ([04-combate](04-combate.md), seção 11.3).
 
 ### 9.7 Efeito econômico
 

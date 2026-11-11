@@ -29,7 +29,7 @@ Comece pelo **[documento-mestre (bíblia)](00-biblia.md)**: visão, nomes oficia
 
 - **Telas (wireframes):** abra [`14-wireframes/index.html`](14-wireframes/index.html) no navegador.
 - **Simulação:** código e instruções em [`08-simulacao/`](08-simulacao/README.md). Gráficos em [`08-simulacao/resultados/relatorio.html`](08-simulacao/resultados/relatorio.html). Para rodar: `node docs/03-gdd/08-simulacao/sim.js --cenario base --semente 42`.
-- **Notas de integração:** [`_notas-de-integracao.md`](_notas-de-integracao.md) guarda as interfaces entre módulos e todas as resoluções de conflito (R1–R27 e D1–D14).
+- **Notas de integração:** [`_notas-de-integracao.md`](_notas-de-integracao.md) guarda as interfaces entre módulos, todas as resoluções de conflito (R1–R27 e D1–D19) e o que mudou no checkpoint 3.
 
 ## Como ler
 

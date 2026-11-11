@@ -53,6 +53,18 @@
 - (C) Equipe de 6 a 8 pessoas (precisa de investimento além da receita prevista).
 - *Por quê:* a receita do cenário base paga 3 a 4 pessoas. A arquitetura da Fase 4 precisa saber se é para uma equipe mínima (simplicidade acima de tudo) ou maior.
 
+## Decisões do Gabriel (2026-11-11)
+
+| # | Decisão do Gabriel |
+|---|---|
+| 1 | **Sem verificação alguma.** |
+| 2 | **(C) Nenhum freio:** transferência imediata. |
+| 3 | **Nenhuma verificação.** |
+| 4 | **(A)** GDD aprovado; 2ª rodada de simulação no início da Fase 4. |
+| 5 | **(A)** Gabriel + Claude no código e no design; arte e moderação terceirizadas; plano enxuto. |
+
+Consequências aplicadas no GDD e alerta de risco (registrado uma vez, risco assumido): [PROGRESSO](../PROGRESSO.md), seção "Decisões do checkpoint da Fase 3". Os números do resumo acima que dependiam da verificação (custo de 32% da receita, equipe de 3 a 4 pessoas) foram refeitos no [11](11-monetizacao.md), seção 8: sem a verificação, o cenário base paga ~7 pessoas.
+
 ## Como isso pode dar errado
 
 | Risco | Como acontece | Mitigação |

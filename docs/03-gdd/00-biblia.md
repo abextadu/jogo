@@ -135,7 +135,7 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 |---|---|---|
 | **Passe da Era** | O passe da temporada: um por Era, sem expirar, pago em Coins (20 Coins); avança por feitos. | 11 |
 | **Feito** | Unidade de progresso do Passe da Era; não é moeda. | 11 |
-| **Calouro** | Status dos 7 primeiros dias da conta, com faixas próprias nas encomendas e no cerco e trava de envio na Troca. | 12 |
+| **Calouro** | Status dos 7 primeiros dias da conta, com faixas próprias nas encomendas e no cerco. Sem trava de envio na Troca (checkpoint 3). | 12 |
 | **Cidadão** | Status depois da cidadania (7 dias e uma contribuição à cidade), com voto no Conselho. | 12 |
 
 **Economia e anti-abuso (07, 13)**
@@ -147,19 +147,19 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | **Cota** | O saldo disponível do teto de emissão: enche 1/24 do teto por hora e acumula até 3 dias. | 07 |
 | **Portão de saída** | A forma do teto de emissão: nada nasce preso; o teto mede só o valor criado pela própria conta que sai dela (venda, Troca, venda a NPC), menos o crédito dos insumos comprados. Conta tudo o que é negociável, inclusive o que veio de janelas ativas e de prêmios de evento (revisão de consistência: D13). | 07, 13 |
 | **Consumo essencial não atendido** | Indicador do painel: a parte do desgaste e dos consumíveis previstos que as contas ativas não compraram nem produziram. Separa "muito ouro" de "pouca oferta" (R25). | 07, 08 |
-| **Carência** | Período em que um lote de Coins recém-doado pode ser gasto na loja, mas não transferido (72 h no Pix, 7 dias no cartão e na primeira doação, até 30 dias com sinal de risco). | 07, 13 |
+| **Carência** | Prazo de espera antes de um direito (votar depois de comprar conta no Bazar de Personagens, trocar de ofício mestre, receber ouro de encomenda). **Não há carência na transferência de Coins nem de ouro:** os Coins recém-doados podem ser transferidos na hora (checkpoint 3). | 07, 09, 13 |
 | **Disjuntor** | Suspensão da entrada de novas operações num balcão, item, moeda ou fluxo, sem desligar a economia inteira. | 07, 13 |
-| **Risco de troca** | Pontuação do valor dado sem contrapartida entre contas (níveis 0 a 3). Serve à segurança e à detecção; nunca exige troca equilibrada. | 07, 13 |
-| **Conta nova** | Conta com menos de 14 dias ou menos de 20 h de jogo ativo; tem limite de saída sem contrapartida e não recebe ouro de encomenda (R23). | 13 |
+| **Risco de troca** | Pontuação do valor dado sem contrapartida entre contas (níveis 0 a 3). Serve só à detecção e à investigação depois do fato; nunca limita, atrasa nem exige troca equilibrada (checkpoint 3). | 07, 13 |
+| **Conta nova** | Conta com menos de 14 dias ou menos de 20 h de jogo ativo; está na rampa do teto de emissão e não recebe ouro de encomenda (R23). Não tem limite de saída (checkpoint 3). | 07, 13 |
 | **Aposentadoria** | Conta arquivada por quem compra outra no Bazar de Personagens: sem jogar nem negociar, reativável trocando de lugar com a ativa no máximo uma vez a cada 90 dias. | 13 |
 
 ## 5. Decisões já tomadas (não reabrir nos módulos)
 
 | Origem | Decisão |
 |---|---|
-| Checkpoint 1 | Coins oficiais; Bazar de Personagens desde o lançamento; Coins e ouro transferíveis livremente; RMT informal não intermediado. |
+| Checkpoint 1 | Coins oficiais; Bazar de Personagens desde o lançamento; Coins e ouro transferíveis livremente; RMT informal não intermediado. **Transferência imediata, sem carência, limite de saída nem retenção** (checkpoint 3); ficam as taxas, a detecção e a reversão pelo livro-razão de fraude, roubo ou duplicação provados. |
 | Checkpoint 1 | Baú Misterioso comprável com Coins e com ouro no mercado; conteúdo sempre em itens. |
-| Checkpoint 1 | Jogo inteiro 18+, com idade verificada. |
+| Checkpoint 1 | Jogo inteiro 18+, nos termos de uso. **Sem verificação de idade alguma** (checkpoint 3): nem na entrada, nem para doar, abrir o Baú, usar o Bazar de Personagens ou recuperar a conta. |
 | Checkpoint 1 | Brasil primeiro, bilíngue (PT-BR e inglês), servidor no Brasil, Pix, PWA; Steam e lojas depois, sem RMT dentro das lojas. |
 | Checkpoint 1 | Sem parecer jurídico por enquanto (risco assumido pelo Gabriel). |
 | Checkpoint 2 | Cidade dos Ofícios como núcleo; Fronteira a partir da 2ª Era; mercados regionais (Casas da Maré) como expansão futura. |
@@ -172,7 +172,10 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | 2026-11-11 (revisão de consistência: R12) | **PWA com offline só de leitura.** Sem rede, o cliente mostra o último estado confirmado pelo servidor e aceita rascunhos, enviados só quando o jogador confirma, já online, com nova validação; nada que mova valor entra em fila local. O servidor é a única verdade ([14](14-arte-e-ui.md), seção 2.7; [13](13-anti-abuso.md), seção 5.1). |
 | 2026-11-11 (revisão de consistência: R13) | **Mérito em duas contas:** vitalício (títulos; só cresce) e da Era (zera a cada Era). As duas ficam com a conta no Bazar de Personagens. A "prioridade do Mérito" vale só para a ordem de escolha; o Mérito nunca pesa no voto ([07](07-economia.md), seções 2 e 7.3; [09](09-social.md)). |
 
-E o piso comum P1–P12 do [conceito](../02-conceito.md), seção 1.
+| Checkpoint 3 | **Uma pessoa, uma conta ativa** continua como regra dos termos de uso, cobrada por detecção (aparelho, meio de pagamento, rede, comportamento e fluxo de valor), não por identidade verificada. |
+| Checkpoint 3 | GDD aprovado; 2ª rodada da simulação no início da Fase 4. Equipe mínima: Gabriel + Claude no código e no design; arte em pixel art e moderação terceirizadas por demanda. |
+
+E o piso comum P1–P12 do [conceito](../02-conceito.md), seção 1, **com o P8 alterado pelo checkpoint 3:** o jogo é 18+ pelos termos, sem verificação de idade, e a barreira contra bots e multicontas passa a ser o teto de emissão, a rampa de conta nova e a detecção.
 
 ## 6. Números-âncora (pontos de partida para todos os módulos)
 
@@ -272,7 +275,7 @@ Todas as taxas em ouro são **destruídas** (drenos), nunca receita do estúdio.
 | `10-live-ops.md` | Eras, Fronteira, eventos, calendário, plano de operação | 00, 09 |
 | `11-monetizacao.md` | Coins por doação, conveniência, cosméticos, Baú Misterioso, passe, teto de gasto, Pix | 00, 07 |
 | `12-onboarding.md` | Primeiros 5 minutos, primeira hora, primeiro dia, primeira semana | 00, 01, 02 |
-| `13-anti-abuso.md` | Bots, multicontas, exploits, fraude, contestação, verificação de idade, RMT informal | 00, 07 |
+| `13-anti-abuso.md` | Bots, multicontas sem verificação de identidade, exploits, fraude, contestação, RMT informal | 00, 07 |
 | `14-arte-e-ui.md` + `14-wireframes/` | Direção de arte (pixel art), telas principais, acessibilidade, PWA | 00 |
 | `README.md` | Índice do GDD | todos |
 
@@ -319,3 +322,5 @@ Ficam como estão: Ouro, Marcos, Mérito, Bolsa, Feira, Câmbio, Troca, Encomend
 | "Mais um clone" | Fantasia medieval e pixel art são o terreno mais disputado do gênero, e o jogo pode parecer genérico. | A identidade vem dos sistemas (cidade viva, interdependência, Conselho, Fronteira) e de uma direção de pixel art própria, legível num vídeo de 10 segundos. |
 | Parecido demais com Tibia | Vocações, monstros e visual próximos demais do Tibia geram rejeição e risco de propriedade intelectual. | Bestiário, nomes, mapas e arte com desenho próprio; revisão de semelhança antes de fechar a arte. |
 | Coerência entre módulos | Escritos em paralelo e renomeados no meio do caminho, os módulos podem se contradizer. | Revisão de consistência pelo diretor ao fim da fase, com a tabela da seção 9. |
+| Baú pago sem verificação de idade | O ECA Digital proíbe caixas de recompensa em jogos de acesso provável por menores e exige verificação sem autodeclaração de quem as oferece (Lei 15.211/2025, art. 20; Decreto 12.880/2026, arts. 18 e 23); a classificação 18 não basta (MJSP, NT 55/2026). | Risco assumido pelo Gabriel (checkpoint 3). Salvaguardas opcionais, não aplicadas: verificar só quem compra ou abre o Baú, ou Baú desligado por padrão no Brasil. **Validar com advogado.** |
+| Contas falsas baratas | Sem identidade verificada, uma conta nova custa quase nada a um operador de bots. | Teto de emissão por conta, rampa de conta nova, ouro de encomenda só a partir do 14º dia, detecção por ondas e por fluxo de valor; 2ª rodada da simulação mede fazendas grandes. |

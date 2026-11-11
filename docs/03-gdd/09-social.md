@@ -12,7 +12,7 @@
 | S2 | **Quem se inscreve define a meta.** Encomendas e guarnições contam só quem aceitou, com o ritmo que declarou (leve, normal, forte). | O ausente nunca vira peso do grupo, a lição do Egg Inc. e do Tap Titans 2. |
 | S3 | **Ranking só sobe quem entrega à cidade.** Os rankings medem bens entregues a Obras e Encomendas (destruídos) e defesa, contando só produção própria. Nada de ranking por vendas, lucro ou patrimônio. | Lavar volume não sobe ninguém, e subir no ranking é ele mesmo um dreno. |
 | S4 | **Conselho pequeno, regras grandes.** 7 conselheiros por voto único transferível, mandato de 2 meses, poderes só dentro de faixas, votos secretos e mutáveis até o fim. | Capturar o Conselho rende pouco e comprar voto não dá para conferir. |
-| S5 | **Golpe não é conteúdo.** Segurança por desenho (Troca com confirmação dupla, links bloqueados nos canais públicos, carências, cofre com limites) e punição para quem engana dentro do jogo. | Com RMT aberto, golpe move dinheiro real. |
+| S5 | **Golpe não é conteúdo.** Segurança por desenho (Troca com confirmação dupla, links bloqueados nos canais públicos, cofre da guilda com limites) e punição para quem engana dentro do jogo. | Com RMT aberto, golpe move dinheiro real. |
 | S6 | **Tudo o que decide acontece dentro do jogo.** Discord e WhatsApp ajudam a conversar, mas inscrição, votação e coordenação têm ferramenta própria. | Quem não está no grupo externo não fica de fora. |
 
 ## 1. Princípios do social
@@ -215,7 +215,7 @@ A Encomenda é o contrato coletivo com prazo e nota individual (bíblia, §4). A
 |---|---|---|---|
 | **Troca trocada** | Troca-se o item no último segundo | Confirmação dupla; qualquer mudança zera as confirmações; a tela final mostra o valor de mercado de cada lado ([07](07-economia.md), seção 5.5) e avisa quando a troca foge 20% dele (revisão de consistência: R18). [F] O Idle Clans pede confirmação a ±20% da média de 24 h ([C02](../01-pesquisa/fichas/C02-idle-clans.md)) | Banimento; devolução pelo livro-razão |
 | **"Manda o Pix que eu mando o ouro"** | Pagamento fora do jogo, entrega que não vem | Troca de mão única mostra o aviso "esta troca não tem contrapartida; o estúdio não recupera acordos feitos fora do jogo"; página pública "RMT informal: o que o estúdio não faz"; risco de troca no livro-razão (modelo do IdleMMO, [04b, §3.8](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) | O estúdio não devolve pagamento externo. Se houver prova no chat do jogo (a promessa), o golpista é banido |
-| **Phishing e site falso** | Link de "Coins grátis", página de login falsa | Links externos bloqueados nos canais públicos; no privado, aviso com o domínio em destaque; login só no domínio oficial; 2FA; alerta de login novo; carência para mover valor recebido logo depois de um login novo ([04b, §4.2 e "Como isso pode dar errado"](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) | Banimento; recuperação da conta pelo suporte |
+| **Phishing e site falso** | Link de "Coins grátis", página de login falsa | Links externos bloqueados nos canais públicos; no privado, aviso com o domínio em destaque; login só no domínio oficial; 2FA; alerta de login novo com o botão "não fui eu", que congela as saídas (sem retenção automática, checkpoint 3; [04b, §4.2 e "Como isso pode dar errado"](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) | Banimento; recuperação da conta pelo suporte |
 | **Falso staff** | Nome como "Suporte" ou "ADM" pede senha ou código | Nomes reservados; selo oficial só no Diário; aviso fixo: "o estúdio nunca pede senha, código ou Pix" | Banimento |
 | **Golpe do cofre** | Oficial esvazia o cofre e sai | Limites diários, segundo aprovador, carência de 72 h depois da promoção e livro do cofre aberto (§2.6) | Banimento; devolução pelo livro |
 | **Pirâmide e "dobro seu ouro"** | Promessa de retorno em troca de depósito | Regra de conduta; o filtro marca padrões de promessa de retorno para revisão | Banimento |
@@ -233,7 +233,7 @@ A Encomenda é o contrato coletivo com prazo e nota individual (bíblia, §4). A
 
 ### 3.6 Privacidade
 
-- O perfil público mostra o personagem, nunca dados da verificação de idade. [H]
+- O perfil público mostra o personagem, nunca dados da conta (e-mail, pagamento, aparelho). [H]
 - Bloquear alguém esconde mensagens, convites, pedidos de Troca e votos de "elogio" dessa pessoa.
 - O estúdio nunca exibe a localização, o fuso ou o horário de login de um jogador a outro sem opção explícita. [H] O horário de login é a matéria-prima de perseguição.
 
@@ -288,8 +288,8 @@ O Cerco é semanal, com inscrição até 24 h antes (bíblia, §6.1). A mecânic
 **Como funciona [H]:**
 - **Pareamento opt-in** por idioma, horário de jogo e interesse (ofício ou vocação). O afilhado pode trocar de Padrinho uma vez.
 - **Até 3 afilhados ao mesmo tempo.** O vínculo dura 30 dias ou até o afilhado levar um ofício ao teto de aprendiz (nível 30).
-- **O enxoval de boas-vindas é dado pelo sistema**, com o Padrinho como "entregador". O valor nunca sai do bolso do Padrinho, e transferências dele para o afilhado seguem as regras de conta nova do módulo 13. [H] Assim o Padrinho não vira rota de entrega de ouro vendido.
-- **Recompensa do Padrinho por marcos do afilhado:** volta no D7, 1ª Encomenda, 1ª entrega numa Obra, ativo no D30. Paga Mérito e cosméticos ("fita de Padrinho"), com teto de 12 afilhados recompensados por Era. Cada marco exige ação real do afilhado, que é um adulto verificado diferente.
+- **O enxoval de boas-vindas é dado pelo sistema**, com o Padrinho como "entregador". O valor nunca sai do bolso do Padrinho, e transferências dele para o afilhado não têm limite (checkpoint 3), mas entram no grafo de fluxo do módulo 13. [H] Assim o Padrinho não vira rota disfarçada de entrega de ouro vendido.
+- **Recompensa do Padrinho por marcos do afilhado:** volta no D7, 1ª Encomenda, 1ª entrega numa Obra, ativo no D30. Paga Mérito e cosméticos ("fita de Padrinho"), com teto de 12 afilhados recompensados por Era. Cada marco exige ação real do afilhado; afilhados ligados ao Padrinho por aparelho, pagamento ou fluxo de valor não contam ([13](13-anti-abuso.md), §4.2).
 - **Roda de Novatos:** canal por idioma com novatos, Padrinhos e retornantes (inativos há 45 dias ou mais). O Padrinho pode silenciar alguém por 30 min, com o nome dele, o do silenciado e o motivo visíveis a todos, e o estúdio revisa cada caso. [F] No FFXIV, a Novice Network aceita até 512 pessoas (100 mentores e 412 novatos); o mentor expulsa por spam ou assédio, o nome de quem expulsou e o motivo aparecem para todos, o suporte é avisado e o mentor que abusa perde o status ([Console Games Wiki](https://ffxiv.consolegameswiki.com/wiki/Mentor_System_and_Novice_Network)).
 
 | Quatro perguntas | Mentoria |
@@ -375,7 +375,7 @@ O Conselho é o órgão eleito da Cidade: **7 conselheiros**, mandato de 2 meses
 
 | Regra | Eleitor [H] | Candidato [H] |
 |---|---|---|
-| Identidade | **Uma pessoa verificada, um voto por Cidade** (o documento, não a conta) | Idem |
+| Identidade | **Uma conta cidadã, um voto por Cidade.** Sem verificação de identidade (checkpoint 3), contas ligadas entre si ([13](13-anti-abuso.md), §4.2) que votam juntas vão à revisão, e os votos das contas extras são anulados | Idem |
 | Idade da conta | 14 dias ou mais | 60 dias ou mais |
 | Atividade | Ter entrado em 7 dos últimos 28 dias | Idem |
 | Conta comprada no Bazar de Personagens | Carência de 60 dias depois da transferência (cerca de um mandato) | Carência de 120 dias |
@@ -458,7 +458,8 @@ O ciclo de 3 mandatos dura 26 semanas (2 Eras) e se repete. [H] **Consequência 
 | **Compra de voto com ouro, Coins ou Pix** | Voto secreto, sem comprovante e mutável até o fim (§6.4). Compra de voto é infração: anulação da candidatura, inelegibilidade por 6 meses e banimento se envolver RMT. |
 | **Bloco de uma megaguilda** | STV (12,5% por cadeira); **no máximo 2 conselheiros da mesma guilda** (o terceiro mais votado da guilda cede a vaga ao próximo da apuração); a filiação conta 30 dias antes do fim das candidaturas; guildas com no máximo 40 pessoas. |
 | **Guildas de fachada** para contornar o teto | A fundação exige 5 contas com 7 dias e taxa (§2.1); fusões e trocas de guilda perto da eleição não mudam a filiação contada. |
-| **Contas compradas para votar** | Carência de 60 dias depois do Bazar de Personagens; uma pessoa verificada, um voto. |
+| **Contas compradas para votar** | Carência de 60 dias depois do Bazar de Personagens; uma conta cidadã, um voto. |
+| **Contas falsas para votar** | Sem verificação (checkpoint 3), abrir contas é barato. Barreiras: cidadania (7 dias e uma contribuição), conta com 14 dias, atividade em 7 dos últimos 28 dias, revisão de contas ligadas que votam juntas. O prêmio de capturar continua pequeno (abaixo). |
 | **Contas "acordadas" só para votar** | Atividade em 7 dos últimos 28 dias. |
 | **Prêmio alto demais** | **O que se captura é pouco.** Exemplo: baixar a Feira de 6% para 5% devolve 1% do volume da Feira aos vendedores, diluído entre todos. Um vendedor com 2% da Feira ganha 0,02% do volume mensal, e para isso precisaria comprar cerca de 2.000 votos que não consegue conferir. |
 | **Perpetuação** | Mandato curto, no máximo 2 seguidos, troca de Conselho no meio da Era. |
@@ -471,7 +472,7 @@ O ciclo de 3 mandatos dura 26 semanas (2 Eras) e se repete. [H] **Consequência 
 - **Brigada de denúncias:** denúncias em massa contra candidato ou conselheiro vão para revisão humana antes de qualquer sanção automática. [H]
 - **Sem política real:** partidos, candidatos, campanhas e símbolos de eleições de verdade ficam fora da Praça, da Tribuna e dos manifestos, com atenção redobrada nos anos de eleição no Brasil. [H] A Cidade não pode virar extensão da polarização de fora, nem parecer que o estúdio toma lado.
 - **Renúncia digna:** o conselheiro pode renunciar a qualquer momento, sem perda e sem explicação pública.
-- **Identidade protegida:** nada da verificação de idade aparece; ameaça ou exposição de dados de um conselheiro é prioridade 1 da moderação (§3.4).
+- **Identidade protegida:** nenhum dado de conta aparece; ameaça ou exposição de dados de um conselheiro é prioridade 1 da moderação (§3.4).
 
 ### 6.10 Destituição e vacância
 
@@ -497,7 +498,7 @@ O ciclo de 3 mandatos dura 26 semanas (2 Eras) e se repete. [H] **Consequência 
 | **10 Live ops** | Posse na S1, S5 ou S9; festas que usam Sede, guarnições e turmas; Diário da Cidade; métricas sociais. |
 | **11 Monetização** | Nada do social é vendido: nem vaga de guilda, nem nível de Sede, nem Encomenda extra, nem destaque no Conselho. Estandartes e decoração de Sede podem existir como cosméticos, sem efeito. |
 | **12 Onboarding** | Oferta de Padrinho no D1 a D3; Roda de Novatos; primeira Encomenda da cidade em turma automática até o D3, paga em Mérito e XP (o ouro de Encomenda começa no 14º dia da conta; R23). |
-| **13 Anti-abuso** | Regras de conta nova; risco de troca; uma pessoa verificada, um voto; carência pós-Bazar de Personagens; detecção de compra de voto e de guildas de fachada; origem dos lotes no livro-razão. |
+| **13 Anti-abuso** | Regras de conta nova; risco de troca; uma conta cidadã, um voto, com revisão de contas ligadas; carência pós-Bazar de Personagens; detecção de compra de voto e de guildas de fachada; origem dos lotes no livro-razão. |
 | **14 Arte e UI** | Os 5 níveis da Sede; Tribuna; Quadro da Cidade; Troca com confirmação dupla e aviso de valor; placa da Obra. |
 
 ## 8. Propostas de mudança na bíblia
@@ -525,7 +526,7 @@ O ciclo de 3 mandatos dura 26 semanas (2 Eras) e se repete. [H] **Consequência 
 | **Golpe apesar do desenho** | O jogador negocia por fora e é enganado; culpa o estúdio nas reviews | Aviso na Troca de mão única; página pública sobre o RMT informal; banimento do golpista quando há prova no jogo; estatística de golpes no relatório mensal. |
 | **Moderação cara e lenta** | Duas línguas, 7 dias por semana, e um regime de responsabilidade mais duro depois do STF (2025) | Prevenção por desenho primeiro; fila por prioridade; canal de notificação extrajudicial com protocolo; equipe mínima no módulo 10; **validar o fluxo com advogado**. |
 | **Falso positivo** | O filtro de Pix ou de telefone pega conversa legítima; família ou república caem na detecção de rede | Filtro avisa, não pune; revisão humana para qualquer sanção acima de 1 h; apelação. |
-| **Padrinho predador** | Usa a confiança do novato para golpe ou recrutamento abusivo | Enxoval do sistema; limites de transferência para conta nova; revogação por denúncia; o marco D30 só paga sem denúncia do afilhado. |
+| **Padrinho predador** | Usa a confiança do novato para golpe ou recrutamento abusivo | Enxoval do sistema; aviso na primeira Troca unilateral do afilhado; revogação por denúncia; o marco D30 só paga sem denúncia do afilhado. |
 | **Ranking de destruição vira "pagar para ranquear"** | O rico compra bens e entrega | Item comprado vale 0 ponto; só a produção própria conta (livro-razão por lote). Custo técnico: lotes com origem, a resolver na Fase 4. |
 | **Minoria de língua inglesa isolada** | A Praça PT domina, o Conselho só fala português | Canais separados; STV dá cadeira com 12,5%; Atos com tradução revisada; meta de tempo de moderação igual nos dois idiomas. |
 | **Tradução automática gera briga** | Uma tradução ruim soa como ofensa | A tradução é opcional e marcada como tradução; quem denuncia vê o original. |
