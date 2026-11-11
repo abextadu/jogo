@@ -5,12 +5,14 @@
 
 ## Fase atual
 
-**Fase 2 — Conceito: em andamento.** A Fase 1 foi concluída e o checkpoint foi decidido pelo Gabriel em 2026-11-11, com ajustes (tabela abaixo).
+**Fase 2 — Conceito: entregue.** 🛑 **Checkpoint da Fase 2 aguardando o Gabriel:** escolher o conceito e responder as 5 decisões de [`02-conceito.md`](02-conceito.md), seção 8. Recomendação do estúdio: Cidade dos Ofícios como núcleo, com a Fronteira como temporada.
+
+A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11-11, com ajustes (tabela abaixo).
 
 | Fase | Entregável | Status |
 |---|---|---|
 | 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
-| 2. Conceito (3 conceitos) | `docs/02-conceito.md` | 🟡 Em andamento |
+| 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Entregue · 🛑 checkpoint pendente |
 | 3. GDD + simulação da economia | `docs/03-gdd/` | ⚪ Não iniciada |
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
@@ -75,4 +77,5 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 
 - **2026-11-06** — Estrutura criada (`docs/`, `PROGRESSO.md`, `CLAUDE.md`, `METODOLOGIA.md`). Git inicializado. Pesquisa iniciada.
 - **2026-11-07 a 2026-11-11** — Pesquisa em lotes, com várias pausas por limite de uso. 49 fichas e 11 estudos concluídos e versionados.
-- **2026-11-11** — Matriz, padrões, leis e síntese com 30 insights concluídos. Checkpoint da Fase 1 apresentado ao Gabriel.
+- **2026-11-11** — Matriz, padrões, leis e síntese com 30 insights concluídos. Checkpoint da Fase 1 apresentado e decidido pelo Gabriel, com ajustes.
+- **2026-11-11** — Fase 2: três conceitos (Casas da Maré, Fronteira, Cidade dos Ofícios), comparação, recomendação e checkpoint em `02-conceito.md`.
