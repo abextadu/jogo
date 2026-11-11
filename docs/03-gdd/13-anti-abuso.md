@@ -434,33 +434,31 @@ Regras:
 
 ### 6.3 Reversão pelo livro-razão
 
-**AA-14.** [H] Regra publicada antes do lançamento:
+**AA-14. Decisão do Gabriel (2026-11-11):** o pagamento é uma doação, sem reembolso por parte do estúdio. Quando o banco desfaz um pagamento por conta própria (chargeback no cartão, MED do Pix), **a conta fica suspensa até regularizar**. Regra publicada antes do lançamento:
 
 | Caso | Resposta |
 |---|---|
-| Alvará contestado ainda na conta | Revogado. A conta segue jogável |
-| Alvará contestado já consumido | Revogados a conveniência restante e os cosméticos comprados com ele; sem outra penalidade no primeiro caso sem sinal de fraude |
-| Alvará (ou derivado) já transferido a um terceiro de boa-fé, depois da carência | O terceiro fica com ele; o estúdio absorve a perda; quem comprou e contestou recebe uma **dívida em ouro** igual ao valor de referência do Alvará no dia da transferência |
-| Fraude confirmada (cartão de terceiro, conta de golpe) | Banimento da pessoa após revisão; confisco do ouro rastreável; dívida pelo restante |
-| Devolução pelo MED | Tratada como um dos dois casos anteriores, conforme a apuração |
-| Contestação por engano, depois desfeita | Tudo restaurado |
+| Contestação forçada pelo banco (chargeback ou MED) | A conta fica **suspensa até regularizar**: o jogador refaz a doação do valor contestado e a conta volta. Os Alvarás contestados que ainda estão na conta são revogados. |
+| Alvará (ou derivado) já transferido a um terceiro de boa-fé, depois da carência | O terceiro fica com ele; a regularização do contestante cobre a perda. |
+| Fraude confirmada (cartão de terceiro, conta de golpe) | Banimento da pessoa após revisão; confisco do ouro rastreável. |
+| Contestação por engano, depois desfeita | Suspensão encerrada, tudo restaurado. |
 
-**Dívida em ouro [H]:**
+**Suspensão até regularizar:**
 
-- a conta continua jogando; a dívida é paga automaticamente com 50% de cada entrada de ouro (vendas e Trocas recebidas) até zerar;
-- enquanto houver dívida, a conta não "dá valor": sem Troca de saída, sem vender no Câmbio, sem Cartório; comprar e jogar continuam livres;
-- a dívida é quitável jogando e **nunca exige comprar Alvará**. [F] No Throne and Liberty, parte da comunidade leu a dívida de Lucent como punição com fins de lucro, porque quitá-la exigia comprar na loja ([04b, §3.10](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
+- a suspensão vem com aviso do motivo, do valor a regularizar e do canal de apelação, com resposta em até 5 dias úteis [H];
+- enquanto suspensa, a conta não joga, não negocia e não vota; nada do que ela tem é apagado;
+- regularizar é refazer a doação do valor contestado; a conta volta no estado em que estava.
 
-- **Inspira-se na** dívida do Throne and Liberty e do Lost Ark ([F09, §6.4 e §13](../01-pesquisa/fichas/F09-throne-and-liberty-e-lost-ark.md)) e na regra de reversão do [05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md).
-- **Resolve** o estorno que chega depois que o valor já mudou de mãos, sem tirar nada do terceiro de boa-fé.
-- **Incentiva** não contestar compras legítimas: a contestação vira dívida.
-- **Risco:** o fraudador abandona a conta endividada. Mitigação: o banimento segue a pessoa (§3.5); a perda fica limitada pela carência e pelo teto de gasto (módulo 11).
+- **Inspira-se na** prática dos servidores de Tibia citada pelo Gabriel, e se diferencia da dívida em ouro do Throne and Liberty e do Lost Ark ([F09](../01-pesquisa/fichas/F09-throne-and-liberty-e-lost-ark.md)), proposta na primeira versão deste módulo.
+- **Resolve** a perda do estúdio quando o valor já mudou de mãos, sem tirar nada do terceiro de boa-fé.
+- **Incentiva** não contestar doações legítimas.
+- **Risco (registrado uma vez, assumido pelo Gabriel):** nos EUA, a FTC puniu a Epic por bloquear as contas de quem contestava cobranças ([05c, §3.1](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)); no Brasil, bloquear a conta inteira pode ser questionado como prática abusiva no CDC. Mitigação: aviso claro, apelação rápida e regra publicada antes do lançamento. Também há o caso do dono da conta que é vítima (cartão clonado por terceiro): a apelação separa vítima de fraudador.
 
 ### 6.4 Resposta proporcional e disjuntor de pagamentos
 
 **AA-15.** [H]
 
-- **Nunca bloquear a conta inteira** por um estorno, sem processo. Congela-se só o valor contestado e seus derivados; o jogador recebe aviso do que foi congelado, por quê e como contestar, com resposta em até 5 dias úteis. [F] A FTC acusou a Epic de bloquear as contas de quem contestava cobranças não autorizadas, num acordo de US$ 245 milhões em reembolsos ([05c, §3.1](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)).
+- **Suspensão com processo** (AA-14): toda suspensão por contestação traz aviso, valor a regularizar e canal de apelação, com resposta em até 5 dias úteis. [F] Nos EUA, a FTC acusou a Epic de bloquear as contas de quem contestava cobranças não autorizadas, num acordo de US$ 245 milhões em reembolsos ([05c, §3.1](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)); revisar antes de abrir o jogo para os EUA.
 - **Disjuntor de pagamentos:** se disputas mais fraudes confirmadas passarem de 0,8% das compras por cartão numa janela de 30 dias, a compra por cartão fica suspensa para contas sem histórico; acima de 1,2%, toda compra por cartão recebe a carência máxima. O Pix continua. É um limiar bem abaixo do 1,5% da Visa.
 - **Contra o teste de cartões roubados:** autenticação do emissor obrigatória; limite de tentativas recusadas por conta e por cartão; teto de compras nas primeiras 24 horas da conta (o teto de gasto em si é do módulo 11).
 - **MED no Pix:** o estúdio é o recebedor. Uma devolução por MED entra como estorno (tabela da §6.3); se o estúdio considerar a devolução indevida, contesta dentro do prazo.
@@ -574,7 +572,7 @@ Regras:
 2. uma pessoa, uma conta ativa; conta pessoal e intransferível, salvo pelo Cartório;
 3. proibição de automação de escrita, de multiconta e de conta alugada, com as sanções da §3.5;
 4. remoção de valor de origem ilícita onde estiver (§5.3), com aviso de que isso alcança quem comprou por fora;
-5. dívida em ouro em caso de estorno (§6.3);
+5. suspensão até regularizar em caso de contestação forçada pelo banco (§6.3);
 6. cooperação com autoridades mediante ordem judicial.
 
 **Risco jurídico assumido, sem reabrir a decisão.** [H] RMT informal aberto, Baú do Mascate comprável com Alvará e conteúdo negociável juntam pagamento, sorte e prêmio com valor em dinheiro, a configuração que os estudos jurídicos marcaram como luz vermelha ([05b, §3](../01-pesquisa/05b-rmt-legal-brasil.md)). [F] No processo de Nova York contra a Valve, a tolerância a mercados de terceiros é parte da acusação de jogo ilegal ([05c, §3.4](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)). O que este módulo faz para não piorar o quadro: não promover, não integrar, não lucrar com o RMT informal e combater a origem ilícita do valor.
@@ -783,7 +781,7 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 | Falsos positivos | 0,5% das sanções revertidas | 2% | Valor restaurado vira lançamento de restituição |
 | Carência do Alvará | 7 dias (1ª compra e cartão); 72 h (Pix); até 30 dias (risco) | — | Atrasa a oferta de Alvará no Câmbio |
 | Conta nova | Menos de 14 dias ou menos de 20 h de jogo ativo | — | Saída sem contrapartida de até 2 × T por dia |
-| Dívida em ouro | Paga com 50% das entradas de ouro | — | — |
+| Contestação forçada | Conta suspensa até refazer a doação do valor contestado | — | — |
 | Cartório | 1 venda por pessoa a cada 90 dias; comprador 30 dias sem voto e 90 sem revenda | — | — |
 
 **Testes que a simulação precisa rodar:** (1) sensibilidade do lucro da fazenda a T × P (§2.2); (2) efeito de 3% e 10% de contas no teto sobre o preço das commodities (deflação por oferta máxima); (3) cenário de catástrofe da verificação; (4) ataque de cartões com o disjuntor; (5) detecção pela metade do planejado.

@@ -223,7 +223,7 @@ Regras [H]:
 Regras [H]:
 - **Sem urgência fabricada nem culpa:** nada de "volte ou perca", "só hoje", "seus amigos estão na sua frente". [F] A lista de práticas que os jogadores consideram predatórias inclui oferta por tempo limitado e moeda que esconde o preço real ([06, §2.3](../01-pesquisa/06-monetizacao-retencao.md)).
 - **Regionalismo com parcimônia:** um "arretado" numa crônica, sim; "oxente" em toda notificação, não. Nenhum sotaque escrito como piada. Os textos de cada região passam por leitores da região (seção 1.13).
-- **Formato brasileiro:** R$ 19,90; 12.430 de ouro; "sáb., 16/11, 20h (horário de Brasília)". Sempre dia da semana e fuso nos prazos.
+- **Formato brasileiro:** R$ 19,90; 12.430 de ouro; "sáb., 14/11, 20h (horário de Brasília)". Sempre dia da semana e fuso nos prazos.
 - **Glossário sempre:** Arraial, Ofício, Fila, Obra-prima, Encomenda, Obra, Cerco, Câmara, Bolsa, Feira, Pregão, Câmbio, Troca, Cartório, Baú do Mascate, Alvará, Mérito, Marcos. Toque longo num termo abre a explicação.
 - **Inglês é localização, não tradução:** a versão EN tem nomes próprios (a bíblia já sugere Charter e Council) e o mesmo tom. Os versos de cordel ganham versão em inglês feita por tradutor literário, com nota sobre a forma.
 

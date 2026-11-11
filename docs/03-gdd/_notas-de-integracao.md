@@ -19,7 +19,30 @@
 
 > Interfaces entre módulos, propostas de mudança na bíblia e conflitos, registrados à medida que os relatórios chegam. Servem à simulação (módulo 08) e à revisão de consistência do fim da Fase 3.
 
+## 09 e 10 — Social e live ops (concluídos em 2026-11-11)
+
+**Decisões centrais [H]:**
+- Guilda sem bônus de produção, drop ou XP; Sede com 5 níveis (Rancho a Solar), 20 a 40 vagas, manutenção em materiais.
+- Encomenda: meta = soma das cotas dos inscritos, com ritmo declarado (leve 0,5, normal 1, forte 1,5); nota de Ouro a Presença; piso do grupo 0,4; quem fica 72 h sem entrar sai sozinho.
+- Ranking só por produção própria entregue à cidade (obras e encomendas, pelo valor de referência do IPA); item comprado vale 0 ponto; nada de ranking de vendas, lucro ou patrimônio.
+- Câmara de 7 vereadores por voto único transferível (cota de Droop, 12,5% elege um), voto secreto e trocável até o fim, no máximo 2 vereadores por guilda, mandatos de 9/9/8 semanas com posse na abertura de cada Obra; poderes em faixas e lista fechada do que nunca vai a voto.
+- Era: 3 Obras (S1, S5, S9), ganchos na S5 e S9, Grande Cerco na S12, Colheita na S13.
+- Travessia da S2 à S12 com o mesmo personagem (normalizado), uma Fila da Travessia extra e igual para todos, nível de desbravador que zera por temporada, teto de tier por região, sem mercado próprio, final coletivo em frentes.
+- Festas sem moeda própria (Fogueira, Bois, Entrudo, Noite dos Encantados, Folia de Fim de Ano, Aniversário), sem ritos religiosos.
+
+**Interfaces para a simulação:** Obras consomem 2,5%, 3% e 5% de P (produção semanal do Arraial) por 4 semanas cada (~3,2% da produção da Era); 4 encomendas da cidade por semana (cota-base 8 h-f por inscrito) e 1 de guilda (10 h-f); Sedes de 150 a 3.000 h-f por nível e manutenção de 0,5% a 2,5% da produção dos membros; Travessia adiciona ~8% de demanda sobre P com 60% de adesão, desgaste 1,5× na Bruma, pico na S2–S3; festas ~1% de P por semana; Marcos até 1.000/semana (11.000 por Travessia); eventos e Travessia pagam zero ouro e zero item negociável.
+
+**Propostas de mudança na bíblia:** glossário (Sede, Renome, Guarnição, Padrinho, Quadro do Arraial, Diário do Arraial, hora-fila, Fila da Travessia, nível de desbravador, Posto, Coração da Bruma, frente, relíquia decorativa); calendário de mandatos da Câmara; Travessia da S2 à S12; poderes da Câmara na constituição; tamanho de guilda como número-âncora; "prioridade do Mérito" só para ordem de escolha; mudança econômica só na virada de mês ou de Era, com 7 dias de aviso.
+
+**Conflitos para o diretor:**
+- Fila da Travessia: nem comprada nem conquistada jogando (igual para todos) — compatível com P7; aceitar.
+- Final da Travessia em frentes coletivas em vez de corrida de guildas pela cidadela — aceitar (reduz domínio das guildas grandes).
+- Travessia com o mesmo personagem normalizado em vez de mundo com personagem novo — aceitar (evita dividir a base).
+- **RMT informal:** o módulo proíbe anunciá-lo nos canais públicos e bane quem engana com prova no chat. **Levar ao Gabriel no checkpoint 3:** é moderação de spam e golpe, não proibição do RMT, mas toca a decisão 1.
+
 ## 13 — Anti-abuso (concluído em 2026-11-11)
+
+> **Atualizado pelo diretor em 2026-11-11:** a "dívida em ouro" foi substituída pela decisão do Gabriel: contestação forçada pelo banco suspende a conta até regularizar (AA-14).
 
 **Decisões centrais:**
 - O RMT informal não é infração; a origem ilícita do valor é. Regra pública: "quem compra por fora compra o risco". Valor de bot, fraude ou dupe é removido de quem o recebeu por Troca sem contrapartida; quem vendeu a preço de mercado fica com o que recebeu.

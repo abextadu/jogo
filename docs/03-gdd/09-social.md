@@ -46,7 +46,7 @@ Os cargos são pacotes de permissões, como os substitutos do Travian, que têm 
 | **Capitão(ã)** | até 3 | Montar guarnições do Cerco, aceitar Encomendas de guilda | Mexer no cofre além do próprio limite |
 | **Escrivão(ã)** | até 2 | Convidar, recrutar, editar o mural, publicar avisos | Expulsar membros com mais de 30 dias |
 | **Membro** | — | Contribuir, inscrever-se, retirar do cofre até o limite diário | — |
-| **Calouro(a)** | primeiros 7 dias | Contribuir, inscrever-se em Encomendas novas | Retirar do cofre, votar na eleição interna |
+| **Calouro(a)** | primeiros 7 dias | Contribuir e, a partir de 48 h de casa, inscrever-se nas Encomendas geradas depois da entrada | Retirar do cofre, votar na eleição interna |
 
 - **Eleição interna:** os membros podem trocar o Provedor com 2/3 dos votos dos membros ativos (login em 7 dos últimos 14 dias). [H] Protege contra o líder que trava a guilda.
 - **Sucessão automática:** se o Provedor passar 14 dias sem entrar, o cargo vai para o oficial mais antigo; sem oficiais, para o membro mais antigo. [H] O Egg Inc. mostrou o custo de grupos sem ferramenta contra inativos ([A09](../01-pesquisa/fichas/A09-egg-inc.md)), e o guia do Idle Clans manda trocar de clã quando ele morre ([C02](../01-pesquisa/fichas/C02-idle-clans.md)).

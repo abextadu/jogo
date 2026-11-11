@@ -147,7 +147,7 @@ A bíblia define a Travessia como "a temporada de expedição à Bruma, em mundo
 **Fontes:** expedições concluídas (proporcionais à distância e ao risco), contribuição em hexágonos, metas regionais coletivas (todos que contribuíram numa região recebem quando ela é pacificada) e o final.
 
 **Teto semanal de 1.000 Marcos, acumulável:** o teto que não se usou numa semana passa para a seguinte, dentro da mesma Travessia. Máximo teórico: 11 semanas × 1.000 = **11.000 Marcos**. [H]
-- O hardcore não esgota a Travessia na 4ª semana, e quem entra na S6 começa com 6.000 de teto disponível.
+- O hardcore não esgota a Travessia na 4ª semana, e quem entra na S6 encontra 5.000 de teto disponível (as semanas S2 a S6).
 - [H] O estudo de monetização recomenda um passe por marcos com teto semanal, para o ativo não disparar na frente ([06](../01-pesquisa/06-monetizacao-retencao.md)); aqui o mesmo vale para a moeda da temporada.
 
 **Dois catálogos no Posto [H]:**
@@ -363,4 +363,117 @@ O jornal semanal dentro do jogo, montado pelo sistema e revisado pela equipe [H]
 - **Fusão, se a população cair:** só na virada de Era, preservando o Livro, os títulos, os monumentos e o nome dos dois Arraiais. [F] No New World, as fusões apagaram as conquistas territoriais dos mundos de origem ([G04](../01-pesquisa/fichas/G04-new-world.md)); no S&F, as fusões reviveram mundos inativos ([D02](../01-pesquisa/fichas/D02-shakes-and-fidget.md)).
 - **As Casas da Maré** (o comércio entre cidades) são a expansão natural quando houver dois Arraiais (decisão do checkpoint 2).
 
-<!-- CONTINUA -->
+## 9. Ganchos depois da 4ª semana
+
+[F] O problema: no PoE1, o pico mensal no Steam foi de 184.284 em março de 2026 (estreia da liga Mirage) para 53.761 em abril e 16.105 em maio, ou seja, 29% no segundo mês e menos de 9% no terceiro ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)). [H] Um idle não deveria cair assim, porque o jogo continua rodando sem o jogador; mas a temporada concentra a novidade no começo, e é isso que os ganchos corrigem.
+
+[H] **Filosofia:** não lutar contra toda evasão. A pausa é legítima (§1, princípio 4). O que se combate é a evasão por falta de motivo (nada novo depois da S4) e por desvantagem (quem pausou acha que não alcança mais).
+
+| Gancho | Semana | Como funciona | Referência |
+|---|---|---|---|
+| **Revelação** | S5 | Segunda camada da regra da Era; a Obra I abre região e receitas; novo assombrado; na Travessia, abrem os Rios internos | Lei 2, regra nova ([02](../01-pesquisa/02-padroes-matriz-leis.md)) |
+| **Teto de Marcos acumulável** | Todas | O hardcore não "zera" a temporada cedo; quem pausou alcança | Passe com teto semanal ([06](../01-pesquisa/06-monetizacao-retencao.md)) |
+| **O chefe da Era em capítulos** | S6 e S12 | Ele aparece, foge e volta no Grande Cerco: um encontro com data marcada | Maravilha do Mundo do Travian como fim de rodada ([D05](../01-pesquisa/fichas/D05-travian.md)) |
+| **Frentes do final** | S6 e S7 | A guilda se compromete com uma frente no meio da temporada | Compromisso de grupo do Egg Inc. e do Tap Titans 2 ([A09](../01-pesquisa/fichas/A09-egg-inc.md); [B06](../01-pesquisa/fichas/B06-tap-titans-2.md)) |
+| **Posse da Câmara no meio da Era** | S5 ou S9 | Eleição traz conversa, campanha e um motivo para voltar e votar | [09, §6.4](09-social.md) |
+| **Reviravolta** | S9 | A Bruma contra-ataca: trechos do mapa voltam a enevoar, os Cercos endurecem, o Coração aparece | Major Orders do Helldivers 2, em que a história avança com a comunidade ([03, §18](../01-pesquisa/03-alem-do-idle.md)) |
+| **Fôlego de volta e Ventos a favor** | Da S5 em diante | Quem volta depois de 14 dias recebe XP pessoal e de desbravador 1,5 vez maior até a mediana | "Rested XP" do WoW ([03, §17](../01-pesquisa/03-alem-do-idle.md)) |
+| **Contagem regressiva** | S10 a S12 | Data fixa para o final, com a batalha em 3 horários | Sessões repetidas do Fortnite ([03, §10](../01-pesquisa/03-alem-do-idle.md)) |
+| **Rota da semana** | Toda semana | Semente nova e ranking por percentil | Daily Climb do Slay the Spire ([03, §6](../01-pesquisa/03-alem-do-idle.md)) |
+| **Tela de retorno** | Ao voltar | "Enquanto você esteve fora": o que a guilda e o Arraial fizeram, o que a sua Fila rendeu e o que ainda dá para pegar | Retorno com o resultado do plano ([síntese, insight 14](../01-pesquisa/00-sintese.md)) |
+| **Aviso opt-in** | No máximo 1 por semana | Um resumo: "a Obra está em 80%", "a sua guarnição precisa de um Erveiro" | — |
+| **Colheita** | S13 | Ponto de saída sem culpa e de volta sem atraso | Diablo IV sugerindo uma pausa ([03, §2](../01-pesquisa/03-alem-do-idle.md)) |
+
+## 10. Métricas de live ops
+
+Todas as metas são [H], ponto de partida para o alfa. As coortes precisam estar no PostgreSQL desde o alfa ([06](../01-pesquisa/06-monetizacao-retencao.md)).
+
+| Grupo | Métrica | Meta inicial | Alarme |
+|---|---|---|---|
+| **Engajamento** | DAU/MAU | ≥ 18% (padrão dos idles de 2020, [06](../01-pesquisa/06-monetizacao-retencao.md)) | < 12% |
+| | Sessões por dia por jogador ativo | De 2 a 6 (bíblia, §6.1) | > 8 (sinal de obrigação) ou < 1,5 |
+| | Minutos ativos por dia, mediana | De 10 a 40 | > 60 (jogo de checklist) |
+| **Retenção** | D1, D7 e D30 por coorte | ≥ 30%, de 6% a 7% e de 1,6% a 1,8% (quartil superior do mobile em 2025, [06](../01-pesquisa/06-monetizacao-retencao.md)) | Abaixo da mediana do mesmo estudo |
+| | **Curva da Era:** ativos semanais na S6 e na S12 divididos pelos da S2 | S6 ≥ 75%; S12 ≥ 60% | S6 < 60% |
+| | **Reativação:** inativos de 14 a 90 dias que voltam na S1 ou na S2 | ≥ 20% | < 10% |
+| **Travessia** | Adesão (desbravadores sobre ativos semanais do Arraial) | De 50% a 70% | < 30% (pouco interesse) ou > 85% (cidade esvaziando) |
+| | Ritmo do mapa contra a meta | ± 10 pontos percentuais | Fora de ± 15 |
+| | Final | Libertação em 2 de cada 3 Travessias | Vigília em 2 seguidas |
+| | Entrada tardia: quem entra depois da S5 e chega ao título-base | ≥ 60% | < 40% |
+| | Preço dos suprimentos na S2 e na S3 contra a S−2 | ≤ +25% | > +50% |
+| **Social** | Inscritos no Cerco sobre ativos semanais | ≥ 40% | < 25% |
+| | Ativos com pelo menos 1 Encomenda na semana | ≥ 50% | < 30% |
+| | Encomendas que batem a meta | De 70% a 85% | > 95% (fácil demais) ou < 60% (difícil demais), conforme o alerta do [03, §18](../01-pesquisa/03-alem-do-idle.md) |
+| | Obras concluídas no prazo | 80% ± 10 | < 60% |
+| | Comparecimento nas eleições | ≥ 25% dos aptos (o CSM teve de 8,6% a 12,7%, [03, §16](../01-pesquisa/03-alem-do-idle.md)) | < 15% |
+| | Ativos em guilda | De 55% a 75% | > 90% (obrigação de fato) ou < 40% |
+| | Retenção D30 de afilhados contra não afilhados | +30% relativo | ≤ 0 |
+| **Segurança** | Denúncias por 1.000 mensagens | Estável | +50% numa semana |
+| | Tempo até ação, prioridade 1 | < 4 h | > 12 h |
+| | Apelações revertidas | < 5% | > 10% |
+| | Golpes confirmados por 10 mil ativos por semana | Em queda | Em alta por 3 semanas |
+| **Economia** | Emissão negociável por evento | 0 | > 0 |
+| | Destruição atribuída a eventos, Obras e Travessia | Dentro da faixa do módulo 07 | — |
+| | IPA | De 0% a +8% ao ano | Fora da faixa |
+| **Técnica** | Disponibilidade no Cerco e no final da Travessia | ≥ 99,5% | Queda acima de 5 min |
+| **Satisfação** | Pesquisa de fim de Era (0 a 10) | ≥ 7,5 | Queda de 1 ponto |
+| **Fadiga** | Quem cumpre o semanal em até 10 min por dia | ≥ 80% | < 60% |
+
+**Limiar de população para a Travessia [H]:** a Travessia só abre no formato completo com **pelo menos 1.500 ativos semanais** esperados com a Fila rodando. Abaixo disso, abre uma **Travessia curta** (6 semanas, mapa de cerca de 70 hexágonos), ou a Era segue sem Travessia. [F] Conteúdo coletivo sem gente trava ([03, §15](../01-pesquisa/03-alem-do-idle.md)), e temporadas não podem fragmentar a base (lei 22).
+
+## 11. Interfaces com a economia e a simulação
+
+O que os módulos 07 e 08 precisam simular [H]:
+
+| Item | Frequência | Tamanho | Módulos |
+|---|---|---|---|
+| **Cerco** | 1 por semana; Grande Cerco na S12; leve na S13 | Consumo de equipamento e consumíveis por inscrito, a definir no 04; postos de ofício consomem materiais | 04, 07, 08 |
+| **Encomendas da cidade** | 4 por semana, prazo de 5 dias, até 2 por pessoa | `C_base` = 8 h-f por inscrito | 07, 08 |
+| **Encomendas de guilda** | 1 por semana por guilda, prazo de 7 dias | `C_base` = 10 h-f por inscrito | 07, 08 |
+| **Obras** | 3 por Era (S1 a S4, S5 a S8, S9 a S12) | 2,5%, 3% e 5% de P × 4 semanas; cerca de 3,2% da produção da Era | 07, 08 |
+| **Sedes de guilda** | Contínuo | Construção de 150 a 3.000 h-f por nível; manutenção de 0,5% a 2,5% da produção dos membros | 07, 08 |
+| **Travessia** | S2 a S12, a partir da Era 2 | 0,1 h-f por hora de expedição; cerca de +8% de demanda sobre P com 60% de adesão; desgaste 1,5 vez maior na Bruma; pico na S2 e na S3 | 05, 07, 08 |
+| **Encomendas de preparação** | S13 e S1 antes de cada Travessia | Cerca de 1 semana de suprimentos antecipada | 07, 08 |
+| **Feira Grande** | Mensal | Concurso consome 1 peça por inscrito, em 4 ofícios por mês | 06, 07 |
+| **Festas** | De 5 a 6 por ano | Cerca de 1% de P por semana de festa, em materiais | 07, 08 |
+| **Recompensas de eventos e rankings** | — | **0 ouro e 0 item negociável**; só títulos, cosméticos, decoração, XP pessoal e Mérito | 07, 11 |
+| **Recompensas da Travessia** | — | Marcos (até 1.000 por semana, acumulável, 11.000 no máximo); títulos, cosméticos e relíquias presos à conta | 07, 11 |
+| **Regra da Era** | 1 por Era | Choque de oferta e demanda a estimar 4 semanas antes | 07, 08 |
+| **Câmara** | Posse na S1, S5 ou S9 | Feira entre 4% e 8%, no máximo ±1 p.p. por mandato | 07, 08 |
+| **Mudanças econômicas** | Só na virada de mês ou de Era, com 7 dias de aviso | — | 07 |
+
+**Soma das demandas de sistema [H], para ordem de grandeza:** Obras (~3% da produção da Era), Encomendas e Sedes (de 8% a 12% da produção de quem participa, [09, §7](09-social.md)), Travessia (~8% de P nas Eras com Travessia) e festas (~1% de P por semana de festa). O desgaste de equipamento continua sendo o dreno principal (pilar 2); estes sistemas são a segunda camada.
+
+## 12. Propostas de mudança na bíblia
+
+1. **[proposta de mudança na bíblia] §6.1, Travessia:** "da S2 à S12 de cada Era, a partir da 2ª (11 semanas)", dentro da faixa de 10 a 12.
+2. **[proposta de mudança na bíblia] §4, glossário, Fila da Travessia:** uma Fila extra, sazonal e igual para todos, que só faz expedições na Bruma. Ela não é comprada, mas também não é "conquistada jogando", então pede aval explícito diante da regra das Filas. A reconciliar com o módulo 02.
+3. **[proposta de mudança na bíblia] §4, glossário:** incluir **nível de desbravador** (progressão da Travessia, de 1 a 30, que zera), **Posto** (a base da Travessia, onde se gastam Marcos), **Coração da Bruma** (a região final), **frente** (a unidade do final coletivo) e **relíquia** (item decorativo preso à conta, sem efeito de poder).
+4. **[proposta de mudança na bíblia] §6.1, Era:** o esqueleto de 3 Obras (S1, S5, S9), Grande Cerco na S12 e Colheita na S13.
+5. **[proposta de mudança na bíblia] §5 ou constituição econômica:** "mudança econômica só na virada de mês ou de Era, com 7 dias de aviso; congelamento na S12, na S13 e nos 3 primeiros dias da Era; nerf nunca retroativo".
+6. **[proposta ao diretor sobre o conceito] Final da Travessia:** trocar a "corrida de guildas pela cidadela" (conceito B) por um final do Arraial inteiro com frentes de guilda (§4.5), para responder ao risco "final dominado pelas guildas grandes".
+7. **[proposta de mudança na bíblia] Festas sem moeda própria:** trilha de festa com escolhas (§5.4), em vez de uma quinta ou sexta moeda.
+
+## 13. Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| **A esteira de conteúdo** | Uma equipe pequena não consegue entregar uma ameaça, uma regra, 3 Obras e uma Travessia a cada 13 semanas | Trabalhar 2 Eras à frente; Era sistêmica de reserva; mapas procedurais com pontos de interesse feitos à mão; reaproveitar regras de Eras antigas em combinações novas. |
+| **Evasão depois do pico mesmo assim** | O PoE caiu de 184 mil para 16 mil em dois meses ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)) | Os ganchos do §9; o alarme da curva da Era; e, se a S6 ficar abaixo de 60% por 2 Eras, revisar o esqueleto (mais novidade guardada para depois da S5). |
+| **A Travessia esvazia o Arraial** | Todos vão para a Bruma e a cidade para | A Fila da Travessia não tira tempo de produção; os suprimentos vêm do Arraial; o Cerco continua; alarme de adesão acima de 85%. |
+| **O Arraial esvazia a Travessia** | A Travessia parece obrigação ou não vale a pena | Recompensas que todo mundo quer exibir (títulos, relíquias, nome no mapa); entrada tardia viável; alarme de adesão abaixo de 30%. |
+| **Choque de suprimentos** | Os preços disparam na S2 e o novato não consegue montar um kit | Lista publicada na S−4; Encomendas de preparação; oficinas NPC de reforço com preço teto; kit básico vendido por NPC só para desbravadores de nível baixo. |
+| **O veterano domina a Travessia** | O equipamento do Arraial decide tudo | Teto de tier por região; o nível de desbravador zera; percentis em vez de top 10. |
+| **O final vira coisa das guildas grandes** | A megaguilda decide a frente principal | Frentes interdependentes; Frente do Arraial para os solos; divisões por porte e ranking por membro; o resultado é coletivo. |
+| **Fadiga de eventos e calendário apertado** | Junho junta a abertura da Travessia, a Fogueira e os Bois | Um evento grande por vez; festa que colide encolhe ou muda de semana; o semanal cabe em 10 minutos por dia; alarme de fadiga. |
+| **FOMO** | O cosmético da festa não volta e quem estava fora se sente punido | Exclusivos que voltam pelas escolhas da trilha; participação passiva; nada de oferta com prazo. |
+| **A infraestrutura cai no pico** | O Grande Cerco ou o final da Travessia juntam todo mundo na mesma hora | Resolução no servidor sem depender de ninguém online; replay em 3 horários; teste de carga; fila de entrada; compensação pública (§7.4). |
+| **A regra da Era parece nerf** | "Estiagem" é lida como corte de renda da Colheita | Anúncio 4 semanas antes com o porquê; a regra é temporária; sempre há outro ofício ou outra rota que ganha; nunca toca a zona vermelha. |
+| **Front-running de mudanças** | Quem sabe antes da regra ou da Obra compra antes | Publicação simultânea; embargo para criadores sem números; a escolha da Obra é pública e os preços se ajustam juntos. |
+| **O Boletim mostra notícia ruim ou erro** | Inflação acima da meta ou um erro nos dados, como os 9% do EVE ([04b, §3.3](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) | Publicar assim mesmo, com o plano de correção; errata pública; dados abertos com atraso para a comunidade conferir. |
+| **Erro cultural** | Uma festa ou um encantado é lido como caricatura ou apropriação | Formas seculares, sem ritos; nomes e símbolos próprios; consultoria e revisão de sensibilidade antes de cada festa e cada Era; a comunidade co-cria (concurso de causos). |
+| **O público de língua inglesa não se reconhece** | O calendário é muito brasileiro | Cada festa tem um gancho universal (fogueira, carnaval, fim de ano, Halloween); textos e momentos ao vivo em EN; moderação nos dois idiomas. |
+| **População baixa para a Travessia** | Com poucos milhares de ativos, o mapa não anda e o final não sai | Custo dos hexágonos escalado pela população; limiar de 1.500 ativos e Travessia curta (§10). |
+| **Custo de operação subestimado** | De 6 a 8 pessoas para operar é muito para um estúdio pequeno | Entrar no plano do módulo 11; automatizar o Diário e o Boletim; começar com menos festas (2 no ano 1) se a receita não fechar. |
+| **Métrica de vaidade** | Otimizar DAU com obrigações e notificações | Alarmes de fadiga e de sessões demais; a pesquisa de satisfação pesa tanto quanto o DAU; no máximo 1 aviso por semana. |
+

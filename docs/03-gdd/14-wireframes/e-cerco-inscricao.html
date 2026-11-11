@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(e) Inscrição no cerco — wireframe</title>
+<style>
+:root{--fundo:#e8e6e1;--papel:#fff;--tinta:#1b1b1b;--cinza:#5f5f5f;--linha:#8f8f8f;--suave:#f3f2ef;--medio:#d6d4cf;--nota:#fffbe6;--notaborda:#cbb757;--marca:#ffd84d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}
+.doc{max-width:1120px;margin:0 auto;padding:16px}
+.doc-topo h1{font-size:20px;margin:4px 0}
+.doc-topo p{margin:4px 0;font-size:14px;color:var(--cinza)}
+.grade{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.grade{grid-template-columns:400px minmax(0,1fr);align-items:start}.notas{position:sticky;top:16px}}
+.telas{display:grid;gap:24px}
+.celular{background:var(--papel);border:2px solid var(--tinta);border-radius:22px;width:100%;max-width:400px;margin:0 auto;overflow:hidden}
+.cab{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:2px solid var(--tinta);background:var(--suave)}
+.cab .lugar{flex:1;min-width:0}
+.cab .lugar strong{display:block;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab .lugar small{display:block;color:var(--cinza);font-size:12px}
+.saldo{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:0 8px;border:1.5px solid var(--tinta);border-radius:999px;background:#fff;font-size:13px;text-decoration:none;white-space:nowrap}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:4px;background:#fff;font-size:10px;flex:none}
+.ico.red{border-radius:50%}
+.conteudo{padding:12px;display:grid;gap:12px}
+.cartao{border:1.5px solid var(--tinta);border-radius:10px;padding:12px;background:#fff}
+.cartao>h2,.cartao>h3{margin:0 0 6px;font-size:16px;line-height:1.3}
+.cartao p{margin:4px 0}
+.secao-titulo{font-size:17px;margin:4px 0 0}
+.rot{margin:0 0 4px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--cinza)}
+.img{display:flex;align-items:center;justify-content:center;min-height:80px;padding:8px;border:1.5px dashed var(--linha);border-radius:8px;background:repeating-linear-gradient(45deg,#fafafa 0 8px,#efefef 8px 16px);color:var(--cinza);font-size:13px;text-align:center}
+.linha{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cresce{flex:1;min-width:0}
+.acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--tinta);border-radius:10px;background:#fff;color:var(--tinta);font-family:inherit;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.pri{background:var(--tinta);color:#fff}
+.btn.larga{width:100%}
+.btn.off{border-style:dashed;color:var(--cinza);background:var(--suave);cursor:not-allowed}
+.barra{height:12px;border:1.5px solid var(--tinta);border-radius:999px;overflow:hidden;background:#fff}
+.barra>i{display:block;height:100%;background:var(--tinta)}
+.barra.prev>i{background:repeating-linear-gradient(90deg,var(--linha) 0 4px,#fff 4px 6px)}
+.previsto{color:var(--cinza);font-style:italic}
+.tag{display:inline-block;padding:1px 6px;border:1px solid var(--tinta);border-radius:6px;font-size:12px}
+.tag.cheia{background:var(--tinta);color:#fff}
+.n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:1.5px solid var(--tinta);border-radius:50%;background:var(--marca);color:#000;font-size:12px;font-weight:700;font-style:normal;vertical-align:middle;flex:none}
+.abas{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid var(--tinta);background:var(--suave)}
+.abas a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:6px 2px;font-size:12px;text-decoration:none}
+.abas a[aria-current="page"]{font-weight:700;box-shadow:inset 0 4px 0 var(--tinta)}
+.notas{background:var(--nota);border:1.5px solid var(--notaborda);border-radius:12px;padding:12px 16px}
+.notas h2{margin:4px 0 8px;font-size:17px}
+.notas ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.notas li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.notas li p{margin:0}
+.notas .rodape{margin-top:12px;font-size:13px;color:var(--cinza)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;font-size:13px;color:var(--cinza);padding-bottom:4px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--medio);text-align:left;vertical-align:top}
+th{font-size:12px;font-weight:600;color:var(--cinza)}
+.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.segmento{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--tinta);border-radius:10px;overflow:hidden}
+.segmento>*{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 4px;border:0;border-left:1px solid var(--tinta);background:#fff;color:var(--tinta);font-family:inherit;font-size:13px;font-weight:600;text-decoration:none}
+.segmento>*:first-child{border-left:0}
+.segmento [aria-current],.segmento [aria-pressed="true"]{background:var(--tinta);color:#fff}
+.campo{display:grid;gap:4px}
+.campo label,.campo .rotulo{font-size:13px;font-weight:600}
+.campo input,.campo select{min-height:44px;padding:0 10px;border:1.5px solid var(--tinta);border-radius:8px;background:#fff;font-family:inherit;font-size:16px}
+.legenda{font-size:12px;color:var(--cinza)}
+.aviso{padding:8px 10px;border-left:4px solid var(--tinta);border-radius:6px;background:var(--suave);font-size:14px}
+.forte{font-weight:700}
+hr{border:0;border-top:1px dashed var(--linha);margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* específicos desta tela */
+fieldset{border:1.5px solid var(--tinta);border-radius:10px;padding:10px 12px;margin:0}
+legend{font-weight:700;padding:0 4px}
+.posto{display:grid;grid-template-columns:24px 1fr auto;gap:8px;align-items:start;padding:8px 0;border-top:1px dashed var(--linha);min-height:44px}
+.posto:first-of-type{border-top:0}
+.posto input{width:22px;height:22px;margin:2px 0 0}
+.posto.lotado{color:var(--cinza)}
+.qtd{display:grid;grid-template-columns:1fr 44px 48px 44px;gap:6px;align-items:center;padding:4px 0}
+.qtd .btn{padding:0}
+.qtd output{text-align:center;font-variant-numeric:tabular-nums;font-weight:700}
+.check{display:flex;gap:8px;align-items:flex-start;min-height:44px;padding:4px 0}
+.check input{width:22px;height:22px;margin:2px 0 0;flex:none}
+.fixo{position:relative;padding:12px;border-top:2px solid var(--tinta);background:var(--suave);display:grid;gap:6px}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="doc-topo">
+    <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
+    <h1>(e) Inscrição no cerco</h1>
+    <p>Cerco semanal, com inscrição até 24 h antes (bíblia §6.1). A defesa é assíncrona: ninguém precisa estar online na hora. Postos, vagas e recompensas são exemplos; a regra é dos módulos 04 e 09 [H].</p>
+  </header>
+
+  <div class="grade">
+    <div class="telas">
+      <section class="celular" aria-label="Wireframe: inscrição no cerco">
+        <header class="cab">
+          <div class="lugar"><strong>Cerco da semana 6</strong><small>Arraial do Vau</small></div>
+          <a class="btn" href="a-arraial.html" aria-label="Voltar ao Arraial">Voltar</a>
+        </header>
+        <main class="conteudo">
+          <section class="cartao" aria-labelledby="t-cerco">
+            <div class="img" style="min-height:110px">gravura: os assombrados da Lagoa (figuras de tinta borrada, sem chapa de cor)</div>
+            <h2 id="t-cerco" style="margin:8px 0 2px;font-size:18px">Os assombrados da Lagoa</h2>
+            <p><strong>Sáb., 14/11, 20h</strong> (horário de Brasília) <span class="n" aria-hidden="true">1</span></p>
+            <p>Inscrições até <strong>sex., 13/11, 20h</strong> · faltam 1 d 4 h.</p>
+            <div class="aviso" role="note">Você não precisa estar online no sábado. A defesa usa o que você deixar preparado aqui. <span class="n" aria-hidden="true">2</span></div>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-def">
+            <p class="rot">Como está a defesa do Arraial <span class="n" aria-hidden="true">3</span></p>
+            <h2 id="t-def">Defesa prevista: 68%</h2>
+            <div class="barra prev" role="img" aria-label="Defesa prevista de 68%; meta de 80%"><i style="width:68%"></i></div>
+            <p class="legenda">Meta para resistir sem danos às obras: 80% [H].</p>
+            <p>Faltam <strong>120 lanças</strong> e <strong>60 unguentos</strong>.</p>
+            <div class="acoes"><a class="btn" href="c-bolsa-feira.html">Ver na Bolsa</a><a class="btn" href="a-arraial.html">Encomenda de lanças</a></div>
+          </section>
+
+          <fieldset>
+            <legend>Seu posto <span class="n" aria-hidden="true">4</span></legend>
+            <label class="posto"><input type="radio" name="posto" checked><span><strong>Muralha</strong><br><span class="legenda">Recomendado para Guardião, a sua vocação</span></span><span class="num legenda">142 de 200</span></label>
+            <label class="posto"><input type="radio" name="posto"><span><strong>Torres</strong><br><span class="legenda">Caçador e Encantador</span></span><span class="num legenda">88 de 120</span></label>
+            <label class="posto"><input type="radio" name="posto"><span><strong>Enfermaria</strong><br><span class="legenda">Erveiro</span></span><span class="num legenda">31 de 60</span></label>
+            <label class="posto lotado"><input type="radio" name="posto" disabled><span><strong>Batedores</strong> (lotado)<br><span class="legenda">Batedor · entrar na lista de espera</span></span><span class="num legenda">40 de 40</span></label>
+          </fieldset>
+
+          <section class="cartao" aria-labelledby="t-eq">
+            <p class="rot">O que você leva <span class="n" aria-hidden="true">5</span></p>
+            <h2 id="t-eq">Equipamento</h2>
+            <table>
+              <tbody>
+                <tr><td>Lança de ferro · Bom</td><td class="num">76 de 100</td></tr>
+                <tr><td>Escudo de cedro · Fino</td><td class="num">90 de 100</td></tr>
+              </tbody>
+            </table>
+            <p class="legenda">Desgaste esperado no cerco: de −8 a −15 de durabilidade em cada peça [H].</p>
+            <div class="acoes"><a class="btn" href="#">Trocar equipamento</a></div>
+            <hr>
+            <h3 style="margin:4px 0;font-size:15px">Consumíveis (gastos no cerco)</h3>
+            <div class="qtd"><span>Refeição de peixe (tem 12)</span><button class="btn" type="button" aria-label="Menos refeições">−</button><output>5</output><button class="btn" type="button" aria-label="Mais refeições">+</button></div>
+            <div class="qtd"><span>Unguento de arnica (tem 3)</span><button class="btn" type="button" aria-label="Menos unguentos">−</button><output>3</output><button class="btn" type="button" aria-label="Mais unguentos">+</button></div>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-doa">
+            <p class="rot">Suprimentos para o Arraial <span class="n" aria-hidden="true">6</span></p>
+            <h2 id="t-doa">Doe para o estoque da defesa</h2>
+            <div class="qtd"><span>Lança de ferro · Comum (tem 20)</span><button class="btn" type="button" aria-label="Menos lanças">−</button><output>20</output><button class="btn" type="button" aria-label="Mais lanças">+</button></div>
+            <p>Vale <strong>+60 de Mérito</strong>. Itens doados são consumidos na defesa.</p>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-guar">
+            <p class="rot">Sua guilda <span class="n" aria-hidden="true">7</span></p>
+            <h2 id="t-guar">Ferreiros do Vau guarnecem a Porta Norte</h2>
+            <p>12 de 20 vagas preenchidas. Quem entra na guarnição defende junto e divide o bônus da guilda.</p>
+            <label class="check"><input type="checkbox" checked><span>Entrar na guarnição da guilda</span></label>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-rec">
+            <p class="rot">O que você pode ganhar <span class="n" aria-hidden="true">8</span></p>
+            <h2 id="t-rec">Recompensa esperada</h2>
+            <ul style="margin:4px 0;padding-left:18px">
+              <li>Mérito: de +60 a +90 (mais o da doação)</li>
+              <li>Peles de assombrado, para o Curtume</li>
+              <li>Chance de libertar um encantado da Lagoa, para o Arraial inteiro</li>
+            </ul>
+            <p class="legenda">Você não perde itens além do desgaste e dos consumíveis que levar.</p>
+          </section>
+
+          <section class="cartao" aria-labelledby="t-av">
+            <p class="rot">Avisos</p>
+            <h2 id="t-av" class="sr">Avisos do cerco</h2>
+            <label class="check"><input type="checkbox"><span>Avisar 2 h antes de fechar as inscrições (desnecessário depois de se inscrever)</span></label>
+            <label class="check"><input type="checkbox" checked><span>Avisar o resultado (se cair no horário de silêncio, chega de manhã)</span></label>
+          </section>
+        </main>
+
+        <div class="fixo">
+          <a class="btn pri larga" href="a-arraial.html">Inscrever-me na Muralha</a>
+          <p class="legenda" style="margin:0;text-align:center">Você pode mudar tudo até sex., 20h. Na próxima semana, esta inscrição vem pré-carregada. <span class="n" aria-hidden="true">9</span></p>
+        </div>
+      </section>
+    </div>
+
+    <aside class="notas" aria-labelledby="t-notas">
+      <h2 id="t-notas">Notas de design</h2>
+      <ol>
+        <li><span class="n">1</span><p><strong>Data, hora e fuso, sempre.</strong> Dia da semana e "horário de Brasília" evitam o erro de quem joga de outro fuso. O prazo da inscrição aparece junto, porque é ele que importa.</p></li>
+        <li><span class="n">2</span><p><strong>Sem plantão.</strong> A frase mais importante da tela: a defesa é assíncrona, com inscrição prévia (como a guerra com inscrição do Shakes and Fidget, <a href="../../01-pesquisa/fichas/D02-shakes-and-fidget.md">D02</a>). O ausente participa planejando.</p></li>
+        <li><span class="n">3</span><p><strong>O cerco puxa o mercado.</strong> Mostrar o que falta à defesa transforma o cerco em demanda para os ofícios (lanças, unguentos), com atalho para a Bolsa e para a encomenda. A barra é "prevista" (tracejada) até o servidor fechar o cerco.</p></li>
+        <li><span class="n">4</span><p><strong>Posto por vocação, com vagas.</strong> Botões de opção nativos, em um grupo com legenda (leitor de tela). O posto lotado diz por que está indisponível e oferece a lista de espera.</p></li>
+        <li><span class="n">5</span><p><strong>O desgaste é dito antes.</strong> Tudo se gasta (pilar 2): o jogador sabe quanto de durabilidade o cerco deve custar e quais consumíveis vai queimar. As quantidades usam botões de − e +, sem arrastar.</p></li>
+        <li><span class="n">6</span><p><strong>Doar vira Mérito.</strong> Quem não luta bem ainda ajuda a cidade com o que produz; o Mérito dá títulos e prioridade, nunca peso de voto (bíblia, glossário).</p></li>
+        <li><span class="n">7</span><p><strong>A guilda entra como guarnição,</strong> o laço cooperativo com prazo e nota individual que a pesquisa apontou como o mais forte do gênero (insight 19).</p></li>
+        <li><span class="n">8</span><p><strong>Recompensa e risco às claras.</strong> Libertar um encantado é recompensa coletiva e narrativa, não só abate (bíblia §3). O texto deixa claro o que não se perde.</p></li>
+        <li><span class="n">9</span><p><strong>Dois toques na semana seguinte.</strong> A última inscrição vem pré-carregada: Arraial → cartão do cerco → "Inscrever-me" (mapa de toques, documento 14, seção 2.3).</p></li>
+      </ol>
+      <p class="rodape">Os assombrados aparecem como gravura borrada e sem cor; o encantado libertado ganha a chapa de cor de volta. A distinção é de textura, não só de cor (documento 14, seção 1.7).</p>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
