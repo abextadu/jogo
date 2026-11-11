@@ -8,7 +8,14 @@
 
 ## Resumo executivo
 
-_Em elaboração: preenchido ao final da pesquisa._
+O idle é o gênero em que o servidor autoritativo custa menos: as ações duram segundos ou minutos, e a latência quase não importa. Deixar valor no cliente, como fazem o Melvor e o IdleOn, tem preço conhecido: save editável e injetor público. Achados principais:
+
+- **Offline.** Os jogos documentados simulam tique a tique na volta (Melvor: fiel e caro), em blocos (Antimatter Dimensions: perde fidelidade), por fórmula (Clicker Heroes, IdleOn: diverge) ou mantêm o servidor rodando para todos (Idlescape: frágil a reinícios). Recomendamos o híbrido: forma fechada entre os eventos que mudam a taxa, no servidor, com drops por amostragem binomial exata e RNG por contador com chave secreta. O teto de ausência vira política econômica, não limite de CPU.
+- **Economia.** Cada operação de valor numa única transação do PostgreSQL, com chave de idempotência, travas em ordem fixa e restrições no banco, registrada num ledger de partidas dobradas. O rastreio de todas as transações permitiu ao New World remover quase todo o valor duplicado sem rollback.
+- **Números.** Exponencial só na camada pessoal; tudo que é negociável em inteiros de 64 bits (OSRS e WoW estouraram os 32 bits).
+- **Bots.** No núcleo idle, o bot perde a razão de existir. Ele importa no mercado, na criação de contas, nas janelas ativas e na raspagem de dados. Detecção por regularidade nas ações ativas e por fluxos no ledger; para scripts, "leitura liberada, escrita humana".
+- **Escala.** Os líderes do subgênero rodam com 1 a 3 pessoas e milhares de simultâneos. Uma VPS com Swarm dá ergonomia, não alta disponibilidade.
+- **PWA.** No iPhone, push só depois da instalação, e nada roda em segundo plano. No Brasil, desde jun/2026 a Apple aceita link externo para pagamento com 15% de comissão, mas o proíbe para menores em apps da App Store.
 
 ## 1. Progresso offline
 
@@ -130,7 +137,7 @@ Três jeitos de resolver os drops do ausente:
 ### 2.6 Event sourcing: onde vale e onde não vale
 
 - [F] **Definição.** Guardar cada mudança de estado como uma sequência de eventos, de modo que o estado de qualquer momento possa ser reconstruído; isso permite reconstrução completa, consultas temporais e replay para corrigir erros. Fowler aponta os custos: sistemas externos complicam o replay, mudanças de código complicam o reprocessamento, e históricos longos exigem *snapshots* ([Martin Fowler, 12/dez/2005](https://martinfowler.com/eaaDev/EventSourcing.html)).
-- [F] **As ressalvas da Microsoft** (página revista em 2026): é um padrão complexo e caro de adotar ou abandonar; as projeções são eventualmente consistentes; eventos nunca são editados, só compensados por novos eventos; *snapshots* a cada N eventos evitam replays longos; concorrência otimista por fluxo; entrega "pelo menos uma vez", o que exige consumidores idempotentes; e conflito com leis de proteção de dados, resolvido guardando dados pessoais fora do log ou cifrando-os com chave por titular, apagável. A recomendação é aplicar o padrão só onde ele compensa, "como um ledger de pagamentos", e manter CRUD no resto ([Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)).
+- [F] **As ressalvas da Microsoft** (página revista em 2026): é um padrão complexo e caro de adotar ou abandonar; as projeções são eventualmente consistentes; eventos nunca são editados, só compensados por novos eventos; *snapshots* a cada N eventos evitam replays longos; concorrência otimista por fluxo; entrega "pelo menos uma vez", o que exige consumidores idempotentes; e conflito com leis de proteção de dados, resolvido guardando dados pessoais fora do log ou cifrando-os com chave por titular, apagável. A recomendação é aplicá-lo só nas partes que mais se beneficiam, como um ledger de pagamentos ou um fluxo de pedidos, e manter CRUD no resto ([Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)).
 - [H] **Para nós:** o ledger da 2.5 já é o event sourcing da economia. Vale aplicar o padrão a carteiras, itens, ordens de mercado, leilões e RMT, onde auditoria e reconstrução valem ouro (literalmente: com RMT, cada item pode virar disputa de dinheiro real, e na Justiça; ver [F03, §6.5](fichas/F03-runescape-e-osrs.md)). Perfil, configurações, chat e amigos ficam em CRUD comum. Dados pessoais (e-mail, documento do KYC, IP) ficam fora do log e são referenciados por ID, por causa da LGPD (ver [05b](05b-rmt-legal-brasil.md)).
 
 ## 3. Números gigantes
@@ -252,7 +259,7 @@ Três jeitos de resolver os drops do ausente:
 
 ### 5.3 O paradoxo do idle: onde os bots importam
 
-- [F] **No núcleo, o bot perde a razão de existir.** Na Devcom 2019, a CipSoft contou que cerca de 25% dos usuários do Tibia rodavam bots para tarefas repetitivas (ficha [F04](fichas/F04-tibia.md)). A teoria em [02a](02a-teoria-design-idle.md) registra que Pecorella chama o autoclicker de erro de design: o que o jogo não automatiza vira script. [H] Num idle bem feito, a automação do laço central é a própria proposta, e o bot não ganha nada "jogando" o que o jogo já joga sozinho.
+- [F] **No núcleo, o bot perde a razão de existir.** Na Devcom 2019, a CipSoft contou que cerca de 25% dos usuários do Tibia rodavam bots para tarefas repetitivas (ficha [F04](fichas/F04-tibia.md)). A teoria em [02a, §6](02a-teoria-design-idle.md) registra que Pecorella chama de erro de design o jogo em que o autoclicker vira obrigatório para quem joga a sério. [H] Num idle bem feito, a automação do laço central é a própria proposta, e o bot não ganha nada "jogando" o que o jogo já joga sozinho.
 - [F] **O bot vence onde o tempo passivo vira valor negociável.** Banana e Bongo Cat mostraram que, com recompensa por tempo, saída para dinheiro real e custo quase zero por conta extra, o melhor jogador é uma fazenda (ficha [G05](fichas/G05-banana-e-bongo-cat.md)).
 - [H] **As quatro camadas onde o bot importa num idle online:**
   1. **Mercado:** comprar listagens mal precificadas em milissegundos (*sniping*), inundar o livro, manipular preço, arbitrar mais rápido que qualquer humano.
@@ -266,7 +273,7 @@ Três jeitos de resolver os drops do ausente:
 - [F] **Autossimilaridade.** Lee, Woo, Kim, Mohaisen e Kim mediram quanto as sequências de ações de uma conta se repetem e testaram o método em Lineage, Aion e Blade & Soul, da NCSoft ([NDSS 2016](https://seal.cs.ucf.edu/doc/ndss16.pdf)). A premissa: bots repetem rotinas fixas.
 - [F] **Intervalo entre ações.** Kang e Kim usaram a frequência, a média e o desvio-padrão do intervalo entre repetições de uma mesma ação e relataram 97% de acerto em registros do Aion ([registro do artigo](https://libmast.utm.my/Record/doaj.art-0e1ec19ab14a4055a886ffd30b9257c2)). Uma patente sobre tráfego de MMORPG descreve o mesmo sinal na rede: bots mostram só intervalos curtos ou um pico estreito, enquanto humanos param para procurar caminho ou quando morrem ([US 8.366.553](https://patents.google.com/patent/US8366553)).
 - [H] **Entropia de tempo no idle.** O sinal clássico (regularidade) precisa ser medido só nas ações **ativas**, porque o idle é feito para ser deixado sozinho. Humanos têm intervalos irregulares, com cauda longa, e ciclos de sono; bots são regulares demais ou aleatórios "uniformes" demais, e ativos 24 horas. Medir a distribuição, não a média.
-- [F] **Registros e denúncias.** A segurança do EVE baniu 70.492 contas em 2021, "um número significativo" delas criadas automaticamente e banidas antes de qualquer login, e recebeu 137.183 denúncias de bot de 41.651 jogadores; a equipe diz que os registros do jogo "mostram muito" ([EVE Online, 12/jul/2022](https://www.eveonline.com/news/view/team-security-2021-in-review)). A Jagex baniu mais de 6,9 milhões de contas no OSRS em 2023 e média de 67 mil por semana em 2024, com só 0,36% revertidos em apelação ([F03, §6.5](fichas/F03-runescape-e-osrs.md)).
+- [F] **Registros e denúncias.** A segurança do EVE baniu 70.492 contas em 2021, boa parte delas (sem número divulgado) criadas automaticamente e banidas antes de qualquer login, e recebeu 137.183 denúncias de bot de 41.651 jogadores; a equipe diz que os registros do jogo revelam muito ([EVE Online, 12/jul/2022](https://www.eveonline.com/news/view/team-security-2021-in-review)). A Jagex baniu mais de 6,9 milhões de contas no OSRS em 2023 e média de 67 mil por semana em 2024, com só 0,36% revertidos em apelação ([F03, §6.5](fichas/F03-runescape-e-osrs.md)).
 - [F] **Anomalias de economia.** O "risco de troca" do IdleMMO mede o valor que cada conta dá e recebe de muitas outras, com decaimento ([C04, §6](fichas/C04-idlemmo.md)); a onda de bans do Milky Way Idle em mai/2025 pegou *boosting*, transferência entre contas e compra de ouro, e tirou dos banidos 2 a 3 vezes a riqueza inflada ([C01, §7.2](fichas/C01-milky-way-idle.md)). [H] Com o ledger, os sinais saem de consultas: fluxo líquido unilateral entre pares de contas, contas novas que só recebem, ouro que entra por venda ao NPC e sai em troca para uma mesma conta, compras do mercado a preços fora da curva.
 - [H] **Iscas (*honeypots*).** Elementos que só a automação toca: campo invisível no cadastro, endpoint que o cliente oficial nunca chama, pedido em formato que a interface não gera. O Milky Way Idle já detecta extensões por pedidos que o cliente oficial não faria ([C01, §7.2](fichas/C01-milky-way-idle.md)). Isca gera sinal, não ban automático: o caso de falso positivo do mesmo jogo mostra o custo de errar.
 - [H] **Punição graduada e reversível.** A fila é: sinal → pontuação de risco → atrito (captcha, limite menor, carência de troca) → revisão humana → punição com remoção do valor rastreado. O MWI pôs captcha contra *goldfarm* no mercado em out/2025 ([C01, §6.2](fichas/C01-milky-way-idle.md)); o IdleMMO passou a mostrar verificações anti-bot bem menos vezes nos patches 0.84.0 e 0.86.2 ([C04, §6](fichas/C04-idlemmo.md)), sinal de que atrito para todos cansa.
@@ -288,7 +295,7 @@ Três jeitos de resolver os drops do ausente:
 - [H] **As quatro perguntas, para "leitura liberada, escrita humana":**
   - **Inspira-se em** Torn (chaves, níveis e transparência), MWI (dados oficiais e scripts aprovados) e Jagex/RuneLite (cliente aprovado com regras escritas); diferencia-se do Idlescape (só visual), que encolheu o ecossistema.
   - **Resolve** a raspagem descontrolada e dá aos jogadores-economistas o que eles querem.
-  - **Incentiva** ferramentas comunitárias e transparência, que aumentam a retenção do perfil "economista".
+  - **Incentiva** ferramentas comunitárias e transparência, que, pelo contraste entre MWI e Idlescape, parecem reter o perfil "economista" ([C03, §7.3](fichas/C03-idlescape.md); não é prova).
   - **Risco:** ferramentas de leitura muito boas viram vantagem de quem as usa (informação é poder no mercado), e a fronteira entre "mostrar" e "decidir por você" é móvel; as regras precisam ser vivas, como as da Jagex.
 
 ## 6. Escala
@@ -359,3 +366,190 @@ Três jeitos de resolver os drops do ausente:
   - **WebSocket puro dispensa sessão grudada** (6.4), o que simplifica o balanceamento interno.
   - **Proteção contra DDoS na borda** (um serviço de proxy na frente da VPS) e plano de resposta antes da primeira onda de banimentos, porque o caso do Albion mostra que ela atrai retaliação.
   - **Horizonte:** o suporte da Mirantis vai até 2030, e um MMO bem-sucedido vive mais que isso. Containers e configuração declarativa mantêm aberta a migração futura para Kubernetes.
+
+## 7. PWA e mobile
+
+### 7.1 O que um PWA consegue fazer em 2026
+
+| Capacidade | iPhone e iPad (Safari/WebKit) | Android (Chrome) |
+|---|---|---|
+| Instalação | Manual, por "Adicionar à Tela de Início" (não há aviso de instalação do navegador); desde o iOS 26, todo site adicionado abre como app por padrão | Pelo navegador, com aviso de instalação quando o site cumpre os critérios; ou empacotado para a Play via TWA (7.2) |
+| Notificação push | Desde o iOS 16.4, só para apps na Tela de Início, com pedido de permissão feito após um toque do usuário; todo push precisa exibir notificação | Web Push padrão, com service worker |
+| Execução em segundo plano | Só a reação a um push, que precisa mostrar a notificação | Background Sync e Periodic Background Sync (só navegadores Chromium) |
+| Armazenamento | App da Tela de Início fica fora da regra dos 7 dias do Safari | Até 60% do disco por origem |
+
+- [F] **Instalação e push no Chrome.** O Chrome oferece instalar o site quando ele é servido por HTTPS e tem manifesto com nome, ícones de 192 e 512 px, `start_url` e modo de exibição, além de critérios de engajamento do usuário; no Android, a forma do aviso varia por aparelho, e no iOS não existe aviso de instalação do navegador ([web.dev, critérios de instalação](https://web.dev/articles/install-criteria); [web.dev, Learn PWA](https://web.dev/learn/pwa/installation)). A Push API é considerada amplamente disponível nos navegadores desde mar/2023 e exige um service worker ativo para receber mensagens ([MDN, Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)).
+- [F] **Instalação no iOS.** Antes do iOS 26, um ícone na Tela de Início só abria como app se o site tivesse manifesto ou meta tag; senão, era um favorito. Desde o iOS 26, todo site adicionado abre como app por padrão, com um interruptor para desligar ([WebKit, novidades da WWDC25](https://webkit.org/?p=16993), via busca; [heise](https://heise.de/-10749652)).
+- [F] **Push no iOS.** Chegou no iOS e iPadOS 16.4 (beta em 16/fev/2023) para apps adicionados à Tela de Início, com manifesto em modo `standalone` ou `fullscreen`; o pedido de permissão precisa vir de uma interação direta (tocar num botão), e a API de Badging permite mudar o número no ícone, inclusive ao tratar um push em segundo plano ([WebKit, 16/fev/2023](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/)). O WebKit não permite push silencioso: todo push precisa exibir uma notificação, e quem descumpre perde a inscrição ([WebKit, "Meet Web Push"](https://webkit.org/?p=12945), via busca). Desde o iOS 18.4, o *Declarative Web Push* exibe a notificação direto do conteúdo do push, sem depender de service worker, também só para apps da Tela de Início ([WebKit, "Meet Declarative Web Push"](https://webkit.org/blog/16535/meet-declarative-web-push/), via busca).
+- [F] **Segundo plano.** As APIs de sincronização em segundo plano (única e periódica) funcionam só em navegadores Chromium; Firefox e Safari não as suportam ([MDN](https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API); [Can I use](https://caniuse.com/background-sync); [web.dev](https://web.dev/articles/web-apps/periodic-background-sync)). Desde o Chrome 88 (jan/2021), cadeias de timers de páginas ocultas podem ser verificadas só uma vez por minuto ([Chrome for Developers](https://developer.chrome.com/blog/timer-throttling-in-chrome-88)). [H] Num iPhone, um PWA não roda nada sozinho: só reage a um push. Tudo o que precisa acontecer na ausência acontece no servidor, o que confirma a arquitetura das seções 1 e 2.
+- [F] **Armazenamento.** Ver 4.4: o app da Tela de Início tem contador próprio de dias de uso e fica fora da limpeza de 7 dias do Safari ([WebKit, 2020](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/)).
+- [F] **Risco de plataforma.** Nas versões de teste do iOS 17.4, a Apple transformou os apps da Tela de Início em simples atalhos para usuários da União Europeia, alegando a Lei de Mercados Digitais, e voltou atrás por volta de 1º/mar/2024, depois de pedidos para manter o recurso ([Engadget](https://www.engadget.com/apple-backtracks-on-plans-to-get-rid-of-web-apps-on-iphones-in-the-eu-195232177.html); [Notificare, 8/mar/2024](https://notificare.com/blog/2024/03/08/apple-reverse-decision-to-remove-pwa/)). [H] Quem depende de PWA no iPhone depende de uma decisão da Apple, que pode mudar numa versão de teste.
+
+### 7.2 Empacotar para as lojas
+
+- [F] **Android (TWA).** Um PWA pode ir para a Google Play como *Trusted Web Activity*. Se o app distribuído pela Play vende bens digitais ou assinaturas, precisa usar o Google Play Billing; no TWA, isso passa pela Digital Goods API (consulta de produtos e compras) e pela Payment Request API (início da compra), e a Digital Goods API só funciona no Chrome dentro de um TWA ([Chrome for Developers](https://developer.chrome.com/docs/android/trusted-web-activity/play-billing)).
+- [F] **Capacitor.** É um *runtime* nativo para apps feitos com tecnologia web, com acesso às APIs nativas do iOS e do Android por plugins ([documentação](https://capacitorjs.com/docs)).
+- [F] **App Store.** A diretriz 4.2 pede que o app tenha recursos, conteúdo e interface que o elevem "beyond a repackaged website" ([App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)). [C] Desenvolvedores relatam rejeições em que push e compartilhamento não bastaram para provar valor além do site ([fórum da Apple, thread 82714](https://developer.apple.com/forums/thread/82714); [thread 108931](https://developer.apple.com/forums/thread/108931)).
+- [H] **Caminho provável:** web (PWA) como canal principal, sobretudo no desktop e no Brasil; Android via TWA, que é barato de manter; App Store só se houver valor nativo real (widgets, notificações ricas, integração com o sistema). Em todos os casos, um só servidor autoritativo e um só ledger; a loja é só mais uma "fonte" de compra no ledger (2.5).
+
+### 7.3 Pagamento: lojas contra web
+
+- [F] **Apple, regra geral.** Comissão de 30%, ou 15% no programa para pequenas empresas (até US$ 1 milhão de receita no ano anterior) e em assinaturas qualificadas; taxas e regras diferentes valem para Brasil, União Europeia, Japão, Holanda, Rússia e Coreia do Sul ([Apple Developer, programa](https://developer.apple.com/programs/whats-included/); [Small Business Program](https://developer.apple.com/app-store/small-business-program/)).
+- [F] **Apple nos EUA.** Em 11/dez/2025, o Tribunal de Apelação do 9º Circuito manteve que as restrições da Apple, na prática, proibiam compras por link externo e limites a avisos que desestimulem o usuário, mas considerou excessiva a proibição total de comissão: a Apple pode cobrar algo ligado a custos "genuinely and reasonably necessary", a definir na primeira instância ([Fenwick, 22/dez/2025](https://www.fenwick.com/insights/publications/ninth-circuit-largely-upholds-ruling-in-epic-v-apple)). Em ago/2026, a Apple propôs 15% (5% para pequenas empresas) sobre compras feitas via link; a Epic contesta, e, até haver decisão, o link externo nos EUA segue sem comissão ([AppleInsider, 13/ago/2026](https://appleinsider.com/articles/26/08/13/apples-latest-commission-rates-for-external-app-store-purchases-havent-satisfied-epic), via busca).
+- [F] **Apple no Brasil.** Depois de um termo de compromisso com o Cade, de dez/2025 e com duração de três anos ([Tecnoblog](https://tecnoblog.net/noticias/apple-tera-que-abrir-iphone-no-brasil-para-compras-fora-da-app-store/), via busca), a Apple anunciou em 18/jun/2026, para o iOS 26.2: lojas alternativas autorizadas, pagamentos alternativos dentro do app (sempre ao lado da compra pela Apple) e links para concluir a compra num site. As comissões sobre bens digitais ficaram em 10% (maioria dos desenvolvedores, incluindo pequenas empresas e assinaturas depois do primeiro ano) ou 21% na compra pela Apple, mais 5% de processamento; 15% (ou 10%) na compra feita via link; e 5% para apps distribuídos fora da App Store. **Para menores de 18 anos**, pagamentos alternativos exigem aprovação prévia dos responsáveis, e apps da App Store não podem ter links para concluir transações ([Apple Newsroom Brasil, 18/jun/2026](https://www.apple.com/br/newsroom/2026/06/apple-announces-changes-to-ios-in-brazil/)). Em set/2026, a Epic acusou a Apple no Cade de criar barreiras à distribuição alternativa ([Michael Tsai](https://mjtsai.com/blog/?p=50554), via busca).
+- [F] **Google.** Desde 30/jun/2026, nos EUA, no Espaço Econômico Europeu e no Reino Unido, a Play separou a taxa de serviço da taxa de cobrança: 10% sobre o primeiro US$ 1 milhão de receita anual e 10% em assinaturas renováveis (as demais faixas dependem de a instalação ser nova ou antiga), mais 5% quando o pagamento usa o Google Play Billing; cobrança alternativa e links para a web não pagam essa taxa de 5%, e o desenvolvedor pode oferecer as duas opções ([Android Developers Blog, 24/jun/2026](https://android-developers.googleblog.com/2026/06/play-expanded-billing.html)). No programa de links externos dos EUA, a cobrança das taxas começou em 1º/out/2026, com uma taxa fixa por instalação que, para jogos, é de US$ 3,65 ([Play Console Help](https://support.google.com/googleplay/android-developer/answer/16470497?hl=en), via busca; conferir na página).
+- [H] **Implicações:**
+  - A web é o canal mais barato e mais livre. As lojas cobram de 5% a 30% conforme país, caminho e porte, e as regras mudam por decisão judicial quase todo ano. O ledger (2.5) precisa registrar o canal de cada compra, para calcular a margem real por canal.
+  - A regra brasileira para menores bate de frente com um modelo de RMT: links de pagamento ficam proibidos para menores em apps da App Store, e pagamentos alternativos exigem os responsáveis. Verificação de idade e política para menores precisam vir antes do RMT. O detalhe jurídico fica em [05b](05b-rmt-legal-brasil.md) e [05c](05c-rmt-legal-global-pagamentos.md) (**validar com advogado**).
+  - O canal escolhido muda o desenho da monetização, e não só a taxa: algo vendido na web e usado no app precisa respeitar as regras de cada loja sobre conteúdo comprado fora dela.
+
+### 7.4 Notificações como gancho de retenção
+
+- [F] **No gênero.** O IdleMMO avisa por push quando a ação termina e, em nov/2026, anunciou alertas opcionais de chefes mundiais ([C04, §4](fichas/C04-idlemmo.md)); o SimpleMMO tem push de chefes mundiais ([C05, §4](fichas/C05-simplemmo.md)); jogadores do Tap Titans 2 pedem aviso de início de raid ([B06, §4](fichas/B06-tap-titans-2.md)).
+- [F] **Quantos aceitam (estimativas de fornecedores, 2025).** Mediana de opt-in de cerca de 48,85% no iPhone e 53,3% no Android, segundo dados da Airship resumidos pela MobiLoud ([MobiLoud](https://www.mobiloud.com/blog/push-notification-statistics)); médias de 56% no iOS e 67% no Android entre jul/2024 e jul/2025, numa base de ~10 mil apps e sites da Batch, que atribui a queda do Android à permissão obrigatória do Android 13 ([Batch](https://batch.com/blog/case-studies/benchmark-notifications-push-crm-mobile)). Em jogos de ação, a taxa de clique em push foi de 0,82% no Android e 0,46% no iOS (Q4/2024 a Q2/2025), abaixo da média geral ([Pushwoosh](https://www.pushwoosh.com/blog/push-notification-benchmarks/)). [H] São números de apps nativos; um PWA no iPhone ainda exige a instalação antes do pedido, então o funil real será menor.
+- [H] **Regras para nós:**
+  - **Pedir na hora certa:** quando o jogador monta a primeira fila longa ("quer ser avisado quando terminar?"), nunca na primeira tela.
+  - **Avisos são jobs do servidor** (6.3), agendados para o horário previsto e refeitos quando o plano muda.
+  - **Poucos tipos, todos úteis e configuráveis:** fila terminou, ordem executada, leilão prestes a fechar, chefe da guilda começando. Respeitar fuso e horário de silêncio.
+  - **Nunca "volte ou perca".** Notificação que ameaça o ausente contradiz o princípio de que esperar é jogar ([02a, §6](02a-teoria-design-idle.md)).
+- [H] **As quatro perguntas, para o aviso "sua fila terminou":**
+  - **Inspira-se** no IdleMMO e se diferencia dos timers que cobram presença (o baú que some, a sequência que quebra).
+  - **Resolve** o "quando devo voltar?" sem obrigar o jogador a lembrar.
+  - **Incentiva** sessões curtas e oportunas, e o planejamento de filas mais longas.
+  - **Risco:** virar ruído e ser desligado (ou fazer o jogador desinstalar), ou virar coleira, se o jogo passar a punir quem não responde.
+
+## Implicações para o nosso jogo: princípios técnicos recomendados
+
+Sem código. Cada princípio aponta para a seção que o justifica. Todos são [H], derivados dos fatos acima.
+
+1. **O servidor é dono do valor e do tempo.** O cliente envia intenções e desenha a tela; resultado, sorteio e relógio são do servidor (1.5, 2.1, 2.2). O idle é o gênero em que isso custa menos.
+2. **O ausente é calculado por eventos, no servidor, na hora em que alguém precisa do estado.** Forma fechada entre eventos que mudam a taxa, simulação só nos eventos, mesma regra do jogo ativo (1.1, 6.2). Nenhum processo roda por personagem ausente.
+3. **Paridade online/offline é requisito testado.** Uma bateria automática compara o cálculo por eventos com a simulação tique a tique em milhares de cenários, a cada mudança de regra (1.1, 1.2).
+4. **Drops do ausente por amostragem exata** (binomial ou multinomial), com RNG baseado em contador e chave secreta no servidor; mecanismos de sequência, como garantia de drop, têm modelo próprio (1.2, 1.3).
+5. **O teto de ausência é ferramenta econômica, não de CPU:** generoso, melhorável jogando, nunca vendido (1.4; [02a](02a-teoria-design-idle.md)).
+6. **Todo comando que move valor é idempotente**, com chave por conta, resultado guardado e repetição segura com espera crescente e aleatória (2.4).
+7. **A economia é um ledger de partidas dobradas:** fontes, drenos e contas de trânsito explícitas, soma zero por moeda e por item, correção só por estorno, reconciliação contínua com os saldos e item único com uma só localização (2.5, 5.1).
+8. **Uma transação por operação econômica,** travas em ordem fixa, repetição em erro de serialização e restrições no banco como última defesa (5.2).
+9. **Duas velocidades de número:** exponencial só na camada pessoal e não negociável; tudo que é negociável em inteiros de 64 bits na menor unidade, viajando como texto no JSON, com unidade de alta denominação prevista desde já (3.1–3.3).
+10. **Estado no servidor, cliente otimista e descartável:** fila offline curta de comandos com prazo e chave, reexecutados e reconciliados na volta; previsto e confirmado com visual diferente (4.1–4.4).
+11. **Valor negociável só nasce de decisão ativa verificada,** com teto por conta e por período; o resto do progresso é pessoal (5.3; [G05](fichas/G05-banana-e-bongo-cat.md)).
+12. **Anti-bot em camadas e reversível:** sinais (regularidade nas ações ativas, pedidos impossíveis, fluxos do ledger) → pontuação → atrito → revisão humana → punição com remoção do valor rastreado, nunca desligando a economia de todos (5.1, 5.4, 5.5).
+13. **Leitura liberada, escrita humana:** API oficial de leitura com chaves, níveis, limites e atraso proposital; nenhuma automação de escrita fora das filas do próprio jogo (5.6).
+14. **Infraestrutura honesta com o tamanho:** uma VPS dá ergonomia, não alta disponibilidade; banco fixo com réplica e backup contínuo fora da máquina; ledger particionado desde o dia 1; proteção contra DDoS antes da primeira onda de banimentos; WebSocket separado das regras (6.4–6.6).
+15. **Web primeiro, lojas como canais:** PWA como produto principal, TWA no Android, App Store só com valor nativo real; o ledger registra o canal de cada compra; política para menores antes do RMT (7.1–7.3).
+16. **Notificação é serviço, não coleira:** pedida no momento certo, agendada pelo servidor, poucas categorias e nenhuma ameaça ao ausente (7.4).
+
+## Como isso pode dar errado
+
+| Risco | Como acontece | Mitigação |
+|---|---|---|
+| Arbitragem entre online e offline | Um evento esquecido no cálculo por eventos (buff que expira no meio do bloco) faz o offline render mais ou menos que o online, e o mercado precifica a diferença | Teste de paridade obrigatório (princípio 3); alarme quando a emissão do offline por hora divergir da do online |
+| Dupe no lançamento | Corrida em endpoint novo, caminho de estorno sem teste, restauração de backup | Testes com pedidos simultâneos em cada endpoint de valor; *red team* de economia e *bug bounty* antes da abertura ([G04](fichas/G04-new-world.md)); ferramenta de estorno por conta pronta antes do primeiro incidente |
+| O botão de emergência vira o problema | Desligar o comércio de todos quebra operações no meio (o dupe do New World) e pune quem é honesto | Desligamento por sistema, que bloqueia só a **entrada** de novas operações, testado como funcionalidade |
+| Falso positivo do anti-bot | Heurística pune humano (o caso do MWI em dez/2025; os avisos de "mesmo dispositivo" do SimpleMMO) | Punição graduada e reversível, revisão humana, apelação rápida e compensação pública quando o erro for nosso |
+| Limites que punem o celular brasileiro | Limite por IP derruba quem divide endereço com milhares de clientes da mesma operadora | Limites por conta e por sessão; IP só como sinal de correlação |
+| Ledger e event sourcing complexos demais | Equipe pequena afogada em projeções, versões de eventos e reconciliação | Event sourcing só na economia; CRUD no resto ([Azure](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)); começar com poucos tipos de lançamento |
+| O banco engasga | Linhas quentes (estoque de evento global, chefe mundial), transações longas travando a limpeza, ledger sem partição | Contadores divididos, consolidação periódica, limite de duração de transação, particionamento desde o dia 1 (6.3, 6.5) |
+| Fraude interna | Ferramenta de suporte usada para esvaziar contas, como no caso "Mod Jed" do OSRS ([F03, §6.5](fichas/F03-runescape-e-osrs.md)) | Ajustes administrativos só como lançamentos do ledger, com dupla aprovação, motivo e trilha de auditoria |
+| A API de leitura alimenta bots de mercado | Dados em tempo real permitem *sniping* e manipulação | Atraso e agregação nos dados públicos, como o MWI faz ([C01](fichas/C01-milky-way-idle.md)); limites por chave; nada de dados do livro em tempo real pela API |
+| Vazamento da semente do RNG | Chave exposta no cliente ou num log permite prever drops | Chave só no servidor, trocada por temporada; resultado fixado no momento da ação |
+| O exponencial vaza para o mercado | Um item negociável com atributos que escalam exponencialmente leva a inflação da camada pessoal para a camada negociável | Regra de design: o que é negociável tem atributos e quantidades limitados; o exponencial mora em bônus pessoais |
+| Dependência das plataformas | A Apple muda a regra dos PWAs (como na UE em 2024) ou as comissões mudam por decisão judicial | Web primeiro; acompanhamento jurídico e de plataforma contínuo; um canal nunca pode ser o único caminho de pagamento |
+| Retenção menor no iPhone | PWA exige instalação manual antes do push; sem push, o aviso de "fila terminou" não chega | Onboarding de instalação no momento certo; avaliar um app empacotado só se os dados mostrarem perda relevante |
+| Queda ou ataque na VPS única | Falha de hardware, DDoS após banimentos (o caso do Albion) | Backup contínuo fora da máquina, réplica do banco, proxy de borda contra DDoS e plano de recuperação ensaiado |
+| LGPD | Impressão digital de dispositivo, IPs e dados de KYC guardados demais ou no log imutável | Minimização, prazos de retenção, dados pessoais fora do ledger; **validar com advogado** ([05b](05b-rmt-legal-brasil.md)) |
+
+## Fontes
+
+Todos os links foram acessados em novembro de 2026. "Via busca" indica que o dado veio do trecho indexado pelo buscador, sem leitura integral da página.
+
+**Fichas e estudos internos:** [B01](fichas/B01-melvor-idle.md), [B02](fichas/B02-legends-of-idleon.md), [B06](fichas/B06-tap-titans-2.md), [C01](fichas/C01-milky-way-idle.md), [C02](fichas/C02-idle-clans.md), [C03](fichas/C03-idlescape.md), [C04](fichas/C04-idlemmo.md), [C05](fichas/C05-simplemmo.md), [F01](fichas/F01-eve-online.md), [F02](fichas/F02-albion-online.md), [F03](fichas/F03-runescape-e-osrs.md), [F04](fichas/F04-tibia.md), [F06](fichas/F06-world-of-warcraft.md), [G04](fichas/G04-new-world.md), [G05](fichas/G05-banana-e-bongo-cat.md), [02a](02a-teoria-design-idle.md), [04a](04a-economia-fontes-drenos-inflacao.md), [05b](05b-rmt-legal-brasil.md), [05c](05c-rmt-legal-global-pagamentos.md).
+
+**1. Progresso offline**
+1. [Melvor Idle Wiki — Offline Progression](https://wiki.melvoridle.com/w/Offline_Progression) — wiki oficial (via ficha B01).
+2. [r/AntimatterDimensions — offline (2020)](https://www.reddit.com/r/AntimatterDimensions/comments/esiji2/) e [Max offline ticks (2025)](https://www.reddit.com/r/AntimatterDimensions/comments/1kg34yc/max_offline_ticks) — comunidade (via espelho).
+3. [SteamDB — notas de patch do Antimatter Dimensions](https://steamdb.info/patchnotes/16370635) — dados (via busca).
+4. [Antimatter Dimensions — How to play](https://raw.githack.com/jacorb90/IvarK.github.io/master/howto.html) — guia do jogo.
+5. [Steam — discussão sobre offline do Antimatter Dimensions](https://steamcommunity.com/app/1399720/discussions/0/3732953628865759665) — comunidade — 2023.
+6. [Offline Progression in Clicker Heroes](https://blog.clickerheroes.com/offline-progression-in-clicker-heroes/) — blog oficial — 6/jul/2025.
+7. [Idlescape — Beta 0.23.4, "Platinum and Offline Fetching"](https://www.idlescape.com/news/beta-0-23-4) — oficial — 16/jul/2025.
+8. [Discrete-event simulation](https://en.wikipedia.org/wiki/Discrete-event_simulation) — Wikipedia.
+9. [Kachitvichyanukul e Schmeiser, "Binomial random variate generation"](https://doi.org/10.1145/42372.42381) — artigo (CACM) — 1988.
+10. [Salmon et al., "Parallel random numbers: as easy as 1, 2, 3"](https://users.cs.utah.edu/~hari/teaching/bigdata/random123sc11.pdf) ([DOI](https://doi.org/10.1145/2063384.2063405)) — artigo (SC'11) — 2011.
+11. [APKMirror — Egg, Inc. 1.11](https://apkmirror.com/apk/auxbrain-inc/egg-inc/egg-inc-1-11-release) — notas de versão (via busca) — set/2019.
+12. [Expert Beacon — Can you get banned from Egg, Inc?](https://expertbeacon.com/can-you-get-banned-from-egg-inc/) — blog (fonte secundária).
+13. [CheatCC — Egg, Inc.](https://www.cheatcc.com/?p=125032) — guia de trapaças.
+
+**2. Servidor autoritativo**
+14. [Gabriel Gambetta — Client-Server Game Architecture](https://www.gabrielgambetta.com/client-server-game-architecture.html) — artigo técnico.
+15. [Stripe — Scaling your API with rate limiters](https://stripe.com/blog/rate-limiters) — blog de engenharia — 30/mar/2017.
+16. [Stripe — Idempotent requests](https://docs.stripe.com/api/idempotent_requests) — documentação.
+17. [Stripe — Designing robust and predictable APIs with idempotency](https://stripe.com/blog/idempotency) — blog de engenharia — 22/fev/2017.
+18. [Brandur Leach — Implementing Stripe-like idempotency keys in Postgres](https://brandur.org/idempotency-keys) — artigo técnico — 27/out/2017.
+19. [Stripe — Ledger: tracking and validating money movement](https://stripe.dev/blog/ledger-stripe-system-for-tracking-and-validating-money-movement) — blog de engenharia — 16/fev/2024.
+20. [Martin Fowler — Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html) — artigo — 12/dez/2005.
+21. [Microsoft — Event Sourcing pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing) — documentação — revista em 2026.
+
+**3. Números gigantes**
+22. [break_infinity.js](https://github.com/Patashu/break_infinity.js) e [break_eternity.js](https://github.com/Patashu/break_eternity.js) — repositórios oficiais.
+23. [break_eternity para Dart](https://pub.dev/packages/break_eternity) — pacote.
+24. [decimal.js — documentação](https://mikemcl.github.io/decimal.js/).
+25. [MDN — BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) e [Number.MAX_SAFE_INTEGER](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) — documentação.
+26. [PostgreSQL — Numeric types](https://www.postgresql.org/docs/current/datatype-numeric.html) — documentação.
+27. [ECMAScript — objeto Math](https://tc39.es/ecma262/#sec-function-properties-of-the-math-object) — especificação.
+28. [r/incremental_games — armazenar números enormes (2024)](https://www.reddit.com/r/incremental_games/comments/1aj8z0b/) e [devs: big numbers (2025)](https://www.reddit.com/r/incremental_games/comments/1jxp25p/devs_how_do_you_handle_big_numbers) — comunidade (via espelho).
+29. [Stripe — campo `amount`](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-amount) — documentação.
+
+**4. Sincronização de save**
+30. [Android Developers — Saved Games (SDK v1)](https://developer.android.com/games/pgs/v1/cpp/saved-games) — documentação.
+31. [Ink & Switch — Local-first software](https://www.inkandswitch.com/local-first/) — ensaio — 2019.
+32. [Replicache — How it works](https://doc.replicache.dev/concepts/how-it-works) — documentação.
+33. [MDN — Storage quotas and eviction criteria](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) — documentação.
+34. [WebKit — Full third-party cookie blocking and more](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) — blog oficial — 24/mar/2020.
+35. [PostgreSQL — Continuous archiving and PITR](https://www.postgresql.org/docs/current/continuous-archiving.html) — documentação.
+
+**5. Anti-cheat, anti-bot e anti-duplicação**
+36. [PortSwigger — Smashing the state machine](https://portswigger.net/research/smashing-the-state-machine) — pesquisa de segurança — 9/ago/2023.
+37. [PlanetDiablo — entrevista com Bill Roper](https://gamespy-archives.quaddicted.com/sites/www.planetdiablo.com/features/articles/broper022702/index.html) — imprensa — 27/fev/2002.
+38. [Growtopia Wiki — Rollback](https://growtopiawiki.com/w/Rollback) — wiki de fãs (via busca).
+39. [New World — dev blog sobre exploits (devtrackers)](https://devtrackers.gg/new-world/p/89a16c50-dev-blog-update-from-the-team-exploits) — oficial — nov/2021.
+40. PostgreSQL — [Transaction isolation](https://www.postgresql.org/docs/current/transaction-iso.html), [Explicit locking](https://www.postgresql.org/docs/current/explicit-locking.html) e [SELECT, cláusula de travamento](https://www.postgresql.org/docs/current/sql-select.html) — documentação.
+41. [Lee et al., "You are a game bot!"](https://seal.cs.ucf.edu/doc/ndss16.pdf) — artigo (NDSS) — 2016.
+42. [Kang e Kim — detecção por intervalo entre ações](https://libmast.utm.my/Record/doaj.art-0e1ec19ab14a4055a886ffd30b9257c2) — registro de artigo.
+43. [Patente US 8.366.553](https://patents.google.com/patent/US8366553) — patente.
+44. [EVE Online — Team Security: 2021 in review](https://www.eveonline.com/news/view/team-security-2021-in-review) — oficial — 12/jul/2022.
+45. Stripe — [detectar cartões duplicados](https://support.stripe.com/questions/how-can-i-detect-duplicate-cards-or-bank-accounts), [referência do fingerprint](https://stripe.dev/stripe-terminal-android/v2/external/com.stripe.stripeterminal.external.models/-card-details/fingerprint.html) e [Terminal, cartões salvos](https://stripe.com/docs/terminal/features/saving-cards/overview) (via busca) — documentação.
+46. [DEV Community — fingerprint da Stripe](https://dev.to/shayy/this-one-stripe-field-could-save-you-from-fraud-and-no-one-talks-about-it-3ad2) e [lista api-discuss da Stripe](https://groups.google.com/a/lists.stripe.com/g/api-discuss/c/fAH1sgE2uAE) — comunidade.
+47. [Torn — documentação da API](https://www.torn.com/api.html) — oficial.
+48. [GitHub — z-torn/tampermonkey](https://github.com/z-torn/tampermonkey) e [Greasy Fork — Torn Vault](https://greasyfork.org/scripts/575288-torn-vault) — comunidade.
+49. [OSRS Wiki — Third Party Client Guidelines](https://oldschool.runescape.wiki/w/Update:Third_Party_Client_Guidelines) — cópia de anúncio oficial — jun/2022, revisto em abr/2024.
+50. [RuneLite — Rejected or rolled back features](https://github.com/runelite/runelite/wiki/Rejected-or-Rolled-Back-Features) — wiki oficial do projeto.
+
+**6. Escala**
+51. OSRS Wiki — [World 400](https://oldschool.runescape.wiki/w/World_400), [Talk:World](https://oldschool.runescape.wiki/w/Talk:World) e [Game tick](https://oldschool.runescape.wiki/w/Game_tick) — wiki.
+52. [CCP Veritas — Introducing Time Dilation](https://eveonline.com/article/introducing-time-dilation-tidi) — dev blog oficial — 22/abr/2011.
+53. [EVE University — Time Dilation](https://wiki.eveuniversity.org/Time_Dilation) — wiki.
+54. [GitHub — lichess-org/lila](https://github.com/lichess-org/lila) — repositório oficial.
+55. [Brandur Leach — Postgres job queues & failure by MVCC](https://brandur.org/postgres-queues) — artigo técnico — 18/mai/2015.
+56. [Socket.IO — Using multiple nodes](https://socket.io/docs/v4/using-multiple-nodes/) — documentação.
+57. [PgBouncer — Features](https://www.pgbouncer.org/features.html) — documentação.
+58. [Docker — Administer and maintain a swarm](https://docs.docker.com/engine/swarm/admin_guide/) — documentação.
+59. [Mirantis — long-term support for Swarm](https://www.mirantis.com/blog/mirantis-guarantees-long-term-support-for-swarm/) — oficial.
+
+**7. PWA e mobile**
+60. WebKit — [Web Push for Web Apps on iOS and iPadOS](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/) (16/fev/2023), [Meet Web Push](https://webkit.org/?p=12945) (via busca), [Meet Declarative Web Push](https://webkit.org/blog/16535/meet-declarative-web-push/) (via busca) e [novidades da WWDC25](https://webkit.org/?p=16993) (via busca) — blog oficial.
+61. [heise — iOS 26 e web apps na Tela de Início](https://heise.de/-10749652) — imprensa.
+62. [MDN — Background Synchronization API](https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API), [MDN — Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API), [Can I use — Background Sync](https://caniuse.com/background-sync), [web.dev — Periodic Background Sync](https://web.dev/articles/web-apps/periodic-background-sync), [web.dev — critérios de instalação](https://web.dev/articles/install-criteria) e [web.dev — Learn PWA, instalação](https://web.dev/learn/pwa/installation) — documentação.
+63. [Chrome for Developers — Timer throttling in Chrome 88](https://developer.chrome.com/blog/timer-throttling-in-chrome-88) — blog oficial.
+64. [Engadget — Apple recua sobre web apps na UE](https://www.engadget.com/apple-backtracks-on-plans-to-get-rid-of-web-apps-on-iphones-in-the-eu-195232177.html) e [Notificare](https://notificare.com/blog/2024/03/08/apple-reverse-decision-to-remove-pwa/) — imprensa — mar/2024.
+65. [Chrome for Developers — Play Billing em TWA](https://developer.chrome.com/docs/android/trusted-web-activity/play-billing) — documentação.
+66. [Capacitor — documentação](https://capacitorjs.com/docs).
+67. Apple — [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/), [Membership details](https://developer.apple.com/programs/whats-included/), [Small Business Program](https://developer.apple.com/app-store/small-business-program/) e fóruns ([82714](https://developer.apple.com/forums/thread/82714), [108931](https://developer.apple.com/forums/thread/108931)) — oficial e comunidade.
+68. [Fenwick — Ninth Circuit largely upholds ruling in Epic v. Apple](https://www.fenwick.com/insights/publications/ninth-circuit-largely-upholds-ruling-in-epic-v-apple) — escritório de advocacia — 22/dez/2025.
+69. [AppleInsider — comissões propostas para links externos](https://appleinsider.com/articles/26/08/13/apples-latest-commission-rates-for-external-app-store-purchases-havent-satisfied-epic) — imprensa (via busca) — 13/ago/2026.
+70. [Tecnoblog — acordo Apple–Cade](https://tecnoblog.net/noticias/apple-tera-que-abrir-iphone-no-brasil-para-compras-fora-da-app-store/) — imprensa (via busca) — dez/2025.
+71. [Apple Newsroom Brasil — mudanças no iOS no Brasil](https://www.apple.com/br/newsroom/2026/06/apple-announces-changes-to-ios-in-brazil/) — oficial — 18/jun/2026.
+72. [Michael Tsai — Brazil: App Marketplaces and External Payments](https://mjtsai.com/blog/?p=50554) — blog (via busca) — 2026.
+73. [Android Developers Blog — Expanded billing choice and lower fees](https://android-developers.googleblog.com/2026/06/play-expanded-billing.html) — oficial — 24/jun/2026.
+74. [Play Console Help — external content links (EUA)](https://support.google.com/googleplay/android-developer/answer/16470497?hl=en) — oficial (via busca).
+75. Benchmarks de push: [MobiLoud (dados da Airship)](https://www.mobiloud.com/blog/push-notification-statistics), [Batch](https://batch.com/blog/case-studies/benchmark-notifications-push-crm-mobile) e [Pushwoosh](https://www.pushwoosh.com/blog/push-notification-benchmarks/) — estimativas de fornecedores — 2025.

@@ -135,4 +135,201 @@ Nenhum mercado de jogo está livre de manipulação; o que muda é quanto ela cu
 - [F] O EVE permite golpes como parte do jogo, com exceções ([Kotaku](https://kotaku.com/eve-online-scams-aren-t-just-legal-they-re-encouraged-1794850238)); o Torn também ([D01, §12](fichas/D01-torn.md)). O OSRS e o MWI proíbem a manipulação ([F03, §6.1](fichas/F03-runescape-e-osrs.md); [C01, §6.2](fichas/C01-milky-way-idle.md)).
 - [H] Com RMT oficial, golpe e manipulação passam a mover dinheiro real, e a Justiça inglesa já tratou ouro de jogo como propriedade ([F03, §6.5](fichas/F03-runescape-e-osrs.md)). A recomendação é proibir a manipulação coordenada e o golpe, e deixar a "malandragem" para mecânicas explícitas (espionagem entre guildas, PvP), como sugere a ficha do Torn ([D01, §13](fichas/D01-torn.md)). Especular sozinho, comprando barato e vendendo caro, é jogo legítimo e continua permitido.
 
-<!-- CONTINUA: seções 3 a 5, implicações, riscos e fontes -->
+## 3. Proteções
+
+### 3.1 Taxas: quanto, onde e com que efeito
+
+| Jogo | Para anunciar | Na venda | Destino e observações | Fonte |
+|---|---|---|---|---|
+| GW2 | 5%, sem reembolso (cobrada também na venda instantânea) | 10% | Dreno; ~15% no total | [F07, §6.1](fichas/F07-guild-wars-2.md) |
+| EVE | Corretagem de 3% em estação NPC (~1% com habilidades; mínimo de 100 ISK) | Imposto de 7,5% (3,37% com Accounting V) | Dreno; modificar a ordem custa corretagem com desconto | [F01, §6.3](fichas/F01-eve-online.md) |
+| WoW | Depósito de 15%, 30% ou 60% do preço de NPC, sem reembolso | 5% | Dreno | [F06, §6.1](fichas/F06-world-of-warcraft.md) |
+| OSRS | — | 2% desde 29/5/2025 (isento abaixo de 50 gp; teto de 5 milhões por item) | Dreno mais item sink | [F03, §6.4](fichas/F03-runescape-e-osrs.md) |
+| Albion | 2,5% para criar ordem | 8% (4% com Premium) | Dreno; vale também no Black Market | [F02, §6.3](fichas/F02-albion-online.md) |
+| MWI | — | 4% (18% nos sacos de Cowbells), arredondada para cima | Vira buffs coletivos do servidor | [C01, §6.1](fichas/C01-milky-way-idle.md) |
+| Idle Clans | — | 1% (vendas a partir de 100 de ouro) | Dreno pequeno | [C02, §6.1](fichas/C02-idle-clans.md) |
+| Idlescape | — | 5%, arredondada para cima | Dreno | [C03, §6.1](fichas/C03-idlescape.md) |
+| IdleMMO | Ordem de compra: 15% (12% para membros) sem reembolso + 0% a 8% pela duração; leilão: 0,1% | 15% (12%); leilão: 12% (8%) | O maior dreno do jogo | [C04, §6](fichas/C04-idlemmo.md) |
+| Shop Titans | — | Cresce com a duração da listagem (12 h a 48 h) | Percentuais oficiais não encontrados | [C06, §6](fichas/C06-shop-titans.md) |
+| Torn | — | 5% (anônimo: +10%); bazar: 0% | Dreno | [D01, §6](fichas/D01-torn.md) |
+| Black Desert | — | 35% (o vendedor fica com 84,5% com o Value Pack) | Dreno; a assinatura vende um "imposto menor" | [F08, §6.2](fichas/F08-black-desert.md) |
+| Throne and Liberty | Grátis | 20% + imposto do castelo | 40% do imposto vai para um cofre disputado em cerco | [F09, §6.2–6.3](fichas/F09-throne-and-liberty-e-lost-ark.md) |
+| PoE2 | Exchange: taxa em ouro que cresce com o volume e não volta | Merchant Tab: o comprador paga ouro | Dreno em moeda não negociável | [F05, §6.3–6.4](fichas/F05-path-of-exile.md) |
+| Tibia (Char Bazaar) | 50 TC | 12% | Receita do estúdio | [F04, §6.2](fichas/F04-tibia.md) |
+
+O que as fontes mostram:
+
+- [F] **Taxa baixa demais não drena.** No Idle Clans, com 1%, o mercado "quase não drena ouro" e a riqueza circula livre entre alts ([C02, §6.1 e §12](fichas/C02-idle-clans.md)).
+- [F] **Taxa alta empurra volume para outros canais.** Os contratos do EVE escapam do imposto de venda ([F01, §6.4](fichas/F01-eve-online.md)); no IdleMMO, o pergaminho de assinatura virou moeda paralela e assim nenhum ouro saía do jogo ([C04, §6](fichas/C04-idlemmo.md)).
+- [H] **Taxa em duas partes faz dois trabalhos.** A de anúncio, sem reembolso, freia spam e undercut; o corte na venda drena em proporção ao volume ([F07, §13](fichas/F07-guild-wars-2.md)). O depósito do WoW, por ser fração do preço de NPC, pesa pouco em itens caros e pune itens de nicho ([F06, §12](fichas/F06-world-of-warcraft.md)).
+- [F] **Subir taxa sem explicar gera revolta.** EVE, de 4% para 7,5% em 2025, só com nota de patch ([F01, §6.3](fichas/F01-eve-online.md)); OSRS, de 1% para 2%, com uma "Boston Tea Party" encenada no jogo ([F03, §6.4](fichas/F03-runescape-e-osrs.md)). O Torn fez o oposto: rampa anunciada de 1% a 5%, um ponto por mês ([D01, §6](fichas/D01-torn.md)).
+- [F] **Taxa com destino visível é mais aceita:** buffs do servidor no MWI ([C01, §6.1](fichas/C01-milky-way-idle.md)); cofre do castelo no TL, embora ali a pergunta "a quem pago esse imposto?" tenha aparecido ([F09, §6.3 e §11](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+- [C] **Taxa em moeda não negociável só freia bot se o bot não puder fabricar essa moeda.** No PoE, bots vendem raros a NPCs por ouro, e a taxa em ouro deixou de filtrá-los ([F05, §11 e §13](fichas/F05-path-of-exile.md)).
+- **Quatro perguntas.** *Inspira-se* em corretagem e emolumentos de bolsa e no imposto sobre circulação. *Resolve* inflação (dreno proporcional ao volume) e spam de ordens. *Incentiva* vender menos vezes e com mais cuidado. *Risco:* taxa alta demais tira liquidez e cria canais paralelos; taxa sobre valor de NPC não pega itens raros (IdleMMO, §2.2).
+
+### 3.2 Limites de compra por janela
+
+- [F] **OSRS:** teto de unidades de cada item a cada 4 horas, no RS3 e no OSRS, para desencorajar o monopólio de itens críticos ([F03, §6.1](fichas/F03-runescape-e-osrs.md)).
+- [F] **Idle Clans:** cada token tem limite de compra a cada 24 horas, "para evitar manipulação de mercado e flipping excessivo" ([C02, §6.2](fichas/C02-idle-clans.md)).
+- [F] **Lost Ark:** até 10 trocas e €400 por dia no câmbio de cristais ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+- [F] **Black Desert:** uma pré-ordem de item da loja por vez ([F08, §6.1](fichas/F08-black-desert.md)); em 2016, a revenda de itens da loja tinha limite de cinco por semana por conta ([F08, §6.3](fichas/F08-black-desert.md)).
+- [F] **KoL:** limite por cliente, por item e por loja, zerado na virada do dia ([wiki do KoL](https://wiki.kingdomofloathing.com/Mall), via buscador).
+- [F] **Efeito colateral:** a liquidez do GE também serve aos bots, que despejam o que farmam no livro ([F03, §12](fichas/F03-runescape-e-osrs.md)).
+- **Quatro perguntas.** *Inspira-se* nos limites de posição das bolsas de mercadorias [H]. *Resolve* cornering e revenda especulativa do token. *Incentiva* compras graduais; combina com o ritmo idle, porque a ordem se renova a cada janela sem o jogador fazer nada. *Risco:* empurra o especulador para multicontas; só funciona junto com custo de conta (§3.6).
+
+### 3.3 Transparência: histórico de preços, dados e API
+
+- [F] **Idle Clans:** médias de 1, 7 e 30 dias, volume de 24 horas, itens mais negociados do dia e API pública oficial ([C02, §6.1 e §13](fichas/C02-idle-clans.md)).
+- [F] **MWI:** JSON oficial de 6 em 6 horas, com aleatoriedade e atraso "para evitar manipulação" (jun/2025), depois de hora em hora (ago/2025) e com volume e preço médio (fev/2026) ([C01, §6.2](fichas/C01-milky-way-idle.md)), mais um gerenciador de *userscripts* no cliente ([notas de síntese, C01–C03, item 6](_notas-de-sintese.md)).
+- [F] **GW2:** API oficial com a cotação do câmbio ([F07, §6.2](fichas/F07-guild-wars-2.md)). **EVE:** relatório econômico mensal com dados brutos, em que um blogueiro achou um erro de 9% na massa monetária ([F01, §6.8–6.9](fichas/F01-eve-online.md)). **Torn:** relatórios econômicos públicos com meta de expansão monetária abaixo de 20% ao ano e API com chaves e termos ([D01, §6 e §12](fichas/D01-torn.md)).
+- [F] **Contraexemplos:** o Shop Titans não tem histórico de preços no jogo, e o site da comunidade indicado pelos guias não resolvia em nov/2026 ([C06, §6](fichas/C06-shop-titans.md)); o Albion não mostra preços de outras cidades ([F02, §6.2](fichas/F02-albion-online.md)).
+- **Quatro perguntas.** *Inspira-se* na fita de negócios das bolsas e no relatório mensal do EVE. *Resolve* a assimetria de informação (o casual vende barato porque não sabe o preço) e a raspagem do servidor por terceiros. *Incentiva* decisões informadas e um ecossistema de ferramentas de leitura. *Risco:* dado em tempo real alimenta bots; daí o atraso proposital do MWI e a regra "leitura sim, automação não" ([notas de síntese, C01–C03, item 6](_notas-de-sintese.md)).
+
+### 3.4 Bandas de preço em torno de um valor de referência
+
+- [F] **MWI (2026):** valor estimado por item e por nível de aprimoramento, recalculado a cada hora com limite de variação por atualização; banda de ±10% para a maioria dos itens, mais larga para itens novos. A venda abaixo da banda entra no limite inferior e desce aos poucos até o mínimo do vendedor, sem prioridade e com estimativa de atraso ([C01, §6.2](fichas/C01-milky-way-idle.md)).
+- [F] **IdleMMO:** preço mínimo e máximo por item; o risco de troca pode subir o mínimo do vendedor; valor estimado recalculado toda noite ([C04, §6](fichas/C04-idlemmo.md)).
+- [F] **Shop Titans:** preço máximo por item e proibição de listar acima do patrimônio (3.6.0, abr/2020) ([C06, §6](fichas/C06-shop-titans.md)). **Idle Clans:** só confirmação a partir de ±20% da média de 24 horas ([C02, §6.1](fichas/C02-idle-clans.md)).
+- [F] **Faixas rígidas:** ±5% no GE do RuneScape até 2011 ([F03, §6.1](fichas/F03-runescape-e-osrs.md)); tetos por item no Black Desert ([F08, §6.1](fichas/F08-black-desert.md)).
+- [H] O espectro vai do alerta (Idle Clans) à banda que retarda (MWI), ao intervalo por item (IdleMMO) e ao teto rígido (Black Desert). Quanto mais rígida a faixa, mais ela protege contra transferência de valor e mais destrói a descoberta de preço e a liquidez num choque real de oferta.
+- **Quatro perguntas.** *Inspira-se* nos *circuit breakers* e limites de oscilação das bolsas (leitura da [C01, §6.2](fichas/C01-milky-way-idle.md)). *Resolve* pump and dump, cornering e lavagem por preço absurdo. *Incentiva* preços perto da referência e dá segurança ao iniciante. *Risco:* estimativa ruim para itens raros e listagens antigas afetadas quando a base muda ([C04, §12](fichas/C04-idlemmo.md)); no MWI, o livro passou a misturar duas grades de preço ([C01, §6.1](fichas/C01-milky-way-idle.md)).
+
+### 3.5 Microestrutura: degrau, arredondamento, espera, prioridade e garantia
+
+- [F] **Degrau relativo.** No EVE, 4 dígitos significativos desde 10/3/2020; as ordens antigas mantiveram o preço até serem modificadas, e a adequação total podia levar até 90 dias ([CCP, "Broker Relations"](https://www.eveonline.com/news/view/broker-relations)). No MWI, degraus de preço revistos várias vezes ([C01, §6.1](fichas/C01-milky-way-idle.md)).
+- [F] **Espera e taxa para modificar.** O EVE já tinha uma espera de 5 minutos antes de modificar uma ordem; a reforma de 2020 passou a cobrar corretagem sobre o aumento de preço mais metade da corretagem sobre o novo preço (desconto-padrão de 50%), com mínimo de 100 ISK, e modificar passou a reiniciar a duração da ordem ([CCP](https://www.eveonline.com/news/view/broker-relations)). As Merchant Tabs do PoE2 também impõem espera para mudar o preço ([F05, §6.4](fichas/F05-path-of-exile.md)).
+- [F] **Arredondamento da taxa para cima:** MWI desde mai/2025 e Idlescape ([C01, §6.1](fichas/C01-milky-way-idle.md); [C03, §6.1](fichas/C03-idlescape.md)). [H] Com arredondamento para baixo, item barato não pagava taxa, e quem girava volume dominava o livro de graça ([C01, §6.1](fichas/C01-milky-way-idle.md)).
+- [F] **Prioridade por antiguidade** no mesmo preço: MWI, Shop Titans e, de forma aproximada, GE ([C01, §6.1](fichas/C01-milky-way-idle.md); [C06, §6](fichas/C06-shop-titans.md); [F03, §6.1](fichas/F03-runescape-e-osrs.md)).
+- [F] **Casamento automático.** No IdleMMO, quem lista é casado com as ordens existentes, sem escolher qual; isso acabou com o "PO bumping" feito com várias contas ([C04, §6](fichas/C04-idlemmo.md)).
+- **Quatro perguntas.** *Inspira-se* no *tick size* das bolsas. *Resolve* a guerra de 0,01, o spam de ordens e a vantagem de velocidade. *Incentiva* preço pensado e ordens que ficam paradas. *Risco:* degrau grande demais trava o preço de itens baratos; mudar a grade com ordens abertas cria duas grades (MWI). [H] Por isso a grade precisa estar certa no lançamento.
+
+### 3.6 Travas para contas novas
+
+| Jogo | Trava | Fonte |
+|---|---|---|
+| OSRS (F2P) | Comércio restrito até 20 h de jogo, 10 quest points e nível total 100; não vende no GE os itens mais "botados"; a assinatura derruba a trava | [F03, §6.5](fichas/F03-runescape-e-osrs.md) |
+| RuneScape (2011) | Conta F2P nova doa no máximo 25 mil gp a cada 24 h | [F03, §6.2](fichas/F03-runescape-e-osrs.md) |
+| GW2 | Conta gratuita só converte gemas em ouro e negocia uma lista restrita; conta nova espera 72 h para usar o câmbio | [F07, §2](fichas/F07-guild-wars-2.md) |
+| New World | Sem troca nem envio de moeda antes de 72 h ou do nível 10; missão introdutória para liberar o mercado | [G04, §6](fichas/G04-new-world.md) |
+| Shop Titans | Vender por gemas exige ter gastado 600 gemas (substituiu o nível 25 em abr/2020) | [C06, §6](fichas/C06-shop-titans.md) |
+| MWI | Venda de sacos de Cowbells pode ficar retida por 72 h após a primeira compra | [C01, §6.3](fichas/C01-milky-way-idle.md) |
+| Lost Ark | O ouro das recompensas iniciais virou prata | [Siliconera](https://www.siliconera.com/major-lost-ark-update-to-introduce-changes-in-earning-gold/), via [G07](fichas/G07-economias-que-colapsaram.md) |
+| Task Bar Hero | Mercado travado até o Cubo nível 10 | [G05, §12](fichas/G05-banana-e-bongo-cat.md) |
+| Tibia | Coins compradas por alguns meios de pagamento nascem não transferíveis; as recebidas no Bazaar ficam transferíveis em até 120 dias | [F04, §6.1–6.2](fichas/F04-tibia.md) |
+
+- [F] **Limites conhecidos:** a trava só funciona se o banimento vier antes do limiar ([F03, §12](fichas/F03-runescape-e-osrs.md)); bots passam a "envelhecer" contas ([G04, §12](fichas/G04-new-world.md)); se o nível for automatizável, a trava só atrasa ([G05, §12](fichas/G05-banana-e-bongo-cat.md)).
+- **Quatro perguntas.** *Inspira-se* no período de carência de bancos e lojas de aplicativos. *Resolve* a conta descartável que nasce, farma e vende no mesmo dia. *Incentiva* investir na conta antes de negociar. *Risco:* atrito para o novato honesto que quer vender cedo. [H] A trava deve pesar sobre **dar** valor (vender, enviar, listar), nunca sobre **comprar**, e o limiar deve ser um "custo de conta" que o bot não automatize com facilidade: tempo, progresso com decisões e, para o RMT, verificação.
+
+### 3.7 Itens presos à conta e travas de revenda
+
+- [F] **Diablo III:** com o Loot 2.0, os lendários ficaram presos à conta, com janela de 2 horas para troca dentro do grupo ([G01, §6.4](fichas/G01-diablo-3-casa-de-leilao.md)). **Throne and Liberty:** itens da loja presos, sem troca direta, só equipamento base no leilão ([F09, §6.1 e §12](fichas/F09-throne-and-liberty-e-lost-ark.md)). **WoW:** o token fica preso quando comprado com ouro ([F06, §6.2](fichas/F06-world-of-warcraft.md)).
+- [F] **Negociável uma vez:** o Bond do OSRS e o token premium do Idle Clans travam depois de trocar de mãos, e destravar custa um dreno (10% do valor; 1 milhão de ouro) ([F03, §6.3](fichas/F03-runescape-e-osrs.md); [C02, §6.2](fichas/C02-idle-clans.md)).
+- [F] **Separar loja e economia:** o Bongo Cat tornou os itens da loja não negociáveis em mai/2025 ([G05, §13](fichas/G05-banana-e-bongo-cat.md)). **Trava voluntária:** no SimpleMMO, o jogador pode travar um item contra troca e venda desde ago/2026 ([C05, §6](fichas/C05-simplemmo.md)).
+- [F] **Troca social sem economia:** na troca de pets do IdleOn, cada lado mantém o seu e recebe uma cópia intransferível do outro ([notas de síntese, B01–B02, item 6](_notas-de-sintese.md)).
+- [H] A divisão entre negociável e preso é o interruptor-mestre da economia: Blizzard (Loot 2.0) e Sky Mavis (bAXS) chegaram à mesma correção ([notas de síntese, G01–G03, item 6](_notas-de-sintese.md)).
+- **Quatro perguntas.** *Inspira-se* nos itens *soulbound* do WoW. *Resolve* a venda de poder pronto, a mula e o farm passivo que vira dinheiro. *Incentiva* jogar para ter. *Risco:* menos comércio e menos generosidade social; precisa de exceções desenhadas (presente social com cópia, pedido de guilda).
+
+### 3.8 Risco de troca (IdleMMO)
+
+- [F] **Como funciona** ([C04, §6](fichas/C04-idlemmo.md), a partir da [wiki oficial](https://support.idle-mmo.com/wiki/economy-and-trading/trading)):
+  - cada troca recebe na hora um nível de risco (nenhum, mínimo, baixo, médio);
+  - o cálculo pesa o equilíbrio entre os lados e o valor unilateral acumulado: o que um jogador vem dando a muitos e o que o outro vem recebendo de muitos;
+  - o histórico é por conta, perde peso com o tempo e pode ser "pago de volta";
+  - quanto maior o risco, mais equilibrada a troca precisa ser, e no mercado o preço precisa ficar perto do valor estimado;
+  - o rótulo "alto risco" é manual, visível no perfil, exige trocas quase iguais, bloqueia leilões e sorteios e impede novos pagamentos ao jogo;
+  - o objetivo declarado é barrar comércio por dinheiro real, golpes e transferência de riqueza entre contas.
+- [H] **Por que é a melhor referência pública:** mira o fluxo (valor dado sem contrapartida), não o preço. O comerciante honesto que troca de forma equilibrada nunca sente a regra; a mula, que só recebe, e o farmer, que só dá, sentem sempre.
+- **Quatro perguntas.** *Inspira-se* em regras antilavagem de dinheiro baseadas em perfil de transação. *Resolve* RMT paralelo, mulas e golpes sem tratar todo mundo como suspeito. *Incentiva* trocas equilibradas e retribuição. *Risco:* opacidade (o jogador não vê o próprio histórico) e atrito com presentes legítimos ([C04, §12](fichas/C04-idlemmo.md)).
+
+### 3.9 Detecção de manipulação e de lavagem de ouro
+
+- [F] **As redes têm forma.** Keegan e coautores (2010) compararam a rede de troca de farmers do EverQuest II com uma rede real de tráfico de drogas investigada pela polícia canadense (Project Caviar): a estrutura era parecida, e nas simulações de ataque as duas resistiam até se partirem em muitos pedaços desconectados ([Universidade de Minnesota, "Dark Gold"](https://experts.umn.edu/en/publications/dark-gold-statistical-properties-of-clandestine-networks-in-massi/); [Boing Boing, 21/7/2010](https://boingboing.net/2010/07/21/similarities-between-1.html); ambos vistos via buscador). Com um mês de registros de troca do Aion (2010), Woo e coautores mostraram que intermediários se colocam entre produtores de ouro e compradores para ganhar eficiência e esconder a rede ([SIGCOMM 2011](https://mmlab.snu.ac.kr/html/publications/docs/sigcomm2011-woo.pdf)). Kwon e coautores (2017) passaram de detectar o farmer individual a reconstruir o grupo inteiro, com sua hierarquia ([IEEE TIFS, "Crime Scene Reconstruction"](https://davidmohaisen.github.io/publication/2017-01-01-Crime-Scene-Reconstruction-Online-Gold-Farming-Network-Analysis)). Um trabalho relacionado descreve os papéis da rede como farmers, comerciantes, "bancos" e compradores ([arXiv 1606.01426](https://arxiv.org/html/1606.01426), via buscador).
+- [F] **O comportamento do bot se repete.** Pesquisadores da NCSOFT e de universidades coreanas usaram a autossimilaridade dos registros de ações: o bot repete rotinas, o humano só parece repetitivo por pouco tempo. Só com essa medida, a área sob a curva (AUC) foi de 0,90 no Lineage, 0,96 no Aion e 0,83 no Blade & Soul; com todas as variáveis, 0,95, 0,99 e 0,94 ([Lee et al., NDSS 2016](https://seal.cs.ucf.edu/doc/ndss16.pdf); [slides](https://www.ndss-symposium.org/wp-content/uploads/2017/09/05_4-ndss2016-slides.pdf)). Um trabalho posterior aponta a limitação: o método exige muitos dados de cada comportamento ([arXiv 1606.01426](https://arxiv.org/html/1606.01426), via buscador). Há trabalho específico sobre reduzir o "dano colateral" (falsos positivos) da detecção ([Universidade da Coreia, "Surgical strike"](https://pure.korea.ac.kr/en/publications/surgical-strike-a-novel-approach-to-minimize-collateral-damage-to/), visto só pelo título).
+- [F] **Na prática dos jogos:** o MWI baniu mais de 500 contas principais e milhares de alts e confiscou mais de 100 bilhões de moedas, de 2 a 3 vezes o ganho ([notas de síntese, C01–C03, item 5](_notas-de-sintese.md)); o IdleMMO aponta cadeias de multicontas como a trapaça principal ([C04, §6](fichas/C04-idlemmo.md)); o SimpleMMO bloqueia trocas por "mesmo dispositivo/rede", com falsos positivos relatados ([C05, §6](fichas/C05-simplemmo.md)); no EVE, ~15% dos 42 mil banimentos de 2020 vieram de denúncias ([F01, §6.11](fichas/F01-eve-online.md)); no OSRS, só 0,36% dos banimentos de 2024 caíram na apelação ([F03, §6.5](fichas/F03-runescape-e-osrs.md)).
+- **Quatro perguntas.** *Inspira-se* em análise de redes antifraude e antilavagem. *Resolve* o que a regra de preço não pega: a cadeia de contas. *Incentiva* (no jogador) trocas normais e (no estúdio) dados bem guardados. *Risco:* falso positivo contra família, república de estudantes e lan house, que dividem rede e aparelho; daí revisão humana e apelação.
+
+### 3.10 Dívida e confisco proporcional
+
+- [F] **Throne and Liberty (29/10/2024):** quem comprou Lucent por fora teve o valor descontado, e o saldo pode ficar negativo; com saldo negativo, perde o acesso ao leilão, às distribuições da guilda e ao Lucent de PvP, e as punições escalam até o banimento permanente ([F09, §6.4](fichas/F09-throne-and-liberty-e-lost-ark.md)). [C] Parte da comunidade leu a dívida como punição com fins de lucro, porque quitá-la exige comprar na loja ([F09, §11–12](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+- [F] **Lost Ark:** quem comprou ouro por fora levou banimento temporário e ficou com dívida a pagar ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)). **MWI:** confisco de 2 a 3 vezes o ganho (§3.9).
+- [F] **Remover o valor sem rollback geral:** o New World retirou mais de 80% do valor duplicado e depois 98% do restante ([notas de síntese, G04–G05, item 4](_notas-de-sintese.md)); o Diablo III fechou as casas de leilão, recusou rollback global e doou à caridade o dinheiro real do exploit ([G01, §6.3](fichas/G01-diablo-3-casa-de-leilao.md)).
+- **Quatro perguntas.** *Inspira-se* no confisco do produto do crime. *Resolve* punir sem perder o jogador e recuperar o valor desviado. *Incentiva* comprar pelo canal oficial. *Risco:* parecer receita. [H] Regra publicada antes de ser aplicada, dívida quitável jogando (não só pagando) e valor confiscado destruído, nunca revendido.
+
+### 3.11 Disjuntores
+
+- [F] **Desligar tudo cria outro problema:** o patch 1.0.5 do New World admite um dupe de ouro "introduced by disabling trading" ([notas de síntese, G04–G05, item 1](_notas-de-sintese.md)). O Diablo III fechou as duas casas durante o dupe do patch 1.0.8 ([G01, §6.3](fichas/G01-diablo-3-casa-de-leilao.md)). A [G07, §6](fichas/G07-economias-que-colapsaram.md) registra o disjuntor de comércio do ESO e do Diablo IV, que congela também o mercado legítimo.
+- **Quatro perguntas.** *Inspira-se* na suspensão de negociação das bolsas. *Resolve* a propagação de um dupe. *Incentiva* reportar e esperar. *Risco:* punir todos pela culpa de poucos. [H] Disjuntor por item, por mercado e por moeda, testado antes de ser preciso, com prazo e comunicação.
+
+## 4. Bots e farmers de ouro
+
+### 4.1 O tamanho do problema
+
+- [F] **Uma indústria.** A melhor estimativa de Richard Heeks para 2008 era de ~400 mil farmers ganhando em média US$ 145 por mês, num mercado de ~US$ 500 milhões que podia passar de US$ 1 bilhão, com 5 a 10 milhões de compradores e ~80% dos trabalhadores na China ([Game Developer, 2008](https://gamedeveloper.com/game-platforms/study-gold-farming-likely-a-500-million-industry); [Phys.org, 2008](https://phys.org/news/2008-09-countries-benefit-online-gold.html)). O próprio autor chamou os números de estimativas frágeis.
+- [F] **A demanda é de massa.** Em 2013, o CEO da Jagex disse que 40% a 50% dos jogadores ativos compravam gold num mês qualquer ([F03, §6.3](fichas/F03-runescape-e-osrs.md)).
+- [F] **A oferta também.** Cerca de 25% dos usuários do Tibia usavam bot ([notas de síntese, F03–F04, item 4](_notas-de-sintese.md)); no Banana, ~2/3 dos jogadores eram bots, e no Bongo Cat, ~metade ([notas de síntese, G04–G05, item 6](_notas-de-sintese.md)); o Lost Ark baniu mais de 1 milhão de contas em 3 e 4/3/2022 ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+- [H] Num idle de navegador, criar conta custa um clique, e o RMT oficial dá ao ouro um preço em reais. As duas coisas juntas fazem do nosso jogo um alvo melhor que a média ([F09, §15](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+
+### 4.2 Como bots e farmers destroem economias
+
+1. **Oferta inflada, preço derrubado.** [F] Depois do Bot Nuking Day (25/10/2011), os mundos F2P do RuneScape esvaziaram e os itens mais "botados" subiram de preço ([F03, §6.2](fichas/F03-runescape-e-osrs.md)), sinal de que os bots seguravam esses preços para baixo. [F] No Task Bar Hero (2026), a madeira tinha mais de 200 mil anúncios a centavos, e um arco anunciado a US$ 1.585,75 nunca saiu acima de US$ 22 ([G05, §6](fichas/G05-banana-e-bongo-cat.md)). [C] Bots dominando o mercado e derrubando preços é queixa recorrente nos idles do Steam ([G05, §11](fichas/G05-banana-e-bongo-cat.md), três fontes).
+2. **Moeda criada do nada.** [F] No Lost Ark, os bots farmavam as áreas iniciais para vender ouro ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)); o New World tirou o ouro dos baús de pesca, que eram farmados por bots ([G04, §6](fichas/G04-new-world.md)). [H] Cada bot é uma torneira: quando farma moeda, inflaciona a moeda; quando farma itens, deflaciona os bens, e quem produz honestamente vende pior nos dois casos.
+3. **Mercado negro contra o token.** [F] O ouro clandestino do OSRS sai a ~45% do preço do Bond ([F03, §6.3](fichas/F03-runescape-e-osrs.md)); o Lucent cinza do Throne and Liberty saía 25% a 35% abaixo da loja ([F09, §6.4](fichas/F09-throne-and-liberty-e-lost-ark.md)). Cada venda clandestina é uma venda oficial a menos.
+4. **Roubo de contas e lavagem.** [F] Depois da operação Unholy Rage (2009), os farmers do EVE passaram a roubar contas para recuperar o ISK perdido ([F01, §6.11](fichas/F01-eve-online.md)). [F] Em 25/6/2013, a Blizzard emitiu um alerta após uma alta de logins não autorizados pelo site e pelo app móvel do Armory; jogadores relataram centenas de milhares de ouro sumindo em golpes de "lavagem" com leilões falsos, e a Blizzard suspendeu o leilão no app e prometeu devolver ouro e itens ([WeLiveSecurity, 25/6/2013](https://www.welivesecurity.com/2013/06/25/blizzard-issues-world-of-warcraft-security-alert-over-auction-house-scams)). [F] Segundo Jason Hall, ex-funcionário de segurança da Blizzard, vendedores de ouro chegaram a contornar a autenticação em dois fatores; as contas invadidas subiram de poucas para ~200 num relatório, e o ouro roubado derrubou o preço a ponto de um grande vendedor publicar a falha no fórum oficial pedindo correção ([Mein-MMO, 6/4/2024](https://mein-mmo.de/en/how-gold-sellers-at-wow-betrayed-their-own-colleagues-to-make-your-accounts-safer,1111356/)). [F] No OSRS, o maior roubo veio de dentro, por ferramenta de suporte ([F03, §6.5](fichas/F03-runescape-e-osrs.md)). [H] Num jogo de navegador com RMT, um XSS no chat vira roubo de conta ([G04, §13](fichas/G04-new-world.md)), e o leilão vira a lavanderia: o ouro roubado sai da conta da vítima comprando lixo superfaturado da conta do ladrão.
+5. **Experiência e infraestrutura.** [F] No EVE, banir ~6.200 contas (~2% da base) de uma vez derrubou o uso de CPU por usuário em ~30% ([F01, §6.11](fichas/F01-eve-online.md)); no Lost Ark, a onda de jun/2022 levou o pico diário do Steam de 865.709 para 268.854 ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)). [F] A parcela de jogadores do EVE que via os bots como problema sério caiu de 66,9% para 52,6% entre o 3º trimestre de 2019 e o 1º de 2020 ([F01, §6.9](fichas/F01-eve-online.md)).
+6. **Retaliação.** [F] O Albion sofreu ataques depois de ondas de banimento, e o próprio desenvolvedor ironizou a coincidência ([Mein-MMO](https://mein-mmo.de/en/an-mmorpg-from-germany-is-being-attacked-by-hackers-the-developer-says-funny-that-this-always-happens-after-a-ban-wave,1517133); [notas de síntese, F01–F02, item 5](_notas-de-sintese.md)).
+
+### 4.3 Escala dos banimentos
+
+| Jogo | Número | Período | Fonte |
+|---|---|---|---|
+| RuneScape | 7,7 milhões de contas numa semana (Bot Nuking Day) | out/2011 | [F03, §6.2](fichas/F03-runescape-e-osrs.md) |
+| RuneScape | Mais de 1,1 milhão de bots banidos e 3,7 trilhões de gp retirados | 2013 | [F03, §6.3](fichas/F03-runescape-e-osrs.md) |
+| OSRS | Mais de 6,9 milhões de banimentos | 2023 | [F03, §6.5](fichas/F03-runescape-e-osrs.md) |
+| OSRS | Mais de 67 mil contas por semana; 0,36% revertidos na apelação | 2024 | [F03, §6.5](fichas/F03-runescape-e-osrs.md) |
+| OSRS | Mais de 1 milhão por macro (fonte secundária) | jan/2026 | [F03, §6.5](fichas/F03-runescape-e-osrs.md) |
+| WoW Classic | 248.105 contas Battle.net e 73.057 de WoW em duas semanas | mai/2023 | [F06, §6.3](fichas/F06-world-of-warcraft.md) |
+| Lost Ark | Mais de 1 milhão de contas | 3–4/3/2022 | [F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md) |
+| Albion | De 12 mil para mais de 20 mil por mês (20.673 em setembro) | jun–set/2026 | [F02, §11](fichas/F02-albion-online.md) |
+| EVE | ~6.200 contas pagas numa operação | 22/6/2009 | [F01, §6.11](fichas/F01-eve-online.md) |
+| EVE | 42 mil banimentos, ~15% por denúncia | 2020 | [F01, §6.11](fichas/F01-eve-online.md) |
+| MWI | Mais de 500 contas principais e milhares de alts; mais de 100 bilhões de moedas confiscadas | mai/2025 | [notas de síntese, C01–C03, item 5](_notas-de-sintese.md) |
+| Tibia | Centenas de contas na onda contra o Xabi, algumas avaliadas em mais de €3 mil | jul/2021 | [F04, §11](fichas/F04-tibia.md) |
+
+- [H] Número de banimentos não mede sucesso: mede o custo recorrente da guerra. Em 2011, uma carta da própria Jagex admitia que a guerra "is being won by the botters" ([F03, §6.2](fichas/F03-runescape-e-osrs.md)). O bot existe enquanto o ganho esperado de uma conta supera o custo de criá-la e perdê-la; as defesas que duram mexem nessa conta.
+
+### 4.4 Como os jogos combatem
+
+1. **Detecção no servidor por comportamento.** [F] Autossimilaridade e redes de troca (§3.9); o ClusterFlutterer do RuneScape combinou ofuscação de código e detecção e mirou o que a Jagex estimava ser 98% dos bots ([F03, §6.2](fichas/F03-runescape-e-osrs.md)).
+2. **Anticheat no cliente.** [F] O Albion adotou o BattlEye ([F02, §11](fichas/F02-albion-online.md)). [H] Num jogo de navegador, o cliente é aberto por definição; a defesa principal tem de estar no servidor ([07, §2](07-tecnica-idles-online.md)).
+3. **Ondas de banimento.** [F] Unholy Rage (EVE, 2009), Bot Nuking Day (RuneScape, 2011) e as ondas do Lost Ark (2022–2023) ([F01](fichas/F01-eve-online.md); [F03](fichas/F03-runescape-e-osrs.md); [F09](fichas/F09-throne-and-liberty-e-lost-ark.md)). [H] A onda esconde qual sinal disparou a detecção e derruba a rede inteira (farmers, mulas e "bancos") de uma vez, mas deixa o bot lucrar até o dia da onda.
+4. **Encarecer a conta.** [F] Travas para contas novas (§3.6); o New World desligou o compartilhamento familiar do Steam citando bots, vendedores de ouro e contas que burlavam banimentos ([G04, §6](fichas/G04-new-world.md)).
+5. **Tirar o valor da fonte farmável.** [F] Baús de pesca do New World; ouro inicial do Lost Ark trocado por prata (§3.6); o TF2 passou a exigir jogo ativo verificado para dar drops em 2013, e o Steam limita drops por janela ([notas de síntese, G04–G05, item 7](_notas-de-sintese.md)).
+6. **Verificação humana.** [F] Captcha antifarm no MWI desde out/2025 ([C01, §6.2](fichas/C01-milky-way-idle.md)). O IdleMMO reduziu duas vezes a frequência das verificações depois de reclamações ([C04, §6 e §11](fichas/C04-idlemmo.md)), e a do SimpleMMO é inacessível a leitores de tela, o que assusta jogadores cegos ([C05, §11](fichas/C05-simplemmo.md)).
+7. **Denúncia de jogadores.** [F] ~15% dos banimentos de 2020 no EVE ([F01, §6.11](fichas/F01-eve-online.md)).
+8. **Mirar o vendedor e não esquecer o comprador.** [F] O Albion baniu 604 compradores de uma vez, e críticos apontaram que os grandes vendedores seguiam ativos ([F02, §11](fichas/F02-albion-online.md)). [F] No sentido oposto, a Blizzard admitiu em 2026 ter sido "leniente demais" com compradores de ouro ([notas de síntese, G06–G07, item 3](_notas-de-sintese.md)). [H] Com canal oficial, o comprador tem rota legal; a punição pesada vai para o vendedor e o bot, e o comprador recebe a dívida (§3.10).
+9. **Absorver a automação no desenho.** [H] O que o jogo não automatiza vira script ([notas de síntese, 02a, item 5](_notas-de-sintese.md)); a ficha do Tibia conclui que a demanda por automação deve ser atendida pelo design, não pelo bot ([F04, §13](fichas/F04-tibia.md)).
+
+### 4.5 Processos contra fabricantes de bots
+
+- [F] **MDY v. Blizzard (Glider, EUA).** As partes estipularam US$ 6 milhões em 2008, e a sentença de 2009 foi de US$ 6,5 milhões. Em 14/12/2010, o Tribunal de Apelação do 9º Circuito manteve a responsabilidade da MDY pela regra antievasão de proteções técnicas do DMCA, mas reverteu a condenação por violação indireta de direito autoral, ao entender que violar os termos de uso não é, por si, violar o direito autoral ([Wikipedia](https://en.wikipedia.org/wiki/MDY_Industries,_LLC_v._Blizzard_Entertainment,_Inc.); [decisão no FindLaw](https://caselaw.findlaw.com/us-9th-circuit/1548042.html)).
+- [F] **Blizzard v. Bossland (Alemanha e EUA).** Em 12/1/2017 (I ZR 253/14), o Tribunal Federal alemão (BGH) confirmou que vender bots para World of Warcraft é concorrência desleal, por obstrução deliberada ao desrespeitar as regras dos termos de uso, depois de vitórias da Blizzard nas instâncias de Hamburgo ([Gleiss Lutz](https://www.gleisslutz.com/de/gleiss-lutz-erstreitet-f%c3%bcr-blizzard-entertainment-grundsatzurteil-vor-dem-bgh-vertrieb-von-bot.html); [Kluwer Copyright Blog](https://legalblogs.wolterskluwer.com/copyright-blog/germany-the-federal-supreme-court-rules-on-world-of-warcraft/)). Nos EUA, a Bossland deixou de se defender, e a Justiça da Califórnia fixou à revelia US$ 8.563.600 de indenização (42.818 violações a US$ 200) mais US$ 174.872 de honorários, cobrindo Honorbuddy, Demonbuddy, Stormbuddy, Hearthbuddy e Watchover Tyrant ([Shacknews](https://shacknews.com/article/99615/blizzard-wins-86-million-in-case-against-cheat-maker-bossland); [ComputerBase, abr/2017](https://www.computerbase.de/2017-04/blizzard-bossland-klage/)). [NV] Há relatos de que a cobrança desse valor na Alemanha não avançou; não verifiquei.
+- [F] **Jagex v. Impulse Software (iBot, EUA).** Ação aberta em fev/2010; o pedido de liminar foi negado em set/2010. Em 1/2/2012, a Justiça de Massachusetts deu ganho à Jagex em todos os pedidos (direito autoral, evasão de proteção técnica, marca, fraude informática e interferência em contratos), com indenização "acima de seis dígitos", honorários, proibição permanente de desenvolver bots e entrega de sites, domínios, código-fonte e dados de clientes ([Banner Witcoff](https://bannerwitcoff.com/banner-witcoff-wins-video-game-lawsuit-for-runescape-developer-jagex-ltd); [Ten Ton Hammer](https://www.tentonhammer.com/news/jagex-claims-victory-against-runescape-bot-developer); [Game Developer, 2010](https://www.gamedeveloper.com/pc/jagex-suffers-setback-in-i-runescape-i-bot-lawsuit)). Em 2024, a Jagex afirmou que também processa sites de bots e de venda de gold e de contas ([F03, §6.5](fichas/F03-runescape-e-osrs.md)).
+- [H] **Leitura.** Os processos funcionam contra fabricantes comerciais, visíveis e com faturamento, não contra scripts privados. São lentos (dois a quatro anos), a cobrança é incerta, e os ganchos jurídicos foram a evasão de proteção técnica (EUA) e a concorrência desleal (Alemanha). Isso pede termos de uso com cláusulas explícitas contra bots e uma proteção técnica de verdade para que "contorná-la" seja ilícito. A entrega da base de clientes vira uma onda de banimentos. A via equivalente no Brasil não foi pesquisada aqui: fica para o [05b](05b-rmt-legal-brasil.md) e o [05c](05c-rmt-legal-global-pagamentos.md) (validar com advogado).
+
+### 4.6 A tese do canal oficial e seus limites
+
+- [F] **A favor.** Um mês depois dos Bonds, a riqueza ligada a gold farming no RuneScape tinha caído mais de 80% ([F03, §6.3](fichas/F03-runescape-e-osrs.md)). O PLEX nasceu como arma contra o RMT, ao lado de banimentos e confisco ([F01, §6.11](fichas/F01-eve-online.md)). O Char Bazaar legalizou o que quase todas as contas do topo já faziam ([F04, §6.2](fichas/F04-tibia.md)). No IdleMMO, 65,2% dos jogadores obtiveram a assinatura com ouro ([notas de síntese, C04–C06, item 1](_notas-de-sintese.md)). [H] No Torn, se os números da ficha ainda valem, a rota oficial sai mais barata que o site de RMT ([D01, §6](fichas/D01-torn.md)).
+- [F] **Contra.** Em 2023, a Blizzard ainda banía dezenas de milhares de bots por semana e chamou o token de "uma ferramenta entre várias" ([F06, §6.3](fichas/F06-world-of-warcraft.md)); em 2026, admitiu ter sido leniente demais com compradores de ouro ([notas de síntese, G06–G07, item 3](_notas-de-sintese.md)). O ouro clandestino do OSRS sai a 45% do Bond ([F03, §6.3](fichas/F03-runescape-e-osrs.md)). O Lost Ark tinha câmbio oficial e bots aos milhões ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)). O Albion tem o Gold e ainda bane de 12 a 21 mil contas por mês ([F02, §11](fichas/F02-albion-online.md)).
+- [H] **Por que o canal oficial não basta:**
+  1. Ele fixa um teto para o preço do ouro em dinheiro. O mercado negro vive enquanto conseguir vender abaixo desse teto, e o farmer automatizado tem custo quase zero.
+  2. Ele dá ao ouro um preço legítimo em dinheiro, e isso transforma o farm em trabalho remunerado ([F09, §13](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+  3. Parte da demanda por ouro nasce do desenho: as raides GDKP do WoW foram proibidas porque criavam demanda por ouro "que não existiria" ([notas de síntese, G06–G07, item 3](_notas-de-sintese.md)).
+- [H] **Quando a tese vale:** a rota oficial compete em preço (perto do mercado negro) e em segurança (risco zero); vender exige custo de conta; os drenos mantêm o ouro escasso; e o preço do mercado negro é acompanhado como indicador ([notas de síntese, F03–F04, item 2](_notas-de-sintese.md)). Mesmo assim, a operação antibot continua necessária para sempre.
+
+### 4.7 Por que o idle é um caso à parte
+
+- [H] No idle, a automação é o gênero. Se o servidor limita cada conta a uma ação por vez, como fazem o Melvor e o MWI ([notas de síntese, 02a, item 3](_notas-de-sintese.md)), o bot não faz mais por hora que o humano. A vantagem dele passa a estar em quatro lugares: multiplicar contas, explorar recompensas de janela ativa, ganhar a corrida de velocidade no mercado (undercut e sniping) e farmar recompensas por "cliente aberto".
+- [F] O último caso já aconteceu: no Banana e no Bongo Cat, tempo passivo gerava item vendável, e os bots capturaram o valor ([G05, §12–13](fichas/G05-banana-e-bongo-cat.md)).
+- [H] Daí as defesas certas para um idle: teto de valor negociável por conta e por período, custo de conta, microestrutura que anula a velocidade (degrau, espera, lote) e a regra de que o tempo ausente gera progresso preso à conta, e só a decisão ativa verificada gera itens negociáveis ([G05, §13](fichas/G05-banana-e-bongo-cat.md)).
+
+<!-- CONTINUA: seção 5, implicações, riscos e fontes -->
