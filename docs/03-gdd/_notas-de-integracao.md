@@ -1,5 +1,25 @@
 # Notas de integração do GDD (arquivo de trabalho)
 
+## 03 e 04 — Personagem e combate (concluídos em 2026-11-11, com tema medieval)
+
+**Decisões centrais [H]:**
+- Quatro atributos (FOR, DES, SAB, VIG). Poder: pessoal 30–45%, equipamento 40–55%, consumíveis 10–20%.
+- Cada vocação tem mecânica própria (Cavaleiro: Guarda e posturas; Mago: ressonância; Druida: preparo de campo; Ladino: tino e trilhas) e um "olhar de colheita" que abastece um ofício diferente. Três caminhos por vocação, com marcos que mudam regras. Troca de vocação com níveis guardados, espera de 7 dias e XP × 2.
+- Ajudantes: companheiros de combate que nunca abrem fila, não produzem, não negociam e não lutam no cerco.
+- Combate por regras (modelo dos gambits do FFXII): 3 casas no início, 12 no nível 90; plano de expedição com Plano B e reparo automático.
+- Criaturas corrompidas com duas barras (Vida e Névoa): abater ou purificar. Três famílias (feras, mortos-vivos, corrompidos); "nenhum povo é mau por natureza".
+- Lei da Cerva: pressão de caça regional que regula o farm.
+- Masmorras assíncronas com cópia congelada do personagem e saque individual. Momentos ativos somam no máximo +25%.
+- Cerco: Presságio, Arsenal, Guarda da Cidade e força elástica; quem não se inscreve não pesa no cálculo.
+
+**Interfaces por hora de combate (margem 0):** 1 refeição por combatente (personagem e cada ajudante); ~3 poções (o dobro sem refeição; −30% com Druida); 1 feixe de flechas, 1 medida de pó arcano, ~6 ervas, 1 ração de viagem; desgaste base do 05 com ajustes (Cavaleiro ×1,5 na armadura, Ladino ×1,5 nas botas, derrota −5); cerco cobra 40 pontos por peça e masmorra 15; ~100 abates/h; por fera: pele 0,40, carne 0,50, matéria dura 0,25; **ouro: zero**. Cerco por 1.000 ativos por semana: ~8.000 provisões, 12 kits da Guarda, 1.000 tábuas, 500 lingotes, 200 blocos de pedra e ~214 peças-equivalentes de desgaste. Mérito de 80 a 140 por defensor; item comprado vale 50% para o fornecedor.
+
+**Propostas de mudança na bíblia:** glossário (Dádiva, Caminho, Regras, Plano B, Névoa da região, Lei da Cerva, Purificar/Abater, Arrancada, Encruzilhada, Presságio, Arsenal, Guarda da Cidade, Integridade); três famílias de criaturas; combate sem ouro; ajudantes fora de fila e do cerco; Mérito por purificação; consumível de cada vocação na seção 6.4; casa da dádiva como sétima casa (proposta ao 05).
+
+**Conflitos a reconciliar:** 06 conta 4 refeições por hora, o 04 conta 1; 05/06 listam ouro entre os drops de combate, 07 e 04 dizem zero; consumíveis do Cavaleiro e do Druida (05 × 03 §7.1); a passiva "Faro" do 03 virou "Tino" porque o 05 usa "Faro" nas ferramentas; a seda da aranha gigante como fibra da Tecelagem (a definir).
+
+**Riscos:** regras de combate parecerem programação para o casual; custo de CPU da simulação offline; purificar render menos que abater; bestiário genérico ou parecido com o Tibia; Mérito comprado indiretamente com Coins; vocação de farm dominante.
+
 ## 05 e 06 — Itens e ofícios (concluídos em 2026-11-11, com tema medieval)
 
 **Decisões centrais [H]:**
