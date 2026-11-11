@@ -1,12 +1,12 @@
 # GDD 13 — Anti-abuso: bots, multicontas, exploits, fraude e moderação
 
-> **Codinome:** Projeto Ofício. Módulo da Fase 3, escrito sobre a [bíblia](00-biblia.md) (glossário, decisões vigentes, números-âncora) e sobre as decisões do Gabriel registradas no [PROGRESSO](../PROGRESSO.md). Depende de 00 e 07 (economia). Conversa com 02 (filas), 06 (obra-prima), 08 (simulação), 09 (Câmara e guildas), 11 (Alvará, Pix, teto de gasto), 12 (onboarding) e 14 (interface).
+> **Codinome:** Projeto Ofício. Módulo da Fase 3, escrito sobre a [bíblia](00-biblia.md) (glossário, decisões vigentes, números-âncora) e sobre as decisões do Gabriel registradas no [PROGRESSO](../PROGRESSO.md). Depende de 00 e 07 (economia). Conversa com 02 (filas), 06 (obra-prima), 08 (simulação), 09 (Conselho e guildas), 11 (Coins, Pix, teto de gasto), 12 (onboarding) e 14 (interface).
 > **Etiquetas:** [F] fato com fonte · [C] consenso da comunidade · [H] proposta ou leitura do estúdio · [NV] não verificado. **Todo número deste módulo é [H] até a simulação (módulo 08).** Os pontos jurídicos citam a norma e estão marcados **validar com advogado**: não há parecer jurídico (decisão do Gabriel, risco assumido).
 > **Escopo:** desenho e processo. Nada de código; a implementação é da Fase 4 (arquitetura). As decisões deste módulo são numeradas **AA-1** a **AA-26**.
 
 ## 0. Resumo em uma tela
 
-**O problema.** No Arraial, todo ouro tem preço em reais. O Alvará é comprado em reais e trocado por ouro no Câmbio; ouro e Alvará circulam livremente pela Troca; o RMT informal não é proibido. [H] Isso faz do jogo um alvo melhor que a média: num jogo de navegador, criar conta custa um clique, e o câmbio oficial dá ao ouro um preço legítimo em dinheiro ([04b, §4.1](../01-pesquisa/04b-economia-mercados-protecoes-bots.md); [F09, §13](../01-pesquisa/fichas/F09-throne-and-liberty-e-lost-ark.md)).
+**O problema.** Na Cidade, todo ouro tem preço em reais. O Coin é comprado em reais e trocado por ouro no Câmbio; ouro e Coins circulam livremente pela Troca; o RMT informal não é proibido. [H] Isso faz do jogo um alvo melhor que a média: num jogo de navegador, criar conta custa um clique, e o câmbio oficial dá ao ouro um preço legítimo em dinheiro ([04b, §4.1](../01-pesquisa/04b-economia-mercados-protecoes-bots.md); [F09, §13](../01-pesquisa/fichas/F09-throne-and-liberty-e-lost-ark.md)).
 
 **A resposta: três travas e uma rede.**
 
@@ -21,11 +21,11 @@
 
 | Item | Valor inicial [H] |
 |---|---|
-| Carência do Alvará antes da primeira transferência | 7 dias na primeira compra; depois 72 h no Pix e 7 dias no cartão; até 30 dias com sinal de risco |
+| Carência do Coin antes da primeira transferência | 7 dias na primeira compra; depois 72 h no Pix e 7 dias no cartão; até 30 dias com sinal de risco |
 | Conta nova (para limites) | menos de 14 dias **ou** menos de 20 h de jogo ativo |
 | Saída sem contrapartida de conta nova | até 2 × o teto diário de emissão negociável |
-| Retenção de saída em aparelho novo | 72 h acima de 1 Alvará de valor (24 h com 2FA ativo há 7 dias ou mais) |
-| Cartório | vendedor com 30+ dias, 60+ h de jogo ativo e 2FA há 7+ dias; comprador 30 dias sem votar e 90 dias sem revender |
+| Retenção de saída em aparelho novo | 72 h acima de 1 Coin de valor (24 h com 2FA ativo há 7 dias ou mais) |
+| Bazar de Personagens | vendedor com 30+ dias, 60+ h de jogo ativo e 2FA há 7+ dias; comprador 30 dias sem votar e 90 dias sem revender |
 | Bots na simulação (cenário base) | 3% das contas com automação na própria conta; 0,5% das contas em fazendas |
 | Detecção | fazendas: 60% das contas por onda, a cada 3 semanas; automação na própria conta: 8% por semana |
 | Disputas de pagamento | meta abaixo de 0,5%; disjuntor de cartão a 0,8% |
@@ -49,15 +49,15 @@
 |---|---|---|---|
 | **Fazenda de contas** (um operador, várias contas, com identidades alugadas) | Ouro e bens para vender por reais | Troca para uma conta coletora, depois RMT informal | §4 (uma pessoa, uma conta); §3.4 (grafo) |
 | **Automação na própria conta** (script do próprio jogador) | Poupar tempo, render sempre no teto, jogar todas as janelas ativas | Mercado e Troca, como qualquer jogador | §3.2 (teto, Fila, janelas); §3.4 |
-| **Bot de mercado** | Pegar o anúncio barato antes de todos; guerra de preço | Feira, Bolsa, Pregão | §3.2 (mercado sem corrida, com o módulo 07) |
+| **Bot de mercado** | Pegar o anúncio barato antes de todos; guerra de preço | Feira, Bolsa, Leilão | §3.2 (mercado sem corrida, com o módulo 07) |
 | **Multiconta caseira** (alts do mesmo jogador) | Mais ofícios mestres, mais votos, canalizar valor | Troca entre as próprias contas | §4 |
 | **Explorador de bug** | Dupe, corrida, estorno que devolve o que nunca foi cobrado | Qualquer balcão | §5 |
-| **Fraudador de pagamento** | Converter cartão roubado ou Pix de golpe em ouro | Câmbio, Troca, Baú do Mascate, Cartório | §6 |
+| **Fraudador de pagamento** | Converter cartão roubado ou Pix de golpe em ouro | Câmbio, Troca, Baú Misterioso, Bazar de Personagens | §6 |
 | **Ladrão de contas** | Esvaziar a conta da vítima | Troca e anúncios a preço absurdo para um comparsa | §7 |
 | **Golpista** | Enganar na Troca, no RMT informal ou na venda de conta por fora | Troca; fora do jogo | §7; §8 |
-| **Lavador** | Transformar dinheiro sujo em dinheiro "limpo" | Alvará → ouro → venda informal | §6; §9 |
+| **Lavador** | Transformar dinheiro sujo em dinheiro "limpo" | Coins → ouro → venda informal | §6; §9 |
 | **Insider** (funcionário com ferramenta interna) | Criar ou desviar valor; agir antes de uma mudança | Ferramentas internas | §11.4 |
-| **Comprador de votos** | Capturar a Câmara | Contas compradas ou alugadas | §4; §7.5 (Cartório); módulo 09 |
+| **Comprador de votos** | Capturar o Conselho | Contas compradas ou alugadas | §4; §7.5 (Bazar de Personagens); módulo 09 |
 
 Manipulação de preço e cartel ficam no módulo 07 (anti-manipulação). Este módulo trata só do que depende de identidade, de contas ligadas e de fluxo entre contas.
 
@@ -76,7 +76,7 @@ A fórmula que todo o módulo tenta tornar negativa:
 **Exemplo calculado [H]** (valores provisórios, a reconciliar com os módulos 07 e 11):
 
 - T = 3.000 de ouro por dia;
-- Alvará a R$ 19,90 (meio da faixa da bíblia, §6.7), cotado a 60.000 de ouro no Câmbio: cerca de R$ 0,33 por mil de ouro no canal oficial;
+- Coins a R$ 19,90 (meio da faixa da bíblia, §6.7), cotado a 60.000 de ouro no Câmbio: cerca de R$ 0,33 por mil de ouro no canal oficial;
 - mercado cinza a 50% do oficial: P ≈ R$ 0,17 por mil de ouro. [F] Referência: o ouro clandestino do OSRS sai a cerca de 45% do preço do Bond ([F03, §6.3](../01-pesquisa/fichas/F03-runescape-e-osrs.md));
 - D = 35 dias (a vida média de uma conta de fazenda no cenário base da detecção, §12.1); perdas = 3% da Troca + 30% do intermediário = 33%.
 
@@ -93,15 +93,15 @@ Conta: 3 (mil de ouro) × R$ 0,17 × 35 dias × 0,67 ≈ **R$ 12 por conta, ante
 
 ### 2.3 O paradoxo do idle: onde o bot ainda ganha
 
-[H] No núcleo idle, o bot perde a razão de existir: o jogo já joga sozinho ([07, §5.3](../01-pesquisa/07-tecnica-idles-online.md)). [F] Ele vence onde o tempo passivo vira valor negociável e conta extra não custa nada ([G05, §12](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)). No Arraial, sobram estes lugares:
+[H] No núcleo idle, o bot perde a razão de existir: o jogo já joga sozinho ([07, §5.3](../01-pesquisa/07-tecnica-idles-online.md)). [F] Ele vence onde o tempo passivo vira valor negociável e conta extra não custa nada ([G05, §12](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)). Na Cidade, sobram estes lugares:
 
 | Lugar | Ganho do bot sobre um humano bem jogado [H] | Prioridade |
 |---|---|---|
 | Multiplicar contas | Proporcional ao número de contas | Máxima |
-| Mercado (Feira, Bolsa, Pregão) | Velocidade: pegar o barato primeiro, cobrir preço sem parar | Alta, resolvida no desenho do 07 |
-| Câmara | Votos de contas compradas ou alugadas | Alta em período de eleição |
+| Mercado (Feira, Bolsa, Leilão) | Velocidade: pegar o barato primeiro, cobrir preço sem parar | Alta, resolvida no desenho do 07 |
+| Conselho | Votos de contas compradas ou alugadas | Alta em período de eleição |
 | Janelas ativas (obra-prima, eventos) | Jogar todas as sessões, sempre no ótimo | Média |
-| Cartório | Nivelar contas por automação para vender | Média |
+| Bazar de Personagens | Nivelar contas por automação para vender | Média |
 | Reposição da Fila | Repor sem atraso, 24 h por dia | Baixa: a Fila planejada já cobre a ausência |
 | Raspagem de dados | Informação de preço antes dos outros | Baixa: API oficial de leitura (§10) |
 
@@ -109,7 +109,7 @@ Conta: 3 (mil de ouro) × R$ 0,17 × 35 dias × 0,67 ≈ **R$ 12 por conta, ante
 
 ### 3.1 Por que existem neste jogo
 
-[H] Três fatos juntos: (1) ouro e Alvará são transferíveis livremente; (2) o Câmbio dá ao ouro um preço oficial em reais; (3) o RMT informal não é proibido e, portanto, tem compradores à vista. [F] O padrão é conhecido: no Lost Ark, com câmbio oficial de cristais por ouro, mais de 1 milhão de contas foram banidas por bots em dois dias de março de 2022, e a ficha lê o bot como "a sombra do câmbio oficial" ([F09, §13](../01-pesquisa/fichas/F09-throne-and-liberty-e-lost-ark.md)). [F] O canal oficial encolhe o mercado negro, mas não o elimina: um mês depois dos Bonds, a riqueza ligada a gold farming no RuneScape tinha caído mais de 80%, e mesmo assim a guerra contra bots continuou ([04b, §4.6](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
+[H] Três fatos juntos: (1) ouro e Coins são transferíveis livremente; (2) o Câmbio dá ao ouro um preço oficial em reais; (3) o RMT informal não é proibido e, portanto, tem compradores à vista. [F] O padrão é conhecido: no Lost Ark, com câmbio oficial de cristais por ouro, mais de 1 milhão de contas foram banidas por bots em dois dias de março de 2022, e a ficha lê o bot como "a sombra do câmbio oficial" ([F09, §13](../01-pesquisa/fichas/F09-throne-and-liberty-e-lost-ark.md)). [F] O canal oficial encolhe o mercado negro, mas não o elimina: um mês depois dos Bonds, a riqueza ligada a gold farming no RuneScape tinha caído mais de 80%, e mesmo assim a guerra contra bots continuou ([04b, §4.6](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
 
 Os lugares em que o bot ainda importa estão na tabela da seção 2.3. As decisões abaixo atacam cada um.
 
@@ -121,7 +121,7 @@ Os lugares em que o bot ainda importa estão na tabela da seção 2.3. As decis�
 2. A produção acima do teto fica presa à conta ou vai para as Obras (vira Mérito), como já prevê a bíblia (§6.6).
 3. O teto **não cresce** com nada que um bot automatize com facilidade (horas online, número de ações, volume negociado). Se crescer, cresce com marcos de progresso que exigem decisões.
 4. Perto do teto, o rendimento cai aos poucos, em vez de um corte seco (o 07 define a curva). O jogador vê o próprio contador: "hoje você criou 2.100 de 3.000 de ouro negociável".
-5. O teto é igual para quem paga e para quem não paga: o Alvará compra conforto, nunca renda (bíblia, §5).
+5. O teto é igual para quem paga e para quem não paga: o Coin compra conforto, nunca renda (bíblia, §5).
 
 - **Inspira-se na** "prova de jogo" da ficha [G05, §13](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md) e no limite de drops por janela da Steam; **diferencia-se de** Banana e Bongo Cat, em que o tempo de cliente aberto virava item vendável.
 - **Resolve** a fazenda que multiplica contas para multiplicar emissão: cada conta extra rende no máximo T.
@@ -153,7 +153,7 @@ Os lugares em que o bot ainda importa estão na tabela da seção 2.3. As decis�
 - garantia de 100% em toda ordem de compra e todo lance;
 - **janela de vitrine na Feira:** um anúncio com preço abaixo de 80% do valor de referência fica visível por 2 minutos antes de poder ser comprado; quem pedir a compra nesse intervalo entra num sorteio no fim da janela. Acima disso, a compra é imediata. [F] O Black Desert sorteia o comprador entre pré-ordens de mesmo preço, e o Idle Clans pede confirmação para vender 20% abaixo da média de 24 h ([04b, §2.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md));
 - alerta para quem vende muito abaixo da referência ("seu preço está 35% abaixo do valor de referência; confirmar?");
-- lance máximo automático e prorrogação no Pregão, para que o lance de último segundo não valha nada.
+- lance máximo automático e prorrogação no Leilão, para que o lance de último segundo não valha nada.
 
 - **Inspira-se em** EVE (degrau de 4 dígitos, 2020), Black Desert (sorteio) e IdleMMO (prorrogação de 30 min) ([04b, §2.2 e §1.4](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
 - **Resolve** o sniping e a guerra de 0,01, os dois lugares em que o bot de mercado vence.
@@ -213,7 +213,7 @@ Regras gerais [H]:
 - **O banimento é da pessoa,** não só da conta: o pseudônimo de pessoa (§4.2) fica impedido de abrir conta nova pelo prazo da sanção. [F] O New World desligou o compartilhamento familiar do Steam citando, entre outras coisas, contas que burlavam banimentos ([G04, §6](../01-pesquisa/fichas/G04-new-world.md)).
 - **O valor confiscado é destruído,** nunca revendido nem tratado como receita ([04b, §3.10](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). Para a simulação, é um dreno de fiscalização.
 - **O valor de origem ilícita é removido de onde estiver,** pela regra de contaminação (§5.3): quem o recebeu por Troca sem contrapartida perde o que recebeu, inclusive quem pagou por ele em reais fora do jogo. Quem vendeu um bem ao infrator a preço de mercado fica com o que recebeu. Regra publicada antes do lançamento: **quem compra por fora compra o risco.** **Validar com advogado** a remoção de valor de quem pagou de boa-fé fora do jogo (CDC, art. 51, sobre cláusulas que imponham desvantagem exagerada; [05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md)).
-- **Valores pequenos não movem a máquina:** abaixo de um limite (ponto de partida: 0,2 Alvará de valor de referência), o caso é registrado e só vira ação se fizer parte de uma rede.
+- **Valores pequenos não movem a máquina:** abaixo de um limite (ponto de partida: 0,2 Coins de valor de referência), o caso é registrado e só vira ação se fizer parte de uma rede.
 
 - **Inspira-se nos** confiscos do Milky Way Idle (2 a 3 vezes o ganho) e do New World (mais de 80% do valor duplicado removido na primeira leva) ([04b, §3.9–3.10](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)); **diferencia-se de** banimentos de comprador por compra fora do canal oficial, porque aqui o RMT informal não é infração.
 - **Resolve** o lucro do abuso: o valor some, e a pessoa não volta com outra conta.
@@ -230,7 +230,7 @@ Regras gerais [H]:
 
 - **Interdependência de ofícios:** com dois ofícios mestres por personagem, três contas dão seis ofícios a uma pessoa, e o pilar "ninguém faz tudo" vira opcional.
 - **Teto de emissão:** cada conta extra é mais um teto diário.
-- **Câmara:** uma pessoa, um voto; cada conta extra é mais um voto.
+- **Conselho:** uma pessoa, um voto; cada conta extra é mais um voto.
 - **Mérito e Encomendas:** alts que entregam para a mesma guilda inflam notas e prioridades.
 
 - **Inspira-se no** Código de Conduta do IdleMMO, que permite uma conta por pessoa e aponta as cadeias de multicontas como a trapaça principal ([C04, §6](../01-pesquisa/fichas/C04-idlemmo.md)), e na conta-mestre do Idle Clans, criada para aplicar limites de personagens ([07, §5.5](../01-pesquisa/07-tecnica-idles-online.md)); **diferencia-se de** MWI e IdleMMO, que permitem vários personagens por conta.
@@ -244,7 +244,7 @@ Regras gerais [H]:
 
 **Pergunta 1, exigida por lei: "essa pessoa é maior de 18?"**
 
-- [F] O Decreto 12.880/2026 exige verificação de idade eficaz, sem autodeclaração, de quem vende ou intermedeia caixas de recompensa (art. 18), e a nota técnica do MJSP diz que advertência, probabilidades e classificação 18 não substituem a verificação ([05b, §2](../01-pesquisa/05b-rmt-legal-brasil.md)). O Baú do Mascate é comprável com Alvará e tem conteúdo aleatório; logo, a verificação seria exigida mesmo que o jogo não fosse todo 18+.
+- [F] O Decreto 12.880/2026 exige verificação de idade eficaz, sem autodeclaração, de quem vende ou intermedeia caixas de recompensa (art. 18), e a nota técnica do MJSP diz que advertência, probabilidades e classificação 18 não substituem a verificação ([05b, §2](../01-pesquisa/05b-rmt-legal-brasil.md)). O Baú Misterioso é comprável com Coins e tem conteúdo aleatório; logo, a verificação seria exigida mesmo que o jogo não fosse todo 18+.
 - [F] Os dados coletados para verificar a idade de crianças e adolescentes só podem ser usados para essa finalidade, vedado qualquer outro propósito ([Lei 15.211/2025, art. 13](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/L15211.htm)). As imagens de documentos devem ser eliminadas de forma imediata e irreversível (Decreto 12.880/2026, art. 24, §3º, [05b, §5](../01-pesquisa/05b-rmt-legal-brasil.md)).
 - **Saída (cofre A):** "18+: sim", método usado, data. Nada mais.
 
@@ -258,7 +258,7 @@ Regras gerais [H]:
 **Método.**
 
 - [F] As Orientações Preliminares da ANPD sobre aferição de idade (20/3/2026) têm seis eixos: proporcionalidade (com avaliação dupla de riscos, do serviço e do próprio mecanismo), acurácia e robustez, privacidade, inclusão e não discriminação, transparência e auditabilidade, e interoperabilidade. Citam como métodos a verificação documental, a biometria facial e a análise de padrões de uso, e alertam que coletar biometria de todos os usuários de um serviço de risco moderado pode ser desproporcional; a versão definitiva estava prevista para o segundo semestre de 2026 ([L. O. Baptista, 17/4/2026](https://www.baptista.com.br/o-que-o-eca-digital-e-as-orientacoes-preliminares-da-anpd-significam-para-o-seu-negocio/)).
-- [H] **Proposta:** verificação documental com prova de vida (selfie com detecção de vivacidade), feita por fornecedor especializado. A justificativa de proporcionalidade, a registrar no relatório de impacto (LGPD, art. 38): (1) o Baú do Mascate já exige verificação eficaz; (2) o jogo tem valor com preço em reais circulando livremente; (3) a unicidade é a principal barreira contra fraude e bots. **Validar com advogado.**
+- [H] **Proposta:** verificação documental com prova de vida (selfie com detecção de vivacidade), feita por fornecedor especializado. A justificativa de proporcionalidade, a registrar no relatório de impacto (LGPD, art. 38): (1) o Baú Misterioso já exige verificação eficaz; (2) o jogo tem valor com preço em reais circulando livremente; (3) a unicidade é a principal barreira contra fraude e bots. **Validar com advogado.**
 - **Credencial pública (gov.br):** uma credencial que informe só a faixa etária está em discussão no governo, mas não encontrei fonte oficial que confirme um serviço disponível em novembro de 2026 (busquei nas páginas da ANPD e do MJSP e na imprensa). [H] O desenho trata o fornecedor como peça trocável: se a credencial pública existir e permitir unicidade, entra como método preferido, por ser menos invasiva.
 
 **O que o estúdio guarda e o que nunca guarda [H]:**
@@ -291,12 +291,12 @@ Os cofres ficam em bancos separados do banco do jogo, com acesso por dupla aprov
 **AA-9.** [H] A reverificação pede de novo documento e prova de vida ao fornecedor, que confirma "mesmo pseudônimo" sem que o estúdio guarde rosto. Ela acontece por gatilho, nunca por rotina:
 
 1. recuperação de conta (§7.3);
-2. venda e compra no Cartório (os dois lados, §7.5);
+2. venda e compra no Bazar de Personagens (os dois lados, §7.5);
 3. aparelho novo com saída de valor acima do limite e pontuação de risco média;
 4. pontuação alta de conta alugada (padrões de horário e de rede de outro operador);
 5. troca de e-mail e de 2FA no mesmo dia.
 
-Limite: no máximo uma reverificação por gatilho de risco a cada 90 dias, salvo recuperação e Cartório.
+Limite: no máximo uma reverificação por gatilho de risco a cada 90 dias, salvo recuperação e Bazar de Personagens.
 
 - **Inspira-se na** prova de vida dos bancos digitais [H] e na lição do New World de que travas de conta nova são contornáveis por contas "envelhecidas" ([G04, §12](../01-pesquisa/fichas/G04-new-world.md)).
 - **Resolve** a conta alugada: quem emprestou a identidade precisa aparecer de novo, pessoalmente.
@@ -309,7 +309,7 @@ Limite: no máximo uma reverificação por gatilho de risco a cada 90 dias, salv
 
 - Dois adultos na mesma casa jogam, cada um com sua conta verificada. Isso é permitido e esperado.
 - **IP, aparelho e rede nunca punem sozinhos.** [H] Operadoras móveis e redes domésticas compartilham endereços entre muitos clientes ([07, §5.5](../01-pesquisa/07-tecnica-idles-online.md)). [F] O bloqueio de trocas por "mesmo dispositivo/rede" do SimpleMMO teve falsos positivos relatados ([C05, §6](../01-pesquisa/fichas/C05-simplemmo.md)).
-- **Vínculo declarado (opcional):** jogadores podem declarar "mesma casa". Efeito: aparelho e rede compartilhados deixam de pesar na pontuação entre eles; o fluxo de valor entre eles continua contando, com limites maiores; os dois não disputam o mesmo Pregão um contra o outro (a reconciliar com 07).
+- **Vínculo declarado (opcional):** jogadores podem declarar "mesma casa". Efeito: aparelho e rede compartilhados deixam de pesar na pontuação entre eles; o fluxo de valor entre eles continua contando, com limites maiores; os dois não disputam o mesmo Leilão um contra o outro (a reconciliar com 07).
 - **Lan house e aparelho público:** uma sessão de controle por conta ([07, §4.2](../01-pesquisa/07-tecnica-idles-online.md)), botão "sair de todos os aparelhos", aviso para não salvar senha e convite ao 2FA.
 - **Conta compartilhada é proibida:** a conta pertence à pessoa verificada. A necessidade que leva a emprestar a senha (não perder dias de jogo) é atendida pelo offline de 24 h e pela Fila planejada.
 
@@ -337,7 +337,7 @@ Requisitos de processo e de desenho, sem código. Cada um responde a um modo de 
 | 7 | **Testes com pedidos simultâneos** em todo endpoint de valor, inclusive a técnica do "pacote único" | Corrida entre a verificação e a ação | [07, §5.1](../01-pesquisa/07-tecnica-idles-online.md) (PortSwigger: 20 a 30 pedidos com ~1 ms de dispersão) |
 | 8 | **Caminho de exceção testado** como o caminho feliz: estorno, cancelamento, expiração, disjuntor | Estorno que devolve custo nunca cobrado | [G04, §10.2, item 3](../01-pesquisa/fichas/G04-new-world.md) |
 | 9 | **Reconciliação contínua** entre saldos e livro-razão, com alarme a qualquer diferença | Duas fontes da verdade | [07, §2.5 e §5.1](../01-pesquisa/07-tecnica-idles-online.md) |
-| 10 | **Alarmes de criação de valor:** ouro criado por hora por fonte, itens raros por hora, preço do Alvará em 24 h | Dupe que se espalha antes de ser visto | [G07, §5](../01-pesquisa/fichas/G07-economias-que-colapsaram.md) (EQ2 pegou +20% em 24 h) |
+| 10 | **Alarmes de criação de valor:** ouro criado por hora por fonte, itens raros por hora, preço do Coin em 24 h | Dupe que se espalha antes de ser visto | [G07, §5](../01-pesquisa/fichas/G07-economias-que-colapsaram.md) (EQ2 pegou +20% em 24 h) |
 | 11 | **Red team de economia e programa de recompensa por bugs** antes da abertura; teste de carga nos picos | Exploit que vinha do beta | [G04, §10.3](../01-pesquisa/fichas/G04-new-world.md) |
 | 12 | **Texto de jogador sempre escapado** (chat, nomes, anúncios) e política de segurança de conteúdo no cliente | Injeção no chat que, no navegador, rouba a sessão | [G04, §10.2, item 7](../01-pesquisa/fichas/G04-new-world.md) |
 
@@ -350,12 +350,12 @@ Requisitos de processo e de desenho, sem código. Cada um responde a um modo de 
 | Troca | Novas trocas | Trocas já confirmadas liquidam |
 | Bolsa | Novas ordens | Ordens abertas ficam congeladas, sem casar; cancelar é permitido e devolve a garantia |
 | Feira | Novos anúncios e compras | Cancelar anúncio |
-| Pregão | Novos lances e leilões | Leilões em andamento: relógio pausado e prorrogado pelo tempo suspenso |
-| Câmbio | Compra e venda de Alvará por ouro | Consumo do Alvará |
-| Cartório | Novos anúncios e lances | Vendas em andamento pausadas |
-| Baú do Mascate | Compra com Alvará; abertura (disjuntor separado) | Baús guardados |
+| Leilão | Novos lances e leilões | Leilões em andamento: relógio pausado e prorrogado pelo tempo suspenso |
+| Câmbio | Compra e venda de Coins por ouro | Consumo do Coin |
+| Bazar de Personagens | Novos anúncios e lances | Vendas em andamento pausadas |
+| Baú Misterioso | Compra com Coins; abertura (disjuntor separado) | Baús guardados |
 | Por item | Listar e transferir aquele item | Usar o item |
-| Por moeda | Transferir ouro ou Alvará | Gastar com NPC, Obras e consumo |
+| Por moeda | Transferir ouro ou Coins | Gastar com NPC, Obras e consumo |
 | Obras e Encomendas | Entregas | Leitura do progresso |
 | Pagamento (cartão, Pix, separados) | Compras por aquele meio | Os outros meios |
 
@@ -387,7 +387,7 @@ Regras [H]:
 | Pagou um bem acima da banda (anúncio absurdo) | O excesso é tratado como Troca sem contrapartida e removido |
 | Foi consumido (reparo, Obra, taxa) | Baixado como perda registrada; nada a remover |
 
-4. **Quem esbarrou sem explorar:** sem punição; o valor é removido. **Quem reportou:** recompensa do programa de bugs, paga em cosmético ou item preso à conta, nunca em ouro ou Alvará.
+4. **Quem esbarrou sem explorar:** sem punição; o valor é removido. **Quem reportou:** recompensa do programa de bugs, paga em cosmético ou item preso à conta, nunca em ouro ou Coins.
 5. **Quem explorou de propósito:** banimento e remoção total.
 6. **Publicar:** o que aconteceu, quanto valor foi removido, quantas contas foram punidas.
 
@@ -408,11 +408,11 @@ Regras [H]:
 
 [H] Nenhuma carência cobre 80 a 120 dias sem matar o produto. A carência barra a fraude rápida; o resto fica com a reversão pelo livro-razão ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)).
 
-### 6.2 Carência do Alvará por meio de pagamento
+### 6.2 Carência do Coin por meio de pagamento
 
 **AA-13.** Salvaguarda S2 do checkpoint 1, aceita como padrão de desenho ([PROGRESSO](../PROGRESSO.md)). [H]
 
-| Situação | Carência antes da primeira transferência (Troca, Câmbio, Cartório) |
+| Situação | Carência antes da primeira transferência (Troca, Câmbio, Bazar de Personagens) |
 |---|---|
 | Primeira compra da conta, por qualquer meio | 7 dias |
 | Pix, conta com histórico limpo | 72 horas |
@@ -421,15 +421,15 @@ Regras [H]:
 
 Regras:
 
-- **A carência vale para transferir, não para usar.** O Alvará em carência pode ser consumido na hora (30 dias de conveniência) ou gasto em cosméticos.
-- **A carência viaja com o valor.** O Baú do Mascate comprado com Alvará em carência, e tudo o que sair dele, herdam a carência restante. O Cartório só aceita Alvará fora da carência.
-- **Uma carência só.** Depois de vencida, o Alvará circula livremente, como decidiu o Gabriel; quem o recebe numa Troca não começa carência nova (a retenção em aparelho novo, §7.2, é outra regra).
+- **A carência vale para transferir, não para usar.** O Coin em carência pode ser consumido na hora (30 dias de conveniência) ou gasto em cosméticos.
+- **A carência viaja com o valor.** O Baú Misterioso comprado com Coins em carência, e tudo o que sair dele, herdam a carência restante. O Bazar de Personagens só aceita Coins fora da carência.
+- **Uma carência só.** Depois de vencida, o Coin circula livremente, como decidiu o Gabriel; quem o recebe numa Troca não começa carência nova (a retenção em aparelho novo, §7.2, é outra regra).
 - **A interface mostra a contagem** ("transferível em 2 dias e 4 h") na compra, no inventário e na Troca.
-- **Coincidência útil:** os 7 dias da primeira compra e do cartão coincidem com o prazo de arrependimento do CDC (art. 49). Enquanto o Alvará não sai da conta, o reembolso é simples. Alvará transferido ou consumido conta como usado, sem reembolso: **validar com advogado** ([05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md)).
+- **Coincidência útil:** os 7 dias da primeira compra e do cartão coincidem com o prazo de arrependimento do CDC (art. 49). Enquanto o Coin não sai da conta, o reembolso é simples. O Coin transferido ou consumido conta como usado, sem reembolso: **validar com advogado** ([05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md)).
 
 - **Inspira-se nas** Tibia Coins, que nascem transferíveis ou não conforme o meio de pagamento ([F04, §6.1](../01-pesquisa/fichas/F04-tibia.md)), na trava de até 72 h do MWI e na retenção de 7 dias da Steam ([05d, §5.4](../01-pesquisa/05d-rmt-recomendacao.md)).
-- **Resolve** o golpe rápido: cartão roubado → Alvará → ouro → venda por Pix antes de a vítima perceber.
-- **Incentiva** o pagante a consumir o Alvará ou a esperar alguns dias para vendê-lo.
+- **Resolve** o golpe rápido: cartão roubado → Coins → ouro → venda por Pix antes de a vítima perceber.
+- **Incentiva** o pagante a consumir o Coin ou a esperar alguns dias para vendê-lo.
 - **Risco:** atrito para o pagante honesto que compra para vender na hora. Mitigação: Pix com 72 h; contagem visível; nenhuma carência para consumo.
 
 ### 6.3 Reversão pelo livro-razão
@@ -438,8 +438,8 @@ Regras:
 
 | Caso | Resposta |
 |---|---|
-| Contestação forçada pelo banco (chargeback ou MED) | A conta fica **suspensa até regularizar**: o jogador refaz a doação do valor contestado e a conta volta. Os Alvarás contestados que ainda estão na conta são revogados. |
-| Alvará (ou derivado) já transferido a um terceiro de boa-fé, depois da carência | O terceiro fica com ele; a regularização do contestante cobre a perda. |
+| Contestação forçada pelo banco (chargeback ou MED) | A conta fica **suspensa até regularizar**: o jogador refaz a doação do valor contestado e a conta volta. Os Coins contestados que ainda estão na conta são revogados. |
+| Coins (ou derivado) já transferido a um terceiro de boa-fé, depois da carência | O terceiro fica com ele; a regularização do contestante cobre a perda. |
 | Fraude confirmada (cartão de terceiro, conta de golpe) | Banimento da pessoa após revisão; confisco do ouro rastreável. |
 | Contestação por engano, depois desfeita | Suspensão encerrada, tudo restaurado. |
 
@@ -478,7 +478,7 @@ Regras:
 **AA-16.** [H]
 
 - **Segundo fator (2FA):** chave de acesso do aparelho (passkey) ou app autenticador; SMS só como último recurso, por causa da troca fraudulenta de chip.
-- **Exigido para:** vender Alvará no Câmbio; Troca de saída acima de 1 Alvará de valor de referência; anunciar ou comprar no Cartório; mudar e-mail, senha ou 2FA; criar chave de API de nível pessoal.
+- **Exigido para:** vender Coins no Câmbio; Troca de saída acima de 1 Coin de valor de referência; anunciar ou comprar no Bazar de Personagens; mudar e-mail, senha ou 2FA; criar chave de API de nível pessoal.
 - **Alerta de login** em aparelho novo, por e-mail e no jogo, com o botão "não fui eu", que encerra todas as sessões e congela as saídas de valor.
 - **Uma sessão de controle por conta:** o segundo aparelho vê tudo, mas, para agir, assume o controle, e o primeiro é avisado ([07, §4.2](../01-pesquisa/07-tecnica-idles-online.md)).
 
@@ -491,7 +491,7 @@ Regras:
 
 **AA-17.** [H]
 
-- **Aparelho novo:** saídas sem contrapartida (Troca unilateral, anúncio a preço fora da banda) acima de 1 Alvará de valor ficam retidas por 72 horas; por 24 horas se o 2FA estiver ativo há 7 dias ou mais. O dono pode liberar antes a partir de um aparelho confiável, ou cancelar.
+- **Aparelho novo:** saídas sem contrapartida (Troca unilateral, anúncio a preço fora da banda) acima de 1 Coin de valor ficam retidas por 72 horas; por 24 horas se o 2FA estiver ativo há 7 dias ou mais. O dono pode liberar antes a partir de um aparelho confiável, ou cancelar.
 - **Valor recebido de conta com pontuação alta** fica 24 horas retido antes de poder sair de novo, o que quebra a cadeia rápida ladrão → mula → comprador.
 - **Nada disso** impede jogar, comprar, consumir ou receber.
 
@@ -500,19 +500,19 @@ Regras:
 - **Inspira-se nas** retenções de troca da Steam (até 3 dias; nenhuma com autenticador há 7 dias).
 - **Resolve** o esvaziamento da conta nas primeiras horas depois do roubo, quando a vítima ainda não percebeu.
 - **Incentiva** o 2FA e o uso de aparelhos de confiança.
-- **Risco:** quem troca de celular espera 72 horas para negociar alto. Mitigação: liberação por aparelho confiável e por e-mail; retenção só acima de 1 Alvará de valor.
+- **Risco:** quem troca de celular espera 72 horas para negociar alto. Mitigação: liberação por aparelho confiável e por e-mail; retenção só acima de 1 Coin de valor.
 
 ### 7.3 Recuperação e reversão de roubo
 
 **AA-18.** [H]
 
-- **A recuperação sempre volta para a pessoa verificada** (o pseudônimo da conta). Consequência: comprar conta fora do Cartório é inseguro por construção, porque o dono original pode recuperá-la a qualquer momento. [F] No Tibia, antes do Char Bazaar, o sistema de recuperação de conta era acionado com frequência por compradores de contas ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)).
+- **A recuperação sempre volta para a pessoa verificada** (o pseudônimo da conta). Consequência: comprar conta fora do Bazar de Personagens é inseguro por construção, porque o dono original pode recuperá-la a qualquer momento. [F] No Tibia, antes do Char Bazaar, o sistema de recuperação de conta era acionado com frequência por compradores de contas ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)).
 - **Passos:** reverificação pelo fornecedor; aviso em todos os canais e 72 horas antes de trocar e-mail e 2FA, salvo reverificação concluída; encerramento de todas as sessões.
 - **Reversão na janela do roubo** (do primeiro sinal até a recuperação):
   - Troca sem contrapartida: removida de quem recebeu e devolvida à vítima;
   - venda a preço fora da banda de referência: desfeita;
   - venda a preço justo a um terceiro: mantida (o ouro da venda está na conta da vítima, salvo se saiu);
-  - Alvará consumido pelo ladrão: não volta.
+  - Coins consumidos pelo ladrão: não volta.
 - **Restituição:** o estúdio devolve o que recuperou. Só cria valor novo para compensar (lançamento de fonte "restituição", com teto e registro) se o roubo veio de falha do estúdio, como uma vulnerabilidade ou um vazamento.
 - **O ladrão:** banimento da pessoa e entrega de dados à autoridade mediante ordem judicial (Marco Civil, art. 15, [05b, §5](../01-pesquisa/05b-rmt-legal-brasil.md)).
 
@@ -525,10 +525,10 @@ Regras:
 
 **AA-19.** [H]
 
-- **Na Troca:** resumo em linguagem simples com o valor de referência de cada lado ("Você dá: 120.000 de ouro, cerca de 2 Alvarás. Você recebe: nada."); alerta de Troca unilateral; aviso de primeira Troca com aquela pessoa; qualquer mudança zera as duas confirmações e impõe 5 segundos de espera. A Troca é atômica: ou os dois lados acontecem, ou nenhum.
-- **No chat:** links escapados e com aviso; domínios conhecidos de phishing bloqueados; nomes reservados ("Suporte", "Mascate", "Câmara"); selo de equipe só pelo sistema; aviso fixo de que o estúdio nunca pede senha nem código.
+- **Na Troca:** resumo em linguagem simples com o valor de referência de cada lado ("Você dá: 120.000 de ouro, cerca de 2 Coins. Você recebe: nada."); alerta de Troca unilateral; aviso de primeira Troca com aquela pessoa; qualquer mudança zera as duas confirmações e impõe 5 segundos de espera. A Troca é atômica: ou os dois lados acontecem, ou nenhum.
+- **No chat:** links escapados e com aviso; domínios conhecidos de phishing bloqueados; nomes reservados ("Suporte", "Bazar", "Conselho"); selo de equipe só pelo sistema; aviso fixo de que o estúdio nunca pede senha nem código.
 - **Sobre o RMT informal:** aviso fixo na Troca e no perfil ("negócio em dinheiro fora do jogo não tem garantia nem suporte"); na Troca unilateral grande, um lembrete de golpes com Pix e MED.
-- **Sobre contas:** "conta comprada fora do Cartório pode ser recuperada pelo dono original a qualquer momento".
+- **Sobre contas:** "conta comprada fora do Bazar de Personagens pode ser recuperada pelo dono original a qualquer momento".
 - **Anúncios de venda por dinheiro real nos canais oficiais** (chat global, fórum, servidor oficial no Discord) são tratados como spam e removidos. Isso não proíbe o RMT informal; só não o hospedamos (§8).
 
 - **Inspira-se na** confirmação de desvio de preço do Idle Clans ([04b, §2.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) e no checklist de chat escapado do New World ([G04, §13](../01-pesquisa/fichas/G04-new-world.md)).
@@ -536,25 +536,25 @@ Regras:
 - **Incentiva** conferir antes de confirmar.
 - **Risco:** excesso de avisos vira ruído e ninguém lê. Mitigação: avisos só nos casos de risco (Troca unilateral, primeira Troca, valor alto); o resto é discreto. O módulo 14 desenha as telas.
 
-### 7.5 Cartório: transferência segura de contas
+### 7.5 Bazar de Personagens: transferência segura de contas
 
-**AA-20.** O Cartório existe desde o lançamento, pago em Alvará, com taxa de 10% em Alvará destruída (bíblia, §6.6). Este módulo define as regras de segurança [H]:
+**AA-20.** O Bazar de Personagens existe desde o lançamento, pago em Coins, com taxa de 10% em Coins destruída (bíblia, §6.6). Este módulo define as regras de segurança [H]:
 
 | Etapa | Regra | Por quê |
 |---|---|---|
-| **Anunciar** | Conta com 30+ dias, 60+ h de jogo ativo verificado, 2FA há 7+ dias, sem dívida, sem investigação, sem Alvará em carência e com pontuação de risco baixa | Barra conta nivelada por bot e conta roubada |
-| **Preparar** | Sai de cargo na Câmara (vereador não vende durante o mandato); sai da guilda; ordens abertas canceladas com devolução da garantia; Encomendas em andamento entregues ou abandonadas | A conta muda de dono sem levar compromissos coletivos. [F] O Tibia exige personagem fora de guilda e sem casa ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)) |
-| **Vender** | Pago em Alvará fora da carência; reserva de 10% do lance, perdida se o vencedor não pagar; sem lance da própria pessoa nem de contas com vínculo declarado | [F] Reserva de 10% do Char Bazaar ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)) |
+| **Anunciar** | Conta com 30+ dias, 60+ h de jogo ativo verificado, 2FA há 7+ dias, sem dívida, sem investigação, sem Coins em carência e com pontuação de risco baixa | Barra conta nivelada por bot e conta roubada |
+| **Preparar** | Sai de cargo no Conselho (conselheiro não vende durante o mandato); sai da guilda; ordens abertas canceladas com devolução da garantia; Encomendas em andamento entregues ou abandonadas | A conta muda de dono sem levar compromissos coletivos. [F] O Tibia exige personagem fora de guilda e sem casa ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)) |
+| **Vender** | Pago em Coins fora da carência; reserva de 10% do lance, perdida se o vencedor não pagar; sem lance da própria pessoa nem de contas com vínculo declarado | [F] Reserva de 10% do Char Bazaar ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)) |
 | **Transferir** | Na liquidação, o vendedor perde o acesso na hora; sessões encerradas; senha e 2FA zerados; o comprador passa pela verificação, e o pseudônimo da conta passa a ser o dele; o vendedor perde o direito de recuperação | Fecha o golpe da recuperação |
-| **Depois** | Comprador: 30 dias sem votar nem se candidatar na Câmara; 90 dias sem revender. O perfil mostra "transferida pelo Cartório em mês/ano" | Captura da Câmara; revenda especulativa |
+| **Depois** | Comprador: 30 dias sem votar nem se candidatar no Conselho; 90 dias sem revender. O perfil mostra "transferida pelo Bazar de Personagens em mês/ano" | Captura do Conselho; revenda especulativa |
 | **Limites** | Uma venda por pessoa a cada 90 dias | Fábrica de contas |
 
-**Uma conta ativa por pessoa, também no Cartório.** Quem já tem conta e compra outra põe a antiga em **aposentadoria**: arquivada, sem jogar nem negociar, reativável trocando de lugar com a ativa no máximo uma vez a cada 90 dias. [H] As duas contas nunca ficam ativas ao mesmo tempo, então não há Troca entre elas.
+**Uma conta ativa por pessoa, também no Bazar de Personagens.** Quem já tem conta e compra outra põe a antiga em **aposentadoria**: arquivada, sem jogar nem negociar, reativável trocando de lugar com a ativa no máximo uma vez a cada 90 dias. [H] As duas contas nunca ficam ativas ao mesmo tempo, então não há Troca entre elas.
 
 - **Inspira-se no** Char Bazaar do Tibia, que tirou do mercado negro a venda de contas e o golpe da recuperação e venceu pela segurança, não pelo preço ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)); e nas regras sugeridas no [05d, §4.2](../01-pesquisa/05d-rmt-recomendacao.md) (horas de jogo ativo, carência para competir).
 - **Resolve** a venda de contas sem garantia e a recuperação usada como golpe.
 - **Incentiva** investir no personagem como patrimônio e vender pelo canal seguro ao sair.
-- **Risco:** o Cartório vende tempo acumulado e distorce rankings e a Câmara. Mitigação: horas de jogo ativo como requisito, carência de voto, perfil com histórico de transferência; os rankings de prestígio podem marcar contas transferidas (a reconciliar com 09).
+- **Risco:** o Bazar de Personagens vende tempo acumulado e distorce rankings e o Conselho. Mitigação: horas de jogo ativo como requisito, carência de voto, perfil com histórico de transferência; os rankings de prestígio podem marcar contas transferidas (a reconciliar com 09).
 
 ## 8. RMT informal
 
@@ -562,20 +562,20 @@ Regras:
 
 **AA-21.** Decisão do Gabriel: o RMT informal não é intermediado pelo estúdio e não é proibido ([PROGRESSO](../PROGRESSO.md)). [H] Texto-base da política, para a página pública e os termos de uso:
 
-> **Negócios com dinheiro real fora do jogo.** O Alvará é a forma oficial de pôr dinheiro no jogo. Fora dele, jogadores podem combinar entre si a venda de ouro, itens ou Alvará por dinheiro. O estúdio não proíbe, mas também não participa: não intermediamos, não garantimos, não damos suporte, não arbitramos disputas e não devolvemos perdas de negócios feitos fora do jogo.
-> Contas só mudam de dono pelo Cartório.
+> **Negócios com dinheiro real fora do jogo.** O Coin é a forma oficial de pôr dinheiro no jogo. Fora dele, jogadores podem combinar entre si a venda de ouro, itens ou Coins por dinheiro. O estúdio não proíbe, mas também não participa: não intermediamos, não garantimos, não damos suporte, não arbitramos disputas e não devolvemos perdas de negócios feitos fora do jogo.
+> Contas só mudam de dono pelo Bazar de Personagens.
 > São proibidos: bots e scripts que jogam por você, mais de uma conta ativa por pessoa, conta compartilhada ou alugada, roubo de contas, golpes, fraude de pagamento e exploração de falhas. O valor que nasce dessas práticas é removido de onde estiver, inclusive de quem o comprou fora do jogo. Quem compra por fora compra o risco.
 
 **Termos de uso: cláusulas mínimas [H]** (todas a **validar com advogado**, em especial diante do CDC, art. 51, sobre cláusulas abusivas, e do fato de o jogo vender itens por reais, que fragiliza cláusulas de "itens sem valor" ([05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md))):
 
 1. o estúdio não é parte de negócios entre jogadores feitos fora do jogo;
-2. uma pessoa, uma conta ativa; conta pessoal e intransferível, salvo pelo Cartório;
+2. uma pessoa, uma conta ativa; conta pessoal e intransferível, salvo pelo Bazar de Personagens;
 3. proibição de automação de escrita, de multiconta e de conta alugada, com as sanções da §3.5;
 4. remoção de valor de origem ilícita onde estiver (§5.3), com aviso de que isso alcança quem comprou por fora;
 5. suspensão até regularizar em caso de contestação forçada pelo banco (§6.3);
 6. cooperação com autoridades mediante ordem judicial.
 
-**Risco jurídico assumido, sem reabrir a decisão.** [H] RMT informal aberto, Baú do Mascate comprável com Alvará e conteúdo negociável juntam pagamento, sorte e prêmio com valor em dinheiro, a configuração que os estudos jurídicos marcaram como luz vermelha ([05b, §3](../01-pesquisa/05b-rmt-legal-brasil.md)). [F] No processo de Nova York contra a Valve, a tolerância a mercados de terceiros é parte da acusação de jogo ilegal ([05c, §3.4](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)). O que este módulo faz para não piorar o quadro: não promover, não integrar, não lucrar com o RMT informal e combater a origem ilícita do valor.
+**Risco jurídico assumido, sem reabrir a decisão.** [H] RMT informal aberto, Baú Misterioso comprável com Coins e conteúdo negociável juntam pagamento, sorte e prêmio com valor em dinheiro, a configuração que os estudos jurídicos marcaram como luz vermelha ([05b, §3](../01-pesquisa/05b-rmt-legal-brasil.md)). [F] No processo de Nova York contra a Valve, a tolerância a mercados de terceiros é parte da acusação de jogo ilegal ([05c, §3.4](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)). O que este módulo faz para não piorar o quadro: não promover, não integrar, não lucrar com o RMT informal e combater a origem ilícita do valor.
 
 ### 8.2 Nenhuma integração com sites de RMT
 
@@ -590,7 +590,7 @@ Regras:
 - **Inspira-se na** política contra RMT ilegal do [05d, §5.7](../01-pesquisa/05d-rmt-recomendacao.md), adaptada: lá se propunha proibir o RMT informal; aqui ele não é proibido, mas também não é apoiado.
 - **Resolve** a confusão entre "o estúdio tolera" e "o estúdio participa".
 - **Incentiva** o Câmbio, o canal oficial e seguro.
-- **Risco:** jogadores leem a falta de suporte como descaso. Mitigação: a política explica o porquê e aponta o Câmbio e o Cartório como alternativas seguras.
+- **Risco:** jogadores leem a falta de suporte como descaso. Mitigação: a política explica o porquê e aponta o Câmbio e o Bazar de Personagens como alternativas seguras.
 
 ### 8.3 Por que não arbitrar nem oferecer garantia
 
@@ -601,7 +601,7 @@ Regras:
 **AA-22.** [H]
 
 - **Coleta:** semanal, em páginas públicas de sites de venda de ouro e de contas (por exemplo, GGMAX e PlayerAuctions, citados no [05d, §5.7](../01-pesquisa/05d-rmt-recomendacao.md)) e em grupos públicos. Registra-se o preço anunciado por milhão de ouro, em reais.
-- **Índice cinza:** mediana semanal desse preço, comparada com o preço oficial (cotação do Alvará no Câmbio × preço do Alvará em reais).
+- **Índice cinza:** mediana semanal desse preço, comparada com o preço oficial (cotação do Coin no Câmbio × preço do Coin em reais).
 - **Uso:**
   - **saúde do canal oficial:** razão cinza/oficial com meta de 0,7 ou mais (a simulação usa 0,5 por prudência, §12.1). [F] No OSRS, o ouro clandestino sai a cerca de 45% do preço do Bond ([F03, §6.3](../01-pesquisa/fichas/F03-runescape-e-osrs.md)); [H] uma razão assim indica um canal oficial que perde em preço ([05d, §6](../01-pesquisa/05d-rmt-recomendacao.md));
   - **alarme de oferta ilícita:** queda de mais de 20% numa semana sugere surto de bots, dupe ou fraude, e dispara uma varredura;
@@ -618,7 +618,7 @@ Regras:
 
 ### 9.1 O circuito
 
-[F] O circuito documentado é sempre o mesmo: dinheiro sujo ou cartão roubado → bem digital transferível → venda a um terceiro de boa-fé → dinheiro "limpo" para o criminoso e chargeback para o estúdio. Foi o caso das chaves do CS:GO (2019) e dos V-Bucks do Fortnite ([05c, §5.4](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)). [H] No Arraial: Alvará → Câmbio → ouro → Troca → Pix.
+[F] O circuito documentado é sempre o mesmo: dinheiro sujo ou cartão roubado → bem digital transferível → venda a um terceiro de boa-fé → dinheiro "limpo" para o criminoso e chargeback para o estúdio. Foi o caso das chaves do CS:GO (2019) e dos V-Bucks do Fortnite ([05c, §5.4](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)). [H] Na Cidade: Coins → Câmbio → ouro → Troca → Pix.
 
 **Posição do estúdio.** [H] Sem saque e sem transferência de reais entre usuários, o estúdio provavelmente não é pessoa obrigada pela Lei 9.613 ([05b, §8](../01-pesquisa/05b-rmt-legal-brasil.md)), mas herda as exigências de PLD dos parceiros de pagamento. **Validar com advogado.** Defesas:
 
@@ -657,20 +657,20 @@ Regras:
 
 [H] Parte da AA-23:
 
-- **Conta nova** (menos de 14 dias ou menos de 20 h de jogo ativo): saída sem contrapartida de até 2 × T por dia (6.000 de ouro com T = 3.000). O Alvará comprado por ela já está em carência de primeira compra (§6.2).
-- **Qualquer conta:** VSC de saída acima de 10 Alvarás de valor de referência em 7 dias entra em revisão assíncrona. A Troca acontece; só há retenção se a pontuação de risco já for média ou alta.
-- **Câmbio:** limites e microestrutura são do módulo 07. Este módulo pede só que Alvará em carência não entre e que contas com dívida não vendam.
-- **Limites em Alvarás de valor**, não em ouro: o IPA publica o preço do Alvará em ouro, e o limite acompanha a inflação sozinho.
+- **Conta nova** (menos de 14 dias ou menos de 20 h de jogo ativo): saída sem contrapartida de até 2 × T por dia (6.000 de ouro com T = 3.000). O Coin comprado por ela já está em carência de primeira compra (§6.2).
+- **Qualquer conta:** VSC de saída acima de 10 Coins de valor de referência em 7 dias entra em revisão assíncrona. A Troca acontece; só há retenção se a pontuação de risco já for média ou alta.
+- **Câmbio:** limites e microestrutura são do módulo 07. Este módulo pede só que Coins em carência não entre e que contas com dívida não vendam.
+- **Limites em Coins de valor**, não em ouro: o IPC publica o preço do Coin em ouro, e o limite acompanha a inflação sozinho.
 
 ### 9.4 Sinais de alerta
 
 [H] Para o painel de antifraude:
 
 - contas novas que recebem muito e repassam em horas;
-- Alvará vendido no Câmbio no primeiro minuto após o fim da carência, repetidamente, com cartões diferentes;
+- Coins vendidos no Câmbio no primeiro minuto após o fim da carência, repetidamente, com cartões diferentes;
 - vários cartões ou contas Pix pagadoras numa mesma conta;
-- Pregão ou Feira com preços fora da banda entre contas com fluxo prévio;
-- Cartório usado como saída repetida de valor;
+- Leilão ou Feira com preços fora da banda entre contas com fluxo prévio;
+- Bazar de Personagens usado como saída repetida de valor;
 - uma conta que concentra de muitas e distribui para muitas (perfil Banco);
 - picos de Troca unilateral logo depois de ondas de banimento (a rede se reorganizando).
 
@@ -682,7 +682,7 @@ Regras:
 
 | Nível | O que lê | Quem cria | Limite |
 |---|---|---|---|
-| Pública | Bolsa e Feira agregadas com 15 min de atraso; histórico de preços; IPA; perfis públicos; rankings; andamento das Obras e dos Cercos | Qualquer pessoa, com chave para controle de uso | 60 pedidos por minuto por chave |
+| Pública | Bolsa e Feira agregadas com 15 min de atraso; histórico de preços; IPC; perfis públicos; rankings; andamento das Obras e dos Cercos | Qualquer pessoa, com chave para controle de uso | 60 pedidos por minuto por chave |
 | Pessoal | O próprio inventário, as Filas, as ordens e o histórico de vendas | O jogador, com 2FA | 60 pedidos por minuto por conta, somando todas as chaves |
 | Ferramenta | O que o jogador autorizar, item por item | O jogador, para um serviço de terceiros que exibe a tabela de termos | Idem |
 | Dados abertos | Arquivo diário do mercado, com atraso de 24 h | Estúdio | — |
@@ -724,7 +724,7 @@ Regras:
 | Contestação de congelamento por pagamento | Até 5 dias úteis. [F] O decreto do comércio eletrônico pede resposta ao consumidor em até 5 dias ([05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md)) |
 | Quem revê a apelação | Sempre uma pessoa diferente de quem decidiu |
 
-**Quando o estúdio erra:** tudo o que foi removido é restaurado, com lançamento de restituição no livro-razão; a compensação extra é sempre presa à conta (dias de conveniência não transferíveis ou cosmético), nunca Alvará ou ouro. O erro é reconhecido no relatório. [F] O MWI reconheceu publicamente um falso positivo e compensou os jogadores ([07, §2.2](../01-pesquisa/07-tecnica-idles-online.md)).
+**Quando o estúdio erra:** tudo o que foi removido é restaurado, com lançamento de restituição no livro-razão; a compensação extra é sempre presa à conta (dias de conveniência não transferíveis ou cosmético), nunca Coins ou ouro. O erro é reconhecido no relatório. [F] O MWI reconheceu publicamente um falso positivo e compensou os jogadores ([07, §2.2](../01-pesquisa/07-tecnica-idles-online.md)).
 
 ### 11.3 Transparência
 
@@ -732,7 +732,7 @@ Regras:
 
 - banimentos e suspensões por categoria;
 - contas de fazenda derrubadas por onda;
-- ouro e itens removidos, Alvarás revogados;
+- ouro e itens removidos, Coins revogados;
 - taxa de disputas de pagamento;
 - apelações recebidas, revertidas e o tempo médio de resposta. [F] O OSRS publicou que só 0,36% dos banimentos de 2024 caíram na apelação ([04b, §3.9](../01-pesquisa/04b-economia-mercados-protecoes-bots.md));
 - disjuntores acionados, por quanto tempo e por quê.
@@ -750,9 +750,9 @@ A cada trimestre, uma análise com tendências e mudanças de regra.
 
 **AA-26.** [F] Em 2007, um desenvolvedor do EVE entregou plantas raras à própria corporação; no OSRS, um funcionário usou credenciais da equipe de recuperação para esvaziar 68 contas, cerca de 705 bilhões de gp ([04b, §2.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). [H] Regras:
 
-- uma pessoa dedicada a antifraude e economia desde o alfa ([04b, "Implicações"](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)), com plantão nas semanas de lançamento, de nova Era e de Travessia;
+- uma pessoa dedicada a antifraude e economia desde o alfa ([04b, "Implicações"](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)), com plantão nas semanas de lançamento, de nova Era e de Fronteira;
 - toda ferramenta que move valor exige dupla aprovação e grava log imutável;
-- contas de funcionários são marcadas e auditadas; não usam o Cartório, não fazem RMT informal, não se candidatam à Câmara;
+- contas de funcionários são marcadas e auditadas; não usam o Bazar de Personagens, não fazem RMT informal, não se candidatam ao Conselho;
 - mudanças econômicas (drops, taxas, teto) ficam sob embargo interno e são publicadas para todos ao mesmo tempo;
 - proteção contra DDoS na borda antes da primeira onda de banimentos. [F] O Albion sofreu ataques logo depois de ondas de banimento ([07, §6.6](../01-pesquisa/07-tecnica-idles-online.md)).
 
@@ -779,10 +779,10 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 | Disputas de pagamento | 0,3% das compras | 1,5% por um mês (ataque de cartões) | Testar o disjuntor de 0,8% |
 | Contas roubadas | 0,1% das contas por mês | 0,5% | Sem base publicada para a taxa; a Steam tinha cerca de 77 mil por mês em 2015, sem o total de contas |
 | Falsos positivos | 0,5% das sanções revertidas | 2% | Valor restaurado vira lançamento de restituição |
-| Carência do Alvará | 7 dias (1ª compra e cartão); 72 h (Pix); até 30 dias (risco) | — | Atrasa a oferta de Alvará no Câmbio |
+| Carência do Coin | 7 dias (1ª compra e cartão); 72 h (Pix); até 30 dias (risco) | — | Atrasa a oferta de Coins no Câmbio |
 | Conta nova | Menos de 14 dias ou menos de 20 h de jogo ativo | — | Saída sem contrapartida de até 2 × T por dia |
 | Contestação forçada | Conta suspensa até refazer a doação do valor contestado | — | — |
-| Cartório | 1 venda por pessoa a cada 90 dias; comprador 30 dias sem voto e 90 sem revenda | — | — |
+| Bazar de Personagens | 1 venda por pessoa a cada 90 dias; comprador 30 dias sem voto e 90 sem revenda | — | — |
 
 **Testes que a simulação precisa rodar:** (1) sensibilidade do lucro da fazenda a T × P (§2.2); (2) efeito de 3% e 10% de contas no teto sobre o preço das commodities (deflação por oferta máxima); (3) cenário de catástrofe da verificação; (4) ataque de cartões com o disjuntor; (5) detecção pela metade do planejado.
 
@@ -793,7 +793,7 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 | 02 (progressão) | Fila planejada que cubra o offline base de 24 h com tarefas de reserva (AA-2); teto que não cresça com horas online (AA-1) |
 | 06 (ofícios) | Obra-prima por decisão, com cota diária e meta de vantagem do resolvedor automático de até 10% (AA-3) |
 | 07 (economia) | Teto T com valor diário baixo em reais (§2.2); janela de vitrine e alerta de desvio na Feira (AA-4); limites do Câmbio; valor de referência por item, usado aqui na regra de contaminação e no VSC |
-| 09 (social) | Carência de 30 dias para votar após compra no Cartório; voto só para conta ativa; vereador não vende durante o mandato; marcação de contas transferidas nos rankings |
+| 09 (social) | Carência de 30 dias para votar após compra no Bazar de Personagens; voto só para conta ativa; conselheiro não vende durante o mandato; marcação de contas transferidas nos rankings |
 | 10 (live-ops) | Calendário de ondas de banimento fora das semanas de abertura de Era; plantão nas aberturas |
 | 11 (monetização) | Carências por meio de pagamento (AA-13); autenticação do emissor; teto de compras nas primeiras 24 h; custo da verificação no custo por jogador |
 | 12 (onboarding) | Verificação antes da conta; decisão sobre o prólogo sem conta (§4.3) |
@@ -802,9 +802,9 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 
 ## 13. Propostas de mudança na bíblia
 
-1. **[proposta de mudança na bíblia] Glossário (§4):** incluir **Carência** (período em que um valor recém-comprado não pode ser transferido), **Disjuntor** (suspensão da entrada de novas operações num balcão, item ou moeda), **Risco de troca** (pontuação do valor dado sem contrapartida entre contas), **Dívida em ouro** (saldo devido após estorno, pago com parte das entradas de ouro) e **Aposentadoria** (conta arquivada por quem compra outra no Cartório). São conceitos usados pelos módulos 07, 09, 11, 13 e 14.
-2. **[proposta de mudança na bíblia] Decisões (§5):** explicitar **"uma pessoa, uma conta ativa"** como consequência de "18+ com idade verificada" mais "um personagem por conta", com a aposentadoria no Cartório.
-3. **[proposta de mudança na bíblia] Números-âncora (§6.6):** incluir as carências do Alvará (7 dias na primeira compra e no cartão; 72 h no Pix; até 30 dias com risco), a definição de conta nova (menos de 14 dias ou menos de 20 h de jogo ativo) e as carências do Cartório (vendedor com 30 dias e 60 h; comprador 30 dias sem voto e 90 sem revenda).
+1. **[proposta de mudança na bíblia] Glossário (§4):** incluir **Carência** (período em que um valor recém-comprado não pode ser transferido), **Disjuntor** (suspensão da entrada de novas operações num balcão, item ou moeda), **Risco de troca** (pontuação do valor dado sem contrapartida entre contas), **Dívida em ouro** (saldo devido após estorno, pago com parte das entradas de ouro) e **Aposentadoria** (conta arquivada por quem compra outra no Bazar de Personagens). São conceitos usados pelos módulos 07, 09, 11, 13 e 14.
+2. **[proposta de mudança na bíblia] Decisões (§5):** explicitar **"uma pessoa, uma conta ativa"** como consequência de "18+ com idade verificada" mais "um personagem por conta", com a aposentadoria no Bazar de Personagens.
+3. **[proposta de mudança na bíblia] Números-âncora (§6.6):** incluir as carências do Coin (7 dias na primeira compra e no cartão; 72 h no Pix; até 30 dias com risco), a definição de conta nova (menos de 14 dias ou menos de 20 h de jogo ativo) e as carências do Bazar de Personagens (vendedor com 30 dias e 60 h; comprador 30 dias sem voto e 90 sem revenda).
 4. **[proposta de mudança na bíblia] Interpretação de "transferível livremente":** sem proibição nem pedágio além das taxas já previstas, com freios de segurança temporários, publicados e iguais para todos (carência por meio de pagamento, limite de saída de conta nova, retenção em aparelho novo, bloqueio de saída enquanto houver dívida). O diretor decide se essa leitura respeita a decisão do Gabriel.
 5. **[proposta de mudança na bíblia] Prólogo sem conta** antes da verificação de idade (§4.3), a reconciliar com o módulo 12: minutos jogáveis sem chat, mercado, loja, Baú ou dados pessoais. O risco é parecer uma abertura do jogo a menores; a alternativa é verificar antes de qualquer jogo.
 
@@ -815,10 +815,10 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 | 1 | O [05d, §5.7](../01-pesquisa/05d-rmt-recomendacao.md) propunha proibir o RMT fora do canal oficial e punir compradores; o Gabriel decidiu não proibir | Pune-se a origem ilícita, não o RMT; "quem compra por fora compra o risco" | Já decidido (Gabriel) |
 | 2 | O [04b, §5.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md) recomendava não ter Troca direta no lançamento, e o risco de troca do IdleMMO exige equilíbrio | A Troca existe (bíblia); o risco de troca vira sinal e limite para contas novas (AA-23) | Já decidido (bíblia) |
 | 3 | O [05d](../01-pesquisa/05d-rmt-recomendacao.md) propunha token negociável uma vez; a bíblia diz "transferível livremente" | Uma carência só, na primeira transferência (AA-13) | Já decidido (bíblia) |
-| 4 | O [05d, §4.2](../01-pesquisa/05d-rmt-recomendacao.md) adiava o bazar de contas para 18 a 24 meses; o Cartório existe desde o lançamento | As salvaguardas do 05d entram como requisitos do Cartório (AA-20) | Já decidido (Gabriel) |
+| 4 | O [05d, §4.2](../01-pesquisa/05d-rmt-recomendacao.md) adiava o bazar de contas para 18 a 24 meses; o Bazar de Personagens existe desde o lançamento | As salvaguardas do 05d entram como requisitos do Bazar de Personagens (AA-20) | Já decidido (Gabriel) |
 | 5 | ECA Digital, art. 13: dados de verificação de idade só para essa finalidade | Dois cofres e duas bases legais (AA-8) | **Validar com advogado** |
 | 6 | ANPD: biometria de todos os usuários pode ser desproporcional; a unicidade pede documento e prova de vida | Justificativa no relatório de impacto; credencial pública como método preferido quando existir | **Validar com advogado** |
-| 7 | "Uma pessoa, uma conta" × comprador do Cartório que já tem conta | Aposentadoria da conta antiga (AA-20) | Diretor (proposta 2) |
+| 7 | "Uma pessoa, uma conta" × comprador do Bazar de Personagens que já tem conta | Aposentadoria da conta antiga (AA-20) | Diretor (proposta 2) |
 | 8 | Limites e carências × "transferível livremente" | Freios temporários e publicados (proposta 4) | Diretor |
 | 9 | "Jogo inteiro 18+" × funil de entrada | Prólogo sem conta (proposta 5) ou verificação antes de jogar | Diretor e módulo 12 |
 | 10 | Remover valor de quem comprou de boa-fé fora do jogo | Regra publicada antes; aviso na Troca | **Validar com advogado** |
@@ -833,18 +833,18 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 | **Identidades alugadas em escala** | Operadores recrutam "laranjas" para abrir contas verificadas (mais de 2,6 milhões de perfis com indícios no Brasil, segundo a Serasa) | Teto baixo em reais (§2.2); grafo de fluxo; reverificação de conta alugada; banimento da pessoa |
 | **Falso positivo contra família ou lan house** | Rede e aparelho compartilhados disparam a pontuação | Sinais fracos nunca punem; vínculo declarado; revisão humana; apelação com prazo |
 | **Golpes fora do jogo chegam ao suporte e às redes** | Com o RMT informal aberto, golpes de Pix viram reclamação pública contra o jogo | Política clara e repetida; avisos na Troca; nenhuma promessa de reembolso; FAQ sobre MED |
-| **A tolerância ao RMT informal vira argumento jurídico** | Com o Baú comprável com Alvará, a soma pagamento + sorte + prêmio em dinheiro é a tese do processo de Nova York contra a Valve | Risco assumido pelo Gabriel; não promover nem integrar; combater a origem ilícita; probabilidades publicadas (S5); **validar com advogado** |
+| **A tolerância ao RMT informal vira argumento jurídico** | Com o Baú comprável com Coins, a soma pagamento + sorte + prêmio em dinheiro é a tese do processo de Nova York contra a Valve | Risco assumido pelo Gabriel; não promover nem integrar; combater a origem ilícita; probabilidades publicadas (S5); **validar com advogado** |
 | **Confisco contestado** | Quem comprou ouro de origem ilícita por fora vai ao Procon ou à Justiça | Regra anterior à punição; proporcionalidade; limite mínimo de ação; **validar com advogado** |
 | **Disjuntor cria dupe** | Um disjuntor mal testado quebra uma operação no meio, como no New World | Só bloqueia a entrada; teste a cada versão |
 | **Chargebacks acima do limite das bandeiras** | Um ataque de cartões roubados num mês leva o estúdio acima de 1,5% | Carência; autenticação do emissor; disjuntor a 0,8%; Pix sempre disponível; dois PSPs ([05d](../01-pesquisa/05d-rmt-recomendacao.md)) |
-| **A dívida parece punição com fins de lucro** | O jogador endividado acha que precisa comprar Alvará | Dívida quitável só jogando; nunca exige compra |
+| **A dívida parece punição com fins de lucro** | O jogador endividado acha que precisa comprar Coins | Dívida quitável só jogando; nunca exige compra |
 | **A equipe pequena não dá conta** | Revisões e apelações acumulam; prazos estouram | Atrito automático antes de sanção; prioridade por valor; prazos revistos com dados do alfa |
 | **Os bots se adaptam** | Automação com tempos humanizados e contas envelhecidas | O sinal principal é econômico (fluxo e teto), não de tempo; iscas trocadas a cada versão |
 | **Retaliação** | DDoS depois de uma onda de banimento | Proteção na borda antes da primeira onda; plano de comunicação |
 | **Abuso interno** | Funcionário cria ou desvia valor | Dupla aprovação; log imutável; contas de equipe marcadas; embargo de mudanças |
-| **Carências irritam o pagante** | Quem compra Alvará para vender logo espera dias | Contagem visível; consumo imediato liberado; 72 h no Pix |
-| **O Cartório vira fábrica de contas** | Contas niveladas por automação são vendidas | Horas de jogo ativo verificado; pontuação de risco baixa para anunciar; uma venda por pessoa a cada 90 dias |
-| **Captura da Câmara** | Contas compradas ou alugadas votam em bloco | 30 dias sem voto após o Cartório; reverificação de contas alugadas; voto só para conta ativa (módulo 09) |
+| **Carências irritam o pagante** | Quem compra Coins para vender logo espera dias | Contagem visível; consumo imediato liberado; 72 h no Pix |
+| **O Bazar de Personagens vira fábrica de contas** | Contas niveladas por automação são vendidas | Horas de jogo ativo verificado; pontuação de risco baixa para anunciar; uma venda por pessoa a cada 90 dias |
+| **Captura do Conselho** | Contas compradas ou alugadas votam em bloco | 30 dias sem voto após o Bazar de Personagens; reverificação de contas alugadas; voto só para conta ativa (módulo 09) |
 
 ## Fontes novas desta pesquisa
 
