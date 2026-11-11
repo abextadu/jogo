@@ -20,7 +20,24 @@
 | R14 | Glossário | Acrescentar os termos novos dos módulos (02, 03/04, 05/06, 09/10, 11/12, 13) num anexo do glossário da bíblia. | bíblia |
 | R15 | Depois do teto de offline | **Mais 12 h a 25%** em vez de corte seco (02). | bíblia |
 
-**Dependem da simulação (08):** ferramenta que acelera a fila (02 × 05/06); paridade do Coin (R$ 1,00 do 11 × ~R$ 0,10 do 07); teto de emissão em unidades × valor de referência e excedente "nasce preso" × "portão de saída"; taxa da Troca para Coins (3% × 12%).
+**Decididas pela simulação (08, média de três sementes) e pelo diretor:**
+
+| # | Conflito ou achado | Resolução | Módulos a editar |
+|---|---|---|---|
+| R16 | Ferramenta acelera a fila (05/06 até 1,72×)? | **Não acelera.** Acelerando, o hardcore chega ao 100 no D85 e o IPC vai a +83% ao ano. | 05, 06 |
+| R17 | Paridade do Coin (R$ 1,00 no 11 × ~R$ 0,10 no 07) | **1 Coin = R$ 1,00, inteiro.** As regras do 07 expressas em Coins são divididas por 10 (ex.: ordens do Câmbio de 1 a 200 Coins; compra máxima de 200 por conta a cada 7 dias; lance mínimo do Bazar 30 Coins). Preços da loja do 11 ficam (premium de 30 dias = 20 Coins; Baú = 5 Coins). | bíblia (6.7), 07, 13, 14 (wireframe da loja, que usa 10 Coins = R$ 1) |
+| R18 | Teto de emissão em unidades × valor de referência; excedente "nasce preso" (06) × "portão de saída" (07) | **Teto em valor de referência (VR) fixo, com crédito dos insumos na mesma régua, e portão de saída** (o que excede fica para uso próprio ou vira obra e Mérito; nada nasce preso). | bíblia, 05, 06 |
+| R19 | Taxa da Troca para Coins (3% × 12%) | **12%.** Com 3%, o Câmbio fica sem negócio em 21 de 24 rodadas e os Coins chegam a 9,6% das Trocas. | bíblia (6.6), 07, 11, 13 |
+| R20 | Metas do 13 (um dia de teto ≈ R$ 1; salário-teto do topo ≤ R$ 100) não fecham com o 07 | **Nova meta: lucro de uma conta-fazenda ≤ ~R$ 15 por mês** (base: ~R$ 16). | 07, 13 |
+| R21 | Indexação dos insumos de NPC | **Até ±10% ao mês na 1ª Era** (com ±2%, o IPC vai a +105% ao ano). | 07 |
+| R22 | Selo de mestre | **Volta o nível, mas mantém o tier de produção;** custo de 30 mil ouro. | 02, 07 |
+| R23 | Ouro de encomenda para contas novas | **Só a partir do 14º dia da conta** (a fazenda rende 20% menos). | 07, 09, 12 |
+| R24 | Ouro por minuto de VR | **2,0** (referência para preços de NPC e drops). | 07 |
+| R25 | Painel | Novo indicador: **consumo essencial não atendido**. | 07 |
+| R26 | Entrada de jogadores | Sustentar a população-alvo exige **~1.500 contas verificadas por dia** (o "1,5% dos ativos por dia" do 07 sustenta só ~9 mil ativos); refletir no custo de verificação. | 07, 11 |
+| R27 | Coin cai de valor ao longo do ano (premium de 27 para 13 dias de renda) | **No 2º ano, novos usos de Coins na loja** (sempre conforto e cosmético). | 10, 11 |
+
+**Critérios que falham por estrutura, aceitos pelo diretor para revisitar no alfa:** massa monetária por conta (a evasão do 12 não deixa juntar 2–3 premiums no 1º ano); básicos presos ao piso do NPC (o aprendiz T1–T2 segura o preço); tendência do IPC com ±25 pontos entre sementes (o nível fica estável). Estresses que falham (onda de pagantes, detecção fraca de bots, evasão de 50%, sem crédito de insumos, Fronteira com 40% da atividade, 90 dias sem novos) viram riscos com mitigação no 08.
 
 **Dependem do Gabriel (checkpoint 3):** prólogo de 5 minutos sem conta antes da verificação de idade (12 e 13).
 
