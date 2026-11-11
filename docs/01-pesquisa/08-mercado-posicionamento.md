@@ -133,7 +133,54 @@ Números das fichas (todos com fonte nas fichas; tipos de métrica diferentes, e
 
 ## 3. Segmentos globais
 
-(em pesquisa)
+Cinco segmentos, cada um com onde está, o que quer, o que rejeita e o encaixe no nosso jogo. Os quatro primeiros foram pedidos na tarefa; o quinto (veterano brasileiro de MMO) sai da seção 2 e é o que mais pesa para nós.
+
+### 3.1 Puristas de incremental
+
+- **Onde estão e quantos são.** [F] O r/incremental_games tem ~182 mil membros, com +16,3% em um ano, segundo um rastreador de terceiros sem data de coleta ([GummySearch](https://gummysearch.com/r/incremental_games)). No Steam, são o público dos 940 lançamentos Idler de 2025 (seção 1.2). Também vivem em itch.io, Discord e agregadores ([Incremental Games](https://incrementalgames.org/)). Tamanho do Galaxy.click: não encontrado.
+- **O que querem.** [F] Novidade que muda uma regra, prestígio que acelera, automação conquistada e offline generoso; designers de referência recusaram vender a espera ([02a](02a-teoria-design-idle.md)). [F] Preço baixo e "truque" distintivo descoberto pelo YouTube ([A10](fichas/A10-nova-onda-idle-2023-2026.md)).
+- **O que rejeitam.** [F] Conexão obrigatória sem valor online: 35 de 80 reviews negativas de 2026 do Melvor tratam de conexão, perda de save ou bugs, e só 1 de 80 pede multiplayer ([B01](fichas/B01-melvor-idle.md)). [C] P2W e energia ([C02](fichas/C02-idle-clans.md); [02a](02a-teoria-design-idle.md)).
+- **Encaixe.** [H] Secundário. São formadores de opinião do gênero, mas não pediram MMO: entram pelo prestígio pessoal e pela automação, e saem se o online parecer imposto. Servem para validar a "física" do idle, não para sustentar a economia.
+
+### 3.2 Grinders de MMO (OSRS, Melvor, "scapelikes")
+
+- **Onde estão e quantos são.** [F] O OSRS bateu ~240 mil simultâneos em ago/2025 ([F03](fichas/F03-runescape-e-osrs.md)); o Melvor vendeu mais de 1 milhão de cópias e a demo do *Melvor Idle 2* teve pico de 7,2 mil simultâneos ([B01](fichas/B01-melvor-idle.md)). A onda de idle MMOs "scapelike" de navegador de 2026 mira esse público ([A10](fichas/A10-nova-onda-idle-2023-2026.md)).
+- **O que querem.** [F] Progressão por skills e conta que vale para sempre ("tudo o que você ganha importa para sempre", na síntese da imprensa sobre o OSRS), modos sazonais paralelos (as Leagues bateram recordes) e integridade sem P2W ([F03](fichas/F03-runescape-e-osrs.md)).
+- **O que rejeitam.** [F] Monetização que vende poder ou taxa ausente: o IdleOn caiu para 63% de reviews positivas em 2026 com 24 de 28 negativas citando monetização ([B02](fichas/B02-legends-of-idleon.md)); a fama de "clone do Melvor" marcou o Idle Clans (8 de 10 negativas mais úteis) ([C02](fichas/C02-idle-clans.md)).
+- **Sinal de alerta: pedigree não basta.** [F] *Brighter Shores*, do criador do RuneScape (Andrew Gower, Fen Research), estreou em 6/11/2024 com pico de 17.084 simultâneos e fez média de ~116 a ~127 entre ago e out/2026, queda de ~99% ([SteamCharts](https://steamcharts.com/app/2791440); [Wikipedia](https://en.wikipedia.org/wiki/Brighter_Shores)).
+- **Encaixe.** [H] Núcleo provável no PC e fora do Brasil. É o segmento mais disputado: Jagex com o *Melvor Idle 2*, solos lançando em meses, e o OSRS como referência que ninguém tira do lugar. Para ganhá-lo, o jogo não pode parecer "mais um scapelike".
+
+### 3.3 Jogadores de economia (traders de EVE, Albion, Torn, Milky Way Idle)
+
+- **Onde estão e quantos são.** [F] O EVE tem média de ~25 mil contas simultâneas (jan/2026) e nunca passou de 65.303 ([F01](fichas/F01-eve-online.md)); o Torn passou de 100 mil ativos por dia em abr/2026, com economista e relatórios de massa monetária ([D01](fichas/D01-torn.md)); no Albion, jogadores mantêm um projeto de dados de preços e guias de *flipping* ([F02](fichas/F02-albion-online.md)).
+- **O que querem.** [F] Preço formado por jogadores, especialização e interdependência: no Milky Way Idle, mercado e F2P justo são os temas mais elogiados (87 e 85 menções numa análise de reviews), e jogadores dizem que o mercado é o que o separa do Melvor ([C01](fichas/C01-milky-way-idle.md)). [F] Dados abertos (JSON horário do MWI, API pública do Idle Clans) e política monetária explicada ([notas C01–C03](_notas-de-sintese.md); [C04](fichas/C04-idlemmo.md)).
+- **O que rejeitam.** [F] Mudanças de taxa sem explicação (a alta do imposto do EVE de 4% para 7,5% gerou revolta) e monopólio de veteranos com capital ([F01](fichas/F01-eve-online.md); [C01](fichas/C01-milky-way-idle.md)). [F] Bots e scripts que tiram a descoberta de quem joga sem ferramenta (Item Market 2.0 do Torn — [D01](fichas/D01-torn.md)).
+- **Encaixe.** [H] Núcleo de diferenciação, mas minoritário. São eles que fazem o mercado ter preço e história; sem eles a economia é rasa, e só com eles o jogo vira planilha. Precisam de proteções que deixem o casual participar sem ser engolido.
+
+### 3.4 Jogadores AFK de celular
+
+- **Onde estão e quantos são.** [F] É o maior bolso do gênero, mas concentrado na Ásia e nos EUA: o *AFK Arena* fez ~US$ 1,5 bilhão (China 32%, EUA 24%, Coreia 11%, Japão 10%) e o *Legend of Mushroom* tirou ~70% da receita inicial de Coreia e Japão (seção 1.1). No Brasil, nenhum idle RPG aparece no top 5 de receita mobile de 2025 (Roblox, Free Fire, Coin Master, Candy Crush, Royal Match — [Allcorrect](https://allcorrectgames.com/insights/the-gaming-market-in-brazil-2025/)).
+- **O que querem.** [F] Um baú AFK que pede 1 ou 2 logins por dia e uma campanha em estágios com metas de minutos ([E01](fichas/E01-afk-arena-e-afk-journey.md)); recompensa constante e variável ([E03](fichas/E03-legend-of-mushroom.md)).
+- **O que rejeitam.** [C] Paredes de P2W, guerras de guilda decididas por equipamento pago, anúncios enganosos e cortes silenciosos de recompensa (o AFK Journey teve de reverter um corte em mai/2024) ([E01](fichas/E01-afk-arena-e-afk-journey.md); [E03](fichas/E03-legend-of-mushroom.md)).
+- **O que sustenta esse mercado.** [F] Gacha e aquisição paga, com receita em queda no RPG mobile em 2025 (−15,4%) e aquisição mais cara (seção 1.1).
+- **Encaixe.** [H] Volume, não núcleo. O celular é a plataforma preferida no Brasil (44,1%), então a porta de entrada precisa ser tão simples quanto a de um AFK mobile. Mas o motor de receita desse segmento (gacha pago) está vetado a menores no Brasil e exige verificação de idade ([05b](05b-rmt-legal-brasil.md)), e não temos orçamento de aquisição paga para disputar com Lilith e Habby.
+
+### 3.5 Veteranos brasileiros de MMO (Tibia, Ragnarok, Albion)
+
+- **Onde estão e quantos são.** [F] ~45% da base do Tibia, mais de 80% do Ragnarok LATAM, 3º idioma das reviews do Albion (seção 2.4). Gente que jogou em lan house em 2005 e hoje tem 30 a 45 anos: os millennials ainda são 33,7% dos jogadores brasileiros, e a geração Z, 36,5% (PGB 2026, seção 2.1).
+- **O que querem.** [F] Servidor perto, preço em real, comunidade em português, personagem como patrimônio e comércio oficial de contas (Char Bazaar) ([F04](fichas/F04-tibia.md); [F02](fichas/F02-albion-online.md)). [H] E, sobretudo, um MMO que caiba numa vida com trabalho e filhos.
+- **O que rejeitam.** [F] Ping alto, preço em dólar, gank sem chance para quem joga sozinho (5 de 10 negativas do Albion em português) e bots ([F02](fichas/F02-albion-online.md); [F04](fichas/F04-tibia.md)).
+- **Encaixe.** [H] Núcleo para o Brasil e o segmento menos atendido do mapa: ninguém oferece a eles um MMO de economia que respeite o tempo, em português, com servidor e Pix. Já compram e vendem itens por reais (seção 2.5), o que facilita o token oficial e aumenta o risco de mercado cinza.
+
+### 3.6 O que cada segmento quer, lado a lado
+
+| Segmento | Quer | Rejeita | Peso no nosso jogo [H] |
+|---|---|---|---|
+| Puristas de incremental | regras novas, prestígio, automação, offline generoso | online sem valor, P2W, energia | secundário: valida o núcleo idle |
+| Grinders de MMO | skills, conta permanente, temporadas paralelas, integridade | vender poder ou taxa ausente, "clone" | núcleo global (PC) |
+| Jogadores de economia | preço real, especialização, dados abertos, política explicada | intervenção sem explicação, bots, monopólio | núcleo de diferenciação, minoria |
+| AFK de celular | baú AFK, 1–2 logins por dia, metas de minutos, recompensa variável | parede de P2W, guerra paga, anúncio enganoso, corte de recompensa | volume de entrada, não receita |
+| Veteranos brasileiros de MMO | servidor, real, português, patrimônio, comércio | ping, dólar, gank, bots | núcleo no Brasil, menos atendido |
 
 ## 4. Lacunas que ninguém ocupa: hipóteses e evidências
 
