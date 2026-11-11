@@ -54,7 +54,7 @@
 | **Marcos** | Moeda da Travessia: suprimentos temporários, melhorias de posto, cosméticos e títulos da temporada | Atividades da Travessia (expedições na Bruma, descobertas, chefes de região) | Gastos na Travessia; no fim da temporada, a sobra vira uma recompensa cosmética fixa por faixa, nunca ouro | **Não.** Presos à conta e à temporada; zeram ao fim |
 | **Mérito** | Títulos de cidadania e prioridade nas recompensas da cidade; não pesa no voto | Contribuição para obras, nota em encomendas, defesa nos cercos | Não se gasta. O **Mérito vitalício** só cresce (títulos). O **Mérito da Era** zera a cada Era (prioridade) | **Não.** Preso à conta, e fica com a conta no Cartório (seção 7.3) |
 
-**Gastar na loja destrói o Alvará.** Como o Alvará agora é moeda divisível, não há mais saldo de cosméticos separado: a loja cobra direto em Alvarás, e cada Alvará gasto sai da economia. A loja é a fonte de demanda que sustenta o preço do Alvará em ouro, e por isso o que ela vende (premium, cosméticos, Baú) precisa ter demanda real (seção 6.2).
+**Gastar na loja destrói o Alvará.** Como o Alvará é uma moeda divisível, a loja cobra direto em Alvarás qualquer valor, e cada Alvará gasto sai da economia. A loja é a fonte de demanda que sustenta o preço do Alvará em ouro, e por isso o que ela vende (premium, cosméticos, Baú) precisa ter demanda real (seção 6.2).
 
 ### 2.2 Decisões sobre as moedas
 

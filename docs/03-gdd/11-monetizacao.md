@@ -456,4 +456,170 @@ A soma dos limites (15) passa do teto (10), para dar escolha. **Venda no mercado
 
 > **Quatro perguntas** — Referência: tetos da Jagex, FIFA Playtime, o caso Clicker Heroes 2 ([A02](../01-pesquisa/fichas/A02-clicker-heroes.md)), e o caso FTC × Epic como alerta ([06](../01-pesquisa/06-monetizacao-retencao.md), §2.1) · Problema: uma receita que não dependa de quem perdeu o controle, num jogo com caixa paga e sem reembolso · Comportamento: o jogador vê e escolhe quanto doa antes de doar; o grande doador precisa pedir e esperar; quem contesta sabe exatamente como voltar · Risco: o teto empurra quem quer gastar mais para o mercado cinza (Alvará e ouro por Pix fora do jogo), e a suspensão por contestação pode ser lida como cláusula abusiva ou retaliação; ver "Como isso pode dar errado".
 
+## 8. Projeção de receita
+
+### 8.1 A fórmula e as premissas
+
+[H] A bíblia (§6.7) pede um plano que feche com 2 a 5 mil simultâneos por Arraial. A conta parte dos simultâneos e chega à receita:
+
+`DAU = simultâneos × (DAU por simultâneo)`
+`MAU = DAU ÷ (DAU/MAU)`
+`receita do mês = MAU × conversão × ARPPU`
+
+*Exemplo calculado (cenário base):* `3.500 × 10 = 35.000 DAU`; `35.000 ÷ 0,30 ≈ 116.667 MAU`; `116.667 × 4% × R$ 35 ≈ R$ 163.333 por mês`.
+
+Aqui, "conversão" é a parcela do MAU que doa no mês, e "ARPPU" é a doação média por doador no mês. Como 1 Alvará = R$ 1,00, o ARPPU em reais é também o número médio de Alvarás doados por doador.
+
+| Premissa [H] | Pessimista | Base | Otimista | De onde vem |
+|---|---|---|---|---|
+| Simultâneos (média do dia) | 2.000 | 3.500 | 5.000 | Bíblia, §6.7 |
+| DAU por simultâneo | 8 | 10 | 12 | Leitura nossa: no navegador, muita gente deixa a aba aberta horas (modo canto de tela, [08](../01-pesquisa/08-mercado-posicionamento.md), H4), o que reduz o número de pessoas por vaga simultânea; no celular, sessões de 5 a 15 min (bíblia, §6.1) aumentam. **É a premissa mais incerta da tabela** |
+| DAU/MAU | 25% | 30% | 35% | Idles de 2020: 18%; mediana do PC em 2025: 4% a 5% ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.1). Ficamos acima porque o idle é hábito diário e a base é de adultos verificados, já filtrados pelo prólogo ([12](12-onboarding.md)) |
+| Conversão (doadores no mês ÷ MAU) | 2% | 4% | 6% | 1% a 3% no F2P mobile, com o RPG no topo; 1,9% na Swrve ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.2). O pessimista fica dentro da faixa conservadora do 06; base e otimista acima, porque a base é de adultos verificados e o uso central (conveniência por tempo) é recorrente |
+| ARPPU mensal | R$ 25 | R$ 35 | R$ 45 | US$ 20 no top 15% e US$ 27 a 31 em RPG, no mobile de 2019 ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.2). Ficamos bem abaixo por causa do teto de doação, da ausência de gacha de poder e do Brasil, que gasta pouco por jogador ([08](../01-pesquisa/08-mercado-posicionamento.md), §2.1) |
+
+### 8.2 Resultado
+
+| Resultado [H] | Pessimista | Base | Otimista |
+|---|---|---|---|
+| DAU | 16.000 | 35.000 | 60.000 |
+| MAU | 64.000 | ~116.700 | ~171.400 |
+| Doadores no mês | 1.280 | ~4.670 | ~10.290 |
+| **Receita bruta por mês** (= Alvarás doados) | **R$ 32.000** | **R$ 163.333** | **R$ 462.857** |
+| Receita bruta por ano | R$ 384 mil | R$ 1,96 milhão | R$ 5,55 milhões |
+| Receita por MAU por mês | R$ 0,50 | R$ 1,40 | R$ 2,70 |
+| ARPDAU (por dia) | R$ 0,066 | R$ 0,154 | R$ 0,254 |
+| ARPDAU em dólar de preço regional Steam (÷ 3,30, seção 2.2) | US$ 0,020 | US$ 0,047 | US$ 0,077 |
+
+**Checagem contra os benchmarks [H]:** o ARPDAU do pessimista empata com a mediana do mobile de 2019 (US$ 0,02); o do base fica entre a mediana e o top 15% (US$ 0,10 a 0,14); nenhum cenário chega ao teto de RPG e estratégia (US$ 0,25) ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.2). O base é conservador frente aos benchmarks de RPG e otimista frente ao "gasto baixo" do Brasil. A conversão de dólar pelo preço regional do Steam é aproximação nossa.
+
+**Como a receita do cenário base se distribui entre os doadores [H]:**
+
+| Perfil de doador | Parcela dos doadores | Doação média no mês | Contribuição para o ARPPU |
+|---|---|---|---|
+| Leve (R$ 20: conveniência ou passe) | 65% | R$ 20 | R$ 13,00 |
+| Médio (R$ 40: conveniência mais cosméticos e Baús) | 27% | R$ 40 | R$ 10,80 |
+| Alto (perto de R$ 100) | 7% | R$ 100 | R$ 7,00 |
+| Teto ampliado ou máximo | 1% | R$ 400 | R$ 4,00 |
+| **Média (ARPPU)** | 100% | — | **R$ 34,80 ≈ R$ 35** |
+
+O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cima, por ~32%.
+
+### 8.3 Fluxo de Alvarás (cenário base)
+
+[H] Premissas de uso, para a simulação calibrar. Todos os valores em Alvarás por mês.
+
+| Fluxo | Valor no base [H] | Conta |
+|---|---|---|
+| **Alvarás doados** | **163.333** | = receita bruta |
+| → gastos em conveniência por quem doou | 34% = 55.533 | ÷ 20 ≈ 2.777 meses de conveniência |
+| → **passados a outros jogadores (Câmbio ou Troca)** | **30% = 49.000** | — |
+| → gastos na loja (cosméticos, passe, Baú) | 27% = 44.100 | — |
+| → pagos no Cartório | 4% = 6.533 | 653 destruídos pela taxa de 10% |
+| → guardados | 5% = 8.167 | Receita diferida |
+| Alvarás recebidos de outros jogadores: gastos em conveniência | 75% de 49.000 = 36.750 | ÷ 20 ≈ 1.838 meses de conveniência |
+| Alvarás recebidos de outros jogadores: gastos na loja | 25% de 49.000 = 12.250 | — |
+| **Conveniências ativas** | 2.777 + 1.838 ≈ **4.615 contas (4,0% do MAU)** | — |
+| Parcela das conveniências obtidas com ouro ou de outros jogadores | 1.838 ÷ 4.615 ≈ **40%** | Meta do [05d](../01-pesquisa/05d-rmt-recomendacao.md): 30% a 65% (IdleMMO: 65,2%) |
+| Gasto total na loja | 56.350: 40% em Baú, 20% em passe, 40% em cosméticos e serviços | — |
+| **Baús por mês** | 22.540 ÷ 5 ≈ **4.510** (3.530 com Alvarás do próprio doador e 980 com Alvarás vindos de outros jogadores) | — |
+| Gasto em Baú com Alvarás do próprio doador | ~17.640 Alvarás (R$ 17.640, 10,8% da receita) | — |
+
+### 8.4 Deduções, custos e o que a receita paga
+
+[H] Deduções sobre a receita bruta: impostos ~12% ([NV]: depende do regime, Simples Nacional ou Lucro Presumido, e da transição para IBS e CBS; **validar com contador**; a projeção não inclui ITCMD, ver a seção 2.6); meios de pagamento ~3% (seção 2.3); perdas por contestação não regularizada ~1,5%. Receita líquida ≈ 83,5% da bruta.
+
+**Custo de uma pessoa na equipe [F + H]:** agregadores de salário põem a média de desenvolvedor de jogos no Brasil em ~R$ 8.200 por mês, somando todos os níveis ([Contabilizei](https://www.contabilizei.com.br/contabilidade-online/quanto-ganha-um-desenvolvedor-de-jogos-confira/)), e o sênior em ~R$ 11.450 ([Jornal Contábil](https://jornalcontabil.com.br/noticia/voce-sabe-quanto-ganha-um-desenvolvedor-de-jogos-confira/)). São fontes comerciais, de baixa confiança, e outras fontes divergem muito. [H] Com encargos, benefícios e equipamento (~1,7 vez o salário), usamos **R$ 14 mil por pessoa por mês**.
+
+**Custo da verificação de idade [F + H]:** em 2019, o Datavalid do Serpro cobrava R$ 0,80 por validação cadastral e R$ 1,68 por biometria facial, na faixa de até 999 consultas, com preço menor por volume ([Tecnoblog, 19/6/2019](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/)); não encontramos tabela atual. [H] Usamos **R$ 1,00 por conta nova verificada**, e **contas novas verificadas por mês = 35% do MAU** (num jogo maduro, a base se renova; com a retenção-alvo do [12](12-onboarding.md), a conta dá de 35% a 43%).
+
+| Linha (por mês) [H] | Pessimista | Base | Otimista |
+|---|---|---|---|
+| Receita bruta | R$ 32.000 | R$ 163.333 | R$ 462.857 |
+| Receita líquida (83,5%) | R$ 26.720 | R$ 136.383 | R$ 386.486 |
+| Verificação de idade (35% do MAU × R$ 1,00) | −R$ 22.400 | −R$ 40.833 | −R$ 60.000 |
+| Servidor, backup, CDN e anti-DDoS (VPS própria) | −R$ 4.000 | −R$ 6.000 | −R$ 10.000 |
+| Jurídico e contábil | −R$ 4.000 | −R$ 8.000 | −R$ 15.000 |
+| Ferramentas e serviços (e-mail, monitoramento, antifraude) | −R$ 1.500 | −R$ 3.000 | −R$ 6.000 |
+| Comunidade e criadores de conteúdo | R$ 0 | −R$ 10.000 | −R$ 30.000 |
+| Arte terceirizada de cosméticos | R$ 0 | −R$ 5.000 | −R$ 30.000 |
+| **Sobra para a equipe** | **−R$ 5.180** | **R$ 63.550** | **R$ 235.486** |
+| **Equipe que isso paga (R$ 14 mil por pessoa)** | **nenhuma** | **~4 a 5 pessoas** | **~17 pessoas** |
+
+**Leitura [H]:**
+- **Pessimista:** não paga nem a verificação e a operação mínima. Nessa escala, o jogo só existe como projeto de uma ou duas pessoas sem salário de mercado, como os concorrentes ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.4), ou com uma verificação muito mais barata.
+- **Base:** paga uma equipe enxuta de 4 a 5 pessoas, além do Gabriel (por exemplo: duas de servidor e infraestrutura, uma de cliente e interface, uma de design e economia, uma de comunidade e suporte), com a arte de cosméticos parcialmente terceirizada. Fecha, mas no limite do que "confiança como produto" pede (antibot, suporte bilíngue, relatório mensal).
+- **Otimista:** ~17 pessoas e verba para o conteúdo de cada Era, a Travessia e marketing.
+
+### 8.5 O peso da verificação de idade
+
+[H] A verificação cobra por conta nova, enquanto a receita vem só de quem doa. A parcela da receita bruta que ela consome independe do número de simultâneos:
+
+`peso da verificação = (contas novas ÷ MAU) × custo por verificação ÷ (conversão × ARPPU)`
+
+| Custo por verificação | Pessimista (R$ 0,50 por MAU) | Base (R$ 1,40 por MAU) | Otimista (R$ 2,70 por MAU) |
+|---|---|---|---|
+| R$ 0,40 | 28% | 10% | 5% |
+| **R$ 1,00** | **70%** | **25%** | **13%** |
+| R$ 1,68 (preço de 2019, faixa baixa) | 118% | 42% | 22% |
+
+*Exemplo calculado (base, R$ 1,00):* `0,35 × 1,00 ÷ (0,04 × 35) = 0,35 ÷ 1,40 = 25%`.
+
+**Consequências para o desenho:**
+1. **Verificar só quem quer ficar.** É o principal motivo econômico para o prólogo sem conta do [12](12-onboarding.md): quem só está olhando não gera custo de verificação.
+2. **Negociar preço por volume** e combinar métodos (o módulo 13 escolhe), mirando R$ 0,40 ou menos por conta.
+3. **Acompanhar o "token etário"** estudado pelo Ministério da Justiça desde dez./2025: uma credencial que confirmaria a faixa de idade sem expor dados ([Contábeis, 3/12/2025](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/)). Especialistas também discutem a confirmação de idade por bancos, via Open Finance, sem produto disponível ([Let's Money, 18/3/2026](https://www.letsmoney.com.br/noticias/bancos-validar-idade-eca-digital-open-finance/)). Se uma solução pública e gratuita vingar, o peso cai perto de zero.
+4. **Reserva de lançamento:** no primeiro mês, quase todo o MAU é conta nova. Com 60 mil verificados no mês de estreia, são R$ 60 mil de verificação antes de a receita amadurecer. O orçamento precisa reservar cerca de três meses de verificação de lançamento.
+
+### 8.6 Ponto de equilíbrio e sensibilidade (cenário base)
+
+**Para uma equipe de 8 pessoas** (R$ 112 mil por mês), com o MAU do base e os demais custos do base (R$ 72.833, incluindo a verificação), a receita líquida precisa ser de R$ 184.833, e a bruta, de ~R$ 221 mil. Isso dá **R$ 1,90 por MAU por mês**: por exemplo, 5% de conversão com ARPPU de R$ 38, ou 4% com R$ 47.
+
+**Uma premissa por vez** (o resto igual ao base):
+
+| Premissa alterada | Sobra para a equipe | Pessoas |
+|---|---|---|
+| Base | R$ 63.550 | ~4,5 |
+| Conversão 3% / 5% | R$ 29.455 / R$ 97.646 | ~2 / ~7 |
+| ARPPU R$ 25 / R$ 45 | R$ 24.584 / R$ 102.517 | ~2 / ~7 |
+| Verificação R$ 0,40 / R$ 1,68 | R$ 88.050 / R$ 35.783 | ~6 / ~2,5 |
+| Contas novas 25% / 45% do MAU | R$ 75.216 / R$ 51.883 | ~5,5 / ~3,5 |
+| DAU por simultâneo 6 / 15 | R$ 25.330 / R$ 111.325 | ~2 / ~8 |
+
+[H] Os números que mais mexem no resultado são o DAU por simultâneo (que só se mede com jogadores reais), a conversão e o ARPPU. O preço da verificação vem logo atrás. A sensibilidade reforça a recomendação do [06](../01-pesquisa/06-monetizacao-retencao.md) (§4.4): medir o próprio funil desde o alfa, por coorte, porque nenhum benchmark público mostra a cauda que paga um RPG.
+
+## 9. Interfaces com a economia (módulo 07) e com a simulação (módulo 08)
+
+[H] Parâmetros que este módulo entrega para a simulação, com a faixa a testar. Valores em Alvarás por mês, salvo indicação.
+
+| Parâmetro | Pessimista | Base | Otimista | Faixa para testar |
+|---|---|---|---|---|
+| % do MAU que doa no mês | 2% | 4% | 6% | 1% a 8% |
+| ARPPU mensal (= Alvarás doados por doador) | R$ 25 | R$ 35 | R$ 45 | R$ 20 a R$ 60 |
+| Paridade | 1 Alvará = R$ 1,00 | igual | igual | — |
+| Preço de 30 dias de conveniência | 20 Alvarás | 20 | 20 | 15 a 25 |
+| **Alvarás doados por mês** | **32.000** | **163.333** | **462.857** | — |
+| Destino dos Alvarás doados (conveniência / Câmbio e Troca / loja / Cartório / guardados) | 34 / 30 / 27 / 4 / 5% | igual | igual | Câmbio e Troca de 15% a 50% |
+| **Alvarás que entram no Câmbio ou na Troca por mês** | **~9.600** | **~49.000** | **~138.900** | — |
+| Destino dos Alvarás recebidos de outros jogadores (conveniência / loja) | 75 / 25% | igual | igual | — |
+| Conveniências ativas | ~900 (1,4% do MAU) | ~4.615 (4,0%) | ~13.080 (7,6%) | — |
+| Parcela das conveniências obtidas com ouro ou de outros jogadores | 40% | 40% | 40% | 20% a 65% |
+| Baús abertos por mês (todas as origens) | ~880 | ~4.510 | ~12.780 | — |
+| Gasto em Baú com Alvarás do próprio doador | ~3.460 | ~17.640 | ~49.990 | — |
+| Baús revendidos fechados no mercado | 30% | 30% | 30% | 10% a 50% |
+| Alvará destruído pela taxa do Cartório por mês | ~130 | ~650 | ~1.850 | — |
+| Doadores acima de R$ 99 no mês / no teto padrão ou acima | 8% / 1% | 8% / 1% | 8% / 1% | — |
+
+**Cenários de estresse que a simulação deve rodar [H]** (somados aos quatro do [05d](../01-pesquisa/05d-rmt-recomendacao.md), "Implicações"):
+1. **Onda de doações na estreia de uma Era:** Alvarás doados × 2 no mês, com 50% indo ao Câmbio.
+2. **Fuga dos doadores:** conversão cai à metade em 60 dias.
+3. **Conveniência sem apelo:** o gasto em conveniência cai de 34% para 15% e o Câmbio sobe para 50%. É o teste de "o Alvará vira só ouro comprado": mede o "P2W de capital" (patrimônio do doador alto contra o do não pagante mediano).
+4. **Contestação em massa:** 5% dos Alvarás do mês contestados depois de passarem pelo Câmbio; medir o efeito da suspensão das contas contestantes e do congelamento rastreado.
+5. **Teto dobrado** (R$ 500 padrão), para medir quanto a receita e a concentração mudam.
+
+**O que a economia precisa garantir para a monetização funcionar [H]:**
+- O preço do Alvará em ouro precisa ficar alcançável para o não pagante (meta do [05d](../01-pesquisa/05d-rmt-recomendacao.md): de 30% a 65% do premium obtido com ouro). Se o ouro inflar, a rota grátis fecha (as gemas do GW2, [F07](../01-pesquisa/fichas/F07-guild-wars-2.md)).
+- Limites de Alvarás por conta no Câmbio (o [05d](../01-pesquisa/05d-rmt-recomendacao.md) sugere simular tetos semanais de venda e mensais de compra) **a reconciliar com o módulo 07**, respeitando a decisão de transferência livre. Com o Alvará divisível, os limites passam a ser em quantidade de Alvarás, não em unidades de token.
+- O Baú não pode derrubar o preço da decoração feita pelos ofícios (seção 5.8).
+
 <!-- continua -->

@@ -1,6 +1,16 @@
 # Notas de integração do GDD (arquivo de trabalho)
 
-## 07 — Economia (1ª versão em 2026-11-11; revisão para Alvará em coins em andamento)
+## 07 — Economia: revisão para coins e contestação (2026-11-11)
+
+- **Alvará em unidades inteiras, creditado por doação** [H]: 1 Alvará ≈ R$ 0,10; premium de 30 dias ≈ 200 Alvarás (faixa 149–249); Baú ≈ 40 Alvarás; preço de abertura esperado ≈ 75 ouro por Alvará. Gastar na loja destrói o Alvará (dreno). Cada doação vira um lote no livro-razão com sua carência; a loja gasta primeiro o saldo em carência e a transferência só sai do saldo livre.
+- **Contestação (§6.4):** conta suspensa até refazer a doação; quem recebeu de boa-fé fica com o que recebeu; fraude organizada vai para revisão; disjuntor por taxa de disputas mantido; dívida em ouro removida de todo o módulo.
+- **Câmbio:** ordens de 10 a 2.000 Alvarás; compra máxima de 2.000 por conta a cada 7 dias; leilão a cada hora mantido.
+- **Troca:** Alvará paga 12% (preço do Câmbio × quantidade). **Cartório:** lance inicial de 300 Alvarás, incremento de 5%; contestação do comprador suspende a conta dele com o personagem; a do vendedor não desfaz a venda.
+- **Painel e simulação:** metas medidas pelo premium em ouro; novos indicadores de estoque de Alvarás e de Alvará como moeda paralela (alarme se passar de 10% das Trocas de itens); 53 parâmetros (novos: Alvarás por real, premium em Alvarás, contestação a 0,3% das doações com 50% regularizando e 60% já transferidos, Alvarás guardados, lance mínimo do Cartório, preço do Baú); 12 cenários de estresse (novos: onda de contestações, despejo do estoque guardado).
+- **Tensões registradas (risco assumido pelo Gabriel):** suspensão da conta inteira × recomendação do 05d e caso FTC × Epic (CDC, art. 51); moeda divisível que paga outros jogadores se aproxima de ativo virtual (Lei 14.478/2022) e se afasta do circuito fechado (Lei 12.865/2013); "doação" não afasta o arrependimento de 7 dias (CDC, art. 49).
+- **A reconciliar:** com o 11 (Alvarás por real, pacotes, preços do premium e do Baú, teto de doação) e com o 13 (fraude organizada, sanções de exploit).
+
+## 07 — Economia (1ª versão em 2026-11-11, antes da revisão para coins)
 
 **Decisões centrais [H]:**
 - **O ouro só nasce em quatro lugares:** venda a NPC (só matéria-prima bruta, com preço decrescente no dia: `G = (H/ln2)·ln(1 + B·ln2/H)`, H = 300, preço-base em 40% do valor de referência), encomendas, cercos e eventos com inscrição, e o começo do jogo. O combate idle não solta ouro.
