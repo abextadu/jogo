@@ -357,4 +357,207 @@ Materiais próprios da masmorra (negociáveis, com teto diário), **moldes** (re
 
 [H] *Referência:* as masmorras do IdleOn, com multiplicador por tamanho do grupo ([B02](../01-pesquisa/fichas/B02-legends-of-idleon.md)); as do Milky Way Idle, com chaves, recomeço na onda 1 se o grupo morre e **expulsão de quem fica 5 min sem dar "pronto"** ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)), que é justamente o que evitamos; e o saque sem disputa do GW2 ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3). *Diferença:* cópia congelada, prazo de horas e Encruzilhada com escolha padrão. *Problema:* grupo síncrono exige horário marcado, contra o P12. *Comportamento:* formar grupos de amigos pelo bônus; guildas com "noite de masmorra" opcional. *Risco:* mesas que nunca enchem de madrugada (mitigação: ajudantes); abuso da cópia, entrando com o melhor equipamento e vendendo-o depois (mitigação: desgaste cobrado no compromisso); [F] saque leiloado que cria demanda por ouro, como o GDKP que a Blizzard proibiu ([00-sintese](../01-pesquisa/00-sintese.md), insight 22) (mitigação: baú individual).
 
-<!-- PARTE 3 -->
+## 10. Chefes e momentos ativos
+
+### 10.1 Chefes
+
+| Nível | Onde aparece | Como se luta |
+|---|---|---|
+| **Elite de região** | Encontros raros na expedição: o bicho grande, a Caipora ou o Curupira tomados | Na própria expedição, pelas regras |
+| **Chefe de masmorra** | Na última sala | Pela cópia congelada do grupo (9.2) |
+| **Encantado maior** | Uma região por ciclo (ex.: o Mapinguari na Mata Funda) | **Assalto do Arraial**, assíncrono, com o servidor inteiro |
+| **Cabeça da maré** | A última onda do cerco | No cerco (11) |
+
+**O assalto do Arraial** (o chefe mundial do jogo) [H]:
+- **Anúncio** com 48 h de antecedência e **janela de investidas de 48 h**, para caber em qualquer fuso e em qualquer rotina.
+- **Inscrição** a qualquer momento da janela. Cada inscrito tem **2 investidas**: lutas simuladas de 3 min da cópia congelada do personagem, com os ajudantes, contra o encantado.
+- **Vida e Bruma do encantado são compartilhadas pelo servidor** e escalam com a população ativa da semana.
+- **Desfechos:**
+  - *Libertado* (a Bruma zera antes): a Bruma da região recua 15 pontos, abre-se uma área nova da região, cada participante recebe a dádiva desse encantado (na primeira vez) e uma carta de contratação de ajudante.
+  - *Dispersado* (a Vida zera antes): a região fica calma por uma semana (Bruma da região −5) e os participantes recebem essência e restos raros.
+  - *Fim da janela sem desfecho:* o encantado recua ao fundo da mata. **A Vida volta, a Bruma não**: o dano de clareza acumulado fica para o próximo ciclo, e a libertação pode ser construída ao longo de semanas.
+- **Recompensa por patamar**, sem ranking de dano: *bronze* (1 investida ou mais), *prata* (contribuição igual ou acima da mediana) e *ouro* (duas vezes a mediana, teto). Pagam 75%, 85% e 100% da recompensa. A contribuição soma o dano na Vida, **duas vezes** o dano na Bruma e a cura. [F] É o modelo das medalhas do Guild Wars 2, que pagam 75%, 85% ou 100% e metade quando o evento falha ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3).
+- **Quase tudo preso à conta.** A parte negociável tem orçamento por assalto ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3, "chefe como torneira").
+
+**Mecânicas que vêm da lenda** [H] (as fontes estão na seção 12):
+
+| Encantado maior | Mecânica | Como as regras respondem |
+|---|---|---|
+| **Mapinguari** (Mata Funda, T4) | *Ponto fraco no umbigo:* golpes comuns causam 20%; críticos acertam o ponto fraco e causam o dano cheio. *Fedor:* aura de náusea. *Grito:* medo em todos a cada 30 s. | Builds de crítico (Batedor, Caçador *Atirador*); "QUANDO o chefe preparar o Grito → Pé no chão ou Água de clareza"; Chá de raiz contra a náusea |
+| **Boitatá** (Campos, T3) | *Olhar de brasa:* anunciado 2 s antes. Quem agir durante o olhar fica cego e queima; quem esperar não sofre nada. Resiste a fogo; fraco contra lama. | "QUANDO o chefe preparar o Olhar de brasa → Esperar", fiel à lenda de que quem encontra o boitatá deve ficar imóvel e de olhos fechados |
+| **Boiúna** (Rios, T3 e T5) | *Banzeiro:* a cada 20 s, uma onda arrasta quem não estiver firme, e o arrastado perde 2 ações. Imune a enleio. | Guardião com Pé no chão, dádiva *Escama da Boiúna*, regras que guardam ânimo para depois do banzeiro |
+| **Mãe-do-ouro** (Serra das Lavras, T4) | *Desabamento:* a cada 25 s, cai pedra num alvo, a menos que haja Muralha ativa. *Clarão de ouro:* cega quem estiver de frente. | Guardião com Muralha no tempo certo; Batedor desarma o desabamento com Olho vivo |
+
+### 10.2 Momentos ativos
+
+**Orçamento do ativo** [H]: somadas, as janelas ativas dão **no máximo +25%** sobre o valor diário de combate do ausente, e nenhuma é necessária para nada. A tela do personagem mostra as duas taxas: a **ausente**, que é 100% (o offline rende igual ao online, como no Melvor, segundo [B01](../01-pesquisa/fichas/B01-melvor-idle.md)), e a **ativa**, de até 125%.
+
+| Janela | Como funciona | Ganho | Para o ausente |
+|---|---|---|---|
+| **Arrancada** | Ganha-se uma carga a cada 4 h, inclusive offline, até 6. Gastar uma dá 10 min de combate atento: o jogador escolhe o foco (pele, essência, achados ou XP), assiste e pode comandar. | Drops ou XP do foco × 1,5 por 10 min | As cargas esperam. O ausente só adia, nunca perde |
+| **Encruzilhada** na expedição | Cerca de uma a cada 45 min de expedição: um acontecimento com 2 ou 3 escolhas ("rastro de bicho grande", "fonte de água limpa", "uma visagem que chora"). Janela de 2 h; notificação opcional. | A escolha certa no contexto rende +5% a +10% no trecho seguinte | Vale a escolha padrão do plano: *segura* ou *ousada* |
+| **Encruzilhada** na masmorra | Voto do grupo, janela de 4 h (9.2) | Rota melhor e salas bônus | Vale a escolha padrão da mesa |
+| **Investida ao vivo** | No assalto a um encantado maior, gastar uma carga de Arrancada para lutar ao vivo | +25% de contribuição naquela investida | A investida automática vale 100% |
+| **Clarões do cerco** | Entre as ondas, os inscritos que estão online decidem o uso do Farol e do Arsenal (11.4) | Ondas mais bem defendidas e +10% de Mérito para quem votou | Vale o plano de defesa da cidade |
+
+**A conta do teto:** 6 cargas × 10 min × +50% equivalem a uns 30 min de combate a mais por dia. Para quem luta cerca de 8 h por dia, isso é +6%. Somadas as Encruzilhadas, um jogador muito presente chega a uns +12% a +15%. O teto de +25% fica como folga para eventos.
+
+**O que é só do ausente:** a **paciência da mata**. Expedições que rodam 6 h ou mais sem mudança no plano passam a ter chance de encontros raros "da madrugada", com drops de coleção que não saem para quem mexe na expedição o tempo todo. [F] O IdleOn reserva drops raros de skill para personagens ausentes, para que nenhum lado seja a versão pior do outro ([B02](../01-pesquisa/fichas/B02-legends-of-idleon.md)).
+
+**Decisão, nunca reflexo.** Nenhuma janela premia tempo de reação; todas são escolhas validadas no servidor, com prazo de minutos ou horas. Um bot ganha, no máximo, o mesmo que um humano, porque o ganho é limitado pelas cargas.
+
+[H] **Quatro perguntas.** *Referência:* os golden cookies do Cookie Clicker e as cargas que se acumulam com o jogador fora ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 11). *Diferença:* tudo é decisão e tudo se acumula. *Problema:* um idle sem motivo para abrir; e, no outro extremo, [F] a janela fixa do Tap Titans 2, sem tolerância, em que o clã cobra quem falta ([B06](../01-pesquisa/fichas/B06-tap-titans-2.md)), e os minigames obrigatórios do Idle Slayer, citados em 4 de 10 reviews negativas recentes ([00-sintese](../01-pesquisa/00-sintese.md), insight 15). *Comportamento:* 2 a 6 sessões curtas por dia ([00-biblia](00-biblia.md), 6.1). *Risco:* a janela virar obrigação. Mitigação: o teto, as cargas acumuláveis e a regra de que nada essencial é exclusivo do ativo.
+
+## 11. Cercos
+
+[H] O cerco é o grande momento de combate do jogo e o maior consumidor coletivo da economia. Toda semana, a Bruma sobe em maré e os assombrados atacam o Arraial. A defesa é assíncrona: quem se inscreve até 24 h antes luta com a cópia congelada do personagem, esteja online ou não.
+
+### 11.1 A semana do cerco
+
+| Quando | O que acontece |
+|---|---|
+| **D−7** (logo depois do cerco anterior) | Maré baixa: começa o reparo da Integridade e abre a inscrição. O Presságio mostra só a intensidade da próxima maré. |
+| **D−6 a D−1** | Os vigias acumulam pontos e revelam o Presságio por etapas (11.2). A cidade produz provisões e deposita no **Arsenal**. A Câmara publica Encomendas de cerco (módulo 09). |
+| **T−24 h** | **Fecha a inscrição.** O servidor congela a cópia de cada inscrito, cobra o desgaste do cerco (8 pontos por peça) e reserva o cinto. |
+| **T** (horário escolhido pela Câmara dentro de uma faixa; padrão: sábado, 20 h, horário de Brasília) | Resolução em **5 ondas**, uma a cada ~20 min, durante 2 h. Clarões entre as ondas. |
+| **T+2 h** | Resultado, Mérito, baús, Fôlego do Arraial e abertura do reparo. |
+
+[F] A inscrição prévia vem da guerra de guildas do Shakes & Fidget, com 10 h de preparação ([D02](../01-pesquisa/fichas/D02-shakes-and-fidget.md)), e do chefe mundial do IdleMMO, com fila até 2 h antes ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3). [H] **A diferença:** no Shakes & Fidget, quem não se inscreve defende com 50% da vida e o inativo com 10%. Aqui, **quem não se inscreve não luta e não pesa**: a força do cerco não é calculada pela lista de quem faltou (11.3).
+
+### 11.2 O Presságio
+
+- **Pontos de vigia:** cada hora de expedição de Vigia rende 10 pontos (o Batedor, 20; com o marco *Vigia de longe*, 30).
+- **Meta de vigia:** 3 pontos por jogador ativo na semana. Exemplo: com 3.000 ativos, 9.000 pontos, ou umas 450 horas de Batedor somadas na cidade.
+
+| Etapa | O que se revela |
+|---|---|
+| 25% da meta | A família predominante (bichos, almas ou encantados) |
+| 50% | As fraquezas (fogo, clareza, prata, lama) |
+| 75% | A ordem e o tamanho das ondas |
+| 100% | O cabeça da maré e a sua habilidade |
+
+- **Provisão certa vale mais:** a que acerta uma fraqueza revelada vale × 1,5; a genérica, × 1,0; a errada (óleo de fogo contra o Boitatá, que resiste a fogo), × 0,5.
+
+[H] Quanto antes a cidade enxerga, mais dias os ofícios têm para produzir o que importa. Os Batedores viram os olhos da cidade, e a informação vira coordenação entre quem luta e quem produz.
+
+### 11.3 Como se calcula o cerco
+
+**Postos** [H]:
+
+| Posto | Vocação afim (× 1,3) | Capacidade | Função |
+|---|---|---|---|
+| **Muralha** | Guardião | 35% dos inscritos | Segura as ondas |
+| **Torres** | Caçador, Encantador | 35% | Dano à distância |
+| **Enfermaria** | Erveiro | 15% | Reduz a fadiga das ondas |
+| **Vigia e sabotagem** | Batedor | 15% | Tira até 10% da força da 5ª onda |
+
+Acima da capacidade, cada defensor a mais conta 50%. Uma vocação fora do posto afim conta × 1,0.
+
+**Poder de cerco (PC) de um defensor.** No fechamento da inscrição, o servidor faz a cópia congelada lutar 60 s contra o **assombrado-padrão da Era** (o mesmo para todos) e mede:
+
+`PC = dano causado + cura feita + 0,5 × dano absorvido no lugar de aliados`
+
+Exemplo: o Caçador nível 30 da seção 4.3 tem PC perto de 900; um Guardião do mesmo nível, uns 950 (500 de dano e 900 absorvidos); um Erveiro, uns 1.000 (300 de dano e 700 de cura). [H] Medir pela simulação, e não por uma soma de atributos, deixa cada vocação contribuir do seu jeito.
+
+**Defesa de cada onda:**
+
+`D(onda) = Σ (PC × afinidade do posto × fator de capacidade) × fadiga + G + P(onda)`
+
+- **Fadiga** na onda *i*: `1 − 0,08 × (i − 1) × (1 − cobertura)`, sendo a cobertura da Enfermaria `mín(1; PC da Enfermaria / (0,15 × PC total))`. Sem Erveiros, os defensores chegam à 5ª onda com 68% da força.
+- **G — a Guarda do Arraial.** Os guardas NPC da cidade, um para cada 10 jogadores ativos, com PC de 300 cada: `G = guardas × 300 × (1 + 0,1 × nível da Muralha) × fração equipada × Integridade / 100`. A **fração equipada** é a parte dos guardas que tem um kit (arma e armadura) no Arsenal. **A obra da Muralha e os kits da Guarda são o que o ausente deixou pronto para a cidade.**
+- **P — provisões** do Arsenal gastas na onda. Cada unidade vale, por tier, 20 / 30 / 45 / 65 / 90 / 120 (T1 a T6), vezes o acerto com o Presságio (1,5 / 1,0 / 0,5). O plano de defesa distribui as provisões pelas ondas (padrão: proporcional à força de cada uma).
+
+**Força de cada onda:** `F(onda) = F_ref × m`, com m = 0,6 · 0,8 · 1,0 · 1,2 · 1,6 (da 1ª à 5ª onda).
+
+**F_ref, a força de referência, é elástica:**
+- No primeiro cerco de um Arraial: `F_ref = 400 × jogadores ativos na semana`.
+- Depois, muda com o resultado: Vitória plena × 1,10 · Vitória × 1,05 · Resistência × 0,97 · Queda × 0,85.
+- Piso de 250 e teto de 700 × jogadores ativos. Cada Era nova multiplica por 1,2 e traz uma ameaça nova.
+- **Rigor**, escolhido pela Câmara dentro de faixas (módulo 09): *Brando* (× 0,85 na força, × 0,8 nas recompensas) ou *Bravo* (× 1,2 na força, × 1,3 nas recompensas).
+
+**Resultado de cada onda:** `r = D / F`. Se r ≥ 1, a onda é repelida. Se r < 1, abre-se uma brecha, e a **Integridade** da Muralha perde `40 × (1 − r)` pontos.
+
+**Resultado do cerco**, pela Integridade perdida nesta semana:
+
+| Resultado | Condição |
+|---|---|
+| **Vitória plena** | As 5 ondas repelidas |
+| **Vitória** | Perda de até 15 pontos |
+| **Resistência** | Perda de 15 a 40 pontos |
+| **Queda** | Perda de mais de 40 pontos |
+
+**Exemplo calculado.** Arraial com 3.000 jogadores ativos na semana; F_ref = 400 × 3.000 = **1.200.000**.
+- **Inscritos:** 900 (30%), distribuídos nos postos dentro da capacidade (315 na Muralha, 315 nas Torres, 135 na Enfermaria, 135 na Vigia). PC médio de 1.000; 80% estão no posto afim, o que dá afinidade média de 1,24. **Σ = 900 × 1.000 × 1,24 = 1.116.000.**
+- **Enfermaria:** 135 × 1.000 × 1,24 = 167.400, que é exatamente 15% do total: cobertura 1 e nenhuma fadiga.
+- **Guarda:** 300 guardas × 300 × 1,3 (Muralha nível 3) × 0,9 (90% equipados) × 1,0 = **105.300**.
+- **Arsenal:** 24.000 provisões T1 e T2 (valor médio 25); com o Presságio em 50%, 60% delas acertam a fraqueza. Valor efetivo médio: 25 × (0,6 × 1,5 + 0,4 × 1,0) = 32,5; total de **780.000**, distribuído pelas ondas.
+- **Vigia:** com cobertura total, a 5ª onda perde 10%.
+
+| Onda | m | F | P da onda | D | r | Perda de Integridade |
+|---|---|---|---|---|---|---|
+| 1 | 0,6 | 720.000 | 90.000 | 1.311.300 | 1,82 | 0 |
+| 2 | 0,8 | 960.000 | 120.000 | 1.341.300 | 1,40 | 0 |
+| 3 | 1,0 | 1.200.000 | 150.000 | 1.371.300 | 1,14 | 0 |
+| 4 | 1,2 | 1.440.000 | 180.000 | 1.401.300 | 0,97 | 1,1 |
+| 5 | 1,6 | 1.728.000 (−10%) | 240.000 | 1.461.300 | 0,85 | 6,2 |
+
+**Perda total: 7,3 pontos → Vitória.** Na semana seguinte, F_ref sobe 5%.
+**A mesma cidade sem Erveiros:** a fadiga deixa os defensores com 84%, 76% e 68% da força nas ondas 3, 4 e 5. A 3ª onda passa raspando (r = 0,99), a 4ª abre brecha de 8,5 pontos e a 5ª, de 14,4. A perda total vai a uns 23 pontos: **Resistência**. É o argumento numérico para a cidade ter suporte, sem obrigar ninguém.
+
+### 11.4 Clarões, plano de defesa e tetos
+
+- **Clarões.** Entre uma onda e outra há 10 min em que os inscritos online votam:
+  - **acender o Farol** (uma vez por cerco): +20% na defesa de uma onda;
+  - **abrir o Arsenal:** antecipar até 30% das provisões restantes para a onda seguinte.
+- **Plano de defesa.** Sem ninguém online, vale o plano escrito pela Câmara: até 5 regras no mesmo formato das regras de combate. Ex.: "QUANDO a onda tiver maioria de encantados → acender o Farol". [H] É o sistema de regras aplicado à cidade, e a forma de o ausente (e o vereador) decidir antes.
+- **Tetos.** Cada marco de cerco dos caminhos ([03-personagem](03-personagem.md), seção 6.2) tem teto de 10%. A soma das reduções de força numa onda não passa de 20%. *Pedra do vau* e *Enfermaria* estão sujeitos ao fator de capacidade. Sem teto, a cidade inteira escolheria o mesmo marco e o cerco viraria uma conta resolvida.
+
+### 11.5 Recompensas e consequências
+
+**Mérito do defensor:**
+
+`Mérito = 100 × (0,6 + 0,4 × mín(1,5; PC / PC mediano)) × fator do resultado`
+
+O fator do resultado é 1,3 na Vitória plena, 1,15 na Vitória, 1,0 na Resistência e 0,8 na Queda. **Perder ainda dá Mérito: ninguém é punido por defender.**
+
+| Defensor, numa Vitória | Conta | Mérito |
+|---|---|---|
+| Mediano | 100 × (0,6 + 0,4 × 1,0) × 1,15 | 115 |
+| Muito forte (no teto de 1,5) | 100 × (0,6 + 0,4 × 1,5) × 1,15 | 138 |
+| Novato (25% do PC mediano) | 100 × (0,6 + 0,4 × 0,25) × 1,15 | 80,5 |
+
+[H] O mais forte ganha 1,7 vez o que ganha o novato, não 10 vezes. O piso de 60% premia aparecer; o teto de 1,5 impede que o Mérito vire placar de baleia.
+
+**Mérito do fornecedor:**
+- Provisões, kits da Guarda e materiais de reparo entregues ao Arsenal valem Mérito pelo **preço de referência do sistema** (a cesta do IPA), não pelo pico do mercado.
+- **O que o próprio jogador produziu conta 100%; o que ele comprou conta 50%.** O livro-razão sabe quem produziu cada lote ([00-biblia](00-biblia.md), P9).
+- A partir de 300 de Mérito de fornecimento na semana, a taxa cai à metade.
+- [H] O desconto para o item comprado estreita o caminho Alvará → ouro → itens → Mérito, sem fechá-lo de todo (a reconciliar com 07 e 09).
+
+**Para todos os inscritos:** um baú do cerco, preso à conta (materiais, cosméticos e títulos), melhor quanto melhor o resultado.
+
+**Para a cidade inteira, inclusive os ausentes:** o **Fôlego do Arraial**. Vitória plena: +10% de XP de vocação e de ofício por 7 dias; Vitória: +5%. Nenhum Fôlego mexe em drenos (desgaste, consumo, taxas). [F] O Milky Way Idle converte as taxas do mercado em bônus para o servidor inteiro, e o dreno passa a ser lido como contribuição ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)).
+
+**Se a cidade perde (Queda):**
+- **A Integridade cai.** Isso só afeta a Guarda no cerco seguinte. Abre-se uma Encomenda de reparo com Mérito × 1,5: a reconstrução vira conteúdo.
+- **A Bruma avança:** uma região de fora ganha +15 de Bruma da região por 7 dias. Fica mais perigosa, mas também rende mais essência e mais encantados para libertar.
+- **A maré seguinte vem mais fraca** (F_ref × 0,85). A Bruma também se cansa, e a cidade não entra numa espiral de derrotas.
+- **Nunca acontece:** perda de item pessoal, de nível, de Mérito, de obra concluída ou de bônus de obra. **O ausente não perde nada**; só deixa de ganhar o Mérito e o baú daquele cerco.
+
+### 11.6 O que o cerco consome da cidade
+
+Por **1.000 jogadores ativos**, numa semana normal [H] (a reconciliar com 06, 07 e 09):
+
+| Consumo | Quantidade | Ofícios que abastecem |
+|---|---|---|
+| Provisões no Arsenal (poções, óleos, flechas, rancho do cerco) | ~8.000 unidades | Alquimia, Carpintaria, Ferraria, Culinária |
+| Kits da Guarda (arma e armadura) | 100 guardas; ~8 kits gastos por semana (8% de desgaste por cerco), mais o que faltar para equipar todos | Ferraria, Alfaiataria, Curtume, Carpintaria |
+| Reparo da Integridade (~10 pontos por semana) | ~1.000 tábuas, 500 lingotes e 200 blocos de pedra | Carpintaria, Fundição, Mineração |
+| Desgaste dos defensores (~300 inscritos × 6 peças × 8 pontos) | ~32 peças-equivalentes gastas por semana | Ferraria, Alfaiataria, Carpintaria |
+| Consumíveis dos cintos dos inscritos | Cerca de metade do que foi reservado | Alquimia, Culinária |
+
+### 11.7 Quatro perguntas
+
+[H] *Referência:* a guerra com inscrição do Shakes & Fidget ([D02](../01-pesquisa/fichas/D02-shakes-and-fidget.md)), os dois ataques do Clash of Clans, as janelas anunciadas do EVE ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 1) e as metas comunitárias, a mecânica de outros gêneros com melhor relação entre benefício e risco ([03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), ranking). *Diferença:* o cerco **consome o que a cidade produziu** (Arsenal, kits da Guarda, Muralha), os Batedores revelam o que vem, a dificuldade se ajusta ao resultado, e quem falta não pesa. *Problema:* um momento coletivo sem plantão e um dreno coletivo que pareça contribuição, e não imposto. *Comportamento:* uma semana com ritmo (vigiar, produzir, inscrever, assistir se quiser); artesãos que nunca lutam também defendem a cidade pelo Arsenal. *Risco:* ver a seção 15.
+
+<!-- PARTE 4 -->

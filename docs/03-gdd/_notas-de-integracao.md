@@ -19,6 +19,18 @@
 
 > Interfaces entre módulos, propostas de mudança na bíblia e conflitos, registrados à medida que os relatórios chegam. Servem à simulação (módulo 08) e à revisão de consistência do fim da Fase 3.
 
+## 14 — Arte e UI (concluído em 2026-11-11)
+
+**Direção de arte recomendada: "Folheto" (xilogravura de cordel)** — tinta sobre papel, duas chapas de cor por região; a Bruma é papel em branco que apaga a gravura, e cada obra concluída "entinta" o mapa; encantados e assombrados se distinguem por textura (tinta limpa ou borrada), o que funciona para daltônicos; mapa do Arraial na grade modular da direção "Ladrilho". Placar: Folheto 38, Ladrilho 34, Aquarela de rio 23. Lastro: registro do cordel no Iphan (2018), J. Borges, Samico, Movimento Armorial; nos jogos, Pentiment e Darkest Dungeon. Proposta: encomendar 3 a 6 gravuras reais por Era a xilogravuristas, pagos e creditados. Tipografia OFL: Londrina Solid, Gabarito, Atkinson Hyperlegible Next.
+
+**UI:** cinco abas (Arraial, Oficina, Mercado, Bruma, Você); ações frequentes a até 2 toques; Folheto da volta sem "coletar" nem "dobrar"; valor "previsto" × "confirmado pelo servidor"; R$ ao lado de todo preço em Alvará e limite de gasto no topo da loja; chances do Baú na tela de compra, abertura sem roleta, sem mostrar valor em ouro; no máximo 4 avisos por dia, silêncio das 22h às 8h; WCAG 2.2 AA, alvos de 44 px, "modo tranquilo" na obra-prima; PWA com offline só de leitura.
+
+**Wireframes:** `14-wireframes/index.html` + 7 telas (a-arraial a g-loja). Preços, limites e chances são [H] a reconciliar com 02, 06, 07, 09, 11 e 13.
+
+**Propostas na bíblia (aplicadas pelo diretor em 2026-11-11):** "Folheto da volta" no glossário; "desbravar" trocado por "reencontrar e curar"; "encantados" e "Pindorama" marcados como provisórios até a consultoria cultural. **Pendente:** registrar "offline só de leitura" como decisão vigente (reconciliar com o 13).
+
+**Riscos:** caricatura regional e apropriação do estilo de gravadores; hachura fina que cansa no celular (sem hachura abaixo de 48 px e modo liso); consultoria de fachada (painel pago com seis perfis e veto sobre representação); o Baú com cara de cassino (risco assumido); push no iPhone depende de instalar o PWA.
+
 ## 09 e 10 — Social e live ops (concluídos em 2026-11-11)
 
 **Decisões centrais [H]:**

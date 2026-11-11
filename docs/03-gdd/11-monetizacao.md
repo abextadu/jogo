@@ -384,4 +384,76 @@ A soma dos limites (15) passa do teto (10), para dar escolha. **Venda no mercado
 
 > **Quatro perguntas** — Referência: Halo Infinite (não expira), Helldivers 2 (passes antigos à venda), Hero Pass do RS3 (o que não fazer) · Problema: meta de temporada e receita recorrente barata sem FOMO nem "dinheiro e tempo" · Comportamento: o jogador completa o passe no seu ritmo, cumprindo feitos que já fazem parte do jogo; os moldes da trilha grátis criam demanda para os ofícios · Risco: sem urgência, a receita da Era se dilui (aceito pelo [06](../01-pesquisa/06-monetizacao-retencao.md)); o teto semanal pode irritar o ativo, e por isso é acumulável e o passe tem folga de 30 feitos.
 
+## 7. Teto de doação, proteção do jogador vulnerável e contestação
+
+### 7.1 Teto de doação
+
+[H] O desenho mais robusto encontrado no [06](../01-pesquisa/06-monetizacao-retencao.md) (§5.3) é o teto de produto, igual para todos, e não o teto por idade ou por lei: a Coreia mostra que o teto externo cai sob pressão; o Japão, que a autodeclaração o esvazia. Como o jogo inteiro é 18+, o aumento não depende de idade, e sim de pedido explícito e espera.
+
+| Nível | Teto mensal [H] | Como se chega | Duração |
+|---|---|---|---|
+| **Padrão** | **R$ 250** | Todos começam aqui | Permanente |
+| Ampliado | R$ 600 | Pedido na tela de limites, confirmação por segundo fator, **espera de 72 horas** | 90 dias; depois volta ao padrão, salvo novo pedido |
+| Máximo | R$ 1.200 (teto absoluto) | Estar no ampliado há 30 dias, novo pedido, **espera de 7 dias** e uma autoavaliação curta e neutra ("o seu gasto está dentro do que você planeja?"), que não bloqueia nada | 90 dias |
+
+**Por que R$ 250 [F + H].** Na pesquisa da Serasa com a Gamers Club (jul./2025, 4.585 entrevistas), 77% dos jogadores disseram gastar até R$ 250 por mês com jogos digitais ([06](../01-pesquisa/06-monetizacao-retencao.md), §2.3). [H] O teto padrão cobre o orçamento mensal inteiro de jogos de três em cada quatro jogadores e comporta a maior faixa de doação (R$ 250) num mês.
+
+**Regras que valem em todos os níveis [H]:**
+- **Toda doação conta,** inclusive a parcelada (o valor inteiro, no mês da doação) e a feita para presentear.
+- **Até 5 doações em 24 horas,** de qualquer valor. *Por quê:* limitar o número de transações por intervalo é a recomendação de Spiel et al. ([02a](../01-pesquisa/02a-teoria-design-idle.md), §10.4).
+- **Doação acima de R$ 100 pede confirmação em dois passos,** com o total do mês na tela e o aviso de que não há reembolso.
+- **O sublimite do Baú** (100 Alvarás por mês, seção 5.7) vale para a compra na loja, de qualquer origem dos Alvarás.
+- **O Cartório não fura o teto.** Uma conta de 600 Alvarás exige o nível ampliado, dois meses e meio de doação no padrão ou Alvarás comprados com ouro. *Por quê:* a compra de conta é a maior compra única do jogo, e o teto protege justamente aí.
+- **O jogador pode baixar o próprio teto a qualquer momento, com efeito imediato.** Aumentar segue a tabela acima.
+
+**O teto limita a doação em reais, não o uso de Alvarás.** Alvarás recebidos de outros jogadores (Câmbio, Troca, Cartório) não contam no teto de quem os recebe; contam no teto de quem doou. Os limites de Alvarás por conta no Câmbio são assunto do módulo 07.
+
+**O que isso faz com as baleias [H].** Com o teto, o maior doador possível doa R$ 14.400 por ano. Na Jagex, os tetos eram de £1.000 por semana e £5.000 por mês ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)). No cenário base da seção 8, o 1% que mais doa responde por cerca de 12% da receita, contra 48% da receita vinda de 0,19% dos jogadores no F2P mobile medido pela Swrve ([06](../01-pesquisa/06-monetizacao-retencao.md), §4.3). É o objetivo: a receita não depende de quem perdeu o controle.
+
+### 7.2 Ferramentas de cuidado, ligadas por padrão
+
+**Como não há reembolso, a proteção precisa acontecer antes da doação.** Arrependimento depois não tem volta pelo estúdio, então o desenho põe pausas, informação e limites no caminho.
+
+| Ferramenta | Como funciona [H] | Referência |
+|---|---|---|
+| **Aviso antes de toda doação** | "Doações não são reembolsadas. Se o pagamento for contestado no banco, a conta fica suspensa até a regularização." Com o total do mês e o teto que resta | Decisões do Gabriel; [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §4 (dever de informação) |
+| **Painel de gasto** | Sempre visível na loja: doações do mês, dos últimos 12 meses e da vida da conta, em reais, com a lista de compras na loja | [06](../01-pesquisa/06-monetizacao-retencao.md), §5.4 |
+| **Limites pessoais** | O jogador fixa um teto menor por mês, por semana, para o Baú, ou zero para o Baú | FIFA Playtime ([06](../01-pesquisa/06-monetizacao-retencao.md), §5.3) |
+| **Fechar a loja para mim** | 30, 90 ou 180 dias, ou permanente. Durante o prazo, não se doa, não se compra na loja e nenhum Baú se abre, nem os comprados no mercado. Reabrir só depois do prazo, nunca antes. A conveniência em curso continua | Princípio 10 do [06](../01-pesquisa/06-monetizacao-retencao.md) |
+| **Nada de pressão** | Sem contagem regressiva, sem oferta personalizada, sem notificação de promoção, sem e-mail de "volte e doe", sem oferta na tela de retorno do ausente ([12](12-onboarding.md)) | Petrovskaya e Zendle ([06](../01-pesquisa/06-monetizacao-retencao.md), §2.3); Decreto 12.880, art. 10 ([05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2) |
+| **Apoio** | Link fixo para canais de apoio a quem sente que perdeu o controle do jogo ou do gasto (lista a montar com especialista e a validar) | GambleAware ([06](../01-pesquisa/06-monetizacao-retencao.md), §5.1) |
+
+### 7.3 Sinais de risco e resposta graduada
+
+[H] O gasto pesado em caixas se correlaciona com a gravidade do jogo problemático (ρ = 0,34), e não com a renda (ρ = 0,02) (Close et al., [06](../01-pesquisa/06-monetizacao-retencao.md), §5.1). O jogo observa sinais simples, sem inferir saúde e sem usá-los para vender:
+
+| Sinal | Resposta |
+|---|---|
+| Teto atingido 3 meses seguidos | **Nível 1:** mensagem neutra com o painel e um convite para definir um limite pessoal |
+| Doação que sobe 3 meses seguidos | Nível 1 |
+| Máximo de aberturas de Baú no dia, 3 dias seguidos | **Nível 2:** pausa de 24 horas no Baú, avisada, e convite para fixar um limite |
+| Dois pedidos de aumento de teto em 6 meses | Nível 2: o segundo aumento fica bloqueado por 90 dias |
+| Vários sinais juntos | **Nível 3:** oferta de conversa com uma pessoa da equipe de cuidado (opcional) e indicação de apoio |
+
+**Regras:** o sinal nunca gera oferta, desconto nem bônus; nunca reduz benefícios já pagos; o jogador vê o motivo de cada resposta. **Validar com advogado** a base legal do tratamento desses dados (LGPD, legítimo interesse ou proteção do titular) e o aviso de privacidade.
+
+### 7.4 Sem reembolso, e o que acontece na contestação pelo banco
+
+**Reembolso.** O estúdio não reembolsa doações (decisão do Gabriel; risco registrado na seção 2.6). O jogo diz isso antes de toda doação (seção 7.2), na tela do Baú e na carta pública.
+
+**Contestação forçada pelo banco** (chargeback no cartão, que o titular pode abrir por cerca de 120 dias, e MED do Pix, em até 80 dias, [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.4). **Decisão do Gabriel: a conta fica suspensa até regularizar, isto é, até o jogador pagar de novo o valor contestado.** O desenho [H]:
+
+| Elemento | Regra [H] |
+|---|---|
+| O que dispara | O aviso de chargeback ou de MED sobre uma doação daquela conta |
+| O que a suspensão faz | A conta não joga, não negocia e não transfere enquanto estiver suspensa. **Nada é apagado:** progresso, itens, ouro e Alvarás ficam guardados |
+| Como se regulariza | Pagando de novo o valor contestado, por Pix ou cartão. A conta volta na hora. Proposta compatível com a decisão: o jogador pode abater parte do valor com Alvarás que ainda tenha (cada Alvará abate R$ 1,00), devolvendo o que recebeu |
+| Se o estúdio ganhar a disputa no banco | A suspensão cai sozinha |
+| Aviso | Mensagem privada, com o motivo, o valor e o caminho para regularizar, e atendimento humano em português |
+| Discrição | **A suspensão nunca é pública.** Outros jogadores veem só "jogador indisponível". *Por quê:* na cobrança de débitos, o CDC proíbe expor o consumidor a ridículo ou constrangimento (art. 42); validar com advogado |
+| Alvarás que já passaram a outros jogadores | A reconciliar com o módulo 13. Proposta: o recebedor de boa-fé fica com eles, e o livro-razão rastreia e congela o que ainda estiver na conta contestante ou em contas ligadas a ela ([05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.4) |
+| Disjuntor | Se a taxa de contestações passar de um limiar interno (bem abaixo do limite de 1,5% das bandeiras, [05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §5.1), o Câmbio e a Troca de Alvarás recém-doados são suspensos enquanto a doação continua ([05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.4) |
+
+> **Quatro perguntas** — Referência: tetos da Jagex, FIFA Playtime, o caso Clicker Heroes 2 ([A02](../01-pesquisa/fichas/A02-clicker-heroes.md)), e o caso FTC × Epic como alerta ([06](../01-pesquisa/06-monetizacao-retencao.md), §2.1) · Problema: uma receita que não dependa de quem perdeu o controle, num jogo com caixa paga e sem reembolso · Comportamento: o jogador vê e escolhe quanto doa antes de doar; o grande doador precisa pedir e esperar; quem contesta sabe exatamente como voltar · Risco: o teto empurra quem quer gastar mais para o mercado cinza (Alvará e ouro por Pix fora do jogo), e a suspensão por contestação pode ser lida como cláusula abusiva ou retaliação; ver "Como isso pode dar errado".
+
 <!-- continua -->

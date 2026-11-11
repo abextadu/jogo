@@ -165,5 +165,176 @@ Exemplos: `XP(1) = 5`; `XP(10) = 5 × 10^2,75 = 5 × 562,3 = 2.812`; `XP(60) = 3
 
 **Leitura da bíblia** [H]: "jogo normal" foi lido como o perfil regular. Cumprimos também a leitura mais dura (o primeiro 100 do servidor só depois do D90), porque a vantagem do hardcore no ofício principal é de apenas ~22% sobre o regular: a fila é uma por atividade e roda no máximo 24 h por dia.
 
-**Botões de ajuste para o módulo 08:** o coeficiente `5` desloca todas as datas quase na mesma proporção (+10% no coeficiente ≈ +10% nos dias). O expoente `2,75` muda a forma: maior atrasa o fim mais que o começo. A eficiência do plano e a taxa ausente são as premissas de que as datas mais dependem; se o alfa medir eficiências diferentes, recalibrar o coeficiente, não as regras.
+**Botões de ajuste para o módulo 08:** o coeficiente `5` desloca todas as datas na mesma proporção (no modelo, com 5,5 no lugar de 5, o 100 do regular foi do D115,8 ao D127,4: +10,0%). O expoente `2,75` muda a forma: maior atrasa o fim mais que o começo. A eficiência do plano e a taxa ausente são as premissas de que as datas mais dependem; se o alfa medir eficiências diferentes, recalibrar o coeficiente, não as regras.
+
+## 4. Curva de XP de vocação
+
+### 4.1 A fórmula
+
+```
+XP_voc(n) = 4 × n^2,75        (80% da curva de ofício)
+```
+
+Exemplo: `XP_voc(40) = 4 × 40^2,75 = 4 × 25.449 = 101.795 XP`. Total até o 100: **33.101.406 XP**, ou 1.752 horas de expedição a 100%.
+
+A expedição é uma atividade de fila (ver o [01](01-loops.md), seção 2, L5). As regiões de expedição seguem os mesmos degraus dos tiers (abrem na vocação 1, 15, 30, 50, 70 e 85) e a mesma XP/h por degrau da tabela 2.1 [H, a reconciliar com o módulo 04]. O "encontro" faz o papel da ação, e a XP de cada encontro segue a regra da seção 2.1.
+
+**Por que 80%** [H]: a vocação recebe menos horas de fila que o ofício principal (30% da fila única no começo, 50% da 2ª fila, 70% a 75% da 3ª). Com a curva mais barata, ela anda perto do ofício principal, e o jogador chega à primeira Travessia (D91) com a vocação por volta do 85 a 90.
+
+### 4.2 Tabela nível → tempo acumulado (só expedição)
+
+O modelo conta só a XP da fila de expedição. O cerco e a Travessia também dão XP de vocação (módulos 04 e 10); por isso, estas datas são o limite mais lento.
+
+| Nível | XP para o próximo | XP acumulado | Horas de expedição a 100% | Casual | Regular | Hardcore |
+|---|---|---|---|---|---|---|
+| 10 | 2.249 | 4.925 | 0,8 | 4,8 h | 4,1 h | 3,8 h |
+| 20 | 15.132 | 73.310 | 9,7 | D2,6 | D2,1 | D2,0 |
+| 30 | 46.147 | 346.454 | 41,0 | D8,8 | D7,2 | D6,0 |
+| 40 | 101.795 | 1.035.494 | 101,7 | D17,1 | D13,9 | D12,1 |
+| 50 | 188.030 | 2.413.913 | 217,8 | D32,2 | D26,5 | D23,6 |
+| 60 | 310.439 | 4.812.983 | 387,3 | D52,4 | D40,0 | D34,3 |
+| 70 | 474.329 | 8.618.527 | 643,5 | D74,5 | D58,3 | D50,4 |
+| 80 | 684.790 | 14.268.420 | 943,3 | D99,6 | D79,1 | D68,5 |
+| 90 | 946.732 | 22.250.603 | 1.313,9 | D130,5 | D104,9 | D90,6 |
+| **100** | — | 33.101.406 | 1.752,1 | **D165,9** | **D134,5** | **D115,7** |
+
+### 4.3 Depois do 100
+
+A bíblia reserva a Maestria aos ofícios mestres (seção 6.2). **Recomendação** [H, a reconciliar com o módulo 03]: no lançamento, a vocação para de subir no 100; a expedição segue rendendo peles, carnes e achados. O crescimento depois do 100 vem de equipamento e de build (módulo 03), e a Travessia dá a progressão sazonal. Se o módulo 03 quiser uma camada além do 100 para a vocação, ela deve seguir as regras da seção 9 (prestígio que muda uma regra), com mudança na bíblia.
+
+- **Referência:** o personagem único com vocação fixa (decisão do checkpoint 2); a camada de temporada como prestígio coletivo (lei 12).
+- **Problema:** dar ritmo de combate parecido com o de ofício, sem que a vocação roube fila do ofício.
+- **Comportamento:** usar a 3ª fila para a vocação e chegar à Travessia pronto para ela.
+- **Risco:** a vocação "acabar" no D115 a D166 e o combate perder meta. Mitigação: a Travessia (a partir do D91) e o equipamento que se desgasta mantêm o combate com objetivo.
+
+## 5. Ofício mestre e teto de aprendiz
+
+### 5.1 As regras
+
+1. Todo personagem pode praticar os 12 ofícios. Todos começam como **aprendiz**: teto no nível 30 e acesso aos tiers T1 a T3.
+2. Ao chegar ao 30 num ofício, o jogador pode **tomá-lo como ofício mestre**, se tiver vaga. São 2 vagas. O mestre sobe até o 100, faz os tiers T4 a T6 e acumula Maestria. A escolha é um gesto simples, com uma tela que explica o que muda; não custa nada.
+3. Os outros 10 ofícios ficam no teto de aprendiz.
+
+Na prática, a primeira vaga é preenchida na virada do 30 (D4 a D7, conforme o perfil), e a segunda quando outro ofício chega ao 30 (regular: D13,6).
+
+### 5.2 A XP depois do 30: a reserva
+
+- A fila de um aprendiz no 30 continua produzindo normalmente (T1 a T3).
+- A XP ganha vai para a **reserva do ofício**, até **861.301 XP**, que é exatamente a XP do 30 ao 40. A T3, com taxa ausente de 85%, a reserva enche em `861.301 ÷ (10.800 × 0,85) = 94 h` de fila, uns 4 a 5 dias de fila dedicada.
+- Se o ofício virar mestre depois, a reserva entra na hora: ele pula do 30 para até o 40.
+- Com a reserva cheia, a fila segue rendendo bens, sem XP.
+- No 30, o aprendiz não tem domínio do T3 (o domínio conta níveis acima do 30). O mestre trabalha até 10% mais rápido no T3 que o aprendiz.
+
+### 5.3 Trocar de ofício mestre
+
+- **Uma troca por Era** [H]. O ofício que deixa de ser mestre fica **adormecido**: guarda o nível, a Maestria e os Selos, mas trabalha como aprendiz (T1 a T3) até voltar a ser mestre.
+- O novo mestre parte do nível que tiver (no mínimo 30) mais a reserva.
+- A conquista feita com o ofício antigo (fila, offline, taxa) não se perde: os requisitos contam o maior nível já alcançado.
+
+### 5.4 Nível total
+
+A soma dos níveis dos 12 ofícios, de 12 (todos no 1) a **500** (dois mestres no 100 e dez aprendizes no 30). Ela dá marcos que premiam treinar os aprendizes:
+
+| Nível total | O que dá | Regular |
+|---|---|---|
+| 100 | +12 h de teto de offline | D10,4 |
+| 150 | 3ª etapa por fila | D21,0 |
+| 200 | Título | D32,9 |
+| 250 | 4ª etapa por fila | D41,5 |
+| 300 | +5% de taxa ausente | D48,2 |
+| 400 | Título | D64,3 |
+| 500 | Título "de todos os ofícios" (todos os aprendizes no 30 e dois mestres no 100) | depois do 2º mestre no 100 (~D140) |
+
+### 5.5 As quatro perguntas
+
+- **Referência:** a especialização do Milky Way Idle e a limitação de profissões dos MMOs ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); o pilar "ninguém faz tudo" do [conceito](../02-conceito.md). **Diferencia-se** do Melvor e dos idles em que um jogador faz tudo sozinho ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)).
+- **Problema:** a interdependência só existe se os tiers altos dependerem de poucos mestres; mas o jogador solitário precisa de uma rota viável (risco "o solitário vai embora", [conceito](../02-conceito.md), seção 7).
+- **Comportamento:** fazer sozinho o básico (T1 a T3 em todos os ofícios), comprar o avançado de outros mestres e escolher os dois ofícios mestres depois de experimentar.
+- **Risco:** um ofício sem mestres suficientes trava a cadeia. Mitigação: oficinas NPC de reforço com preço teto e qualidade baixa ([conceito](../02-conceito.md)); a troca por Era deixa a oferta se mover para onde falta mestre; o módulo 08 mede a distribuição de mestres por ofício.
+
+## 6. Filas e etapas
+
+### 6.1 As regras
+
+1. O personagem tem de **1 a 3 filas em paralelo**.
+2. **Cada fila roda uma atividade diferente:** um ofício ou uma expedição. Duas filas nunca rodam o mesmo ofício.
+3. Filas **nunca estão à venda**. O Alvará e o Baú do Mascate não dão fila (zona vermelha).
+4. **Fila conquistada é permanente.** O Selo, a troca de ofício mestre ou qualquer reset não tiram fila, porque os requisitos contam o maior nível já alcançado.
+
+### 6.2 Como se conquistam
+
+| Fila | Requisito | Casual | Regular | Hardcore |
+|---|---|---|---|---|
+| 1ª | Início | D0 | D0 | D0 |
+| 2ª | Primeiro ofício no 30 e vocação 10 | D6,8 | D5,5 | D4,0 |
+| 3ª | Ofício mestre no 60, vocação 40 e 1.000 de Mérito | D50 | D29,7 | D23,5 |
+
+**Por que esses requisitos** [H]: a 2ª fila chega na virada do 30 e alivia a decisão mais dura da primeira semana (dividir uma fila só entre o ofício e a vocação). A 3ª pede os três pilares de uma vez: ofício, combate e cidade (Mérito). No casual, o Mérito é o que segura a 3ª fila até o D50; se a simulação mostrar que isso afasta o casual, o requisito de Mérito é o primeiro a baixar.
+
+### 6.3 Etapas e regras de fila (a automação conquistada)
+
+Dentro de cada fila, as **etapas** encadeiam ações em sequência ("minerar 1.000, depois fundir"). As **regras** dizem o que fazer quando algo muda.
+
+| O que a fila ganha | Requisito | Regular |
+|---|---|---|
+| 2 etapas por fila; "repetir até N"; "entregar X% à encomenda ou à Obra"; **proteções ligadas:** pular a etapa sem insumo, usar a ferramenta reserva, recuar a expedição | Início | D0 |
+| 3 etapas por fila | Nível total 150 | D21 |
+| 4 etapas por fila | Nível total 250 | D41,5 |
+| 5 etapas e regras condicionais ("se o estoque de X passar de N, troque para Y") | Selo grau I, opção "Oficina" (seção 9.3) | D131 |
+
+**Princípio** [H]: **proteção é padrão; otimização se conquista.** As regras que evitam perda vêm ligadas no primeiro dia. As que otimizam se conquistam jogando.
+
+**Limite** [H]: nenhuma regra de fila compra ou vende no mercado. O mercado só recebe ordens postas pelo jogador, que ficam abertas enquanto ele está fora. É a política "leitura liberada, escrita humana" ([07](../01-pesquisa/07-tecnica-idles-online.md)).
+
+### 6.4 As quatro perguntas
+
+- **Referência:** a automação conquistada por marco do Antimatter Dimensions ([A06](../01-pesquisa/fichas/A06-antimatter-dimensions.md)); filas de tarefas que aliviam a memória do jogador ([02a](../01-pesquisa/02a-teoria-design-idle.md), seção 6.1). **Diferencia-se** do MWI, que vende vagas de fila ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)), e do Trimps, cuja automação de verdade virou um script de terceiros ([A08](../01-pesquisa/fichas/A08-trimps.md)).
+- **Problema:** o que o jogo não automatiza vira script e bot (insight 16 da [síntese](../01-pesquisa/00-sintese.md)); e o ausente perde produção quando o plano é curto demais.
+- **Comportamento:** planos mais longos e mais espertos conforme o jogador domina o jogo; a decisão resolvida vira automação, a interessante continua humana.
+- **Risco:** a 3ª fila multiplica a emissão do veterano por até 3 em relação ao novato com uma fila. Mitigação: a fila é uma por atividade, então a emissão de um mesmo bem por conta tem teto de 24 h por dia; o teto de emissão negociável por conta (módulo 07) segura o resto.
+
+## 7. Offline
+
+### 7.1 As regras
+
+1. O relógio de ausência começa na última ação do jogador. Quando ele volta, o relógio zera.
+2. As filas produzem até o **teto de offline**. Depois, param (com o rabo da seção 7.3, se aprovado).
+3. Ordens de mercado, entregas já feitas, prazos de encomenda e o cerco não dependem do teto: as ordens ficam abertas, e o cerco usa a inscrição.
+4. A fila também para antes do teto se o insumo acabar e não houver etapa seguinte; o relatório de volta explica.
+5. O cálculo é feito no servidor, por eventos, na hora em que alguém precisa do estado ([07](../01-pesquisa/07-tecnica-idles-online.md)).
+6. O teto nunca está à venda e é igual para todos no início: **24 h**.
+
+### 7.2 Como o teto sobe: 24 h → 72 h
+
+Quatro degraus de +12 h, cada um de uma área do jogo, conquistáveis em qualquer ordem:
+
+| Degrau | Requisito | Casual | Regular | Hardcore |
+|---|---|---|---|---|
+| +12 h | Nível total 100 | D12,8 | D10,4 | D9,0 |
+| +12 h | Vocação 50 | D32,2 | D26,5 | D23,6 |
+| +12 h | 2.000 de Mérito | D100 | D50 | D20 |
+| +12 h | Ofício mestre no 80 | D80,1 | D65,3 | D53,3 |
+
+**Teto resultante:**
+
+| Teto | Casual | Regular | Hardcore |
+|---|---|---|---|
+| 36 h | D12,8 | D10,4 | D9,0 |
+| 48 h | D32,2 | D26,5 | D20,0 |
+| 60 h | D80,1 | D50,0 | D23,6 |
+| 72 h | D100 | D65,3 | D53,3 |
+
+### 7.3 O rabo depois do teto [proposta de mudança na bíblia]
+
+Depois do teto, a fila não corta seco: **segue por mais 12 h a 25% da taxa ausente** [H]. Isso equivale a 3 h de fila a mais, e só acontece em ausências maiores que o teto. Quem dormiu demais ou viajou não encontra a oficina parada há horas.
+
+- **Referência:** a recomendação do [02a](../01-pesquisa/02a-teoria-design-idle.md), seção 6.2: rendimento decrescente é melhor que corte seco; Pecorella chamou de erro o teto de 2 h do Egg Inc. (idem, seção 6.1).
+- **Alternativa:** manter o corte seco da bíblia, que é mais simples de explicar. **Recomendação:** adotar o rabo; o custo na emissão é pequeno e o ganho de confiança é grande.
+
+### 7.4 As quatro perguntas
+
+- **Referência:** o Melvor, com 24 h simuladas na volta ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)); o KoL, que acumula até 5 dias de turnos ([D03](../01-pesquisa/fichas/D03-kingdom-of-loathing.md)). **Diferencia-se** do MWI, que cortou o offline de 16 para 10 h e vende cada hora extra até 72 h ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)).
+- **Problema:** o ausente precisa de folga para o fim de semana e a viagem, mas todo aumento de teto é política monetária: o IdleMMO previu uma "enxurrada de itens" ao ampliar o seu ([04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), seção 5.1).
+- **Comportamento:** pausas saudáveis sem medo; o teto maior como conquista de quem se envolveu com o jogo.
+- **Risco:** uma ausência de 72 h despeja de uma vez três dias de produção no mercado. Mitigação: o teto de emissão negociável é contado por dia de produção (o servidor sabe quando cada unidade nasceu), então 72 h fora valem três tetos diários, não um teto gigante [a reconciliar com o módulo 07].
 

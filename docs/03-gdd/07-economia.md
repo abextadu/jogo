@@ -526,7 +526,7 @@ Como ela se aplica a uma moeda que circula [H]:
 4. **Fraude organizada é outro caso.** Quando a contestação vem com sinais de fraude (cartão de terceiro, funil de contas, risco de troca nível 3), as contas que receberam o valor entram em revisão. **A reconciliar com o módulo 13.**
 5. **Disjuntor:** se as disputas passarem de um limiar interno (bem abaixo do 1,5% das bandeiras, [05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md), §5.1), as transferências de Alvará (Câmbio, Troca, Cartório) são suspensas. O gasto na loja continua.
 
-**Efeito na economia.** Os Alvarás contestados que já foram transferidos seguem circulando sem dinheiro por trás. A massa ativa de ouro e de Alvará cai pelo que fica congelado nas contas suspensas. A simulação modela os dois efeitos (parâmetros 43 a 45 da seção 13).
+**Efeito na economia.** Os Alvarás contestados que já foram transferidos seguem circulando sem dinheiro por trás. A massa ativa de ouro e de Alvará cai pelo que fica congelado nas contas suspensas. A simulação modela os dois efeitos (parâmetro 45 e cenário 11 da seção 13).
 
 **Por que a carência continua necessária.** A suspensão não pesa para quem usa cartão roubado: o fraudador abandona a conta. A carência impede que ele transfira antes de a vítima perceber.
 
@@ -744,7 +744,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | 4 | Taxas arredondadas para cima, sobre o valor de mercado | Sobre o VR, nunca sobre o preço de NPC | 1.2, 5 |
 | 5 | Valor de referência, banda suave e alerta | VR horário com ±5% por hora; banda de ±15% com caminhada de 2% por hora | 5.1 |
 | 6 | Piso de NPC abaixo do custo | Preço-base de 40% do VR-alvo, com curva logarítmica | 4.2 |
-| 7 | Limite de compra por janela | Itens críticos a cada 4 horas; Alvará, 10 por semana no Câmbio | 5.1, 5.4 |
+| 7 | Limite de compra por janela | Itens críticos a cada 4 horas; Alvará, 2.000 unidades por semana no Câmbio | 5.1, 5.4 |
 | 8 | Negociável e preso separados, com teto | Portão de saída com cota | 3 |
 | 9 | Custo de conta para dar valor | Idade verificada para todos, rampa da cota em 30 dias e condições do Cartório | 3.4, 7.4 |
 | 10 | Risco de troca por par e direção | Sem exigir equilíbrio (a Troca é livre); níveis com retenção só em padrão de fraude | 5.5 |
@@ -767,9 +767,8 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 - **Proibida:** combinar entre contas para mover preço (cornering combinado, pump and dump, ordens de fachada, lances de fachada).
 - **Permitida:** a especulação individual, comprar barato e vender caro sozinho, que é jogo legítimo ([04b, §2.3](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
 - **Sanções escritas:**
-  - confisco de até 3 vezes o ganho, com o valor destruído, nunca revendido;
-  - dívida em ouro quitável jogando;
-  - banimento progressivo.
+  - confisco de até 3 vezes o ganho, limitado ao que a conta tem, com o valor destruído, nunca revendido;
+  - suspensão e banimento progressivos (**a reconciliar com o módulo 13**).
 - **Referências:** regra 2.4 do MWI; confisco de 2 a 3 vezes no MWI ([04b, §3.9–3.10](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
 
 ### 10.3 Nada de ranking por volume
@@ -786,18 +785,18 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 
 | Art. | Regra | Origem |
 |---|---|---|
-| **1. Mandato e metas** | Meta: variação do IPA de 0% a +8% ao ano, com piso de 0%, medida em janela móvel de 90 dias e anualizada. A banda é revista uma vez, no 90º dia depois do lançamento. Metas auxiliares: drenos entre 85% e 95% das fontes; massa por conta ativa entre 2 e 3 Alvarás; Alvará entre 12 e 20 dias de renda mediana | Bíblia 6.6; meta de expansão do Torn; GW2 depois de 2015 ([04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
+| **1. Mandato e metas** | Meta: variação do IPA de 0% a +8% ao ano, com piso de 0%, medida em janela móvel de 90 dias e anualizada. A banda é revista uma vez, no 90º dia depois do lançamento. Metas auxiliares: drenos entre 85% e 95% das fontes; massa por conta ativa entre 2 e 3 premiums de 30 dias em ouro; premium de 30 dias entre 12 e 20 dias de renda mediana | Bíblia 6.6; meta de expansão do Torn; GW2 depois de 2015 ([04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
 | **2. Moedas e camadas** | Quatro moedas: Ouro, Alvará, Marcos e Mérito. O que é preso nunca se torna negociável por compra; o que é pago nunca vira renda, XP ou poder | Seção 2; bíblia, seção 5 |
 | **3. Emissão** | O ouro só nasce nas fontes listadas na seção 4.1. O teto de emissão e sua fórmula são públicos. Nenhuma fonte negociável cresce exponencialmente com o nível. Toda mudança de fonte, de teto ou do offline vem com análise de impacto publicada | Lei 16; IdleMMO e SimpleMMO ([04a, §5.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
 | **4. Drenos e taxas** | Lista pública de drenos. Toda taxa em ouro é destruída, nunca receita. Mudança de taxa com 30 dias de aviso e rampa de no máximo 1 ponto por mês. O destino visível das taxas é a obra | Bíblia 6.6; rampa do Torn; revolta no EVE e no OSRS |
 | **5. Mesma taxa** | Item por ouro custa ~6% em qualquer canal; Alvará e Baú lacrado, 12%; presente, 3% | Seção 5.6 |
-| **6. Alvará** | Nasce só de compra em reais e nunca é dado de graça. O estúdio nunca compra nem vende no Câmbio. A regra da rodada (banda, desempate, frequência) é pública. Carência por meio de pagamento e regra de reversão publicadas | Seção 6; PLEX ([04a, §3.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
+| **6. Alvará** | Moeda em unidades que nasce só de doação em reais, sem reembolso, e nunca é dada de graça. Gasta na loja, é destruída. O estúdio nunca compra nem vende no Câmbio. A regra da rodada (banda, desempate, frequência) é pública. A carência por lote é publicada. A doação contestada no banco suspende a conta até regularizar, e quem recebeu de boa-fé fica com o que recebeu | Seção 6; PLEX ([04a, §3.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)); decisões do Gabriel |
 | **7. Cartório** | Regras de venda, o que vai e o que fica, taxa de 10% destruída e aviso de 72 horas | Seção 7 |
 | **8. Baú e escassez prometida** | Tabela de chances, garantia e tiragem publicadas antes da venda de cada série. A tiragem do topo nunca aumenta sem 60 dias de aviso. Teto de compra e de abertura | Seção 8; Trade Up do CS2 |
 | **9. Câmara** | Mexe só nas faixas da tabela abaixo. Política monetária (teto, NPC, insumos, Câmbio, Alvará, Cartório, Baú) não vai a voto | O OSRS não pôs o imposto em votação ([04a, §4.5](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) |
 | **10. Transparência** | Painel público, relatório mensal, dados abertos com atraso de 1 hora, API de leitura e erros corrigidos em público | MER do EVE; JSON do MWI; Varoufakis |
 | **11. Emergência** | Disjuntor por item, balcão ou moeda, com comunicação em até 2 horas, prazo anunciado e relatório em 7 dias. Rollback geral só como último recurso. A remoção de valor indevido, inclusive de quem recebeu de boa-fé, segue regra escrita antes. Mudar o preço-base de NPC é medida só deste artigo | New World, ESO, Diablo IV ([04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), art. 8 do esboço) |
-| **12. Exploits, bots e fraude** | Confisco proporcional (até 3 vezes o ganho), destruído; dívida em ouro quitável jogando; banimento. O RMT informal não é intermediado, garantido, apoiado pelo suporte nem proibido pelo estúdio (S4). Nenhuma API ou parceria com sites de RMT | Decisão do Gabriel; [05d, §5.7](../01-pesquisa/05d-rmt-recomendacao.md) |
+| **12. Exploits, bots e fraude** | Confisco proporcional (até 3 vezes o ganho, limitado ao saldo), destruído; suspensão e banimento progressivos. O RMT informal não é intermediado, garantido, apoiado pelo suporte nem proibido pelo estúdio (S4). Nenhuma API ou parceria com sites de RMT | Decisão do Gabriel; [05d, §5.7](../01-pesquisa/05d-rmt-recomendacao.md) |
 | **13. Garantias** | Nunca estarão à venda: a espera, o offline, as filas, o teto e a cota, a taxa do ausente, renda, XP e poder. Proibidos no jogo: juros, cassinos e pirâmides entre jogadores | Lei 13; [04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), art. 11 do esboço |
 | **14. Emenda** | Mudanças pedem 60 dias de aviso, justificativa com dados, consulta pública e histórico de versões. Exceção: o artigo 11 | [04a](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), art. 12 do esboço |
 
@@ -834,10 +833,11 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 |---|---|---|---|---|
 | **IPA** | Seção 12.1 | Diária | Anualizado em 90 dias fora de 0% a 8%; variação de 3% em 7 dias | Sim |
 | **Índice de luxo** | Raros, cosméticos, Baú | Semanal | — | Sim |
-| **Preço do Alvará** | Rodada do Câmbio | Horária | ±10% em 24 h; descolamento de mais de 15% do IPA em 30 dias | Sim |
-| **Alvará em dias de renda** | Preço ÷ fontes brutas diárias do mediano | Semanal | Fora de 12 a 20 dias | Sim |
+| **Preço do Alvará** | Rodada do Câmbio, por unidade em ouro, e o premium de 30 dias em ouro | Horária | ±10% em 24 h; descolamento de mais de 15% do IPA em 30 dias | Sim |
+| **Premium em dias de renda** | Preço em ouro do premium de 30 dias ÷ fontes brutas diárias do mediano | Semanal | Fora de 12 a 20 dias | Sim |
+| **Estoque de Alvarás** | Doados − gastos na loja − destruídos; parcela parada há mais de 30 dias | Semanal | Estoque parado acima de 2 meses de gasto na loja | Sim, agregado |
 | **Massa monetária (M)** | Ouro em contas ativas (login em 30 dias) e inativas | Diária, alarme horário | +2% em 24 h. [F] O dupe do EverQuest II somou ~20% em 24 h ([04a, §6.1](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)) | Sim |
-| **M por conta ativa ÷ preço do Alvará** | — | Semanal | Fora de 2 a 3 depois do 6º mês | Sim |
+| **M por conta ativa ÷ preço do premium** | Em ouro | Semanal | Fora de 2 a 3 depois do 6º mês | Sim |
 | **Delta de retorno** | Ouro que entra ou sai da massa ativa com contas que voltam ou somem | Diária | — | Interno |
 | **Velocidade** | Valor negociado entre jogadores ÷ M média | Semanal | Queda de 30% em 4 semanas | Sim |
 | **Fontes por categoria** | NPC, encomendas, cercos, eventos, começo | Horária e diária | Fonte acima de 1,5 vez a média de 7 dias sem mudança de conteúdo | Sim, agregado |
@@ -850,11 +850,12 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **Riqueza por coorte** | Mediana por idade da conta e por horas ativas | Semanal | Conta com menos de 7 dias acima do percentil 99 | Interno |
 | **Itens raros** | Criados, destruídos e vivos, por item | Diária, alarme horário | Criação acima de 3 vezes a média | Interno |
 | **Destruição** | VR destruído por dia, por categoria | Diária | — | Sim |
-| **Conveniência via ouro** | Parcela dos Alvarás consumidos que foram comprados com ouro | Mensal | Fora de 30% a 65% | Sim |
+| **Premium via ouro** | Parcela dos Alvarás gastos em premium que foram comprados com ouro (Câmbio ou Troca) | Mensal | Fora de 30% a 65% | Sim |
+| **Alvará como moeda paralela** | Parcela das Trocas de itens pagas em Alvará, em valor | Mensal | Acima de 10% | Interno; tendência no relatório |
 | **Cartório** | Vendas, preço médio, Alvarás destruídos | Semanal | — | Sim |
 | **Baú** | Aberturas, contas no teto, tiragem restante | Diária | Mais de 2% das contas pagantes no teto | Sim (tiragem ao vivo) |
 | **Risco de troca** | Contas nos níveis 2 e 3, retenções, apelações, reversões | Diária | — | Relatório trimestral |
-| **Disputas de pagamento** | Chargebacks e MED ÷ transações | Diária | Acima de 0,5% | Interno |
+| **Disputas de pagamento** | Chargebacks e MED ÷ doações; contas suspensas e regularizadas; Alvarás contestados que já tinham sido transferidos | Diária | Acima de 0,5% | Interno; agregado no relatório |
 | **Mercado cinza** | Preço do nosso ouro em reais em sites de terceiros ÷ preço via Alvará | Semanal | Abaixo de 60% do oficial | Interno; tendência no relatório |
 | **Salário-teto** | Teto do topo × reais por ouro | Mensal | Acima de R$ 100 por mês líquidos | Interno |
 | **Poder vindo do mercado** | Fração do equipamento em uso que foi comprada | Mensal | Acima de 50% | Interno |
@@ -863,7 +864,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 
 ### 12.3 Disjuntores, relatório e dados abertos
 
-- **Disjuntores** por item (congela a criação e a negociação de um item), por balcão, por moeda (congela as transferências de uma moeda) e por fluxo (suspende a venda de Alvará quando as disputas passam do limiar). Todos são testados no alfa. [F] Desligar o comércio inteiro abriu outro dupe no New World ([04b, §3.11](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
+- **Disjuntores** por item (congela a criação e a negociação de um item), por balcão, por moeda (congela as transferências de uma moeda) e por fluxo (suspende as transferências de Alvará quando as disputas passam do limiar). Todos são testados no alfa. [F] Desligar o comércio inteiro abriu outro dupe no New World ([04b, §3.11](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
 - **Relatório econômico mensal** público, no molde do MER do EVE: IPA, luxo, Alvará, massa, velocidade, fontes e drenos por categoria, destruição, concentração, Cartório, Baú, banimentos e o porquê de cada mudança. Com dados agregados para baixar.
 - **Dados abertos:** atraso de 1 hora e agregação; nenhum dado por conta. Fluxos por conta, sinais de detecção e os limiares internos ficam só com a equipe ([04a, §6.3](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md)).
 
@@ -874,7 +875,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **População** | | | | |
 | 1 | Ativos por dia por Arraial | 30.000 | 15.000 a 50.000 | 1.1 |
 | 2 | Mix de perfis | Casual 50%, mediano 35%, hardcore 10%, bot 5% | Bot de 0% a 20% | 4.6 |
-| 3 | Pagantes (sobrepostos aos perfis) | 8% dos ativos; 2 Alvarás por mês; 50% vendidos | 4% a 15%; 1 a 4; 20% a 80% | 4.6 |
+| 3 | Pagantes (sobrepostos aos perfis) | 8% dos ativos; ~R$ 40 doados por mês (~400 Alvarás); 50% vendidos | 4% a 15%; R$ 15 a R$ 100; 20% a 80% | 4.6 |
 | 4 | Entrada de contas novas por dia | 1,5% dos ativos | 0% (90 dias sem novos) a 5% | — |
 | 5 | Evasão mensal | 25% | 10% a 50% | — |
 | **Teto de emissão** | | | | |
@@ -914,28 +915,34 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | 35 | Vagas de ordem | 8 a 20 | 5 a 30 | 5.1 |
 | 36 | Limite de compra de itens críticos | 3 dias de consumo a cada 4 h | 1 a 7 dias | 5.1 |
 | **Câmbio e Alvará** | | | | |
-| 37 | Mecanismo | Leilão de chamada a cada hora | Contínuo; fila administrada; rodadas de 15 min a 4 h | 5.4 |
-| 38 | Banda | ±3% por rodada; ±10% por dia | ±1% a ±5%; ±5% a ±20% | 5.4 |
-| 39 | Limite de compra | 10 por conta a cada 7 dias | 3 a 30 | 5.4 |
-| 40 | Preço de abertura do Alvará | 15.000 | 8.000 a 30.000 | 1.2 |
-| 41 | Carência | Pix 72 h; cartão 7 dias; risco até 30 dias | 0 a 14 dias | 6.3 |
-| 42 | Teto de gasto | R$ 300 por mês | R$ 150 a R$ 1.500 | 6.5; **módulo 11** |
+| 37 | Alvarás por real doado | 10 (1 Alvará ≈ R$ 0,10) | Pacotes com bônus de 0% a 15% | 6.1; **módulo 11** |
+| 38 | Premium de 30 dias, em Alvarás | 200 | 149 a 249 | 6.1; **módulo 11** |
+| 39 | Mecanismo do Câmbio | Leilão de chamada a cada hora | Contínuo; fila administrada; rodadas de 15 min a 4 h | 5.4 |
+| 40 | Banda | ±3% por rodada; ±10% por dia | ±1% a ±5%; ±5% a ±20% | 5.4 |
+| 41 | Tamanho de ordem e limite de compra | 10 a 2.000 Alvarás por ordem; 2.000 por conta a cada 7 dias | 500 a 10.000 por semana | 5.4 |
+| 42 | Preço de abertura do Alvará | 75 ouro (premium de 30 dias ≈ 15.000) | 40 a 150 | 1.2 |
+| 43 | Carência por lote | Pix 72 h; cartão 7 dias; risco até 30 dias | 0 a 14 dias | 6.3 |
+| 44 | Teto de doação | R$ 300 por mês | R$ 150 a R$ 1.500 | 6.5; **módulo 11** |
+| 45 | Contestação no banco | 0,3% das doações contestadas; 50% das contas suspensas regularizam em 30 dias; 60% dos Alvarás contestados já transferidos | 0% a 1,5%; 0% a 100%; 0% a 100% | 6.4 |
+| 46 | Alvarás guardados | 20% dos doados ficam parados mais de 30 dias | 0% a 60% | 6.2 |
 | **Cartório e Baú** | | | | |
-| 43 | Vendas no Cartório | 1% das contas ativas por mês | 0,3% a 3% | 7 |
-| 44 | Condições para vender | 30 dias + 40 h ativas | 7 a 90 dias; 10 a 100 h | 7.4 |
-| 45 | Baús por Alvará | 5 | 3 a 10 | 8.1; **módulo 11** |
-| 46 | Garantia do Baú | Raro a cada 10; Muito raro a cada 60 | 5 a 20; 30 a 120 | 8.3 |
-| 47 | Teto de abertura | 40 por mês | 10 a 100 | 8.4 |
-| 48 | Cosméticos aplicados por mês (saem do mercado) | 40% dos novos | 10% a 80% | 8.2 |
+| 47 | Vendas no Cartório | 1% das contas ativas por mês | 0,3% a 3% | 7 |
+| 48 | Condições para vender | 30 dias + 40 h ativas | 7 a 90 dias; 10 a 100 h | 7.4 |
+| 49 | Lance inicial mínimo no Cartório | 300 Alvarás | 100 a 1.000 | 7.1 |
+| 50 | Preço do Baú | 40 Alvarás | 20 a 80 | 8.1; **módulo 11** |
+| 51 | Garantia do Baú | Raro a cada 10; Muito raro a cada 60 | 5 a 20; 30 a 120 | 8.3 |
+| 52 | Teto de abertura | 40 por mês | 10 a 100 | 8.4 |
+| 53 | Cosméticos aplicados por mês (saem do mercado) | 40% dos novos | 10% a 80% | 8.2 |
 
 **Critérios de saúde (a simulação passa se, depois do 6º mês, em todos os cenários):**
 - IPA entre 0% e 8% ao ano;
 - drenos entre 85% e 95% das fontes;
 - 10% a 30% das contas no teto;
-- Alvará entre 12 e 20 dias de renda mediana;
-- massa por conta ativa entre 2 e 3 Alvarás;
+- premium de 30 dias entre 12 e 20 dias de renda mediana;
+- massa por conta ativa entre 2 e 3 premiums de 30 dias, em ouro;
 - 10% mais ricos com menos de 60% da riqueza;
-- conveniência via ouro entre 30% e 65%;
+- premium via ouro entre 30% e 65%;
+- Trocas de itens pagas em Alvará abaixo de 10% do valor;
 - básicos acima de 1,3 vez o piso de NPC;
 - salário-teto líquido do topo abaixo de R$ 100 por mês.
 
@@ -950,6 +957,8 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 8. A Travessia puxa 40% da atividade.
 9. Sem a proposta de 12% na Troca (mede a fuga do Câmbio).
 10. Sem o crédito dos insumos no portão (mede o peso da regra sobre os artesãos).
+11. Onda de contestações: 1,5% das doações contestadas por 30 dias. Mede os Alvarás sem lastro em circulação, a massa congelada nas contas suspensas e o efeito no preço do Alvará.
+12. Despejo do estoque guardado: 50% dos Alvarás parados vendidos no Câmbio em 7 dias.
 
 ## 14. A reconciliar com outros módulos
 
@@ -962,8 +971,8 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **06 Ofícios** | Receitas com insumo de NPC e seus nomes; lista de itens críticos; produção por hora de fila; oficina de reforço |
 | **09 Social** | Mérito (curva e uso); poderes e faixas da Câmara; banco da guilda; encomendas e obras |
 | **10 Live ops** | Marcos e suprimentos da Travessia; relíquias; festas do Arraial; série do Baú por Era; benefícios das obras sem multiplicar fontes |
-| **11 Monetização** | Preço do Alvará em reais; conteúdo da conveniência; saldo de cosméticos; Baús por Alvará; teto de gasto |
-| **13 Anti-abuso** | Sinais e níveis do risco de troca; grafo; carência; reversão; segurança do Cartório |
+| **11 Monetização** | Alvarás por real e pacotes de doação; preço do premium e do Baú em Alvarás; conteúdo do premium; teto de doação |
+| **13 Anti-abuso** | Sinais e níveis do risco de troca; grafo; carência por lote; contestação (suspensão até regularizar, no lugar da dívida em ouro) e revisão de fraude organizada; sanções de exploit; segurança do Cartório |
 | **14 Arte e UI** | Telas da cota e da volta; Bolsa com posição na fila; rodada do Câmbio; Troca com desequilíbrio; pré-vitrine da Feira |
 
 ## 15. Propostas de mudança na bíblia
@@ -989,14 +998,18 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **Deflação dos básicos** | A produção de 24 horas cresce com as contas, e minério e madeira caem até o piso do NPC | Obras sem limite; encomendas elásticas; festas de consumo; alarme de 1,3 vez o piso |
 | **Espiral dos insumos indexados** | O IPA sobe, o insumo sobe, o custo de produzir sobe e o IPA sobe de novo | Insumo fora da cesta do IPA; indexação parcial, com teto de ±2% por mês; o insumo mais caro também destrói mais ouro (efeito contrário); testar na simulação |
 | **Câmbio raso** | Poucos vendedores no começo, rodadas vazias e preço parado ou aos saltos | Leilão de chamada; banda por rodada; rodadas mais espaçadas se preciso; preço de abertura sem garantia, só como referência |
-| **Alvará dispara em ouro** | Inflação de lançamento, como no GW2, ou o Cartório destruindo Alvarás tira a rota do não pagante | Lançar apertado; leitura junto da cesta; meta de 12 a 20 dias de renda; destruição do Cartório medida em separado |
-| **Alvará despenca** | Onda de pagantes ou teto de gasto alto demais, e o pagante não vê valor em vender | Teto de gasto; nenhum Alvará grátis; novos usos sem poder ([05d, §4.2](../01-pesquisa/05d-rmt-recomendacao.md)) |
-| **Pay-to-win de capital** | O pagante vende Alvarás e compra o mercado inteiro de ouro | Teto de gasto; limite de compra por janela; o mercado negocia insumos e equipamento que se gasta; diferença pagante × não pagante publicada |
+| **Alvará dispara em ouro** | Inflação de lançamento, como no GW2, ou o gasto na loja e o Cartório destruindo Alvarás tiram a rota do não pagante | Lançar apertado; leitura junto da cesta; meta de 12 a 20 dias de renda para o premium; destruição medida em separado |
+| **Alvará despenca** | Onda de pagantes, teto de doação alto demais ou um estoque guardado despejado de uma vez, e o pagante não vê valor em vender | Teto de doação; nenhum Alvará grátis; novos usos sem poder ([05d, §4.2](../01-pesquisa/05d-rmt-recomendacao.md)); estoque parado no painel; banda do Câmbio; cenário 12 |
+| **Alvará vira moeda paralela** | Divisível e livre, ele passa a cotar os itens caros entre jogadores, fora do ouro (o pergaminho do IdleMMO) | Balcões só em ouro; 12% em toda troca de Alvará; índice em ouro; alarme acima de 10% das Trocas de itens pagas em Alvará |
+| **Fraude com cartão roubado sai de graça** | A suspensão não pesa para quem abandona a conta, e os Alvarás que ela já transferiu ficam sem lastro | Carência por lote; teto de doação; disjuntor por taxa de disputas; revisão das contas receptoras em padrão de fraude (módulo 13); cenário 11 |
+| **Suspensão contestada** | A FTC condenou a Epic por bloquear contas inteiras depois de contestações; o jogador honesto que contestou por engano perde o acesso a tudo | Suspensão reversível ao regularizar, com tudo devolvido; nada tirado de terceiros de boa-fé; aviso claro antes da doação; **validar com advogado** (CDC, art. 51) |
+| **"Doação" sem reembolso questionada** | O rótulo não afasta o direito de arrependimento (CDC, art. 49), pode atrair ITCMD e conflitar com as regras dos provedores de pagamento | Alerta registrado no PROGRESSO; risco assumido pelo Gabriel; **validar com advogado** |
+| **Pay-to-win de capital** | O pagante vende Alvarás e compra o mercado inteiro de ouro | Teto de doação; limite de compra por janela; o mercado negocia insumos e equipamento que se gasta; diferença pagante × não pagante publicada |
 | **Arbitragem entre canais** | Se as propostas 1 e 2 forem recusadas, o Alvará passa a ser trocado por ouro na Troca a 6%, e o índice e o dreno do Câmbio somem | Cenário 9 da simulação; publicar o índice também com as trocas de Alvará na Troca |
-| **Troca livre como lavanderia** | Mulas, cartão roubado, conta invadida esvaziada por presentes | Carência S2; risco de troca com retenção nos padrões de fraude; grafo; reversão pelo livro-razão |
+| **Troca livre como lavanderia** | Mulas, cartão roubado, conta invadida esvaziada por presentes | Carência S2 por lote; risco de troca com retenção nos padrões de fraude; grafo; suspensão da conta que contesta, até regularizar |
 | **Cartório vira fábrica ou rota de roubo** | Personagens upados por automação; conta invadida vendida | 40 horas ativas; uma venda a cada 60 dias; aviso de 72 horas; Alvarás do vendedor retidos 7 dias; reversão em 30 dias |
 | **Baú lido como jogo de azar** | Pagamento + sorte + prêmio com valor em dinheiro; gateway ou loja recusa; ação judicial | Conteúdo sem poder; chances e tiragem publicadas; tetos; interruptor por país que prende o conteúdo; **validar com advogado** (LCP, art. 50; Lei 15.211/2025, art. 20); risco assumido pelo Gabriel |
-| **Baú como canal de lavagem** | Cartão roubado → Alvará → Baús → ouro | Baú herda a carência; taxa de 12%; teto de compra |
+| **Baú como canal de lavagem** | Cartão roubado → Alvarás → Baús → ouro | Baú herda a carência do lote; taxa de 12%; teto de compra |
 | **Golpes no RMT informal** | O estúdio não intermedia, e o jogador lesado chega ao suporte sem solução | Termos claros (S4); avisos na Troca; o Câmbio e o Cartório como rotas seguras e baratas |
 | **Câmara capturada** | Uma guilda rica elege vereadores e leva a Feira ao extremo da faixa | Faixa estreita, 1 ponto por mandato, 30 dias de aviso; política monetária fora do voto |
 | **Concentração por idade de conta** | A renda acompanha o tempo de calendário, e quem chegou primeiro domina | Teto linear; drenos progressivos e de topo; Mérito da Era; Travessia como recomeço; concentração por coorte no painel |

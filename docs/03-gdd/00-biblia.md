@@ -5,7 +5,7 @@
 
 ## 1. Visão em um parágrafo
 
-Um RPG idle online, de navegador, em que cada servidor é uma cidade viva, o **Arraial**. Cada jogador é um mestre de dois ofícios e de uma vocação de combate. Nada de bom se faz sozinho: o mercado é o tecido social, tudo o que se negocia se desgasta, e a cidade inteira constrói obras, se defende dos cercos e elege a sua Câmara. Enquanto o jogador está fora, o tempo trabalha por ele no progresso pessoal. Quando volta, ele decide, negocia e coopera. A cada temporada, o Arraial envia uma Travessia para a Bruma, uma terra nova que o servidor desbrava junto. O dinheiro real entra pelo Alvará (o token oficial), circula livremente e não sai pelo estúdio.
+Um RPG idle online, de navegador, em que cada servidor é uma cidade viva, o **Arraial**. Cada jogador é um mestre de dois ofícios e de uma vocação de combate. Nada de bom se faz sozinho: o mercado é o tecido social, tudo o que se negocia se desgasta, e a cidade inteira constrói obras, se defende dos cercos e elege a sua Câmara. Enquanto o jogador está fora, o tempo trabalha por ele no progresso pessoal. Quando volta, ele decide, negocia e coopera. A cada temporada, o Arraial envia uma Travessia para a Bruma, uma terra que o servidor reencontra e cura junto. O dinheiro real entra pelo Alvará (o token oficial), circula livremente e não sai pelo estúdio.
 
 ## 2. Pilares (o que nunca se negocia no design)
 
@@ -22,7 +22,8 @@ Um RPG idle online, de navegador, em que cada servidor é uma cidade viva, o **A
 - **O Arraial:** a cidade fundada pelos sobreviventes num vau de rio. Cada servidor é um Arraial com nome próprio (ex.: Arraial do Vau). Cada obra concluída empurra a Bruma para longe e abre regiões.
 - **Encantados e Assombrados:** os seres do folclore (os encantados) não são monstros. A Bruma os corrompe e os transforma em assombrados, que são os inimigos dos cercos e das expedições. Curar ou libertar um encantado é recompensa e narrativa, não só abate.
 - **A Travessia:** a expedição sazonal (a Fronteira do conceito). A cada temporada, a partir da segunda, a Bruma revela uma terra nova que o servidor inteiro explora.
-- **Evitar:** temas e símbolos ligados a violência colonial (ex.: bandeiras e bandeirantes como heróis) e caricaturas de povos e religiões. Revisão de sensibilidade cultural antes de fechar a direção de arte (módulo 14).
+- **Evitar:** temas e símbolos ligados a violência colonial (ex.: bandeiras e bandeirantes como heróis; "desbravar" terra "vazia" — a Travessia **reencontra e cura**) e caricaturas de povos e religiões. Revisão de sensibilidade cultural antes de fechar a direção de arte (módulo 14).
+- **Termos provisórios, a validar com a consultoria cultural:** "encantados" (no Tambor de Mina, a palavra nomeia entidades recebidas em transe; no jogo eles são corrompidos e enfrentados, o que pode ofender) e "Pindorama" (pauta da consultoria indígena).
 
 ## 4. Glossário (nomes oficiais; os módulos devem usá-los)
 
@@ -53,6 +54,7 @@ Um RPG idle online, de navegador, em que cada servidor é uma cidade viva, o **A
 | **Cartório** | Bazar oficial de contas, pago em Alvará. |
 | **Baú do Mascate** | A caixa: comprável com Alvará na loja e negociável por ouro no mercado; o conteúdo é sempre item, com tabela de chances publicada. |
 | **IPA** | Índice de Preços do Arraial: cesta de bens publicada com o preço do Alvará em ouro. |
+| **Folheto da volta** | A tela de retorno do ausente: abre pela consequência do plano e pelo gargalo, com a linha do tempo dos eventos; nada a coletar, nada a "dobrar". |
 
 ## 5. Decisões já tomadas (não reabrir nos módulos)
 
