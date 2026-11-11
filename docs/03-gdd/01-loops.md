@@ -157,7 +157,7 @@ A Fronteira não consome as filas da cidade. Ela roda numa trilha sazonal à par
 - **Referência:** as Leagues do OSRS, mundo paralelo que não reseta o principal ([F03](../01-pesquisa/fichas/F03-runescape-e-osrs.md)); o risco de esvaziar a cidade, registrado no [conceito](../02-conceito.md), seção 7.
 - **Problema:** se a Fronteira usar as mesmas filas, quem entra nela atrasa os ofícios, e quem fica na cidade perde a temporada.
 - **Comportamento:** participar das duas coisas; a Fronteira vira cliente dos ofícios.
-- **Risco:** a trilha extra aumentar a emissão total na temporada. Mitigação: o que a Fronteira produz é Marcos e relíquias presos à conta e à temporada (glossário da bíblia); o que vem da cidade para a Fronteira é consumido lá (dreno).
+- **Risco:** a trilha extra aumentar a emissão total na temporada. Mitigação: o que a Fronteira produz é Marcos e Troféus da Fronteira presos à conta e à temporada, mais as 24 Relíquias da Fronteira negociáveis, com tiragem fechada (glossário da bíblia; revisão de consistência: D5); o que vem da cidade para a Fronteira é consumido lá (dreno).
 
 ## 3. Loops por escala de tempo
 
@@ -237,7 +237,7 @@ A Fronteira não consome as filas da cidade. Ela roda numa trilha sazonal à par
 |---|---|
 | **O que faz** | Manda expedições à terra nova que a Névoa revelou, numa trilha própria (L8); abastece a expedição com suprimentos da cidade; enfrenta crises (janelas ativas de 10 a 15 min); a guilda corre para a cidadela no fim. |
 | **Decisão** | Grupo, suprimentos, rota e regras de recuo; quanto da produção da cidade mandar; se arrisca uma rota perigosa. |
-| **O que ganha** | Marcos (presos à conta e à temporada), títulos, cosméticos e relíquias que voltam para a cidade. O nome do descobridor fica gravado no mapa. |
+| **O que ganha** | Marcos (presos à conta e à temporada), títulos, cosméticos e Troféus da Fronteira que voltam para a cidade (revisão de consistência: D5). O nome do descobridor fica gravado no mapa. |
 | **Ausente × ativo** | A expedição roda offline e volta com um diário. Quem não está na crise recebe a versão automática dela, sem o bônus. O módulo 10 desenha a Fronteira. |
 
 ### 3.8 As três metas sempre visíveis

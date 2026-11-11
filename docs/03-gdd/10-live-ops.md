@@ -12,7 +12,7 @@
 | L2 | **A Era tem esqueleto fixo:** 3 Obras (S1, S5, S9), ganchos na S5 e na S9, Grande Cerco na S12 e semana de Colheita na S13. | Toda Era tem começo, virada e fim, e o pós-pico tem data para novidade. |
 | L3 | **A Fronteira usa o mesmo personagem**, com uma Fila da Fronteira extra e igual para todos, progressão própria que zera, teto de tier por região e **nenhum mercado próprio**. A cidade abastece a Fronteira. | Recomeço justo sem dividir a base nem a economia (lei 22). |
 | L4 | **Marcos com teto semanal acumulável.** | O hardcore não termina na 4ª semana, e quem pausou alcança. |
-| L5 | **Da Fronteira volta só história:** títulos, cosméticos, relíquias decorativas e um monumento coletivo. | Nada que infle a Cidade ou o divida. |
+| L5 | **Da Fronteira volta só história:** títulos, cosméticos, Troféus da Fronteira e um monumento coletivo. A única exceção negociável é a Relíquia da Fronteira, material raro com tiragem fechada (revisão de consistência: D5). | Nada que infle a Cidade ou o divida. |
 | L6 | **Eventos drenam e não emitem.** Recompensas presas à conta e cosméticas, materiais consumidos, zero ouro e zero item negociável. | Evento como torneira foi um erro documentado no EVE e no SimpleMMO. |
 | L7 | **Regra econômica só muda na fronteira** (mês ou Era), com 7 dias de aviso, e nunca na S12, na S13 ou nos 3 primeiros dias da Era. | Quem planejou não é punido (lei 8 e lei 21). |
 | L8 | **Relatório econômico mensal e notas de patch com o porquê**, em PT e EN. | Confiança é produto (pilar 5). |
@@ -56,7 +56,7 @@
 |---|---|---|---|---|
 | **S−4** (é a S9 da Era anterior) | — | Anúncio da próxima terra e da **lista de suprimentos** | **Prévia da Era:** ameaça, regra, opções da Obra I | Expectativa |
 | **S−1** (S12 da anterior) | — | — | Notas de patch completas, com o porquê | — |
-| **S1 — Abertura** | A ameaça e a regra entram; a Obra I começa; Cerco de apresentação (dificuldade baixa); **Fôlego de volta** para quem retorna (§9) | **Embarque:** inscrição, montagem do Posto, Encomenda de preparação | Festa de abertura; Diário especial | Reativação |
+| **S1 — Abertura** | A ameaça e a regra entram; a Obra I começa; Cerco de apresentação (dificuldade baixa); **Fôlego de volta** para quem retorna (§9) | **Embarque:** inscrição, montagem do Acampamento (revisão de consistência: D6), Encomenda de preparação | Festa de abertura; Diário especial | Reativação |
 | **S2** | Cerco | **A Névoa se abre:** o mapa começa a ser revelado pelas Margens | Vídeo curto do mapa (marketing) | Corrida inicial |
 | **S3** | Cerco | Margens | — | — |
 | **S4** | Cerco; consulta e escolha da Obra II | Margens; meta: 30% do mapa revelado | — | — |
@@ -68,7 +68,7 @@
 | **S10** | Cerco | **Assalto ao Coração**, etapa 1 | Contagem regressiva | — |
 | **S11** | Cerco | Assalto ao Coração, etapas 2 e 3; batalha final no sábado, transmitida em 3 horários | — | Final coletivo |
 | **S12 — Grande Cerco** | O chefe da Era no Cerco final; vencido, é libertado; a Grande Obra termina | **Desfecho:** resultado coletivo; o mapa se fecha no domingo | Notas de patch da próxima Era | Clímax |
-| **S13 — Colheita** | Cerco leve (vigília); títulos e rankings da Era; **Livro da Era** (crônica com nomes); congelamento de mudanças | **Loja do Posto** aberta; relíquias entregues; **Livro da Fronteira**; Marcos não gastos convertidos no domingo; Encomenda de preparação da próxima Fronteira | Boletim especial de fim de Era | **Pausa legítima** |
+| **S13 — Colheita** | Cerco leve (vigília); títulos e rankings da Era; **Livro da Era** (crônica com nomes); congelamento de mudanças | **Loja do Acampamento** aberta; Troféus e Relíquias da Fronteira entregues; **Livro da Fronteira**; Marcos não gastos convertidos no domingo; Encomenda de preparação da próxima Fronteira | Boletim especial de fim de Era | **Pausa legítima** |
 
 ### 3.3 A semana típica
 
@@ -115,7 +115,7 @@ Todas as ameaças e regras são provisórias. **Os seres e nomes são de fantasi
 
 ### 4.1 O que é: a decisão de formato
 
-A bíblia define a Fronteira como "a temporada de expedição à Névoa, em mundo paralelo, a partir da 2ª Era" e diz que ela devolve só títulos, cosméticos e relíquias. Falta decidir **quem entra nesse mundo paralelo**. Há três caminhos:
+A bíblia define a Fronteira como "a temporada de expedição à Névoa, em mundo paralelo, a partir da 2ª Era" e diz que ela devolve só títulos, cosméticos e troféus (a Relíquia da Fronteira, material negociável com tiragem fechada, é a exceção; revisão de consistência: D5). Falta decidir **quem entra nesse mundo paralelo**. Há três caminhos:
 
 | Opção | Como funciona | A favor | Contra |
 |---|---|---|---|
@@ -132,7 +132,7 @@ A bíblia define a Fronteira como "a temporada de expedição à Névoa, em mund
 
 ### 4.2 O mapa coletivo
 
-- **Forma:** cerca de 140 hexágonos em 7 regiões, em anéis: **Margens** (anéis 1 e 2), **Rios internos** (3 e 4), **Serras e Matas** (5) e **Coração da Névoa** (6). Geração procedural com pontos de interesse feitos à mão (ruínas das cidades antigas, criaturas aprisionadas, relíquias), cerca de 1 a cada 10 hexágonos [H], como o [conceito](../02-conceito.md) propõe.
+- **Forma:** cerca de 140 hexágonos em 7 regiões, em anéis: **Margens** (anéis 1 e 2), **Rios internos** (3 e 4), **Serras e Matas** (5) e **Coração da Névoa** (6). Geração procedural com pontos de interesse feitos à mão (ruínas das cidades antigas, criaturas aprisionadas, Troféus da Fronteira), cerca de 1 a cada 10 hexágonos [H], como o [conceito](../02-conceito.md) propõe.
 - **Revelação:** cada hexágono precisa de pontos de exploração, somados por todas as expedições do servidor.
 
 `custo(hex) = 400 × anel^1,3 × limite(A / 5.000; entre 0,5 e 2)`, em que **A** = desbravadores ativos na semana anterior [H].
@@ -150,16 +150,16 @@ A bíblia define a Fronteira como "a temporada de expedição à Névoa, em mund
 - O hardcore não esgota a Fronteira na 4ª semana, e quem entra na S6 encontra 5.000 de teto disponível (as semanas S2 a S6).
 - [H] O estudo de monetização recomenda um passe por marcos com teto semanal, para o ativo não disparar na frente ([06](../01-pesquisa/06-monetizacao-retencao.md)); aqui o mesmo vale para a moeda da temporada.
 
-**Dois catálogos no Posto [H]:**
+**Dois catálogos no Acampamento [H]:**
 
 | Catálogo | O que tem | Faixa de preço |
 |---|---|---|
 | **Usar na Névoa** | Melhorias e equipamento sazonal, que somem no fim | 200 a 1.500 |
-| **Levar para casa** | Cosméticos (500 a 3.000) e relíquias decorativas (até 6.000) | 500 a 6.000 |
+| **Levar para casa** | Cosméticos (500 a 3.000) e Troféus da Fronteira (até 6.000) | 500 a 6.000 |
 
 - **O dilema é de propósito:** gastar agora para ir mais longe ou guardar para levar algo para casa. [F] É o mesmo dilema dos orbs do Path of Exile, em que cada orb é aposta ou poupança ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)).
 - **O título-base não depende de gastar:** quem **ganha** 2.000 Marcos na Fronteira recebe "Desbravador(a) da Nª Fronteira", mesmo que tenha gastado tudo na Névoa.
-- **Exemplo:** um casual que ganha 40% do teto (4.400 Marcos) leva o título-base, uma relíquia menor e dois cosméticos, ou investe 1.500 na Névoa e leva menos para casa. Um dedicado que ganha 90% (9.900) leva quase todo o catálogo principal.
+- **Exemplo:** um casual que ganha 40% do teto (4.400 Marcos) leva o título-base, um Troféu da Fronteira menor e dois cosméticos, ou investe 1.500 na Névoa e leva menos para casa. Um dedicado que ganha 90% (9.900) leva quase todo o catálogo principal.
 - **No fim da S13, os Marcos não gastos viram automaticamente uma lembrança decorativa** proporcional ao saldo. Nunca viram ouro, Coins, Mérito ou XP. [H]
 
 ### 4.4 A cidade abastece a Fronteira
@@ -168,7 +168,7 @@ Cada expedição consome um **kit** comprado na Cidade [H]:
 
 | Item do kit | Ofícios que fornecem |
 |---|---|
-| Comida | Culinária, com Pesca, Colheita e carne da caça |
+| Comida: refeições (as provisões da Fronteira passam a ser refeições; revisão de consistência: D1) | Culinária, com Pesca, Colheita e carne da caça |
 | Poções e unguentos | Alquimia, com Colheita |
 | Luz (tochas, lanternas, óleo) | Carpintaria e Alquimia |
 | Reparo do equipamento, que se desgasta **1,5 vez mais rápido na Névoa** | Ferraria, Alfaiataria, Curtume, Carpintaria |
@@ -196,10 +196,11 @@ O [conceito](../02-conceito.md) previa uma corrida de guildas para fundar uma ci
 | Títulos por percentil | Top 1%, 5%, 10%, 25% e 50% em Marcos ganhos | Preso à conta |
 | Título de cartógrafo | Quem teve o nome gravado num hexágono | Preso à conta |
 | Cosméticos | Comprados com Marcos | Presos à conta |
-| Relíquias | Compradas com Marcos ou achadas em pontos de interesse | Decorativas, presas, expostas na casa, na Sede ou no museu da Cidade |
+| Troféus da Fronteira (antes "relíquias"; revisão de consistência: D5) | Comprados com Marcos ou achados em pontos de interesse | Decorativos, presos, expostos na casa, na Sede ou no museu da Cidade |
+| Relíquias da Fronteira (revisão de consistência: D5) | 24 por Fronteira: 12 por metas coletivas do servidor e 12 por destaques individuais e de guilda ([05](05-itens.md), seção 7.2) | Material raro **negociável** (Leilão), insumo do lendário; vale por duas Eras e depois vira decoração presa; gasta cota do teto quando sai da conta ([07](07-economia.md), seção 3.3) |
 | Monumento | A Cidade | Obra visual na praça e o nome da terra no mapa da Cidade |
 | Livro da Fronteira | Todos | Crônica e mapa com os nomes |
-| **Nada disso** | — | Ouro, Coins, item negociável, material, XP, Mérito ou poder |
+| **Nada disso** | — | Ouro, Coins, outro item negociável ou material, XP, Mérito ou poder |
 
 ### 4.7 Entrar atrasado e voltar
 
@@ -356,6 +357,17 @@ O jornal semanal dentro do jogo, montado pelo sistema e revisado pela equipe [H]
 
 [H] São de 6 a 8 pessoas. É o custo real de um jogo de serviço, e ele precisa entrar no plano de negócio do módulo 11. [F] O "custo alto para operar" dos eventos ao vivo é a principal ressalva do estudo [além do idle](../01-pesquisa/03-alem-do-idle.md) (§10).
 
+**Plano enxuto para 4 pessoas** [H] (revisão de consistência: D12). O cenário base do [11](11-monetizacao.md) (seção 8.4) paga de 3 a 4 pessoas além do Gabriel, menos que a equipe acima. Enquanto a receita não passar disso, a operação roda assim:
+
+| Função | Pessoas | O que muda |
+|---|---|---|
+| Live ops, design de Era e análise econômica | 1 | Eras **mais sistêmicas**: a ameaça e a regra da Era saem do banco de ideias (§3.5) e de combinações de regras antigas; menos conteúdo narrativo novo por Era (uma crônica curta no lugar de um arco completo) |
+| Comunidade bilíngue e moderação | 1,5 | Diário e Boletim semiautomáticos, gerados do painel; moderação por fila de prioridade, com a prevenção do desenho do [09](09-social.md) |
+| Servidor e plantão técnico | 1 | Escala de plantão só nos picos (Grande Cerco, final da Fronteira) |
+| Cliente e conteúdo visual | 0,5 | Cosméticos e festas reaproveitam peças; a arte terceirizada do 11 cobre o resto |
+
+O que se corta primeiro: festas (2 no ano 1, em vez das 6 a 7 da seção 5.3), Fronteiras mais curtas e eventos mensais menores. O que nunca se corta: o Cerco semanal, as 3 Obras por Era, o Boletim do IPC e o prazo das apelações. **É um risco de negócio** (seção 13).
+
 ### 8.2 A segunda Cidade
 
 - **Gatilho [H]:** mais de 5.000 simultâneos no pico por 4 semanas seguidas (o teto do alvo da bíblia, §6.7), ou fila de entrada recorrente.
@@ -437,7 +449,7 @@ O que os módulos 07 e 08 precisam simular [H]:
 | **Feira Grande** | Mensal | Concurso consome 1 peça por inscrito, em 4 ofícios por mês | 06, 07 |
 | **Festas** | De 5 a 6 por ano | Cerca de 1% de P por semana de festa, em materiais | 07, 08 |
 | **Recompensas de eventos e rankings** | — | **0 ouro e 0 item negociável**; só títulos, cosméticos, decoração, XP pessoal e Mérito | 07, 11 |
-| **Recompensas da Fronteira** | — | Marcos (até 1.000 por semana, acumulável, 11.000 no máximo); títulos, cosméticos e relíquias presos à conta | 07, 11 |
+| **Recompensas da Fronteira** | — | Marcos (até 1.000 por semana, acumulável, 11.000 no máximo); títulos, cosméticos e Troféus da Fronteira presos à conta; 24 Relíquias da Fronteira negociáveis por Fronteira (revisão de consistência: D5) | 05, 07, 11 |
 | **Regra da Era** | 1 por Era | Choque de oferta e demanda a estimar 4 semanas antes | 07, 08 |
 | **Conselho** | Posse na S1, S5 ou S9 | Feira entre 4% e 8%, no máximo ±1 p.p. por mandato | 07, 08 |
 | **Mudanças econômicas** | Só na virada de mês ou de Era, com 7 dias de aviso | — | 07 |
@@ -448,7 +460,7 @@ O que os módulos 07 e 08 precisam simular [H]:
 
 1. **[proposta de mudança na bíblia] §6.1, Fronteira:** "da S2 à S12 de cada Era, a partir da 2ª (11 semanas)", dentro da faixa de 10 a 12.
 2. **[proposta de mudança na bíblia] §4, glossário, Fila da Fronteira:** uma Fila extra, sazonal e igual para todos, que só faz expedições na Névoa. Ela não é comprada, mas também não é "conquistada jogando", então pede aval explícito diante da regra das Filas. A reconciliar com o módulo 02.
-3. **[proposta de mudança na bíblia] §4, glossário:** incluir **nível de desbravador** (progressão da Fronteira, de 1 a 30, que zera), **Posto** (a base da Fronteira, onde se gastam Marcos), **Coração da Névoa** (a região final), **frente** (a unidade do final coletivo) e **relíquia** (item decorativo preso à conta, sem efeito de poder).
+3. **[proposta de mudança na bíblia] §4, glossário:** incluir **nível de desbravador** (progressão da Fronteira, de 1 a 30, que zera), **Acampamento** (a base da Fronteira, onde se gastam Marcos; antes "Posto", nome que agora fica só para o posto de defesa no cerco; revisão de consistência: D6), **Coração da Névoa** (a região final), **frente** (a unidade do final coletivo) e **Troféu da Fronteira** (item decorativo preso à conta, sem efeito de poder; antes "relíquia"; revisão de consistência: D5). Adotada no anexo do glossário.
 4. **[proposta de mudança na bíblia] §6.1, Era:** o esqueleto de 3 Obras (S1, S5, S9), Grande Cerco na S12 e Colheita na S13.
 5. **[proposta de mudança na bíblia] §5 ou constituição econômica:** "mudança econômica só na virada de mês ou de Era, com 7 dias de aviso; congelamento na S12, na S13 e nos 3 primeiros dias da Era; nerf nunca retroativo".
 6. **[proposta ao diretor sobre o conceito] Final da Fronteira:** trocar a "corrida de guildas pela cidadela" (conceito B) por um final da Cidade inteira com frentes de guilda (§4.5), para responder ao risco "final dominado pelas guildas grandes".
@@ -461,7 +473,7 @@ O que os módulos 07 e 08 precisam simular [H]:
 | **A esteira de conteúdo** | Uma equipe pequena não consegue entregar uma ameaça, uma regra, 3 Obras e uma Fronteira a cada 13 semanas | Trabalhar 2 Eras à frente; Era sistêmica de reserva; mapas procedurais com pontos de interesse feitos à mão; reaproveitar regras de Eras antigas em combinações novas. |
 | **Evasão depois do pico mesmo assim** | O PoE caiu de 184 mil para 16 mil em dois meses ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)) | Os ganchos do §9; o alarme da curva da Era; e, se a S6 ficar abaixo de 60% por 2 Eras, revisar o esqueleto (mais novidade guardada para depois da S5). |
 | **A Fronteira esvazia a Cidade** | Todos vão para a Névoa e a cidade para | A Fila da Fronteira não tira tempo de produção; os suprimentos vêm da Cidade; o Cerco continua; alarme de adesão acima de 85%. |
-| **A Cidade esvazia a Fronteira** | A Fronteira parece obrigação ou não vale a pena | Recompensas que todo mundo quer exibir (títulos, relíquias, nome no mapa); entrada tardia viável; alarme de adesão abaixo de 30%. |
+| **A Cidade esvazia a Fronteira** | A Fronteira parece obrigação ou não vale a pena | Recompensas que todo mundo quer exibir (títulos, Troféus da Fronteira, nome no mapa); entrada tardia viável; alarme de adesão abaixo de 30%. |
 | **Choque de suprimentos** | Os preços disparam na S2 e o novato não consegue montar um kit | Lista publicada na S−4; Encomendas de preparação; oficinas NPC de reforço com preço teto; kit básico vendido por NPC só para desbravadores de nível baixo. |
 | **O veterano domina a Fronteira** | O equipamento da Cidade decide tudo | Teto de tier por região; o nível de desbravador zera; percentis em vez de top 10. |
 | **O final vira coisa das guildas grandes** | A megaguilda decide a frente principal | Frentes interdependentes; Frente da Cidade para os solos; divisões por porte e ranking por membro; o resultado é coletivo. |
@@ -474,6 +486,6 @@ O que os módulos 07 e 08 precisam simular [H]:
 | **Erro cultural ou de semelhança** | Uma festa ou uma criatura é lida como paródia de rito religioso real ou como cópia de outro jogo | Formas seculares, sem ritos; nomes e símbolos próprios; revisão de sensibilidade e de semelhança antes de cada festa e cada Era; a comunidade co-cria (concurso de lendas). |
 | **O público de língua inglesa não se reconhece** | O calendário parece traduzido ou genérico demais | Cada festa tem um gancho universal (colheita, torneio, máscaras, inverno, Halloween); textos e momentos ao vivo em EN; moderação nos dois idiomas. |
 | **População baixa para a Fronteira** | Com poucos milhares de ativos, o mapa não anda e o final não sai | Custo dos hexágonos escalado pela população; limiar de 1.500 ativos e Fronteira curta (§10). |
-| **Custo de operação subestimado** | De 6 a 8 pessoas para operar é muito para um estúdio pequeno | Entrar no plano do módulo 11; automatizar o Diário e o Boletim; começar com menos festas (2 no ano 1) se a receita não fechar. |
+| **Custo de operação subestimado (risco de negócio; revisão de consistência: D12)** | De 6 a 8 pessoas para operar é muito para um estúdio pequeno, e o cenário base do 11 paga só 3 a 4 | Plano enxuto para 4 pessoas (§8.1): Eras mais sistêmicas, menos conteúdo narrativo novo por Era; automatizar o Diário e o Boletim; começar com menos festas (2 no ano 1); medir a receita real no alfa antes de contratar. |
 | **Métrica de vaidade** | Otimizar DAU com obrigações e notificações | Alarmes de fadiga e de sessões demais; a pesquisa de satisfação pesa tanto quanto o DAU; no máximo 1 aviso por semana. |
 

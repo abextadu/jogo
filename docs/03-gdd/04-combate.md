@@ -149,7 +149,7 @@ A defesa tem retorno decrescente: DEF 100 corta 50% do dano, DEF 200 corta 67%, 
 | Família | O que é | Desfecho | O que rende |
 |---|---|---|---|
 | **Feras** | Animais e bestas de Aldária: javalis, lobos, ursos, aranhas gigantes, basiliscos, serpes. As **feras da Névoa** são variantes tomadas por ela, mais fortes e mais escuras. | Abate | Pele, carne, matéria dura (seção 7); as feras da Névoa soltam também cinza de névoa |
-| **Mortos-vivos** | Os mortos dos reinos de outrora, que a Névoa levanta: soldados de ossos, vultos, cavaleiros caídos | Dar descanso | Cinza de névoa, relíquias dos reinos de outrora |
+| **Mortos-vivos** | Os mortos dos reinos de outrora, que a Névoa levanta: soldados de ossos, vultos, cavaleiros caídos | Dar descanso | Cinza de névoa, vestígios dos reinos de outrora |
 | **Corrompidos** | Povos e grandes criaturas tomados pela Névoa: bandos goblins e orcs, trolls, a Tecelã, a Cerva Antiga | **Abater** ou **purificar** | Ver 5.2 |
 
 **[proposta de mudança na bíblia]** A bíblia (seção 3) fala de criaturas e de criaturas corrompidas pela Névoa. Propomos fixar **três famílias** (feras, mortos-vivos e corrompidos) e que **só os corrompidos tenham a barra de Névoa** e possam ser purificados.
@@ -297,7 +297,7 @@ O Cavaleiro tira menos por hora, mas gasta cerca de 40% menos poções (8.1). O 
 - **O combate não solta ouro.** O ouro entra pela venda de bens básicos ao NPC e pelas encomendas, como o [07-economia](07-economia.md) já decidiu ("o combate idle não solta ouro"). O ouro de monstro é a torneira clássica que cresce com horas e com contas (lei 6; [F] o SimpleMMO cortou o ouro dos chefes mundiais em set/2026, numa série de drenos, segundo [03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3). Reconciliado: o 05 (seção 3, regra-mãe) e o 06 (seção 1) tiraram o ouro dos drops de combate (revisão de consistência: R2).
 - **Teto de emissão:** o que passar do teto negociável diário da conta fica preso à conta (o próprio jogador usa) ou vai para as obras como Mérito ([00-biblia](00-biblia.md), 6.6).
 - **Todas as tabelas de drop são públicas** (P6 e insight 2 da [síntese](../01-pesquisa/00-sintese.md)).
-- **Achados** têm grau (comum, raro, único): relíquias dos reinos de outrora (para obras e coleções), **moldes** (receitas especiais para os ofícios), mapas, minérios e madeiras raros. Os únicos são presos à conta.
+- **Achados** têm grau (comum, raro, único): vestígios dos reinos de outrora (para obras e coleções), **moldes** (receitas especiais para os ofícios), mapas, minérios e madeiras raros. Os únicos são presos à conta.
 - A **Arrancada** multiplica os drops por 1,5 durante 10 min (10.2).
 
 ## 8. Consumo e desgaste por hora de combate
@@ -483,7 +483,7 @@ Exemplo: o Caçador nível 30 da seção 4.3 tem PC perto de 900; um Cavaleiro d
 
 - **Fadiga** na onda *i*: `1 − 0,08 × (i − 1) × (1 − cobertura)`, sendo a cobertura da Enfermaria `mín(1; PC da Enfermaria / (0,15 × PC total))`. Sem Druidas, os defensores chegam à 5ª onda com 68% da força.
 - **G — a Guarda da Cidade.** Os guardas NPC da cidade, um para cada 10 jogadores ativos, com PC de 300 cada: `G = guardas × 300 × (1 + 0,1 × nível da Muralha) × fração equipada × Integridade / 100`. A **fração equipada** é a parte dos guardas que tem um kit (arma e armadura) no Arsenal. **A obra da Muralha e os kits da Guarda são o que o ausente deixou pronto para a cidade.**
-- **P — provisões** do Arsenal gastas na onda. Cada unidade vale, por tier, 20 / 30 / 45 / 65 / 90 / 120 (T1 a T6), vezes o acerto com o Presságio (1,5 / 1,0 / 0,5). O plano de defesa distribui as provisões pelas ondas (padrão: proporcional à força de cada uma).
+- **P — provisões** do Arsenal gastas na onda (as provisões são refeições; revisão de consistência: D1). Cada unidade vale, por tier, 20 / 30 / 45 / 65 / 90 / 120 (T1 a T6), vezes o acerto com o Presságio (1,5 / 1,0 / 0,5). O plano de defesa distribui as provisões pelas ondas (padrão: proporcional à força de cada uma).
 
 **Força de cada onda:** `F(onda) = F_ref × m`, com m = 0,6 · 0,8 · 1,0 · 1,2 · 1,6 (da 1ª à 5ª onda).
 
@@ -548,9 +548,9 @@ O fator do resultado é 1,3 na Vitória plena, 1,15 na Vitória, 1,0 na Resistê
 
 **Mérito do fornecedor:**
 - Provisões, kits da Guarda e materiais de reparo entregues ao Arsenal valem Mérito pelo **preço de referência do sistema** (a cesta do IPC), não pelo pico do mercado.
-- **O que o próprio jogador produziu conta 100%; o que ele comprou conta 50%.** O livro-razão sabe quem produziu cada lote ([00-biblia](00-biblia.md), P9).
+- **O que o próprio jogador produziu conta 100%; o que ele comprou conta 25%** (o mesmo peso do [09](09-social.md); revisão de consistência: D10). O livro-razão sabe quem produziu cada lote ([00-biblia](00-biblia.md), P9).
 - A partir de 300 de Mérito de fornecimento na semana, a taxa cai à metade.
-- [H] O desconto para o item comprado estreita o caminho Coins → ouro → itens → Mérito, sem fechá-lo de todo (a reconciliar com 07 e 09; o 09 já dá zero ponto de ranking a item comprado).
+- [H] O desconto para o item comprado estreita o caminho Coins → ouro → itens → Mérito, sem fechá-lo de todo (reconciliado com o 09: 25% do Mérito e zero ponto de ranking para item comprado; revisão de consistência: D10).
 
 **Para todos os inscritos:** um baú do cerco, preso à conta (materiais, cosméticos e títulos), melhor quanto melhor o resultado.
 
@@ -568,7 +568,7 @@ Por **1.000 jogadores ativos**, numa semana normal [H] (a reconciliar com 05, 06
 
 | Consumo | Quantidade | Ofícios que abastecem |
 |---|---|---|
-| Provisões no Arsenal (poções, óleos, flechas, rancho do cerco) | ~8.000 unidades | Alquimia, Carpintaria, Ferraria, Culinária |
+| Provisões no Arsenal: **refeições** (o rancho do cerco; revisão de consistência: D1). Poções, óleos e flechas seguem nos cintos dos inscritos (última linha) | ~8.000 unidades | Culinária, com Pesca, Colheita e carne da caça |
 | Kits da Guarda (arma e armadura) | 100 guardas; 40 pontos de desgaste por peça a cada cerco, ou ~24 peças (~12 kits) gastas por semana, mais o que faltar para equipar todos | Ferraria, Alfaiataria, Curtume, Carpintaria |
 | Reparo da Integridade (~10 pontos por semana) | ~1.000 tábuas, 500 lingotes e 200 blocos de pedra | Carpintaria, Fundição, Mineração |
 | Desgaste dos defensores (~300 inscritos × 6 peças × 40 pontos) | ~72.000 pontos, ou ~214 peças Comuns-equivalentes gastas por semana | Ferraria, Alfaiataria, Carpintaria, e os kits de reparo |
@@ -701,13 +701,13 @@ Por **1.000 jogadores ativos**, numa semana normal [H] (a reconciliar com 05, 06
 | | Cópias congeladas | Cerco: 40 pontos por peça no fechamento da inscrição. Masmorra: 15 pontos por peça e por corrida no compromisso |
 | **05, 06, 07, 08** | **Drops por hora** | ~100 abates por hora, sozinho, na margem 0. Por abate de fera: pele 0,40 · carne 0,50 · matéria dura 0,25 · peçonha, resina e sementes 0,05 · cinza de névoa 0,02 (0,3 nas feras da Névoa) · achado 0,002. Por morto-vivo: cinza de névoa 0,5 · relíquia 0,05 · achado 0,006. Por corrompido abatido: cinza de névoa 3,0. Multiplicadores por vocação na seção 7.4. Pressão de caça tira até 50%. **Ouro: zero** (igual ao 07; o 05 e o 06 precisam se alinhar) |
 | **05, 06** | Fauna por tier | Javali T1, lobo T2, urso T3, basilisco T4, serpe T5, dragão T6, como no 05; mais cervo (T1) e aranha gigante (T3–T4, peçonha e seda) |
-| **07, 09** | **O que o cerco consome** (por 1.000 ativos, por semana) | ~8.000 provisões · ~12 kits da Guarda (mais os que faltarem) · ~1.000 tábuas, 500 lingotes e 200 blocos de pedra · ~214 peças Comuns-equivalentes de desgaste dos defensores · metade dos cintos reservados |
+| **07, 09** | **O que o cerco consome** (por 1.000 ativos, por semana) | ~8.000 provisões (refeições; revisão de consistência: D1) · ~12 kits da Guarda (mais os que faltarem) · ~1.000 tábuas, 500 lingotes e 200 blocos de pedra · ~214 peças Comuns-equivalentes de desgaste dos defensores · metade dos cintos reservados |
 | **07, 09** | **Mérito do cerco** | 80 a 140 por defensor; fornecedor pelo preço de referência, 100% para produção própria e 50% para itens comprados, taxa pela metade acima de 300 por semana |
 | **02** | XP | A curva de XP de vocação por hora de combate é do 02; este módulo assume XP igual para ausente e ativo e menor na margem negativa |
 | **09** | Conselho | Horário do cerco (dentro de faixa), Rigor, plano de defesa (até 5 regras), Encomendas de cerco e de reparo |
 | **10** | Live-ops | Um grande corrompido por ciclo; ameaça nova por Era (F_ref × 1,2); o dragão como chefe de Era; túneis goblins libertados; a Fronteira reusa as expedições |
 | **12** | Onboarding | Modelos de regras; primeira expedição guiada (Bosque Raso); primeira purificação guiada (um goblin remendão) |
-| **13** | Anti-abuso | Semente registrada e diário reproduzível; cargas com teto; baú pela metade fora da faixa; Mérito pela metade em item comprado |
+| **13** | Anti-abuso | Semente registrada e diário reproduzível; cargas com teto; baú pela metade fora da faixa; Mérito a 25% em item comprado (revisão de consistência: D10) |
 | **14** | Arte e UI | Editor de regras por blocos; diário no Relatório da volta; barras de Vida e Névoa; veios de névoa nos corrompidos; as duas taxas (ausente 100%, ativa até 125%) |
 
 ## 14. Propostas de mudança na bíblia
@@ -733,7 +733,7 @@ Por **1.000 jogadores ativos**, numa semana normal [H] (a reconciliar com 05, 06
 | **Cerco virar conta resolvida** | A comunidade descobre a composição ótima e o cerco perde a graça. | Presságio variável, ameaça nova por Era, Rigor, Clarões e tetos nos marcos. |
 | **Cerco dominado por baleias ou por uma guilda** | Quem tem mais equipamento leva todo o Mérito. | Mérito comprimido (o mais forte ganha 1,7 vez o novato), PC medido contra um padrão e capacidade por posto. |
 | **Espiral de derrotas** | A cidade perde, a Guarda enfraquece, a cidade perde de novo. | F_ref × 0,85 depois da Queda, Encomenda de reparo com Mérito × 1,5 e nenhuma perda de obra ou de bônus. |
-| **Comprar Mérito com Coins** | Coins → ouro → itens → Arsenal → Mérito. | Item comprado vale 50%, preço de referência do sistema e taxa pela metade acima de 300 por semana (a fechar com 07 e 09). |
+| **Comprar Mérito com Coins** | Coins → ouro → itens → Arsenal → Mérito. | Item comprado vale 25% (revisão de consistência: D10), preço de referência do sistema e taxa pela metade acima de 300 por semana. |
 | **Fuso horário** | O sábado às 20 h de Brasília exclui quem joga de outro fuso. | A defesa é assíncrona; os Clarões são um bônus pequeno; o Conselho pode mudar o horário dentro da faixa. |
 | **Abuso da cópia congelada** | Inscrever-se com o melhor equipamento e vendê-lo em seguida. | Desgaste e cinto cobrados no momento do compromisso. |
 | **Carregamento pago em masmorras** | Um jogador forte "carrega" um fraco em troca de ouro ou dinheiro. | Baú pela metade fora da faixa recomendada e detecção de padrões. |

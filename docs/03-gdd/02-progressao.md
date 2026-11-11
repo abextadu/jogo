@@ -63,7 +63,7 @@ Níveis de desbloqueio do 06 (revisão de consistência: R5). Os tempos por aç�
 - **Comportamento:** escolher o ofício pelo papel na cidade e pelo estilo de jogo (coleta roda sozinha; criação pede insumo e decisão; ver o [01](01-loops.md), seção 4).
 - **Risco:** a XP igual esconde diferenças reais de esforço (a criação exige comprar insumos). Mitigação: a recompensa da criação vem em ouro e qualidade, não em XP.
 
-**Nota para o módulo 06** (reconciliada; revisão de consistência: R4 e R5): os tempos de ação são os do [06](06-oficios-e-coleta.md) (coleta de 8 s no T1 a 30 s no T6; transformação até ~95 s por unidade; criação de equipamento de 5 a 115 minutos por peça), e os níveis de tier também (35, 55, 75 e 90 no lugar de 30, 50, 70 e 85). Como a XP/h deste módulo não depende do tempo da ação, a curva não muda com eles.
+**Nota para o módulo 06** (reconciliada; revisão de consistência: R4 e R5): os tempos de ação são os do [06](06-oficios-e-coleta.md) (coleta de 8 s no T1 a 30 s no T6; transformação até ~170 s por unidade no T6; criação de equipamento de 5 a 115 minutos por peça; revisão de consistência: D2), e os níveis de tier também (35, 55, 75 e 90 no lugar de 30, 50, 70 e 85). Como a XP/h deste módulo não depende do tempo da ação, a curva não muda com eles.
 
 ### 2.2 Domínio do tier
 
@@ -164,7 +164,7 @@ Exemplos: `XP(1) = 5`; `XP(10) = 5 × 10^2,75 = 5 × 562,3 = 2.812`; `XP(60) = 3
 
 **O segundo ofício mestre** chega depois, porque só ganha fila própria com a 3ª fila: 30 no D16,9 / D13,6 / D10,4; 60 no ~D72 / ~D52 / ~D43; 100 no **~D188 / ~D150 / ~D129** (casual / regular / hardcore; estimativa com os níveis de tier do 06, revisão de consistência: R5).
 
-**A primeira sessão** é ativa e corre na taxa de 100%: o nível 5 sai em ~4 min (368 XP a ~6.200 XP/h) e o 7 em ~14 min (1.478 XP). O módulo 12 desenha esses minutos. Com o bônus de calouro valendo desde a criação da conta, esses tempos cairiam para ~2,5 e ~9 min (revisão de consistência: R10; a confirmar com o 12).
+**A primeira sessão** é ativa e corre na taxa de 100%: o nível 5 sai em ~4 min (368 XP a ~6.200 XP/h) e o 7 em ~14 min (1.478 XP). O módulo 12 desenha esses minutos. Com o bônus de calouro valendo desde a criação da conta, esses tempos caem para ~2,5 e ~9 min, e o 12 adota esses tempos (revisão de consistência: R10 e D3).
 
 ### 3.5 Checagem da pista de conteúdo
 
@@ -176,7 +176,7 @@ Exemplos: `XP(1) = 5`; `XP(10) = 5 × 10^2,75 = 5 × 562,3 = 2.812`; `XP(60) = 3
 
 **Leitura da bíblia** [H]: "jogo normal" foi lido como o perfil regular. Cumprimos também a leitura mais dura (o primeiro 100 do servidor só depois do D90), porque a vantagem do hardcore no ofício principal é de apenas ~22% sobre o regular: a fila é uma por atividade e roda no máximo 24 h por dia.
 
-**A virada do 30 mais cedo: bônus de calouro (adotado pelo diretor; revisão de consistência: R10)** [H]: para atender o pedido do [12](12-onboarding.md) (primeiro 30 entre o D2 e o D4), **a XP de ofício rende ×1,6 nos 3 primeiros dias da conta**. Estimativa desta revisão, calibrada no modelo original: o 30 vai para ~D5,2 (casual), ~D3,9 (regular) e ~D2,6 (hardcore), e o 100 adianta de 1 a 2 dias. O regular e o hardcore ficam dentro do D2 a D4; o casual fica um pouco depois. A variante estudada antes (×1,6 no primeiro ofício até ele chegar ao 30, sem prazo) dava D4,3 / D3,5 / D2,6. A pista continua cumprida.
+**A virada do 30 mais cedo: bônus de calouro (adotado pelo diretor; revisão de consistência: R10)** [H]: para atender o pedido do [12](12-onboarding.md) (primeiro 30 entre o D2 e o D4), **a XP de ofício rende ×1,6 nos 3 primeiros dias da conta**. Estimativa desta revisão, calibrada no modelo original: o 30 vai para ~D5,2 (casual), ~D3,9 (regular) e ~D2,6 (hardcore), e o 100 adianta de 1 a 2 dias. O regular e o hardcore ficam dentro do D2 a D4; o casual chega por volta do D5, o que o diretor aceitou (revisão de consistência: D3). A variante estudada antes (×1,6 no primeiro ofício até ele chegar ao 30, sem prazo) dava D4,3 / D3,5 / D2,6. A pista continua cumprida.
 
 **Botões de ajuste para o módulo 08:** o coeficiente `5` desloca todas as datas na mesma proporção (no modelo, com 5,5 no lugar de 5, o 100 do regular foi do D115,8 ao D127,4: +10,0%). O expoente `2,75` muda a forma: maior atrasa o fim mais que o começo. A eficiência do plano e a taxa ausente são as premissas de que as datas mais dependem; se o alfa medir eficiências diferentes, recalibrar o coeficiente, não as regras.
 
@@ -595,11 +595,11 @@ Tabela com os níveis de tier do 06, o bônus de calouro e o Selo que mantém o 
 | **04 Combate** | Expedição como atividade de fila; regiões nos mesmos degraus dos tiers; XP de vocação do cerco e da Fronteira somada à da fila. |
 | **05 Itens** | A ferramenta é portão de tier (regra do 05) e não acelera (revisão de consistência: R16); a qualidade muda durabilidade e achado; alvo de 3 a 7 dias de fila por ferramenta (o 05 dá 84 h à Comum e 109 h à Obra-prima, dentro do alvo); técnica Mão leve (−15% de desgaste). |
 | **06 Ofícios** | XP/h igual por tier (a XP por ação segue o tempo da ação); equipamento pode ter ações de 60 a 300 s; receitas a cada 3 níveis até o 30 e a cada 5 depois; menu de regras do Selo adaptado a cada ofício; XP da obra-prima. |
-| **07 Economia** | Na fórmula `teto(n, m) = 600 + 30 × n + 50 × m` do 07: **`m` = soma dos graus do Selo nos dois ofícios mestres (0 a 10 no lançamento: 5 graus × 2)**, e **`n` deve usar o maior nível já alcançado**, senão o Selo (que volta o ofício ao 30) cortaria o teto de quem toma prestígio. Também: destino do excedente; Selo que mantém o tier, sem choque de oferta de T6 (R22); alvos de preço de ferramenta em dias de renda (seção 11). |
+| **07 Economia** | Na fórmula `teto(n, m) = 600 + 30 × n + 50 × m` do 07: **`m` = soma dos graus do Selo nos dois ofícios mestres (0 a 10 no lançamento: 5 graus × 2)**, e **`n` deve usar o maior nível já alcançado**, senão o Selo (que volta o ofício ao 30) cortaria o teto de quem toma prestígio (adotado no 07; revisão de consistência: D9). Também: destino do excedente; Selo que mantém o tier, sem choque de oferta de T6 (R22); alvos de preço de ferramenta em dias de renda (seção 11). |
 | **09 Social** | Mérito como requisito de progressão (300, 1.000 e 2.000); a opção Aprendizes do Selo II. |
 | **10 Live-ops** | Um grau novo de Selo a cada 1 ou 2 Eras; Fronteira em trilha própria, sem consumir filas. |
 | **11 Monetização** | Zona vermelha deste módulo: filas, etapas e regras, teto de offline, taxa ausente, bancada ativa, XP, Maestria e Selo. Nada disso se compra com Coins nem entra no Baú Misterioso ou no passe. |
-| **12 Onboarding** | Nível 5 em ~4 min e 7 em ~14 min na primeira sessão (sem o bônus de calouro); a virada do 30 entre ~D2,6 e ~D5,2, com o bônus de calouro de ×1,6 nos 3 primeiros dias (revisão de consistência: R10). |
+| **12 Onboarding** | Nível 5 em ~2,5 min e 7 em ~9 min na primeira sessão, já com o bônus de calouro; a virada do 30 entre o D2 e o D4 no regular e no hardcore e por volta do D5 no casual, com o bônus de ×1,6 nos 3 primeiros dias (revisão de consistência: R10 e D3). |
 
 ## 13. Propostas de mudança na bíblia e pontos a reconciliar
 
@@ -608,7 +608,7 @@ Tabela com os níveis de tier do 06, o bônus de calouro e o Selo que mantém o 
 1. **Glossário:** incluir **taxa ausente**, **taxa ativa**, **bancada ativa**, **lance**, **achados** (ativos e do ausente), **etapas** e **regras de fila**, **nível total**, **reserva do aprendiz**, **pontos de Maestria**, **grau do Selo** (o **Relatório da volta** já entrou no glossário na revisão de 2026-11-11). **Adotada em parte** no anexo do glossário (revisão de consistência: R14).
 2. **Definição de Fila:** "De 1 a 3 filas paralelas por personagem; cada uma roda uma atividade diferente (nunca duas no mesmo ofício); dentro de cada fila, etapas em sequência." **Adotada** (R6).
 3. **6.1, offline:** acrescentar o rabo de 12 h a 25% da taxa ausente depois do teto. **Adotada** (R15).
-4. **6.1, ação básica:** "3 a 30 s por unidade" vale para coleta, transformação e consumíveis; equipamento pode levar de 60 a 300 s por peça (a confirmar no módulo 06). **Substituída pela R4:** 3 a 30 s só para coleta; transformação até ~95 s por unidade; criação de 5 a 115 min por peça.
+4. **6.1, ação básica:** "3 a 30 s por unidade" vale para coleta, transformação e consumíveis; equipamento pode levar de 60 a 300 s por peça (a confirmar no módulo 06). **Substituída pela R4 e pela D2:** 3 a 30 s só para coleta; transformação até ~170 s por unidade no T6; criação de 5 a 115 min por peça.
 5. **6.2, Maestria:** "1 ponto a cada 400 mil XP depois do 100; três técnicas por ciclo (5, 10 e 20 pontos); Selo de mestre com cinco graus no lançamento; o Selo volta o ofício ao 30." Com a R22, o Selo volta o nível ao 30 e mantém o tier de produção.
 6. **6.2, pista:** registrar a leitura usada: "≥ 90 dias até o primeiro 100 de ofício mestre mesmo para o hardcore". Com as regras da revisão de consistência, a simulação mediu D102 no hardcore, D123 no regular e D149 no casual (eram D95, D116 e D141).
 

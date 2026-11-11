@@ -4,7 +4,7 @@
 > **Codinome:** Projeto Ofício (provisório). Todo módulo do GDD segue este documento; para mudar algo daqui, o módulo propõe a mudança marcada como **[proposta de mudança na bíblia]** e o diretor decide.
 > Base: [conceito aprovado](../02-conceito.md) (Cidade dos Ofícios + Fronteira) e as decisões dos checkpoints ([PROGRESSO](../PROGRESSO.md)). Etiquetas: [F] fato com fonte, [H] proposta do estúdio, [NV] não verificado. **Todo número aqui é ponto de partida [H] a calibrar na simulação (módulo 08).**
 > **Revisão de 2026-11-11 (decisão do Gabriel):** o tema passou de "fantasia com raízes brasileiras" para **fantasia medieval clássica**, com **pixel art** e **nomes de fantasia clássica**. A tabela de renomeação está na seção 9.
-> **Revisão de consistência (2026-11-11):** aplicadas as resoluções R1 a R27 do diretor ([notas de integração](_notas-de-integracao.md)). Nesta bíblia: decisões vigentes R12 e R13 (seção 5), números-âncora R3, R4, R5, R6, R15, R17, R18 e R19 (seção 6) e o anexo do glossário (seção 4.1, R14). Cada trecho alterado leva a marca "revisão de consistência".
+> **Revisão de consistência (2026-11-11):** aplicadas as resoluções R1 a R27 e D1 a D14 do diretor ([notas de integração](_notas-de-integracao.md)). Nesta bíblia: decisões vigentes R12 e R13 (seção 5), números-âncora R3, R4, R5, R6, R15, R17, R18 e R19 (seção 6) e o anexo do glossário (seção 4.1, R14). Cada trecho alterado leva a marca "revisão de consistência".
 
 ## 1. Visão em um parágrafo
 
@@ -86,9 +86,9 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | **Lote fino** | Sessão ativa da Alquimia e da Culinária que deixa um lote de consumíveis Fino (+25% de efeito). | 06 |
 | **Matéria rara** e **insumo nobre** | Matéria rara: achado do Faro e do combate (veio puro, cerne, pele rara). Insumo nobre: o que a obra-prima de transformação faz dela (lingote temperado, couro encerado, brocado). | 05, 06 |
 | **Único** e **Lendário** | Único: obra-prima excepcional com um traço que é uma troca. Lendário: obra-prima de T4 a T6 feita com Relíquia da Fronteira, no máximo 24 por Era por Cidade e 1 por mestre, que quebra em ~88 h de uso. | 05 |
-| **Relíquia da Fronteira** | Insumo raro da Fronteira para o lendário, negociável até expirar (no Leilão). Não confundir com a **relíquia** decorativa do 10. | 05 |
+| **Relíquia da Fronteira** | O material raro negociável da Fronteira (24 por Fronteira), insumo do lendário; vai ao Leilão e vale por duas Eras. Não confundir com o **Troféu da Fronteira**, que é decorativo (revisão de consistência: D5). | 05, 07, 10 |
 | **Kit de reparo** | Consumível feito por artesãos que repara uma peça; cada reparo tira 20% da durabilidade original, e a peça quebra depois do 3º. | 05 |
-| **Oficina da Cidade** | As oficinas NPC de reforço: vendem insumos, kits, consumíveis básicos e peças de oficina a um múltiplo do VR, com limite diário, tudo preso à conta. Válvula contra gargalo e cartel. | 05, 06, 07 |
+| **Oficina da Cidade** | As oficinas NPC de reforço: vendem insumos, kits, consumíveis básicos e peças de oficina a 2,5× o VR (revisão de consistência: D7), com limite diário, tudo preso à conta. Válvula contra gargalo e cartel. | 05, 06, 07 |
 | **Moda da Cidade** | Cosmético feito por ofício (Tecelagem, Alfaiataria) que se gasta com o uso. | 05 |
 
 **Personagem e combate (03, 04)**
@@ -114,7 +114,7 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 
 | Termo | O que é | Origem |
 |---|---|---|
-| **Sede** | A base da guilda na Cidade, com 5 níveis, de 20 a 40 vagas e manutenção em materiais. Não dá bônus de produção, drop nem XP. | 09 |
+| **Sede** | A base da guilda na Cidade, com 5 níveis (Choupana, Casa, Pavilhão, Bastião e Cidadela; revisão de consistência: D11), de 20 a 40 vagas e manutenção em materiais. Não dá bônus de produção, drop nem XP. | 09 |
 | **Renome** | A progressão da guilda, que vem de entregas e defesa. Não confundir com o Mérito, que é pessoal. | 09 |
 | **Guarnição** | Grupo de defesa do Cerco (até 10 pessoas), de guilda ou aberto. | 09 |
 | **Padrinho / Madrinha** | Cidadão veterano que mentora novatos; recebe Mérito e cosméticos pelos marcos do afilhado, nunca ouro nem Coins. | 09, 12 |
@@ -123,10 +123,11 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | **Hora-fila (h-f)** | Unidade de conta: o que um personagem típico produz em 1 hora de fila no tier do momento. Serve para medir custos e metas sem depender do ouro. | 09, 10 |
 | **Fila da Fronteira** | Fila extra, sazonal e igual para todos, que só faz expedições na Névoa e some no fim da Fronteira; não conta no teto de 3 filas e não produz nada negociável. | 10 |
 | **Nível de desbravador** | A progressão da Fronteira, de 1 a 30, que zera a cada temporada. | 10 |
-| **Posto** | A base da Fronteira, onde se gastam Marcos. | 10 |
+| **Acampamento** | A base da Fronteira, onde se gastam Marcos (antes "Posto"; revisão de consistência: D6). | 10 |
+| **Posto** | Só o posto de defesa no cerco (Muralha, Torres, Enfermaria, Vigia), escolhido na inscrição (revisão de consistência: D6). | 04, 09, 12 |
 | **Coração da Névoa** | A região final do mapa da Fronteira, que aparece quando 75% do mapa está revelado. | 10 |
 | **Frente** | A unidade do final coletivo da Fronteira (até 5, cada uma com uma exigência); cada guilda escolhe uma, e solos e guildas pequenas entram na Frente da Cidade. | 10 |
-| **Relíquia** | Item decorativo da Fronteira, preso à conta, sem efeito de poder. Não confundir com a **Relíquia da Fronteira** do 05. | 10 |
+| **Troféu da Fronteira** | Item decorativo da Fronteira, preso à conta, sem efeito de poder, comprado com Marcos ou achado em pontos de interesse (antes "relíquia"; revisão de consistência: D5). Não confundir com a **Relíquia da Fronteira**, que é material negociável. | 10 |
 
 **Monetização e onboarding (11, 12)**
 
@@ -144,7 +145,7 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | **Valor de referência (VR)** | O valor fixo de lançamento de cada item: o trabalho embutido nele, em minutos de ofício (06), vezes 2,0 ouro por minuto. Mede o teto de emissão, a cota, o crédito dos insumos e o preço-base de NPC (R18, R24). | 05, 06, 07 |
 | **Preço de mercado** | A mediana ponderada por volume dos negócios das últimas 24 h, recalculada de hora em hora. É a base das taxas, da banda da Bolsa, da Troca e do IPC. | 07 |
 | **Cota** | O saldo disponível do teto de emissão: enche 1/24 do teto por hora e acumula até 3 dias. | 07 |
-| **Portão de saída** | A forma do teto de emissão: nada nasce preso; o teto mede só o valor criado pela própria conta que sai dela (venda, Troca, venda a NPC), menos o crédito dos insumos comprados. | 07 |
+| **Portão de saída** | A forma do teto de emissão: nada nasce preso; o teto mede só o valor criado pela própria conta que sai dela (venda, Troca, venda a NPC), menos o crédito dos insumos comprados. Conta tudo o que é negociável, inclusive o que veio de janelas ativas e de prêmios de evento (revisão de consistência: D13). | 07, 13 |
 | **Consumo essencial não atendido** | Indicador do painel: a parte do desgaste e dos consumíveis previstos que as contas ativas não compraram nem produziram. Separa "muito ouro" de "pouca oferta" (R25). | 07, 08 |
 | **Carência** | Período em que um lote de Coins recém-doado pode ser gasto na loja, mas não transferido (72 h no Pix, 7 dias no cartão e na primeira doação, até 30 dias com sinal de risco). | 07, 13 |
 | **Disjuntor** | Suspensão da entrada de novas operações num balcão, item, moeda ou fluxo, sem desligar a economia inteira. | 07, 13 |
@@ -179,7 +180,7 @@ E o piso comum P1–P12 do [conceito](../02-conceito.md), seção 1.
 
 | Item | Valor inicial [H] |
 |---|---|
-| Duração de uma ação de fila (revisão de consistência: R4) | **Coleta:** 3 a 30 s por unidade. **Transformação:** até ~95 s por unidade (o lingote de aldarita leva 94 s). **Criação de equipamento:** de 5 a 115 min por peça ([06](06-oficios-e-coleta.md), seções 2.2 e 12.2) |
+| Duração de uma ação de fila (revisão de consistência: R4) | **Coleta:** 3 a 30 s por unidade. **Transformação:** até ~170 s por unidade no T6 (o couro T6 leva 169 s, o tecido T6 150 s e o lingote de aldarita 94 s; revisão de consistência: D2). **Criação de equipamento:** de 5 a 115 min por peça ([06](06-oficios-e-coleta.md), seções 2.2 e 12.2) |
 | Offline base | 24 h, igual para todos, nunca à venda |
 | Offline máximo | 72 h, conquistado jogando (preso à conta) |
 | Depois do teto de offline (revisão de consistência: R15) | **Mais 12 h a 25% da taxa ausente** (equivale a 3 h de fila), em vez de corte seco ([02](02-progressao.md), seção 7.3) |

@@ -213,7 +213,7 @@
 | Sessão | Regra nova | Momento-chave | Três metas (agora / hoje / semana) |
 |---|---|---|---|
 | 2 (primeira volta) | **Encomenda** | Entra na encomenda da cidade com uma parte do tamanho dele | Curtir peles / Caçador 8 / primeira entrega |
-| 3 | **Obra-prima** | A primeira obra-prima guiada (seção 7.2) | Cabo Fino / Carpintaria 12 / primeira entrega |
+| 3 | **Obra-prima** | A primeira obra-prima guiada (seção 7.2) | Cabo Comum para a ferreira / Carpintaria 12 / primeira entrega |
 | 4 | **Reparo e padrinho** | O machado chega a 40% de durabilidade: o reparo consome material e reduz a durabilidade máxima (bíblia, §6.5). Um padrinho se oferece | Reparar o machado / Lenhadoria 15 / primeira entrega |
 
 ### 7.1 A primeira encomenda
@@ -230,9 +230,9 @@
 
 ### 7.2 A primeira obra-prima
 
-[H] Na terceira sessão, um pedido da praça: "A ferreira precisa de um cabo de qualidade Fina." A obra-prima guiada dura cerca de 2 minutos, com três decisões (as do conceito: reagentes, temperatura, acabamento; mecânica no módulo 06). O resultado sai **Fino**, enquanto o mesmo cabo feito na fila sai **Comum**. A tela explica: "O ativo ganha qualidade; o ausente ganha volume. Os dois têm mercado." (pilar 2 do conceito; P12).
+[H] Na terceira sessão, um pedido da praça: "A ferreira precisa de um cabo para uma espada." A obra-prima guiada dura cerca de 2 minutos, com três decisões (as do conceito: reagentes, temperatura, acabamento; mecânica no módulo 06). Como a Carpintaria do jogador ainda é de aprendiz, **o resultado sai Comum**, o teto de qualidade do aprendiz ([06](06-oficios-e-coleta.md), seção 2.1; revisão de consistência: R11 e D4). A tela explica o que vem depois: "Como aprendiz, sua peça fica no Comum. Quando um ofício vira mestre, esta mesma sessão dá peças Finas ou melhores: o ativo ganha qualidade; o ausente ganha volume. Os dois têm mercado." (pilar 2 do conceito; P12).
 
-O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se não houver) por um preço visivelmente melhor que o Comum. É o primeiro "valeu a pena ficar uns minutos".
+O jogador entrega o cabo Comum à ferreira (uma ordem de compra real, ou NPC se não houver). O gancho é a promessa: a sessão já é conhecida, e o Fino chega com a declaração de ofício mestre, no nível 30 (revisão de consistência: D4).
 
 ### 7.3 O padrinho
 
@@ -252,7 +252,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 |---|---|---|---|
 | D1 | Encomenda, obra-prima, reparo (seção 7) | Primeira entrega com nota | Ver seção 7 |
 | D2 | **Ajudante** | Contrata o primeiro ajudante com o ouro das vendas (a reconciliar com o módulo 03) | Contratar ajudante / Curtume 15 / primeira nota da encomenda |
-| D2 a D5 | **Ofício mestre** | Ao bater no nível 30, o teto de aprendiz (seção 8.2); com o bônus de calouro, ~D3,9 no regular, ~D2,6 no hardcore e ~D5,2 no casual (R10) | Declarar mestre / ofício a 32 / segundo mestre |
+| D2 a D5 | **Ofício mestre** | Ao bater no nível 30, o teto de aprendiz (seção 8.2); com o bônus de calouro, ~D3,9 no regular, ~D2,6 no hardcore e por volta do D5 no casual (revisão de consistência: R10 e D3) | Declarar mestre / ofício a 32 / segundo mestre |
 | D3 | **Câmbio, Coins, Bazar de Personagens e IPC** (explicação única, seção 8.4) | O painel do IPC na praça | — |
 | D3 a D6 | **Cerco** | Abastecimento ou guarnição (seção 8.3) | Entregar flechas / inscrever-se / cerco de sábado |
 | D4 a D5 | **Leilão e guilda** | O primeiro lance; convite para uma guilda (o padrinho pode convidar) | — |
@@ -261,7 +261,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 
 ### 8.2 Os ofícios mestres: escolher quando se precisa
 
-**Quando [H].** Até o nível 30, todo ofício é de aprendiz, e o jogador experimenta quantos quiser. **Para passar do 30 num ofício, ele o declara mestre.** A escolha aparece sozinha, no momento em que importa, e não numa tela de criação. Com o **bônus de calouro** do [02](02-progressao.md) (seção 3.5: ×1,6 na XP de ofício nos 3 primeiros dias), isso acontece entre o D2 e o D4 no regular (~D3,9) e no hardcore (~D2,6); o casual chega por volta do D5,2 (revisão de consistência: R10).
+**Quando [H].** Até o nível 30, todo ofício é de aprendiz, e o jogador experimenta quantos quiser. **Para passar do 30 num ofício, ele o declara mestre.** A escolha aparece sozinha, no momento em que importa, e não numa tela de criação. Com o **bônus de calouro** do [02](02-progressao.md) (seção 3.5: ×1,6 na XP de ofício nos 3 primeiros dias), isso acontece entre o D2 e o D4 no regular (~D3,9) e no hardcore (~D2,6); o casual chega por volta do D5, o que o diretor aceitou (revisão de consistência: R10 e D3). O bônus também encurta a primeira sessão: o nível 5 sai em ~2,5 min e o 7 em ~9 min ([02](02-progressao.md), seção 3.4).
 
 **Como: a Mesa de Ofícios [H].**
 
@@ -326,6 +326,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 |---|---|---|
 | Minuto 0 a 1 | 5 a 15 segundos | Lenha para o fogo |
 | Minutos 1 a 5 | 20 a 60 segundos | Tábuas da balsa |
+| Primeira sessão na Cidade | Um nível a cada 1 a 3 min | Com o bônus de calouro (×1,6 nos 3 primeiros dias), nível 5 em ~2,5 min e 7 em ~9 min (revisão de consistência: D3) |
 | Primeira hora | 3 a 8 minutos | Machado de cobre, a primeira caça |
 | Horas 1 a 24 | Uma a duas por sessão de 5 a 15 min, e uma "de ausente", de 1 a 8 horas | Nível de ofício, a primeira entrega |
 | D2 a D7 | Uma a duas compras grandes por sessão e um marco de dias | Ajudante, ofício mestre, cerco, cidadania |
@@ -333,7 +334,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 
 **A fórmula da espera:** `espera = custo ÷ (produção por minuto × multiplicador)`.
 
-*Exemplo calculado:* o machado de cobre custa o equivalente a 40 tábuas, e a fila produz 8 tábuas por minuto: `40 ÷ (8 × 1,00) = 5 min`, dentro da faixa da primeira hora. Com o machado (+25%), a ferramenta seguinte custa 150 tábuas: `150 ÷ (8 × 1,25) = 15 min`. A espera triplica, e o jogador passa para a faixa de "uma a duas por sessão", com a ausência ajudando. O módulo 02 fecha as curvas; este exemplo só mostra o formato.
+*Exemplo calculado:* o machado de cobre custa o equivalente a 40 tábuas, e a fila produz 8 tábuas por minuto: `40 ÷ (8 × 1,00) = 5 min`, dentro da faixa da primeira hora. A ferramenta seguinte custa 150 tábuas: `150 ÷ (8 × 1,00) ≈ 19 min`, porque a ferramenta não acelera a fila (refeito; revisão de consistência: R16). A espera quase quadruplica, e o jogador passa para a faixa de "uma a duas por sessão", com a ausência ajudando. O módulo 02 fecha as curvas; este exemplo só mostra o formato.
 
 ### 9.2 Mapa de desbloqueios
 
@@ -437,7 +438,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 | Módulo | O que o onboarding precisa dele |
 |---|---|
 | 01 — loops | A sessão típica e o dia do ausente, para encaixar as sessões 2 a 4 |
-| 02 — progressão | Curvas que levem um ofício ao 30 entre o D2 e o D4 (resolvido com o bônus de calouro de ×1,6 nos 3 primeiros dias; R10); as duas taxas, com a fila igual com a aba aberta ou fechada (R9); o offline de 24 h; a declaração de ofício mestre no 30; o que acontece na troca do período de experiência; a segunda fila como marco de semana |
+| 02 — progressão | Curvas que levem um ofício ao 30 entre o D2 e o D4 (resolvido com o bônus de calouro de ×1,6 nos 3 primeiros dias; R10; o casual chega por volta do D5, aceito; revisão de consistência: D3); as duas taxas, com a fila igual com a aba aberta ou fechada (R9); o offline de 24 h; a declaração de ofício mestre no 30; o que acontece na troca do período de experiência; a segunda fila como marco de semana |
 | 03 — personagem | Demonstração de cada vocação; troca livre até o nível 10; o primeiro ajudante no D2 |
 | 04 — combate | A regra de recuo; o combate do prólogo; a porta de abastecimento e a reserva de calouro no cerco |
 | 05 — itens | Durabilidade do primeiro machado; a escama do prólogo; a regra do lacre |

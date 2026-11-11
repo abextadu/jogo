@@ -63,19 +63,19 @@ Os cargos são pacotes de permissões, como os substitutos do Travian, que têm 
 
 ### 2.4 Sede na Cidade
 
-Toda guilda ocupa um lote num bairro da Cidade. A Sede aparece no mapa da cidade, cresce em cinco níveis com nomes da arquitetura medieval (casa-forte, torreão, fortaleza) e é onde a guilda guarda o cofre, mostra relíquias e recebe visitas nas festas (módulo 10).
+Toda guilda ocupa um lote num bairro da Cidade. A Sede aparece no mapa da cidade, cresce em cinco níveis com nomes da arquitetura medieval (Choupana, Casa, Pavilhão, Bastião e Cidadela; revisão de consistência: D11) e é onde a guilda guarda o cofre, mostra os Troféus da Fronteira e recebe visitas nas festas (módulo 10).
 
 | Nível | Nome | Vagas | Libera [H] | Custo para chegar (h-f) [H] |
 |---|---|---|---|---|
-| 1 | Rancho | 20 | Mural, cofre de 20 espaços, Encomendas de guilda tier 1, 1 guarnição | taxa de fundação |
-| 2 | Casa de taipa | 25 | Cofre de 40, estandarte personalizável, Encomendas tier 2 | 150 |
-| 3 | Sobrado | 30 | Salão (receber visitas e hospedar eventos da guilda), 2 guarnições, Encomendas tier 3 | 450 |
-| 4 | Casarão | 35 | Cofre de 80, oficina coletiva (fila de Encomenda com insumos do cofre), Encomendas tier 4 | 1.200 |
-| 5 | Solar | 40 | Fachada monumental, museu da guilda (relíquias da Fronteira), 3 guarnições, Encomendas tier 5 | 3.000 |
+| 1 | Choupana | 20 | Mural, cofre de 20 espaços, Encomendas de guilda tier 1, 1 guarnição | taxa de fundação |
+| 2 | Casa | 25 | Cofre de 40, estandarte personalizável, Encomendas tier 2 | 150 |
+| 3 | Pavilhão | 30 | Sala de recepção (receber visitas e hospedar eventos da guilda), 2 guarnições, Encomendas tier 3 | 450 |
+| 4 | Bastião | 35 | Cofre de 80, oficina coletiva (fila de Encomenda com insumos do cofre), Encomendas tier 4 | 1.200 |
+| 5 | Cidadela | 40 | Fachada monumental, museu da guilda (Troféus da Fronteira; revisão de consistência: D5), 3 guarnições, Encomendas tier 5 | 3.000 |
 
 - **O custo é uma cesta de materiais de pelo menos 6 ofícios diferentes** (madeira, tábuas, lingotes, tecidos, couro, comida para o mutirão), consumida na obra. [H] Reforça a interdependência e vira demanda para os produtores.
-- **Exemplo calculado:** uma guilda de 25 membros produz cerca de 25 × 118 = 2.950 h-f por semana. Se doar 6% disso à Sede (177 h-f por semana), chega ao Sobrado em 450 / 177 ≈ 2,5 semanas e ao Solar, depois do Casarão, em cerca de (1.200 + 3.000) / 177 ≈ 24 semanas, quase duas Eras. [H]
-- **Manutenção semanal:** `manutenção(n) = 0,5% × n × produção semanal estimada dos membros`, paga em materiais. Exemplo: Sobrado (n = 3) com 30 membros: 0,015 × 30 × 118 ≈ **53 h-f por semana**. [H]
+- **Exemplo calculado:** uma guilda de 25 membros produz cerca de 25 × 118 = 2.950 h-f por semana. Se doar 6% disso à Sede (177 h-f por semana), chega ao Pavilhão em 450 / 177 ≈ 2,5 semanas e à Cidadela, depois do Bastião, em cerca de (1.200 + 3.000) / 177 ≈ 24 semanas, quase duas Eras. [H]
+- **Manutenção semanal:** `manutenção(n) = 0,5% × n × produção semanal estimada dos membros`, paga em materiais. Exemplo: Pavilhão (n = 3) com 30 membros: 0,015 × 30 × 118 ≈ **53 h-f por semana**. [H]
 - **Sem pagar, a Sede entra "em reparo":** após 2 semanas sem manutenção, pausam o salão, a oficina coletiva e as Encomendas de tier alto. **O nível nunca cai e nada é destruído** (pilar 4: o ausente nunca perde).
 - **Localização é cosmética:** o lote é escolhido na fundação, dentro dos bairros abertos pelas Obras; o Renome da Era decide só a ordem de escolha quando um bairro novo abre. [H] Lote escasso com bônus viraria território, a mecânica de pior relação entre benefício e risco do estudo ([03, ranking](../01-pesquisa/03-alem-do-idle.md)).
 
@@ -145,7 +145,7 @@ A Encomenda é o contrato coletivo com prazo e nota individual (bíblia, §4). A
 
 ### 2.8 Guildas inativas, fusão e dissolução
 
-- **Guilda dormente:** sem nenhum membro ativo por 60 dias, a guilda é arquivada e o lote volta ao bairro. O Renome total e as relíquias ficam guardados; qualquer ex-membro pode reativá-la em até 1 ano. [H]
+- **Guilda dormente:** sem nenhum membro ativo por 60 dias, a guilda é arquivada e o lote volta ao bairro. O Renome total e os Troféus da Fronteira ficam guardados; qualquer ex-membro pode reativá-la em até 1 ano. [H]
 - **Fusão:** duas guildas podem se fundir por voto de 2/3 em cada uma. O Renome total soma, o nível da Sede fica o maior dos dois, e a história das duas (estandartes, títulos) fica no museu. [H] No New World, as fusões de servidor apagaram as conquistas políticas ([G04](../01-pesquisa/fichas/G04-new-world.md)); aqui, a história nunca se apaga.
 - **Dissolução:** o cofre é devolvido a quem depositou, na proporção do livro do cofre, sem taxa. [H]
 

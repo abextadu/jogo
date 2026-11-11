@@ -52,7 +52,7 @@
 |---|---|---|---|---|
 | **Ouro** | Moeda de todos os balcões e das taxas; paga insumos de NPC, serviços, obras e luxos | Venda a NPC, encomendas, cercos e eventos com inscrição, missões do começo (seção 4.1) | Insumos de NPC, custo de partida, taxas, obras, luxos, Selo, ajudantes (seção 4.3) | **Sim, livremente:** balcões e Troca, sempre com taxa destruída |
 | **Coins** | Moeda divisível, gasta na loja em premium (conveniência por tempo), cosméticos, Baú Misterioso e outros itens de conforto e cosmético; paga lances no Bazar de Personagens | Só por doação em reais na loja web (Pix e cartão), sem reembolso. Nunca de graça, nunca como prêmio | Destruído quando é gasto na loja ou na taxa do Bazar de Personagens | **Sim, livremente,** depois da carência por lote (seção 6.3). Troca por ouro só no Câmbio ou na Troca |
-| **Marcos** | Moeda da Fronteira: suprimentos temporários, melhorias de posto, cosméticos e títulos da temporada | Atividades da Fronteira (expedições na Névoa, descobertas, chefes de região) | Gastos na Fronteira; no fim da temporada, a sobra vira uma recompensa cosmética fixa por faixa, nunca ouro | **Não.** Presos à conta e à temporada; zeram ao fim |
+| **Marcos** | Moeda da Fronteira: suprimentos temporários, melhorias do Acampamento (a base da Fronteira; revisão de consistência: D6), cosméticos e títulos da temporada | Atividades da Fronteira (expedições na Névoa, descobertas, chefes de região) | Gastos na Fronteira; no fim da temporada, a sobra vira uma recompensa cosmética fixa por faixa, nunca ouro | **Não.** Presos à conta e à temporada; zeram ao fim |
 | **Mérito** | Títulos de cidadania e prioridade na ordem de escolha das recompensas da cidade; não pesa no voto | Contribuição para obras, nota em encomendas, defesa nos cercos | Não se gasta. O **Mérito vitalício** só cresce (títulos). O **Mérito da Era** zera a cada Era (vale só para a ordem de escolha; revisão de consistência: R13) | **Não.** Preso à conta, e fica com a conta no Bazar de Personagens (seção 7.3) |
 
 **Gastar na loja destrói o Coin.** Como o Coin é uma moeda divisível, a loja cobra direto em Coins qualquer valor, e cada Coin gasto sai da economia. A loja é a fonte de demanda que sustenta o preço do Coin em ouro, e por isso o que ela vende (premium, cosméticos, Baú) precisa ter demanda real (seção 6.2).
@@ -95,8 +95,8 @@
 ### 3.3 Regras do portão
 
 - **Dois estados por lote:**
-  - **De origem:** produzido pela própria conta (coleta, produção, combate idle) e ainda não saiu dela.
-  - **Circulante:** já passou por um portão, ou chegou de fora (compra, Troca recebida, prêmio de evento com inscrição, conteúdo de Baú).
+  - **De origem:** produzido ou ganho pela própria conta (coleta, produção, combate idle, sessões ativas, prêmios de evento) e ainda não saiu dela.
+  - **Circulante:** já passou por um portão, ou chegou de fora (compra, Troca recebida, conteúdo de Baú) (revisão de consistência: D13).
   - O jogador só vê a diferença na tela de venda ("este lote usa X da sua cota").
 - **Consome cota:** a saída de valor de origem.
   - Venda de lote de origem na Bolsa, na Feira ou no Leilão.
@@ -106,13 +106,13 @@
 - **Não consome cota:** uso próprio, consumo, reparo, entrega em encomenda, doação à obra, revenda de circulante, ouro e Coins.
 - **Crédito dos insumos comprados.** Quando a receita usa insumos circulantes, o produto carrega um **crédito** igual ao VR desses insumos, **na mesma régua do teto** (VR fixo, nunca o preço pago). Na saída, a cota consumida é `max(0; VR do produto − crédito)`. Você só gasta cota com o valor que você mesmo criou, e o artesão que compra insumos e agrega valor não é punido duas vezes. O crédito é obrigatório: sem ele, o teto estrangula a criação ([08](08-simulacao.md), cenário E10) (revisão de consistência: R18).
 - **Reserva na hora de anunciar.** Um anúncio ou uma ordem de venda de lote de origem reserva cota no momento da criação: `quantidade × max(0; VR − crédito)`. Cancelou, a reserva volta. Isso impede ordens que aparecem no livro mas não podem ser executadas, uma forma de spoofing ([04b, §2.1](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). Como o VR é fixo, a cota não depende do preço pedido nem do arremate: no Leilão, a reserva é a mesma de qualquer balcão, e o arremate nunca deixa cota negativa (revisão de consistência: R18).
-- **Prêmios de evento com inscrição** (cerco, chefe de Era, encomenda, relíquias da Fronteira) nascem circulantes, porque já têm orçamento próprio por evento (seção 4.1).
+- **Prêmios de evento com inscrição** (cerco, chefe de Era, encomenda, Relíquias da Fronteira) **nascem de origem** e gastam cota quando saem da conta, como tudo o que é negociável, inclusive o que vem de janelas ativas (revisão de consistência: D13). O orçamento por evento limita quanto nasce; o teto limita quanto sai.
 
 **Exemplo calculado.** A Ana (Ferraria 50, teto 2.100) compra 100 lingotes de ferro na Bolsa, de VR 12 cada (circulantes: 1.200 de crédito, qualquer que tenha sido o preço pago), e usa o próprio carvão (de origem, VR 300). Ela forja 5 espadas Boas de VR 600 cada (3.000 no total). Os VR do exemplo são ilustrativos; os reais saem do trabalho embutido do [06](06-oficios-e-coleta.md), seção 11.5, a 2,0 ouro por minuto. Vendendo as 5, consome `3.000 − 1.200 = 1.800` de cota e ainda pode vender 300 de VR em outros lotes de origem no dia.
 
 ### 3.4 Quanto vale o teto
 
-**Fórmula [H]:** `teto(n, m) = 600 + 30 × n + 50 × m` (em VR fixo por dia; revisão de consistência: R18; a simulação confirmou a fórmula, o acúmulo e a rampa, e não recomenda baixar a inclinação, que traz escassez), em que `n` é o maior nível entre os dois ofícios mestres e a vocação (1 a 100), e `m` é o número de camadas de maestria (0 a 10). **A reconciliar com o módulo 02** (número de camadas).
+**Fórmula [H]:** `teto(n, m) = 600 + 30 × n + 50 × m` (em VR fixo por dia; revisão de consistência: R18; a simulação confirmou a fórmula, o acúmulo e a rampa, e não recomenda baixar a inclinação, que traz escassez), em que `n` é o **maior nível já alcançado** entre os dois ofícios mestres e a vocação (1 a 100), para que o Selo, que volta o nível ao 30, não corte o teto de quem toma prestígio, e `m` é a **soma dos graus de Selo** nos dois ofícios mestres (0 a 10 no lançamento: 5 graus × 2) (reconciliado com o [02](02-progressao.md); revisão de consistência: D9).
 
 | Estágio | n | m | Teto por dia |
 |---|---|---|---|
@@ -220,7 +220,7 @@ Famílias do modelo do [04a, §5.2](../01-pesquisa/04a-economia-fontes-drenos-in
 |---|---|---|---|---|
 | **Coleta na fila** | Mineração, Lenhadoria, Pesca e Colheita, uma ação por vez por fila | 1.500 | 3.500 | 6.500 |
 | **Combate idle** | Peles, carnes, componentes e raros comuns de expedições e masmorras assíncronas | 300 | 800 | 1.500 |
-| **Prêmios de encomenda, cerco e chefe** | Itens com orçamento por evento; nascem circulantes | 80 | 180 | 350 |
+| **Prêmios de encomenda, cerco e chefe** | Itens com orçamento por evento; nascem de origem e gastam cota quando saem da conta (revisão de consistência: D13) | 80 | 180 | 350 |
 | **Fronteira** | Relíquias negociáveis com tiragem por temporada; o resto é preso | 0 | 30 | 80 |
 | **Valor agregado pela cadeia** | Transformação e criação: o VR do produto menos o dos insumos | 500 | 1.500 | 3.000 |
 | **Total bruto** | | **2.380** | **6.010** | **11.430** |
@@ -535,8 +535,8 @@ Como ela se aplica a uma moeda que circula [H]:
 
 ### 6.5 Teto de doação mensal
 
-- **Padrão igual para todos [H]:** R$ 300 por mês, somando todas as doações (300 Coins; revisão de consistência: R17).
-- **Aumento** por pedido, até R$ 1.500 por mês, com 7 dias de espera. **Limites pessoais menores** a qualquer hora. Esfriamento de 24 horas depois de doação acima de R$ 150. Painel de gasto ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 10).
+- **Padrão igual para todos [H]:** **R$ 250 por mês**, somando todas as doações (250 Coins) (o valor do [11](11-monetizacao.md), seção 7.1; revisão de consistência: R17 e D8).
+- **Aumento** só por pedido e com espera, em dois níveis: R$ 600 e R$ 1.200 por mês. **Limites pessoais menores** a qualquer hora. O limite de doações por dia, o painel de gasto e a resposta a sinais de risco ficam no 11 ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 10).
 - **Papel econômico:** o teto limita a oferta de Coins por pagante e, com ela, o "pay-to-win de capital", em que quem paga compra liquidez para dominar livros ([04a, §3.4](../01-pesquisa/04a-economia-fontes-drenos-inflacao.md), mecanismo 5). Também limita o estrago de um cartão roubado.
 - **Os valores ficam com o módulo 11.**
 
@@ -659,8 +659,8 @@ Como ela se aplica a uma moeda que circula [H]:
 
 | Limite | Valor [H] |
 |---|---|
-| Baús comprados na loja | Até 25 por conta por mês (125 Coins, R$ 125, com o Baú a 5 Coins; revisão de consistência: R17) |
-| Baús abertos, de qualquer origem | Até 40 por conta por mês |
+| Baús comprados na loja | **Até 20 por conta por mês** (100 Coins, R$ 100, com o Baú a 5 Coins; o limite do [11](11-monetizacao.md), seção 5.7; revisão de consistência: R17 e D8) |
+| Baús abertos, de qualquer origem | Até 10 por dia e 40 por mês por conta |
 | Limites pessoais | Menores, a qualquer hora, com efeito imediato |
 | Ofertas | Nenhuma com contagem regressiva ou personalizada para quem mais gasta ([06](../01-pesquisa/06-monetizacao-retencao.md), princípio 10) |
 | Histórico | Gasto e aberturas visíveis ao jogador |
@@ -884,7 +884,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | **Teto de emissão** | | | | |
 | 6 | Base do teto | 600 | 300 a 1.000 | 3.4 |
 | 7 | Teto por nível (`n`) | 30 | 15 a 50 | 3.4 |
-| 8 | Teto por camada de maestria (`m`) | 50 | 0 a 100 | 3.4 |
+| 8 | Teto por grau de Selo (`m`, soma dos graus nos dois ofícios mestres, 0 a 10; revisão de consistência: D9) | 50 | 0 a 100 | 3.4 |
 | 9 | Acúmulo da cota | 3 dias | 1 a 5 | 3.4 |
 | 10 | Rampa de conta nova | 25%, 50%, 75%, 100% (dias 7, 14 e 30) | Sem rampa a 60 dias | 3.4 |
 | **Fontes de ouro** | | | | |
@@ -926,7 +926,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 | 41 | Tamanho de ordem e limite de compra | 1 a 200 Coins por ordem; 200 por conta a cada 7 dias (revisão de consistência: R17) | 50 a 1.000 por semana | 5.4 |
 | 42 | Preço de abertura do Coin | 750 ouro (premium de 30 dias ≈ 15.000; revisão de consistência: R17) | 400 a 1.500 | 1.2 |
 | 43 | Carência por lote | Pix 72 h; cartão 7 dias; risco até 30 dias | 0 a 14 dias | 6.3 |
-| 44 | Teto de doação | R$ 300 por mês | R$ 150 a R$ 1.500 | 6.5; **módulo 11** |
+| 44 | Teto de doação | R$ 250 por mês; níveis de R$ 600 e R$ 1.200 por pedido (revisão de consistência: D8) | R$ 150 a R$ 1.200 | 6.5; **módulo 11** |
 | 45 | Contestação no banco | 0,3% das doações contestadas; 50% das contas suspensas regularizam em 30 dias; 60% dos Coins contestados já transferidos | 0% a 1,5%; 0% a 100%; 0% a 100% | 6.4 |
 | 46 | Coins guardados | 20% dos doados ficam parados mais de 30 dias | 0% a 60% | 6.2 |
 | **Bazar de Personagens e Baú** | | | | |
@@ -968,7 +968,7 @@ Nunca reagir a um indicador só ([04a](../01-pesquisa/04a-economia-fontes-drenos
 
 | Módulo | O que depende dele |
 |---|---|
-| **02 Progressão** | `n` por perfil; camadas de maestria; custo do Selo de mestre; vagas de ordem por progressão; custo da troca de ofício mestre |
+| **02 Progressão** | `n` por perfil (maior nível já alcançado) e `m` (soma dos graus de Selo), reconciliados (revisão de consistência: D9); custo do Selo de mestre (30 mil ouro, R22); vagas de ordem por progressão; custo da troca de ofício mestre |
 | **03 Personagem** | Conta vaga no Bazar de Personagens; custos de ajudantes |
 | **04 Combate** | Combate idle sem ouro; consumíveis por luta; orçamento de prêmios de cercos e chefes |
 | **05 Itens** | VR-alvo de lançamento por item e tier; vida útil, reparos e quebra; qualidade nos livros da Bolsa; cosméticos de jogador frente ao Baú |

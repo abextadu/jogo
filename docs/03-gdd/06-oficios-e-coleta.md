@@ -8,8 +8,8 @@
 - **Doze ofícios, três camadas, uma rede.** Cada peça de T3 em diante passa por 4 a 7 ofícios. A espada de ferro exige 6, e o gibão de couro, 7 (seção 5). Insumos sem tier (pedra, casca, resina e carvão) dão trabalho útil ao novato em qualquer fase do servidor.
 - **A fila prepara, o ativo acaba.** O ausente produz volume (Comum e Bom) na fila. Quando volta, o mestre faz sessões de 1 a 3 minutos, sem cronômetro e feitas de decisões com risco calculado: a **obra-prima** (qualidade da peça), a obra-prima de transformação (insumo nobre), o lote fino (consumíveis) e o **Faro** (a sessão ativa de quem coleta). Todas gastam **Inspiração**, que acumula 1 por hora, online ou offline, até o teto de offline da conta.
 - **Mercado pela natureza do bem:** o que é fungível vai à **Bolsa** (brutos, insumos, consumíveis, kits, reagentes e peças Comuns novas); o que tem estado próprio vai à **Feira** (qualidade, desgaste, acabamento); o que é contado vai ao **Leilão** (Únicos, lendários, relíquias).
-- **Oficinas NPC de reforço** vendem insumos, kits, consumíveis básicos e peças de oficina a **2× o valor de referência**, com limite diário, tudo preso à conta. Ninguém trava, e nenhum cartel passa de cerca de 2 a 3× o valor de referência.
-- **Equilíbrio de demanda verificado** com 4 refeições por hora de combate: cada ofício ficava entre 5,6% e 13,1% das horas exigidas pelo consumo (a meta é 1/12, ou 8,3%). Com 1 refeição por combatente por hora (revisão de consistência: R1), uma hora de combate consome de ~11 minutos de ofício (T1) a ~42 minutos (T6), e a Culinária e a Pesca caem abaixo da faixa (seção 9.2). As Obras compensam os ofícios abaixo da média.
+- **Oficinas NPC de reforço** vendem insumos, kits, consumíveis básicos e peças de oficina a **2,5× o valor de referência** (o preço do [07](07-economia.md), seção 4.8; revisão de consistência: D7), com limite diário, tudo preso à conta. Ninguém trava, e nenhum cartel passa de cerca de 2,5 a 3,5× o valor de referência.
+- **Equilíbrio de demanda verificado** com 4 refeições por hora de combate: cada ofício ficava entre 5,6% e 13,1% das horas exigidas pelo consumo (a meta é 1/12, ou 8,3%). Com 1 refeição por combatente por hora (revisão de consistência: R1), uma hora de combate consome de ~11 minutos de ofício (T1) a ~42 minutos (T6), e a Culinária e a Pesca cairiam abaixo da faixa (seção 9.2). Para segurar a demanda delas, **a refeição também dá um bônus pequeno de ofício e as provisões do cerco e da Fronteira passam a ser refeições** (revisão de consistência: D1). As Obras compensam os ofícios abaixo da média.
 - **Teto de aprendiz 30:** o aprendiz faz T1 e T2 de tudo, sempre Comum. O T3 exige nível 35, e a interdependência fica obrigatória por volta da segunda semana.
 
 ## 1. Os 12 ofícios num quadro
@@ -88,7 +88,7 @@ V = dom(n) = 1 + 0,01 × mín(10; nível − nível de desbloqueio do tier mais 
 | Ferraria | Ferramentas de 8 ofícios e o reparo de todo metal | Obra-prima de peças | Peças longas (25 minutos a espada de cobre); a obra-prima não acelera, porque o ativo ganha qualidade, e não volume |
 | Alfaiataria | Quatro das cinco vocações vestem Alfaiataria; reparo de couro e tecido | Obra-prima de peças | A maior fatia entre as criações (10%) |
 | Alquimia | Os reagentes são a moeda da obra-prima, consumida no uso como as orbs do Path of Exile ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)); consumíveis de três vocações | Lote fino | Um reagente obrigatório viraria imposto; ele é sempre opcional |
-| Culinária | Todo combate come: 1 refeição por combatente por hora (o personagem e cada ajudante; revisão de consistência: R1) | Lote fino | Refeição de pouca margem; o lote fino e o banquete dão a margem. Com 1 refeição por hora, a demanda do combate cai a cerca de um quarto (seção 9.2) |
+| Culinária | Todo combate come: 1 refeição por combatente por hora (o personagem e cada ajudante; revisão de consistência: R1) | Lote fino | Refeição de pouca margem; o lote fino e o banquete dão a margem. Com 1 refeição por hora, a demanda do combate cai a cerca de um quarto (seção 9.2); o bônus de ofício da refeição e as provisões do cerco e da Fronteira, que passam a ser refeições, repõem a demanda (revisão de consistência: D1) |
 
 ## 4. Cadeias de produção
 
@@ -392,19 +392,19 @@ Edda põe 2 pontos em Bloqueio (de 7,5% para 9,5%) e 2 em têmpera (+10% de dura
 | O que vende | Insumos (carvão, lingote, tábua, cabo, couro, tecido e linha) de T1 a T6; kits de reparo de T1 a T6; refeição e poção de cura de T1 a T6; **peças de oficina** de T1 a T6 |
 | Peça de oficina | Comum com −10% nos atributos, −20% de durabilidade máxima e **1 reparo só** (17 h de vida em uso normal) |
 | O que nunca vende | Brutos (o coletor não perde o freguês), matérias raras, insumos nobres, reagentes, Fino, qualidade acima de Comum, cosméticos |
-| Preço | **2,0 × VR** do item, em ouro (taxa do [07](07-economia.md)), com +10% a cada faixa de volume vendida no servidor no dia; zera à meia-noite |
+| Preço | **2,5 × VR** do item, em ouro (o preço-teto do [07](07-economia.md), seção 4.8; revisão de consistência: D7), com +10% a cada faixa de volume vendida no servidor no dia; zera à meia-noite |
 | Limite por conta e por dia | Insumos e kits até 120 minutos de VR; 2 peças de oficina; 20 consumíveis |
 | Vínculo | **Tudo preso à conta**, e o que for feito com esses itens também ([05](05-itens.md), seção 9) |
 | Para onde vai o ouro | Destruído (dreno) |
 | Alarme | Se a oficina atender mais de 5% do consumo de um item por 7 dias, o painel público mostra o ofício em falta e avisa o Conselho e o estúdio |
 
 **Por que 2×.** O teto efetivo de preço que um cartel consegue cobrar é calculado pelo custo por hora da alternativa:
-- **Insumo:** passa de 2× VR e o comprador vai à Oficina. Teto ≈ **2× VR**.
-- **Peça:** a espada de ferro de jogador custa 60 min de VR, mais 3 reparos (6 kits de cerca de 7 min), num total de 103 min para 33,6 h, ou **3,1 min/h**. A de oficina custa 120 min, mais 1 reparo (2 kits a 2×, cerca de 28 min), num total de 148 min para 17,3 h, ou **8,6 min/h**. Um cartel de ferreiros só perde o cliente para a Oficina acima de cerca de **2,8× VR**. A concorrência entre ferreiros e o insumo com teto seguram o preço bem antes disso.
+- **Insumo:** passa de 2,5× VR e o comprador vai à Oficina. Teto ≈ **2,5× VR** (refeito com o preço do 07; revisão de consistência: D7).
+- **Peça:** a espada de ferro de jogador custa 60 min de VR, mais 3 reparos (6 kits de cerca de 7 min), num total de 103 min para 33,6 h, ou **3,1 min/h**. A de oficina custa 150 min (2,5 × 60), mais 1 reparo (2 kits a 2,5×, cerca de 35 min), num total de 185 min para 17,3 h, ou **10,7 min/h**. Um cartel de ferreiros (peça e kits) só perde o cliente para a Oficina acima de cerca de **3,5× VR** (103 × 3,5 ÷ 33,6 ≈ 10,7). A concorrência entre ferreiros e o insumo com teto seguram o preço bem antes disso.
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
-| Oficina NPC a 2× VR, com limite diário e tudo preso | [H] Concorrente de reserva do conceito ([02-conceito](../02-conceito.md), riscos); [F] comprador NPC de último recurso ([03, §8](../01-pesquisa/03-alem-do-idle.md)) | Gargalo de ofício (ninguém faz couro) e cartel | Nunca travar; preferir o jogador, que é bem mais barato | Virar fonte principal se o preço for baixo demais; alarme de 5% e rampa de preço |
+| Oficina NPC a 2,5× VR (revisão de consistência: D7), com limite diário e tudo preso | [H] Concorrente de reserva do conceito ([02-conceito](../02-conceito.md), riscos); [F] comprador NPC de último recurso ([03, §8](../01-pesquisa/03-alem-do-idle.md)) | Gargalo de ofício (ninguém faz couro) e cartel | Nunca travar; preferir o jogador, que é bem mais barato | Virar fonte principal se o preço for baixo demais; alarme de 5% e rampa de preço |
 | Não vende brutos nem nada de qualidade | [F] O Black Market do Albion protege quem produz ([F02](../01-pesquisa/fichas/F02-albion-online.md)) | NPC concorrendo com o coletor e com o mestre ativo | O topo do mercado é sempre do jogador | Um gargalo na coleta não tem válvula direta; os insumos da Oficina cobrem o caso |
 | Tudo preso à conta | [H] Lei 16 ([02](../01-pesquisa/02-padroes-matriz-leis.md)) | Arbitragem: comprar do NPC e revender | Usar a Oficina só para si | Menos liquidez em crise; aceitável |
 
@@ -444,7 +444,10 @@ O modelo de conferência expande o consumo de uma hora de combate (desgaste de e
 | Lenhadoria | 6,6% | 6,1% | 7,1% | 8,2% |
 | Mineração | 5,6% | 5,7% | 7,5% | 7,7% |
 
-**Revisão de consistência (R1):** a tabela acima foi calculada com 4 refeições por hora. Com 1 refeição por combatente, a demanda de combate da Culinária cai para ~3,5% das horas e a da Pesca para ~2,5% (no T1, estimativa desta revisão), abaixo da tolerância; os outros ofícios sobem um pouco. As Obras, as festas, o banquete de cerco e a Fronteira passam a ser a demanda principal desses dois ofícios. **A recalcular pelo modelo de conferência.**
+**Revisão de consistência (R1):** a tabela acima foi calculada com 4 refeições por hora. Com 1 refeição por combatente, a demanda de combate da Culinária cai para ~3,5% das horas e a da Pesca para ~2,5% (no T1, estimativa desta revisão), abaixo da tolerância; os outros ofícios sobem um pouco. **Resolução do diretor (revisão de consistência: D1):**
+- **A refeição também dá um bônus pequeno de ofício:** por exemplo, +3% de eficiência numa fila por 1 h [H]. A refeição é consumida ao ser comida, então quem só produz também come, e a demanda de Culinária e Pesca deixa de depender só do combate.
+- **As provisões do cerco e da Fronteira passam a ser refeições** (o rancho do cerco no Arsenal, [04](04-combate.md), seção 11.6; a comida do kit de expedição, [10](10-live-ops.md), seção 4.4).
+- **A meta continua de 6% a 11% das horas exigidas por ofício.** O tamanho do bônus e a quantidade de provisões ficam para **calibrar na próxima rodada da simulação** (08), junto com o recálculo desta tabela pelo modelo de conferência.
 
 Meta: 1/12 = 8,3%, com tolerância de 6% a 11% [H]. A Colheita fica acima porque serve a três cadeias (é aceitável: mais gente a escolhe). Mineração, Lenhadoria, Carpintaria e Fundição ficam abaixo no começo, e por isso **as Obras pedem principalmente pedra, tábuas, toras e lingotes** (seção 12.5).
 
@@ -617,7 +620,7 @@ Convenções: nomes no formato "T1 / T2"; **as quantidades são as mesmas nos do
 
 | Consumo | Todas as vocações | Cavaleiro | Caçador | Mago | Druida | Ladino |
 |---|---|---|---|---|---|---|
-| Refeição | 1 por combatente (o personagem e cada ajudante; revisão de consistência: R1) | | | | | |
+| Refeição | 1 por combatente (o personagem e cada ajudante; revisão de consistência: R1). Fora do combate, comer dá um bônus pequeno de ofício (ex.: +3% de eficiência numa fila por 1 h; revisão de consistência: D1) | | | | | |
 | Poção de cura | 2 | | | | +1 (3 no total) | |
 | Consumível de vocação | — | 1,5 óleo de arma | 45 flechas | 6 pós arcanos | 4 unguentos | 3 rações de viagem |
 | Equipamento | 10 pd por hora em cada peça usada ([05](05-itens.md), seção 6) | | | | | |
@@ -727,7 +730,7 @@ Sem tier de poder: o material escolhido muda só o visual (uma mesa de pinho ou 
 
 | Módulo | O que este módulo entrega | O que precisa receber |
 |---|---|---|
-| [07 — Economia](07-economia.md) | Produção por hora de cada ofício (seção 11); VR por item (11.5); classes de balcão (seção 7); Oficina da Cidade a 2× VR (seção 8); bens básicos para venda a NPC; índice de ofício (9.5) | Recebido: 2,0 ouro por minuto de referência (R24); drops a ~0,13 min de VR por unidade (08); teto em VR fixo com portão de saída (R18). Falta: taxa da carta de ofício |
+| [07 — Economia](07-economia.md) | Produção por hora de cada ofício (seção 11); VR por item (11.5); classes de balcão (seção 7); Oficina da Cidade a 2,5× VR (seção 8; revisão de consistência: D7); bens básicos para venda a NPC; índice de ofício (9.5) | Recebido: 2,0 ouro por minuto de referência (R24); drops a ~0,13 min de VR por unidade (08); teto em VR fixo com portão de saída (R18). Falta: taxa da carta de ofício |
 | [08 — Simulação](08-simulacao.md) | Receitas T1–T2 completas e estrutura T3–T6; f(T); consumo por hora de combate por vocação (11.4); minutos de ofício por hora de combate por tier (9.1); participação dos ofícios (9.2); Inspiração (+1/h, teto igual ao offline, custos); distribuição de qualidades da obra-prima (6.3); Faro: 1 matéria rara por sessão | Distribuição de tempo dos jogadores entre combate e ofícios, por perfil (casual, hardcore, pagante, bot) |
 | [02 — Progressão](02-progressao.md) | Níveis por tier; aprendiz até 30; regras de troca de mestre; ganchos de maestria na obra-prima | Curva de XP por ofício; tempo até o nível 30 (estimativa nossa: 8 a 15 h de fila por ofício) |
 | [03 — Personagem](03-personagem.md) | Consumível de cada vocação; quem solta mais de cada drop | Atributos que usam Foco, Firmeza e Esquiva |
@@ -739,7 +742,7 @@ Sem tier de poder: o material escolhido muda só o visual (uma mesa de pinho ou 
 
 ## 14. Propostas de mudança na bíblia
 
-1. **[proposta de mudança na bíblia] Tempos por tipo de ação:** a âncora de 3 a 30 s vale para a **coleta**. A transformação e os consumíveis vão de 6 s a 3 min por unidade, e a **criação de peças é ação longa, de 5 a 115 min**. Motivo: dar a cada camada uma fatia justa das horas (seção 9). **Adotada** (revisão de consistência: R4), com a transformação registrada na bíblia como "até ~95 s por unidade".
+1. **[proposta de mudança na bíblia] Tempos por tipo de ação:** a âncora de 3 a 30 s vale para a **coleta**. A transformação e os consumíveis vão de 6 s a 3 min por unidade, e a **criação de peças é ação longa, de 5 a 115 min**. Motivo: dar a cada camada uma fatia justa das horas (seção 9). **Adotada** (revisão de consistência: R4), com a transformação registrada na bíblia como "até ~170 s por unidade no T6" (couro e tecido T6; revisão de consistência: D2).
 2. **[proposta de mudança na bíblia] Inspiração** como recurso das sessões ativas: +1 por hora, teto igual ao teto de offline da conta, nunca à venda. **Adotada** no anexo do glossário (R14).
 3. **[proposta de mudança na bíblia] Faro** como nome da sessão ativa das quatro coletas. **Adotada** no anexo do glossário (R14).
 4. **[proposta de mudança na bíblia] Níveis por tier:** T1 = 1, T2 = 15, T3 = 35, T4 = 55, T5 = 75, T6 = 90. Com o teto de aprendiz em 30, o aprendiz alcança T1–T2. **Adotada** (R5).
@@ -749,8 +752,8 @@ Sem tier de poder: o material escolhido muda só o visual (uma mesa de pinho ou 
 
 | Risco | Como acontece | Mitigação |
 |---|---|---|
-| **Gargalo de ofício** | Pouca gente escolhe Curtume, e todo couro trava (o risco nº 1 do conceito). | Oficina da Cidade a 2× VR; índice de ofício com Encomendas e Obras dirigidas; receitas alternativas na Culinária; insumos sem tier ao alcance de todos. |
-| **Cartel de ofício** | Os poucos mestres de Fundição T5 combinam preço. | Teto efetivo de 2× VR nos insumos e de cerca de 2,8× nas peças, pela Oficina; Leilão e Bolsa públicos; regra antimanipulação no 07. |
+| **Gargalo de ofício** | Pouca gente escolhe Curtume, e todo couro trava (o risco nº 1 do conceito). | Oficina da Cidade a 2,5× VR (revisão de consistência: D7); índice de ofício com Encomendas e Obras dirigidas; receitas alternativas na Culinária; insumos sem tier ao alcance de todos. |
+| **Cartel de ofício** | Os poucos mestres de Fundição T5 combinam preço. | Teto efetivo de 2,5× VR nos insumos e de cerca de 3,5× nas peças, pela Oficina (revisão de consistência: D7); Leilão e Bolsa públicos; regra antimanipulação no 07. |
 | **O excedente de quem sobe de nível derruba os preços** | Milhares de aprendizes fazem T1–T2 para ganhar XP, e o preço vai a zero. | O aprendiz só faz Comum; Obras e Encomendas absorvem o excedente em troca de Mérito; a venda a NPC é decrescente; o teto de emissão segura a saída do resto (portão; R18). |
 | **O consumo não absorve a produção** | Com 12 a 49 minutos de ofício por hora de combate, um servidor jovem produz demais (seção 9.1). | Obras pesadas no início; o teto de emissão em VR; alavancas de consumo e de vida útil para a simulação calibrar. |
 | **A obra-prima vira obrigação** | Masmorras calibradas para o Fino, ou o jogador sente que "perde" sem fazer sessões. | O 04 calibra pela peça Comum; a Inspiração acumula sem perda até o teto; a fila nunca para por falta de sessão. |

@@ -37,6 +37,29 @@
 | R26 | Entrada de jogadores | Sustentar a população-alvo exige **~1.500 contas verificadas por dia** (o "1,5% dos ativos por dia" do 07 sustenta só ~9 mil ativos); refletir no custo de verificação. | 07, 11 |
 | R27 | Coin cai de valor ao longo do ano (premium de 27 para 13 dias de renda) | **No 2º ano, novos usos de Coins na loja** (sempre conforto e cosmético). | 10, 11 |
 
+**Resoluções D1–D14 (diretor), sobre as contradições achadas na revisão de consistência:**
+
+| # | Contradição | Resolução | Módulos a editar |
+|---|---|---|---|
+| D1 | Com 1 refeição por hora (R1), a demanda de Culinária (~3,5%) e Pesca (~2,5%) cai abaixo da faixa | **A refeição também dá um bônus pequeno de ofício** (ex.: +3% de eficiência numa fila por 1 h, consumível) e **as provisões do cerco e da Fronteira passam a ser refeições**; a meta de 6% a 11% das horas exigidas fica; calibrar na próxima rodada da simulação. | 06, 04 |
+| D2 | R4 ("transformação até ~95 s") × couro T6 169 s e tecido T6 150 s (06) | A bíblia passa a dizer **"até ~170 s por unidade no T6"**. | bíblia |
+| D3 | Com o bônus de 3 dias (R10), o casual chega ao 30 por volta do D5,2 | **Aceito:** o casual chega por volta do D5; o regular entre D2 e D4; a primeira sessão fica com o nível 5 em ~2,5 min. | 12, 02 |
+| D4 | "Cabo Fino" do aprendiz no 12 §7.2 × aprendiz só Comum (R11) | Trocar por um **item Comum**. | 12 |
+| D5 | "Relíquia" decorativa (10) × Relíquia da Fronteira negociável (05, 07) | **Relíquia da Fronteira** é o material raro negociável; a recompensa decorativa e presa da Fronteira passa a se chamar **Troféu da Fronteira**. | 10, glossário |
+| D6 | "Posto": base da Fronteira (10) × posto de defesa no cerco (04, 09, 12) | A base da Fronteira passa a se chamar **Acampamento**; "Posto" fica só para o posto de defesa no cerco. | 10, glossário |
+| D7 | Oficina da Cidade: 2× o VR (05, 06) × 2,5× (07) | **2,5× o VR** (vale o 07). | 05, 06 |
+| D8 | Teto de doação R$ 300 (07) × R$ 250 (11); Baús 25 (07) × 20 por mês (11) | **R$ 250 por mês e 20 Baús por mês** (vale o 11). | 07 |
+| D9 | Teto de emissão: "m" e "n" do 07 × pedido do 02 | **m = soma dos graus de Selo (0 a 10); n = maior nível já alcançado** (vale o 02). | 07 |
+| D10 | Mérito do item comprado: 25% (09) × 50% (04) | **25% para o fornecedor** (vale o 09). | 04 |
+| D11 | Sedes do 09 com nomes brasileiros (Rancho a Solar) | **Choupana, Casa, Pavilhão, Bastião, Cidadela.** | 09 |
+| D12 | Equipe de operação 6 a 8 (10) × base do 11 paga 3 a 4 | Acrescentar ao 10 um **plano enxuto para 4 pessoas** (Eras mais sistêmicas, menos conteúdo narrativo novo por Era); marcar como risco de negócio. | 10 |
+| D13 | O 13 conta no teto as recompensas de janelas ativas; o 05 e o 07 as deixavam fora | **Tudo o que é negociável e sai da conta conta no teto, inclusive o que veio de janelas ativas** (vale o 13, coerente com o portão de saída). | 05, 07 |
+| D14 | Wireframe da loja põe o Baú lacrado na Feira; o 07 põe na Bolsa | **Bolsa** (vale o 07). | 14 (g-loja) |
+| D15 | Bônus de +3% da refeição (D1) × teto de velocidade de 1,10× do domínio (02) e R16 | **O bônus da refeição conta dentro do teto de 1,10×**; nunca o ultrapassa. | 02, 06 (aplicar na Fase 4) |
+| D16 | VR das matérias raras e dos insumos nobres não definido no 06 (a D13 precisa dele) | **Pendente:** definir na próxima rodada da simulação, no início da Fase 4. | 06, 07, 08 |
+| D17 | "Salão" como nível de Sede (09) × Salão da Cidade (05) | Nível de Sede renomeado para **Pavilhão** (aplicado). | 09, bíblia |
+| D18 | "Relíquias dos reinos de outrora" (04) × Relíquia da Fronteira | Renomeadas para **vestígios dos reinos de outrora** (aplicado). | 04 |
+
 **Critérios que falham por estrutura, aceitos pelo diretor para revisitar no alfa:** massa monetária por conta (a evasão do 12 não deixa juntar 2–3 premiums no 1º ano); básicos presos ao piso do NPC (o aprendiz T1–T2 segura o preço); tendência do IPC com ±25 pontos entre sementes (o nível fica estável). Estresses que falham (onda de pagantes, detecção fraca de bots, evasão de 50%, sem crédito de insumos, Fronteira com 40% da atividade, 90 dias sem novos) viram riscos com mitigação no 08.
 
 **Dependem do Gabriel (checkpoint 3):** prólogo de 5 minutos sem conta antes da verificação de idade (12 e 13).

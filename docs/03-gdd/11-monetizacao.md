@@ -331,7 +331,7 @@ A chance efetiva de Raro ou melhor é `1 ÷ 6,01 ≈ 16,6%`, distribuída entre 
 
 ### 5.8 Baú e economia (interface com o módulo 07)
 
-- **O Baú fechado é um bem fungível**, e o lugar natural para ele é a Bolsa (livro de ordens). Os itens lacrados, que são únicos, vão para a Feira ou o Leilão. A reconciliar com o módulo 07.
+- **O Baú fechado é um bem fungível**, e o lugar natural para ele é a Bolsa (livro de ordens). Os itens lacrados, que são únicos, vão para a Feira ou o Leilão. Reconciliado com o 07: o Baú lacrado vai à Bolsa, num livro por série (revisão de consistência: D14).
 - **O Baú é uma fonte de cosméticos negociáveis e um dreno de Coins** (5 por Baú). Os cosméticos lacrados competem com a decoração feita por jogadores; o módulo 07 deve medir se o Baú derruba o preço do que os ofícios fabricam, e a simulação deve testar.
 - **Nunca há Baú de graça** (evento, ranking, passe): seria emissão de valor em dinheiro, como os Coins grátis ([05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.6).
 
@@ -700,7 +700,7 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 
 1. **[proposta de mudança na bíblia] Glossário:** incluir **Passe da Era** (o passe da temporada, um por Era, sem expirar, pago em Coins) e **feito** (unidade de progresso do Passe da Era; não é moeda). O nome "feito" evita colisão com **Marcos**, a moeda da Fronteira.
 2. **[proposta de mudança na bíblia] Regra do lacre** como complemento do piso P3 para bens que não se desgastam: cosmético negociável (do Baú ou feito por jogadores) circula lacrado e fica preso à conta quando aplicado. A reconciliar com os módulos 05 e 07.
-3. **[proposta de mudança na bíblia] Números-âncora, §6.7:** registrar, no lugar da referência de trabalho do módulo 07 (1 Coin ≈ R$ 0,10; ~200 Coins por 30 dias): 1 Coin = R$ 1,00 na doação, sem bônus; conveniência a 20 Coins por 30 dias; Baú a 5 Coins; Passe da Era a 20 Coins; teto de doação padrão de R$ 250 por mês. **Paridade e preços adotados na bíblia** (revisão de consistência: R17); o teto de doação segue a reconciliar com o 07, que usa R$ 300.
+3. **[proposta de mudança na bíblia] Números-âncora, §6.7:** registrar, no lugar da referência de trabalho do módulo 07 (1 Coin ≈ R$ 0,10; ~200 Coins por 30 dias): 1 Coin = R$ 1,00 na doação, sem bônus; conveniência a 20 Coins por 30 dias; Baú a 5 Coins; Passe da Era a 20 Coins; teto de doação padrão de R$ 250 por mês. **Paridade e preços adotados na bíblia** (revisão de consistência: R17); o teto de doação de R$ 250 e o limite de 20 Baús por mês valem também no 07 (revisão de consistência: D8).
 
 ## Conflitos e pontos a reconciliar
 
@@ -714,7 +714,7 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 | Cosmético da loja preso × Baú negociável | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 7 × decisão do Gabriel | Loja presa; Baú lacrado e negociável; preso ao aplicar |
 | Limites de Coins no Câmbio por conta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.3 × transferência livre | Reconciliado: o 07 limita só a compra no Câmbio (200 Coins por conta a cada 7 dias); a Troca segue livre (revisão de consistência: R17) |
 | Verificação de idade antes de jogar | Bíblia: jogo inteiro 18+ | O [12](12-onboarding.md) propõe um prólogo sem conta antes da verificação, para decisão do diretor |
-| Lugar do Baú fechado no mercado (Bolsa?) | Módulo 07 | A reconciliar |
+| Lugar do Baú fechado no mercado (Bolsa?) | Módulo 07 | Reconciliado: Bolsa, num livro por série (revisão de consistência: D14) |
 
 ## Como isso pode dar errado
 
