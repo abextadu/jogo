@@ -12,7 +12,7 @@
   2. **O ativo ganha outra coisa, não "o mesmo, mais rápido".** O ganho de volume do ativo tem teto baixo e conhecido (no máximo 2 h por dia de bancada ativa, que somam de +2% a +6,5% de volume num dia). O ganho de verdade do ativo é qualidade (obra-prima), achados, mercado e cidade.
   3. **Tudo o que é coletivo aceita contribuição planejada.** Encomendas, Obras e cercos recebem entregas automáticas e inscrições prévias. Ninguém precisa estar online num horário marcado.
 - **Sete escalas:** segundos (o tique da fila e o lance), minutos (a sessão), horas (a ausência), dias (encomendas, Obras, nível), semanas (cerco, tier novo), Eras (~13 semanas: ameaça nova, regra nova, eleição) e Fronteiras (10 a 12 semanas, a partir da 2ª Era).
-- **O dia típico** mostra que o casual (2 sessões curtas) produz cerca de dois terços do volume do hardcore no ofício principal e chega ao primeiro 100 no D141, contra o D95 do hardcore. A diferença entre eles está menos no volume e mais em qualidade, mercado e cidade.
+- **O dia típico** mostra que o casual (2 sessões curtas) produz cerca de dois terços do volume do hardcore no ofício principal e chega ao primeiro 100 por volta do D149, contra o D102 do hardcore (com os níveis de tier do 06; revisão de consistência: R5). A diferença entre eles está menos no volume e mais em qualidade, mercado e cidade.
 
 ## 1. O loop central
 
@@ -87,11 +87,11 @@ A fila calcula no servidor, por eventos, a mesma produção com o jogador presen
 Cada fila mostra dois números, sempre [H]:
 
 - **Taxa ausente:** o rendimento da fila no piloto automático. Começa em **70%** do ritmo nominal da ação e sobe até **100%** jogando, em seis marcos de +5% (detalhe no [02](02-progressao.md), seção 8).
-- **Taxa ativa:** o rendimento da fila quando o jogador assume a **bancada ativa**, um modo em que a cada 45 s aparece um **lance**: uma escolha curta entre duas ou três opções. **Firme** rende 100% do ritmo nominal. **Forçar** rende 125% e gasta a ferramenta em dobro. **Garimpar** (na coleta) ou **apurar** (na transformação e na criação) rende 75%, mas quadruplica a chance de achado ativo ou de subir a qualidade.
+- **Taxa ativa:** o rendimento da fila quando o jogador assume a **bancada ativa**, um modo em que a cada 45 s aparece um **lance**: uma escolha curta entre duas ou três opções. **Firme** rende 100% do ritmo nominal. **Forçar** rende 125% e gasta a ferramenta em dobro. São só esses dois lances (revisão de consistência: R7).
 
 A bancada ativa vale para uma fila por vez ("você só tem duas mãos") e conta no máximo **2 h por dia**. Sem resposta por dois lances seguidos, a fila volta sozinha à taxa ausente, sem perda.
 
-**A reconciliar com o 06:** o [06](06-oficios-e-coleta.md) criou o **Faro** (a sessão ativa de quem coleta) e o lote fino, pagos com Inspiração, que fazem o papel do lance garimpar/apurar. A recomendação ([02](02-progressao.md), seção 13.3) é a bancada ativa ficar só com firme e forçar; nesse caso, onde este módulo diz "achados ativos", leia-se o que o Faro rende.
+**Reconciliado com o 06 (revisão de consistência: R7):** o lance garimpar/apurar saiu. O achado e a qualidade ativos ficam com o **Faro** (a sessão ativa de quem coleta), o lote fino e a obra-prima do [06](06-oficios-e-coleta.md), pagos com Inspiração; a bancada ativa fica só com firme e forçar. Onde este módulo diz "achados ativos", leia-se o que o Faro rende.
 
 - **Referência:** a taxa AFK separada, visível e melhorável do IdleOn (base de 20%, até ~85%) ([B02](../01-pesquisa/fichas/B02-legends-of-idleon.md)). **Diferencia-se** dele em três pontos: a taxa ausente começa alta (70%), chega a 100% e nunca está à venda (o IdleOn vende "+30% AFK gains"). E o "ativo" é uma decisão, não um cliente aberto.
 - **Problema:** dar sentido à presença sem punir a ausência. Também segura a emissão no lançamento: com todos começando em 70%, a fonte começa apertada, como pede o insight 9 da [síntese](../01-pesquisa/00-sintese.md).
@@ -103,7 +103,7 @@ A bancada ativa vale para uma fila por vez ("você só tem duas mãos") e conta 
 | Só o ativo tem | Só o ausente tem |
 |---|---|
 | **Obra-prima:** a única forma de chegar à qualidade Obra-prima (bíblia, 6.5). | **Volume contínuo** de até 72 h sem ninguém olhar. |
-| **Achados ativos:** materiais raros que saem dos lances de garimpar. | **Achados do ausente:** a cada hora contínua na mesma atividade, chance de `mín(h, 20)%` de um achado preso à conta (ex.: 8 h seguidas = 36% somados; 24 h = 2,9 achados) [H]. |
+| **Achados ativos:** materiais raros que saem do Faro (R7). | **Achados do ausente:** a cada hora contínua na mesma atividade, chance de `mín(h, 20)%` de um achado preso à conta (ex.: 8 h seguidas = 36% somados; 24 h = 2,9 achados) [H]. |
 | **Mercado com informação fresca:** reagir a um preço, comprar um insumo na hora. | **Ordens persistentes:** vender e comprar por preço-limite sem estar online. |
 | **Janelas ativas** dos cercos e das crises da Fronteira, com bônus. | **Versão automática** das mesmas janelas, com o resultado do plano e sem bônus. |
 
@@ -163,7 +163,7 @@ A Fronteira não consome as filas da cidade. Ela roda numa trilha sazonal à par
 
 | Escala | Duração | O que move o jogo | Exemplo de decisão |
 |---|---|---|---|
-| Segundos | 3 a 45 s | O tique da fila; o lance da bancada ativa; o passo da obra-prima | Forçar o veio ou garimpar? |
+| Segundos | 3 a 45 s | O tique da fila; o lance da bancada ativa; o passo da obra-prima | Firme ou forçar o veio? |
 | Minutos | 5 a 15 min | A sessão | Vender o lingote ou fundir mais? |
 | Horas | 2 a 72 h | A ausência | (decidida antes de sair) |
 | Dias | 1 a 7 dias | Encomendas, Obras, níveis, ferramentas | Em que encomenda entrar? |
@@ -176,7 +176,7 @@ A Fronteira não consome as filas da cidade. Ela roda numa trilha sazonal à par
 | | |
 |---|---|
 | **O que faz** | A fila completa ações de 6 s (T1) a 30 s (T6) na coleta [H]. Na bancada ativa, um lance a cada 45 s. Na obra-prima, passos de 5 a 20 s (reagente, temperatura, acabamento; o desenho é do módulo 06). |
-| **Decisão** | Só no ativo: firme, forçar ou garimpar/apurar; na obra-prima, cada passo. |
+| **Decisão** | Só no ativo: firme ou forçar na bancada; no Faro e na obra-prima, cada passo (R7). |
 | **O que ganha** | Uma unidade e XP por ação (T1: 10 XP a cada 6 s; T6: 190 XP a cada 30 s); no lance, achados ativos; na obra-prima, a qualidade da peça. |
 | **Ausente × ativo** | Para o ausente, essa escala não existe: o servidor salta de evento em evento e não processa tique. O ativo vê a barra encher e escolhe lances. Não escolher equivale a "firme", sem castigo. |
 
@@ -274,8 +274,8 @@ Os três dias se passam no **D30**, no meio da 1ª Era. Os números vêm do mode
 
 | Hora | Duração | O que faz | Decisão |
 |---|---|---|---|
-| 07h00 | 5 min | Relatório: a Fundição parou às 4h10, quando acabou o minério T3. A Fundição dele ainda não chega ao T4 (abre no 50), e a Mineração já está no T4. Põe uma ordem de compra de minério T3 e uma de venda do minério T4 na Bolsa. | Comprar minério T3 ou pôr a Mineração no T3 por algumas horas (perde a venda do T4). |
-| 12h30 | 10 min | Vende lingotes T3 na Bolsa; entrega lingotes à encomenda da guilda; usa 10 min de bancada ativa na Mineração, garimpando atrás de gemas. | Onde pôr as mãos; quanto da produção vai à guilda. |
+| 07h00 | 5 min | Relatório: a Fundição parou às 4h10, quando acabou o minério T3. A Fundição dele ainda não chega ao T4 (abre no 55; revisão de consistência: R5), e a Mineração já está no T4. Põe uma ordem de compra de minério T3 e uma de venda do minério T4 na Bolsa. | Comprar minério T3 ou pôr a Mineração no T3 por algumas horas (perde a venda do T4). |
+| 12h30 | 10 min | Vende lingotes T3 na Bolsa; entrega lingotes à encomenda da guilda; faz uma sessão de Faro na Mineração atrás de gemas (2 de Inspiração; o lance garimpar saiu, R7). | Onde pôr as mãos; quanto da produção vai à guilda. |
 | 18h30 | 12 min | Prepara o cerco: compra poções de uma alquimista; leva a couraça a um ferreiro para consertar (o conserto consome material e reduz a durabilidade máxima). Faz duas obras-primas de lingote. | Consertar ou trocar a couraça; que papel assumir no cerco. |
 | 23h00 | 5 min | Plano da noite: Mineração no T4; Fundição com a etapa "se acabar o minério T3, fundir o estoque de T2"; Cavaleiro em expedição. | — |
 
@@ -306,14 +306,14 @@ Os três dias se passam no **D30**, no meio da 1ª Era. Os números vêm do mode
 | Obras-primas · bancada ativa | 1 · 10 min | 2 · 25 min | 8 · 90 min |
 | Mérito por dia (provisório, módulo 09) | ~20 | ~40 | ~100 |
 | Nível do ofício principal no D30 | ~56 | ~60 | ~65 |
-| Primeiro 100 de ofício mestre | D141 | D116 | D95 |
+| Primeiro 100 de ofício mestre | ~D149 | ~D123 | ~D102 (simulação 08, com as regras da revisão de consistência: R5, R10 e R16) |
 
 **Leitura** [H]: o hardcore joga ~7 vezes mais tempo de tela que o casual e tem ~1,5 vez o volume dele no ofício principal. A física da fila (uma por atividade, 24 h por dia no máximo) é o que mantém essa razão pequena, e é ela que segura a emissão quando a população cresce (lei 6). O que o hardcore ganha a mais é qualidade (8 obras-primas por dia), informação de mercado e Mérito.
 
 ### 4.5 O que muda no começo e depois do 100
 
-- **D1 a D7:** uma fila só até a primeira semana (a 2ª chega entre o D4 e o D7), taxa ausente de 70% a 75%, teto de 24 h. A decisão central é como dividir a única fila entre o ofício e a vocação. A semana termina na **virada do 30**: o primeiro ofício chega ao teto de aprendiz, o jogador escolhe o primeiro ofício mestre, ganha a 2ª fila, o tier T3 e mais 5% de taxa ausente, tudo no mesmo dia (D4 a D7). É a primeira virada de paradigma do jogo ([02a](../01-pesquisa/02a-teoria-design-idle.md), seção 3.2).
-- **Depois do D100:** a taxa ausente chega a 95% e depois a 100%; o teto de offline chega a 72 h; a Fronteira começou no D91, com a 2ª Era. O regular chega ao 100 no D116, acumula Maestria e pode tomar o primeiro Selo de mestre por volta do D131 ([02](02-progressao.md), seção 9).
+- **D1 a D7:** uma fila só nos primeiros dias (a 2ª chega entre ~D2,6 e ~D5,2, com o bônus de calouro), taxa ausente de 70% a 75%, teto de 24 h. A decisão central é como dividir a única fila entre o ofício e a vocação. A semana tem a **virada do 30**: o primeiro ofício chega ao teto de aprendiz, o jogador escolhe o primeiro ofício mestre, ganha a 2ª fila e mais 5% de taxa ausente, tudo no mesmo dia; o tier T3 vem no 35, poucos dias depois (revisão de consistência: R5 e R10). É a primeira virada de paradigma do jogo ([02a](../01-pesquisa/02a-teoria-design-idle.md), seção 3.2).
+- **Depois do D100:** a taxa ausente chega a 95% e depois a 100%; o teto de offline chega a 72 h; a Fronteira começou no D91, com a 2ª Era. O regular chega ao 100 por volta do D123, acumula Maestria e pode tomar o primeiro Selo de mestre por volta do D137, sem sair do tier de produção ([02](02-progressao.md), seção 9; revisão de consistência: R5 e R22).
 
 ## 5. Antes de sair: o que o jogador decide (lei do plano)
 
@@ -345,7 +345,7 @@ Duas regras protegem o plano [H]:
 |---|---|
 | **02 Progressão** | Duas taxas (ausente 70% → 100%; ativa 100%, 125% ou 75% conforme o lance); bancada ativa de no máximo 2 h/dia; uma fila por atividade; teto de offline 24 h → 72 h. |
 | **04 Combate** | A expedição é uma atividade de fila; regras de recuo com padrão seguro (50% de vida); cerco com inscrição até 24 h antes e janela de comando opcional de 10 a 15 min, com bônus. |
-| **06 Ofícios** | Lance a cada 45 s; achados do ausente (`mín(h, 20)%` por hora contínua), parte deles usável só na obra-prima do próprio jogador; obra-prima pausável por 24 h. A reconciliar: o lance garimpar/apurar contra o Faro e o lote fino do 06. |
+| **06 Ofícios** | Lance a cada 45 s; achados do ausente (`mín(h, 20)%` por hora contínua), parte deles usável só na obra-prima do próprio jogador; obra-prima pausável por 24 h. Reconciliado: o lance garimpar/apurar saiu, e o Faro e o lote fino do 06 fazem esse papel (R7). |
 | **07 Economia** | Torneira de NPC diária e decrescente; destino do excedente escolhido antes de sair, compatível com o portão de saída do 07; Bolsa sem vantagem por velocidade. |
 | **08 Simulação** | Perfis: casual 2 sessões/dia, regular 4, hardcore ~10; horas de fila por dia no ofício principal: 17 / 20,5 / 23,5; obras-primas por dia: 1 / 2 / 8; bancada ativa: 10 / 25 / 90 min; volume relativo 66 / 87 / 100. O bot tem o teto físico do hardcore: 3 filas × 24 h e 2 h de bancada ativa. |
 | **09 Social** | Encomendas com entrega automática e nota individual pelo que foi entregue; Mérito por dia provisório de 20 / 40 / 100 por perfil; voto assíncrono. |

@@ -92,7 +92,7 @@ details ul{margin:0 0 10px;padding-left:18px}
   <header class="doc-topo">
     <p><a href="index.html">← Índice dos wireframes</a> · <a href="../14-arte-e-ui.md">Documento 14 (arte e UI)</a></p>
     <h1>(g) Loja — doação que credita Coins, cosméticos e Baú Misterioso com chances</h1>
-    <p>Aberta pelo saldo de Coins no cabeçalho ou por Você › Loja. Paridade, faixas, preços e limites do módulo 11 (10 Coins = R$ 1,00 na doação); chances e prazos de carência são exemplos [H].</p>
+    <p>Aberta pelo saldo de Coins no cabeçalho ou por Você › Loja. Paridade, faixas, preços e limites do módulo 11 (1 Coin = R$ 1,00 na doação; revisão de consistência: R17); chances são exemplos [H]; carências do módulo 13.</p>
   </header>
 
   <div class="grade">
@@ -100,7 +100,7 @@ details ul{margin:0 0 10px;padding-left:18px}
       <section class="celular" aria-label="Wireframe: Loja">
         <header class="cab">
           <div class="lugar"><strong>Loja</strong><small>Preços em Coins, com o valor em reais</small></div>
-          <a class="saldo" href="#" aria-label="Coins: 240"><span class="ico" aria-hidden="true">C</span>240</a>
+          <a class="saldo" href="#" aria-label="Coins: 24"><span class="ico" aria-hidden="true">C</span>24</a>
           <a class="btn" href="a-cidade.html" aria-label="Fechar a Loja">Fechar</a>
         </header>
         <main class="conteudo">
@@ -120,24 +120,24 @@ details ul{margin:0 0 10px;padding-left:18px}
               <div class="img">moeda hexagonal com coroa</div>
               <div>
                 <h2 id="t-coins" style="margin:0">Doe em reais e receba Coins</h2>
-                <p class="preco">10 Coins = R$ 1,00</p>
-                <p>Em todas as faixas, sem bônus. Os Coins são seus: compram conveniência, cosméticos e Baús nesta loja, podem ser transferidos a outro jogador ou trocados por ouro no Câmbio (taxa de 12%, destruída).</p>
+                <p class="preco">1 Coin = R$ 1,00</p>
+                <p>Em todas as faixas, sem bônus. Os Coins são seus: compram conveniência, cosméticos e Baús nesta loja, podem ser transferidos a outro jogador ou trocados por ouro no Câmbio (nos dois casos, taxa de 12% em ouro, destruída; revisão de consistência: R19).</p>
               </div>
             </div>
             <table>
               <caption>Faixas de doação</caption>
               <thead><tr><th scope="col">Doação</th><th scope="col" class="num">Você recebe</th><th scope="col">Cartão</th></tr></thead>
               <tbody>
-                <tr><td>R$ 5</td><td class="num">50 Coins</td><td>à vista</td></tr>
-                <tr><td>R$ 10</td><td class="num">100 Coins</td><td>à vista</td></tr>
-                <tr><td>R$ 20</td><td class="num">200 Coins</td><td>à vista</td></tr>
-                <tr><td>R$ 50</td><td class="num">500 Coins</td><td>à vista</td></tr>
-                <tr><td>R$ 100</td><td class="num">1.000 Coins</td><td>até 3x sem juros</td></tr>
-                <tr><td>R$ 250</td><td class="num">2.500 Coins</td><td>até 3x sem juros</td></tr>
+                <tr><td>R$ 5</td><td class="num">5 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 10</td><td class="num">10 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 20</td><td class="num">20 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 50</td><td class="num">50 Coins</td><td>à vista</td></tr>
+                <tr><td>R$ 100</td><td class="num">100 Coins</td><td>até 3x sem juros</td></tr>
+                <tr><td>R$ 250</td><td class="num">250 Coins</td><td>até 3x sem juros</td></tr>
               </tbody>
             </table>
-            <div class="acoes"><a class="btn pri larga" href="#pagar">Doar R$ 20 · receber 200 Coins</a><a class="btn larga" href="#">Outro valor</a></div>
-            <p class="legenda">Pix ou cartão. Coins doados com cartão podem ir ao Câmbio ou à Troca depois de 7 dias; com Pix, depois de 1 dia [H, a reconciliar com o módulo 13]. <span class="n" aria-hidden="true">3</span></p>
+            <div class="acoes"><a class="btn pri larga" href="#pagar">Doar R$ 20 · receber 20 Coins</a><a class="btn larga" href="#">Outro valor</a></div>
+            <p class="legenda">Pix ou cartão. Coins doados com cartão podem ir ao Câmbio ou à Troca depois de 7 dias; com Pix, depois de 72 horas; na primeira doação da conta, depois de 7 dias (carências do módulo 13). <span class="n" aria-hidden="true">3</span></p>
             <details>
               <summary>O que os Coins nunca compram <span class="n" aria-hidden="true" style="margin-left:6px">4</span></summary>
               <ul>
@@ -152,9 +152,9 @@ details ul{margin:0 0 10px;padding-left:18px}
           <!-- Conveniência -->
           <section class="cartao" aria-labelledby="t-conv">
             <p class="rot">Conveniência <span class="n" aria-hidden="true">5</span></p>
-            <h2 id="t-conv">30 dias de conveniência · 200 Coins (R$ 20 em doação)</h2>
-            <p class="legenda">Também 15 dias por 100 Coins ou 90 dias por 600 Coins, sem desconto por quantidade. O conteúdo é do módulo 11. Exemplos da zona verde e amarela: temas de interface, predefinições de fila salvas, histórico pessoal detalhado, cosmético do mês.</p>
-            <div class="acoes"><a class="btn" href="#">Ver o que inclui</a><a class="btn" href="#">Ativar · 200 Coins</a></div>
+            <h2 id="t-conv">30 dias de conveniência · 20 Coins (R$ 20 em doação)</h2>
+            <p class="legenda">Também 15 dias por 10 Coins ou 90 dias por 60 Coins, sem desconto por quantidade. O conteúdo é do módulo 11. Exemplos da zona verde e amarela: temas de interface, predefinições de fila salvas, histórico pessoal detalhado, cosmético do mês.</p>
+            <div class="acoes"><a class="btn" href="#">Ver o que inclui</a><a class="btn" href="#">Ativar · 20 Coins</a></div>
           </section>
 
           <!-- Cosméticos -->
@@ -164,25 +164,25 @@ details ul{margin:0 0 10px;padding-left:18px}
               <article class="cosmetico">
                 <div class="img">fachada de oficina</div>
                 <strong>Fachada "Enxaimel"</strong>
-                <span>200 Coins · <strong>R$ 20</strong> em doação</span>
+                <span>20 Coins · <strong>R$ 20</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
               <article class="cosmetico">
                 <div class="img">aparência de ajudante</div>
                 <strong>Brida com avental de couro</strong>
-                <span>200 Coins · <strong>R$ 20</strong> em doação</span>
+                <span>20 Coins · <strong>R$ 20</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
               <article class="cosmetico">
                 <div class="img">decoração de casa</div>
                 <strong>Tapeçaria de caça</strong>
-                <span>100 Coins · <strong>R$ 10</strong> em doação</span>
+                <span>10 Coins · <strong>R$ 10</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
               <article class="cosmetico">
                 <div class="img">traje do personagem</div>
                 <strong>Conjunto "Cavaleiro do Inverno"</strong>
-                <span>400 Coins · <strong>R$ 40</strong> em doação</span>
+                <span>40 Coins · <strong>R$ 40</strong> em doação</span>
                 <a class="btn" href="#">Provar</a>
               </article>
             </div>
@@ -195,7 +195,7 @@ details ul{margin:0 0 10px;padding-left:18px}
             <div class="produto">
               <div class="img">baú com cadeado</div>
               <div>
-                <h2 id="t-bau" style="margin:0">1 Baú · 50 Coins (R$ 5 em doação)</h2>
+                <h2 id="t-bau" style="margin:0">1 Baú · 5 Coins (R$ 5 em doação)</h2>
                 <p>Sempre um item cosmético ou decorativo. Nunca poder. Todo item do Baú também é vendido direto nesta loja, com preço fixo.</p>
               </div>
             </div>
@@ -211,7 +211,7 @@ details ul{margin:0 0 10px;padding-left:18px}
             </table>
             <div class="acoes"><a class="btn" href="#">Ver os 48 itens e a chance de cada um</a></div>
             <p>Este mês: <strong>2 Baús</strong> comprados, de um limite de 20. A cada 10 Baús sem item Raro ou melhor, o décimo traz um. <span class="n" aria-hidden="true">8</span></p>
-            <div class="acoes"><a class="btn pri larga" href="#">Comprar 1 Baú · 50 Coins (R$ 5)</a></div>
+            <div class="acoes"><a class="btn pri larga" href="#">Comprar 1 Baú · 5 Coins (R$ 5)</a></div>
             <p class="legenda">Ao abrir, o item aparece na hora, sem roleta. Baús lacrados também são vendidos por outros jogadores na Feira, por ouro.</p>
           </section>
 
@@ -221,7 +221,7 @@ details ul{margin:0 0 10px;padding-left:18px}
             <h2 id="t-pag">Você vai doar R$ 20,00</h2>
             <table>
               <tbody>
-                <tr><th scope="row">Você recebe</th><td>200 Coins</td></tr>
+                <tr><th scope="row">Você recebe</th><td>20 Coins</td></tr>
                 <tr><th scope="row">Forma</th><td>Pix</td></tr>
                 <tr><th scope="row">Teto do mês depois desta doação</th><td>R$ 60 de R$ 250</td></tr>
               </tbody>
@@ -241,7 +241,7 @@ details ul{margin:0 0 10px;padding-left:18px}
       <h2 id="t-notas">Notas de design</h2>
       <ol>
         <li><span class="n">1</span><p><strong>O teto de doação vem antes de qualquer produto.</strong> Teto padrão de R$ 250 por mês para todos; baixar é imediato e subir tem espera (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06</a>; salvaguarda S5). Os valores são do <a href="../11-monetizacao.md">módulo 11</a>.</p></li>
-        <li><span class="n">2</span><p><strong>Paridade fixa, grande e primeiro.</strong> 10 Coins por R$ 1,00 em todas as faixas, sem bônus: o preço em reais de qualquer coisa é o número de Coins dividido por dez. O valor aparece como o CDC pede, claro e ostensivo (art. 31; validar com advogado). Na arte final, a cor púrpura e a moeda hexagonal marcam tudo que envolve dinheiro real.</p></li>
+        <li><span class="n">2</span><p><strong>Paridade fixa, grande e primeiro.</strong> 1 Coin por R$ 1,00 em todas as faixas, sem bônus: o preço em reais de qualquer coisa é o próprio número de Coins (revisão de consistência: R17). O valor aparece como o CDC pede, claro e ostensivo (art. 31; validar com advogado). Na arte final, a cor púrpura e a moeda hexagonal marcam tudo que envolve dinheiro real.</p></li>
         <li><span class="n">3</span><p><strong>A carência por meio de pagamento é dita antes da doação</strong> (salvaguarda S2), não descoberta depois. Os prazos são dos módulos 11 e 13.</p></li>
         <li><span class="n">4</span><p><strong>O que os Coins nunca compram, na própria loja.</strong> A zona vermelha (piso P7) escrita onde a tentação existe. É a "carta pública de monetização" da pesquisa.</p></li>
         <li><span class="n">5</span><p><strong>Conveniência sem multiplicador.</strong> O que entra aqui passa pelo teste das três perguntas da pesquisa (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §3.4</a>). O tempo custa o mesmo em qualquer quantidade.</p></li>
@@ -251,7 +251,7 @@ details ul{margin:0 0 10px;padding-left:18px}
         <li><span class="n">9</span><p><strong>Confirmação com o teto atualizado e a regra da doação.</strong> O jogador vê quanto do teto sobra e lê, antes de pagar, que não há reembolso e que a contestação suspende a conta até regularizar (decisão do Gabriel, bíblia §5). Pix primeiro, porque é como o brasileiro paga (<a href="../../01-pesquisa/08-mercado-posicionamento.md">08, §2.2</a>).</p></li>
         <li><span class="n">10</span><p><strong>Sem contagem regressiva, sem "de/por" falso, sem oferta relâmpago.</strong> A oferta por tempo limitado está na lista de práticas predatórias (<a href="../../01-pesquisa/06-monetizacao-retencao.md">06, §2.3</a>). Recusá-la nos tira da média do mercado; é o preço da promessa.</p></li>
       </ol>
-      <p class="rodape">Acessibilidade: as tabelas de faixas e de chances têm legenda e cabeçalhos; os botões dizem o produto e o preço no próprio texto ("Comprar 1 Baú · 50 Coins (R$ 5)"), para que o leitor de tela não anuncie só "Comprar".</p>
+      <p class="rodape">Acessibilidade: as tabelas de faixas e de chances têm legenda e cabeçalhos; os botões dizem o produto e o preço no próprio texto ("Comprar 1 Baú · 5 Coins (R$ 5)"), para que o leitor de tela não anuncie só "Comprar".</p>
     </aside>
   </div>
 </div>

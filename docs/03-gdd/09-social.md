@@ -134,7 +134,7 @@ A Encomenda é o contrato coletivo com prazo e nota individual (bíblia, §4). A
 - **Saída automática:** quem ficar 72 h sem entrar durante a Encomenda é retirado, a cota sai da meta, e o que já entregou conta para ele.
 - **Sobra conta para o grupo:** entregas acima da própria cota contam para a meta até 150% da cota.
 
-**O que se entrega é consumido** (dreno). R paga Mérito, Renome, XP pessoal e uma remuneração em ouro **limitada pelo orçamento de emissão das Encomendas**, a definir no módulo 07. Bens do Baú e itens comprados no mercado podem ser entregues, mas o Mérito e os rankings contam só a produção própria (§5.1).
+**O que se entrega é consumido** (dreno). R paga Mérito, Renome, XP pessoal e uma remuneração em ouro **limitada pelo orçamento de emissão das Encomendas** do módulo 07. **O ouro só a partir do 14º dia da conta;** antes disso, a Encomenda paga só Mérito, Renome e XP. A entrega não passa pelo portão do teto, e sem esse corte a conta-fazenda recebe ouro desde o 2º dia ([08](08-simulacao.md), seção 7.5) (revisão de consistência: R23). Bens do Baú e itens comprados no mercado podem ser entregues, mas o Mérito e os rankings contam só a produção própria (§5.1).
 
 | Quatro perguntas | Encomendas de guilda |
 |---|---|
@@ -213,7 +213,7 @@ A Encomenda é o contrato coletivo com prazo e nota individual (bíblia, §4). A
 
 | Golpe | Como acontece | Defesa de desenho [H] | Consequência |
 |---|---|---|---|
-| **Troca trocada** | Troca-se o item no último segundo | Confirmação dupla; qualquer mudança zera as confirmações; a tela final mostra o valor de referência (IPC) e avisa quando a troca foge 20% dele. [F] O Idle Clans pede confirmação a ±20% da média de 24 h ([C02](../01-pesquisa/fichas/C02-idle-clans.md)) | Banimento; devolução pelo livro-razão |
+| **Troca trocada** | Troca-se o item no último segundo | Confirmação dupla; qualquer mudança zera as confirmações; a tela final mostra o valor de mercado de cada lado ([07](07-economia.md), seção 5.5) e avisa quando a troca foge 20% dele (revisão de consistência: R18). [F] O Idle Clans pede confirmação a ±20% da média de 24 h ([C02](../01-pesquisa/fichas/C02-idle-clans.md)) | Banimento; devolução pelo livro-razão |
 | **"Manda o Pix que eu mando o ouro"** | Pagamento fora do jogo, entrega que não vem | Troca de mão única mostra o aviso "esta troca não tem contrapartida; o estúdio não recupera acordos feitos fora do jogo"; página pública "RMT informal: o que o estúdio não faz"; risco de troca no livro-razão (modelo do IdleMMO, [04b, §3.8](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) | O estúdio não devolve pagamento externo. Se houver prova no chat do jogo (a promessa), o golpista é banido |
 | **Phishing e site falso** | Link de "Coins grátis", página de login falsa | Links externos bloqueados nos canais públicos; no privado, aviso com o domínio em destaque; login só no domínio oficial; 2FA; alerta de login novo; carência para mover valor recebido logo depois de um login novo ([04b, §4.2 e "Como isso pode dar errado"](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)) | Banimento; recuperação da conta pelo suporte |
 | **Falso staff** | Nome como "Suporte" ou "ADM" pede senha ou código | Nomes reservados; selo oficial só no Diário; aviso fixo: "o estúdio nunca pede senha, código ou Pix" | Banimento |
@@ -247,6 +247,7 @@ O **Quadro da Cidade** publica, toda segunda-feira às 9h (horário de Brasília
 - **Mesma matemática da Encomenda de guilda** (§2.7), com `C_base = 8 h-f` [H]. A turma automática junta ritmos iguais, para não pôr quem joga 12 horas com quem joga 20 minutos ([03, §13](../01-pesquisa/03-alem-do-idle.md)).
 - **Sem expulsão manual.** Só a saída automática por 72 h sem entrar. [H] A expulsão vira assédio; como a meta só conta quem está ativo, ela não é necessária.
 - **Orçamento de atenção:** cada pessoa entra em até 2 Encomendas da cidade e 1 de guilda por semana. [H] O estudo [além do idle](../01-pesquisa/03-alem-do-idle.md) alerta para o "jogo de checklist", em que cada sistema traz o seu timer.
+- **Ouro só a partir do 14º dia da conta,** como na Encomenda de guilda (§2.7): o novato entra desde o D1 e recebe Mérito e XP (revisão de consistência: R23).
 - **Mesma recompensa por h-f na cidade e na guilda.** A guilda acrescenta só o Renome. [H] É o que torna viável a rota solo que o conceito pede ([02-conceito, §7](../02-conceito.md)).
 - **Encomenda prioritária:** o Conselho pode marcar uma das quatro como prioritária na semana (+20% de Mérito, §6.5).
 
@@ -309,7 +310,7 @@ As Obras são do módulo 10 (calendário e tamanho) e do 07 (economia). Aqui fic
 ### 5.1 A regra de ouro: só sobe quem entrega à cidade
 
 Os pontos de ranking vêm de quatro fontes [H]:
-1. **Bens entregues a Obras e Encomendas**, avaliados pelo **valor de referência** (a mediana de 7 dias usada no IPC), nunca pelo preço do momento. Inflar um preço no mercado não aumenta os pontos.
+1. **Bens entregues a Obras e Encomendas**, avaliados pela **mediana de 7 dias do preço de mercado** (a usada no IPC), nunca pelo preço do momento. O nome "valor de referência" passou a designar o valor fixo de lançamento que mede o teto (bíblia, anexo do glossário; revisão de consistência: R18). Inflar um preço no mercado não aumenta os pontos.
 2. **Defesa nos Cercos**, pelo boletim de cada Cerco (módulo 04).
 3. **Qualidade registrada:** obras-primas criadas e registradas no Livro de Obras-Primas (§5.2).
 4. **Desbravamento na Fronteira** (módulo 10).
@@ -491,11 +492,11 @@ O ciclo de 3 mandatos dura 26 semanas (2 Eras) e se repete. [H] **Consequência 
 |---|---|
 | **04 Combate** | Efeito da reserva (50%) e dos postos de ofício no Cerco; boletim por posto e por guarnição; tamanho da guarnição (10). |
 | **06 Ofícios** | Conversão de h-f em materiais; a cesta da Sede com pelo menos 6 ofícios; pedidos de fabricação com garantia do sistema. |
-| **07 Economia** | Taxa de fundação de guilda; **orçamento de emissão em ouro das Encomendas**; taxa da Troca (3%) na retirada do cofre para terceiros; Mérito a 25% para item comprado; faixa da Feira (4% a 8%). |
+| **07 Economia** | Taxa de fundação de guilda; **orçamento de emissão em ouro das Encomendas**, com ouro só a partir do 14º dia da conta (R23); taxa da Troca (3%) na retirada do cofre para terceiros; Mérito a 25% para item comprado; faixa da Feira (4% a 8%). |
 | **08 Simulação** | Demanda social a simular: Encomendas da cidade (4 por semana, `C_base` de 8 h-f, até 2 por pessoa), Encomendas de guilda (1 por semana, `C_base` de 10 h-f), manutenção das Sedes (de 0,5% a 2,5% da produção dos membros), construção das Sedes (de 150 a 3.000 h-f por nível). Ordem de grandeza [H]: **as Encomendas e as Sedes absorvem de 8% a 12% da produção de quem participa.** Testar a Feira em 4% e em 8%. |
 | **10 Live ops** | Posse na S1, S5 ou S9; festas que usam Sede, guarnições e turmas; Diário da Cidade; métricas sociais. |
 | **11 Monetização** | Nada do social é vendido: nem vaga de guilda, nem nível de Sede, nem Encomenda extra, nem destaque no Conselho. Estandartes e decoração de Sede podem existir como cosméticos, sem efeito. |
-| **12 Onboarding** | Oferta de Padrinho no D1 a D3; Roda de Novatos; primeira Encomenda da cidade em turma automática até o D3. |
+| **12 Onboarding** | Oferta de Padrinho no D1 a D3; Roda de Novatos; primeira Encomenda da cidade em turma automática até o D3, paga em Mérito e XP (o ouro de Encomenda começa no 14º dia da conta; R23). |
 | **13 Anti-abuso** | Regras de conta nova; risco de troca; uma pessoa verificada, um voto; carência pós-Bazar de Personagens; detecção de compra de voto e de guildas de fachada; origem dos lotes no livro-razão. |
 | **14 Arte e UI** | Os 5 níveis da Sede; Tribuna; Quadro da Cidade; Troca com confirmação dupla e aviso de valor; placa da Obra. |
 
@@ -504,7 +505,7 @@ O ciclo de 3 mandatos dura 26 semanas (2 Eras) e se repete. [H] **Consequência 
 1. **[proposta de mudança na bíblia] Glossário:** incluir **Sede** (base da guilda na Cidade, 5 níveis), **Renome** (progressão da guilda; não confundir com Mérito, que é pessoal), **Guarnição** (grupo de defesa do Cerco, termo já usado no conceito), **Padrinho/Madrinha** (mentor de novatos), **Quadro da Cidade** (onde saem as Encomendas da cidade), **Diário da Cidade** (canal oficial e jornal) e **hora-fila (h-f)** (unidade de conta para custos e metas).
 2. **[proposta de mudança na bíblia] §6.1, Conselho:** trocar "eleição a cada 2 meses" por "mandato de 2 meses, contado em 9, 9 e 8 semanas, com posse na S1, S5 ou S9 de uma Era".
 3. **[proposta de mudança na bíblia] §6.6, constituição econômica:** incorporar a tabela de poderes do Conselho (§6.5) e a carta do que nunca vai a voto (§6.6). Hoje a bíblia só cita a faixa da Feira.
-4. **[proposta de mudança na bíblia] §4, Mérito:** precisar "prioridade em recompensas da cidade" como **prioridade de ordem** (escolha de lote, vagas limitadas de eventos), nunca recompensa econômica maior; e registrar que item comprado rende 25% do Mérito.
+4. **[proposta de mudança na bíblia] §4, Mérito:** precisar "prioridade em recompensas da cidade" como **prioridade de ordem** (escolha de lote, vagas limitadas de eventos), nunca recompensa econômica maior; e registrar que item comprado rende 25% do Mérito. **Adotada em parte** (revisão de consistência: R13): a bíblia registra o Mérito em duas contas (vitalício, para títulos; da Era, que zera a cada Era), as duas ficam com a conta no Bazar de Personagens, e a "prioridade do Mérito" vale só para a ordem de escolha. O peso do item comprado segue a reconciliar: 25% aqui, 50% para o fornecedor no [04](04-combate.md) e o ouro a 50% na curva do [07](07-economia.md), seção 3.5.
 5. **[proposta de mudança na bíblia] §6.7, novo número-âncora:** guilda de 20 a 40 membros.
 
 ## 9. Como isso pode dar errado

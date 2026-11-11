@@ -7,7 +7,7 @@
 
 ## Resumo
 
-- **O jogador joga antes de se identificar.** Um prólogo de 5 minutos, sem conta, ensina a fila, o ofício, o combate por regras e a ausência. **A verificação de idade entra na chegada aa Cidade**, quando o jogador já investiu e já sabe o que ganha ao ficar. Fora do prólogo, tudo exige adulto verificado. É a única mudança proposta sobre uma decisão do Gabriel (seção 2), e é também o que mais reduz o custo de verificação calculado no [11](11-monetizacao.md), §8.5.
+- **O jogador joga antes de se identificar.** Um prólogo de 5 minutos, sem conta, ensina a fila, o ofício, o combate por regras e a ausência. **A verificação de idade entra na chegada à Cidade**, quando o jogador já investiu e já sabe o que ganha ao ficar. Fora do prólogo, tudo exige adulto verificado. É a única mudança proposta sobre uma decisão do Gabriel (seção 2), e é também o que mais reduz o custo de verificação calculado no [11](11-monetizacao.md), §8.5.
 - **Cinco momentos que só este jogo tem:**
   1. No minuto 4, o jogador vê a Cidade real, com moradores e a Obra em andamento, e a sua contribuição entra no Livro da Obra assim que ele chega.
   2. A primeira noite é encenada: oito horas em oito segundos, com o Relatório da volta, para que o jogador entenda o contrato do idle antes de sair pela primeira vez.
@@ -16,7 +16,7 @@
   5. A primeira semana termina na cidadania, que dá voto no Conselho.
 - **O onboarding é uma sequência de atos, não um relógio:** uma regra nova por ato, e cada ato termina num ponto natural de parada. O jogo diz, em voz alta, que o jogador pode sair.
 - **Nenhuma loja no caminho:** sem pacote de iniciante, sem pop-up, sem oferta no Relatório da volta. Os Coins são explicados uma vez, no D3, em contexto.
-- **Alvos** [H]: 40 de cada 100 que começam o prólogo chegam verificados aa Cidade. Na base verificada, D1 ≥ 50%, D7 ≥ 25% e D30 ≥ 12%. São metas próximas do top 1% do PC, justificadas pelo filtro do prólogo e da verificação (seção 10).
+- **Alvos** [H]: 40 de cada 100 que começam o prólogo chegam verificados à Cidade. Na base verificada, D1 ≥ 50%, D7 ≥ 25% e D30 ≥ 12%. São metas próximas do top 1% do PC, justificadas pelo filtro do prólogo e da verificação (seção 10).
 
 ## 1. Princípios
 
@@ -55,7 +55,7 @@
 | (C) Depois do primeiro dia, em modo visitante | O visitante entra na Cidade sem chat, mercado nem troca, por 24 h | Fricção ainda menor | O visitante estaria no mundo compartilhado, onde o ECA Digital pesa (interação entre usuários, art. 21, [05b](../01-pesquisa/05b-rmt-legal-brasil.md), §2); contraria a decisão 18+ |
 | (D) Só na primeira compra ou transferência | Verifica-se para pagar ou negociar | A menor fricção | Contraria a decisão 18+ e desfaz a barreira contra bots e multicontas (P8) |
 
-### 2.3 Recomendação: (B), verificar na chegada aa Cidade **[proposta de mudança na bíblia]**
+### 2.3 Recomendação: (B), verificar na chegada à Cidade **[proposta de mudança na bíblia]**
 
 **[H] A proposta:** o jogo inteiro continua 18+ com idade verificada. O que fica antes da verificação é um **prólogo**, com estas condições:
 - não tem conta nem coleta dados pessoais; o progresso fica salvo só no aparelho, por 7 dias;
@@ -88,7 +88,7 @@
 
 ### 3.1 Passo a passo
 
-[H] O prólogo roda no aparelho, sem conta. Ensina quatro coisas: o ofício (coletar e transformar), a fila (o trabalho continua sem você), o combate por regras e a ausência. Os tempos de ação são mais curtos que os do jogo (a bíblia, §6.1, prevê de 3 a 30 s por unidade), para caber o serrote de segundos do primeiro minuto.
+[H] O prólogo roda no aparelho, sem conta. Ensina quatro coisas: o ofício (coletar e transformar), a fila (o trabalho continua sem você), o combate por regras e a ausência. Os tempos de ação são mais curtos que os do jogo (a bíblia, §6.1, prevê de 3 a 30 s por unidade na coleta), para caber o serrote de segundos do primeiro minuto.
 
 | Tempo | O que acontece | O que o jogador faz | Regra que aprende | Emoção | Metas visíveis |
 |---|---|---|---|---|---|
@@ -96,7 +96,7 @@
 | 0:10 | A margem de um rio, a Névoa atrás, um grupo de sobreviventes e um barqueiro | Escolhe uma de três aparências ("dá para mudar depois") | — | Curiosidade | — |
 | 0:20 | "O fogo vai apagar. Precisamos de lenha." | Toca para cortar lenha; cada uma das 5 primeiras unidades sai em 1 s | Ação gera recurso | Competência imediata | Minutos: "Lenha para o fogo: 0/10" |
 | 0:40 | Depois da 5ª unidade, o personagem continua sozinho, com a estimativa na tela: "seu personagem segue trabalhando" | Assiste à fila encher | **A fila: o trabalho continua sem você** | Alívio ("ah, é um idle") | Minutos: "Lenha: 6/10 (≈ 15 s)" |
-| 1:10 | O fogo acende. "A balsa tem um buraco. Precisamos de tábuas." Aparece a Carpintaria: lenha vira tábua | Escolhe a receita; a fila mostra "8 tábuas em 40 s" | **Transformação:** um ofício alimenta o outro | Progresso | Minutos: "Remendar a balsa: 0/8 tábuas"; Horas: "Chegar aa Cidade" |
+| 1:10 | O fogo acende. "A balsa tem um buraco. Precisamos de tábuas." Aparece a Carpintaria: lenha vira tábua | Escolhe a receita; a fila mostra "8 tábuas em 40 s" | **Transformação:** um ofício alimenta o outro | Progresso | Minutos: "Remendar a balsa: 0/8 tábuas"; Horas: "Chegar à Cidade" |
 | 2:00 | No meio do rio, uma criatura corrompida pela Névoa ataca a balsa (os módulos 04 e 14 escolhem qual, do bestiário de fantasia medieval, com desenho próprio) | Escolhe uma regra de duas: "proteger a balsa" ou "afastar a criatura"; o combate é automático, por 20 s | **Combate por regras,** sem reflexo | Tensão | — |
 | 2:40 | A criatura enfraquece e aparece a opção "libertar". A Névoa se desfaz, a criatura volta ao que era antes da corrupção e mergulha, deixando uma escama que brilha | Toca "libertar" | Muitas criaturas são corrompidas pela Névoa; libertar é recompensa (bíblia, §3) | Assombro, compaixão | — |
 | 3:20 | A balsa chega à margem e se vê a **Cidade real**, ao longe, com dados ao vivo: "Pedraforte: 2.873 moradores acordados agora. Obra da Muralha: 61%." Passam feitos recentes de jogadores reais, com apelidos | Entrega as tábuas que sobraram "para a Obra" | **A cidade é real e é de todos** | Pertencimento | Dias: "Sua casa na Cidade" |
@@ -113,7 +113,7 @@
 
 > **Quatro perguntas** — Referência: Candy Box e Universal Paperclips (o botão que vira mundo, [02a](../01-pesquisa/02a-teoria-design-idle.md), §3.2); o rested XP do WoW reformulado como bônus ([03](../01-pesquisa/03-alem-do-idle.md)), para ensinar a ausência pelo lado bom · Problema: em 5 minutos, mostrar o que é o jogo (idle, ofício, cidade) e por que vale verificar a idade · Comportamento: o jogador entra na Cidade já sabendo que pode sair sem perder nada · Risco: a noite encenada pode confundir ("já passou um dia?"); por isso o rótulo de simulação, e a primeira volta real repete a tela com os números reais.
 
-## 4. A chegada aa Cidade (minutos 5 a 12)
+## 4. A chegada à Cidade (minutos 5 a 12)
 
 | Tempo | Passo | Desenho [H] |
 |---|---|---|
@@ -136,7 +136,7 @@
 |---|---|
 | **A Mesa de Ofícios** | Os quatro ofícios de coleta (Mineração, Lenhadoria, Pesca, Colheita) aparecem abertos como aprendiz. Os de transformação e de criação aparecem com uma frase cada, abertos ao alcançar o material (Carpintaria já veio do prólogo) |
 | **A primeira fila real** | O jogador escolhe o que coletar e por quanto tempo. A fila agora é do servidor (P9) e respeita o offline base de 24 h (bíblia, §6.1) |
-| **As duas taxas, visíveis** | "Com você aqui: 10 por minuto. Enquanto você estiver fora: 8 por minuto. Até 24 h de trabalho guardado." (números a reconciliar com o módulo 02; a regra das duas taxas visíveis vem do piso P12) |
+| **As duas taxas, visíveis e separadas** | **A fila:** "Sua fila: 7 por minuto, com o jogo aberto ou fechado. É o ritmo da oficina (70%), e ele sobe com os marcos. Até 24 h de trabalho guardado." **A bancada ativa,** num botão à parte: "Trabalhar junto, até 2 h por dia: 10 por minuto no firme, 12,5 forçando (a ferramenta gasta em dobro)." A fila rende igual com a aba aberta ou fechada; só a bancada ativa muda o ritmo (revisão de consistência: R9; regra do [02](02-progressao.md), seção 8; as duas taxas visíveis vêm do piso P12) |
 | **Ponto de parada 1** | "Pronto. Você pode fechar o jogo agora: o trabalho continua. Ou siga para a praça e venda o que tem." Os dois botões têm o mesmo peso visual |
 
 ### 5.2 Ato 2 — A primeira venda e a primeira compra (minutos 20 a 35)
@@ -148,12 +148,12 @@
 - **Se o livro estiver vazio,** a venda vai ao comprador NPC (venda a NPC da bíblia, §6.6), por preço baixo e decrescente. A tela diz que é um NPC e que os jogadores pagam melhor.
 - **A Bolsa é o único balcão do Ato 2.** A Feira aparece só para comprar; o Leilão e o Câmbio vêm depois (seção 9.2).
 
-**A primeira compra é de um artesão [H].** O painel das três metas aponta a próxima ferramenta ("Machado de cobre: +25% na Lenhadoria"). A Feira lista os machados à venda com o nome de quem fez, a qualidade e a durabilidade.
+**A primeira compra é de um artesão [H].** O painel das três metas aponta a próxima ferramenta ("Machado de cobre: dura mais e acha mais resina rara"; a ferramenta não acelera a fila, revisão de consistência: R16). A Feira lista os machados à venda com o nome de quem fez, a qualidade e a durabilidade.
 
 - **Depois da compra:** "Feito por Doran, mestre de Ferraria. Você não fabrica isto: alguém da Cidade fabricou." É a lição do pilar 1 ("ninguém faz tudo") em uma frase.
 - **O desgaste aparece na hora:** "Tudo se gasta. Este machado aguenta cerca de 20 horas de trabalho. Depois, reparo ou um novo." (pilar 2; números no módulo 05).
 - **Se não houver machado de jogador à venda,** a oficina NPC de reforço vende um, de qualidade Comum e pelo preço teto ([conceito](../02-conceito.md), "Como isso pode dar errado").
-- **O serrote cai:** com o machado, a fila acelera 25%, e o painel mostra a meta seguinte mais perto.
+- **O serrote cai:** com o machado novo, a fila trabalha a noite inteira sem parar por ferramenta gasta, e o painel mostra a meta seguinte mais perto (R16).
 
 > **Quatro perguntas** — Referência: o mercado como o recurso mais elogiado do Milky Way Idle ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); a quebra que sustenta o artesão no Shop Titans ([C06](../01-pesquisa/fichas/C06-shop-titans.md)); diferencia-se dos idles em que o mercado é opcional e anônimo · Problema: ensinar interdependência e desgaste sem tutorial de texto · Comportamento: o jogador vê, desde o minuto 20, que vende para gente e compra de gente, e que o que compra acaba · Risco: numa Cidade com poucos jogadores, os "Pedidos da Cidade" ficam vazios e a lição se perde; por isso o comprador NPC e a oficina de reforço, e a métrica "primeira venda para jogador" (seção 10.3).
 
@@ -182,7 +182,7 @@
 | # | Bloco | Conteúdo | Regra |
 |---|---|---|---|
 | 1 | **Quanto tempo e o que se perdeu** | "Você ficou fora 7 h 40 min. Nada se perdeu." | A frase "nada se perdeu" sempre aparece, porque é sempre verdade (pilar 4) |
-| 2 | **A consequência do plano e o gargalo** | Itens, XP de ofício e de vocação, níveis, com a barra das duas taxas ("Fora, você rendeu 80% do ritmo ativo"), e o que limitou o plano: falta de material, ferramenta gasta, regra de recuo acionada, teto do offline | Honestidade sobre a taxa do ausente (P12); o gargalo diz o que mudar no próximo plano; números a reconciliar com o módulo 02 |
+| 2 | **A consequência do plano e o gargalo** | Itens, XP de ofício e de vocação, níveis, com a taxa da fila ("Sua fila rendeu no ritmo da oficina: 70%, com o jogo aberto ou fechado; o próximo marco sobe para 75%") e, à parte, o que a bancada ativa rendeu, se foi usada; e o que limitou o plano: falta de material, ferramenta gasta, regra de recuo acionada, teto do offline | Honestidade sobre a taxa do ausente (P12); o gargalo diz o que mudar no próximo plano; números do [02](02-progressao.md), seção 8 (revisão de consistência: R9) |
 | 3 | **Linha do tempo dos eventos** | O que aconteceu, em ordem e com hora: a caça recuou, a Obra avançou (com a parte do jogador), um anúncio seu vendeu, o cerco de sábado abriu inscrições até sexta às 20h | No máximo três linhas; o resto num "ver mais" |
 | 4 | **Uma regra nova** | Só uma por volta. Na primeira volta: a encomenda (seção 7.1) | Lei da regra nova; nunca duas novidades na mesma tela |
 | 5 | **Até três ações sugeridas** | "Renovar a fila", "Vender o excedente", "Participar da encomenda" | Sugestões, nunca obrigações |
@@ -197,7 +197,7 @@
 ### 6.2 Exemplo da primeira volta
 
 > **Bom dia. Você ficou fora 7 h 40 min. Nada se perdeu.**
-> Sua caça na mata trouxe **14 peles**, **3 carnes** e **2 níveis de Caçador**. Fora, você rendeu 80% do ritmo de quem fica olhando.
+> Sua caça na mata trouxe **14 peles**, **3 carnes** e **2 níveis de Caçador**. Sua fila rendeu no ritmo da oficina, 70%, e sobe para 75% quando seu Caçador chegar ao 20. (Revisão de consistência: R9.)
 > **Gargalo:** a caça recuou duas vezes com 30% de vida. Uma armadura de couro melhor deixaria a caça render mais.
 > **Linha do tempo:** 23h10 a caça começou · 01h40 recuou e voltou em seguida · 04h20 recuou de novo · 06h00 a Obra da Muralha chegou a 62% (uma tábua dela é sua) · as inscrições para o cerco de sábado vão até sexta às 20h.
 > **Novidade: o Conselho abriu uma encomenda.** A Cidade precisa de 5.000 tábuas e 800 peles até sábado. A sua parte pode ser pequena: a nota é medida pelo seu tamanho, não pelo dos veteranos. [Participar]
@@ -224,7 +224,7 @@
 | A faixa de calouro | Nos 7 primeiros dias, a parte sugerida é pequena (por exemplo, 30 tábuas e 10 peles), proporcional ao que a fila dele produz em uma noite |
 | A nota | **Relativa à capacidade do jogador**, não absoluta: o calouro que entrega o que pode tira nota alta. *Por quê:* com nota absoluta, os veteranos tiram todas as notas altas, e o calouro aprende que a encomenda não é para ele. A reconciliar com o módulo 09, dono das regras da encomenda |
 | A entrega | Pode ser planejada: a fila da noite entrega sozinha na encomenda ("enviar à encomenda ao terminar"). O ausente que planeja participa |
-| O resultado | No fim do prazo, o Relatório da volta mostra a nota, a parte do jogador no todo e a recompensa (Mérito e itens presos, a definir nos módulos 07 e 09) |
+| O resultado | No fim do prazo, o Relatório da volta mostra a nota, a parte do jogador no todo e a recompensa: Mérito e XP. **O ouro de encomenda só começa no 14º dia da conta** ([07](07-economia.md), seção 4.1; [09](09-social.md), seção 2.7); antes disso, a tela diz "a partir do dia 14, suas encomendas também pagam ouro" (revisão de consistência: R23). Sem esse corte, a conta-fazenda recebe ouro desde o 2º dia ([08](08-simulacao.md), seção 7.5) |
 
 > **Quatro perguntas** — Referência: os contratos cooperativos do Egg, Inc., com prazo e nota individual ([A09](../01-pesquisa/fichas/A09-egg-inc.md)), o laço social mais forte do gênero ([00](../01-pesquisa/00-sintese.md), insight 19) · Problema: dar ao calouro, no primeiro dia, um lugar no destino comum (pilar 3) · Comportamento: o jogador planeja a noite pensando na cidade · Risco: o calouro sente que a parte dele é irrelevante; por isso a nota relativa e o "uma tábua dela é sua" no Relatório da volta.
 
@@ -252,7 +252,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 |---|---|---|---|
 | D1 | Encomenda, obra-prima, reparo (seção 7) | Primeira entrega com nota | Ver seção 7 |
 | D2 | **Ajudante** | Contrata o primeiro ajudante com o ouro das vendas (a reconciliar com o módulo 03) | Contratar ajudante / Curtume 15 / primeira nota da encomenda |
-| D2 a D4 | **Ofício mestre** | Ao bater no nível 30, o teto de aprendiz (seção 8.2) | Declarar mestre / ofício a 32 / segundo mestre |
+| D2 a D5 | **Ofício mestre** | Ao bater no nível 30, o teto de aprendiz (seção 8.2); com o bônus de calouro, ~D3,9 no regular, ~D2,6 no hardcore e ~D5,2 no casual (R10) | Declarar mestre / ofício a 32 / segundo mestre |
 | D3 | **Câmbio, Coins, Bazar de Personagens e IPC** (explicação única, seção 8.4) | O painel do IPC na praça | — |
 | D3 a D6 | **Cerco** | Abastecimento ou guarnição (seção 8.3) | Entregar flechas / inscrever-se / cerco de sábado |
 | D4 a D5 | **Leilão e guilda** | O primeiro lance; convite para uma guilda (o padrinho pode convidar) | — |
@@ -261,7 +261,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 
 ### 8.2 Os ofícios mestres: escolher quando se precisa
 
-**Quando [H].** Até o nível 30, todo ofício é de aprendiz, e o jogador experimenta quantos quiser. **Para passar do 30 num ofício, ele o declara mestre.** A escolha aparece sozinha, no momento em que importa, e não numa tela de criação. Com a curva do módulo 02, isso deve acontecer entre o D2 e o D4 no primeiro ofício (a reconciliar com o módulo 02).
+**Quando [H].** Até o nível 30, todo ofício é de aprendiz, e o jogador experimenta quantos quiser. **Para passar do 30 num ofício, ele o declara mestre.** A escolha aparece sozinha, no momento em que importa, e não numa tela de criação. Com o **bônus de calouro** do [02](02-progressao.md) (seção 3.5: ×1,6 na XP de ofício nos 3 primeiros dias), isso acontece entre o D2 e o D4 no regular (~D3,9) e no hardcore (~D2,6); o casual chega por volta do D5,2 (revisão de consistência: R10).
 
 **Como: a Mesa de Ofícios [H].**
 
@@ -297,7 +297,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 | Quando | O que aparece | O que nunca aparece |
 |---|---|---|
 | D0 a D2 | A loja existe no menu, como qualquer outro lugar da praça | Pop-up, pacote de iniciante, oferta com relógio, oferta no Relatório da volta |
-| D3 | **Uma explicação única, em contexto:** quando o jogador abre o Câmbio pela primeira vez (ou no D3, se não abrir antes), um quadro de 30 segundos explica os Coins (doação; 1 Coin = R$ 1,00, a reconciliar com o 07, que usa ~R$ 0,10; sem reembolso; a contestação no banco suspende a conta até regularizar), o Câmbio (Coins por ouro), o Bazar de Personagens e o IPC, com o link para a carta pública ([11](11-monetizacao.md), §10). A explicação diz também que dá para conseguir Coins com ouro | Qualquer insistência depois disso |
+| D3 | **Uma explicação única, em contexto:** quando o jogador abre o Câmbio pela primeira vez (ou no D3, se não abrir antes), um quadro de 30 segundos explica os Coins (doação; 1 Coin = R$ 1,00, a paridade de todo o GDD, revisão de consistência: R17; sem reembolso; a contestação no banco suspende a conta até regularizar), o Câmbio (Coins por ouro), o Bazar de Personagens e o IPC, com o link para a carta pública ([11](11-monetizacao.md), §10). A explicação diz também que dá para conseguir Coins com ouro | Qualquer insistência depois disso |
 | D7 | Nada novo | — |
 
 **O que não vira meta:** a doação na primeira semana não tem alvo (seção 10.4).
@@ -341,14 +341,14 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 |---|---|---|---|
 | Prólogo | Fila, transformação, combate por regras, ausência | — | Tudo o mais |
 | Chegada | A casa, o Livro da Obra, o painel das três metas | A praça | Mercado e vocação |
-| Ato 1 | A fila do servidor, as duas taxas | Os 4 ofícios de coleta | Os outros 8 ofícios, com uma frase cada |
+| Ato 1 | A fila do servidor; a taxa da fila e a bancada ativa, separadas (R9) | Os 4 ofícios de coleta | Os outros 8 ofícios, com uma frase cada |
 | Ato 2 | Bolsa (venda) e Feira (compra), desgaste | "Pedidos da Cidade" | Leilão, Câmbio, Troca, Bazar de Personagens |
 | Ato 3 | Vocação, plano da noite | A mata da margem | Masmorras, Fronteira |
 | Sessão 2 | Encomenda | O Conselho, só como quem abriu a encomenda | — |
 | Sessão 3 | Obra-prima | — | — |
 | Sessão 4 | Reparo, padrinho | — | — |
 | D2 | Ajudante | — | — |
-| D2 a D4 | Ofício mestre (no nível 30) | A Mesa de Ofícios completa | — |
+| D2 a D5 | Ofício mestre (no nível 30; com o bônus de calouro, R10) | A Mesa de Ofícios completa | — |
 | D3 | Câmbio, Coins, Bazar de Personagens, IPC | A loja já estava no menu desde o início | — |
 | D3 a D6 | Cerco (abastecimento e guarnição) | — | — |
 | D4 a D5 | Leilão, Troca, guilda | — | — |
@@ -437,7 +437,7 @@ O jogador vende o cabo Fino para a ferreira (uma ordem de compra real, ou NPC se
 | Módulo | O que o onboarding precisa dele |
 |---|---|
 | 01 — loops | A sessão típica e o dia do ausente, para encaixar as sessões 2 a 4 |
-| 02 — progressão | Curvas que levem um ofício ao 30 entre o D2 e o D4; as duas taxas; o offline de 24 h; a declaração de ofício mestre no 30; o que acontece na troca do período de experiência; a segunda fila como marco de semana |
+| 02 — progressão | Curvas que levem um ofício ao 30 entre o D2 e o D4 (resolvido com o bônus de calouro de ×1,6 nos 3 primeiros dias; R10); as duas taxas, com a fila igual com a aba aberta ou fechada (R9); o offline de 24 h; a declaração de ofício mestre no 30; o que acontece na troca do período de experiência; a segunda fila como marco de semana |
 | 03 — personagem | Demonstração de cada vocação; troca livre até o nível 10; o primeiro ajudante no D2 |
 | 04 — combate | A regra de recuo; o combate do prólogo; a porta de abastecimento e a reserva de calouro no cerco |
 | 05 — itens | Durabilidade do primeiro machado; a escama do prólogo; a regra do lacre |

@@ -104,7 +104,7 @@ As casas, as famílias de peça, os números por tier e a qualidade são do [05-
 ### 4.2 Comida: a refeição
 
 - **Uma casa de refeição.** O personagem leva um prato por vez (Culinária).
-- **Consumo:** 1 porção por hora de combate, por combatente. **O ajudante também come** (seção 9). [a reconciliar com o 06, que conta 4 refeições por hora de combate]
+- **Consumo:** 1 porção por hora de combate, por combatente. **O ajudante também come** (seção 9). Reconciliado: vale 1 refeição por combatente por hora, e o 06 foi alinhado (revisão de consistência: R1).
 - **Efeito principal:** a regeneração fora de luta sobe de 1% para 2% do PV por segundo. É isso que separa uma expedição que dura a noite de uma que gasta o cinto de poções na primeira hora.
 - **Efeito do prato:** +4 / +6 / +9 / +12 / +16 / +20 num atributo (T1 a T6), vezes o multiplicador de qualidade. Os pratos por tier são do 05 (caldo, ensopado, torta de caça, assado com ervas, guisado do castelo, festim real); cada receita escolhe o atributo, e algumas trocam o bônus por um efeito (resistência a peçonha, +ânimo inicial). Exemplos: ensopado de javali (FOR), truta na brasa (DES), caldo de cevada (VIG), torta de ervas (SAB).
 - **Sem refeição:** nada de ruim acontece além de a regeneração ficar lenta. O personagem gasta cerca de duas vezes mais poções ([04-combate](04-combate.md), seção 8).

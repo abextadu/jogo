@@ -9,13 +9,13 @@
 
 ## Resumo
 
-- **1 Coin = R$ 1,00, em todas as faixas de doação** [H] (a reconciliar com o 07, que usa ~R$ 0,10 por Coin). Não há bônus nas faixas maiores. As faixas são R$ 5, 10, 20, 50, 100 e 250, mais valor livre em reais inteiros. Pix em todas; cartão à vista em todas; até 3x sem juros a partir de R$ 100. Com a paridade de um para um, o preço em reais está sempre à vista sem conta nenhuma.
+- **1 Coin = R$ 1,00, em unidades inteiras, em todas as faixas de doação** [H] (paridade adotada em todo o GDD; o 07 reescreveu as regras em Coins de R$ 1,00; revisão de consistência: R17). Não há bônus nas faixas maiores. As faixas são R$ 5, 10, 20, 50, 100 e 250, mais valor livre em reais inteiros. Pix em todas; cartão à vista em todas; até 3x sem juros a partir de R$ 100. Com a paridade de um para um, o preço em reais está sempre à vista sem conta nenhuma.
 - **A loja vende em Coins:** conveniência por tempo (**20 Coins por 30 dias**, ou 10 por 15 dias, ou 60 por 90 dias), cosméticos de 5 a 60, o Passe da Era por 20, o Baú Misterioso por 5 e serviços de conta. Os Coins também pagam personagens no Bazar de Personagens e circulam pelo Câmbio e pela Troca. Nunca são dados de graça.
 - **Conveniência = forma, nunca resultado.** São nove itens de identidade, organização e vida social: cosmético do mês, guarda-roupa ampliado, predefinições de equipamento, cômodos de decoração, festas na casa, painel de patrimônio, barbearia, temas e selo opcional. Cada um foi checado contra a zona vermelha (seção 3).
 - **Baú Misterioso:** custa 5 Coins, e as chances são publicadas na tela e na página do jogo. A cada 10 Baús sem item Raro ou melhor, o décimo garante um. **Todo item do Baú também é vendido diretamente, com preço fixo**, o que põe teto no prêmio; o item comum custa o mesmo que o Baú, o que põe piso no resultado. Os itens saem lacrados e são negociáveis; aplicados, ficam presos à conta. Limites: 20 Baús comprados por mês, 10 aberturas por dia e 40 por mês.
 - **Passe da Era:** 20 Coins, sem poder e sem expirar. Avança por feitos, não por horas, com teto semanal acumulável.
 - **Teto de doação de R$ 250 por mês para todos**, com níveis de R$ 600 e R$ 1.200 só por pedido e com espera. Há ainda limite de cinco doações por dia, painel de gasto, opção de fechar a loja para si e resposta graduada a sinais de risco. **Como não há reembolso, a proteção acontece antes da doação.** Na contestação forçada pelo banco (chargeback no cartão, MED do Pix), **a conta fica suspensa até o jogador regularizar**, pagando de novo o valor contestado (decisão do Gabriel, seção 7.4).
-- **Projeção** [H]: R$ 32 mil, R$ 163 mil e R$ 463 mil por mês nos cenários pessimista (2 mil simultâneos), base (3,5 mil) e otimista (5 mil). O cenário base paga uma equipe enxuta de 4 a 5 pessoas e a operação; o pessimista não paga equipe. **O achado principal:** a verificação de idade de cada conta nova, a R$ 1,00, consome cerca de 25% da receita bruta no cenário base e 70% no pessimista (seção 8.5). É o motivo econômico para verificar só depois do prólogo ([12](12-onboarding.md)) e para negociar o preço da verificação.
+- **Projeção** [H]: R$ 32 mil, R$ 163 mil e R$ 463 mil por mês nos cenários pessimista (2 mil simultâneos), base (3,5 mil) e otimista (5 mil). O cenário base paga uma equipe enxuta de 3 a 4 pessoas e a operação; o pessimista não paga equipe. **O achado principal:** a verificação de idade de cada conta nova, a R$ 1,00, consome cerca de 32% da receita bruta no cenário base e 90% no pessimista, porque sustentar a população exige ~5% do DAU em contas novas verificadas por dia (~1.500 por dia para ~30 mil ativos) (seção 8.5; revisão de consistência: R26). É o motivo econômico para verificar só depois do prólogo ([12](12-onboarding.md)) e para negociar o preço da verificação.
 
 ## 1. A régua: o que pode e o que não pode ir à loja
 
@@ -56,14 +56,14 @@ Quem aplica o teste é uma pessoa de fora do time de receita, e o resultado de c
 
 ### 2.1 Como funciona
 
-Pela decisão do Gabriel, o jogador faz uma **doação** em reais e recebe **Coins**, a moeda premium divisível. Os Coins se gastam na **loja** (seção 2.4), pagam personagens no **Bazar de Personagens** e circulam entre jogadores pelo **Câmbio** (por ouro, taxa de 12% destruída) e pela **Troca** (taxa de 3% em ouro destruída; para Coins, o módulo 07 propõe 12%, a reconciliar) (bíblia, §6.6).
+Pela decisão do Gabriel, o jogador faz uma **doação** em reais e recebe **Coins**, a moeda premium divisível. Os Coins se gastam na **loja** (seção 2.4), pagam personagens no **Bazar de Personagens** e circulam entre jogadores pelo **Câmbio** (por ouro, taxa de 12% destruída) e pela **Troca** (taxa de 3% em ouro destruída; **para Coins e Baú lacrado, 12%**, como no Câmbio) (bíblia, §6.6; revisão de consistência: R19).
 
-**Paridade a reconciliar com o módulo 07.** Este módulo usa 1 Coin = R$ 1,00. A referência de trabalho do 07, registrada na bíblia (§6.7), é ~R$ 0,10 por Coin, com ~200 Coins por 30 dias de conveniência. Os valores em reais não mudam com a escolha: na paridade do 07, todos os preços em Coins deste módulo se multiplicam por 10 (por exemplo, 20 Coins viram 200).
+**Paridade reconciliada com o módulo 07 (revisão de consistência: R17).** Vale 1 Coin = R$ 1,00, inteiro, em todo o GDD (bíblia, §6.7). Os preços desta loja ficam como estão (conveniência de 30 dias a 20 Coins; Baú a 5 Coins), e o 07 dividiu por 10 as regras que escrevia em Coins de ~R$ 0,10: ordens do Câmbio de 1 a 200 Coins, compra máxima de 200 Coins por conta a cada 7 dias e lance mínimo de 30 Coins no Bazar de Personagens. A simulação mostrou que a economia é a mesma nas duas paridades; o que muda é que o preço em reais fica visível sem conta ([08](08-simulacao.md), decisão 2).
 
 | Regra [H] | Desenho |
 |---|---|
-| Valor de referência | **1 Coin = R$ 1,00** na doação, em todas as faixas (a reconciliar com o 07, que usa ~R$ 0,10 por Coin) |
-| Divisibilidade | Duas casas decimais (0,01 Coin). Preços da loja em Coins inteiros. No Câmbio e na Troca, mínimo de 1 Coin por operação, para evitar poeira e spam de transferências (a reconciliar com o módulo 07) |
+| Paridade | **1 Coin = R$ 1,00** na doação, em todas as faixas (revisão de consistência: R17) |
+| Divisibilidade | **Unidades inteiras** (revisão de consistência: R17). Preços da loja em Coins inteiros. No Câmbio, ordens de 1 a 200 Coins; na Troca, mínimo de 1 Coin por operação, para evitar poeira e spam de transferências ([07](07-economia.md), seção 5.4) |
 | Validade | Não expira |
 | Carência de transferência | Os Coins recém-doados ficam um prazo sem poder ir ao Câmbio ou à Troca, conforme o meio de pagamento (salvaguarda S2, [00](../01-pesquisa/00-sintese.md)); prazos no módulo 13 |
 | O que o estúdio nunca faz | Dar Coins de graça (evento, ranking, passe, recompensa); comprar Coins de volta; pagar dinheiro a jogadores. *Por quê:* a queda do PLEX coincidiu com distribuição grátis ([F01](../01-pesquisa/fichas/F01-eve-online.md); [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.6) |
@@ -161,7 +161,9 @@ A bíblia (§6.7) dá a faixa de R$ 14,90 a R$ 24,90 por 30 dias de conveniênci
 | Presente à guilda (estandarte, decoração de salão) | 20 a 40 Coins | Um por semana por pessoa |
 | Troca de nome do personagem | 30 Coins | Uma vez a cada 90 dias, com histórico público de nomes (contra golpista que troca de nome) |
 | Mudança de lote da casa | 20 Coins | Só a posição na Cidade; nada de espaço ou produção |
-| **Bazar de Personagens** | Preço livre, em Coins | Taxa de 10% em Coins destruída (bíblia, §6.6); regras no módulo 07 |
+| **Bazar de Personagens** | Preço livre, em Coins, com lance inicial de pelo menos 30 Coins | Taxa de 10% em Coins destruída (bíblia, §6.6); regras no módulo 07 (revisão de consistência: R17) |
+
+**No 2º ano, novos usos de Coins na loja** [H] (revisão de consistência: R27). No cenário base da simulação, o Coin cai devagar o ano inteiro: o estoque em circulação cresce mais depressa que o ouro de quem quer comprá-lo, e o premium passa de 27 para 13 dias de renda do mediano entre o dia 150 e o 364 ([08](08-simulacao.md), seções 4 e 7). Sem demanda nova na loja, ele sairia da faixa de 12 a 20 dias por baixo no 2º ano. A partir da 5ª Era, a loja ganha usos novos, **sempre de conforto e cosmético** e sempre pelas quatro perguntas da seção 1.2: por exemplo, coleções cosméticas por Era, temas de casa e de salão de guilda, aparências de ajudante e serviços de conta. Nada da zona vermelha (seção 1.1) entra por esse caminho. O indicador que dispara a decisão é o estoque de Coins ÷ gasto mensal na loja, no painel do 07.
 
 ### 2.5 Preço em reais sempre visível
 
@@ -534,25 +536,25 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 
 **Custo de uma pessoa na equipe [F + H]:** agregadores de salário põem a média de desenvolvedor de jogos no Brasil em ~R$ 8.200 por mês, somando todos os níveis ([Contabilizei](https://www.contabilizei.com.br/contabilidade-online/quanto-ganha-um-desenvolvedor-de-jogos-confira/)), e o sênior em ~R$ 11.450 ([Jornal Contábil](https://jornalcontabil.com.br/noticia/voce-sabe-quanto-ganha-um-desenvolvedor-de-jogos-confira/)). São fontes comerciais, de baixa confiança, e outras fontes divergem muito. [H] Com encargos, benefícios e equipamento (~1,7 vez o salário), usamos **R$ 14 mil por pessoa por mês**.
 
-**Custo da verificação de idade [F + H]:** em 2019, o Datavalid do Serpro cobrava R$ 0,80 por validação cadastral e R$ 1,68 por biometria facial, na faixa de até 999 consultas, com preço menor por volume ([Tecnoblog, 19/6/2019](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/)); não encontramos tabela atual. [H] Usamos **R$ 1,00 por conta nova verificada**, e **contas novas verificadas por mês = 35% do MAU** (num jogo maduro, a base se renova; com a retenção-alvo do [12](12-onboarding.md), a conta dá de 35% a 43%).
+**Custo da verificação de idade [F + H]:** em 2019, o Datavalid do Serpro cobrava R$ 0,80 por validação cadastral e R$ 1,68 por biometria facial, na faixa de até 999 consultas, com preço menor por volume ([Tecnoblog, 19/6/2019](https://tecnoblog.net/noticias/mpdft-acusa-serpro-usar-dados-cnh-sem-autorizacao/)); não encontramos tabela atual. [H] Usamos **R$ 1,00 por conta nova verificada**, e **contas novas verificadas por mês = 45% do MAU** em todos os cenários (no base, ~1.750 por dia, ~5% do DAU). Com a retenção do [12](12-onboarding.md) (D1 50%, D7 25%, D30 12%), cada conta nova joga ~20 dias em média, e a simulação precisou de ~1.500 contas verificadas por dia para sustentar ~30 mil ativos ([08](08-simulacao.md), seções 2 e 7.6). A versão anterior usava 35% do MAU (revisão de consistência: R26).
 
 | Linha (por mês) [H] | Pessimista | Base | Otimista |
 |---|---|---|---|
 | Receita bruta | R$ 32.000 | R$ 163.333 | R$ 462.857 |
 | Receita líquida (83,5%) | R$ 26.720 | R$ 136.383 | R$ 386.486 |
-| Verificação de idade (35% do MAU × R$ 1,00) | −R$ 22.400 | −R$ 40.833 | −R$ 60.000 |
+| Verificação de idade (45% do MAU × R$ 1,00; revisão de consistência: R26) | −R$ 28.800 | −R$ 52.500 | −R$ 77.143 |
 | Servidor, backup, CDN e anti-DDoS (VPS própria) | −R$ 4.000 | −R$ 6.000 | −R$ 10.000 |
 | Jurídico e contábil | −R$ 4.000 | −R$ 8.000 | −R$ 15.000 |
 | Ferramentas e serviços (e-mail, monitoramento, antifraude) | −R$ 1.500 | −R$ 3.000 | −R$ 6.000 |
 | Comunidade e criadores de conteúdo | R$ 0 | −R$ 10.000 | −R$ 30.000 |
 | Arte terceirizada de cosméticos | R$ 0 | −R$ 5.000 | −R$ 30.000 |
-| **Sobra para a equipe** | **−R$ 5.180** | **R$ 63.550** | **R$ 235.486** |
-| **Equipe que isso paga (R$ 14 mil por pessoa)** | **nenhuma** | **~4 a 5 pessoas** | **~17 pessoas** |
+| **Sobra para a equipe** | **−R$ 11.580** | **R$ 51.883** | **R$ 218.343** |
+| **Equipe que isso paga (R$ 14 mil por pessoa)** | **nenhuma** | **~3 a 4 pessoas** | **~15 pessoas** |
 
 **Leitura [H]:**
 - **Pessimista:** não paga nem a verificação e a operação mínima. Nessa escala, o jogo só existe como projeto de uma ou duas pessoas sem salário de mercado, como os concorrentes ([08](../01-pesquisa/08-mercado-posicionamento.md), §1.4), ou com uma verificação muito mais barata.
-- **Base:** paga uma equipe enxuta de 4 a 5 pessoas, além do Gabriel (por exemplo: duas de servidor e infraestrutura, uma de cliente e interface, uma de design e economia, uma de comunidade e suporte), com a arte de cosméticos parcialmente terceirizada. Fecha, mas no limite do que "confiança como produto" pede (antibot, suporte bilíngue, relatório mensal).
-- **Otimista:** ~17 pessoas e verba para o conteúdo de cada Era, a Fronteira e marketing.
+- **Base:** paga uma equipe enxuta de 3 a 4 pessoas, além do Gabriel (por exemplo: uma de servidor e infraestrutura, uma de cliente e interface, uma de design e economia, e meio tempo de comunidade e suporte; revisão de consistência: R26), com a arte de cosméticos parcialmente terceirizada. Fecha, mas no limite do que "confiança como produto" pede (antibot, suporte bilíngue, relatório mensal).
+- **Otimista:** ~15 pessoas e verba para o conteúdo de cada Era, a Fronteira e marketing.
 
 ### 8.5 O peso da verificação de idade
 
@@ -562,32 +564,32 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 
 | Custo por verificação | Pessimista (R$ 0,50 por MAU) | Base (R$ 1,40 por MAU) | Otimista (R$ 2,70 por MAU) |
 |---|---|---|---|
-| R$ 0,40 | 28% | 10% | 5% |
-| **R$ 1,00** | **70%** | **25%** | **13%** |
-| R$ 1,68 (preço de 2019, faixa baixa) | 118% | 42% | 22% |
+| R$ 0,40 | 36% | 13% | 7% |
+| **R$ 1,00** | **90%** | **32%** | **17%** |
+| R$ 1,68 (preço de 2019, faixa baixa) | 151% | 54% | 28% |
 
-*Exemplo calculado (base, R$ 1,00):* `0,35 × 1,00 ÷ (0,04 × 35) = 0,35 ÷ 1,40 = 25%`.
+*Exemplo calculado (base, R$ 1,00; refeito com contas novas a 45% do MAU, revisão de consistência: R26):* `0,45 × 1,00 ÷ (0,04 × 35) = 0,45 ÷ 1,40 ≈ 32%`.
 
 **Consequências para o desenho:**
 1. **Verificar só quem quer ficar.** É o principal motivo econômico para o prólogo sem conta do [12](12-onboarding.md): quem só está olhando não gera custo de verificação.
 2. **Negociar preço por volume** e combinar métodos (o módulo 13 escolhe), mirando R$ 0,40 ou menos por conta.
 3. **Acompanhar o "token etário"** estudado pelo Ministério da Justiça desde dez./2025: uma credencial que confirmaria a faixa de idade sem expor dados ([Contábeis, 3/12/2025](https://www.contabeis.com.br/noticias/74183/governo-estuda-criar-token-etario-digital/)). Especialistas também discutem a confirmação de idade por bancos, via Open Finance, sem produto disponível ([Let's Money, 18/3/2026](https://www.letsmoney.com.br/noticias/bancos-validar-idade-eca-digital-open-finance/)). Se uma solução pública e gratuita vingar, o peso cai perto de zero.
-4. **Reserva de lançamento:** no primeiro mês, quase todo o MAU é conta nova. Com 60 mil verificados no mês de estreia, são R$ 60 mil de verificação antes de a receita amadurecer. O orçamento precisa reservar cerca de três meses de verificação de lançamento.
+4. **Reserva de lançamento:** no primeiro mês, quase todo o MAU é conta nova. Com ~80 mil verificados no mês de estreia (4.000 por dia nos 14 primeiros dias e 1.500 por dia depois, [08](08-simulacao.md), seção 2), são ~R$ 80 mil de verificação antes de a receita amadurecer (revisão de consistência: R26). O orçamento precisa reservar cerca de três meses de verificação de lançamento.
 
 ### 8.6 Ponto de equilíbrio e sensibilidade (cenário base)
 
-**Para uma equipe de 8 pessoas** (R$ 112 mil por mês), com o MAU do base e os demais custos do base (R$ 72.833, incluindo a verificação), a receita líquida precisa ser de R$ 184.833, e a bruta, de ~R$ 221 mil. Isso dá **R$ 1,90 por MAU por mês**: por exemplo, 5% de conversão com ARPPU de R$ 38, ou 4% com R$ 47.
+**Para uma equipe de 8 pessoas** (R$ 112 mil por mês), com o MAU do base e os demais custos do base (R$ 84.500, incluindo a verificação), a receita líquida precisa ser de R$ 196.500, e a bruta, de ~R$ 235 mil. Isso dá **~R$ 2,00 por MAU por mês**: por exemplo, 5% de conversão com ARPPU de R$ 40, ou 4% com R$ 50 (revisão de consistência: R26).
 
 **Uma premissa por vez** (o resto igual ao base):
 
 | Premissa alterada | Sobra para a equipe | Pessoas |
 |---|---|---|
-| Base | R$ 63.550 | ~4,5 |
-| Conversão 3% / 5% | R$ 29.455 / R$ 97.646 | ~2 / ~7 |
-| ARPPU R$ 25 / R$ 45 | R$ 24.584 / R$ 102.517 | ~2 / ~7 |
-| Verificação R$ 0,40 / R$ 1,68 | R$ 88.050 / R$ 35.783 | ~6 / ~2,5 |
-| Contas novas 25% / 45% do MAU | R$ 75.216 / R$ 51.883 | ~5,5 / ~3,5 |
-| DAU por simultâneo 6 / 15 | R$ 25.330 / R$ 111.325 | ~2 / ~8 |
+| Base (contas novas a 45% do MAU; revisão de consistência: R26) | R$ 51.883 | ~3,5 |
+| Conversão 3% / 5% | R$ 17.788 / R$ 85.979 | ~1 / ~6 |
+| ARPPU R$ 25 / R$ 45 | R$ 12.917 / R$ 90.850 | ~1 / ~6,5 |
+| Verificação R$ 0,40 / R$ 1,68 | R$ 83.383 / R$ 16.183 | ~6 / ~1 |
+| Contas novas 35% / 55% do MAU | R$ 63.550 / R$ 40.216 | ~4,5 / ~3 |
+| DAU por simultâneo 6 / 15 | R$ 18.330 / R$ 93.825 | ~1,3 / ~6,7 |
 
 [H] Os números que mais mexem no resultado são o DAU por simultâneo (que só se mede com jogadores reais), a conversão e o ARPPU. O preço da verificação vem logo atrás. A sensibilidade reforça a recomendação do [06](../01-pesquisa/06-monetizacao-retencao.md) (§4.4): medir o próprio funil desde o alfa, por coorte, porque nenhum benchmark público mostra a cauda que paga um RPG.
 
@@ -599,7 +601,8 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 |---|---|---|---|---|
 | % do MAU que doa no mês | 2% | 4% | 6% | 1% a 8% |
 | ARPPU mensal (= Coins doados por doador) | R$ 25 | R$ 35 | R$ 45 | R$ 20 a R$ 60 |
-| Paridade | 1 Coin = R$ 1,00 (a reconciliar com o 07, que usa ~R$ 0,10 por Coin) | igual | igual | — |
+| Paridade | 1 Coin = R$ 1,00, inteiro (revisão de consistência: R17) | igual | igual | — |
+| Contas novas verificadas por dia | ~960 | ~1.750 | ~2.570 | 45% do MAU por mês, ~5% do DAU por dia no base (~1.500 por dia sustentam ~30 mil ativos com a retenção do 12; revisão de consistência: R26) |
 | Preço de 30 dias de conveniência | 20 Coins | 20 | 20 | 15 a 25 |
 | **Coins doados por mês** | **32.000** | **163.333** | **462.857** | — |
 | Destino dos Coins doados (conveniência / Câmbio e Troca / loja / Bazar de Personagens / guardados) | 34 / 30 / 27 / 4 / 5% | igual | igual | Câmbio e Troca de 15% a 50% |
@@ -622,7 +625,8 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 
 **O que a economia precisa garantir para a monetização funcionar [H]:**
 - O preço dos Coins em ouro precisa ficar alcançável para o não pagante (meta do [05d](../01-pesquisa/05d-rmt-recomendacao.md): de 30% a 65% do premium obtido com ouro). Se o ouro inflar, a rota grátis fecha (as gemas do GW2, [F07](../01-pesquisa/fichas/F07-guild-wars-2.md)).
-- Limites de Coins por conta no Câmbio (o [05d](../01-pesquisa/05d-rmt-recomendacao.md) sugere simular tetos semanais de venda e mensais de compra) **a reconciliar com o módulo 07**, respeitando a decisão de transferência livre. Com os Coins divisíveis, os limites passam a ser em quantidade de Coins, não em unidades de token.
+- Limites de Coins por conta no Câmbio (o [05d](../01-pesquisa/05d-rmt-recomendacao.md) sugere simular tetos semanais de venda e mensais de compra): o 07 fixou a compra máxima de 200 Coins por conta a cada 7 dias e ordens de 1 a 200 Coins, sem limite na Troca, respeitando a decisão de transferência livre (revisão de consistência: R17).
+- A retenção dos doadores precisa ser medida no alfa: se quem doa ficar muito mais que a média, a oferta de Coins dobra e o Coin cai à metade ([08](08-simulacao.md), seção 7.6).
 - O Baú não pode derrubar o preço da decoração feita pelos ofícios (seção 5.8).
 
 ## 10. A carta pública de monetização
@@ -696,7 +700,7 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 
 1. **[proposta de mudança na bíblia] Glossário:** incluir **Passe da Era** (o passe da temporada, um por Era, sem expirar, pago em Coins) e **feito** (unidade de progresso do Passe da Era; não é moeda). O nome "feito" evita colisão com **Marcos**, a moeda da Fronteira.
 2. **[proposta de mudança na bíblia] Regra do lacre** como complemento do piso P3 para bens que não se desgastam: cosmético negociável (do Baú ou feito por jogadores) circula lacrado e fica preso à conta quando aplicado. A reconciliar com os módulos 05 e 07.
-3. **[proposta de mudança na bíblia] Números-âncora, §6.7:** registrar, no lugar da referência de trabalho do módulo 07 (1 Coin ≈ R$ 0,10; ~200 Coins por 30 dias): 1 Coin = R$ 1,00 na doação, sem bônus (a reconciliar com o 07, que usa ~R$ 0,10 por Coin); conveniência a 20 Coins por 30 dias; Baú a 5 Coins; Passe da Era a 20 Coins; teto de doação padrão de R$ 250 por mês.
+3. **[proposta de mudança na bíblia] Números-âncora, §6.7:** registrar, no lugar da referência de trabalho do módulo 07 (1 Coin ≈ R$ 0,10; ~200 Coins por 30 dias): 1 Coin = R$ 1,00 na doação, sem bônus; conveniência a 20 Coins por 30 dias; Baú a 5 Coins; Passe da Era a 20 Coins; teto de doação padrão de R$ 250 por mês. **Paridade e preços adotados na bíblia** (revisão de consistência: R17); o teto de doação segue a reconciliar com o 07, que usa R$ 300.
 
 ## Conflitos e pontos a reconciliar
 
@@ -708,7 +712,7 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 | Resposta à contestação | O [05d](../01-pesquisa/05d-rmt-recomendacao.md) (§5.4) propunha revogar só o token contestado, sem bloquear a conta inteira; o Gabriel decidiu suspender a conta até regularizar | Segue a decisão; desenho com regularização imediata, nada apagado e discrição (seção 7.4) |
 | Passe incluso na assinatura | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 5 | Separado (decisão 5) |
 | Cosmético da loja preso × Baú negociável | [06](../01-pesquisa/06-monetizacao-retencao.md), princípio 7 × decisão do Gabriel | Loja presa; Baú lacrado e negociável; preso ao aplicar |
-| Limites de Coins no Câmbio por conta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.3 × transferência livre | A reconciliar com o módulo 07 |
+| Limites de Coins no Câmbio por conta | [05d](../01-pesquisa/05d-rmt-recomendacao.md), §5.3 × transferência livre | Reconciliado: o 07 limita só a compra no Câmbio (200 Coins por conta a cada 7 dias); a Troca segue livre (revisão de consistência: R17) |
 | Verificação de idade antes de jogar | Bíblia: jogo inteiro 18+ | O [12](12-onboarding.md) propõe um prólogo sem conta antes da verificação, para decisão do diretor |
 | Lugar do Baú fechado no mercado (Bolsa?) | Módulo 07 | A reconciliar |
 
@@ -718,14 +722,14 @@ O 1% que mais doa responde por ~11% da receita (`4,00 ÷ 34,80`), e os 8% de cim
 |---|---|---|
 | **O Baú é lido como jogo de azar** | Pagamento, sorte e prêmio negociável com RMT aberto: o triângulo da LCP, art. 50, e da tese de Nova York contra a Valve ([05b](../01-pesquisa/05b-rmt-legal-brasil.md), §3) | Venda direta de todo item, piso igual ao preço, teto de compra e de abertura, chances exatas, sem apresentação de cassino. Interruptor para desligar o Baú por país. Risco assumido pelo Gabriel; **validar com advogado** antes do lançamento |
 | **Gateway ou loja recusa o jogo por causa do Baú** | Provedores restringem caixa paga com prêmio de valor ([05c](../01-pesquisa/05c-rmt-legal-global-pagamentos.md)) | Aprovação do modelo por escrito com dois provedores (R9 do [05d](../01-pesquisa/05d-rmt-recomendacao.md)); versão de loja de apps sem Baú e sem Câmbio |
-| **Os Coins viram moeda paralela** | Divisíveis e transferíveis, eles passam a pagar coisas entre jogadores fora dos balcões, ou a circular por Pix no RMT informal, e se aproximam de "arranjo de pagamento" ou "ativo virtual" (Lei 14.478), luz amarela no [05d](../01-pesquisa/05d-rmt-recomendacao.md) (candidato b) | O Câmbio como canal principal, a taxa em ouro na Troca (3% na bíblia, 12% para Coins na proposta do 07), limites por conta (módulo 07), detecção por grafo (módulo 13); **validar com advogado** |
+| **Os Coins viram moeda paralela** | Divisíveis e transferíveis, eles passam a pagar coisas entre jogadores fora dos balcões, ou a circular por Pix no RMT informal, e se aproximam de "arranjo de pagamento" ou "ativo virtual" (Lei 14.478), luz amarela no [05d](../01-pesquisa/05d-rmt-recomendacao.md) (candidato b) | O Câmbio como canal principal, a taxa em ouro de 12% sobre Coins e Baú lacrado em qualquer canal, inclusive na Troca (bíblia, §6.6; revisão de consistência: R19), limites por conta (módulo 07), detecção por grafo (módulo 13); **validar com advogado** |
 | **A suspensão por contestação é lida como abusiva** | Bloquear a conta de quem contestou cobranças fez parte do acordo de US$ 245 milhões da Epic com a FTC ([06](../01-pesquisa/06-monetizacao-retencao.md), §2.1); no Brasil, pode esbarrar no CDC (arts. 42 e 51) | Aviso claro antes de toda doação e na carta; nada é apagado; regularização imediata; suspensão discreta; atendimento humano; **validar com advogado** |
 | **Sem reembolso, mais gente contesta no banco** | O jogador arrependido, sem caminho no estúdio, vai direto ao banco; a taxa de disputas sobe perto do limite das bandeiras (1,5%) | Proteção antes da doação (seção 7.2); disjuntor; medir a taxa de contestação por meio de pagamento todo mês |
 | **A conveniência vale pouco** | Sem bônus de XP, pouca gente gasta Coins em conveniência; os Coins viram só "ouro comprado"; o preço deles em ouro cai, e o doador recebe menos ouro por real | Cenário de estresse 3 (seção 9); reforçar com mais cosmético e mais vida social, nunca com resultado; medir a parcela de gasto em conveniência todo mês |
 | **A conveniência escorrega para resultado** | Pressão para incluir "só um pouquinho" de offline, de fila ou de taxa menor | Teste das quatro perguntas por alguém de fora do time de receita; a carta pública lista o que nunca se vende |
 | **P2W de capital pelo Câmbio** | O doador alto vende Coins e compra o mercado ([C01](../01-pesquisa/fichas/C01-milky-way-idle.md)) | Teto de doação; sem bônus por volume; limites por conta no Câmbio (módulo 07); publicar a diferença de patrimônio entre quem doa e quem não doa |
 | **Cartão roubado vira Pix pelo RMT informal** | Fraudador doa com cartão de terceiro, transfere os Coins e os vende por Pix fora do jogo antes do estorno | Carência de transferência por meio de pagamento (S2, módulo 13); suspensão da conta contestante; congelamento rastreado no livro-razão; disjuntor |
-| **A verificação de idade inviabiliza a conta** | A R$ 1,00 por conta nova, consome 25% da receita no base e 70% no pessimista (seção 8.5) | Prólogo sem conta antes da verificação ([12](12-onboarding.md)); negociação por volume; métodos combinados (módulo 13); acompanhar o token etário público; reserva de lançamento |
+| **A verificação de idade inviabiliza a conta** | A R$ 1,00 por conta nova, consome 32% da receita no base e 90% no pessimista (seção 8.5; revisão de consistência: R26) | Prólogo sem conta antes da verificação ([12](12-onboarding.md)); negociação por volume; métodos combinados (módulo 13); acompanhar o token etário público; reserva de lançamento |
 | **O teto empurra para o mercado cinza** | Quem quer gastar mais compra ouro ou Coins por Pix de outros jogadores | Medir o preço do nosso ouro no mercado cinza; canal oficial mais seguro; teto ampliado por pedido |
 | **O pessimista acontece** | 2 mil simultâneos, 2% de conversão e ARPPU de R$ 25 não pagam nem a verificação | Decidir, antes de construir, qual equipe mínima o Gabriel banca sem receita; medir no alfa o DAU por simultâneo e a conversão; plano B dentro da carta: mais cosmético, expansões de conteúdo cosmético, versão Steam |
 | **Pix Automático esquecido** | O jogador doa meses sem jogar, e sem reembolso | Aviso 3 dias antes de cada cobrança, cancelamento com um toque, pausa; renovação da conveniência desligada por padrão |

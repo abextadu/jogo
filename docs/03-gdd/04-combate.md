@@ -294,7 +294,7 @@ Chance de dádiva: 10% por purificação de corrompido comum; **garantida na pri
 O Cavaleiro tira menos por hora, mas gasta cerca de 40% menos poções (8.1). O valor líquido por hora de cada vocação tem de ficar dentro de ±10% (meta para o módulo 08).
 
 **Regras gerais dos drops** [H]:
-- **O combate não solta ouro.** O ouro entra pela venda de bens básicos ao NPC e pelas encomendas, como o [07-economia](07-economia.md) já decidiu ("o combate idle não solta ouro"). O ouro de monstro é a torneira clássica que cresce com horas e com contas (lei 6; [F] o SimpleMMO cortou o ouro dos chefes mundiais em set/2026, numa série de drenos, segundo [03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3). **[conflito a reconciliar]** O 05 (seção 3, regra-mãe) e o 06 (seção 1) ainda listam ouro entre os drops de combate.
+- **O combate não solta ouro.** O ouro entra pela venda de bens básicos ao NPC e pelas encomendas, como o [07-economia](07-economia.md) já decidiu ("o combate idle não solta ouro"). O ouro de monstro é a torneira clássica que cresce com horas e com contas (lei 6; [F] o SimpleMMO cortou o ouro dos chefes mundiais em set/2026, numa série de drenos, segundo [03-alem-do-idle](../01-pesquisa/03-alem-do-idle.md), seção 3). Reconciliado: o 05 (seção 3, regra-mãe) e o 06 (seção 1) tiraram o ouro dos drops de combate (revisão de consistência: R2).
 - **Teto de emissão:** o que passar do teto negociável diário da conta fica preso à conta (o próprio jogador usa) ou vai para as obras como Mérito ([00-biblia](00-biblia.md), 6.6).
 - **Todas as tabelas de drop são públicas** (P6 e insight 2 da [síntese](../01-pesquisa/00-sintese.md)).
 - **Achados** têm grau (comum, raro, único): relíquias dos reinos de outrora (para obras e coleções), **moldes** (receitas especiais para os ofícios), mapas, minérios e madeiras raros. Os únicos são presos à conta.
@@ -308,7 +308,7 @@ O Cavaleiro tira menos por hora, mas gasta cerca de 40% menos poções (8.1). O 
 
 | Consumível | Por hora de combate [H] |
 |---|---|
-| **Refeição** | 1 porção por combatente (o personagem e cada ajudante). [conflito a reconciliar: o 06 conta 4 refeições por hora] |
+| **Refeição** | 1 porção por combatente (o personagem e cada ajudante). Reconciliado: o 06 foi alinhado (revisão de consistência: R1). |
 | **Poção de cura** | ~1 na margem +1 · **~3 na margem 0** · ~8 na margem −1 (com risco de derrota). Sem refeição, × 2 |
 | Ajuste por vocação | Cavaleiro × 0,6 · Druida × 0,5 · Caçador × 1,0 · Mago × 1,1 · Ladino × 1,2 |
 | Com Druida no grupo | −30% para todos (−50% com o marco *Botica de campo*) |

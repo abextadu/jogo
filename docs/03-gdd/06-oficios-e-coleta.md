@@ -9,7 +9,7 @@
 - **A fila prepara, o ativo acaba.** O ausente produz volume (Comum e Bom) na fila. Quando volta, o mestre faz sessões de 1 a 3 minutos, sem cronômetro e feitas de decisões com risco calculado: a **obra-prima** (qualidade da peça), a obra-prima de transformação (insumo nobre), o lote fino (consumíveis) e o **Faro** (a sessão ativa de quem coleta). Todas gastam **Inspiração**, que acumula 1 por hora, online ou offline, até o teto de offline da conta.
 - **Mercado pela natureza do bem:** o que é fungível vai à **Bolsa** (brutos, insumos, consumíveis, kits, reagentes e peças Comuns novas); o que tem estado próprio vai à **Feira** (qualidade, desgaste, acabamento); o que é contado vai ao **Leilão** (Únicos, lendários, relíquias).
 - **Oficinas NPC de reforço** vendem insumos, kits, consumíveis básicos e peças de oficina a **2× o valor de referência**, com limite diário, tudo preso à conta. Ninguém trava, e nenhum cartel passa de cerca de 2 a 3× o valor de referência.
-- **Equilíbrio de demanda verificado:** cada ofício fica entre 5,6% e 13,1% das horas exigidas pelo consumo (a meta é 1/12, ou 8,3%). Uma hora de combate consome de 12 minutos de ofício (T1) a 49 minutos (T6), e as Obras compensam os ofícios abaixo da média.
+- **Equilíbrio de demanda verificado** com 4 refeições por hora de combate: cada ofício ficava entre 5,6% e 13,1% das horas exigidas pelo consumo (a meta é 1/12, ou 8,3%). Com 1 refeição por combatente por hora (revisão de consistência: R1), uma hora de combate consome de ~11 minutos de ofício (T1) a ~42 minutos (T6), e a Culinária e a Pesca caem abaixo da faixa (seção 9.2). As Obras compensam os ofícios abaixo da média.
 - **Teto de aprendiz 30:** o aprendiz faz T1 e T2 de tudo, sempre Comum. O T3 exige nível 35, e a interdependência fica obrigatória por volta da segunda semana.
 
 ## 1. Os 12 ofícios num quadro
@@ -29,7 +29,7 @@
 | Criação | **Alquimia** | Poções, óleo de arma, pó arcano, unguento, corante, reagentes, breu de cerco | Alambique (Ferraria) | Todas as vocações; todo mestre que faz obra-prima |
 | Criação | **Culinária** | Refeições, ração de viagem, banquete de cerco | Pilão (Carpintaria) | Todas as vocações; Obras (mutirão) |
 
-**O combate também coleta:** as vocações soltam **pele** (Curtume), **carne de caça** (Culinária), **cinza de névoa** (Alquimia), **pele rara** e ouro. A bíblia liga o combate ao Curtume (seção 6.3), e este módulo estende essa ligação à Culinária e à Alquimia.
+**O combate também coleta:** as vocações soltam **pele** (Curtume), **carne de caça** (Culinária), **cinza de névoa** (Alquimia) e **pele rara**. **O combate não solta ouro** ([04](04-combate.md); [07](07-economia.md), seção 2.2; revisão de consistência: R2). A bíblia liga o combate ao Curtume (seção 6.3), e este módulo estende essa ligação à Culinária e à Alquimia.
 
 ## 2. Regras comuns a todos os ofícios
 
@@ -37,26 +37,27 @@
 
 - Nível de ofício de 1 a 100 (bíblia, seção 6.2). **Nível exigido por tier:** T1 = 1, T2 = 15, T3 = 35, T4 = 55, T5 = 75, T6 = 90. Dentro do tier, peças pequenas pedem +2 e armas e peças de corpo pedem +5 (tabelas da seção 11).
 - **Dois ofícios mestres** vão até 100 e à maestria. **Os outros dez param em 30** (o teto de aprendiz, seção 10).
-- **O que só o mestre faz:** chance de Bom na fila, obra-prima, Faro, lote fino e lendário. Tudo isso abre no nível 10 do ofício mestre.
+- **Habilidades do ofício** (obra-prima, obra-prima de transformação, lote fino e Faro): **abrem no nível 10 do ofício, para mestres e aprendizes** (revisão de consistência: R11). O teto de aprendiz limita só o tier (T1 e T2) e a qualidade (Comum): o aprendiz abre as sessões, mas o que passa do Comum (a chance de Bom na fila, a peça Fina ou melhor, o lote Fino) fica com o mestre. O lendário pede T4 a T6 e é só de mestre.
 
 ### 2.2 Velocidade
 
 ```
 tempo = tempo_base(T) ÷ V
 tempo_base(T) = tempo_T1 × f(T)      f = 1,0 · 1,4 · 1,8 · 2,3 · 2,9 · 3,75   (T1 a T6)
-V = (1 + 0,01 × mín(30; nível − nível da receita)) × (1 + E)
-E = 0,10 × mín(2; tier da ferramenta − tier da receita) + qualidade da ferramenta (0 · 0,04 · 0,08 · 0,12)
+V = dom(n) = 1 + 0,01 × mín(10; nível − nível de desbloqueio do tier mais alto disponível)
 ```
+
+**A ferramenta não acelera** (revisão de consistência: R16): ela é portão de tier, tem durabilidade e dá Faro (chance de matéria rara) ou Esmero (chance de Bom), mas não mexe no tempo. O domínio é o do [02](02-progressao.md), seção 2.2, com teto de +10%. Na simulação, com a ferramenta acelerando a fila até 1,72 vez o nominal, o hardcore chegava ao 100 no D85 e o IPC ia a +83% ao ano ([08](08-simulacao.md), decisão 1).
 
 - A coleta de T1 leva 8 s e chega a 30 s no T6, que é o limite da âncora da bíblia (3 a 30 s por unidade). A Colheita leva 6 s no T1 e 22,5 s no T6, porque alimenta três cadeias.
 - **Insumos sem tier** (pedra, casca, resina e carvão) levam o tempo do T1 em qualquer fase. Um iniciante coleta casca tão rápido quanto um veterano, e a casca serve ao couro do T6.
-- **Exemplo:** mineiro nível 40, minério de ferro (receita de nível 15), picareta de aço (T3) Boa. V = (1 + 0,25) × (1 + 0,10 + 0,04) = 1,25 × 1,14 = 1,425. Tempo = 11,2 s ÷ 1,425 = 7,9 s, ou 458 minérios por hora. O V máximo, sem maestria, é 1,3 × 1,32 = 1,72.
+- **Exemplo** (refeito sem a aceleração da ferramenta; revisão de consistência: R16): mineiro nível 40, minério de ferro (T2), picareta de aço (T3) Boa. O tier mais alto disponível é o T3 (aberto no 35), então V = 1 + 0,01 × 5 = 1,05. Tempo = 11,2 s ÷ 1,05 = 10,7 s, ou 337 minérios por hora. A picareta Boa não acelera: dá acesso até o T3, dura mais e acha mais matéria rara. O V máximo é 1,10.
 - **Ferramenta é portão:** sem ferramenta do tier (ou de tier maior), não se trabalha naquele tier ([05](05-itens.md), seção 4.5).
 - **[proposta de mudança na bíblia]** A âncora de 3 a 30 s vale para a **coleta**. A transformação e os consumíveis vão de 6 s a 3 min por unidade (o lingote de aldarita leva 94 s). A criação de equipamento é uma **ação longa**, de 5 a 115 minutos por peça (a espada de cobre leva 25 minutos; a couraça de aldarita, 113). Motivo: a peça concentra o trabalho de dezenas de unidades, e só assim a Ferraria e a Alfaiataria têm uma fatia justa das horas (seção 9).
 
 ### 2.3 Fila, teto de emissão e vínculo
 
-A fila produz itens negociáveis até o **teto de emissão** do dia, contado em **valor de referência** (VR, o trabalho embutido da seção 11.5). O que passa do teto nasce preso. Tudo feito com insumo preso nasce preso. Regras completas no [05](05-itens.md), seção 9; números no [07](07-economia.md).
+**Nada nasce preso pela produção** (revisão de consistência: R18). O **teto de emissão** é um portão de saída: limita o valor criado pela própria conta que sai dela por dia (venda, Troca, venda a NPC), contado em **valor de referência fixo** (VR: o trabalho embutido da seção 11.5 vezes 2,0 ouro por minuto). Os insumos comprados dão crédito na mesma régua; os presos (da Oficina da Cidade ou do NPC) não dão crédito. O que passa do teto fica para uso próprio, Encomendas e Obras (que pagam em Mérito), ou sai nos dias seguintes. Regras completas no [07](07-economia.md), seção 3; aplicação aos itens no [05](05-itens.md), seção 9.
 
 ### 2.4 Inspiração: o recurso das sessões ativas
 
@@ -87,7 +88,7 @@ A fila produz itens negociáveis até o **teto de emissão** do dia, contado em 
 | Ferraria | Ferramentas de 8 ofícios e o reparo de todo metal | Obra-prima de peças | Peças longas (25 minutos a espada de cobre); a obra-prima não acelera, porque o ativo ganha qualidade, e não volume |
 | Alfaiataria | Quatro das cinco vocações vestem Alfaiataria; reparo de couro e tecido | Obra-prima de peças | A maior fatia entre as criações (10%) |
 | Alquimia | Os reagentes são a moeda da obra-prima, consumida no uso como as orbs do Path of Exile ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)); consumíveis de três vocações | Lote fino | Um reagente obrigatório viraria imposto; ele é sempre opcional |
-| Culinária | Todo combate come: 4 refeições por hora | Lote fino | Refeição de pouca margem; o lote fino e o banquete dão a margem |
+| Culinária | Todo combate come: 1 refeição por combatente por hora (o personagem e cada ajudante; revisão de consistência: R1) | Lote fino | Refeição de pouca margem; o lote fino e o banquete dão a margem. Com 1 refeição por hora, a demanda do combate cai a cerca de um quarto (seção 9.2) |
 
 ## 4. Cadeias de produção
 
@@ -314,10 +315,10 @@ Edda põe 2 pontos em Bloqueio (de 7,5% para 9,5%) e 2 em têmpera (+10% de dura
 
 | Sessão | Quem faz | Inspiração | O que a fila prepara | Etapas | Resultado |
 |---|---|---|---|---|---|
-| **Obra-prima de criação** | Mestres de Ferraria, Alfaiataria e Carpintaria (peças) | 3, 4 ou 5, conforme o tier | Peça em bruto | 4 | Qualidade da peça, de Comum a Único |
-| **Obra-prima de transformação** | Mestres de Fundição, Carpintaria (tábua), Curtume e Tecelagem | 2 | Fornada de 10 insumos e 1 matéria rara | 3 | 40 pontos: 1 insumo nobre; 70: 2; 100: 3 (convertidos da fornada) |
-| **Lote fino** | Mestres de Alquimia e Culinária | 2 | Lote de 10 (T1–T2), 8 (T3–T4) ou 6 (T5–T6) consumíveis | 2 e o "ponto" | A partir de 50 pontos, o lote inteiro sai Fino (+25% de efeito). Erva rara ou peixe raro dá +20 pontos |
-| **Faro** | Mestres de Mineração, Lenhadoria, Pesca e Colheita | 2 | Nada: é feito na jazida do tier que a fila está coletando | 3 golpes | Matéria rara, gemas e um punhado de brutos |
+| **Obra-prima de criação** | Ferraria, Alfaiataria e Carpintaria (peças), a partir do nível 10 do ofício; o aprendiz fica no Comum (R11) | 3, 4 ou 5, conforme o tier | Peça em bruto | 4 | Qualidade da peça, de Comum a Único |
+| **Obra-prima de transformação** | Fundição, Carpintaria (tábua), Curtume e Tecelagem, a partir do nível 10 do ofício (R11) | 2 | Fornada de 10 insumos e 1 matéria rara | 3 | 40 pontos: 1 insumo nobre; 70: 2; 100: 3 (convertidos da fornada) |
+| **Lote fino** | Alquimia e Culinária, a partir do nível 10 do ofício; o lote Fino é só de mestre, porque o aprendiz fica no Comum (R11) | 2 | Lote de 10 (T1–T2), 8 (T3–T4) ou 6 (T5–T6) consumíveis | 2 e o "ponto" | A partir de 50 pontos, o lote inteiro sai Fino (+25% de efeito). Erva rara ou peixe raro dá +20 pontos |
+| **Faro** | Mineração, Lenhadoria, Pesca e Colheita, a partir do nível 10 do ofício, para mestres e aprendizes (R11) | 2 | Nada: é feito na jazida do tier que a fila está coletando | 3 golpes | Matéria rara, gemas e um punhado de brutos |
 | **Lendário** | Mestre de criação com nível da receita + 10 | 10 | Peça em bruto de T4 a T6 | 5 | Lendário a partir de 120 pontos ([05](05-itens.md), seção 7.2) |
 
 **O Faro, a sessão de quem coleta.**
@@ -413,16 +414,18 @@ Edda põe 2 pontos em Bloqueio (de 7,5% para 9,5%) e 2 em têmpera (+10% de dura
 
 O modelo de conferência expande o consumo de uma hora de combate (desgaste de equipamento e reparos, consumíveis, e o desgaste das ferramentas de quem produziu tudo isso) até o bruto. Depois, soma as horas de cada ofício. A média é feita entre as cinco vocações em partes iguais. Nos tiers T5 e T6 as ligas foram aproximadas.
 
-| Tier | Minutos de ofício por hora de combate | Equipamento, ferramentas e kits | Consumíveis |
-|---|---|---|---|
-| T1 | 12,4 | 56% | 44% |
-| T2 | 17,2 | 55% | 45% |
-| T3 | 22,4 | 56% | 44% |
-| T4 | 29,4 | 57% | 43% |
-| T5 | 37,8 | 58% | 42% |
-| T6 | 49,0 | 58% | 42% |
+| Tier | Minutos de ofício por hora de combate (com 4 refeições) | Com 1 refeição (R1, estimativa) | Equipamento, ferramentas e kits (com 1 refeição) | Consumíveis (com 1 refeição) |
+|---|---|---|---|---|
+| T1 | 12,4 | ~10,6 | 65% | 35% |
+| T2 | 17,2 | ~14,5 | 65% | 35% |
+| T3 | 22,4 | ~19,1 | 66% | 34% |
+| T4 | 29,4 | ~24,9 | 67% | 33% |
+| T5 | 37,8 | ~32,4 | 68% | 32% |
+| T6 | 49,0 | ~41,5 | 68% | 32% |
 
-**Leitura.** Se o jogador médio divide a fila meio a meio entre combate e ofícios, o consumo do combate absorve de 20% (T1) a 82% (T6) do que os ofícios produzem. O resto vai para Obras, Encomendas, cercos, progresso e excedente preso. Um servidor jovem, concentrado em T1–T2, tem muito excedente. Isso combina com a narrativa (a cidade está sendo construída) e exige **Obras pesadas no início**. Num servidor maduro, o consumo de combate sustenta os ofícios sozinho. É o principal dado para o [07](07-economia.md) e o [08](08-simulacao.md).
+**Revisão de consistência (R1):** o modelo de conferência contava 4 refeições por hora de combate; a regra agora é **1 refeição por combatente por hora** (o personagem e cada ajudante, [04](04-combate.md)). A coluna nova tira 3 refeições pelo trabalho embutido da tabela 12.3 (0,6 min no T1 a 2,5 min no T6); cada ajudante em combate soma de volta 1 refeição. A simulação (08) usou 1 refeição e ~3 poções e ficou ~10% abaixo da coluna antiga.
+
+**Leitura.** Se o jogador médio divide a fila meio a meio entre combate e ofícios, o consumo do combate absorve de ~17% (T1) a ~69% (T6) do que os ofícios produzem (com 4 refeições, eram 20% e 82%). O resto vai para Obras, Encomendas, cercos, progresso e excedente guardado na conta (nada nasce preso; R18). Um servidor jovem, concentrado em T1–T2, tem muito excedente. Isso combina com a narrativa (a cidade está sendo construída) e exige **Obras pesadas no início**. Num servidor maduro, o consumo de combate sustenta os ofícios sozinho. É o principal dado para o [07](07-economia.md) e o [08](08-simulacao.md).
 
 ### 9.2 Participação de cada ofício nas horas exigidas
 
@@ -440,6 +443,8 @@ O modelo de conferência expande o consumo de uma hora de combate (desgaste de e
 | Carpintaria | 6,7% | 6,8% | 6,6% | 6,6% |
 | Lenhadoria | 6,6% | 6,1% | 7,1% | 8,2% |
 | Mineração | 5,6% | 5,7% | 7,5% | 7,7% |
+
+**Revisão de consistência (R1):** a tabela acima foi calculada com 4 refeições por hora. Com 1 refeição por combatente, a demanda de combate da Culinária cai para ~3,5% das horas e a da Pesca para ~2,5% (no T1, estimativa desta revisão), abaixo da tolerância; os outros ofícios sobem um pouco. As Obras, as festas, o banquete de cerco e a Fronteira passam a ser a demanda principal desses dois ofícios. **A recalcular pelo modelo de conferência.**
 
 Meta: 1/12 = 8,3%, com tolerância de 6% a 11% [H]. A Colheita fica acima porque serve a três cadeias (é aceitável: mais gente a escolhe). Mineração, Lenhadoria, Carpintaria e Fundição ficam abaixo no começo, e por isso **as Obras pedem principalmente pedra, tábuas, toras e lingotes** (seção 12.5).
 
@@ -464,7 +469,7 @@ Meta: ±15% em torno da média. O Cavaleiro paga mais pelo conjunto (metal pesad
 | Cinza de névoa | 2,7 | **3,5** | Mago ×1,5 (as outras vocações soltam um pouco menos, para a média se manter) |
 | Pele rara | — | 1 a cada 15 h | Ladino e Caçador ×2 |
 
-A folga de cerca de 30% atende Encomendas, Obras e as receitas alternativas. Também é por hora de combate que o consumo de **brutos** é medido (T1): 5,2 minérios, 3,5 toras (1,9 delas para carvão), 1,3 casca, 1,25 resina, 3,4 fibras, 7,6 ervas, 5,2 alimentos, 8 peixes e 2,2 escamas.
+A folga de cerca de 30% atende Encomendas, Obras e as receitas alternativas. Também é por hora de combate que o consumo de **brutos** é medido (T1): 5,2 minérios, 3,5 toras (1,9 delas para carvão), 1,3 casca, 1,25 resina, 3,4 fibras, 7,6 ervas, 5,2 alimentos, 8 peixes e 2,2 escamas. Esses números contam 4 refeições; com 1 refeição por combatente (R1), os peixes caem para ~2 e os alimentos para ~1,3.
 
 ### 9.5 Alavancas e regras de ajuste
 
@@ -483,8 +488,8 @@ A folga de cerca de 30% atende Encomendas, Obras e as receitas alternativas. Tam
 
 **Regras:**
 - Qualquer personagem treina **qualquer ofício até o nível 30**. Os **dois ofícios mestres** vão até 100 e à maestria.
-- O aprendiz **alcança T1 (nível 1) e T2 (nível 15)**, com 15 níveis de folga no T2 (velocidade +15%). **O T3 exige 35** e é só de mestre.
-- O aprendiz **só usa a fila, só faz Comum** e não faz obra-prima, Faro nem lote fino.
+- O aprendiz **alcança T1 (nível 1) e T2 (nível 15)**, com 15 níveis de folga no T2 (velocidade +10%, o teto do domínio; revisão de consistência: R16). **O T3 exige 35** e é só de mestre.
+- O aprendiz **só faz Comum** e só T1–T2. As sessões ativas abrem para ele no nível 10 do ofício, como para o mestre, mas o resultado fica no Comum; na prática, o que ele aproveita é o Faro (matéria rara do tier dele) (revisão de consistência: R11).
 - Insumos sem tier (pedra, casca, resina e carvão) estão ao alcance de qualquer aprendiz em qualquer fase. Ninguém fica sem trabalho útil.
 
 **Por que 30** [H]:
@@ -612,7 +617,7 @@ Convenções: nomes no formato "T1 / T2"; **as quantidades são as mesmas nos do
 
 | Consumo | Todas as vocações | Cavaleiro | Caçador | Mago | Druida | Ladino |
 |---|---|---|---|---|---|---|
-| Refeição | 4 | | | | | |
+| Refeição | 1 por combatente (o personagem e cada ajudante; revisão de consistência: R1) | | | | | |
 | Poção de cura | 2 | | | | +1 (3 no total) | |
 | Consumível de vocação | — | 1,5 óleo de arma | 45 flechas | 6 pós arcanos | 4 unguentos | 3 rações de viagem |
 | Equipamento | 10 pd por hora em cada peça usada ([05](05-itens.md), seção 6) | | | | | |
@@ -622,7 +627,7 @@ Masmorra e Fronteira multiplicam o desgaste por 1,5 e o cerco, por 2. O consumo 
 
 ### 11.5 Valor de referência: trabalho embutido (minutos de ofício)
 
-Base do VR ([05](05-itens.md), seção 9) e do preço da Oficina da Cidade. Soma o tempo de fila de toda a cadeia, sem bônus. **Não inclui** os drops de combate (pele, carne, cinza) nem os subprodutos (escama, gema), que o [07](07-economia.md) precisa valorar à parte. Sugestão: o valor de uma hora de combate dividido pelos drops dela.
+Base do VR ([05](05-itens.md), seção 9) e do preço da Oficina da Cidade: **VR = minutos desta tabela × 2,0 ouro por minuto**, fixo desde o lançamento (revisão de consistência: R18 e R24). Soma o tempo de fila de toda a cadeia, sem bônus. **Não inclui** os drops de combate (pele, carne, cinza) nem os subprodutos (escama, gema). A simulação valorou cada drop em ~0,13 min de VR por unidade, o tempo de uma coleta T1 ([08](08-simulacao.md), seção 2).
 
 | Item | T1 | T2 | Item | T1 | T2 |
 |---|---|---|---|---|---|
@@ -722,22 +727,22 @@ Sem tier de poder: o material escolhido muda só o visual (uma mesa de pinho ou 
 
 | Módulo | O que este módulo entrega | O que precisa receber |
 |---|---|---|
-| [07 — Economia](07-economia.md) | Produção por hora de cada ofício (seção 11); VR por item (11.5); classes de balcão (seção 7); Oficina da Cidade a 2× VR (seção 8); bens básicos para venda a NPC; índice de ofício (9.5) | Ouro por minuto de referência; valor dos drops de combate; teto de emissão em VR; taxa da carta de ofício |
+| [07 — Economia](07-economia.md) | Produção por hora de cada ofício (seção 11); VR por item (11.5); classes de balcão (seção 7); Oficina da Cidade a 2× VR (seção 8); bens básicos para venda a NPC; índice de ofício (9.5) | Recebido: 2,0 ouro por minuto de referência (R24); drops a ~0,13 min de VR por unidade (08); teto em VR fixo com portão de saída (R18). Falta: taxa da carta de ofício |
 | [08 — Simulação](08-simulacao.md) | Receitas T1–T2 completas e estrutura T3–T6; f(T); consumo por hora de combate por vocação (11.4); minutos de ofício por hora de combate por tier (9.1); participação dos ofícios (9.2); Inspiração (+1/h, teto igual ao offline, custos); distribuição de qualidades da obra-prima (6.3); Faro: 1 matéria rara por sessão | Distribuição de tempo dos jogadores entre combate e ofícios, por perfil (casual, hardcore, pagante, bot) |
 | [02 — Progressão](02-progressao.md) | Níveis por tier; aprendiz até 30; regras de troca de mestre; ganchos de maestria na obra-prima | Curva de XP por ofício; tempo até o nível 30 (estimativa nossa: 8 a 15 h de fila por ofício) |
 | [03 — Personagem](03-personagem.md) | Consumível de cada vocação; quem solta mais de cada drop | Atributos que usam Foco, Firmeza e Esquiva |
 | [04 — Combate](04-combate.md) | Drops necessários por hora (9.4); defesas de cerco (12.5); fauna das peles por tier | Consumo real por atividade; bestiário final |
 | [09 — Social](09-social.md) | O que as Obras e Encomendas devem pedir (9.2 e 12.5); Bancada das Lendas | Quantidades das Obras; regras das Encomendas entre mestres |
-| [12 — Onboarding](12-onboarding.md) | Ordem de desbloqueio: fila (D1), Faro e obra-prima no nível 10 do mestre, insumos nobres a partir do T3 | Ritmo dos primeiros dias |
+| [12 — Onboarding](12-onboarding.md) | Ordem de desbloqueio: fila (D1), Faro e obra-prima no nível 10 do ofício (R11), insumos nobres a partir do T3 | Ritmo dos primeiros dias |
 | [13 — Anti-abuso](13-anti-abuso.md) | A Inspiração como teto por conta das sessões ativas; teto de emissão; Oficina presa | Detecção de bots na coleta |
 | [14 — Arte e UI](14-arte-e-ui.md) | Telas da obra-prima e do Faro (sem cronômetro, com pausa, pensadas para o celular); ícones em pixel art por material e tier | Wireframes das sessões |
 
 ## 14. Propostas de mudança na bíblia
 
-1. **[proposta de mudança na bíblia] Tempos por tipo de ação:** a âncora de 3 a 30 s vale para a **coleta**. A transformação e os consumíveis vão de 6 s a 3 min por unidade, e a **criação de peças é ação longa, de 5 a 115 min**. Motivo: dar a cada camada uma fatia justa das horas (seção 9).
-2. **[proposta de mudança na bíblia] Inspiração** como recurso das sessões ativas: +1 por hora, teto igual ao teto de offline da conta, nunca à venda.
-3. **[proposta de mudança na bíblia] Faro** como nome da sessão ativa das quatro coletas.
-4. **[proposta de mudança na bíblia] Níveis por tier:** T1 = 1, T2 = 15, T3 = 35, T4 = 55, T5 = 75, T6 = 90. Com o teto de aprendiz em 30, o aprendiz alcança T1–T2.
+1. **[proposta de mudança na bíblia] Tempos por tipo de ação:** a âncora de 3 a 30 s vale para a **coleta**. A transformação e os consumíveis vão de 6 s a 3 min por unidade, e a **criação de peças é ação longa, de 5 a 115 min**. Motivo: dar a cada camada uma fatia justa das horas (seção 9). **Adotada** (revisão de consistência: R4), com a transformação registrada na bíblia como "até ~95 s por unidade".
+2. **[proposta de mudança na bíblia] Inspiração** como recurso das sessões ativas: +1 por hora, teto igual ao teto de offline da conta, nunca à venda. **Adotada** no anexo do glossário (R14).
+3. **[proposta de mudança na bíblia] Faro** como nome da sessão ativa das quatro coletas. **Adotada** no anexo do glossário (R14).
+4. **[proposta de mudança na bíblia] Níveis por tier:** T1 = 1, T2 = 15, T3 = 35, T4 = 55, T5 = 75, T6 = 90. Com o teto de aprendiz em 30, o aprendiz alcança T1–T2. **Adotada** (R5).
 5. **[proposta de mudança na bíblia] Bolsa também para peças Comuns novas** (igual ao [05](05-itens.md), seção 11).
 
 ## Como isso pode dar errado
@@ -746,13 +751,13 @@ Sem tier de poder: o material escolhido muda só o visual (uma mesa de pinho ou 
 |---|---|---|
 | **Gargalo de ofício** | Pouca gente escolhe Curtume, e todo couro trava (o risco nº 1 do conceito). | Oficina da Cidade a 2× VR; índice de ofício com Encomendas e Obras dirigidas; receitas alternativas na Culinária; insumos sem tier ao alcance de todos. |
 | **Cartel de ofício** | Os poucos mestres de Fundição T5 combinam preço. | Teto efetivo de 2× VR nos insumos e de cerca de 2,8× nas peças, pela Oficina; Leilão e Bolsa públicos; regra antimanipulação no 07. |
-| **O excedente de quem sobe de nível derruba os preços** | Milhares de aprendizes fazem T1–T2 para ganhar XP, e o preço vai a zero. | O aprendiz só faz Comum; Obras e Encomendas absorvem o excedente em troca de Mérito; a venda a NPC é decrescente; o teto de emissão prende o resto. |
+| **O excedente de quem sobe de nível derruba os preços** | Milhares de aprendizes fazem T1–T2 para ganhar XP, e o preço vai a zero. | O aprendiz só faz Comum; Obras e Encomendas absorvem o excedente em troca de Mérito; a venda a NPC é decrescente; o teto de emissão segura a saída do resto (portão; R18). |
 | **O consumo não absorve a produção** | Com 12 a 49 minutos de ofício por hora de combate, um servidor jovem produz demais (seção 9.1). | Obras pesadas no início; o teto de emissão em VR; alavancas de consumo e de vida útil para a simulação calibrar. |
 | **A obra-prima vira obrigação** | Masmorras calibradas para o Fino, ou o jogador sente que "perde" sem fazer sessões. | O 04 calibra pela peça Comum; a Inspiração acumula sem perda até o teto; a fila nunca para por falta de sessão. |
 | **A obra-prima vira planilha resolvida** | A comunidade calcula a política ótima de cada baralho. | É planejamento, não reflexo, e isso é bem-vindo. A faixa da Ousada mantém o risco, e baralhos e temperamentos novos chegam a cada Era, com aviso. |
 | **A obra-prima é lida como jogo de azar** | Acaso com insumo comprado com ouro, que vale Coins e reais. | Piso garantido (a peça nunca se perde); chances públicas; nada vendido pelo estúdio afeta a sessão. **Validar com advogado** (Lei 15.211/2025, art. 2º, IV). |
 | **Bots na coleta** | A fila de coleta é o terreno natural do bot ([04b](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). | Teto de emissão por conta; conta = adulto verificado (P8); o Faro e a obra-prima limitados pela Inspiração; detecção por fluxo de valor no 13. |
 | **Complexidade demais para o novato** | Doze ofícios, três camadas, insumos nobres e reagentes no primeiro dia. | Desbloqueio em etapas (12): só a fila no D1, sessões no nível 10, insumos nobres a partir do T3. A interface mostra "quem faz isto" em cada insumo. |
-| **Ferraria lenta demais** | Uma espada de 25 minutos frustra quem quer a primeira arma. | A Oficina e a Feira têm peças prontas; o kit inicial do onboarding vem com arma; a velocidade sobe até 72% com nível e ferramenta. |
+| **Ferraria lenta demais** | Uma espada de 25 minutos frustra quem quer a primeira arma. | A Oficina e a Feira têm peças prontas; o kit inicial do onboarding vem com arma; o domínio acelera até 10% (a ferramenta não acelera; R16). |
 | **Troca de mestre vira rodízio** | O jogador alterna mestres a cada 30 dias para ter "todos". | O ofício adormecido só é usado como aprendiz; a Inspiração e a maestria não se transferem; a simulação mede o uso. |
 | **O modelo de conferência erra** | Os números deste módulo saem de uma planilha, e não do comportamento real. | Todos os números são [H]; a simulação (08) e o alfa calibram; mudanças entre Eras, com aviso e dados (lei 21). |

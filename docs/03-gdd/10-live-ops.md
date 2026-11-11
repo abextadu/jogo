@@ -341,7 +341,7 @@ O jornal semanal dentro do jogo, montado pelo sistema e revisado pela equipe [H]
 | **Era 2** | Semanas 14 a 26 (junho a agosto) | **1ª Fronteira** (S2 a S12); Festival da Colheita na S3 e na S4; Torneio das Casas no fim da S4; **Noite dos Mortos na S13** (a última semana de agosto cai na S12, a semana do Grande Cerco, e pela regra 7 do §5.5 a festa anda para a S13, a semana de Colheita da Era, quando a criatura libertada na Era visita a Cidade); 2º Conselho na S5 | Primeiro ciclo completo de Fronteira; revisão do ritmo do mapa |
 | **Era 3** | Semanas 27 a 39 (setembro a novembro) | 2ª Fronteira; 3º Conselho na S1 e 4º na S9; **Noite da Névoa na S9**, junto com a Reviravolta | Avaliação das métricas de pós-pico das duas primeiras Fronteiras |
 | **Era 4** | Semanas 40 a 52 (dezembro a fevereiro) | 3ª Fronteira; Feira de Inverno da S4 à S6; Festa das Máscaras entre a S11 e a S13, ajustado para não cair na S12 (§5.5, regra 7); 5º Conselho na S5 | **Livro da Cidade**; anúncio da expansão anual |
-| **Aniversário** | Semana 53 (Era 5, S1) | Aniversário da Cidade na abertura da Era 5; 6º Conselho | Decisão sobre a 2ª Cidade (§8.2) |
+| **Aniversário** | Semana 53 (Era 5, S1) | Aniversário da Cidade na abertura da Era 5; 6º Conselho; **novos usos de Coins na loja para o 2º ano**, sempre conforto e cosmético, anunciados no Livro da Cidade da Era 4 (na simulação, o Coin cai devagar o 1º ano inteiro e precisa de demanda nova; [11](11-monetizacao.md), seção 2.4) (revisão de consistência: R27) | Decisão sobre a 2ª Cidade (§8.2) |
 
 ### 8.1 Equipe mínima de operação [H]
 

@@ -17,7 +17,7 @@
 | Princípio | Como os itens o cumprem |
 |---|---|
 | P1 — números em duas velocidades | Atributos de item ficam em escala humana (dano de 10 a 137). O exponencial fica no progresso pessoal (02). |
-| P2 — o negociável nasce de ação ativa ou de produção limitada | Teto de emissão contado em valor de referência; regra de vínculo (seção 9). |
+| P2 — o negociável nasce de ação ativa ou de produção limitada | Teto de emissão contado em valor de referência fixo, com portão de saída (seção 9; revisão de consistência: R18). |
 | P3 — tudo que se negocia se gasta | Durabilidade com fim certo em equipamentos e ferramentas; consumíveis consumidos; cosméticos consumidos ao aplicar; lendários também quebram. |
 | P7 — zona vermelha fora da loja | Reparo, kits, Inspiração e qualquer coisa que dê atributo nunca vão à loja nem ao Baú. |
 | P12 — o ausente nunca perde | Item parado não se desgasta; a peça zerada fica inoperante, e não quebra, enquanto tiver reparos; o reparo automático é grátis e configurável. |
@@ -89,7 +89,7 @@ O couro segue a mesma lógica: 1 casca por couro em T1–T2, 2 em T3–T4 e 3 em
 | Matéria rara, insumo nobre, reagente, Relíquia da Fronteira | Insumos especiais das sessões ativas e da Fronteira ([06](06-oficios-e-coleta.md), seção 6) | Bolsa (relíquia: Leilão) |
 | Peça de oficina | Comprada da oficina NPC de reforço, pior que a Comum | Não se negocia |
 
-**Regra-mãe:** os monstros soltam materiais (pele, carne, cinza de névoa, matéria rara de elite), ouro e Mérito. **Nunca equipamento pronto.** A reconciliar com o [04](04-combate.md).
+**Regra-mãe:** os monstros soltam materiais (pele, carne, cinza de névoa, matéria rara de elite) e Mérito. **Nunca ouro** ([04](04-combate.md); [07](07-economia.md), seção 2.2; revisão de consistência: R2) **e nunca equipamento pronto.**
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
@@ -160,7 +160,7 @@ O secundário é um percentual fixo por família, multiplicado pela qualidade e 
 ### 4.5 Ferramentas
 
 - **Portão de tier.** Só se coleta ou produz um tier com ferramenta daquele tier ou maior.
-- **Eficiência.** +10% de velocidade por tier acima da receita (máximo +20%), mais a qualidade: Comum +0%, Bom +4%, Fino +8%, Obra-prima +12%.
+- **A ferramenta não acelera a fila** (revisão de consistência: R16). A versão anterior dava +10% de velocidade por tier acima da receita e até +12% pela qualidade; na simulação, isso levava o hardcore ao 100 no D85 e o IPC a +83% ao ano ([08](08-simulacao.md), decisão 1). A velocidade vem só do domínio do [02](02-progressao.md) (até +10%). A qualidade da ferramenta muda a durabilidade (seção 6) e o secundário abaixo.
 - **Secundário.** As ferramentas de coleta têm **Faro** (chance de matéria rara, na fila e na sessão de Faro). As de transformação e criação têm **Esmero** (+0, +2, +4 ou +6 pontos percentuais na chance de Bom da fila, conforme a qualidade).
 - Lista e receitas no [06](06-oficios-e-coleta.md), seção 11.
 
@@ -194,13 +194,13 @@ O secundário é um percentual fixo por família, multiplicado pela qualidade e 
 ### 5.3 Insumos e consumíveis
 
 - **Insumos não têm qualidade.** Lingote é lingote. Isso deixa a Bolsa funda e o inventário legível, seguindo a lição do FFXIV ([03, §7](../01-pesquisa/03-alem-do-idle.md)). A variação dos insumos fica em itens distintos: matéria rara e insumo nobre ([06](06-oficios-e-coleta.md), seção 6).
-- **Consumíveis têm dois graus:** **Comum** (da fila) e **Fino** (lote acabado numa sessão ativa), com +25% de efeito. **[proposta de mudança na bíblia]** A bíblia lista quatro qualidades para tudo. Nos consumíveis, quatro graus dariam quatro livros por poção na Bolsa e esvaziariam todos. Dois graus mantêm o ganho do ativo com metade da fragmentação.
+- **Consumíveis têm dois graus:** **Comum** (da fila) e **Fino** (lote acabado numa sessão ativa), com +25% de efeito. **Adotado na bíblia** (seção 6.5; revisão de consistência: R3): a bíblia listava quatro qualidades para tudo; agora são quatro no equipamento e duas nos consumíveis. Nos consumíveis, quatro graus dariam quatro livros por poção na Bolsa e esvaziariam todos. Dois graus mantêm o ganho do ativo com metade da fragmentação.
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
 | Fino e Obra-prima só na sessão ativa; Bom também na fila do mestre | [H] Duas taxas visíveis (P12); [F] no Albion, foco e especialização aumentam a chance de qualidade alta ([03, §7](../01-pesquisa/03-alem-do-idle.md)) | O ativo sem vantagem real, ou o ausente punido | O ativo volta para acabar peças; o ausente vende volume | Obra-prima vira obrigação; mitigado pelo teto de +25%, pela Inspiração limitada e pela Comum na Bolsa |
 | Acabamento em pontos escolhidos pelo artesão | Experimentação do SWG ([03, §7](../01-pesquisa/03-alem-do-idle.md)) | Peça boa igual a todas as outras; artesão sem identidade | Encomendas sob medida ("quero têmpera") | Combinações demais na Feira; os filtros por acabamento resolvem |
-| Consumíveis com dois graus | FFXIV ([03, §7](../01-pesquisa/03-alem-do-idle.md)) | Livros rasos na Bolsa | Comprar Fino para momentos importantes (cerco, chefe) | A bíblia diz quatro qualidades; precisa do aval do diretor |
+| Consumíveis com dois graus | FFXIV ([03, §7](../01-pesquisa/03-alem-do-idle.md)) | Livros rasos na Bolsa | Comprar Fino para momentos importantes (cerco, chefe) | Aval do diretor dado (R3) |
 
 ## 6. Durabilidade, reparo e quebra
 
@@ -413,25 +413,25 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 
 | Negociável | Preso à conta |
 |---|---|
-| Brutos, insumos, consumíveis, kits e reagentes produzidos **dentro** do teto de emissão do dia | A mesma produção **acima** do teto do dia |
+| Brutos, insumos, consumíveis, kits e reagentes produzidos pela conta; a saída deles gasta cota do teto de emissão (portão de saída; revisão de consistência: R18) | Nada nasce preso pela produção: o que passa do teto fica na conta, negociável, à espera de cota |
 | Matérias raras, insumos nobres, o acréscimo de qualidade da obra-prima e o lote Fino (nascem de ação ativa e não contam no teto) | Tudo comprado nas **oficinas NPC de reforço** |
-| Equipamentos e ferramentas, novos ou usados (a peça usada vale pelo que resta) | Tudo feito com **pelo menos um insumo preso** ("o vínculo contamina") |
+| Equipamentos e ferramentas, novos ou usados (a peça usada vale pelo que resta) | Os insumos vendidos pelo NPC nas receitas de T2 para cima ([07](07-economia.md), seção 4.3) |
 | Únicos e lendários (com registro público) | Inspiração, Mérito, Marcos, Selo de mestre, títulos e ajudantes |
 | Relíquias da Fronteira, até expirarem | Cosméticos aplicados (guarda-roupa), móveis colocados, Moda vestida, troféus e relíquias partidas |
 | Cosméticos ainda não aplicados (Baú fechado ou aberto, loja, Moda nova) | Recompensas de primeira semana e kit inicial do onboarding ([12](12-onboarding.md)) |
 | Ouro e Coins (bíblia) | Cosméticos de Fronteira e de Mérito |
 
-**Como o teto de emissão se aplica aos itens** (números no [07](07-economia.md)):
-1. **Contado em valor de referência (VR),** e não em unidades. O VR de cada item é o trabalho embutido nele, em minutos de ofício, convertido em ouro por uma taxa de referência do 07. A tabela de trabalho embutido está no [06](06-oficios-e-coleta.md), seção 11.5. Contar em VR impede contornar o teto fabricando poucas peças caras.
-2. **A fila emite.** Cada unidade que a fila produz soma o seu VR à conta do dia. Enquanto houver espaço, nasce negociável; depois, nasce presa. A peça preparada para obra-prima conta pelo VR da versão Comum. O que a sessão ativa acrescenta não conta.
-3. **O ausente decide antes de sair** o que fazer quando bater o teto: continuar produzindo preso (para uso próprio e Encomendas), trocar a fila para uma atividade de progresso ou doar o excedente às Obras, que o transformam em Mérito.
-4. **O vínculo contamina.** Sem essa regra, o excedente preso viraria peça negociável na etapa seguinte da cadeia, e o teto vazaria. Reparar uma peça com kit preso é permitido, porque o reparo não cria item.
+**Como o teto de emissão se aplica aos itens** (regras no [07](07-economia.md), seção 3; revisão de consistência: R18):
+1. **Contado em valor de referência fixo (VR),** e não em unidades. O VR de cada item é o trabalho embutido nele, em minutos de ofício ([06](06-oficios-e-coleta.md), seção 11.5), vezes **2,0 ouro por minuto**, fixo desde o lançamento (R24). Contar em VR impede contornar o teto fabricando poucas peças caras, e o VR fixo impede que o teto afrouxe quando os preços caem ([08](08-simulacao.md), decisão 3).
+2. **A saída emite, não a fila.** Nada nasce preso: tudo o que a conta produz é "de origem" e pode ser usado à vontade. Quando sai da conta (venda, Troca, venda a NPC), gasta cota igual ao VR do item menos o crédito dos insumos comprados, na mesma régua. A peça preparada para obra-prima conta pelo VR da versão Comum. O que a sessão ativa acrescenta não conta.
+3. **O excedente espera.** O que passa da cota do dia fica na conta: uso próprio, Encomendas, doação às Obras (que viram Mérito) ou venda nos dias seguintes (a cota enche 1/24 por hora e acumula até 3 dias). A regra de fila "quando o estoque de X passar de N, doar à Obra" deixa isso automático.
+4. **Insumo preso não dá crédito.** O que vem da Oficina da Cidade ou do NPC é preso e não se vende; usado numa receita, não dá crédito de cota, e o produto gasta cota pelo VR inteiro. A versão anterior deste módulo fazia o produto "nascer preso" ("o vínculo contamina"); com o portão de saída, a cota já impede o vazamento. Reparar uma peça com kit preso é permitido, porque o reparo não cria item.
 
-**Exemplo.** A ferreira Edda bate o teto do dia às 15 h. A espada que sai às 16 h nasce presa: ela pode usá-la, entregá-la numa Encomenda da cidade ou doá-la a uma Obra, mas não pode vendê-la. Os lingotes que ela comprou na Bolsa continuam negociáveis enquanto estiverem no baú. Se ela tivesse usado um lingote da oficina NPC, a espada nasceria presa mesmo antes do teto.
+**Exemplo** (refeito com o portão de saída; R18). A ferreira Edda esgota a cota do dia às 15 h. A espada que sai às 16 h nasce igual às outras: ela pode usá-la, entregá-la numa Encomenda da cidade ou doá-la a uma Obra hoje, ou vendê-la amanhã, quando a cota tiver enchido. Os lingotes que ela comprou na Bolsa dão crédito pelo VR deles: na venda, a espada gasta só o VR que Edda agregou. Se ela tivesse usado um lingote da Oficina da Cidade, a espada gastaria cota pelo VR inteiro.
 
 | Decisão | Referência | Problema que resolve | Comportamento que incentiva | Risco que cria |
 |---|---|---|---|---|
-| Teto em VR com vínculo que contamina | Lei 16 ([02](../01-pesquisa/02-padroes-matriz-leis.md)); [F] Banana e Bongo Cat dominados por bots ([G05](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)) | Farm automático virando oferta sem limite no mercado | Produzir o negociável com cuidado e dar destino útil ao excedente (Obras) | Regra difícil de entender; a interface mostra o "selo" de cada pilha e a barra do teto do dia |
+| Teto em VR fixo com portão de saída e crédito dos insumos (R18) | Lei 16 ([02](../01-pesquisa/02-padroes-matriz-leis.md)); [F] Banana e Bongo Cat dominados por bots ([G05](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)) | Farm automático virando oferta sem limite no mercado | Produzir à vontade, agregar valor e dar destino útil ao excedente (Obras) | Regra difícil de entender; a tela de venda mostra quanto da cota cada lote usa e a barra do teto do dia |
 | Equipamento usado continua negociável | [F] O equipamento circula e se perde no Albion ([F02](../01-pesquisa/fichas/F02-albion-online.md)) | Novato sem acesso a equipamento bom e barato | Mercado de usados; vender a peça antes da última vida | Lavagem de valor por peças usadas a preço absurdo; faixa de preço pelo valor estimado e risco de troca ([C04](../01-pesquisa/fichas/C04-idlemmo.md)) |
 
 ## 10. Interfaces com outros módulos
@@ -441,18 +441,18 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 | [02 — Progressão](02-progressao.md) | Níveis de tier (1, 15, 35, 55, 75, 90); aprendiz só faz Comum; Selo de mestre pode mudar uma regra de item (sugestão: peças assinadas por um Selo aceitam 4 reparos) | Curva de nível; teto de offline, que limita a Inspiração |
 | [03 — Personagem](03-personagem.md) | Espaços de equipamento, classes de armadura por vocação, secundários | Como Defesa, Esquiva, Foco e Firmeza entram nos atributos |
 | [04 — Combate](04-combate.md) | PI por tier, fatores de família, desgaste por atividade (×1,0 / ×1,5 / ×2,0), proibição de equipamento como drop | Drops de material por hora (o [06](06-oficios-e-coleta.md), seção 9.4, pede cerca de 3,5 peles, 6 carnes e 3,5 cinzas por hora de combate) |
-| [07 — Economia](07-economia.md) | Regras de durabilidade e reparo (o dreno principal), classes de balcão (seção 9 e [06](06-oficios-e-coleta.md), seção 7), regra de vínculo, VR em minutos de ofício | Ouro por minuto de referência, valor do teto de emissão, taxa de bancada |
+| [07 — Economia](07-economia.md) | Regras de durabilidade e reparo (o dreno principal), classes de balcão (seção 9 e [06](06-oficios-e-coleta.md), seção 7), VR em minutos de ofício | Recebido: 2,0 ouro por minuto de referência (R24) e teto em VR fixo com portão de saída (R18). Falta: taxa de bancada |
 | [08 — Simulação](08-simulacao.md) | D0 = 120 pd (300 nas ferramentas), 10 pd/h, 3 reparos de −20%, kits por reparo, mistura de atividades, vida útil (tabela 6.6), distribuição de qualidades, 24 lendários por Era, chances do Baú | — |
 | [10 — Live-ops](10-live-ops.md) | Relíquias por Era, coleções do Baú, Moda sazonal | Calendário de Fronteiras e de eventos |
 | [11 — Monetização](11-monetizacao.md) | Conteúdo e faixas do Baú; regra de ouro dos cosméticos | Preços, teto de gasto |
 | [13 — Anti-abuso](13-anti-abuso.md) | Vínculo, oficina NPC presa, lendários no Leilão | Risco de troca para peças caras |
-| [14 — Arte e UI](14-arte-e-ui.md) | Guarda-roupa, troféus, Livro de Lendas, selo de negociável nas pilhas, ícones em pixel art de cada material por tier | Revisão de semelhança dos nomes e visuais com outros jogos |
+| [14 — Arte e UI](14-arte-e-ui.md) | Guarda-roupa, troféus, Livro de Lendas, cota usada por lote na tela de venda (R18), ícones em pixel art de cada material por tier | Revisão de semelhança dos nomes e visuais com outros jogos |
 
 ## 11. Propostas de mudança na bíblia
 
-1. **[proposta de mudança na bíblia] Consumíveis com dois graus** (Comum e Fino), e não quatro. Motivo: liquidez da Bolsa (seção 5.3).
+1. **[proposta de mudança na bíblia] Consumíveis com dois graus** (Comum e Fino), e não quatro. Motivo: liquidez da Bolsa (seção 5.3). **Adotada** (revisão de consistência: R3).
 2. **[proposta de mudança na bíblia] Novos números-âncora em 6.5:** `PI(T) = 10 × 1,6^(T−1)`; D0 = 120 pd (ferramentas 300); desgaste de 10 pd por hora de uso; 3 reparos de −20% cada; vida de referência de 34 h para Comum e 44 h para obra-prima; 24 lendários por Era por Cidade.
-3. **[proposta de mudança na bíblia] Teto de emissão medido em valor de referência** (trabalho embutido), com a regra "o vínculo contamina". A reconciliar com o 07.
+3. **[proposta de mudança na bíblia] Teto de emissão medido em valor de referência** (trabalho embutido), com a regra "o vínculo contamina". **Adotada em parte** (revisão de consistência: R18): o teto é medido em VR fixo, com crédito dos insumos na mesma régua e o portão de saída do 07; a regra "o vínculo contamina" saiu, porque nada nasce preso.
 4. **[proposta de mudança na bíblia] Bolsa também para peças Comuns novas** (são fungíveis), o que dá ao volume do ausente um mercado líquido. A reconciliar com o 07.
 5. **[proposta de mudança na bíblia] Lista fechada de materiais em 6.5:** a tabela 2.1 (cobre, ferro, aço, prata, platina, aldarita; pinho, bétula, carvalho, freixo, teixo, ébano; e as demais linhas) substitui os exemplos da bíblia. Como a bíblia sugeria cinco metais para seis tiers, a platina entra como T5.
 6. **[proposta de mudança na bíblia] Termos novos no glossário:** Inspiração, Faro, kit de reparo, matéria rara, insumo nobre, reagente, Relíquia da Fronteira, Único, Lendário, guarda-roupa, Moda da Cidade, Oficina da Cidade, valor de referência (VR), troféu e Livro de Lendas.
@@ -469,7 +469,7 @@ Nenhum cosmético dá atributo, velocidade, XP, Inspiração, Mérito, tempo de 
 | **Cosmético vira poder por pressão comercial** | Um bônus de decoração "só de conforto" entra para vender mais. | A regra de ouro (8.1) entra na carta pública de monetização; qualquer exceção exige anúncio público. |
 | **O Baú é questionado juridicamente** | Caixa paga, com sorte e prêmio revendável (LCP, art. 50; Lei 15.211/2025, art. 20). | Jogo 18+ verificado; chances publicadas; garantia; teto de gasto; conteúdo só cosmético; decisão registrada do Gabriel. **Validar com advogado.** |
 | **A Feira fragmentada esconde o bom negócio** | Qualidades, acabamentos e vidas restantes geram milhares de anúncios únicos. | Valor estimado por qualidade e vida restante (à moda do Milky Way Idle, [C01](../01-pesquisa/fichas/C01-milky-way-idle.md)); filtros; Comum nova na Bolsa. |
-| **"O vínculo contamina" é mal entendido** | O jogador mistura uma pilha presa na receita e perde a venda. | Selo visível em cada pilha; a receita avisa antes de produzir; uma opção "nunca usar insumo preso em produção para venda". |
+| **A cota é mal entendida** (revisão de consistência: R18; a regra "o vínculo contamina" saiu) | O jogador usa um insumo preso da Oficina na receita e estranha que a peça gaste mais cota na venda. | A tela de venda mostra quanto da cota cada lote usa e o crédito dos insumos; a receita avisa quando um insumo preso não dá crédito. |
 | **Nomes genéricos ou parecidos com outro jogo** | Cobre, ferro, carvalho e dragão são comuns no gênero, e um nome de material ou visual de item acaba igual ao de outro jogo (risco de "mais um clone" e de propriedade intelectual, bíblia, seção 3). | Liga rara e materiais da Névoa com nomes próprios (aldarita, seda-de-névoa, lírio-da-névoa); lista de nomes proibidos (mithril, adamantita, runita, oricalco e afins); revisão de semelhança no 14 antes de fechar nomes e ícones. |
 | **Bots no Faro e na obra-prima** | Um script joga as sessões melhor que o humano. | A Inspiração limita o volume por conta (um bot rende o mesmo que um humano); a conta é um adulto verificado (P8). |
 

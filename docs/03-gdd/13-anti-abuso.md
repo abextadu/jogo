@@ -24,7 +24,7 @@
 | Carência do Coin antes da primeira transferência | 7 dias na primeira compra; depois 72 h no Pix e 7 dias no cartão; até 30 dias com sinal de risco |
 | Conta nova (para limites) | menos de 14 dias **ou** menos de 20 h de jogo ativo |
 | Saída sem contrapartida de conta nova | até 2 × o teto diário de emissão negociável |
-| Retenção de saída em aparelho novo | 72 h acima de 1 Coin de valor (24 h com 2FA ativo há 7 dias ou mais) |
+| Retenção de saída em aparelho novo | 72 h acima de 20 Coins de valor, R$ 20 (24 h com 2FA ativo há 7 dias ou mais; revisão de consistência: R17) |
 | Bazar de Personagens | vendedor com 30+ dias, 60+ h de jogo ativo e 2FA há 7+ dias; comprador 30 dias sem votar e 90 dias sem revender |
 | Bots na simulação (cenário base) | 3% das contas com automação na própria conta; 0,5% das contas em fazendas |
 | Detecção | fazendas: 60% das contas por onda, a cada 3 semanas; automação na própria conta: 8% por semana |
@@ -70,25 +70,25 @@ A fórmula que todo o módulo tenta tornar negativa:
 - **E** = ouro negociável que a conta gera por dia (no máximo, o teto de emissão negociável **T** do módulo 07);
 - **P** = preço do ouro em reais no mercado cinza;
 - **D** = dias de vida útil da conta até a detecção;
-- **perdas** = taxa da Troca (3%, destruída) mais o desconto do intermediário que compra o ouro;
+- **perdas** = taxa da Troca de ouro (3%, destruída; Coins e Baú lacrado pagam 12% em qualquer canal, bíblia §6.6) mais o desconto do intermediário que compra o ouro;
 - **C** = custo de pôr de pé uma conta. Aqui, isso significa uma pessoa adulta real que passe pela verificação e aceite emprestar a identidade, mais o risco penal.
 
-**Exemplo calculado [H]** (valores provisórios, a reconciliar com os módulos 07 e 11):
+**Exemplo calculado [H]** (refeito com a paridade final do Coin e com o que a simulação mediu; revisão de consistência: R17 e R20):
 
-- T = 3.000 de ouro por dia;
-- Coins a R$ 19,90 (meio da faixa da bíblia, §6.7), cotado a 60.000 de ouro no Câmbio: cerca de R$ 0,33 por mil de ouro no canal oficial;
-- mercado cinza a 50% do oficial: P ≈ R$ 0,17 por mil de ouro. [F] Referência: o ouro clandestino do OSRS sai a cerca de 45% do preço do Bond ([F03, §6.3](../01-pesquisa/fichas/F03-runescape-e-osrs.md));
-- D = 35 dias (a vida média de uma conta de fazenda no cenário base da detecção, §12.1); perdas = 3% da Troca + 30% do intermediário = 33%.
+- E ≈ 1.200 de ouro por dia: é o que uma conta-fazenda obtém de fato, e não o teto inteiro, porque ela passa quase toda a vida na rampa de conta nova (25% a 75% do teto), não vende tudo o que produz e vende os básicos perto do piso do NPC. O número foi escolhido para reproduzir o lucro que o [08](08-simulacao.md), seção 7.1, mediu;
+- 1 Coin = R$ 1,00, cotado a ~750 de ouro no Câmbio (premium de 30 dias = 20 Coins ≈ 15.000 de ouro; [07](07-economia.md), seção 1.2): cerca de R$ 1,33 por mil de ouro no canal oficial;
+- mercado cinza a 50% do oficial: P ≈ R$ 0,67 por mil de ouro. [F] Referência: o ouro clandestino do OSRS sai a cerca de 45% do preço do Bond ([F03, §6.3](../01-pesquisa/fichas/F03-runescape-e-osrs.md));
+- D = 35 dias (a vida média de uma conta de fazenda no cenário base da detecção, §12.1); perdas = 3% da Troca de ouro + 30% do intermediário = 33%.
 
-Conta: 3 (mil de ouro) × R$ 0,17 × 35 dias × 0,67 ≈ **R$ 12 por conta, antes de C.**
+Conta: 1,2 (mil de ouro) × R$ 0,67 × 35 dias × 0,67 ≈ **R$ 19 por conta na vida inteira (~R$ 16 por mês), antes de C.** A simulação mediu R$ 15,50 a R$ 17,50 por mês no cenário base.
 
-**Leitura [H].** Com custo de conta perto de zero, como no Banana e no Bongo Cat, R$ 12 vezes mil contas paga a fazenda ([G05, §10.1](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)). Com uma pessoa verificada por conta, o operador precisa recrutar mil adultos reais, cada um usável uma vez só (o banimento segue a pessoa, §3.5), e convencê-los a dividir menos de R$ 12 por cinco semanas, com risco penal. A fazenda deixa de fechar a conta.
+**Leitura [H].** Com custo de conta perto de zero, como no Banana e no Bongo Cat, R$ 19 vezes mil contas paga a fazenda ([G05, §10.1](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md)). Com uma pessoa verificada por conta, o operador precisa recrutar mil adultos reais, cada um usável uma vez só (o banimento segue a pessoa, §3.5), e convencê-los a dividir menos de R$ 19 por cinco semanas, com risco penal. A fazenda deixa de fechar a conta.
 
 **O custo de conta não é infinito.** [F] A Serasa Experian estimou mais de 2,6 milhões de pessoas ou contas bancárias com indícios de atuação como "laranja" no Brasil em 2025, 62% a mais que em 2023 ([Serasa Experian, 18/3/2026](https://www.serasaexperian.com.br/sala-de-imprensa/prevencao-a-fraude/contas-laranja-potenciais-crescem-mais-de-60-em-dois-anos-no-brasil-aponta-estudo-da-serasa-experian/)). [H] O mercado de identidades emprestadas existe e vai chegar ao jogo. Por isso a detecção (§3.4) e a reverificação por gatilho (§4.4) continuam necessárias.
 
 **Requisitos que a conta impõe a outros módulos [H]:**
 
-- **Ao 07:** um dia de teto deve valer pouco em reais. Com os números acima, cerca de R$ 1 no canal oficial. Se o teto subir dez vezes, a fazenda com identidades alugadas volta a fechar a conta. A simulação deve testar a sensibilidade de T × P.
+- **Ao 07:** o **lucro de uma conta-fazenda fica em até ~R$ 15 por mês**, medido no painel do 07 (seção 12.2) (revisão de consistência: R20). Esta meta substitui a anterior ("um dia de teto vale ~R$ 1" e "salário-teto do topo até R$ 100"), que não cabia com as metas do 07: no modelo, um dia de teto do mediano vale ~R$ 5,80, e chegar a R$ 1 exigiria cortar o teto a um quarto, o que estrangula a oferta ([08](08-simulacao.md), seção 7.1). Se o lucro medido passar da meta, as alavancas são a detecção, a rampa de conta nova e o ouro de encomenda só a partir do 14º dia da conta, antes do tamanho do teto.
 - **Ao 07 e ao 12:** toda fonte de valor negociável aberta a uma conta recém-criada é fábrica de bots ([G07, §2.11](../01-pesquisa/fichas/G07-economias-que-colapsaram.md)). Os primeiros dias rendem sobretudo progresso preso à conta, e a saída de valor das contas novas tem limite (§9.3).
 
 ### 2.3 O paradoxo do idle: onde o bot ainda ganha
@@ -118,9 +118,9 @@ Os lugares em que o bot ainda importa estão na tabela da seção 2.3. As decis�
 **AA-1. O teto de emissão negociável é a primeira defesa anti-bot.** O teto pertence ao módulo 07; este módulo fixa os requisitos que ele precisa cumprir para servir de defesa [H]:
 
 1. Conta **todo** valor negociável que a conta cria: drops, produção de Fila, vendas a NPC, recompensas de janelas ativas.
-2. A produção acima do teto fica presa à conta ou vai para as Obras (vira Mérito), como já prevê a bíblia (§6.6).
+2. A produção acima do teto não sai da conta naquele dia: fica para uso próprio, Encomendas e Obras (vira Mérito), ou sai nos dias seguintes. Nada nasce preso: o teto é o portão de saída do 07, medido em valor de referência fixo (bíblia, §6.6; revisão de consistência: R18).
 3. O teto **não cresce** com nada que um bot automatize com facilidade (horas online, número de ações, volume negociado). Se crescer, cresce com marcos de progresso que exigem decisões.
-4. Perto do teto, o rendimento cai aos poucos, em vez de um corte seco (o 07 define a curva). O jogador vê o próprio contador: "hoje você criou 2.100 de 3.000 de ouro negociável".
+4. Perto do teto, nada para nem se perde: a cota enche 1/24 por hora e acumula até 3 dias (07, seção 3.4). O jogador vê o próprio contador: "hoje você usou 2.100 de 3.000 da sua cota" (revisão de consistência: R18).
 5. O teto é igual para quem paga e para quem não paga: o Coin compra conforto, nunca renda (bíblia, §5).
 
 - **Inspira-se na** "prova de jogo" da ficha [G05, §13](../01-pesquisa/fichas/G05-banana-e-bongo-cat.md) e no limite de drops por janela da Steam; **diferencia-se de** Banana e Bongo Cat, em que o tempo de cliente aberto virava item vendável.
@@ -151,8 +151,8 @@ Os lugares em que o bot ainda importa estão na tabela da seção 2.3. As decis�
 
 - degrau de preço relativo, espera para modificar ordens e prioridade por antiguidade no mesmo preço ([04b, §3.5](../01-pesquisa/04b-economia-mercados-protecoes-bots.md));
 - garantia de 100% em toda ordem de compra e todo lance;
-- **janela de vitrine na Feira:** um anúncio com preço abaixo de 80% do valor de referência fica visível por 2 minutos antes de poder ser comprado; quem pedir a compra nesse intervalo entra num sorteio no fim da janela. Acima disso, a compra é imediata. [F] O Black Desert sorteia o comprador entre pré-ordens de mesmo preço, e o Idle Clans pede confirmação para vender 20% abaixo da média de 24 h ([04b, §2.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md));
-- alerta para quem vende muito abaixo da referência ("seu preço está 35% abaixo do valor de referência; confirmar?");
+- **janela de vitrine na Feira:** um anúncio com preço abaixo de 80% do preço de mercado ([07](07-economia.md), seção 1.2; revisão de consistência: R18) fica visível por 2 minutos antes de poder ser comprado; quem pedir a compra nesse intervalo entra num sorteio no fim da janela. Acima disso, a compra é imediata. [F] O Black Desert sorteia o comprador entre pré-ordens de mesmo preço, e o Idle Clans pede confirmação para vender 20% abaixo da média de 24 h ([04b, §2.2](../01-pesquisa/04b-economia-mercados-protecoes-bots.md));
+- alerta para quem vende muito abaixo da referência ("seu preço está 35% abaixo do preço de mercado; confirmar?");
 - lance máximo automático e prorrogação no Leilão, para que o lance de último segundo não valha nada.
 
 - **Inspira-se em** EVE (degrau de 4 dígitos, 2020), Black Desert (sorteio) e IdleMMO (prorrogação de 30 min) ([04b, §2.2 e §1.4](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)).
@@ -213,7 +213,7 @@ Regras gerais [H]:
 - **O banimento é da pessoa,** não só da conta: o pseudônimo de pessoa (§4.2) fica impedido de abrir conta nova pelo prazo da sanção. [F] O New World desligou o compartilhamento familiar do Steam citando, entre outras coisas, contas que burlavam banimentos ([G04, §6](../01-pesquisa/fichas/G04-new-world.md)).
 - **O valor confiscado é destruído,** nunca revendido nem tratado como receita ([04b, §3.10](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)). Para a simulação, é um dreno de fiscalização.
 - **O valor de origem ilícita é removido de onde estiver,** pela regra de contaminação (§5.3): quem o recebeu por Troca sem contrapartida perde o que recebeu, inclusive quem pagou por ele em reais fora do jogo. Quem vendeu um bem ao infrator a preço de mercado fica com o que recebeu. Regra publicada antes do lançamento: **quem compra por fora compra o risco.** **Validar com advogado** a remoção de valor de quem pagou de boa-fé fora do jogo (CDC, art. 51, sobre cláusulas que imponham desvantagem exagerada; [05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md)).
-- **Valores pequenos não movem a máquina:** abaixo de um limite (ponto de partida: 0,2 Coins de valor de referência), o caso é registrado e só vira ação se fizer parte de uma rede.
+- **Valores pequenos não movem a máquina:** abaixo de um limite (ponto de partida: 4 Coins de valor de mercado, R$ 4; revisão de consistência: R17), o caso é registrado e só vira ação se fizer parte de uma rede.
 
 - **Inspira-se nos** confiscos do Milky Way Idle (2 a 3 vezes o ganho) e do New World (mais de 80% do valor duplicado removido na primeira leva) ([04b, §3.9–3.10](../01-pesquisa/04b-economia-mercados-protecoes-bots.md)); **diferencia-se de** banimentos de comprador por compra fora do canal oficial, porque aqui o RMT informal não é infração.
 - **Resolve** o lucro do abuso: o valor some, e a pessoa não volta com outra conta.
@@ -340,6 +340,7 @@ Requisitos de processo e de desenho, sem código. Cada um responde a um modo de 
 | 10 | **Alarmes de criação de valor:** ouro criado por hora por fonte, itens raros por hora, preço do Coin em 24 h | Dupe que se espalha antes de ser visto | [G07, §5](../01-pesquisa/fichas/G07-economias-que-colapsaram.md) (EQ2 pegou +20% em 24 h) |
 | 11 | **Red team de economia e programa de recompensa por bugs** antes da abertura; teste de carga nos picos | Exploit que vinha do beta | [G04, §10.3](../01-pesquisa/fichas/G04-new-world.md) |
 | 12 | **Texto de jogador sempre escapado** (chat, nomes, anúncios) e política de segurança de conteúdo no cliente | Injeção no chat que, no navegador, rouba a sessão | [G04, §10.2, item 7](../01-pesquisa/fichas/G04-new-world.md) |
+| 13 | **PWA com offline só de leitura** (decisão vigente da bíblia, seção 5): sem rede, o cliente mostra o último estado que o servidor confirmou (Relatório da volta, Fila, inventário, preços com a hora da cotação), e todo botão que move valor fica desabilitado. Rascunhos (reordenar a fila, preparar uma lista de vendas) ficam no aparelho e só são enviados quando o jogador confirma, já online, com nova validação do servidor ([14](14-arte-e-ui.md), seção 2.7). Nenhuma ação entra em fila local para ser reenviada sozinha. O servidor é a única verdade (revisão de consistência: R12) | Ação feita offline e reenviada depois: pedido repetido, ordem a preço velho, relógio do aparelho usado para adiantar a Fila | [14](14-arte-e-ui.md) (PWA); requisitos 3 e 6 desta tabela |
 
 ### 5.2 Disjuntores por sistema
 
@@ -478,7 +479,7 @@ Regras:
 **AA-16.** [H]
 
 - **Segundo fator (2FA):** chave de acesso do aparelho (passkey) ou app autenticador; SMS só como último recurso, por causa da troca fraudulenta de chip.
-- **Exigido para:** vender Coins no Câmbio; Troca de saída acima de 1 Coin de valor de referência; anunciar ou comprar no Bazar de Personagens; mudar e-mail, senha ou 2FA; criar chave de API de nível pessoal.
+- **Exigido para:** vender Coins no Câmbio; Troca de saída acima de 20 Coins de valor de mercado (R$ 20; revisão de consistência: R17); anunciar ou comprar no Bazar de Personagens; mudar e-mail, senha ou 2FA; criar chave de API de nível pessoal.
 - **Alerta de login** em aparelho novo, por e-mail e no jogo, com o botão "não fui eu", que encerra todas as sessões e congela as saídas de valor.
 - **Uma sessão de controle por conta:** o segundo aparelho vê tudo, mas, para agir, assume o controle, e o primeiro é avisado ([07, §4.2](../01-pesquisa/07-tecnica-idles-online.md)).
 
@@ -491,7 +492,7 @@ Regras:
 
 **AA-17.** [H]
 
-- **Aparelho novo:** saídas sem contrapartida (Troca unilateral, anúncio a preço fora da banda) acima de 1 Coin de valor ficam retidas por 72 horas; por 24 horas se o 2FA estiver ativo há 7 dias ou mais. O dono pode liberar antes a partir de um aparelho confiável, ou cancelar.
+- **Aparelho novo:** saídas sem contrapartida (Troca unilateral, anúncio a preço fora da banda) acima de 20 Coins de valor (R$ 20; revisão de consistência: R17) ficam retidas por 72 horas; por 24 horas se o 2FA estiver ativo há 7 dias ou mais. O dono pode liberar antes a partir de um aparelho confiável, ou cancelar.
 - **Valor recebido de conta com pontuação alta** fica 24 horas retido antes de poder sair de novo, o que quebra a cadeia rápida ladrão → mula → comprador.
 - **Nada disso** impede jogar, comprar, consumir ou receber.
 
@@ -500,7 +501,7 @@ Regras:
 - **Inspira-se nas** retenções de troca da Steam (até 3 dias; nenhuma com autenticador há 7 dias).
 - **Resolve** o esvaziamento da conta nas primeiras horas depois do roubo, quando a vítima ainda não percebeu.
 - **Incentiva** o 2FA e o uso de aparelhos de confiança.
-- **Risco:** quem troca de celular espera 72 horas para negociar alto. Mitigação: liberação por aparelho confiável e por e-mail; retenção só acima de 1 Coin de valor.
+- **Risco:** quem troca de celular espera 72 horas para negociar alto. Mitigação: liberação por aparelho confiável e por e-mail; retenção só acima de 20 Coins de valor.
 
 ### 7.3 Recuperação e reversão de roubo
 
@@ -525,7 +526,7 @@ Regras:
 
 **AA-19.** [H]
 
-- **Na Troca:** resumo em linguagem simples com o valor de referência de cada lado ("Você dá: 120.000 de ouro, cerca de 2 Coins. Você recebe: nada."); alerta de Troca unilateral; aviso de primeira Troca com aquela pessoa; qualquer mudança zera as duas confirmações e impõe 5 segundos de espera. A Troca é atômica: ou os dois lados acontecem, ou nenhum.
+- **Na Troca:** resumo em linguagem simples com o valor de mercado de cada lado ("Você dá: 120.000 de ouro, cerca de 160 Coins. Você recebe: nada."; com o Coin a ~750 de ouro; revisão de consistência: R17); alerta de Troca unilateral; aviso de primeira Troca com aquela pessoa; qualquer mudança zera as duas confirmações e impõe 5 segundos de espera. A Troca é atômica: ou os dois lados acontecem, ou nenhum.
 - **No chat:** links escapados e com aviso; domínios conhecidos de phishing bloqueados; nomes reservados ("Suporte", "Bazar", "Conselho"); selo de equipe só pelo sistema; aviso fixo de que o estúdio nunca pede senha nem código.
 - **Sobre o RMT informal:** aviso fixo na Troca e no perfil ("negócio em dinheiro fora do jogo não tem garantia nem suporte"); na Troca unilateral grande, um lembrete de golpes com Pix e MED.
 - **Sobre contas:** "conta comprada fora do Bazar de Personagens pode ser recuperada pelo dono original a qualquer momento".
@@ -542,7 +543,7 @@ Regras:
 
 | Etapa | Regra | Por quê |
 |---|---|---|
-| **Anunciar** | Conta com 30+ dias, 60+ h de jogo ativo verificado, 2FA há 7+ dias, sem dívida, sem investigação, sem Coins em carência e com pontuação de risco baixa | Barra conta nivelada por bot e conta roubada |
+| **Anunciar** | Conta com 30+ dias, 60+ h de jogo ativo verificado, 2FA há 7+ dias, sem suspensão por contestação (decisão vigente da bíblia, seção 5; revisão de consistência: varredura), sem investigação, sem Coins em carência e com pontuação de risco baixa | Barra conta nivelada por bot e conta roubada |
 | **Preparar** | Sai de cargo no Conselho (conselheiro não vende durante o mandato); sai da guilda; ordens abertas canceladas com devolução da garantia; Encomendas em andamento entregues ou abandonadas | A conta muda de dono sem levar compromissos coletivos. [F] O Tibia exige personagem fora de guilda e sem casa ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)) |
 | **Vender** | Pago em Coins fora da carência; reserva de 10% do lance, perdida se o vencedor não pagar; sem lance da própria pessoa nem de contas com vínculo declarado | [F] Reserva de 10% do Char Bazaar ([F04, §6.2](../01-pesquisa/fichas/F04-tibia.md)) |
 | **Transferir** | Na liquidação, o vendedor perde o acesso na hora; sessões encerradas; senha e 2FA zerados; o comprador passa pela verificação, e o pseudônimo da conta passa a ser o dele; o vendedor perde o direito de recuperação | Fecha o golpe da recuperação |
@@ -632,9 +633,9 @@ Regras:
 
 **AA-23.** [F] No IdleMMO, cada troca recebe um nível de risco calculado pelo equilíbrio entre os lados e pelo valor unilateral acumulado, com decaimento; quanto maior o risco, mais equilibrada a troca precisa ser ([C04, §6](../01-pesquisa/fichas/C04-idlemmo.md)). [H] **Adaptação:** aqui a Troca é livre e o RMT informal é aberto, então a transferência sem contrapartida é legítima. O risco de troca vira sinal e limite para contas novas, nunca exigência de equilíbrio.
 
-**Definição.** Valor sem contrapartida (VSC) de uma Troca = valor de referência do que um lado dá − valor de referência do que recebe (mínimo zero). Acumula-se por par de contas e por direção, com meia-vida de 30 dias.
+**Definição.** Valor sem contrapartida (VSC) de uma Troca = valor de mercado do que um lado dá − valor de mercado do que recebe (mínimo zero). O valor de mercado é o do [07](07-economia.md), seção 5.5; o "valor de referência" passou a ser o valor fixo que mede o teto (revisão de consistência: R18). Acumula-se por par de contas e por direção, com meia-vida de 30 dias.
 
-**Exemplo calculado.** A dá a B 120.000 de ouro e recebe um item com valor de referência de 20.000: VSC de A para B = 100.000. Trinta dias depois, esse VSC pesa 50.000; sessenta dias depois, 25.000.
+**Exemplo calculado.** A dá a B 120.000 de ouro e recebe um item com valor de mercado de 20.000: VSC de A para B = 100.000. Trinta dias depois, esse VSC pesa 50.000; sessenta dias depois, 25.000.
 
 **Perfis no grafo [H]:**
 
@@ -658,9 +659,10 @@ Regras:
 [H] Parte da AA-23:
 
 - **Conta nova** (menos de 14 dias ou menos de 20 h de jogo ativo): saída sem contrapartida de até 2 × T por dia (6.000 de ouro com T = 3.000). O Coin comprado por ela já está em carência de primeira compra (§6.2).
-- **Qualquer conta:** VSC de saída acima de 10 Coins de valor de referência em 7 dias entra em revisão assíncrona. A Troca acontece; só há retenção se a pontuação de risco já for média ou alta.
-- **Câmbio:** limites e microestrutura são do módulo 07. Este módulo pede só que Coins em carência não entre e que contas com dívida não vendam.
+- **Qualquer conta:** VSC de saída acima de 200 Coins de valor de mercado (R$ 200) em 7 dias (revisão de consistência: R17) entra em revisão assíncrona. A Troca acontece; só há retenção se a pontuação de risco já for média ou alta.
+- **Câmbio:** limites e microestrutura são do módulo 07. Este módulo pede só que Coins em carência não entrem e que contas suspensas por contestação não vendam (revisão de consistência: varredura; a dívida em ouro saiu do módulo).
 - **Limites em Coins de valor**, não em ouro: o IPC publica o preço do Coin em ouro, e o limite acompanha a inflação sozinho.
+- **Mesma taxa em todo canal:** Coins e Baú lacrado pagam 12% também na Troca, como no Câmbio (bíblia, §6.6; revisão de consistência: R19). O Coin não tem rota mais barata que o balcão, então a lavagem por Troca não sai mais em conta e o índice do Câmbio continua medindo o mercado inteiro.
 
 ### 9.4 Sinais de alerta
 
@@ -720,7 +722,7 @@ Regras:
 | Revisão humana antes de banimento | Obrigatória. Exceção: dupe, roubo e fraude em curso, em que o congelamento vem antes e a revisão em até 72 h |
 | Prazo para apelar | 30 dias após a sanção |
 | Resposta à apelação de banimento ou suspensão | Até 7 dias corridos |
-| Resposta à apelação de outras sanções (dívida, remoção de valor, atrito) | Até 14 dias corridos |
+| Resposta à apelação de outras sanções (suspensão por contestação, remoção de valor, atrito) | Até 14 dias corridos |
 | Contestação de congelamento por pagamento | Até 5 dias úteis. [F] O decreto do comércio eletrônico pede resposta ao consumidor em até 5 dias ([05b, §4](../01-pesquisa/05b-rmt-legal-brasil.md)) |
 | Quem revê a apelação | Sempre uma pessoa diferente de quem decidiu |
 
@@ -792,20 +794,20 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 |---|---|
 | 02 (progressão) | Fila planejada que cubra o offline base de 24 h com tarefas de reserva (AA-2); teto que não cresça com horas online (AA-1) |
 | 06 (ofícios) | Obra-prima por decisão, com cota diária e meta de vantagem do resolvedor automático de até 10% (AA-3) |
-| 07 (economia) | Teto T com valor diário baixo em reais (§2.2); janela de vitrine e alerta de desvio na Feira (AA-4); limites do Câmbio; valor de referência por item, usado aqui na regra de contaminação e no VSC |
+| 07 (economia) | Lucro da conta-fazenda até ~R$ 15 por mês, medido no painel (§2.2; revisão de consistência: R20); janela de vitrine e alerta de desvio na Feira (AA-4); limites do Câmbio; preço de mercado por item, usado aqui na regra de contaminação e no VSC (revisão de consistência: R18) |
 | 09 (social) | Carência de 30 dias para votar após compra no Bazar de Personagens; voto só para conta ativa; conselheiro não vende durante o mandato; marcação de contas transferidas nos rankings |
 | 10 (live-ops) | Calendário de ondas de banimento fora das semanas de abertura de Era; plantão nas aberturas |
 | 11 (monetização) | Carências por meio de pagamento (AA-13); autenticação do emissor; teto de compras nas primeiras 24 h; custo da verificação no custo por jogador |
 | 12 (onboarding) | Verificação antes da conta; decisão sobre o prólogo sem conta (§4.3) |
-| 14 (arte e UI) | Telas da Troca com valor de referência e avisos (AA-19); contagem de carência; contador do teto; página de sanção e apelação (AA-25) |
-| Fase 4 (arquitetura) | Os 12 requisitos da §5.1; disjuntores (AA-11); cofres separados (AA-8); API (AA-24) |
+| 14 (arte e UI) | Telas da Troca com valor de mercado e avisos (AA-19); PWA com offline só de leitura (§5.1, requisito 13; R12); contagem de carência; contador do teto; página de sanção e apelação (AA-25) |
+| Fase 4 (arquitetura) | Os 13 requisitos da §5.1 (o 13º, PWA com offline só de leitura, entrou na revisão de consistência: R12); disjuntores (AA-11); cofres separados (AA-8); API (AA-24) |
 
 ## 13. Propostas de mudança na bíblia
 
-1. **[proposta de mudança na bíblia] Glossário (§4):** incluir **Carência** (período em que um valor recém-comprado não pode ser transferido), **Disjuntor** (suspensão da entrada de novas operações num balcão, item ou moeda), **Risco de troca** (pontuação do valor dado sem contrapartida entre contas), **Dívida em ouro** (saldo devido após estorno, pago com parte das entradas de ouro) e **Aposentadoria** (conta arquivada por quem compra outra no Bazar de Personagens). São conceitos usados pelos módulos 07, 09, 11, 13 e 14.
+1. **[proposta de mudança na bíblia] Glossário (§4):** incluir **Carência** (período em que um valor recém-comprado não pode ser transferido), **Disjuntor** (suspensão da entrada de novas operações num balcão, item ou moeda), **Risco de troca** (pontuação do valor dado sem contrapartida entre contas) e **Aposentadoria** (conta arquivada por quem compra outra no Bazar de Personagens). São conceitos usados pelos módulos 07, 09, 11, 13 e 14. A "dívida em ouro" saiu da proposta, porque a contestação agora suspende a conta até regularizar (decisão vigente da bíblia). Os outros quatro entraram no anexo do glossário (revisão de consistência: R14).
 2. **[proposta de mudança na bíblia] Decisões (§5):** explicitar **"uma pessoa, uma conta ativa"** como consequência de "18+ com idade verificada" mais "um personagem por conta", com a aposentadoria no Bazar de Personagens.
 3. **[proposta de mudança na bíblia] Números-âncora (§6.6):** incluir as carências do Coin (7 dias na primeira compra e no cartão; 72 h no Pix; até 30 dias com risco), a definição de conta nova (menos de 14 dias ou menos de 20 h de jogo ativo) e as carências do Bazar de Personagens (vendedor com 30 dias e 60 h; comprador 30 dias sem voto e 90 sem revenda).
-4. **[proposta de mudança na bíblia] Interpretação de "transferível livremente":** sem proibição nem pedágio além das taxas já previstas, com freios de segurança temporários, publicados e iguais para todos (carência por meio de pagamento, limite de saída de conta nova, retenção em aparelho novo, bloqueio de saída enquanto houver dívida). O diretor decide se essa leitura respeita a decisão do Gabriel.
+4. **[proposta de mudança na bíblia] Interpretação de "transferível livremente":** sem proibição nem pedágio além das taxas já previstas, com freios de segurança temporários, publicados e iguais para todos (carência por meio de pagamento, limite de saída de conta nova, retenção em aparelho novo, suspensão da conta enquanto a contestação não for regularizada; revisão de consistência: varredura). O diretor decide se essa leitura respeita a decisão do Gabriel.
 5. **[proposta de mudança na bíblia] Prólogo sem conta** antes da verificação de idade (§4.3), a reconciliar com o módulo 12: minutos jogáveis sem chat, mercado, loja, Baú ou dados pessoais. O risco é parecer uma abertura do jogo a menores; a alternativa é verificar antes de qualquer jogo.
 
 ## 14. Conflitos e pontos em aberto
@@ -837,7 +839,7 @@ Todos [H], a calibrar. "Base" é o cenário esperado; "estresse" é o que a econ
 | **Confisco contestado** | Quem comprou ouro de origem ilícita por fora vai ao Procon ou à Justiça | Regra anterior à punição; proporcionalidade; limite mínimo de ação; **validar com advogado** |
 | **Disjuntor cria dupe** | Um disjuntor mal testado quebra uma operação no meio, como no New World | Só bloqueia a entrada; teste a cada versão |
 | **Chargebacks acima do limite das bandeiras** | Um ataque de cartões roubados num mês leva o estúdio acima de 1,5% | Carência; autenticação do emissor; disjuntor a 0,8%; Pix sempre disponível; dois PSPs ([05d](../01-pesquisa/05d-rmt-recomendacao.md)) |
-| **A dívida parece punição com fins de lucro** | O jogador endividado acha que precisa comprar Coins | Dívida quitável só jogando; nunca exige compra |
+| **A suspensão parece punição com fins de lucro** (revisão de consistência: varredura; a dívida em ouro saiu do módulo) | O jogador que contestou acha que o estúdio o obriga a doar de novo para voltar a jogar | Regularizar é refazer só a doação contestada, e a conta volta com tudo; regra publicada antes da doação; quem recebeu de boa-fé não perde nada; **validar com advogado** (CDC, art. 51) |
 | **A equipe pequena não dá conta** | Revisões e apelações acumulam; prazos estouram | Atrito automático antes de sanção; prioridade por valor; prazos revistos com dados do alfa |
 | **Os bots se adaptam** | Automação com tempos humanizados e contas envelhecidas | O sinal principal é econômico (fluxo e teto), não de tempo; iscas trocadas a cada versão |
 | **Retaliação** | DDoS depois de uma onda de banimento | Proteção na borda antes da primeira onda; plano de comunicação |
