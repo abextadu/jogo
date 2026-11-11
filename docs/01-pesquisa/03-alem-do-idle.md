@@ -386,4 +386,214 @@
 
 ## Parte B — Mecânicas reveladas pela pesquisa
 
-<!-- PARTE B, MECÂNICAS 12 A 18: EM ANDAMENTO -->
+### 12. Missões delegadas a NPCs
+
+**O que é.** O jogador envia ajudantes (retainers, seguidores, trabalhadores) em missões com duração real e colhe o resultado depois. É o coração do idle transplantado para MMOs.
+
+**Quem faz bem**
+- [F] **Final Fantasy XIV (retainers)**: missões direcionadas de 40 minutos a 1 hora (quanto mais nível acima da missão, mais rápida), explorações livres de 18 horas que rendem bem mais experiência e às vezes itens exclusivos, e explorações rápidas de 1 hora com item surpresa; cada envio gasta a moeda própria "Ventures", e o item level ou a percepção do retainer aumentam o rendimento ([Console Games Wiki, Retainer Ventures](https://ffxiv.consolegameswiki.com/wiki/Retainer_Ventures); [Ventures](https://ffxiv.consolegameswiki.com/wiki/Ventures)). [H] Missões curtas para quem volta logo, longas para quem vai dormir: o ausente escolhe a duração.
+- [F] **WoW (Garrisons, Warlords of Draenor, 2014)**: os seguidores seguem na missão "online ou offline"; as missões vão de 15 a 30 minutos (tarefas) a 4 a 7 dias (raides), e as ordens de serviço levam cerca de 4 horas. A meta declarada era um sistema "easy to enjoy without being extremely intensive" ([warcraft.wiki.gg, Garrison](https://warcraft.wiki.gg/wiki/Garrison)).
+- [F] **Albion Online**: os trabalhadores (*laborers*) da ilha produzem quando recebem diários preenchidos pelo próprio jogador, ou seja, a delegação depende do que ele fez ativo (`fichas/F02-albion-online.md`).
+
+**Quem faz mal**
+- [C] **Garrisons e o isolamento.** Cada garrison era uma fase pessoal; críticos descreveram o WoW virando "jogo single-player" e as tarefas da garrison como lista de obrigações diárias ([Blessing of Kings, 01/07/2015](https://blessingofkings.blogspot.com/2015/07/garrisons-part-i-phasing.html); [Tenton Hammer](https://www.tentonhammer.com/articles/looking-back-the-best-and-worst-of-warlords); [Massively OP, 25/03/2016](https://massivelyop.com/2016/03/25/wow-factor-the-problem-with-garrisons-isnt-garrisons/)). [F] As mesas de missões de 2014 a 2022 aparecem entre as fontes que criaram ouro na economia ([warcraft.wiki.gg, Money](https://warcraft.wiki.gg/wiki/Money), via `fichas/F06-world-of-warcraft.md`). [F] Os assinantes foram de mais de 10,5 milhões (nov/2014) a 5,6 milhões (2º tri/2015) ([Wikipedia](https://en.wikipedia.org/wiki/World_of_Warcraft:_Warlords_of_Draenor)); [H] é correlação, não prova de que a garrison causou a queda.
+- [C] **Trabalhadores que só rodam com o jogo aberto.** No Black Desert, a comunidade relata que os trabalhadores só produzem com o jogador conectado, daí o hábito de nunca deslogar ([Black Sand Diaries](https://blacksanddiaries.blogspot.com/2016/03/tip-never-log-out.html); [Mein-MMO](https://mein-mmo.de/en/offline-bots-black-desert-umwelt-retten,291332); `fichas/F08-black-desert.md`).
+
+**Encaixe no idle (teste do ausente)** [H]
+- É o encaixe mais natural de todos: a missão delegada já é a fila idle com narrativa. O que os MMOs ensinam é **onde ela erra**: se gera moeda negociável, é torneira; se acontece num espaço privado, isola; se é obrigatória todo dia, vira tarefa.
+- **Missões como decisão**: composição da equipe contra os traços da missão, risco contra duração.
+- **Durações em degraus** (1 h, 4 h, 8 h, 18 h), para o ausente encaixar a missão na própria rotina.
+- **Resultado majoritariamente em progresso pessoal** e materiais com dreno; a parte negociável passa por taxa.
+- **Hub social**: as missões partem de um lugar compartilhado (a cidade, a guilda), não de uma instância privada.
+
+**Problema · emoção · comportamento.** [H] Resolve o "não tenho tempo" e dá ao ausente o papel de gerente · gera antecipação ("o que eles vão trazer?") e a satisfação de planejar · incentiva retornos em intervalos previsíveis e coleção de ajudantes.
+
+**Custo: baixo.** Temporizadores, tabelas de recompensa e uma tela de equipe, sobre a fila que o idle já tem.
+
+**Riscos e mitigação**
+- *Torneira de ouro offline* → recompensas em progresso pessoal; parte negociável taxada.
+- *Isolamento* → missões partindo de espaços compartilhados e missões de guilda.
+- *Obrigação diária* → missões longas que cobrem a ausência e nada que "estrague" se não for coletado.
+- *Exigir o jogo aberto* → tudo roda no servidor.
+
+### 13. Contratos cooperativos com prazo
+
+**O que é.** Um grupo pequeno recebe uma meta comum com prazo de dias; cada um contribui com a própria produção e todos recebem se a meta for batida.
+
+**Quem faz bem**
+- [F] **Egg Inc. (co-ops)**: o contrato tem prazo; se ele vence e algum membro ainda não abriu a fazenda do contrato, o jogo espera; níveis de liga (*grades*) mais altos trazem metas mais duras, recompensas maiores e mais penalidades; a pontuação do contrato foi desenhada para premiar quem contribui em vez de "pegar carona", e baixo trabalho em equipe reduz os pontos. O sistema "Contracts v2" saiu em maio de 2023; entrar num co-op ajusta o prazo ao que resta ao grupo, e sair faz perder o progresso ([Egg Inc. Wiki, Contracts](https://egg-inc.fandom.com/wiki/Contracts?oldid=9822); [TouchTapPlay](https://www.touchtapplay.com/egg-inc-how-to-play-co-op-tips-and-cheats/); vistos via resumo de busca). A ficha `fichas/A09-egg-inc.md` está em andamento.
+- [F] **Idle Clans**: quatro missões semanais de clã com bônus que valem pela semana atual e pela seguinte, e a Clan Cup semanal ([wiki, Clan](https://idleclans.wiki/w/Clan), via `fichas/C02-idle-clans.md`).
+- [F] **IdleMMO**: só quem estava na guilda quando o contrato foi gerado pode contribuir com ele, e sair da guilda gera espera de 24 horas ([patch notes](https://web.idle-mmo.com/patch-notes), via `fichas/C04-idlemmo.md`). [H] Trava simples contra quem pula de guilda para colher contratos.
+
+**Quem faz mal**
+- [F] **O carona.** O próprio Egg Inc. precisou redesenhar a pontuação para premiar contribuição (fonte acima), o que mostra o problema. No Idle Clans, um clã inativo vira peso, e o guia recomenda trocar de clã (`fichas/C02-idle-clans.md`).
+- [F] **Coordenação que vira plantão.** Nas *chains* do Torn, a cooperação ativa gera escalas no Discord, esgotamento e pressão para estar online (`fichas/D01-torn.md`).
+
+**Encaixe no idle (teste do ausente)** [H]
+- Prazo de dias, contribuição pela produção idle de cada um: o ausente contribui sem estar online.
+- **Recompensa por patamar com piso pessoal**: quem passa de uma contribuição mínima recebe a recompensa do grupo; quem não passa, recebe proporcional. Ninguém é punido por estar fora; só não ganha o que não fez.
+- **Emparelhamento por ritmo**: co-ops "casuais" e "competitivos", formados automaticamente, para não juntar quem joga 12 horas com quem joga 20 minutos.
+- **Sem expulsão unilateral**: votação ou expulsão automática só por inatividade total.
+
+**Problema · emoção · comportamento.** [H] Resolve a falta de cooperação leve, sem a carga de uma guilda · gera compromisso ("não posso deixar o grupo na mão"), alívio e celebração no fim · incentiva retornos diários curtos e laços entre desconhecidos.
+
+**Custo: baixo a médio.** Metas, grupos, prazos, emparelhamento e pontuação de contribuição. Reaproveita a produção idle como unidade de contribuição.
+
+**Riscos e mitigação**
+- *Carona* → piso pessoal e pontuação de contribuição.
+- *Toxicidade e expulsões* → grupos automáticos por ritmo e regras de expulsão limitadas.
+- *Coordenação fora do jogo (Discord) excluindo quem não está lá* → tudo o que decide o resultado acontece dentro do jogo.
+- *Contas alternativas enchendo co-ops* → vínculo de conta e limite de co-ops por pessoa.
+
+### 14. Transporte de mercadorias com risco
+
+**O que é.** Bens têm lugar: comprar num ponto e vender noutro dá lucro, mas a viagem leva tempo e pode ser interceptada.
+
+**Quem faz bem**
+- [F] **Albion Online**: cada cidade tem mercado próprio e preços diferentes; a rota entre cidades pode ser segura por zonas não letais, mas a rota até Caerleon, onde fica o Black Market, cruza zona vermelha, com saque total (`fichas/F02-albion-online.md`, com [guildorder](https://guildorder.com/games/albion/wiki/market-arbitrage-and-regional-pricing) e [Albion Free Market](https://albionfreemarket.com/articles/view/transporting-guide)).
+- [F] **EVE Online**: comprar à distância não move a mercadoria, que precisa ser transportada; o centro comercial vira alvo, e Jita foi o sistema com mais ISK destruído em outubro de 2025 (1,21 trilhão). O contrato de transporte com colateral sustenta uma profissão de transportador (`fichas/F01-eve-online.md`, com [EVE University, Trading](https://wiki.eveuniversity.org/Trading) e [TAGN](https://tagn.wordpress.com/2025/11/14/the-october-2025-eve-online-monthly-economic-report/)).
+- [F] **ArcheAge (pacotes de comércio)**: o produto vira um pacote carregado nas costas, que deixa o personagem lento; o lucro cresce com a distância entre a produção e o posto de troca; em terra neutra, outros jogadores podem matar o carregador e levar o pacote, que também pode ir em carroças e navios feitos por jogadores ([Wikipedia](https://en.wikipedia.org/wiki/ArcheAge)).
+- [F] **Torn**: viagens ao exterior para comprar itens (carga base de 5) e revender na cidade ([Torn Travel Handbook](https://torntravelplanner.pages.dev/handbook), via `fichas/D01-torn.md`).
+
+**Quem faz mal**
+- [C] **O solo como presa.** No Albion, 5 das 10 reviews negativas mais úteis do ano em português citam a sensação de ser caçado sem chance (`fichas/F02-albion-online.md`, com [Steam, PT-BR](https://steamcommunity.com/app/761890/negativereviews/?browsefilter=trendyear&filterLanguage=brazilian&p=1)).
+- [F] **Golpe com o transportador.** No EVE, um golpe típico é inflar o colateral e atacar o transportador numa rota curta ou em zona sem lei ([EVE University, Contracts](https://wiki.eveuniversity.org/Contracts)).
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Caravanas despachadas e simuladas**: o jogador escolhe rota (segura e lenta, ou arriscada e rápida), escolta e seguro; a viagem corre sozinha e o resultado chega pronto. O ausente se sente esperto pela rota que escolheu.
+- **Interceptação opt-in e limitada**: quem quer ser "bandido" ataca caravanas em rotas de risco, contra a escolta (fantasmas de defesa); a perda máxima é uma fração da carga, conhecida antes de partir; parte do que se perde é destruída, não transferida (o modelo do Albion, seção 8).
+- **Seguro como dreno de ouro**: o prêmio do seguro sai da economia.
+- **Rotas seguras sempre existem**, com margem menor.
+
+**Problema · emoção · comportamento.** [H] Resolve o mercado único sem atrito, em que todo preço converge e a geografia não importa · gera tensão ("a carga vai chegar?") e o prazer da arbitragem · incentiva especialização em comércio, guildas de escolta e informação de preços.
+
+**Custo: médio a alto.** Mapa de rotas, mercados locais, simulação de viagem, interceptação assíncrona, precificação de seguro e escolta.
+
+**Riscos e mitigação**
+- *Caça ao novato* → rotas seguras, risco opt-in e perda limitada.
+- *Roubo combinado para transferir valor (RMT disfarçado)* → parte da carga destruída, detecção de pares repetidos.
+- *Bots de transporte* → limites diários por conta e decisões de rota com informação imperfeita.
+- *Complexidade* → começar com duas ou três cidades.
+
+### 15. Eventos dinâmicos de mundo
+
+**O que é.** O mundo muda de estado por conta própria (invasões, cercos, cadeias de eventos) e reage ao que os jogadores fizeram, com sucesso ou fracasso levando a desdobramentos diferentes.
+
+**Quem faz bem**
+- [F] **Guild Wars 2**: eventos passam por estados (preparação, ativo, sucesso, fracasso); o sucesso dispara o próximo elo da cadeia em segundos e o fracasso pode encerrá-la, mudando a área; a dificuldade sobe e desce com o número de jogadores por perto; não há "tag" e todos os participantes ganham. A própria wiki admite que as consequências são temporárias, porque os ciclos se repetem ([wiki oficial, Dynamic event](https://wiki.guildwars2.com/wiki/Dynamic_event)).
+- [C] **Rift** foi visto como uma versão "2.0" das missões públicas, que escalava e mudava a paisagem ([Engadget, 2011](https://www.engadget.com/2011-07-13-enter-at-your-own-rift-are-rifts-in-danger-of-collapsing.html)).
+
+**Quem faz mal**
+- [C] **Warhammer Online e as missões públicas vazias.** Em dois meses, muitas missões públicas viraram cidades fantasmas; quando a multidão seguia em frente, quem chegava depois não passava da primeira etapa; numa entrevista de 2008, o produtor admitiu que a população moldava fortemente a experiência ([Tenton Hammer](https://www.tentonhammer.com/articles/war-public-quests-hey-where-is-everybody); [Kill Ten Rats](https://www.killtenrats.com/2010/08/19/pq-2-0); [Joystiq/Engadget, 25/09/2008](https://www.engadget.com/2008-09-25-joystiq-interview-jeff-hickman-on-war.html)). [F] O jogo foi de cerca de 800 mil assinantes no pico a 300 mil meses depois, encolheu para três servidores em dezembro de 2011 e fechou em 18/12/2013, quando acabou a licença ([Wikipedia](https://en.wikipedia.org/wiki/Warhammer_Online:_Age_of_Reckoning)). [F] O designer Colin Johanson apresentou os eventos do GW2 justamente como resposta a esse problema ([GameBanshee](https://www.gamebanshee.com/9xq), via resumo de busca).
+- [H] **A ilusão de mudança.** Se tudo volta ao estado inicial, o jogador aprende que nada do que fez importou.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Estado de mundo movido pela soma do idle**: cada região tem um "nível de ameaça" que sobe se poucos caçam ali e desce se muitos caçam. Isso muda drops, preços e rotas de caravana (seção 14) sem exigir que ninguém esteja online.
+- **Escala com quem aparece, e resolve mesmo com pouca gente**: NPCs de reforço preenchem o que falta, para o evento nunca travar (a lição do Warhammer).
+- **Consequências que duram uma temporada**: a cidade salva ganha mercado melhor até o fim da temporada; a perdida fica em ruínas até ser reconstruída (com obras coletivas, seção 18).
+
+**Problema · emoção · comportamento.** [H] Resolve o mundo estático, em que o idle parece uma planilha · gera surpresa, urgência e a sensação de que o mundo está vivo · incentiva olhar o mapa, migrar de região e cooperar sem combinar.
+
+**Custo: médio a alto.** Sistema de estado de mundo, regras de escala, conteúdo de cadeias e ferramentas para a equipe de operação. Um "estado de mundo" simples (ameaça por região) é médio.
+
+**Riscos e mitigação**
+- *Dependência de população* → escala e reforço de NPC.
+- *Repetição* → consequências que duram e cadeias com ramos.
+- *Fuso* → eventos que duram dias, não minutos.
+
+### 16. Política e eleições entre jogadores
+
+**O que é.** Jogadores escolhem representantes, votam regras ou conteúdo e fazem diplomacia formal entre grupos.
+
+**Quem faz bem**
+- [F] **EVE Online (Council of Stellar Management)**: dez representantes eleitos por voto único transferível para mandatos de 12 meses; vota cada conta Omega ativa por 30 dias; os eleitos assinam acordo de confidencialidade, viajam à Islândia para reunir com os desenvolvedores e **não têm poder formal**, só voz ([EVE University](https://wiki.eveuniversity.org/Council_of_Stellar_Management)). A primeira eleição, em maio de 2008, teve 66 candidatos para 9 vagas (`fichas/F01-eve-online.md`).
+- [F] **Old School RuneScape (enquetes)**: conteúdo passa com mais de 70% de "sim" (o limiar era 75% até 27/10/2022); votam assinantes com nível total 300 e 25 horas de jogo; ficam fora do voto modos sazonais, eventos, visual, bugs, integridade, balanceamento e o preço da assinatura e dos Bonds ([Polling Charter](https://osrs.runescape.com/polling-charter); `fichas/F03-runescape-e-osrs.md`).
+- [F] **Travian (diplomacia)**: alianças de até 60 membros fazem pactos de não agressão e alianças militares e declaram guerra; perto do fim da rodada, viram coalizões ([Wikipedia](https://en.wikipedia.org/wiki/Travian)).
+- [F] **Star Wars Galaxies e Eco**: no SWG, cidades de jogadores elegiam prefeito por urna a cada três semanas, e o prefeito autorizava construções ([Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_Galaxies)); no Eco, jogadores formam governo e votam leis que restringem ações ou incentivam comportamentos com impostos e subsídios ([Wikipedia](https://en.wikipedia.org/wiki/Eco_(2018_video_game))).
+
+**Quem faz mal**
+- [F] **Participação baixa e blocos.** A primeira eleição do CSM teve 24.651 votos (11,08% das contas aptas), a segunda 8,61% e a quinta 12,67% ([Engadget, 2008](https://www.engadget.com/2008/11/24/election-results-from-eve-onlines-second-council-of-stellar-man/); [Engadget, 2010](https://www.engadget.com/2010/05/26/eve-onlines-fifth-csm-election-results-are-in/)). [C] Com tão pouca gente votando, as alianças de nullsec mobilizadas elegem grande parte do conselho ([Tenton Hammer](https://www.tentonhammer.com/columns/sins-of-a-solar-spymaster-59-the-council-war); [fórum oficial, CSM 13](https://forums.eveonline.com/t/dev-blog-a-closer-look-at-the-csm-13-voting-numbers/83221?page=6)).
+- [F] **Supermaioria que trava.** No OSRS, a skill Warding teve 66,4% de "sim" contra o limiar de 75% e morreu, levando 22 perguntas atreladas ([PCGamesN, 25/07/2019](https://www.pcgamesn.com/old-school-runescape/warding), via `fichas/F03-runescape-e-osrs.md`).
+- [F] **Poder punitivo eleito.** Em A Tale in the Desert, um jogador eleito por mês como "Demi-Pharaoh" pode banir até sete personagens, o que a própria descrição do jogo chama de controverso ([Wikipedia](https://en.wikipedia.org/wiki/A_Tale_in_the_Desert)).
+- [F] **Teto contornado.** No Travian, alianças maiores que 60 se dividem em "alas" que contam como alianças separadas ([Wikipedia](https://en.wikipedia.org/wiki/Travian)). [H] Todo limite de tamanho político vira um exercício de contorno.
+
+**Encaixe no idle (teste do ausente)** [H]
+- Política é assíncrona por natureza: propostas e votos correm por dias, e o ausente vota quando entra.
+- **Conselho consultivo, nunca executivo**: voz junto ao estúdio com relatório público, sem poder sobre contas ou punições de outros jogadores.
+- **Enquetes com carta de princípios**: decidir de antemão o que nunca vai a voto (RMT, preços, integridade, balanceamento), como no OSRS.
+- **Governo local com faixas**: guildas que controlam território (seção 1) escolhem impostos locais dentro de limites e decidem obras e eventos.
+- **Um voto por pessoa ativa**, com exigência de tempo de jogo, contra alts.
+
+**Problema · emoção · comportamento.** [H] Resolve a desconfiança entre jogadores e estúdio e a falta de agência coletiva · gera pertencimento, drama e histórias · incentiva organização, campanhas e criação de conteúdo pela comunidade.
+
+**Custo: médio, com custo operacional permanente.** Sistemas de voto e proposta são baratos; caros são a moderação, o atendimento ao conselho e as decisões que o estúdio terá de explicar.
+
+**Riscos e mitigação**
+- *Captura por blocos* → voto proporcional (STV), mandatos limitados e exigência de atividade para votar.
+- *Baixa participação* → voto dentro do jogo, com lembrete e recompensa simbólica.
+- *Vazamento de informação* → acordo de confidencialidade e acesso escalonado.
+- *Estúdio refém do voto* → carta do que não vai a voto.
+
+### 17. Proteções de ausência
+
+**O que é.** Regras que limitam o que o jogador pode perder enquanto está fora: escudos, modo férias, substitutos autorizados, bônus de descanso.
+
+**Quem faz bem**
+- [F] **Travian (sitters)**: até dois substitutos por conta, com permissões definidas pelo dono (enviar ataques, usar recursos, comprar Gold), entrando pela própria conta e não pela senha do dono. A conta começa com 14 dias de tolerância de inatividade do dono, e o acesso dos substitutos é cortado quando ela zera; o Gold gasto por substituto não é reembolsado ([suporte oficial](https://support.travian.com/en/articles/14-sitters-and-duals)). Em 2021, a Travian endureceu as regras dos substitutos ([blog oficial](https://blog.travian.com/2021/03/stricter-rules-for-sitter-accounts)).
+- [F] **WoW (rested XP)**: no beta, o descanso funcionava ao contrário: 100% de experiência descansado e 50% cansado, e os testadores acharam punitivo. A Blizzard manteve o sistema e mudou a moldura para 200% e 100% ([entrevista, via GameBanshee](https://www.gamebanshee.com/kw93q); [Psychology of Games, 2010](https://www.psychologyofgames.com/2010/03/framing-and-world-of-warcrafts-rest-system/); [warcraft.wiki.gg, Rest](https://warcraft.wiki.gg/wiki/Rest)). [H] É a lição mais barata deste estudo: o mesmo número, apresentado como prêmio para quem volta e não como castigo para quem fica, muda a emoção.
+- [F] **EVE (skyhooks)**, **Clash of Clans (escudos)** e **Albion (Focus)**: janela de ataque anunciada e metade da produção protegida (seção 1); escudo automático depois de ser saqueado (seção 4); Focus que se acumula por dia mesmo sem jogar, com Premium (`fichas/F02-albion-online.md`).
+- [F] **OGame**: o fórum oficial manteve por anos um guia de *fleetsaving*, a técnica de mandar a frota em missões longas para que não esteja parada no planeta quando o dono sai, porque sem isso a conta fica exposta ([fórum oficial, via resumo de busca](https://board.origin.ogame.gameforge.com/index.php/Thread/785-Guide-06-Fleetsaving-Guide); o link hoje redireciona). [NV] O modo férias do OGame tem duração mínima de 48 horas e para a produção; não encontramos fonte oficial acessível. Ver a ficha `fichas/D04-ogame.md`, em andamento.
+
+**Quem faz mal**
+- [F] **Vender o tamanho da ausência.** No Milky Way Idle, cada hora extra de progresso offline custa Cowbells (a moeda paga), até 72 horas (`fichas/C01-milky-way-idle.md`, com [Cowbell Store](https://milkywayidle.wiki.gg/wiki/Cowbell_Store)). [C] No AFK Arena, o baú idle de jogadores novos acumula cerca de 12 horas, e níveis de VIP ampliam o teto (`fichas/E01-afk-arena-e-afk-journey.md`).
+- [C] **Vender a proteção.** Nos 4X mobile, o escudo é item de loja e a ausência sem escudo pode custar o exército inteiro (seção 1).
+- [H] **Proteção que exige conhecimento oculto.** O *fleetsave* do OGame é engenhoso, mas é uma técnica que o novato não conhece; quem não sabe perde a frota na primeira noite.
+
+**Encaixe no idle (teste do ausente)** [H]
+- **Proteção por padrão e grátis**: o que está guardado não se perde; só o que está exposto, e por escolha.
+- **Bônus de descanso, não penalidade de ausência**: quem volta encontra um acelerador temporário (o "rested" do WoW), em vez de ver o que perdeu.
+- **Modo férias**: pausa riscos (PvP, guerras, contratos) por um período com aviso; a produção continua em ritmo reduzido, para a volta não ser de mãos vazias.
+- **Substitutos com permissões** para cargos de guilda (o modelo Travian), sem compartilhar senha, com registro de tudo o que fizeram.
+- **Nunca vender o teto offline nem o escudo.** O tamanho da ausência protegida deve ser igual para todos.
+
+**Problema · emoção · comportamento.** [H] Resolve o medo de sair do jogo, que faz o jogador desinstalar em vez de pausar · gera alívio, confiança e a sensação de ser respeitado · incentiva pausas saudáveis e retornos, em vez de abandono.
+
+**Custo: baixo.** Regras e estados de conta; o trabalho maior é antifraude nos substitutos.
+
+**Riscos e mitigação**
+- *Modo férias para fugir de guerra* → carência para ativar perto de uma guerra e duração mínima.
+- *Substituto como fachada de multiconta* → limite de substitutos, registro de ações e as regras de inatividade do Travian.
+- *Tentação de monetizar* → ver "Quem faz mal" acima.
+
+### 18. Metas comunitárias de servidor
+
+**O que é.** Um objetivo coletivo do servidor inteiro, alimentado pela atividade de todos, que destrava um efeito para todos ou decide o rumo de uma história.
+
+**Quem faz bem**
+- [F] **Helldivers 2 (Major Orders)**: missões coletivas que movem a guerra do jogo; a comunidade votou onde instalar uma estação espacial e decidiu, numa ordem de 11/06/2024, salvar crianças em vez de ganhar uma arma ([Wikipedia](https://en.wikipedia.org/wiki/Helldivers_2)). O jogo chegou a cerca de 450 mil jogadores simultâneos no Steam em 15/03/2024 e passou de 19 milhões de cópias em outubro de 2025 (mesma fonte).
+- [F] **Milky Way Idle (idle)**: o que o mercado arrecada em taxas é convertido todo dia, às 00:05 UTC, em tempo de cinco bônus comunitários do servidor (XP, coleta, produção, aprimoramento, drop de combate) (`fichas/C01-milky-way-idle.md`, com [Cowbell Store](https://milkywayidle.wiki.gg/wiki/Cowbell_Store) e [Marketplace](https://milkywayidle.wiki.gg/wiki/Marketplace)). [H] É o dreno de ouro mais elegante que encontramos num idle: a taxa vira bem público visível.
+- [F] **Idle Clans (bônus global de evento)** (seção 10) e **Travian (Maravilha do Mundo)**, em que coalizões inteiras constroem uma obra no fim da rodada ([Wikipedia](https://en.wikipedia.org/wiki/Travian)).
+- [F] **A Tale in the Desert**: um dos testes exige que 100 jogadores ajam em uníssono dentro de uma hora ([Wikipedia](https://en.wikipedia.org/wiki/A_Tale_in_the_Desert)).
+
+**Quem faz mal**
+- [F] **A "baleia social".** No Idle Clans, a moeda de evento comprada na loja também alimenta o bônus global, então quem paga acelera todos; a ficha registra o efeito colateral de dependência de quem paga (`fichas/C02-idle-clans.md`).
+- [H] **Meta fácil ou difícil demais.** Se sempre é batida, vira rotina; se nunca é, frustra. Sem dado público de taxa de sucesso das metas do Helldivers 2, fica como hipótese.
+
+**Encaixe no idle (teste do ausente)** [H]
+- É a mecânica mais idle da Parte B: a produção ociosa de todos soma no mesmo contador, e o ausente contribui sem saber.
+- **Escolha coletiva do rumo**: o servidor vota qual meta perseguir na semana (Helldivers 2), o que mistura política (seção 16) e eventos (seção 10).
+- **Taxas que viram bem público** (Milky Way Idle): o dreno passa a ser visto como contribuição.
+- **Recompensa para todos, com piso de participação** pequeno, para não premiar contas paradas.
+
+**Problema · emoção · comportamento.** [H] Resolve a sensação de que o idle é solitário e de que o dreno é só castigo · gera "fizemos juntos", orgulho de servidor e assunto · incentiva contribuição contínua, retorno para ver o resultado e aceitação dos drenos.
+
+**Custo: baixo a médio.** Contadores agregados, metas, tabelas de efeito e interface de progresso; a votação reaproveita a seção 16.
+
+**Riscos e mitigação**
+- *Dependência de quem paga* → contribuição paga limitada ou só cosmética.
+- *Bots inflando a contribuição* → piso de participação humana e detecção.
+- *Metas mal calibradas* → metas dinâmicas pela população ativa da semana.
+
+---
+
+<!-- RANKING, IMPLICAÇÕES, COMO PODE DAR ERRADO, FONTES: EM ANDAMENTO -->
