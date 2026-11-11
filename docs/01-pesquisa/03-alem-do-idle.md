@@ -596,4 +596,176 @@
 
 ---
 
-<!-- RANKING, IMPLICAÇÕES, COMO PODE DAR ERRADO, FONTES: EM ANDAMENTO -->
+## Ranking das mecânicas mais promissoras para o nosso caso
+
+[H] As notas são julgamento deste estudo, de 1 a 5 (5 = melhor; em custo e risco, 5 = barato e seguro). "Encaixe idle" (passa no teste do ausente) e "dinâmica gerada" (quanto jogo ativo e social acrescenta) valem peso 2; economia (cria demanda e drenos, em vez de torneira), custo e risco valem peso 1. Nota máxima: 35. Empates foram resolvidos pela dinâmica gerada e depois pelo encaixe. O ranking serve para ordenar a conversa da Fase 2, não para decidir.
+
+| # | Mecânica (seção) | Encaixe ×2 | Dinâmica ×2 | Economia | Custo | Risco | Nota | Quando |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Metas comunitárias de servidor (18) | 5 | 4 | 5 | 4 | 4 | 31 | Lançamento |
+| 2 | Profissões interdependentes (8) | 5 | 5 | 5 | 2 | 3 | 30 | Lançamento |
+| 3 | Proteções de ausência (17) | 5 | 4 | 3 | 5 | 4 | 30 | Lançamento |
+| 4 | Contratos entre jogadores, começando por encomendas (9) | 5 | 4 | 5 | 3 | 3 | 29 | Lançamento |
+| 5 | Contratos cooperativos com prazo (13) | 5 | 4 | 3 | 4 | 3 | 28 | Lançamento |
+| 6 | Temporadas como mundos paralelos (2) | 4 | 5 | 4 | 2 | 3 | 27 | Com população (6 a 12 meses) |
+| 7 | PvP assíncrono com fantasmas (4) | 5 | 4 | 3 | 3 | 3 | 27 | Primeiro ano |
+| 8 | Janelas curtas com cargas acumuláveis (11) | 4 | 4 | 3 | 5 | 3 | 27 | Lançamento |
+| 9 | Missões delegadas a NPCs (12) | 5 | 3 | 3 | 5 | 3 | 27 | Lançamento (é o núcleo idle) |
+| 10 | Eventos ao vivo (10) | 4 | 5 | 3 | 2 | 3 | 26 | Motor no lançamento; cadência no primeiro ano |
+| 11 | Crafting com qualidade variável (7) | 4 | 4 | 4 | 3 | 3 | 26 | Lançamento, em versão simples |
+| 12 | Chefes mundiais com inscrição (3) | 4 | 4 | 3 | 4 | 3 | 26 | Primeiro ano |
+| 13 | Transporte de mercadorias com risco (14) | 4 | 4 | 5 | 2 | 2 | 25 | Com população e dados |
+| 14 | Runs estilo roguelite (6) | 4 | 4 | 3 | 3 | 3 | 25 | Primeiro ano |
+| 15 | Estado de mundo dinâmico (15) | 5 | 3 | 4 | 2 | 3 | 25 | Com população e dados |
+| 16 | Política e eleições (16) | 5 | 3 | 2 | 3 | 2 | 23 | Conselho consultivo cedo; governo local depois |
+| 17 | Arenas (5) | 4 | 3 | 2 | 4 | 2 | 22 | Depois do PvP assíncrono |
+| 18 | Território e guerra de guildas (1) | 3 | 5 | 2 | 1 | 1 | 20 | Só na versão assíncrona, depois de tudo acima |
+
+**Justificativa** [H]
+- **Metas comunitárias em 1º** porque são a mecânica mais idle de todas (a produção ociosa de todos soma no mesmo contador), transformam dreno em bem público, como faz o Milky Way Idle com as taxas do mercado, e custam pouco. O Idle Clans e o Helldivers 2 mostram o efeito social.
+- **Profissões interdependentes e encomendas (2º e 4º)** são o motor de uma economia movida por jogadores, como no Albion e no EVE, e são assíncronas por natureza: a fila do ausente atende pedidos e abastece o mercado. Sem elas, o mercado e o RMT não têm o que negociar.
+- **Proteções de ausência (3º)** são pré-requisito de qualquer mecânica com risco. São baratas, e a lição do "rested XP" (mesmo número, moldura de prêmio) vale para o jogo inteiro. A contraprova está nos jogos que vendem o tamanho da ausência ou o escudo.
+- **Co-ops com prazo (5º)** trazem cooperação leve sem a carga de uma guilda; o Egg Inc. prova o formato num idle.
+- **Temporadas paralelas (6º)** dão os maiores picos de reativação medidos (OSRS e PoE), mas só funcionam com população suficiente e com RMT fora delas; por isso não entram no lançamento.
+- **Território em último** porque tem o maior impacto para jogadores organizados e também o maior custo e o maior risco: bola de neve (Albion), monopólio e fachadas (New World), tédio de captura (EVE), pay-to-win (4X). Só vale na versão assíncrona, por atividade (IdleMMO), com janelas e cofre protegido (EVE), e depois que PvP assíncrono e temporadas estiverem de pé.
+
+## Implicações para o nosso jogo
+
+[H] Princípios que atravessam as 18 mecânicas:
+
+1. **Participação é orçamento de decisões que se acumula, nunca presença.** Dois ataques por guerra (Clash of Clans), duas tentativas no chefe de guilda (AFK Arena), cotas diárias com recarga (Idle Clans) e cargas que se acumulam enquanto o jogador está fora (seção 11).
+2. **O ausente contribui com o que deixou pronto**: defesa em *snapshot*, fila de produção, encomenda aceita, rota de caravana, voto. Ele volta e encontra consequências das próprias escolhas, o que o faz se sentir esperto.
+3. **Perda limitada, anunciada e nunca do progresso pessoal.** Só se perde o que está exposto e por escolha (o *mug* do Torn, o cofre protegido do EVE, o escudo do Clash of Clans). Proteção é padrão e grátis; nunca está à venda.
+4. **Toda mecânica ativa tem orçamento de emissão**, estimado antes de lançar (como o economista do Torn fez com os rackets) e acompanhado num relatório mensal público (ver `fichas/F01-eve-online.md`).
+5. **O negociável vem sobretudo da cadeia de profissões.** Recompensas de chefes, runs, arenas e eventos são majoritariamente pessoais, intransferíveis ou cosméticas. Isso protege o valor do artesão, o mercado e o RMT.
+6. **Dreno com cara de contribuição**: taxas que viram bônus do servidor (Milky Way Idle) e metas coletivas.
+7. **Competição de prestígio em formato normalizado** (*draft*, semente diária, nível fixo). Com RMT oficial, é a única forma de o ranking que dá status não ser comprável.
+8. **Tempo e fuso**: eventos de dias, janelas que rotacionam e se repetem, e baixa latência no Brasil para as janelas ativas (a principal queixa brasileira do Albion é ping, `fichas/F02-albion-online.md`).
+9. **Conteúdo coletivo escala com a população e nunca trava**: reforço de NPC, uma temporada por vez, mecânicas coletivas ligadas por etapas conforme a base cresce.
+10. **Decidir cedo o que é estrutural** (profissões, quanto do crafting é controlável, onde o RMT vale, o que vai a voto) e anunciar desde o início o que é temporário.
+11. **Desbloqueio em camadas.** Dezoito mecânicas no primeiro dia afogariam o novato, como a complexidade afasta no EVE; elas entram ao longo das primeiras semanas.
+
+## Como isso pode dar errado
+
+| Risco | Como acontece | Exemplo real | Mitigação |
+|---|---|---|---|
+| **Jogo de checklist** | Cada mecânica traz um timer, e abrir o jogo vira uma lista de tarefas | Treze metassistemas com timers próprios no Idle Heroes (`fichas/E02-idle-heroes.md`); garrisons como obrigação (seção 12) | Orçamento de atenção: o que é diário cabe em cerca de 10 minutos; timers consolidados num painel único de colheita |
+| **O ativo atropela o ausente** | A janela ativa rende tanto que perder vira punição | Soul Ash de Torghast (seção 6); plantão das *chains* do Torn (seção 11) | Teto para o ganho de presença sobre o idle equivalente, a calibrar na simulação da Fase 3; cargas acumuláveis |
+| **Inflação por soma de torneiras** | Cada sistema novo emite um pouco, e o total afunda a moeda | Mesas de missões do WoW; ouro de chefes do SimpleMMO; itens de evento do EVE | Orçamento de emissão por sistema, painel mensal e recompensas intransferíveis |
+| **Pay-to-win percebido** | RMT oficial + competição = dinheiro vira vitória | 4X mobile; arenas do AFK Arena e do Idle Heroes | Nada de poder competitivo, proteção ou teto offline à venda; prestígio em formato normalizado |
+| **Bots e multicontas** | Toda mecânica que paga por repetição ou reflexo é automatizada | *Autoclicker* em golden cookies; alts em co-ops e arenas; contratos para lavar RMT | Decisão no lugar de reflexo, tetos por conta, vínculo de conta, contas novas restritas (`fichas/F03-runescape-e-osrs.md`) e detecção (`04b`) |
+| **Falta de gente** | Conteúdo coletivo sem população suficiente trava | Missões públicas do Warhammer Online; economia fragmentada do Idlescape | Escala e reforço de NPC; adiar território e temporadas até haver base |
+| **Captura por blocos** | Grandes grupos dominam guerra e política | Zergs do Albion; monopólio no New World; blocos no CSM | Ligas por porte, tetos, poder político consultivo |
+| **Mudança estrutural depois do lançamento** | O estúdio "simplifica" ou retira algo central | NGE do SWG; Harvest do PoE; recuo do Pokémon GO em 2021; token no WoW Classic (`fichas/F06-world-of-warcraft.md`) | Carta de princípios publicada no lançamento e mudanças explicadas com dados |
+| **Pico de evento derruba a infraestrutura** | Evento concentra a base inteira na mesma hora | Pokémon GO em Chicago, 2017 | Teste de carga antes de cada evento, filas de entrada e modo degradado (o idle tolera atraso; a janela ativa não) |
+| **Golpe e toxicidade** | Mecânicas sociais viram arma | Golpes em contratos do EVE; golpes legais no Torn (`fichas/D01-torn.md`) | Contratos com termos garantidos pelo sistema; decidir se golpe é ou não parte da cultura do jogo (não precisa ser) |
+| **Risco jurídico** | Sorte no crafting ou em eventos combinada com itens pagos se aproxima de loot box | Bélgica e as compras de gemas no GW2 (`fichas/F07-guild-wars-2.md`) | Nunca vender chance de qualidade ou de drop; ver `05b-rmt-legal-brasil.md` e `05c`; validar com advogado |
+| **Complexidade para o novato** | Muitas camadas ao mesmo tempo | 5 das 10 reviews negativas recentes do EVE citam complexidade ou tutorial confuso (`fichas/F01-eve-online.md`) | Desbloqueio progressivo e mecânicas coletivas só depois do primeiro ciclo idle dominado |
+
+## Lacunas desta pesquisa
+
+- **Não encontrado em fonte acessível**: regras oficiais atuais do modo férias e da proteção de novato do OGame (o wiki bloqueou o acesso e o guia oficial de *fleetsave* hoje redireciona); probabilidades oficiais de qualidade no crafting do Albion; regras de qualidade do crafting do WoW (Dragonflight e The War Within); detalhes das raides de clã do Tap Titans 2 (wiki bloqueado); regras de expulsão e de inatividade nos co-ops do Egg Inc. depois do Contracts v2.
+- **Vistos só via resumo de busca** (sites bloqueiam leitura automática): wiki do Torn, Massively OP, PC Gamer (vários artigos chegaram truncados) e o wiki de fãs do Egg Inc.
+- **Sem dado quantitativo**: taxa de sucesso das metas comunitárias do Helldivers 2; efeito das garrisons na queda de assinantes do WoW (só correlação); impacto de retenção de chefes mundiais em idles.
+- **Fichas ainda em andamento** que podem refinar este estudo: OGame (D04), Travian (D05), Egg Inc. (A09) e Tap Titans 2 (B06).
+
+## Fontes
+
+Todas acessadas em novembro de 2026. Agrupadas por referência; a data da fonte aparece quando conhecida.
+
+**Fichas internas citadas:** `fichas/A01-cookie-clicker.md`, `B01-melvor-idle.md`, `B02-legends-of-idleon.md`, `C01-milky-way-idle.md`, `C02-idle-clans.md`, `C03-idlescape.md`, `C04-idlemmo.md`, `C05-simplemmo.md`, `C06-shop-titans.md`, `D01-torn.md`, `E01-afk-arena-e-afk-journey.md`, `E02-idle-heroes.md`, `F01-eve-online.md`, `F02-albion-online.md`, `F03-runescape-e-osrs.md`, `F05-path-of-exile.md`, `F06-world-of-warcraft.md`, `F07-guild-wars-2.md`, `F08-black-desert.md`, `G04-new-world.md`.
+
+**Clash of Clans**
+1. [Clan Wars Explained, Part 1: Preparation Day — Supercell](https://supercell.com/en/games/clashofclans/blog/news/clan-wars-explained-part-1-preparation-day/) — oficial — 11/04/2018.
+2. [Get Ready for the Ranked Update — Supercell](https://supercell.com/en/games/clashofclans/blog/release-notes/get-ready-for-ranked-update) — oficial — 2025 (visto via resumo de busca).
+3. [Clash of Clans — Wikipedia](https://en.wikipedia.org/wiki/Clash_of_Clans) — wiki.
+4. [Shields and Guard — Clash Ninja](https://www.clash.ninja/guides/what-are-shields-and-guard), [Battle and Ranked modes — Clash Ninja](https://www.clash.ninja/blog/battle-and-ranked-modes), [Fragster, out/2025](https://www.fragster.com/clash-of-clans-october-2025-update-battle-modes-shield-rework-more/) e [Blueprint CoC](https://blueprintcoc.com/blogs/new-clash-of-clans-update/ranked-battle-sneak-peek-2) — guias e imprensa — 2025 (vistos via resumo de busca).
+5. [Clash of Clans 101: Town Hall 11 update — Pocket Gamer](https://www.pocketgamer.com/clash-of-clans/clash-of-clans-101-the-complete-guide-to-decembers-town-hall-11-update/) — imprensa — 16/12/2015.
+6. [Clash of Clans updates: Village Guard, Personal Breaks — Christian Post](https://www.christianpost.com/trends/clash-of-clans-updates-village-guard-personal-breaks-league-bonuses-and-loot.html) — imprensa — 28/11/2015.
+
+**Torn**
+7. [Territory](https://wiki.torn.com/wiki/Territory) e [Racket — Torn Wiki](https://wiki.torn.com/wiki/Racket) — wiki oficial (via resumo de busca; 403).
+8. [Economic report summary — Torn City Times](https://torncitynewspaper.blogspot.com/2019/08/economic-report-summary.html) — jornal da comunidade — 24/08/2019.
+9. [21 years worth of sinister stats — Pocket Gamer](https://www.pocketgamer.com/torn/21-years-worth-of-sinister-stats) — imprensa.
+10. [How To: Ranked Warring — fórum oficial](https://www.torn.com/forums.php?p=threads&f=61&t=16254877&b=0&a=0) e [Torn Travel Handbook](https://torntravelplanner.pages.dev/handbook) — comunidade.
+
+**EVE Online**
+11. [Equinox Update: Enhanced Skyhooks — CCP](https://www.eveonline.com/news/view/equinox-update-enhanced-skyhooks) — oficial — 25/09/2024.
+12. [Patch notes for Aegis Sovereignty — CCP](https://www.eveonline.com/news/view/patch-notes-for-aegis-sovereignty) — oficial — 2015 (via resumo de busca).
+13. [EVE Evolved: Has the Aegis sovereignty system worked? — Massively OP](https://massivelyop.com/2015/08/23/eve-evolved-has-the-aegis-sovereignty-system-worked/) e [Null-sec alliances petition changes to Aegis Sov — EN24](https://evenews24.com/2015/08/16/null-sec-alliances-petition-changes-to-aegis-sov/) — imprensa e blog — ago/2015 (via resumo de busca).
+14. [Contracts](https://wiki.eveuniversity.org/Contracts), [Trading](https://wiki.eveuniversity.org/Trading) e [Council of Stellar Management — EVE University](https://wiki.eveuniversity.org/Council_of_Stellar_Management) — wiki da comunidade.
+15. [A Reminder Regarding Scamming & Charity Events — CCP](https://www.eveonline.com/article/a-reminder-regarding-scamming-charity-events) — oficial.
+16. [Fórum: Sales Tax 7.5 Percent Assault](https://forums.eveonline.com/t/sales-tax-7-5-percent-assault/479278) e [Fórum: CSM 13 voting numbers](https://forums.eveonline.com/t/dev-blog-a-closer-look-at-the-csm-13-voting-numbers/83221?page=6) — comunidade.
+17. [Resultados da 2ª eleição do CSM — Engadget](https://www.engadget.com/2008/11/24/election-results-from-eve-onlines-second-council-of-stellar-man/) e [5ª eleição — Engadget](https://www.engadget.com/2010/05/26/eve-onlines-fifth-csm-election-results-are-in/) — imprensa — 24/11/2008 e 26/05/2010 (via resumo de busca).
+18. [Sins of a Solar Spymaster #59: The Council War — Tenton Hammer](https://www.tentonhammer.com/columns/sins-of-a-solar-spymaster-59-the-council-war) — coluna (via resumo de busca).
+19. [The October 2025 EVE Online MER — TAGN](https://tagn.wordpress.com/2025/11/14/the-october-2025-eve-online-monthly-economic-report/) — blog — 14/11/2025.
+20. [EVE players destroyed 1,14 quatrilhão de ISK em 2025 — PC Gamer](https://www.pcgamer.com/games/mmo/eve-online-players-destroyed-1-142-260-784-813-930-isk-worth-of-ships-in-2025-which-according-to-my-caveman-level-maths-amounts-to-over-usd6-million-lost-to-the-void/) — imprensa — 2026.
+
+**Albion Online**
+21. [Changes for Guild Season 14 — post de desenvolvedor (devtrackers)](https://devtrackers.gg/albion/p/36a1bb7c-changes-for-guild-season-14) — oficial — 2021.
+22. [Dev Update — October 2026](https://albiononline.com/news/dev-update-october-2026) — oficial — 16/10/2026 (via `F02`).
+23. [Albion Online — Wikipedia](https://en.wikipedia.org/wiki/Albion_Online) — wiki.
+24. [Steam: reviews negativas do ano (todos os idiomas)](https://steamcommunity.com/app/761890/negativereviews/?browsefilter=trendyear&filterLanguage=all&p=1) e [PT-BR](https://steamcommunity.com/app/761890/negativereviews/?browsefilter=trendyear&filterLanguage=brazilian&p=1) — comunidade — contagem da ficha F02, 07/11/2026.
+25. [Markets and Regional Pricing](https://guildorder.com/games/albion/wiki/market-arbitrage-and-regional-pricing) e [Crafting and Gathering — guildorder](https://guildorder.com/th/games/albion/wiki/crafting-and-gathering); [Transporting guide](https://albionfreemarket.com/articles/view/transporting-guide) e [Crafting — Albion Free Market](https://albionfreemarket.com/crafting) — guias da comunidade.
+26. [Black Market feature — GamingOnLinux](https://gamingonlinux.com/2017/06/albion-onlines-new-black-market-feature-is-sounding-really-interesting) — imprensa — 02/06/2017.
+
+**New World**
+27. [One company holds all territories on New World's biggest EU server — AltChar](https://www.altchar.com/game-news/one-company-holds-all-territories-on-new-worlds-biggest-eu-server-aSYve6B5QNFN), [Endgame PvP excludes players without a large guild — Mein-MMO](https://mein-mmo.de/en/the-new-world-endgame-pvp-has-a-problem-it-excludes-players-without-a-large-guild,731698) e [Huge PvP wars risk alienating — PC Gamer](https://pcgamer.com/new-worlds-huge-pvp-wars-risk-alienating-anyone-not-in-a-big-company) — imprensa — 2021 (via resumo de busca).
+28. [New World cracks down on shell companies — PC Gamer](https://www.pcgamer.com/new-world-is-finally-cracking-down-on-shell-companies) e [GamesRadar](https://gamesradar.com/new-world-takes-on-players-with-multiple-shell-companies) — imprensa — 2021 (via resumo de busca).
+29. [New World announces more world mergers — NME](https://www.nme.com/news/new-world-announces-more-player-world-mergers-3121580) — imprensa — 18/12/2021 (via `G04`).
+
+**Black Desert**
+30. [Node War](https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=56) e [Enhancement — Adventurer's Guide](https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=48) — wiki oficial (via `F08`).
+31. [Tip: never log out — Black Sand Diaries](https://blacksanddiaries.blogspot.com/2016/03/tip-never-log-out.html) e [Mein-MMO](https://mein-mmo.de/en/offline-bots-black-desert-umwelt-retten,291332) — comunidade e imprensa (via `F08`).
+
+**Idles multiplayer**
+32. [SimpleMMO v9.0: Guilds](https://www.galahadcreative.com/blog/simplemmo-v9-0-guilds-guilds-guilds/), [Looking back on 2022](https://www.galahadcreative.com/blog/simplemmo-looking-back-on-2022-a-year-in-review/), [An update on SimpleMMO](https://www.galahadcreative.com/blog/an-update-on-simplemmo/) e [log de atualizações](https://web.simple-mmo.com/updates) — oficial — mar/2021, 2022, jul/2023, 2026.
+33. [SimpleMMO Wiki: Guilds](https://simplemmo.fandom.com/wiki/Guilds) e [Diamonds](https://simplemmo.fandom.com/wiki/Diamonds) — wiki de fãs (via `C05`).
+34. [IdleMMO Wiki: World Bosses](https://support.idle-mmo.com/wiki/combat/world-bosses), [Conquest](https://support.idle-mmo.com/wiki/guilds/conquest), [Seasons](https://support.idle-mmo.com/wiki/guilds/seasons) e [patch notes](https://web.idle-mmo.com/patch-notes) — oficial — 2026 (via `C04`).
+35. [Idle Clans Wiki: Clan](https://idleclans.wiki/w/Clan) e [Tokens](https://idleclans.wiki/w/Tokens); [Halloween bonus experience event](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114033648) — wiki e oficial — out/2026 (via `C02`).
+36. [Milky Way Idle Wiki: Beginner Guide](https://milkywayidle.wiki.gg/wiki/Milkyway_Idle_Beginner_Guide), [Marketplace](https://milkywayidle.wiki.gg/wiki/Marketplace) e [Cowbell Store](https://milkywayidle.wiki.gg/wiki/Cowbell_Store) — wiki (via `C01`).
+37. [Idlescape: patch 0.23.0](https://www.idlescape.com/news/beta-0-23-0) — oficial — jun/2025 (via `C03`).
+38. [Kabam celebra 7 anos de Shop Titans — CogConnected](https://cogconnected.com/2026/06/kabam-celebrates-7-years-of-shop-titans-with-new-content-and-rewards/) e [guia de mercado](https://shopkeeper.neocities.org/docs/personal-guides/guide-market) — imprensa e comunidade — 16/06/2026 (via `C06`).
+39. [Legends of IdleOn Wiki: Dungeons](https://idleon.wiki/wiki/Dungeons) — wiki (via `B02`).
+40. [Melvor Idle Wiki: Game Mode](https://wiki.melvoridle.com/w/Game_Mode) — wiki (via `B01`).
+41. [Egg Inc. Wiki: Contracts (revisão 9822)](https://egg-inc.fandom.com/wiki/Contracts?oldid=9822) e [TouchTapPlay: co-op tips](https://www.touchtapplay.com/egg-inc-how-to-play-co-op-tips-and-cheats/) — wiki de fãs e guia (via resumo de busca).
+
+**Old School RuneScape, Path of Exile, Diablo IV**
+42. [Twisted League — OSRS Wiki](https://oldschool.runescape.wiki/w/Twisted_League) e [Polling Charter — Jagex](https://osrs.runescape.com/polling-charter) — wiki e oficial (via `F03`).
+43. [OSRS prepares for final (Deadman) Annihilation — Jagex](https://www.jagex.com/news/old-school-runescape-prepares-for-final-(deadman)-annihilation) — oficial — 20/02/2026; [MeinMMO sobre a Liga V](https://mein-mmo.de/en/23-year-old-mmorpg-played-more-than-new-world-throne-and-liberty-and-lost-ark-combined-thanks-to-a-major-event,1203195) — imprensa — nov/2024; [Warding — PCGamesN](https://www.pcgamesn.com/old-school-runescape/warding) — imprensa — 25/07/2019 (via `F03`).
+44. [SteamCharts — Path of Exile](https://steamcharts.com/app/238960) — dados (via `F05`).
+45. [Development Manifesto: Harvest Crafting — GGG](https://www.pathofexile.com/forum/view-thread/3069670) — oficial — 2021; [GameRant](https://gamerant.com/path-of-exile-harvest-nerf-fans-upset/) e [Destructoid](https://destructoid.com/?p=265083) — imprensa (via resumo de busca).
+46. [PoE: fadiga ou algo pior? — Prima Games](https://primagames.com/tips/is-path-of-exiles-dwindling-player-count-simply-due-to-fatigue-or-is-it-something-more-abhorrent) e [fórum oficial do PoE](https://www.pathofexile.com/forum/view-thread/3513537) — imprensa e comunidade (via resumo de busca).
+47. [Diablo IV — Wikipedia](https://en.wikipedia.org/wiki/Diablo_IV) — wiki; [GamesRadar](https://gamesradar.com/diablo-4s-controversial-season-1-leads-players-to-a-staggering-revelation-you-can-stop-playing-when-youre-not-having-fun), [Kotaku](https://kotaku.com/diablo-4-season-1-grind-burnout-level-xp-loot-rpg-1850621843) e [PC Gamer](https://pcgamer.com/diablo-4-developers-gently-suggest-players-should-take-a-break-as-the-brutal-grind-continues-to-wear-them-down) — imprensa — 2023 (via resumo de busca).
+
+**World of Warcraft**
+48. [Torghast, Tower of the Damned](https://warcraft.wiki.gg/wiki/Torghast,_Tower_of_the_Damned), [Crafting order](https://warcraft.wiki.gg/wiki/Crafting_order), [Garrison](https://warcraft.wiki.gg/wiki/Garrison), [Money](https://warcraft.wiki.gg/wiki/Money) e [Rest — warcraft.wiki.gg](https://warcraft.wiki.gg/wiki/Rest) — wiki.
+49. [Torghast overhaul — PC Gamer](https://pcgamer.com/world-of-warcrafts-roguelike-dungeon-is-being-overhauled-so-that-failing-to-beat-it-wont-ruin-your-night), [Torghast is heavily criticized — Mein-MMO](https://mein-mmo.de/en/wow-torghast-is-heavily-criticized-as-blizzard-removes-the-fun,630461) e [fórum oficial](https://us.forums.blizzard.com/en/wow/t/it-still-astounds-me-how-badly-blizzard-botched-torghast/1719660?page=5) — imprensa e comunidade — 2021 (via resumo de busca).
+50. [World of Warcraft: Warlords of Draenor — Wikipedia](https://en.wikipedia.org/wiki/World_of_Warcraft:_Warlords_of_Draenor) — wiki.
+51. [Garrisons, part I: phasing — Blessing of Kings](https://blessingofkings.blogspot.com/2015/07/garrisons-part-i-phasing.html), [Looking back: the best and worst of Warlords — Tenton Hammer](https://www.tentonhammer.com/articles/looking-back-the-best-and-worst-of-warlords) e [The problem with garrisons isn't garrisons — Massively OP](https://massivelyop.com/2016/03/25/wow-factor-the-problem-with-garrisons-isnt-garrisons/) — blog e imprensa — 2015–2016 (via resumo de busca).
+52. [Examples of layering exploits and problems — fórum oficial](https://us.forums.blizzard.com/en/wow/t/examples-of-layering-exploits-and-problems/198240), [Lurker Lounge](https://lurkerlounge.com/forums/printthread.php?tid=6143) e [top 1% de Mythic+ em revisão](https://us.forums.blizzard.com/en/wow/t/uh-oh-top-1-of-mythic-runs-under-review/2343265) — comunidade.
+53. [Entrevista sobre o sistema de descanso — GameBanshee](https://www.gamebanshee.com/kw93q) e [Framing and World of Warcraft's Rest System — Psychology of Games](https://www.psychologyofgames.com/2010/03/framing-and-world-of-warcrafts-rest-system/) — imprensa e análise — mar/2010 (via resumo de busca).
+
+**Guild Wars 2, Warhammer Online, Rift**
+54. [Dynamic event](https://wiki.guildwars2.com/wiki/Dynamic_event) e [World boss — wiki oficial do GW2](https://wiki.guildwars2.com/wiki/World_boss) — wiki oficial.
+55. [Guild Wars 2 Interview — GameBanshee](https://www.gamebanshee.com/9xq) — entrevista (via resumo de busca).
+56. [Warhammer Online: Age of Reckoning — Wikipedia](https://en.wikipedia.org/wiki/Warhammer_Online:_Age_of_Reckoning) — wiki.
+57. [WAR public quests: hey, where is everybody? — Tenton Hammer](https://www.tentonhammer.com/articles/war-public-quests-hey-where-is-everybody), [PQ 2.0 — Kill Ten Rats](https://www.killtenrats.com/2010/08/19/pq-2-0), [Joystiq: entrevista com Jeff Hickman](https://www.engadget.com/2008-09-25-joystiq-interview-jeff-hickman-on-war.html) e [Rifts in danger of collapsing? — Engadget](https://www.engadget.com/2011-07-13-enter-at-your-own-rift-are-rifts-in-danger-of-collapsing.html) — imprensa e blog — 2008–2011 (via resumo de busca).
+
+**Star Wars Galaxies, Final Fantasy XIV**
+58. [Star Wars Galaxies — Wikipedia](https://en.wikipedia.org/wiki/Star_Wars_Galaxies) — wiki.
+59. [Crafting — SWG Restoration](https://swgr.org/wiki/crafting), [Resources — SWG Infinity](https://www.swginfinity.com/server-information/resources), [Q&A oficial — GameBanshee](https://gamebanshee.com/uyw), [Skills and Professions — arquivo SWGEmu](https://www.swgemu.com/archive/scrapbookv51/data/20070206174400) e [SWG Skill Tree Calculator — West Games](https://west-games.com/swg-skill-tree-calculator/) — wikis de emulador, arquivo e ferramenta de fãs (via resumo de busca).
+60. [Retainer Ventures](https://ffxiv.consolegameswiki.com/wiki/Retainer_Ventures) e [Ventures — Console Games Wiki](https://ffxiv.consolegameswiki.com/wiki/Ventures) — wiki da comunidade.
+61. [Endwalker gathering cuts HQ materials — Siliconera](https://www.siliconera.com/ffxiv-endwalker-gathering-cuts-high-quality-materials/) e [fórum oficial da Square Enix](https://forum.square-enix.com/ffxiv/showthread.php?p=5671626) — imprensa e comunidade (via resumo de busca).
+
+**Mobile, roguelites e outros**
+62. [Super Auto Pets](https://en.wikipedia.org/wiki/Super_Auto_Pets), [Backpack Battles](https://en.wikipedia.org/wiki/Backpack_Battles), [Loop Hero](https://en.wikipedia.org/wiki/Loop_Hero), [Slay the Spire](https://en.wikipedia.org/wiki/Slay_the_Spire), [Hearthstone](https://en.wikipedia.org/wiki/Hearthstone) e [Cookie Clicker — Wikipedia](https://en.wikipedia.org/wiki/Cookie_Clicker) — wiki.
+63. [Golden Cookie — Cookie Clicker Wiki](https://cookieclicker.wiki.gg/wiki/Golden_Cookie) — wiki (via `A01`); [discussão no Steam](https://steamcommunity.com/app/1454400/discussions/0/6821308966010577727) — comunidade.
+64. [AFK Arena puts Lilith into the billionaire club — Deconstructor of Fun](https://www.deconstructoroffun.com/blog/2019/6/6/afk-arena-puts-lilith-into-the-billionaire-club) — análise — 06/06/2019 (via `E01`); [AFK Arena exists — Indiecator](https://indiecator.org/2020/12/26/afk-arena-exists/) — blog — 26/12/2020; [Gamebrain](https://gamebrain.co/game/afk-arena-1) — agregador (via resumo de busca).
+65. [Idle Heroes reviews — JustUseApp](https://justuseapp.com/en/app/1153461915/idle-heroes-idle-games/reviews) e [Unstar](https://unstar.app/blog/is-divine-magic-goddess-legend-mushroom-watcher-realms-hero-wars-idle-heroes-gacha-games-legit-2026) — agregadores de reviews (via `E02`).
+66. [Lords Mobile — discussão no Steam](https://steamcommunity.com/app/1041320/discussions/0/2524779067026651305), [reviews de Rise of Kingdoms — AppGamer](https://www.appgamer.com/rise-of-kingdoms/reviews/?show=3) e [Rise of Kingdoms — Wikipedia](https://en.wikipedia.org/wiki/Rise_of_Kingdoms) — comunidade e wiki (via resumo de busca).
+67. [Pokémon Go — Wikipedia](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go) e [Helldivers 2 — Wikipedia](https://en.wikipedia.org/wiki/Helldivers_2) — wiki.
+68. [Fortnite: 12,3 milhões no show de Travis Scott — GamesRadar](https://gamesradar.com/fortnite-travis-scott-event-sees-123-million-players-in-first-show), [Game Developer](https://gamedeveloper.com/business/-i-fortnite-s-i-virtual-travis-scott-gig-attracted-a-record-12-3-million-concurrent-players) e [PocketGamer.biz](https://www.pocketgamer.biz/fortnites-astronomical-travis-scott-concert-player-record) — imprensa — abr/2020 (via resumo de busca).
+69. [ArcheAge](https://en.wikipedia.org/wiki/ArcheAge), [Travian](https://en.wikipedia.org/wiki/Travian), [Eco (2018)](https://en.wikipedia.org/wiki/Eco_(2018_video_game)) e [A Tale in the Desert — Wikipedia](https://en.wikipedia.org/wiki/A_Tale_in_the_Desert) — wiki.
+70. [Sitters and Duals — suporte oficial da Travian](https://support.travian.com/en/articles/14-sitters-and-duals) e [Stricter Rules for Sitter Accounts — blog oficial](https://blog.travian.com/2021/03/stricter-rules-for-sitter-accounts) — oficial — 2021 (o blog, via resumo de busca).
+71. [Guide 06: Fleetsaving Guide — fórum oficial do OGame](https://board.origin.ogame.gameforge.com/index.php/Thread/785-Guide-06-Fleetsaving-Guide) — comunidade em fórum oficial (via resumo de busca; o link hoje redireciona).
