@@ -1,5 +1,29 @@
 # Notas de integração do GDD (arquivo de trabalho)
 
+## Resoluções do diretor (2026-11-11) — aplicar em todos os módulos na revisão de consistência
+
+| # | Conflito | Resolução | Módulos a editar |
+|---|---|---|---|
+| R1 | Refeições por hora de combate: 1 (04) × 4 (06) | **1 refeição por combatente por hora** (04). | 06 |
+| R2 | Ouro nos drops de combate: 05/06 listam; 04/07 dizem zero | **Combate não solta ouro** (04, 07). | 05, 06 |
+| R3 | Qualidades: 4 para tudo (bíblia) × 2 nos consumíveis (05/06) | **Consumíveis com 2 graus (Comum e Fino);** equipamento com 4. | bíblia |
+| R4 | Tempo de ação 3–30 s (bíblia) × transformação T5–T6 e criação longas | **3–30 s só para coleta;** transformação até ~95 s por unidade; criação de 5 a 115 min por peça (05/06). | bíblia |
+| R5 | Níveis de tier | **1, 15, 35, 55, 75, 90** (06); datas do 02 ficam ~5% mais tardias. | bíblia, 02 |
+| R6 | Definição de fila | **Filas paralelas, uma por atividade, nunca duas no mesmo ofício** (02). | bíblia |
+| R7 | Lance garimpar/apurar (02) × Faro e Inspiração (05/06) | **Fica o Faro e a Inspiração do 05/06;** a bancada ativa do 02 mantém só "firme" e "forçar". | 02 |
+| R8 | "Faro" no 03 (passiva) × "Faro" no 05 (ferramentas) | Passiva do 03 renomeada para **"Tino"** (já feito no 03). | — |
+| R9 | Taxas visíveis no 12 ("com você aqui / fora 80%") × regra do 02 (a aba aberta não muda nada) | **Vale o 02:** a fila rende igual com a aba aberta ou fechada; o 12 mostra a taxa ausente e a bancada ativa como coisas separadas. | 12 |
+| R10 | Primeiro nível 30: D4–D7 (02) × D2–D4 (12) | **Bônus de calouro ×1,6 na XP de ofício nos 3 primeiros dias** (proposta do 02), para o primeiro 30 cair entre D2 e D4. | 02, 12 |
+| R11 | "Habilidades abrem no nível 10 do ofício mestre" (06) ambíguo | Esclarecer: as habilidades do ofício abrem no nível 10 **do ofício**, para mestres e aprendizes; o teto de aprendiz limita só tier e qualidade. | 06 |
+| R12 | Offline do cliente | **PWA com offline só de leitura** (14) vira decisão vigente; o servidor é a única verdade. | bíblia, 13 |
+| R13 | Mérito | **Duas contas (vitalício e da Era)**, que ficam com a conta no Bazar de Personagens; "prioridade do Mérito" vale só para ordem de escolha. | bíblia, 07, 09 |
+| R14 | Glossário | Acrescentar os termos novos dos módulos (02, 03/04, 05/06, 09/10, 11/12, 13) num anexo do glossário da bíblia. | bíblia |
+| R15 | Depois do teto de offline | **Mais 12 h a 25%** em vez de corte seco (02). | bíblia |
+
+**Dependem da simulação (08):** ferramenta que acelera a fila (02 × 05/06); paridade do Coin (R$ 1,00 do 11 × ~R$ 0,10 do 07); teto de emissão em unidades × valor de referência e excedente "nasce preso" × "portão de saída"; taxa da Troca para Coins (3% × 12%).
+
+**Dependem do Gabriel (checkpoint 3):** prólogo de 5 minutos sem conta antes da verificação de idade (12 e 13).
+
 ## 03 e 04 — Personagem e combate (concluídos em 2026-11-11, com tema medieval)
 
 **Decisões centrais [H]:**
