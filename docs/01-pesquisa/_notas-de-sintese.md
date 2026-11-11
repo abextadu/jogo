@@ -234,6 +234,19 @@ E04 escolhido por dados: Capybara Go! liderou o ranking de idle RPG da Sensor To
 7. **Servidor novo com calendário funciona como temporada:** o S&F abriu um a cada ~6 semanas entre 2023 e 2026, com bônus de pré-registro e fusões, mas o P2W se concentra na largada ([number13](https://en.number13.de/shakes-fidget-when-is-the-release-of-a-new-server)). → Temporadas previsíveis, com fusões e limite de poder pago no início.
 8. **API oficial com chaves por escopo, termos obrigatórios e a regra "1 ação do usuário = 1 requisição"**; o TornTools tem 50 mil usuários ([Torn API](https://www.torn.com/api.html)). → API pública e política de scripts desde o início.
 
+## 03 — Além do idle (concluído em 2026-11-11)
+
+18 mecânicas avaliadas (as 11 pedidas + missões delegadas, co-ops com prazo, transporte com risco, eventos dinâmicos, política, proteções de ausência, metas comunitárias). Ranking no próprio estudo: **metas comunitárias em 1º; território em último** (só assíncrono, por atividade e mais tarde).
+
+1. **Participar deve ser um orçamento de decisões que se acumula, não presença:** dois ataques por membro numa guerra de 47 h no Clash of Clans ([Supercell](https://supercell.com/en/games/clashofclans/blog/news/clan-wars-explained-part-1-preparation-day/)); no IdleMMO dá para entrar na fila do chefe mundial até 2 h antes ([wiki](https://support.idle-mmo.com/wiki/combat/world-bosses)). → Mecânicas ativas com cargas acumuláveis e simulação no servidor contra *snapshots*.
+2. **Proteger o ausente funciona melhor como prêmio que como penalidade:** o rested XP do WoW era penalidade no beta e virou bônus de 200%/100% ([Psychology of Games](https://www.psychologyofgames.com/2010/03/framing-and-world-of-warcrafts-rest-system/)). → Bônus de retorno sim, penalidade de ausência não; nunca vender teto offline nem escudos.
+3. **Em território, o defensor pode dormir:** o EVE criou janelas de ataque anunciadas e um cofre com 50% da produção protegida ([CCP, set/2024](https://www.eveonline.com/news/view/equinox-update-enhanced-skyhooks)). → Raide ou território sempre com janela e parte protegida.
+4. **Renda territorial passiva vira bola de neve:** a Sandbox cortou essa renda no Albion em 2021 ([dev](https://devtrackers.gg/albion/p/36a1bb7c-changes-for-guild-season-14)).
+5. **O dreno pode virar bem público** (Milky Way Idle) → metas comunitárias em 1º no ranking.
+6. **Progresso offline que gera moeda negociável é emissão monetária** (mesas de missões do WoW; o SimpleMMO cortou o ouro dos chefes). → Cada sistema com orçamento de emissão; recompensas ativas em boa parte intransferíveis.
+7. **Conteúdo coletivo morre sem população:** missões públicas do Warhammer Online vazias ([Tenton Hammer](https://www.tentonhammer.com/articles/war-public-quests-hey-where-is-everybody)); no Idlescape as temporadas dividiram a base e esvaziaram os livros. → Reforço de NPC, uma temporada por vez, temporadas como mundos paralelos (modelo OSRS) e RMT fora delas.
+8. **Mudar a estrutura depois do lançamento é catastrófico:** a NGE do Star Wars Galaxies e o Harvest do PoE ([manifesto](https://www.pathofexile.com/forum/view-thread/3069670)). → Carta de princípios publicada no lançamento: profissões, quanto do crafting é controlável, onde o RMT vale e o que vai a voto.
+
 ## Observações do orquestrador sobre fichas já gravadas
 
 - **C01 Milky Way Idle:** livro de ordens com taxa de 4% que vira, todo dia, bônus coletivo do servidor; arredondamento da taxa para cima contra monopólio de itens baratos; degraus de preço ajustados várias vezes; Cowbells vendidas em "sacos" negociáveis (token de fato); horas de offline e vagas de fila vendidas por Cowbells (ir de 10 h a 72 h custa ~US$ 230–270), e isso é queixa recorrente. Estúdio de duas pessoas; ~70% de queda na média de jogadores no Steam desde o pico de 2025.

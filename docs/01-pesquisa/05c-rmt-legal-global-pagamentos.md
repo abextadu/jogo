@@ -58,12 +58,13 @@
 ### 1.3 Digital Fairness Act (proposta)
 
 - **[F]** A consulta pública da Comissão sobre o Digital Fairness Act (DFA) correu de 17/7 a 24/10/2025 ([Comissão, "Have your say"](https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14622-Digital-Fairness-Act_en); cronologia em [Wikipedia](https://en.wikipedia.org/wiki/Digital_Fairness_Act)).
-- **[F] Em 7/11/2026 a proposta ainda não tinha sido apresentada.** Escritórios esperam a publicação em 11/11/2026, junto com uma revisão do Regulamento CPC que pode dar à Comissão poder de aplicação direta; "loot boxes e moedas de jogo" e proteção de menores estão entre os temas prováveis ([CMS, 19/10/2026](https://cms.law/en/fra/legal-updates/inside-the-eu-s-planned-digital-fairness-act-digital-design-subscription-traps-and-influencer-marketing)). A MLex citou outras datas possíveis, como 18/11 ([MLex, set./2026](https://www.mlex.com/mlex/articles/2529049/eu-digital-fairness-act-on-consumer-protection-tentatively-eyed-for-november)).
+- **[F] Proposta apresentada em 11/11/2026**, segundo a imprensa, num pacote do consumidor que inclui a revisão do Regulamento CPC, que pode dar à Comissão poder de aplicação direta ([Trending Topics](https://www.trendingtopics.eu/digital-fairness-act-iab-criticism/); [CMS, 19/10/2026](https://cms.law/en/fra/legal-updates/inside-the-eu-s-planned-digital-fairness-act-digital-design-subscription-traps-and-influencer-marketing)). **Não li o texto oficial**: os detalhes abaixo vêm de um rascunho vazado na véspera.
+- **[F] O rascunho vazado** previa: mostrar o valor em dinheiro real do que se compra com moeda virtual paga (art. 14); moeda paga **desligada por padrão** em jogos voltados a menores, liberável só com aprovação dos responsáveis; proibição de oferecer sistemas de recompensa variável pagos (loot boxes) **a menores** (art. 15), com probabilidade por item e opção de desligar para os demais; proibição de mecânicas *pay-to-progress* e *pay-to-win* **para menores** (art. 16); e recursos de uso compulsivo que o jogador possa desligar (art. 17). O jogo seria tratado como voltado a menores, por exemplo, com classificação PEGI abaixo de 18 ou com 25% ou mais de público menor ([Mobilegamer.biz, 10/11/2026](https://mobilegamer.biz/eus-draft-digital-fairness-act-takes-aim-at-loot-boxes-virtual-currencies-and-pay-to-win/)).
 - **[F]** A rede CPC já cita como base técnica o relatório do BEUC sobre moedas premium (*Game Over*) e o documento de posição da autoridade holandesa ACM (2025) sobre proteção de jogadores ([Declaração conjunta da CPC, notas 5 e 6](https://commission.europa.eu/document/download/75ff33d4-77a6-4f14-916a-766a8c6c281c_en?filename=CPC%20Network%20Joint%20Statement%20of%20the%20Consumer%20Protection%20Cooperation%20Network%20on%20online%20games.pdf)).
 
 **Nossa leitura**
 
-- **[H]** O DFA é o caminho pelo qual os princípios da CPC podem virar regra dura (preço em moeda real obrigatório, limite a moedas intermediárias, talvez restrição de loot box para menores). Como a proposta ainda passará por Parlamento e Conselho, vigência antes de 2028 parece improvável. Desenhar a loja já cumprindo os sete princípios custa pouco e antecipa o pior cenário.
+- **[H]** O DFA é o caminho pelo qual os princípios da CPC viram regra dura. Como a proposta ainda passará por Parlamento e Conselho, vigência antes de 2028 parece improvável, mas o rumo está dado: preço em moeda real, moeda paga e loot box desligadas para menores e nada de *pay-to-win* para eles. Para nós, a pergunta nova é se um **token comprado por um adulto e revendido por ouro a um menor** conta como *pay-to-progress* do menor. **Validar com advogado** quando o texto oficial sair. Desenhar a loja já cumprindo os sete princípios da CPC custa pouco e antecipa o pior cenário.
 
 ### 1.4 Moeda eletrônica, serviços de pagamento e a exceção de rede limitada
 
@@ -200,5 +201,87 @@
 
 - **[F]** A Lei de Promoção e Regulação de Jogos Online (2025), sancionada em 22/8/2025, proíbe oferecer, anunciar ou facilitar "jogos online a dinheiro" (com aposta ou depósito na expectativa de ganho em dinheiro), inclusive de fora do país, e proíbe bancos de processar pagamentos para eles ([SCC Online, 24/8/2025](https://www.scconline.com/blog/post/2025/08/24/promotion-regulation-online-gaming-act-2025-legal-reform/); [texto na India Code](https://www.indiacode.nic.in/bitstream/123456789/22148/1/a2025-32.pdf)). **[NV]** Não confirmei a data de início de vigência nem as regras.
 - **[H]** Um modo com saque em dinheiro precisaria ser bloqueado na Índia.
+
+## 5. Meios de pagamento
+
+### 5.1 Bandeiras: Visa e Mastercard
+
+- **[F] Categoria e risco:** a Visa trocou em 1/5/2023 seu programa de "alto risco de marca" pelo Visa Integrity Risk Program (VIRP); lojistas de "alto risco de integridade" precisam ser registrados pelo adquirente. Fontes do setor incluem nessas categorias os **jogos de habilidade sem cartão presente** (MCC 5816, "Digital Goods – Games", quando há taxa de entrada e prêmio), as plataformas de cripto (MCC 6051 e 6012) e serviços de armazenamento online (MCC 4816), mas divergem sobre o nível de cada um ([CCBill, VIRP](https://ccbill.com/doc/visa-integrity-risk-program-virp); [G2 Risk Solutions](https://g2risksolutions.com/resources/blog/visa-replaces-global-brand-protection-program/); [Basis Theory](https://blog.basistheory.com/high-risk-mccs)). A compra de "quase-dinheiro" (moeda estrangeira, cripto, ordens de pagamento) usa o MCC 6051 e costuma ser tratada pelo emissor do cartão como adiantamento de dinheiro ([Basis Theory](https://blog.basistheory.com/high-risk-mccs); [Didit](https://didit.me/blog/memecoin-credit-card-merchant-code-kyc-2026/)). **[NV]** Não li o manual da Visa; os detalhes vêm de prestadores de pagamento.
+- **[F] Monitoramento de disputas:** o programa VAMP da Visa (desde abril de 2025) soma fraudes e disputas; o limite de lojista "excessivo" caiu de 2,2% para **1,5%** em 1/4/2026 na maioria das regiões, com cobrança de US$ 8 por disputa. Na Mastercard, o lojista é "excessivo" com 100 ou mais *chargebacks* no mês e taxa de 1,5%, e "muito excessivo" com 300 e 3% ([Chargeflow](https://www.chargeflow.io/blog/what-are-visas-new-vamp-rules-a-2025-guide-for-merchants); [Beancount, 10/7/2026](https://beancount.io/blog/2026/07/10/visa-mastercard-vamp-chargeback-monitoring-2026-guide)). São blogs de fornecedores; os números exatos devem ser confirmados com o adquirente.
+
+**Nossa leitura**
+
+- **[H]** Moeda de jogo sem saque é "bem digital" comum. Com saque ou leilão em dinheiro, a mesma compra pode ser lida como **quase-dinheiro** ou **jogo com prêmio**, o que leva a registro de alto risco, taxas maiores, reservas e emissores recusando a compra. E como os programas medem fraude e disputa juntas, um único ataque de cartões roubados pode colocar o estúdio acima de 1,5% num mês.
+
+### 5.2 Gateways: o que aceitam e o que derruba a conta
+
+| Gateway | Venda da própria moeda/itens pelo estúdio | Dinheiro entre jogadores (leilão, bazar) | Moeda sacável ou que "sai do jogo" | Sorte ou habilidade com prêmio em dinheiro |
+|---|---|---|---|---|
+| **Stripe** ([empresas restritas](https://stripe.com/legal/restricted-businesses)) | Aceita: a venda de moeda virtual ou itens é restrita "a menos que o negócio seja o operador do ambiente virtual"; créditos do próprio vendedor "podem estar sujeitos a limites" | "Transferência de dinheiro entre pessoas" é **proibida**; facilitação e agregação de pagamentos exige aprovação | Créditos virtuais e valor armazenado de terceiros exigem aprovação; venda secundária de NFT é proibida | Jogos de sorte, torneios de jogos com prêmio e taxas de entrada que prometem prêmio são **proibidos** |
+| **PayPal** ([política de uso](https://paypal.com/en/webapps/mpp/ua/acceptableuse-full), versão de 29/10/2022) | Não encontrei restrição à venda direta | Transmissão de dinheiro e venda de valor armazenado exigem aprovação prévia | "Criptomoeda" é definida de forma ampla, incluindo moedas de jogo | Jogos com taxa de entrada e prêmio exigem aprovação prévia |
+| **Adyen** ([lista](https://www.adyen.com/legal/list-restricted-prohibited)) | Não encontrei restrição à venda direta | Remessa e serviços financeiros: restritos para lojista e proibidos para plataforma | Carteira ou moeda eletrônica que pode ser sacada ou que "sai do mundo virtual": **restrita** para lojista e **proibida** para plataforma | Jogo de azar ou de habilidade com prêmio de valor: listado; jogo de azar sediado nos EUA: proibido |
+| **Mercado Pago** ([atividades proibidas](https://global-selling.mercadopago.com/help/18572)) | Não encontrei restrição | Não encontrado | Não encontrado | Processar jogos de azar, cassinos e apostas, online ou presenciais, é proibido |
+| **PagBank e Pagar.me** | Não encontrei listas públicas de atividades proibidas (busquei por "produtos proibidos" e "atividades restritas") | — | — | No Brasil, a MP 1.394/2026 proíbe instituições de pagamento de processar apostas de quota fixa (05b) |
+
+Fontes: as indicadas na primeira coluna, todas acessadas em nov./2026. Na PayPal não consegui abrir a página completa; o resumo vem de trechos indexados, e a política varia por país.
+
+**Nossa leitura**
+
+- **[H] O padrão é o mesmo em todos os gateways:** o estúdio vendendo a própria moeda é negócio normal; o que gera restrição, aprovação especial ou proibição é (1) **moeda que sai do jogo** (saque), (2) **dinheiro passando de um usuário a outro** e (3) **prêmio de valor ligado a sorte ou a taxa de entrada**. Um leilão em dinheiro só funciona com produto específico de marketplace (contas dos vendedores abertas pelo próprio PSP, com KYC), e mesmo assim a Adyen proíbe moeda sacável para plataformas. **Validar com o gateway antes de desenhar**, por escrito.
+
+### 5.3 *Chargebacks* e fraudes típicas em jogos
+
+- **[F]** A Xsolla, intermediadora de pagamentos para jogos, diz que a média de *chargebacks* do setor é de 0,83% (dado da própria empresa, sem metodologia publicada) ([Xsolla](https://xsolla.com/blog/navigating-chargebacks)). Relatório da Chargebacks911 diz que lojistas classificam quase 44% das disputas como fraude "amigável", em que o titular contesta uma compra legítima ([Chargebacks911](https://chargebacks911.com/nearly-44-of-chargebacks-are-labeled-friendly-fraud-finds-a-chargebacks911-report/)).
+- **[C]** Padrões citados por fornecedores do setor: compras de filhos com o cartão salvo dos pais; roubo de contas para esvaziar inventários; teste de cartões roubados com compras pequenas; e itens comprados com fraude que inundam mercados secundários ([Tebex](https://www.tebex.io/resources/why-do-video-games-have-higher-chargeback-rates-than-other-e-commerce); [Chargeflow](https://www.chargeflow.io/blog/video-game-chargeback)).
+
+### 5.4 Lavagem de dinheiro com itens de jogo: dois casos
+
+- **[F] Chaves do CS:GO (2019):** em outubro de 2019, a Valve proibiu que chaves de caixa compradas fossem negociadas ou vendidas no Mercado da Comunidade, porque quase todas as que acabavam revendidas eram, segundo a empresa, *"fraud-sourced"* (vindas de fraude); redes de fraude usavam as chaves para converter dinheiro sujo. Chaves antigas continuaram negociáveis, e a Valve admitiu que a mudança afetaria usuários legítimos ([Engadget, 30/10/2019](https://www.engadget.com/2019-10-30-csgo-fraud-loot-box-key-trades.html); [GamingOnLinux](https://www.gamingonlinux.com/2019/10/valve-ends-counter-strike-global-offensive-container-key-trading-and-selling)).
+- **[F] V-Bucks do Fortnite (2019):** investigação da Sixgill com o jornal The Independent descreveu criminosos que compravam V-Bucks na loja oficial com cartões roubados e revendiam a moeda com desconto na *dark web* e em redes sociais, recebendo em cripto; itens de Fortnite movimentaram mais de US$ 250 mil no eBay em 60 dias ([OCCRP, resumo da reportagem](https://www.occrp.org/en/daily/9109-independent-credit-card-thieves-use-fortnite-to-launder-money); [GameSpot](https://www.gamespot.com/articles/fortnite-v-bucks-being-used-for-money-laundering-s/1100-6464460/)).
+
+**Nossa leitura**
+
+- **[H] O circuito é sempre o mesmo:** dinheiro sujo ou cartão roubado → bem digital **transferível** → venda a um terceiro de boa-fé → dinheiro "limpo" para o criminoso e *chargeback* para o estúdio. Quanto mais líquido o mercado do jogo, melhor ele serve para isso. As defesas são de desenho: carência antes de transferir o que foi comprado com dinheiro, limites de volume para contas novas, KYC para quem vende muito, detecção de circularidade e de preços fora da curva, e canal de denúncia de fraude (que as diretrizes do DSA já pedem a plataformas com transações financeiras).
+
+## 6. Lojas e plataformas
+
+### 6.1 App Store
+
+- **[F] Compras no app (diretriz 3.1.1, versão de 16/10/2026):** desbloquear funcionalidade, inclusive moeda do jogo, exige compra no app (IAP); moeda comprada via IAP **não pode expirar**; loot boxes devem mostrar as chances de cada item **antes** da compra; itens podem ser dados de presente, mas só reembolsados ao comprador original e **não podem ser trocados**; NFTs podem ser vendidos via IAP, mas a posse não pode desbloquear funcionalidades; o app não pode usar cripto como mecanismo de desbloqueio ([Apple, App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)).
+- **[F] Jogos a dinheiro (5.3):** IAP não pode comprar crédito ou moeda para uso em "jogos a dinheiro de qualquer tipo" (5.3.3); jogos a dinheiro precisam de licença em cada local de uso, geobloqueio e app gratuito (5.3.4) ([Apple](https://developer.apple.com/app-store/review/guidelines/)).
+- **[F] Links de pagamento externo:** na loja dos EUA, o app pode ter botões e links para comprar fora do app sem autorização especial; nas demais lojas, só com o *External Purchase Link Entitlement* onde ele existe ([Apple, 3.1.1(a) e 3.1.3](https://developer.apple.com/app-store/review/guidelines/)).
+- **[H]** As diretrizes não falam de troca de itens entre jogadores por dinheiro, mas a soma de 3.1.1 (IAP obrigatório, presente não pode ser trocado) e 5.3.3 indica que **moeda comprada no app que pode virar dinheiro** seria tratada como jogo a dinheiro. Token negociável por ouro, sem saque, tende a passar; saque ou leilão em dinheiro dentro do app, não.
+
+### 6.2 Google Play
+
+- **[F] Pagamentos:** itens digitais, inclusive moeda virtual, passam pelo Google Play Billing (salvo exceções); a moeda virtual comprada **só pode ser usada no app ou jogo em que foi comprada**; loot boxes devem mostrar as chances antes e perto da compra ([Google Play, política de pagamentos](https://support.google.com/googleplay/android-developer/answer/9858738?hl=en)). A página de requisitos por país cita a proibição do ECA Digital no Brasil e as regras coreanas de probabilidade ([Google Play, requisitos por país](https://support.google.com/googleplay/android-developer/answer/6223646?hl=en)).
+- **[F] Jogo a dinheiro:** proibido em geral, salvo apps licenciados e aprovados pelo Google ([Google Play, Real-Money Gambling, Games, and Contests](https://support.google.com/googleplay/android-developer/answer/9877032)).
+- **[F] Epic × Google:** o Google cumpre nos EUA a decisão de outubro de 2024 (links externos e cobrança alternativa); em julho de 2026, Epic e Google desistiram do pedido para alterar a ordem, e o acordo separado entre as duas, com taxas menores, continua ([MacRumors, 15/7/2026](https://www.macrumors.com/2026/07/15/google-third-party-app-stores/); [Alphabet, 10-Q do 3º tri. de 2026](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000084/goog-20260930.htm)). Segundo a Appcharge, o Google ainda não cobrava taxa sobre links externos nos EUA, mas disse que pretende cobrar ([Appcharge](https://www.appcharge.com/blog/epic-v-google-the-settlement-is-off-the-table)).
+
+### 6.3 Epic × Apple e DMA: pagar fora da loja em 2026
+
+- **[F] EUA:** em 11/12/2025, o 9º Circuito manteve a condenação da Apple por desacato, mas anulou a proibição total de comissão sobre compras feitas por link e devolveu o tema à primeira instância; em 6/5/2026 a Suprema Corte negou suspender a decisão e depois aceitou julgar o recurso da Apple (nº 25-1311) ([Digital Policy Alert](https://digitalpolicyalert.org/event/39719-us-court-of-appeals-for-the-ninth-circuit-affirmed-contempt-finding-and-remanded-on-commission-rate-in-epic-games-v-apple); [IPWatchdog, 30/6/2026](https://ipwatchdog.com/2026/06/30/high-court-grants-cert-in-apples-challenge-to-ninth-circuit-contempt-ruling-in-app-store-dispute/)).
+- **[F] União Europeia:** novos termos da Apple desde 1/10/2026: 26% para compras com IAP na App Store, 15% quando o app manda o usuário comprar fora (10% nos programas para pequenos desenvolvedores) e 5% (*Core Technology Commission*) para apps distribuídos fora da App Store; a taxa por instalação acabou ([Apple Newsroom, ago./2026](https://www.apple.com/newsroom/2026/08/apple-announces-changes-for-apps-in-the-european-union/); [The Mac Observer](https://www.macobserver.com/news/eu-app-store-terms-october-1-rate-card/)).
+
+### 6.4 Steam
+
+- **[F]** Desde outubro de 2021, as regras do Steamworks proíbem aplicativos em blockchain que emitam ou permitam trocar criptomoedas ou NFTs ([PC Gamer](https://pcgamer.com/steam-bans-nfts-cryptocurrencies-blockchain); [Engadget](https://www.engadget.com/steam-ban-cryptocurrency-nft-trading-blockchain-valve-165038811.html)); um desenvolvedor relatou ter ouvido da Valve que a regra estende a proibição de itens com valor monetário real ([PCGamesN](https://www.pcgamesn.com/steam/nft-crypto-games-banned-steam)).
+- **[F]** No Mercado da Comunidade, a Steam cobra 5% e a publicadora define a própria taxa (10% no CS2); o dinheiro vai para a carteira Steam, sem saque oficial (ficha [G05](fichas/G05-banana-e-bongo-cat.md), com base no [FAQ da Steam](https://help.steampowered.com/faqs/view/61F0-72B7-9A18-C70B)). O processo de Nova York (seção 3.4) mostra o limite desse modelo quando há mercado cinza tolerado.
+
+### 6.5 PWA × apps nas lojas
+
+- **[F]** A Apple chegou a tirar os web apps da tela inicial na UE no beta do iOS 17.4 e recuou em março de 2024; a Comissão disse que a remoção não era exigida pelo DMA ([Engadget](https://www.engadget.com/apple-backtracks-on-plans-to-get-rid-of-web-apps-on-iphones-in-the-eu-195232177.html)).
+
+**[H] Comparação para decidir na Fase 2**
+
+| Aspecto | PWA (só no site) | App na App Store / Google Play |
+|---|---|---|
+| Comissão | Só a do gateway | IAP obrigatório para moeda e itens (UE: 26% com IAP, 15% por link; EUA: link sem comissão por ora, sob recurso) |
+| RMT | Possível, limitado só pela lei e pelo gateway | Saque ou leilão em dinheiro no app: provável rejeição (5.3.3); moeda do Google só vale no próprio jogo |
+| Moeda premium | Regras do estúdio (respeitando CPC, ECA Digital etc.) | Não pode expirar (Apple), chances de loot box obrigatórias |
+| Menores e classificação | O estúdio resolve verificação de idade e classificação (IARC exige loja ou sistema aprovado; ver 05b) | A loja traz controles parentais e classificação, que a CPC manda usar |
+| Distribuição | Sem descoberta pela loja; instalação manual | Descoberta e confiança, com risco de remoção por mudança de política |
+
+- **[H] Desenho mais seguro:** o mercado entre jogadores e qualquer camada de dinheiro ficam na **web**; os apps de loja vendem só moeda fechada via IAP, ou nada, com link para a loja web onde for permitido. Assim, uma mudança de política de loja não derruba a economia, e a economia não derruba o app.
 
 <!-- CONTINUA -->
