@@ -5,7 +5,7 @@
 
 ## Fase atual
 
-**Fase 1 — Pesquisa profunda: concluída.** 🛑 **Checkpoint da Fase 1 aguardando as decisões do Gabriel.** A Fase 2 só começa com o ok dele.
+**Fase 1 — Pesquisa profunda: concluída.** 🛑 **Checkpoint da Fase 1 decidido pelo Gabriel em 2026-11-11, com ajustes** (tabela abaixo). Antes da Fase 2: confirmar a leitura de "sem limite de tempo de conta" e a salvaguarda das caixas pagas.
 
 | Fase | Entregável | Status |
 |---|---|---|
@@ -15,17 +15,21 @@
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ⚪ Não iniciada |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
 
-## Pendências: decisões do checkpoint da Fase 1
+## Decisões do checkpoint da Fase 1 (2026-11-11)
 
-Detalhe, opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintese.md), seção "Checkpoint da Fase 1".
+Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintese.md), seção "Checkpoint da Fase 1". Consequências e salvaguardas na seção "Decisões do Gabriel" do mesmo arquivo.
 
-| # | Decisão | Recomendação do estúdio | Decisão do Gabriel |
+| # | Decisão | Recomendação do estúdio | **Decisão do Gabriel** |
 |---|---|---|---|
-| 1 | Até onde vai o dinheiro real | (A) Dinheiro só entra: token-item revendável por ouro uma vez; nada de saque, leilão em reais, crédito em reais ou venda de contas | — |
-| 2 | Aleatoriedade paga | (A) Nenhuma, nem com dinheiro nem com ouro | — |
-| 3 | Para quem é o jogo | (A) Para todos, com modo protegido para menores; vender token e comprar acima de um teto só para adulto verificado | — |
-| 4 | Onde e como lançamos | (A) Brasil primeiro, bilíngue, servidor no Brasil, Pix, PWA; Steam e lojas depois, sem RMT nas lojas | — |
-| 5 | Quando trazer advogado | (A) Agora, em paralelo à Fase 2, com as 8 perguntas que travam o GDD | — |
+| 1 | Até onde vai o dinheiro real | (A) Dinheiro só entra; token revendável por ouro uma vez | **(B) ajustada:** token oficial + bazar oficial de contas, sem limite de tempo de conta; **tokens e ouro transferíveis livremente entre jogadores; RMT informal deixado em aberto** (o estúdio não intermedia nem proíbe) |
+| 2 | Aleatoriedade paga | (A) Nenhuma | **(C) ajustada:** caixas pagas (adultos), compráveis com token **ou** ouro, no estilo "mystic bag" |
+| 3 | Para quem é o jogo | (A) Todos, com modo protegido | **(B):** jogo inteiro só para maiores de 18 |
+| 4 | Onde e como lançamos | (A) Brasil primeiro, bilíngue, PWA, Pix | **(A)** |
+| 5 | Quando trazer advogado | (A) Agora, em paralelo à Fase 2 | **(C):** seguir sem parecer jurídico e ajustar depois |
+
+**Pendências antes da Fase 2:**
+- Confirmar a leitura de "sem limite de tempo de conta": bazar de contas desde o lançamento (sem esperar 18–24 meses) e/ou nenhuma idade mínima de conta para negociar.
+- Escolher a salvaguarda das caixas pagas: conteúdo preso à conta, ou caixa só com ouro, ou manter como decidido.
 
 ## Entregáveis da Fase 1
 
@@ -47,7 +51,7 @@ Detalhe, opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/
 - [x] `07-tecnica-idles-online.md` — técnica de idles online
 - [x] `08-mercado-posicionamento.md` — mercado e posicionamento
 - [x] `_notas-de-sintese.md` — achados de cada relatório, com links (arquivo de trabalho)
-- [ ] 🛑 Checkpoint da Fase 1 (decisões acima)
+- [x] 🛑 Checkpoint da Fase 1: decisões tomadas em 2026-11-11 (duas confirmações pendentes)
 
 ## Decisões tomadas
 
@@ -58,6 +62,11 @@ Detalhe, opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/
 | 2026-11-06 | Pesquisa com subagentes em paralelo, seguindo `METODOLOGIA.md`. | Claude |
 | 2026-11-06 | Ampliação da lista de jogos além do mínimo pedido (Egg Inc., Shop Titans, GW2, Black Desert, Throne and Liberty/Lost Ark, Entropia, Axie/Web3, New World, Banana/Bongo Cat, radar 2023–2026). | Claude |
 | 2026-11-07 | Fichas secundárias pesquisadas com o Sonnet; o resto no Opus. | Gabriel |
+| 2026-11-11 | RMT: token oficial + bazar oficial de contas; tokens e ouro transferíveis livremente; RMT informal em aberto. | Gabriel |
+| 2026-11-11 | Caixas pagas no estilo "mystic bag", compráveis com token ou ouro. | Gabriel |
+| 2026-11-11 | Jogo inteiro para maiores de 18. | Gabriel |
+| 2026-11-11 | Lançamento: Brasil primeiro, bilíngue (PT-BR e inglês), servidor no Brasil, Pix, PWA; Steam e lojas depois. | Gabriel |
+| 2026-11-11 | Seguir sem parecer jurídico por enquanto; ajustar depois. | Gabriel |
 
 ## Lições de processo (para as próximas fases)
 

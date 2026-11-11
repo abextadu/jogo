@@ -127,6 +127,43 @@ Os três conceitos da Fase 2 vão variar na fantasia, na estrutura e no tipo de 
 - (C) Seguir sem parecer e ajustar depois.
 - *Por quê:* o modelo de RMT condiciona o GDD inteiro, e as normas mudam em semanas (MP 1.394, ANPD, Digital Fairness Act). Mudar a economia depois de desenhada é caro.
 
+### Decisões do Gabriel (2026-11-11)
+
+| # | Decisão |
+|---|---|
+| 1 | **(B) ajustada.** Token oficial e bazar oficial de contas, sem limite de tempo de conta. Tokens e ouro transferíveis livremente entre jogadores; o RMT informal fica em aberto (o estúdio não intermedia nem proíbe). |
+| 2 | **(C) ajustada.** Caixas pagas no estilo "mystic bag", compráveis com token ou com ouro. |
+| 3 | **(B).** O jogo inteiro é para maiores de 18. |
+| 4 | **(A).** Brasil primeiro, bilíngue, servidor no Brasil, Pix, PWA; Steam e lojas depois. |
+| 5 | **(C).** Seguir sem parecer jurídico e ajustar depois. |
+
+### O que muda com essas decisões (advogado do diabo)
+
+**O que fica melhor.** Com o jogo inteiro 18+ e idade verificada, cada conta passa a corresponder a um adulto identificado. Isso afasta a maior parte do risco do ECA Digital e cria o melhor "custo de conta" contra bots e multicontas que a pesquisa encontrou ([05b](05b-rmt-legal-brasil.md); [04b](04b-economia-mercados-protecoes-bots.md)). O bazar de contas tem precedente de sucesso no Tibia (~13% da receita da CipSoft em 2025 — [F04](fichas/F04-tibia.md)). E a troca livre aproxima o jogo do que o brasileiro já faz no mercado cinza ([08](08-mercado-posicionamento.md)).
+
+**O ponto de maior risco** [H, com base no 05b e no 05c]. São três elementos juntos:
+- pagamento (token comprado em reais, ou ouro que vale reais);
+- sorte (a caixa);
+- prêmio com valor em dinheiro (o conteúdo é negociável e há RMT informal aberto).
+
+Essa é a configuração que o estudo jurídico marcou como luz vermelha: reúne os elementos de jogo de azar no Brasil (LCP, art. 50) e é exatamente a tese do processo de Nova York contra a Valve ([05b](05b-rmt-legal-brasil.md), [05c](05c-rmt-legal-global-pagamentos.md)). Pode também levar gateways a recusar o jogo, e lojas de apps a barrarem o app. Sem parecer jurídico, esse risco fica sem avaliação profissional.
+
+**Outros efeitos esperados** [H]:
+- **Bots e farmers:** ouro livremente transferível com RMT aberto é o maior ímã de bots da pesquisa ([G05](fichas/G05-banana-e-bongo-cat.md), [F09](fichas/F09-throne-and-liberty-e-lost-ark.md)).
+- **Chargeback:** token comprado com cartão roubado, transferido na hora e vendido por Pix ([05d](05d-rmt-recomendacao.md)).
+- **Golpes sem recurso:** o estúdio não intermedia o RMT informal, então golpes entre jogadores chegam ao suporte sem solução.
+- **Token como moeda paralela:** circulando sem limite, o token pode se aproximar de "ativo virtual" (Lei 14.478) — ponto amarelo.
+
+**Salvaguardas que preservam as decisões** (propostas para a Fase 2; nenhuma reverte o que foi decidido):
+
+| # | Salvaguarda | O que resolve |
+|---|---|---|
+| S1 | **Conteúdo das caixas preso à conta** (ou a caixa comprável só com ouro, não com token). | Tira o "prêmio com valor em dinheiro" da caixa: é a salvaguarda de maior efeito contra a classificação como jogo de azar. |
+| S2 | **Carência do token por meio de pagamento** antes da primeira transferência (ex.: dias para cartão, menos para Pix), sem limite de tempo de conta. | Fraude rápida com cartão roubado. |
+| S3 | **Taxa em ouro destruída nas transferências diretas** e "risco de troca" no livro-razão ([C04](fichas/C04-idlemmo.md)). | Drena a economia, encarece o farming e sinaliza lavagem. |
+| S4 | **Termos de uso claros:** o estúdio não intermedia, não garante e não dá suporte a trocas informais; nenhuma API para sites de RMT. | Responsabilidade e expectativa do jogador. |
+| S5 | **Probabilidades publicadas e teto de gasto em caixas.** | Transparência e jogador vulnerável ([06](06-monetizacao-retencao.md)). |
+
 ## Como isso pode dar errado
 
 | Risco | Como acontece | Mitigação |
