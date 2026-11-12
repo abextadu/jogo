@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "description": "A simulação da economia (GDD 08) usa CommonJS; o package.json da raiz usa ES modules.",
+  "type": "commonjs"
+}
