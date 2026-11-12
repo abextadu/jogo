@@ -55,7 +55,7 @@
 | D12 | Equipe de operação 6 a 8 (10) × base do 11 paga 3 a 4 | Acrescentar ao 10 um **plano enxuto para 4 pessoas** (Eras mais sistêmicas, menos conteúdo narrativo novo por Era); marcar como risco de negócio. | 10 |
 | D13 | O 13 conta no teto as recompensas de janelas ativas; o 05 e o 07 as deixavam fora | **Tudo o que é negociável e sai da conta conta no teto, inclusive o que veio de janelas ativas** (vale o 13, coerente com o portão de saída). | 05, 07 |
 | D14 | Wireframe da loja põe o Baú lacrado na Feira; o 07 põe na Bolsa | **Bolsa** (vale o 07). | 14 (g-loja) |
-| D15 | Bônus de +3% da refeição (D1) × teto de velocidade de 1,10× do domínio (02) e R16 | **O bônus da refeição conta dentro do teto de 1,10×**; nunca o ultrapassa. **Aplicado na Fase 4** (06, simulação da 2ª rodada); a rodada recomenda tirar o bônus (checkpoint da Fase 4, decisão 4). | 02, 06 |
+| D15 | Bônus de +3% da refeição (D1) × teto de velocidade de 1,10× do domínio (02) e R16 | **O bônus da refeição conta dentro do teto de 1,10×**; nunca o ultrapassa. **Aplicado na Fase 4** (06, simulação da 2ª rodada); o Gabriel decidiu tirar o bônus (checkpoint da Fase 4, decisão 4), e a D15 perdeu o objeto. | 02, 06 |
 | D16 | VR das matérias raras e dos insumos nobres não definido no 06 (a D13 precisa dele) | **Resolvida na Fase 4:** matéria rara = 2.000 × VR do bruto do tier; insumo nobre = (VR da rara + VR dos 10 insumos da fornada) ÷ 2 ([arquitetura](../04-arquitetura.md), §17; 06). | 06, 07, 08 |
 | D17 | "Salão" como nível de Sede (09) × Salão da Cidade (05) | Nível de Sede renomeado para **Pavilhão** (aplicado). | 09, bíblia |
 | D18 | "Relíquias dos reinos de outrora" (04) × Relíquia da Fronteira | Renomeadas para **vestígios dos reinos de outrora** (aplicado). | 04 |

@@ -347,7 +347,7 @@ O cenário `r1_base_1a_rodada` reproduz as premissas da 1ª rodada, para compara
 
 | Ponto | Recomendação [H] | Situação |
 |---|---|---|
-| Bônus de ofício da refeição (D1 e D15) | Sair do jogo; a refeição continua no combate e nas provisões do cerco e da Fronteira (a outra metade da D1); medir a parte de Culinária e Pesca nas horas de ofício no alfa | Decisão 4 do checkpoint da Fase 4 ([arquitetura](../04-arquitetura.md)) |
+| Bônus de ofício da refeição (D1 e D15) | Sair do jogo; a refeição continua no combate e nas provisões do cerco e da Fronteira (a outra metade da D1); medir a parte de Culinária e Pesca nas horas de ofício no alfa | **Decidido pelo Gabriel: sem bônus** (checkpoint da Fase 4, decisão 4). O `parametros.json` guarda a base testada nesta rodada, com o bônus; a configuração vigente é a do cenário `r2_sem_refeicao` |
 | Ouro de começo | Fica em 2.000: baixar para 1.600 não melhorou a combinação | — |
 | Rampa de conta nova mais longa | Descartada | — |
 | Fazendas | A defesa é a detecção: ligações por pagador e fluxo de valor ([13, §4.2](13-anti-abuso.md)); o painel acompanha a extração, com alerta acima de 3% | Requisito da arquitetura (§11) |

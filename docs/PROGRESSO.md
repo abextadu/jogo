@@ -5,7 +5,7 @@
 
 ## Fase atual
 
-**Fase 4 — Arquitetura técnica: entregue.** 🛑 **Checkpoint da Fase 4 quase fechado:** o Gabriel decidiu 4 das 5 decisões em 2026-11-11 (tabela abaixo). **Falta a decisão 4** (bônus de ofício da refeição), que ele pediu para ver explicada melhor. A Fase 5 começa depois dela.
+**Fase 4 — Arquitetura técnica: entregue.** **Checkpoint da Fase 4 decidido** pelo Gabriel em 2026-11-11 (tabela abaixo). Próximo passo: a Fase 5 (roadmap, MVP e construção por marcos). Em discussão: a ideia do Gabriel de a comida dar regeneração de vida e de ânimo, com tipos e durações diferentes.
 
 ### Decisões do checkpoint da Fase 4 (2026-11-11)
 
@@ -16,7 +16,7 @@ Opções e justificativas no fim de [`04-arquitetura.md`](04-arquitetura.md).
 | 1 | Linguagem e plataforma | (A) TypeScript no servidor, no cliente e na simulação; PostgreSQL; Svelte e PixiJS | **(A)** |
 | 2 | Onde o jogo roda | (A) VPS do Gabriel com Docker Swarm e Cloudflare | **No PC local do Gabriel, por enquanto: só ele vai testar agora** |
 | 3 | Meios de pagamento no lançamento | (A) Só Pix; cartão depois de 3 meses de dados de fraude | **(B) Pix e cartão desde o lançamento, em dois PSPs** |
-| 4 | Bônus de ofício da refeição | (A) Sai | **Pendente:** o Gabriel pediu uma explicação melhor |
+| 4 | Bônus de ofício da refeição | (A) Sai | **(A) Sem bônus de comida.** Ideia dele, em discussão: a comida dar regeneração de vida e de ânimo (o equivalente à mana), com tipos e durações diferentes, como no Tibia |
 | 5 | Modelo do Bazar de Personagens | (A) O personagem muda de conta; aposentadoria com troca a cada 90 dias | **(A)** |
 
 **Consequências:**

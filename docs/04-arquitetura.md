@@ -437,7 +437,7 @@ Detalhe e números no [08, seção "2ª rodada"](03-gdd/08-simulacao.md). Resumo
 
 | # | Pendência | Resolução [H] |
 |---|---|---|
-| **D15** | Bônus de +3% da refeição × teto de 1,10× do domínio | Aplicado no modelo (o bônus conta dentro do teto). O efeito medido na seção 16 leva a recomendar tirar o bônus (decisão 4) |
+| **D15** | Bônus de +3% da refeição × teto de 1,10× do domínio | Aplicado no modelo (o bônus conta dentro do teto). O efeito medido na seção 16 levou o Gabriel a tirar o bônus (decisão 4) |
 | **D16** | VR das matérias raras e dos insumos nobres | Regra abaixo |
 | **D19** | Modelo do Bazar de Personagens (07 × 13) | Seção 4.6 |
 
@@ -530,5 +530,5 @@ Detalhe e números no [08, seção "2ª rodada"](03-gdd/08-simulacao.md). Resumo
 | 1 | **(A)** TypeScript no servidor, no cliente e na simulação. |
 | 2 | **No PC local, por enquanto:** só o Gabriel vai testar agora. A VPS com Docker Swarm e a Cloudflare ficam para quando outras pessoas testarem (seção 13, etapa 0). |
 | 3 | **(B)** Pix e cartão desde o lançamento, em dois PSPs. O cartão exige 3DS; o risco de fraude sem carência foi assumido pelo Gabriel. |
-| 4 | **Pendente:** o Gabriel pediu uma explicação melhor do bônus de ofício da refeição. |
+| 4 | **(A) Sem bônus de comida.** A refeição fica no combate, no cerco e na Fronteira. Ideia do Gabriel em discussão: a comida dar regeneração de vida e de ânimo, com tipos e durações diferentes, como no Tibia. |
 | 5 | **(A)** O personagem muda de conta; quem já tem personagem arquiva o atual, com troca a cada 90 dias. |

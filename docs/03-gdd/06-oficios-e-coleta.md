@@ -9,7 +9,7 @@
 - **A fila prepara, o ativo acaba.** O ausente produz volume (Comum e Bom) na fila. Quando volta, o mestre faz sessões de 1 a 3 minutos, sem cronômetro e feitas de decisões com risco calculado: a **obra-prima** (qualidade da peça), a obra-prima de transformação (insumo nobre), o lote fino (consumíveis) e o **Faro** (a sessão ativa de quem coleta). Todas gastam **Inspiração**, que acumula 1 por hora, online ou offline, até o teto de offline da conta.
 - **Mercado pela natureza do bem:** o que é fungível vai à **Bolsa** (brutos, insumos, consumíveis, kits, reagentes e peças Comuns novas); o que tem estado próprio vai à **Feira** (qualidade, desgaste, acabamento); o que é contado vai ao **Leilão** (Únicos, lendários, relíquias).
 - **Oficinas NPC de reforço** vendem insumos, kits, consumíveis básicos e peças de oficina a **2,5× o valor de referência** (o preço do [07](07-economia.md), seção 4.8; revisão de consistência: D7), com limite diário, tudo preso à conta. Ninguém trava, e nenhum cartel passa de cerca de 2,5 a 3,5× o valor de referência.
-- **Equilíbrio de demanda verificado** com 4 refeições por hora de combate: cada ofício ficava entre 5,6% e 13,1% das horas exigidas pelo consumo (a meta é 1/12, ou 8,3%). Com 1 refeição por combatente por hora (revisão de consistência: R1), uma hora de combate consome de ~11 minutos de ofício (T1) a ~42 minutos (T6), e a Culinária e a Pesca cairiam abaixo da faixa (seção 9.2). Para segurar a demanda delas, **a refeição também dá um bônus pequeno de ofício e as provisões do cerco e da Fronteira passam a ser refeições** (revisão de consistência: D1). As Obras compensam os ofícios abaixo da média.
+- **Equilíbrio de demanda verificado** com 4 refeições por hora de combate: cada ofício ficava entre 5,6% e 13,1% das horas exigidas pelo consumo (a meta é 1/12, ou 8,3%). Com 1 refeição por combatente por hora (revisão de consistência: R1), uma hora de combate consome de ~11 minutos de ofício (T1) a ~42 minutos (T6), e a Culinária e a Pesca cairiam abaixo da faixa (seção 9.2). Para segurar a demanda delas, **as provisões do cerco e da Fronteira passam a ser refeições** (revisão de consistência: D1; o bônus de ofício da refeição, que a D1 também propunha, saiu no checkpoint da Fase 4). As Obras compensam os ofícios abaixo da média.
 - **Teto de aprendiz 30:** o aprendiz faz T1 e T2 de tudo, sempre Comum. O T3 exige nível 35, e a interdependência fica obrigatória por volta da segunda semana.
 
 ## 1. Os 12 ofícios num quadro
@@ -88,7 +88,7 @@ V = dom(n) = 1 + 0,01 × mín(10; nível − nível de desbloqueio do tier mais 
 | Ferraria | Ferramentas de 8 ofícios e o reparo de todo metal | Obra-prima de peças | Peças longas (25 minutos a espada de cobre); a obra-prima não acelera, porque o ativo ganha qualidade, e não volume |
 | Alfaiataria | Quatro das cinco vocações vestem Alfaiataria; reparo de couro e tecido | Obra-prima de peças | A maior fatia entre as criações (10%) |
 | Alquimia | Os reagentes são a moeda da obra-prima, consumida no uso como as orbs do Path of Exile ([F05](../01-pesquisa/fichas/F05-path-of-exile.md)); consumíveis de três vocações | Lote fino | Um reagente obrigatório viraria imposto; ele é sempre opcional |
-| Culinária | Todo combate come: 1 refeição por combatente por hora (o personagem e cada ajudante; revisão de consistência: R1) | Lote fino | Refeição de pouca margem; o lote fino e o banquete dão a margem. Com 1 refeição por hora, a demanda do combate cai a cerca de um quarto (seção 9.2); o bônus de ofício da refeição e as provisões do cerco e da Fronteira, que passam a ser refeições, repõem a demanda (revisão de consistência: D1) |
+| Culinária | Todo combate come: 1 refeição por combatente por hora (o personagem e cada ajudante; revisão de consistência: R1) | Lote fino | Refeição de pouca margem; o lote fino e o banquete dão a margem. Com 1 refeição por hora, a demanda do combate cai a cerca de um quarto (seção 9.2); as provisões do cerco e da Fronteira, que passam a ser refeições, repõem a demanda (o bônus de ofício saiu no checkpoint da Fase 4) (revisão de consistência: D1) |
 
 ## 4. Cadeias de produção
 
@@ -447,7 +447,7 @@ O modelo de conferência expande o consumo de uma hora de combate (desgaste de e
 | Mineração | 5,6% | 5,7% | 7,5% | 7,7% |
 
 **Revisão de consistência (R1):** a tabela acima foi calculada com 4 refeições por hora. Com 1 refeição por combatente, a demanda de combate da Culinária cai para ~3,5% das horas e a da Pesca para ~2,5% (no T1, estimativa desta revisão), abaixo da tolerância; os outros ofícios sobem um pouco. **Resolução do diretor (revisão de consistência: D1):**
-- **A refeição também dá um bônus pequeno de ofício:** por exemplo, +3% de eficiência numa fila por 1 h [H]. O bônus conta dentro do teto de 1,10× do domínio e nunca o ultrapassa (D15). **A 2ª rodada da simulação recomenda tirar o bônus** ([08](08-simulacao.md), seção 10): os consumíveis já faltam no modelo, e o bônus leva a inflação a +100% ao ano. Decisão 4 do checkpoint da Fase 4. A refeição é consumida ao ser comida, então quem só produz também come, e a demanda de Culinária e Pesca deixa de depender só do combate.
+- **Sem bônus de ofício na refeição (decisão do Gabriel no checkpoint da Fase 4).** A D1 propunha que comer desse +3% de eficiência numa fila por 1 h. A 2ª rodada da simulação mostrou que qualquer bônus de produção da comida sobe a inflação, porque os consumíveis já faltam no modelo ([08](08-simulacao.md), seção 10). A refeição fica no combate, no cerco e na Fronteira.
 - **As provisões do cerco e da Fronteira passam a ser refeições** (o rancho do cerco no Arsenal, [04](04-combate.md), seção 11.6; a comida do kit de expedição, [10](10-live-ops.md), seção 4.4).
 - **A meta continua de 6% a 11% das horas exigidas por ofício.** O tamanho do bônus e a quantidade de provisões ficam para **calibrar na próxima rodada da simulação** (08), junto com o recálculo desta tabela pelo modelo de conferência.
 
@@ -622,7 +622,7 @@ Convenções: nomes no formato "T1 / T2"; **as quantidades são as mesmas nos do
 
 | Consumo | Todas as vocações | Cavaleiro | Caçador | Mago | Druida | Ladino |
 |---|---|---|---|---|---|---|
-| Refeição | 1 por combatente (o personagem e cada ajudante; revisão de consistência: R1). Fora do combate, comer dá um bônus pequeno de ofício (ex.: +3% de eficiência numa fila por 1 h; revisão de consistência: D1) | | | | | |
+| Refeição | 1 por combatente (o personagem e cada ajudante; revisão de consistência: R1). Fora do combate, comer não dá bônus de ofício (checkpoint da Fase 4) | | | | | |
 | Poção de cura | 2 | | | | +1 (3 no total) | |
 | Consumível de vocação | — | 1,5 óleo de arma | 45 flechas | 6 pós arcanos | 4 unguentos | 3 rações de viagem |
 | Equipamento | 10 pd por hora em cada peça usada ([05](05-itens.md), seção 6) | | | | | |
