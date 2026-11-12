@@ -5,7 +5,9 @@
 
 ## Fase atual
 
-**Fase 4 — Arquitetura técnica: entregue.** **Checkpoint da Fase 4 decidido** pelo Gabriel em 2026-11-11 (tabela abaixo). Próximo passo: a Fase 5 (roadmap, MVP e construção por marcos). **Comida (decisão do Gabriel, 2026-11-11):** o foco é o personagem. Ele come do que leva na mochila, pelo botão direito ("Comer") ou com Comer automaticamente ligado; o armazém não alimenta. Cada família de comida dá regeneração e tempo diferentes, como no Tibia. Escrito no GDD ([`03-gdd/03-personagem.md`](03-gdd/03-personagem.md), seção 4.2; 04, 06, 14 e bíblia).
+**Fase 5 — Roadmap e construção: em andamento.** O roadmap e o MVP estão em [`05-roadmap.md`](05-roadmap.md). 🛑 **Checkpoint do roadmap aguardando o Gabriel:** 4 decisões (escopo do MVP, vocações do MVP, moradores de teste para o mercado, arte provisória). A construção começa pelo marco M0 (fundação) depois do ok.
+
+**Fase 4 — Arquitetura técnica: concluída.** Checkpoint decidido pelo Gabriel em 2026-11-11 (tabela abaixo). **Comida (decisão do Gabriel, 2026-11-11):** o foco é o personagem. Ele come do que leva na mochila, pelo botão direito ("Comer") ou com Comer automaticamente ligado; o armazém não alimenta. Cada família de comida dá regeneração e tempo diferentes, como no Tibia. Escrito no GDD ([`03-gdd/03-personagem.md`](03-gdd/03-personagem.md), seção 4.2; 04, 06, 14 e bíblia).
 
 ### Decisões do checkpoint da Fase 4 (2026-11-11)
 
@@ -95,8 +97,8 @@ A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11
 | 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
 | 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Concluída · checkpoint aprovado |
 | 3. GDD + simulação da economia | `docs/03-gdd/` | ✅ Concluída · checkpoint decidido |
-| 4. Arquitetura técnica | `docs/04-arquitetura.md` | ✅ Entregue · 🛑 checkpoint pendente |
-| 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
+| 4. Arquitetura técnica | `docs/04-arquitetura.md` | ✅ Concluída · checkpoint decidido |
+| 5. Roadmap e construção | `docs/05-roadmap.md` | 🔵 Roadmap entregue · 🛑 checkpoint pendente |
 
 ## Decisões do checkpoint da Fase 1 (2026-11-11)
 
@@ -165,4 +167,5 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 - **2026-11-11** — Matriz, padrões, leis e síntese com 30 insights concluídos. Checkpoint da Fase 1 apresentado e decidido pelo Gabriel, com ajustes.
 - **2026-11-11** — Fase 2: três conceitos (Casas da Maré, Fronteira, Cidade dos Ofícios), comparação, recomendação e checkpoint em `02-conceito.md`.
 - **2026-11-11** — Fase 3: bíblia, 14 módulos, simulação da economia em Node.js, wireframes, revisão de consistência e checkpoint. Checkpoint decidido pelo Gabriel: sem verificação de idade, transferência imediata, GDD aprovado, equipe mínima. GDD ajustado; Fase 4 iniciada.
-- **2026-11-11** — Fase 4: arquitetura técnica, 2ª rodada da simulação (com correção do disjuntor no modelo), D15, D16 e D19 resolvidas, resumo e checkpoint da Fase 4.
+- **2026-11-11** — Fase 4: arquitetura técnica, 2ª rodada da simulação (com correção do disjuntor no modelo), D15, D16 e D19 resolvidas, resumo e checkpoint da Fase 4. Checkpoint decidido pelo Gabriel; comida redesenhada (mochila do personagem, regeneração por tipo, segue sem comida quando acaba).
+- **2026-11-11** — Fase 5: roadmap com o MVP (7 ofícios, T1 e T2, Cavaleiro e Mago, Bolsa com moradores de teste, expedições) e 14 marcos até o lançamento; checkpoint do roadmap.

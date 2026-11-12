@@ -76,7 +76,7 @@ Além das regras de luta, cada expedição tem um **plano**, que não ocupa casa
 | Mochila cheia | **Voltar, depositar no armazém e retomar** (custa só o tempo do caminho) |
 | Pressão de caça da região > X% (seção 7.3) | Ir ao Plano B |
 | Névoa da região > X | Ir ao Plano B |
-| Comida da mochila acabou | Seguir sem comida (regeneração lenta, mais poções) ou voltar e encerrar. O armazém não repõe comida durante a expedição: o personagem come só o que leva na mochila ([03](03-personagem.md), seção 4.2) |
+| Comida da mochila acabou | **Segue sem comida** (regeneração lenta, mais poções). O personagem não volta à cidade para buscar comida, e o armazém não repõe nada durante a expedição (decisão do Gabriel; [03](03-personagem.md), seção 4.2) |
 
 [H] **O Plano B é o coração do respeito ao ausente.** Se o plano A falha às 3 h da manhã, o personagem não fica parado até o meio-dia: ele passa para o plano que o próprio jogador escolheu. A mochila cheia nunca encerra a expedição, porque um teto de mochila abaixo do offline de 24 h seria um teto de offline disfarçado (lei 7).
 
