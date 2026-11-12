@@ -5,7 +5,23 @@
 
 ## Fase atual
 
-**Fase 4 — Arquitetura técnica: entregue.** 🛑 **Checkpoint da Fase 4 aguardando o Gabriel:** 5 decisões no fim de [`04-arquitetura.md`](04-arquitetura.md) (stack, hospedagem, meios de pagamento no lançamento, bônus de ofício da refeição, modelo do Bazar de Personagens).
+**Fase 4 — Arquitetura técnica: entregue.** 🛑 **Checkpoint da Fase 4 quase fechado:** o Gabriel decidiu 4 das 5 decisões em 2026-11-11 (tabela abaixo). **Falta a decisão 4** (bônus de ofício da refeição), que ele pediu para ver explicada melhor. A Fase 5 começa depois dela.
+
+### Decisões do checkpoint da Fase 4 (2026-11-11)
+
+Opções e justificativas no fim de [`04-arquitetura.md`](04-arquitetura.md).
+
+| # | Decisão | Recomendação do estúdio | **Decisão do Gabriel** |
+|---|---|---|---|
+| 1 | Linguagem e plataforma | (A) TypeScript no servidor, no cliente e na simulação; PostgreSQL; Svelte e PixiJS | **(A)** |
+| 2 | Onde o jogo roda | (A) VPS do Gabriel com Docker Swarm e Cloudflare | **No PC local do Gabriel, por enquanto: só ele vai testar agora** |
+| 3 | Meios de pagamento no lançamento | (A) Só Pix; cartão depois de 3 meses de dados de fraude | **(B) Pix e cartão desde o lançamento, em dois PSPs** |
+| 4 | Bônus de ofício da refeição | (A) Sai | **Pendente:** o Gabriel pediu uma explicação melhor |
+| 5 | Modelo do Bazar de Personagens | (A) O personagem muda de conta; aposentadoria com troca a cada 90 dias | **(A)** |
+
+**Consequências:**
+- **Decisão 2:** o desenvolvimento e os primeiros testes rodam no PC do Gabriel (Windows 11, com Docker Desktop e Node.js 26 já instalados). A VPS com Docker Swarm e a Cloudflare ficam para quando outras pessoas forem testar; o plano de escala do [`04-arquitetura.md`](04-arquitetura.md) ganhou uma etapa 0, local.
+- **Decisão 3:** o cartão entra no lançamento, sempre com 3DS, em dois PSPs, com teto de compras nas primeiras 24 h e disjuntor de pagamentos. O risco já registrado vale aqui: sem carência, cartão roubado vira Coins vendidos em minutos, e o estorno cai sobre o estúdio. Risco assumido pelo Gabriel.
 
 **Entregue na Fase 4 (2026-11-11):**
 - [`04-arquitetura.md`](04-arquitetura.md): stack com comparação, modelo de dados e livro-razão, APIs, tempo real, jobs e cálculo do ausente, mercado e leilão atômicos, segurança e anti-bot sem verificação, pagamentos e auditoria, observabilidade e painel da economia, balanceamento por configuração, escala de 100 a 100 mil, riscos e checkpoint.
@@ -134,6 +150,7 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 | 2026-11-11 | Seguir sem parecer jurídico por enquanto; ajustar depois. | Gabriel |
 | 2026-11-11 | Sem verificação de idade alguma; transferência de Coins e ouro imediata, sem freios. | Gabriel |
 | 2026-11-11 | GDD aprovado; 2ª rodada de simulação no início da Fase 4; equipe mínima (Gabriel + Claude, arte e moderação terceirizadas). | Gabriel |
+| 2026-11-11 | Stack em TypeScript; desenvolvimento e testes no PC local por enquanto; Pix e cartão desde o lançamento; Bazar com o personagem mudando de conta. | Gabriel |
 
 ## Lições de processo (para as próximas fases)
 

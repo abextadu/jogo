@@ -6,7 +6,7 @@
 
 ## 0. Resumo em uma tela
 
-**A arquitetura em uma frase:** um **monólito modular em TypeScript** sobre Node.js, com o **PostgreSQL como única fonte da verdade** (inclusive da fila de jobs), um **livro-razão de partidas dobradas** para todo valor, um cliente **PWA em Svelte e PixiJS**, WebSocket só para avisos e chat, tudo em **Docker Swarm na VPS do Gabriel**, com a Cloudflare na frente. **Cada Cidade é uma economia e um banco lógico**, o que já resolve a divisão da carga quando o jogo crescer.
+**A arquitetura em uma frase:** um **monólito modular em TypeScript** sobre Node.js, com o **PostgreSQL como única fonte da verdade** (inclusive da fila de jobs), um **livro-razão de partidas dobradas** para todo valor, um cliente **PWA em Svelte e PixiJS**, WebSocket só para avisos e chat, rodando agora no **PC do Gabriel** e, quando outras pessoas testarem, em **Docker Swarm na VPS dele**, com a Cloudflare na frente. **Cada Cidade é uma economia e um banco lógico**, o que já resolve a divisão da carga quando o jogo crescer.
 
 | Tema | Escolha [H] | Por quê, em uma linha |
 |---|---|---|
@@ -16,8 +16,8 @@
 | Jobs | pg-boss, sobre o próprio PostgreSQL | Sem Redis no começo: menos uma peça para operar |
 | Tempo real | WebSocket com batimento a cada 30 s; consulta periódica se cair | No idle, o tempo real é conforto, não jogabilidade |
 | Cliente | Svelte 5 + Vite (interface) e PixiJS 8 (mapa isométrico em pixel art) | Pacote leve para celular barato; WebGL maduro para o mapa |
-| Infra | Docker Swarm: 1 nó no alfa, 3 no lançamento; Cloudflare na borda | Parte da infra que o Gabriel já tem; Kubernetes fica para depois |
-| Pagamentos | Pix primeiro, por PSP brasileiro com webhook assinado; cartão com 3DS num segundo PSP, depois | Sem carência, o cartão roubado é o maior risco de fraude |
+| Infra | Agora: o PC do Gabriel, com Docker Desktop. Depois: Docker Swarm (1 nó no alfa, 3 no lançamento) e Cloudflare na borda | Decisão do Gabriel: só ele testa por enquanto; a VPS e o Swarm entram quando outras pessoas testarem |
+| Pagamentos | Pix e cartão com 3DS desde o lançamento, em dois PSPs, com webhook assinado | Decisão do Gabriel; sem carência, o cartão roubado é o maior risco de fraude, e por isso o cartão exige 3DS |
 | Balanceamento | Números em arquivos de configuração versionados, validados por esquema, lidos pelo servidor, pelo cliente e pela simulação | Uma fonte de números; mudar o equilíbrio não exige mexer no código |
 | Escala | 100 → 100 mil em quatro etapas, com um banco por Cidade a partir da segunda | A Cidade é a divisão natural da carga |
 
@@ -326,7 +326,7 @@ O cliente é uma tela. Tudo o que importa (sorteio, tempo, preço, saldo) aconte
 - **Pix primeiro.** [F] O link de pagamento do Mercado Pago cobra 0,99% no Pix e de 3,99% a 4,98% no cartão, conforme o prazo de recebimento ([11, §2.3](03-gdd/11-monetizacao.md)). A Efí cobra por transação, sem mensalidade de API, segundo um catálogo de terceiros; não achamos a tabela oficial ([apis.io, Efí](https://apis.io/plans/efi-bank/efi-bank-plans-pricing/)) [NV].
 - **Cartão só com 3DS.** [F] Num documento da Fiserv para a América Latina, a transação autenticada passa a responsabilidade pela fraude do lojista para o banco emissor ([Fiserv, 3D Secure 2.0](https://docs.apis-fiserv.com/latam/docs/3d-secure-20)); uma reportagem de 2026 descreve a adoção no Brasil como desigual, com bancos ainda implementando etapas ([Portal Tela, 14/5/2026](https://www.portaltela.com/noticias/ciencia/2026/05/14/tecnologia-3ds-reforca-defesa-contra-fraudes-em-cartoes-de-credito/)). [H] A contestação continua possível e conta no limite das bandeiras.
 - **Aprovação por escrito antes de lançar.** [F] A Stripe restringe a venda de moeda virtual a quem opera o ambiente virtual e proíbe sorte com prêmio de valor ([05c, §5.2](01-pesquisa/05c-rmt-legal-global-pagamentos.md)). [H] O Baú comprável com Coins, com conteúdo negociável, e os Coins transferíveis precisam de aceite explícito do PSP escolhido, para que a conta não seja encerrada com o dinheiro retido ([05c, "Como isso pode dar errado", item 2](01-pesquisa/05c-rmt-legal-global-pagamentos.md)).
-- **Dois PSPs** no lançamento ou logo depois, para não depender de um só ([13, §6.4](03-gdd/13-anti-abuso.md)).
+- **Dois PSPs no lançamento**, com Pix e cartão (decisão 3 do checkpoint da Fase 4), para não depender de um só ([13, §6.4](03-gdd/13-anti-abuso.md)).
 
 ### 10.3 Contestação
 
@@ -382,6 +382,7 @@ Pedido do briefing e do [07, §12](03-gdd/07-economia.md). Calculado na réplica
 
 | Etapa | Jogadores no mês | Simultâneos | Infraestrutura [H] | Gatilho para a próxima |
 |---|---|---|---|---|
+| **0. Desenvolvimento (agora)** | Só o Gabriel | 1 | O PC do Gabriel (Windows 11) com Docker Desktop: PostgreSQL 18 num container, na porta 5433, porque o PostgreSQL 16 do Windows já usa a 5432; servidor, trabalhador e cliente em Node.js 26; contas de teste e dados sintéticos | Outras pessoas vão testar: VPS |
 | **1. Alfa fechado** | 100 a 500 | até 100 | 1 VPS, Swarm de 1 nó: API, portão, trabalhador e PostgreSQL; WAL contínuo e backup diário para armazenamento externo; Cloudflare gratuito | Beta marcado |
 | **2. Beta aberto** | 1 mil a 10 mil | até 1.500 | 2 máquinas: aplicação (os três papéis) e banco dedicado; réplica assíncrona numa terceira máquina pequena, que também roda Grafana | CPU do banco acima de 60% no pico, ou latência p95 acima da meta |
 | **3. Lançamento (1 Cidade)** | 10 mil a 50 mil | 1.500 a 5.000 | Swarm com 3 gerentes em 3 máquinas; 2 a 3 réplicas da API e do portão; banco primário dedicado com réplica e recuperação a ponto no tempo; Cloudflare Pro | Cidade perto do teto de simultâneos: abrir a segunda Cidade |
@@ -465,7 +466,7 @@ Detalhe e números no [08, seção "2ª rodada"](03-gdd/08-simulacao.md). Resumo
 | **Dupe por corrida que o teste não pegou** | Um endpoint novo esquece a trava ou a chave de idempotência | Receita única (seção 8.1) num só módulo; restrições do banco; teste de pedidos simultâneos obrigatório para todo endpoint de valor; alarme de invariante |
 | **Equipe de dois vira gargalo e ponto único** | O Gabriel adoece ou some por uma semana no meio de um incidente | Disjuntores que uma pessoa liga; manual de incidente escrito; alertas com instrução; nada que exija presença 24 h no alfa |
 | **PSP encerra a conta e retém o dinheiro** | O Baú pago com conteúdo negociável e os Coins transferíveis violam a política do PSP ([05c](01-pesquisa/05c-rmt-legal-global-pagamentos.md)) | Aprovação por escrito antes do lançamento; dois PSPs; Pix primeiro |
-| **Fraude de cartão sem carência** | Cartão roubado vira Coins vendidos no Câmbio em minutos; a taxa de disputa passa do limite das bandeiras | Cartão só com 3DS e só depois do Pix; teto nas primeiras 24 h; disjuntor de pagamentos; rastreio pelo livro-razão |
+| **Fraude de cartão sem carência** | Cartão roubado vira Coins vendidos no Câmbio em minutos; a taxa de disputa passa do limite das bandeiras | Cartão só com 3DS (entra no lançamento, por decisão do Gabriel); teto nas primeiras 24 h; disjuntor de pagamentos; rastreio pelo livro-razão |
 | **Fiscalização do ECA Digital** | A ANPD exige, a partir de 2027, verificação de idade ou o Baú desligado | Risco assumido pelo Gabriel; o interruptor do Baú por país existe e fica ligado (seção 8.2) |
 | **DDoS depois das ondas de banimento** | Retaliação, como no Albion | Cloudflare antes da primeira onda; VPS fechada para tráfego que não vem da borda |
 | **Mudança de configuração quebra a economia** | Um número errado num arquivo de receitas inunda o mercado | Validação por esquema; simulação de regressão na integração contínua; mudança econômica só com aviso; disjuntor por item |
@@ -521,3 +522,13 @@ Detalhe e números no [08, seção "2ª rodada"](03-gdd/08-simulacao.md). Resumo
 - (B) A conta inteira muda de dono (e-mail, senha e chave de recuperação passam ao comprador).
 - (C) O personagem muda de conta, mas o comprador precisa de uma conta vazia; não existe aposentadoria.
 - *Por quê:* (A) não passa nenhuma credencial adiante, o que fecha o golpe da recuperação, e o limite de 90 dias impede o revezamento de ofícios mestres. (B) é mais simples de construir, mas deixa o histórico da conta com o comprador e complica a recuperação. (C) empurra o comprador a abrir uma segunda conta, o que fura "uma pessoa, uma conta" (seção 4.6).
+
+### Decisões do Gabriel (2026-11-11)
+
+| # | Decisão do Gabriel |
+|---|---|
+| 1 | **(A)** TypeScript no servidor, no cliente e na simulação. |
+| 2 | **No PC local, por enquanto:** só o Gabriel vai testar agora. A VPS com Docker Swarm e a Cloudflare ficam para quando outras pessoas testarem (seção 13, etapa 0). |
+| 3 | **(B)** Pix e cartão desde o lançamento, em dois PSPs. O cartão exige 3DS; o risco de fraude sem carência foi assumido pelo Gabriel. |
+| 4 | **Pendente:** o Gabriel pediu uma explicação melhor do bônus de ofício da refeição. |
+| 5 | **(A)** O personagem muda de conta; quem já tem personagem arquiva o atual, com troca a cada 90 dias. |
