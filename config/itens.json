@@ -1,0 +1,32 @@
+{
+  "_sobre": "Catálogo de itens do MVP (T1 e T2). Nomes da tabela de tiers do GDD 05 §2.1 e das receitas do 06 §11. Receitas, tempos e valores de referência entram no M2 e no M3.",
+  "itens": [
+    { "id": "minerio_cobre", "nome": "Minério de cobre", "tipo": "bruto", "tier": 1 },
+    { "id": "minerio_ferro", "nome": "Minério de ferro", "tipo": "bruto", "tier": 2 },
+    { "id": "pedra", "nome": "Pedra", "tipo": "bruto", "tier": 0 },
+    { "id": "tora_pinho", "nome": "Tora de pinho", "tipo": "bruto", "tier": 1 },
+    { "id": "tora_betula", "nome": "Tora de bétula", "tipo": "bruto", "tier": 2 },
+    { "id": "casca", "nome": "Casca", "tipo": "bruto", "tier": 0 },
+    { "id": "resina", "nome": "Resina", "tipo": "bruto", "tier": 0 },
+    { "id": "perca", "nome": "Perca", "tipo": "bruto", "tier": 1 },
+    { "id": "carpa", "nome": "Carpa", "tipo": "bruto", "tier": 2 },
+    { "id": "escama", "nome": "Escama", "tipo": "bruto", "tier": 0 },
+    { "id": "carne_de_caca", "nome": "Carne de caça", "tipo": "bruto", "tier": 1 },
+    { "id": "pele_javali", "nome": "Pele de javali", "tipo": "bruto", "tier": 1 },
+    { "id": "pele_lobo", "nome": "Pele de lobo", "tipo": "bruto", "tier": 2 },
+    { "id": "carvao", "nome": "Carvão", "tipo": "insumo", "tier": 0 },
+    { "id": "lingote_cobre", "nome": "Lingote de cobre", "tipo": "insumo", "tier": 1 },
+    { "id": "lingote_ferro", "nome": "Lingote de ferro", "tipo": "insumo", "tier": 2 },
+    { "id": "tabua_pinho", "nome": "Tábua de pinho", "tipo": "insumo", "tier": 1 },
+    { "id": "tabua_betula", "nome": "Tábua de bétula", "tipo": "insumo", "tier": 2 },
+    { "id": "cabo_pinho", "nome": "Cabo de pinho", "tipo": "insumo", "tier": 1 },
+    { "id": "cabo_betula", "nome": "Cabo de bétula", "tipo": "insumo", "tier": 2 }
+  ],
+  "itens_de_teste": {
+    "_sobre": "O que a rota de desenvolvimento 'Receber itens de teste' põe no armazém (M1), para testar a mochila.",
+    "minerio_cobre": 250,
+    "tora_pinho": 120,
+    "perca": 40,
+    "lingote_cobre": 10
+  }
+}

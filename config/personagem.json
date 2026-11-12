@@ -1,0 +1,16 @@
+{
+  "_sobre": "Personagem, mochila e cadastro (M1). Fonte: GDD 03 §4.2 (mochila), roadmap (vocações do MVP), 12 §2.3 (cadastro).",
+  "vocacoes_disponiveis": ["cavaleiro", "mago"],
+  "_vocacoes": "No MVP, só Cavaleiro e Mago (decisão 2 do roadmap). As 5 vocações já existem no banco; abrir uma é mudar esta lista.",
+  "nome": { "minimo": 3, "maximo": 20 },
+  "mochila": {
+    "_fonte": "GDD 03 §4.2: 20 casas no início; cada casa guarda uma pilha de até 100 unidades do mesmo item.",
+    "casas": 20,
+    "pilha_maxima": 100
+  },
+  "cadastro": {
+    "senha_minima": 10,
+    "termos_versao": "rascunho-2026-11",
+    "sessao_dias": 30
+  }
+}

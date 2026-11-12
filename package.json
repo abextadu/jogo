@@ -10,22 +10,29 @@
     "db:subir": "docker compose up -d --wait",
     "db:descer": "docker compose down",
     "db:migrar": "node pacotes/razao/src/migrar-cli.ts",
+    "jogo": "node scripts/rodar-local.ts",
     "dev": "node --watch apps/servidor/src/principal.ts",
     "servidor": "node apps/servidor/src/principal.ts",
+    "cliente": "vite --config apps/cliente/vite.config.ts",
+    "cliente:build": "vite build --config apps/cliente/vite.config.ts",
     "demo:m0": "node scripts/demo-m0.ts",
-    "tipos": "tsc --noEmit",
+    "tipos": "tsc --noEmit && tsc --noEmit -p apps/cliente",
     "test": "vitest run",
     "test:ver": "vitest"
   },
   "dependencies": {
+    "@fastify/cookie": "^11.1.5",
     "fastify": "^5.12.8",
     "postgres": "^3.4.9",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@types/node": "^26.6.6",
     "fast-check": "^4.10.2",
+    "svelte": "^5.57.3",
     "typescript": "^7.0.2",
+    "vite": "^8.3.8",
     "vitest": "^5.1.0"
   }
 }

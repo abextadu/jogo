@@ -58,3 +58,17 @@ export async function reconciliacao(app: FastifyInstance) {
     ok: boolean; diferencas: unknown[]; unidadesDesbalanceadas: unknown[]; ouroDestruidoNaTroca: string;
   };
 }
+
+/** Cadastra pela API e devolve a conta, o cookie de sessão e a chave de recuperação. */
+export async function cadastrarJogador(app: FastifyInstance, email: string, senha = 'senha-de-teste-123') {
+  const r = await app.inject({ method: 'POST', url: '/v1/conta/cadastro', payload: { email, senha, aceitoTermos: true } });
+  if (r.statusCode !== 201) throw new Error(`cadastro: ${r.statusCode} ${r.body}`);
+  const sessao = r.cookies.find((c) => c.name === 'sessao');
+  return { id: r.json().conta.id as string, cookie: `sessao=${sessao!.value}`, chave: r.json().chaveRecuperacao as string, senha };
+}
+
+export async function comoJogador(app: FastifyInstance, cookie: string, method: 'GET' | 'POST', url: string, payload?: object, chave?: string) {
+  const headers: Record<string, string> = { cookie };
+  if (chave) headers['idempotency-key'] = chave;
+  return app.inject({ method, url, headers, ...(payload ? { payload } : {}) });
+}

@@ -34,7 +34,9 @@ jobs:
       - run: npm ci
       - name: Tipos
         run: npm run tipos
-      - name: Testes (livro-razão, idempotência, concorrência, configuração)
+      - name: Testes (livro-razão, idempotência, concorrência, contas, mochila, configuração)
         run: npm test
+      - name: Tela (compilação do cliente Svelte)
+        run: npm run cliente:build
       - name: Simulação da economia (cenário base, 60 dias)
         run: node docs/03-gdd/08-simulacao/sim.js --cenario base --dias 60 --quieto --sem-csv

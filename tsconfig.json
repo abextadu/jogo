@@ -14,5 +14,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["apps", "pacotes", "scripts", "testes", "vitest.config.ts"]
+  "include": ["apps", "pacotes", "scripts", "testes", "vitest.config.ts"],
+  "exclude": ["apps/cliente", "node_modules"]
 }

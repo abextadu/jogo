@@ -1,0 +1,159 @@
+/* Arte provisória do MVP (decisão 4 do roadmap): cores e formas simples, legíveis no celular.
+   A direção "Maquete" em pixel art (GDD 14) entra depois do M5. */
+:root {
+  --fundo: #2b2118;
+  --painel: #f3e9d2;
+  --painel-borda: #8a6d47;
+  --tinta: #2a1f14;
+  --tinta-suave: #6b5a45;
+  --destaque: #a8641c;
+  --destaque-texto: #ffffff;
+  --casa: #e6d6b3;
+  --casa-vazia: #d9c8a3;
+  --perigo: #9b2c2c;
+  --ok: #2f6b3a;
+  --foco: #1f5fbf;
+  color-scheme: light;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--fundo);
+  color: var(--tinta);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.painel {
+  background: var(--painel);
+  border: 2px solid var(--painel-borda);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+h1, h2, h3 { margin: 0 0 12px; line-height: 1.2; }
+h1 { font-size: 1.6rem; color: var(--painel); }
+h2 { font-size: 1.2rem; }
+
+label { display: block; margin: 12px 0 4px; font-weight: 600; }
+input[type='email'], input[type='password'], input[type='text'], input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--painel-borda);
+  border-radius: 4px;
+  background: #fffdf7;
+  color: var(--tinta);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--painel-borda);
+  padding: 10px 14px;
+  background: #fffdf7;
+  color: var(--tinta);
+}
+button.principal { background: var(--destaque); border-color: var(--destaque); color: var(--destaque-texto); font-weight: 600; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--foco); outline-offset: 2px; }
+
+.linha { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.abas { display: flex; gap: 4px; margin-bottom: 12px; }
+.abas button[aria-selected='true'] { background: var(--tinta); color: var(--painel); }
+
+.erro { color: var(--perigo); font-weight: 600; margin-top: 10px; }
+.aviso { color: var(--tinta-suave); font-size: 0.9rem; }
+.ok { color: var(--ok); font-weight: 600; }
+
+.chave {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background: #fffdf7;
+  border: 2px dashed var(--destaque);
+  padding: 12px;
+  text-align: center;
+  user-select: all;
+  word-break: break-all;
+}
+
+.cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.cabecalho .quem { color: var(--painel); }
+.cabecalho .quem small { color: #cdbb98; }
+
+/* Mochila: grade de casas (5 colunas no desktop, 4 no celular) */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 560px;
+}
+@media (max-width: 480px) {
+  .grade { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.casa {
+  aspect-ratio: 1;
+  min-height: 64px;
+  background: var(--casa);
+  border: 2px solid var(--painel-borda);
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: left;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.casa.vazia { background: var(--casa-vazia); border-style: dashed; cursor: default; }
+.casa .sigla { font-weight: 700; font-size: 1.1rem; }
+.casa .nome { font-size: 0.72rem; line-height: 1.1; overflow: hidden; }
+.casa .qtd { position: absolute; right: 4px; bottom: 2px; font-weight: 700; font-size: 0.85rem; }
+.casa .tier { position: absolute; right: 4px; top: 2px; font-size: 0.7rem; color: var(--tinta-suave); }
+
+.armazem { list-style: none; margin: 0; padding: 0; }
+.armazem li button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.menu {
+  position: fixed;
+  z-index: 10;
+  background: #fffdf7;
+  border: 2px solid var(--painel-borda);
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  min-width: 200px;
+  padding: 4px;
+}
+.menu .titulo { padding: 6px 10px; font-weight: 700; border-bottom: 1px solid var(--casa-vazia); margin-bottom: 4px; }
+.menu button { display: block; width: 100%; text-align: left; border: 0; background: transparent; padding: 10px; }
+.menu button:hover, .menu button:focus-visible { background: var(--casa); }
+
+.dialogo-fundo { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); display: grid; place-items: center; z-index: 20; padding: 16px; }
+.dialogo { max-width: 360px; width: 100%; }
+
+.vocacoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 8px; }
+.vocacao { text-align: left; padding: 14px; }
+.vocacao[aria-pressed='true'] { border: 3px solid var(--destaque); background: #fff6e6; }
+.vocacao strong { display: block; font-size: 1.05rem; margin-bottom: 4px; }

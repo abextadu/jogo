@@ -18,15 +18,60 @@ const esquemaEconomia = z.strictObject({
   }),
 });
 
+export const VOCACOES = ['cavaleiro', 'cacador', 'mago', 'druida', 'ladino'] as const;
+
+const esquemaPersonagem = z.strictObject({
+  vocacoes_disponiveis: z.array(z.enum(VOCACOES)).min(1),
+  nome: z.strictObject({ minimo: z.int().min(1), maximo: z.int().max(40) }),
+  mochila: z.strictObject({ casas: z.int().min(1).max(200), pilha_maxima: z.int().min(1).max(10_000) }),
+  cadastro: z.strictObject({
+    senha_minima: z.int().min(8),
+    termos_versao: z.string().min(1),
+    sessao_dias: z.int().min(1).max(365),
+  }),
+});
+
+const esquemaItens = z
+  .strictObject({
+    itens: z
+      .array(
+        z.strictObject({
+          id: z.string().regex(/^[a-z0-9_]+$/),
+          nome: z.string().min(1),
+          tipo: z.enum(['bruto', 'insumo', 'equipamento', 'consumivel', 'comida']),
+          tier: z.int().min(0).max(6),
+        }),
+      )
+      .min(1),
+    itens_de_teste: z.record(z.string(), z.int().min(1)),
+  })
+  .superRefine((v, ctx) => {
+    const ids = new Set<string>();
+    for (const i of v.itens) {
+      if (ids.has(i.id)) ctx.addIssue({ code: 'custom', message: `item repetido: ${i.id}` });
+      ids.add(i.id);
+    }
+    for (const id of Object.keys(v.itens_de_teste)) {
+      if (!ids.has(id)) ctx.addIssue({ code: 'custom', message: `item de teste desconhecido: ${id}` });
+    }
+  });
+
 const ESQUEMAS = {
   economia: esquemaEconomia,
+  personagem: esquemaPersonagem,
+  itens: esquemaItens,
 } as const;
 
 export type ConfigEconomia = z.infer<typeof esquemaEconomia>;
+export type ConfigPersonagem = z.infer<typeof esquemaPersonagem>;
+export type ConfigItens = z.infer<typeof esquemaItens>;
+export type Vocacao = (typeof VOCACOES)[number];
 
 export interface Config {
   versao: string;
   economia: ConfigEconomia;
+  personagem: ConfigPersonagem;
+  itens: ConfigItens;
 }
 
 /** Remove as chaves de comentário (as que começam com "_"), em qualquer nível. */
