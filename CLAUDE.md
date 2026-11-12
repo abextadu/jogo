@@ -32,9 +32,10 @@ RPG idle de navegador (desktop e celular), online e multiplayer, com economia mo
 
 Stack decidida no checkpoint da Fase 4 ([`docs/04-arquitetura.md`](docs/04-arquitetura.md)): TypeScript em Node.js 26, PostgreSQL 18, Fastify, postgres.js, Zod, Vitest e fast-check. Por enquanto tudo roda no PC do Gabriel (Windows 11, Docker Desktop).
 
-- **Rodar:** `npm run db:subir` (PostgreSQL 18 em Docker, porta 5433; a 5432 é do PostgreSQL 16 do Windows) → `npm test` → `npm run servidor` (http://127.0.0.1:3000). Demonstração de cada marco: `npm run demo:m0` etc.
+- **Rodar:** `npm run db:subir` (PostgreSQL 18 em Docker, porta 5433; a 5432 é do PostgreSQL 16 do Windows) → `npm test` → `npm run jogo` (servidor em :3000 e tela em http://localhost:5173). Demonstração do M0: `npm run demo:m0`.
 - **Sem build:** o Node 26 roda `.ts` direto. Só sintaxe que se apaga (nada de `enum`, `namespace` ou propriedades no construtor); importações relativas com `.ts`. `npm run tipos` confere os tipos.
-- **Estrutura:** `apps/servidor` (HTTP), `pacotes/razao` (livro-razão, migrações SQL, idempotência), `pacotes/economia` (regras de valor), `pacotes/config` (esquemas), `config/` (os números do jogo), `testes/`, `scripts/`.
+- **Estrutura:** `apps/servidor` (HTTP), `apps/cliente` (tela em Svelte 5 + Vite), `pacotes/razao` (livro-razão, migrações SQL, idempotência), `pacotes/economia` (regras de valor), `pacotes/contas` (cadastro, sessão, recuperação), `pacotes/personagem` (personagem, mochila, armazém), `pacotes/config` (esquemas), `config/` (os números do jogo), `testes/`, `scripts/`.
+- **Mochila e armazém são contas do livro-razão** (uma por item); a casa da mochila é só a contagem do espaço. Login por cookie HttpOnly com token aleatório (o banco guarda o hash); senha em Argon2id nativo do Node.
 - **Regras do código:** todo valor passa pelo livro-razão (lançamentos com soma zero, travas em ordem de id); todo comando que move valor leva `Idempotency-Key`; ouro e Coins em inteiros (BigInt, texto no JSON); números do jogo só em `config/`; **nenhuma rota de transferência com espera, retenção ou limite de saída** (decisão do Gabriel, checkpoint 3); sem verificação de idade.
 - **Testes obrigatórios** para economia e combate, incluindo pedidos simultâneos e invariantes do razão; a integração contínua (`.github/workflows/ci.yml`) roda tipos, testes e uma simulação curta a cada push.
 

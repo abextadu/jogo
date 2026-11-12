@@ -13,10 +13,10 @@ npm install
 npm run db:subir
 npm test
 npm run demo:m0
-npm run servidor
+npm run jogo
 ```
 
-O banco local fica na porta 5433 (credenciais só de desenvolvimento em `.env.example`).
+`npm run jogo` sobe o servidor e a tela; abra http://localhost:5173. O banco local fica na porta 5433 (credenciais só de desenvolvimento em `.env.example`).
  O único código até aqui é a simulação da economia.
 
 - Briefing do produto: [PROMPT_INICIAL.md](PROMPT_INICIAL.md)

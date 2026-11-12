@@ -5,15 +5,15 @@
 
 ## Fase atual
 
-**Fase 5 — Roadmap e construção: em andamento.** O roadmap e o MVP estão em [`05-roadmap.md`](05-roadmap.md). O Gabriel aprovou as 4 recomendações do roadmap em 2026-11-11: MVP com 7 ofícios em T1 e T2, Cavaleiro e Mago, moradores de teste para o mercado e arte provisória até o M5. **Marco atual: M0 — Fundação, entregue.** 🛑 Checkpoint do M0 aguardando o ok do Gabriel para começar o M1 (conta, personagem e mochila).
+**Fase 5 — Roadmap e construção: em andamento.** O roadmap e o MVP estão em [`05-roadmap.md`](05-roadmap.md). O Gabriel aprovou as 4 recomendações do roadmap em 2026-11-11: MVP com 7 ofícios em T1 e T2, Cavaleiro e Mago, moradores de teste para o mercado e arte provisória até o M5. **Marco atual: M1 — Conta, personagem e mochila, entregue.** 🛑 Checkpoint do M1 aguardando o ok do Gabriel para começar o M2 (ofícios, fila e ausência). O M0 foi aprovado em 2026-11-11.
 
 ### Marcos da Fase 5
 
 | Marco | Status | Como ver |
 |---|---|---|
-| M0 — Fundação | ✅ Entregue (2026-11-11) · 🛑 checkpoint | `npm run db:subir`, `npm test` (17 testes), `npm run demo:m0` |
-| M1 — Conta, personagem e mochila | ⚪ Próximo | — |
-| M2 — Ofícios, fila e ausência | ⚪ | — |
+| M0 — Fundação | ✅ Aprovado (2026-11-11) | `npm run db:subir`, `npm test`, `npm run demo:m0` |
+| M1 — Conta, personagem e mochila | ✅ Entregue (2026-11-11) · 🛑 checkpoint | `npm run jogo` e abrir http://localhost:5173; `npm test` (34 testes) |
+| M2 — Ofícios, fila e ausência | ⚪ Próximo | — |
 | M3 — Criação, itens e comida | ⚪ | — |
 | M4 — Mercado: Bolsa e moradores de teste | ⚪ | — |
 | M5 — Combate e alfa de uma pessoa (MVP) | ⚪ | — |
@@ -26,7 +26,17 @@
 - **Configuração** em `config/economia.json`, validada por esquema, com versão gravada em cada transação.
 - **Testes:** soma zero e saldo não negativo garantidos pelo banco; reconciliação; teste por propriedade com sequências aleatórias; 20 pedidos simultâneos com a mesma chave fazem uma transferência só; 30 transferências simultâneas de uma carteira que cobre 10 deixam passar exatamente 10; transferências cruzadas sem impasse; validação da configuração.
 - **Integração contínua** no GitHub Actions: tipos, testes com PostgreSQL 18 e simulação curta.
-- **Fora do M0, de propósito:** login (no M1, até lá a conta vem do cabeçalho `X-Conta-Teste` nas rotas de desenvolvimento) e o job de partições mensais do razão.
+- **Fora do M0, de propósito:** login (entrou no M1) e o job de partições mensais do razão.
+
+**O que o M1 entregou:**
+- **Cadastro sem verificação de idade:** e-mail, senha (Argon2id, nativo do Node 26) e aceite dos termos (18+). A **chave de recuperação** aparece uma vez, com botões de copiar e baixar; com ela o jogador troca a senha, as sessões antigas caem e uma chave nova é gerada.
+- **Login por sessão:** cookie HttpOnly com token aleatório; o banco guarda só o hash. Mensagem igual para senha errada e e-mail inexistente. Limite de tentativas: 100 por IP (folgado por causa de lan houses e CGNAT) e 10 por e-mail em 10 minutos.
+- **Personagem:** Cavaleiro ou Mago (as outras vocações abrem mudando `config/personagem.json`); um ativo por conta, garantido pelo banco mesmo com pedidos simultâneos; nome único na Cidade.
+- **Mochila e armazém** como contas do livro-razão: mover é uma transação com soma zero, então o item nunca fica nos dois lugares. 20 casas com pilhas de até 100; pedidos simultâneos não estouram as casas. A mochila é do personagem; o armazém, da conta.
+- **Tela no navegador** (Svelte 5, arte provisória): entrar, criar conta, recuperar, guardar a chave, criar o personagem, mochila em grade e armazém. **Botão direito** num item abre o menu (no celular, toque longo; no teclado, Enter). Testado no navegador: cadastro, personagem, itens de teste, ida e volta entre mochila e armazém, e o layout de celular (4 colunas, sem rolagem lateral).
+- **Catálogo de itens do MVP** em `config/itens.json` (T1 e T2), com os nomes do GDD 05.
+- **Testes:** 34 no total (17 novos: cadastro, login, sessão, recuperação, limite de tentativas, personagem, mochila cheia, concorrência na mochila, isolamento entre contas). A integração contínua passou a compilar a tela.
+- **Não verificado:** o toque longo num celular de verdade (as ferramentas de teste mandam cliques de mouse).
 
 **Fase 4 — Arquitetura técnica: concluída.** Checkpoint decidido pelo Gabriel em 2026-11-11 (tabela abaixo). **Comida (decisão do Gabriel, 2026-11-11):** o foco é o personagem. Ele come do que leva na mochila, pelo botão direito ("Comer") ou com Comer automaticamente ligado; o armazém não alimenta. Cada família de comida dá regeneração e tempo diferentes, como no Tibia. Escrito no GDD ([`03-gdd/03-personagem.md`](03-gdd/03-personagem.md), seção 4.2; 04, 06, 14 e bíblia).
 
@@ -192,3 +202,4 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 - **2026-11-11** — Fase 4: arquitetura técnica, 2ª rodada da simulação (com correção do disjuntor no modelo), D15, D16 e D19 resolvidas, resumo e checkpoint da Fase 4. Checkpoint decidido pelo Gabriel; comida redesenhada (mochila do personagem, regeneração por tipo, segue sem comida quando acaba).
 - **2026-11-11** — Fase 5: roadmap com o MVP (7 ofícios, T1 e T2, Cavaleiro e Mago, Bolsa com moradores de teste, expedições) e 14 marcos até o lançamento; checkpoint do roadmap.
 - **2026-11-11** — Fase 5, M0: fundação do código, livro-razão, idempotência, configuração, 17 testes e integração contínua.
+- **2026-11-11** — Fase 5, M1: cadastro sem verificação, sessão, recuperação, personagem, mochila e armazém no livro-razão, tela em Svelte com menu de botão direito; 34 testes.
