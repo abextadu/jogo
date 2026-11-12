@@ -76,7 +76,7 @@ Além das regras de luta, cada expedição tem um **plano**, que não ocupa casa
 | Mochila cheia | **Voltar, depositar no armazém e retomar** (custa só o tempo do caminho) |
 | Pressão de caça da região > X% (seção 7.3) | Ir ao Plano B |
 | Névoa da região > X | Ir ao Plano B |
-| Refeição acabou | Repor do armazém e retomar, ou seguir sem refeição |
+| Comida da mochila acabou | Seguir sem comida (regeneração lenta, mais poções) ou voltar e encerrar. O armazém não repõe comida durante a expedição: o personagem come só o que leva na mochila ([03](03-personagem.md), seção 4.2) |
 
 [H] **O Plano B é o coração do respeito ao ausente.** Se o plano A falha às 3 h da manhã, o personagem não fica parado até o meio-dia: ele passa para o plano que o próprio jogador escolheu. A mochila cheia nunca encerra a expedição, porque um teto de mochila abaixo do offline de 24 h seria um teto de offline disfarçado (lei 7).
 
@@ -236,7 +236,7 @@ Chance de dádiva: 10% por purificação de corrompido comum; **garantida na pri
 
 ### 7.2 Como é uma expedição
 
-1. **Escolhas antes de sair:** região (tier e bioma), tipo, ajudantes, suprimentos (cinto, refeições e consumível vocacional, tirados do armazém), regras, plano com recuo e Plano B, e a trilha, no caso do Ladino.
+1. **Escolhas antes de sair:** região (tier e bioma), tipo, ajudantes, suprimentos (o cinto e o consumível vocacional; a comida vai na mochila do personagem, com a opção Comer automaticamente, [03](03-personagem.md), seção 4.2), regras, plano com recuo e Plano B, e a trilha, no caso do Ladino.
 2. **Caminho:** de 5 a 20 min de ida, conforme a distância, sem combate (o Ladino *Andarilho* corta 25%).
 3. **Ciclo:** procura do próximo encontro (20 a 30 s; o desnorteio soma 50%) → encontro com 1 a 4 inimigos (luta média de 20 a 40 s) → saque → regeneração.
 4. **A expedição ocupa a fila,** como uma ação de ofício ([00-biblia](00-biblia.md), glossário). Lutar ou produzir é a grande decisão do dia.
@@ -308,7 +308,7 @@ O Cavaleiro tira menos por hora, mas gasta cerca de 40% menos poções (8.1). O 
 
 | Consumível | Por hora de combate [H] |
 |---|---|
-| **Refeição** | 1 porção por combatente (o personagem e cada ajudante). Reconciliado: o 06 foi alinhado (revisão de consistência: R1). |
+| **Refeição** | 1 refeição de 1 hora por combatente por hora (o personagem e cada ajudante), da mochila do personagem. Pratos de 30 min a 2 h têm custo por hora parecido, então a conta não muda ([03](03-personagem.md), seção 4.2). Reconciliado: o 06 foi alinhado (revisão de consistência: R1). |
 | **Poção de cura** | ~1 na margem +1 · **~3 na margem 0** · ~8 na margem −1 (com risco de derrota). Sem refeição, × 2 |
 | Ajuste por vocação | Cavaleiro × 0,6 · Druida × 0,5 · Caçador × 1,0 · Mago × 1,1 · Ladino × 1,2 |
 | Com Druida no grupo | −30% para todos (−50% com o marco *Botica de campo*) |

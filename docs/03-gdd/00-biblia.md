@@ -109,6 +109,8 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | **Arsenal** | O depósito da cidade para o cerco, abastecido pelos ofícios (provisões, kits da Guarda). | 04 |
 | **Guarda da Cidade** | Os guardas NPC da cidade no cerco (um para cada 10 ativos), equipados com os kits do Arsenal. Os ajudantes não lutam no cerco. | 03, 04 |
 | **Integridade** | A resistência da Muralha no cerco (0 a 100): cai nas brechas e é reparada entre os cercos. | 04 |
+| **Mochila** | O que o personagem carrega: 20 casas no início, pilhas de até 100 unidades. Comida e saque dividem as casas. O personagem come só do que leva nela; o armazém não alimenta (decisão do Gabriel, 2026-11-11). | 03, 04 |
+| **Saciedade** | O tempo de efeito do prato que o personagem comeu (30 min a 2 h por prato, até 3 h guardadas). Cada família de comida dá um efeito: carnes, mais regeneração de vida; peixes, mais ânimo no começo da luta; pratos de colheita, um pouco dos dois. Come-se pelo botão direito na mochila ou com Comer automaticamente ligado. | 03 |
 
 **Social e live ops (09, 10)**
 
@@ -174,6 +176,8 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 
 | Checkpoint 3 | **Uma pessoa, uma conta ativa** continua como regra dos termos de uso, cobrada por detecção (aparelho, meio de pagamento, rede, comportamento e fluxo de valor), não por identidade verificada. |
 | Checkpoint 3 | GDD aprovado; 2ª rodada da simulação no início da Fase 4. Equipe mínima: Gabriel + Claude no código e no design; arte em pixel art e moderação terceirizadas por demanda. |
+| Checkpoint 4 | Stack em TypeScript; desenvolvimento no PC do Gabriel por enquanto; Pix e cartão desde o lançamento; Bazar com o personagem mudando de conta; **comida sem bônus de produção**. |
+| 2026-11-11 | **Comida: o foco é o personagem.** Ele come do que leva na mochila, pelo botão direito ("Comer") ou com Comer automaticamente ligado; o armazém não alimenta. Cada família de comida dá regeneração e tempo diferentes, como no Tibia ([03](03-personagem.md), seção 4.2). |
 
 E o piso comum P1–P12 do [conceito](../02-conceito.md), seção 1, **com o P8 alterado pelo checkpoint 3:** o jogo é 18+ pelos termos, sem verificação de idade, e a barreira contra bots e multicontas passa a ser o teto de emissão, a rampa de conta nova e a detecção.
 

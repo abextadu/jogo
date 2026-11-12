@@ -5,7 +5,7 @@
 
 ## Fase atual
 
-**Fase 4 — Arquitetura técnica: entregue.** **Checkpoint da Fase 4 decidido** pelo Gabriel em 2026-11-11 (tabela abaixo). Próximo passo: a Fase 5 (roadmap, MVP e construção por marcos). Em discussão: a ideia do Gabriel de a comida dar regeneração de vida e de ânimo, com tipos e durações diferentes.
+**Fase 4 — Arquitetura técnica: entregue.** **Checkpoint da Fase 4 decidido** pelo Gabriel em 2026-11-11 (tabela abaixo). Próximo passo: a Fase 5 (roadmap, MVP e construção por marcos). **Comida (decisão do Gabriel, 2026-11-11):** o foco é o personagem. Ele come do que leva na mochila, pelo botão direito ("Comer") ou com Comer automaticamente ligado; o armazém não alimenta. Cada família de comida dá regeneração e tempo diferentes, como no Tibia. Escrito no GDD ([`03-gdd/03-personagem.md`](03-gdd/03-personagem.md), seção 4.2; 04, 06, 14 e bíblia).
 
 ### Decisões do checkpoint da Fase 4 (2026-11-11)
 
@@ -16,7 +16,7 @@ Opções e justificativas no fim de [`04-arquitetura.md`](04-arquitetura.md).
 | 1 | Linguagem e plataforma | (A) TypeScript no servidor, no cliente e na simulação; PostgreSQL; Svelte e PixiJS | **(A)** |
 | 2 | Onde o jogo roda | (A) VPS do Gabriel com Docker Swarm e Cloudflare | **No PC local do Gabriel, por enquanto: só ele vai testar agora** |
 | 3 | Meios de pagamento no lançamento | (A) Só Pix; cartão depois de 3 meses de dados de fraude | **(B) Pix e cartão desde o lançamento, em dois PSPs** |
-| 4 | Bônus de ofício da refeição | (A) Sai | **(A) Sem bônus de comida.** Ideia dele, em discussão: a comida dar regeneração de vida e de ânimo (o equivalente à mana), com tipos e durações diferentes, como no Tibia |
+| 4 | Bônus de ofício da refeição | (A) Sai | **(A) Sem bônus de comida.** No lugar, a comida dá regeneração de vida e de ânimo (o equivalente à mana), com tipos e durações diferentes, como no Tibia; o personagem come do que leva na mochila |
 | 5 | Modelo do Bazar de Personagens | (A) O personagem muda de conta; aposentadoria com troca a cada 90 dias | **(A)** |
 
 **Consequências:**
@@ -151,6 +151,7 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 | 2026-11-11 | Sem verificação de idade alguma; transferência de Coins e ouro imediata, sem freios. | Gabriel |
 | 2026-11-11 | GDD aprovado; 2ª rodada de simulação no início da Fase 4; equipe mínima (Gabriel + Claude, arte e moderação terceirizadas). | Gabriel |
 | 2026-11-11 | Stack em TypeScript; desenvolvimento e testes no PC local por enquanto; Pix e cartão desde o lançamento; Bazar com o personagem mudando de conta. | Gabriel |
+| 2026-11-11 | Comida sem bônus de produção; o personagem come do que leva na mochila (botão direito ou comer automático), e cada comida dá regeneração e tempo diferentes. | Gabriel |
 
 ## Lições de processo (para as próximas fases)
 

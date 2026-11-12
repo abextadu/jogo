@@ -386,6 +386,8 @@ Contados a partir da Cidade (tela inicial). A confirmação final de uma ação 
 | Doar e receber Coins | Saldo de Coins no cabeçalho → faixa de doação (a doação pede confirmação) | 2 |
 | Ver as chances do Baú | Saldo de Coins → Loja (as chances estão na seção do Baú) | 1 |
 | Ler os recados | Sino | 1 |
+| Comer um prato da mochila | Personagem → Mochila → botão direito no prato (toque longo no celular) → "Comer" | 3 |
+| Ligar ou desligar Comer automaticamente | Personagem → Mochila → "Comer automaticamente" (também no plano da expedição) | 2 |
 | Mudar tamanho de fonte ou contraste | Você → Acessibilidade (também oferecido na primeira abertura) | 2 |
 
 ### 2.4 As telas principais

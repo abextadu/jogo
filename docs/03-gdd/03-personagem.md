@@ -72,7 +72,7 @@ O personagem é a soma de três identidades: **como luta** (a vocação), **o qu
 | **Clareza (CLA)** | `CLA = (SAB + 0,5 × atributo principal do cajado ou do bordão) × (1 + Foco da armadura leve)` | Dano contra a barra de Névoa das criaturas corrompidas ([04-combate](04-combate.md), seção 5). |
 | **Firmeza** | `0,2% × (VIG + SAB) + secundário de firmeza da armadura pesada` (máx. 50%) | Chance de resistir a um estado negativo. |
 | **Ânimo** | começa a luta em 30, +10 por ação básica, máx. 100 | O recurso das habilidades. Zera entre lutas. |
-| **Regeneração fora de luta** | 1% do PV por segundo; **2% com refeição** | É a principal razão de comer (seção 4.2). |
+| **Regeneração fora de luta** | 1% do PV por segundo; **de 1,5% a 2,5% com comida**, conforme a família do prato | É a principal razão de comer (seção 4.2). |
 
 **Exemplo calculado — Cavaleiro nível 1:** FOR 5, VIG 5, sem armadura. `PV = 60 + 10 × 5 + 5 × 1 = 115`. Com uma espada de cobre (T1) Comum, de dano 10: `ATQ = 10 × (1 + 5/100) = 10,5`.
 
@@ -101,15 +101,33 @@ As casas, as famílias de peça, os números por tier e a qualidade são do [05-
 - **Qualidade** multiplica principal e secundário: Comum × 1,00 · Bom × 1,08 · Fino × 1,16 · Obra-prima × 1,25.
 - **Durabilidade e reparo:** as regras do 05 (120 pontos na peça Comum, 10 por hora de combate, 3 reparos com kits feitos por artesãos). A peça zerada fica inoperante até o reparo e só some no fim do ciclo de reparos ([00-biblia](00-biblia.md), 6.5). Os ajustes por vocação e por situação estão no [04-combate](04-combate.md), seção 8.
 
-### 4.2 Comida: a refeição
+### 4.2 Comida: o personagem come do que leva na mochila
 
-- **Uma casa de refeição.** O personagem leva um prato por vez (Culinária).
-- **Consumo:** 1 porção por hora de combate, por combatente. **O ajudante também come** (seção 9). Reconciliado: vale 1 refeição por combatente por hora, e o 06 foi alinhado (revisão de consistência: R1).
-- **Efeito principal:** a regeneração fora de luta sobe de 1% para 2% do PV por segundo. É isso que separa uma expedição que dura a noite de uma que gasta o cinto de poções na primeira hora.
-- **Efeito do prato:** +4 / +6 / +9 / +12 / +16 / +20 num atributo (T1 a T6), vezes o multiplicador de qualidade. Os pratos por tier são do 05 (caldo, ensopado, torta de caça, assado com ervas, guisado do castelo, festim real); cada receita escolhe o atributo, e algumas trocam o bônus por um efeito (resistência a peçonha, +ânimo inicial). Exemplos: ensopado de javali (FOR), truta na brasa (DES), caldo de cevada (VIG), torta de ervas (SAB).
-- **Sem refeição:** nada de ruim acontece além de a regeneração ficar lenta. O personagem gasta cerca de duas vezes mais poções ([04-combate](04-combate.md), seção 8).
+**Decisão do Gabriel (2026-11-11):** a comida não dá bônus de produção; dá regeneração, e cada tipo de comida dá um efeito e um tempo diferentes, como no Tibia. **Quem come é o personagem, do que leva na mochila.** O armazém não alimenta ninguém. O foco é o personagem.
 
-[H] **Quatro perguntas.** *Referência:* a comida com Auto Eat do Melvor, consumida quando a vida cai a 20% ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)). *Diferença:* aqui a comida é sustento por hora, não cura de emergência; a emergência é a poção. Assim, Culinária e Alquimia vendem coisas diferentes e competem pela mesma decisão ("como me sustento"). *Problema:* comida que só cura vira apenas uma poção pior. *Comportamento:* demanda constante e previsível por Culinária e demanda de pico por Alquimia. *Risco:* a refeição virar imposto obrigatório. Mitigação: sem ela o jogo funciona, só custa mais poções; a escolha é qual consumível comprar.
+- **Na mochila.** Antes de sair, o jogador põe a comida na mochila do personagem. Durante a expedição, ele come só o que carrega.
+- **Comer na mão:** botão direito no item da mochila (toque longo no celular) → **Comer**.
+- **Ou comer sozinho:** a opção **Comer automaticamente** fica ligada ou desligada no painel da mochila e no plano da expedição, sem ocupar casa de regra. Com ela ligada, o jogador escolhe os pratos em ordem de preferência, e o personagem come quando a saciedade acaba, inclusive com o jogador fora do jogo. Com ela desligada, o personagem só come quando o jogador manda, e o plano da expedição avisa antes de sair: "Comer automaticamente está desligado: seu personagem não vai comer enquanto você estiver fora."
+- **Saciedade** [H]: cada prato dá um tempo de efeito, de 30 minutos a 2 horas, conforme a receita. Comer de novo o mesmo prato soma tempo, até 3 horas guardadas. Comer outro prato troca o efeito ativo e recomeça o tempo. Um prato ativo por vez. A barra de saciedade fica ao lado da vida, com o prato ativo e o tempo que falta.
+- **O efeito depende da família da comida** [H] (substitui o bônus de atributo da versão anterior, para ficar uma regra só). No jogo, o equivalente à mana é o **ânimo**, que enche durante a luta e zera entre lutas; por isso a comida "de ânimo" faz o personagem começar a luta com mais ânimo e usar a habilidade mais cedo.
+
+| Família | Exemplos | Vida fora de luta | Ânimo | Quem mais procura |
+|---|---|---|---|---|
+| Sem comida | — | 1% do PV por segundo | Começa a luta em 30 | — |
+| **Carnes e caça** (carne da caça) | Ensopado de javali, torta de caça, assado | **2,5%** por segundo | Começa em 30 | Cavaleiro e Caçador, que apanham mais entre lutas |
+| **Peixes** (Pesca) | Truta na brasa, caldo de peixe | 1,5% por segundo | **Começa em 50** | Mago e Druida, que vivem de habilidade |
+| **Pratos de colheita** (Colheita) | Caldo de cevada, torta de ervas | 2% por segundo | Começa em 40 | Qualquer vocação; o Ladino |
+| **Pratos especiais** (lote fino, peixe raro, erva rara, banquete) | Festim real, guisado do castelo | O da família, +25% | O da família, +25% | Chefes, masmorras e cercos; alguns trocam parte do efeito por um efeito de situação (resistência a peçonha, clareza contra a Névoa) |
+
+- **Todos os pratos são da Culinária;** o que muda é o ingrediente principal. **O tier conta:** os números acima são do prato do mesmo tier da região; prato de tier abaixo dá metade do efeito acima de "sem comida" [H].
+- **A duração não pode virar desconto** [H]. Dentro de um tier, o custo por hora de saciedade fica parecido entre os pratos (±15%). O prato de 2 horas é conveniência (menos unidades na mochila, menos refeições a planejar), não economia. Assim a demanda da Culinária continua em cerca de uma refeição de 1 hora por combatente por hora de combate, como no [06](06-oficios-e-coleta.md) e na simulação ([08](08-simulacao.md)).
+- **Os ajudantes comem da mochila do personagem,** com a mesma regra: o personagem alimenta o grupo (seção 9).
+- **A mochila** [H]: 20 casas no início (o caminho do Ladino *Bolso fundo* dá +20%); cada casa guarda uma pilha de até 100 unidades do mesmo item. Comida e saque dividem as casas: levar mais comida é deixar menos espaço para o saque. Para 72 horas fora, com dois ajudantes, são ~216 pratos de 1 hora ou ~108 de 2 horas: de 2 a 3 casas.
+- **Acabou a comida na expedição:** o plano decide entre seguir sem comida (regeneração lenta, mais poções) ou voltar e encerrar ([04-combate](04-combate.md), seção 3.5). O armazém não repõe comida durante a expedição.
+- **Sem comida, nada de ruim além da regeneração lenta.** Diferente do Tibia, a regeneração cai, mas não zera: um esquecimento não pode punir o ausente (pilar 4). O personagem gasta cerca de duas vezes mais poções ([04-combate](04-combate.md), seção 8).
+- **Comida não substitui poção.** A comida cuida do intervalo entre lutas (vida) e do começo da luta (ânimo); a emergência dentro da luta é da poção. Assim Culinária e Alquimia vendem coisas diferentes.
+
+[H] **Quatro perguntas.** *Referência:* o Tibia, em que o personagem carrega a comida, come com o botão direito e cada comida dá um tempo de regeneração; e o Auto Eat do Melvor, que come sozinho ([B01](../01-pesquisa/fichas/B01-melvor-idle.md)). *Diferença:* aqui cada família de comida tem um perfil (vida ou ânimo), e sem comida a regeneração cai, mas não zera. *Problema:* comida que só cura vira uma poção pior, e uma comida igual para todos não dá comprador próprio à Pesca e à Colheita. *Comportamento:* planejar a mochila antes de sair; o Cavaleiro compra carne, o Mago compra peixe, e cada ofício da comida ganha seu público. *Risco:* virar microgerência e cobrança de "lembrar de comer". Mitigação: Comer automaticamente, aviso no plano da expedição e regeneração que só cai, sem zerar.
 
 ### 4.3 Poções, óleos e unguentos: o cinto
 
