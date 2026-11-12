@@ -2,7 +2,22 @@
 
 RPG idle de navegador (desktop e celular), online e multiplayer, com uma economia movida pelos jogadores.
 
-O projeto terminou pesquisa, conceito, design (GDD) e arquitetura, e está na Fase 5: o roadmap e o MVP estão definidos, e a construção começa pelo marco M0 depois do ok do dono do produto. O único código até aqui é a simulação da economia.
+O projeto terminou pesquisa, conceito, design (GDD) e arquitetura e está na Fase 5, construindo o MVP marco a marco.
+
+## Rodar no PC (desenvolvimento)
+
+Precisa de Node.js 26 e Docker Desktop.
+
+```bash
+npm install
+npm run db:subir
+npm test
+npm run demo:m0
+npm run servidor
+```
+
+O banco local fica na porta 5433 (credenciais só de desenvolvimento em `.env.example`).
+ O único código até aqui é a simulação da economia.
 
 - Briefing do produto: [PROMPT_INICIAL.md](PROMPT_INICIAL.md)
 - Andamento, decisões e pendências: [docs/PROGRESSO.md](docs/PROGRESSO.md)

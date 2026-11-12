@@ -152,3 +152,7 @@ O MVP é uma fatia fina que atravessa o jogo inteiro: 7 ofícios em duas cadeias
 - (B) Contratar a pixel art desde o M0.
 - (C) Comprar um pacote pronto de assets para o MVP.
 - *Por quê:* arte é o item mais caro e mais lento; gastar nela antes de saber se o ciclo diverte é o risco que o MVP existe para evitar. O guia de estilo pode começar no M7.
+
+### Decisões do Gabriel (2026-11-11)
+
+**Aprovadas as 4 recomendações:** (1) o escopo do MVP descrito acima; (2) Cavaleiro e Mago; (3) moradores de teste para o mercado; (4) arte provisória até o M5. A construção começa pelo M0.

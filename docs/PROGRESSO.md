@@ -5,7 +5,28 @@
 
 ## Fase atual
 
-**Fase 5 — Roadmap e construção: em andamento.** O roadmap e o MVP estão em [`05-roadmap.md`](05-roadmap.md). 🛑 **Checkpoint do roadmap aguardando o Gabriel:** 4 decisões (escopo do MVP, vocações do MVP, moradores de teste para o mercado, arte provisória). A construção começa pelo marco M0 (fundação) depois do ok.
+**Fase 5 — Roadmap e construção: em andamento.** O roadmap e o MVP estão em [`05-roadmap.md`](05-roadmap.md). O Gabriel aprovou as 4 recomendações do roadmap em 2026-11-11: MVP com 7 ofícios em T1 e T2, Cavaleiro e Mago, moradores de teste para o mercado e arte provisória até o M5. **Marco atual: M0 — Fundação, entregue.** 🛑 Checkpoint do M0 aguardando o ok do Gabriel para começar o M1 (conta, personagem e mochila).
+
+### Marcos da Fase 5
+
+| Marco | Status | Como ver |
+|---|---|---|
+| M0 — Fundação | ✅ Entregue (2026-11-11) · 🛑 checkpoint | `npm run db:subir`, `npm test` (17 testes), `npm run demo:m0` |
+| M1 — Conta, personagem e mochila | ⚪ Próximo | — |
+| M2 — Ofícios, fila e ausência | ⚪ | — |
+| M3 — Criação, itens e comida | ⚪ | — |
+| M4 — Mercado: Bolsa e moradores de teste | ⚪ | — |
+| M5 — Combate e alfa de uma pessoa (MVP) | ⚪ | — |
+
+**O que o M0 entregou:**
+- Repositório com `apps/servidor`, `pacotes/razao`, `pacotes/economia`, `pacotes/config`, `config/`, `testes/` e `scripts/`; Node.js 26 rodando TypeScript direto; PostgreSQL 18 em Docker na porta 5433.
+- **Livro-razão:** contas de jogador, trânsito, fonte e dreno; lançamentos em inteiros de 64 bits que o banco obriga a somar zero em cada transação; saldo cacheado que nunca fica negativo; tabela de lançamentos particionada por tempo; reconciliação que acusa qualquer saldo adulterado. Fontes e drenos não têm saldo cacheado, para não virar linha quente.
+- **Idempotência:** todo comando que move valor leva `Idempotency-Key`; a primeira resposta (inclusive de erro) fica guardada; mesma chave com outros parâmetros é recusada; repetição em erro de serialização ou impasse.
+- **Transferência de ouro imediata** (checkpoint 3), com a taxa da Troca de 3% paga por quem recebe e destruída.
+- **Configuração** em `config/economia.json`, validada por esquema, com versão gravada em cada transação.
+- **Testes:** soma zero e saldo não negativo garantidos pelo banco; reconciliação; teste por propriedade com sequências aleatórias; 20 pedidos simultâneos com a mesma chave fazem uma transferência só; 30 transferências simultâneas de uma carteira que cobre 10 deixam passar exatamente 10; transferências cruzadas sem impasse; validação da configuração.
+- **Integração contínua** no GitHub Actions: tipos, testes com PostgreSQL 18 e simulação curta.
+- **Fora do M0, de propósito:** login (no M1, até lá a conta vem do cabeçalho `X-Conta-Teste` nas rotas de desenvolvimento) e o job de partições mensais do razão.
 
 **Fase 4 — Arquitetura técnica: concluída.** Checkpoint decidido pelo Gabriel em 2026-11-11 (tabela abaixo). **Comida (decisão do Gabriel, 2026-11-11):** o foco é o personagem. Ele come do que leva na mochila, pelo botão direito ("Comer") ou com Comer automaticamente ligado; o armazém não alimenta. Cada família de comida dá regeneração e tempo diferentes, como no Tibia. Escrito no GDD ([`03-gdd/03-personagem.md`](03-gdd/03-personagem.md), seção 4.2; 04, 06, 14 e bíblia).
 
@@ -98,7 +119,7 @@ A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11
 | 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Concluída · checkpoint aprovado |
 | 3. GDD + simulação da economia | `docs/03-gdd/` | ✅ Concluída · checkpoint decidido |
 | 4. Arquitetura técnica | `docs/04-arquitetura.md` | ✅ Concluída · checkpoint decidido |
-| 5. Roadmap e construção | `docs/05-roadmap.md` | 🔵 Roadmap entregue · 🛑 checkpoint pendente |
+| 5. Roadmap e construção | `docs/05-roadmap.md` | 🔵 Construindo · M0 entregue |
 
 ## Decisões do checkpoint da Fase 1 (2026-11-11)
 
@@ -153,6 +174,7 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 | 2026-11-11 | Sem verificação de idade alguma; transferência de Coins e ouro imediata, sem freios. | Gabriel |
 | 2026-11-11 | GDD aprovado; 2ª rodada de simulação no início da Fase 4; equipe mínima (Gabriel + Claude, arte e moderação terceirizadas). | Gabriel |
 | 2026-11-11 | Stack em TypeScript; desenvolvimento e testes no PC local por enquanto; Pix e cartão desde o lançamento; Bazar com o personagem mudando de conta. | Gabriel |
+| 2026-11-11 | Roadmap aprovado como recomendado: MVP com 7 ofícios (T1 e T2), Cavaleiro e Mago, moradores de teste, arte provisória. | Gabriel |
 | 2026-11-11 | Comida sem bônus de produção; o personagem come do que leva na mochila (botão direito ou comer automático), e cada comida dá regeneração e tempo diferentes. | Gabriel |
 
 ## Lições de processo (para as próximas fases)
@@ -169,3 +191,4 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 - **2026-11-11** — Fase 3: bíblia, 14 módulos, simulação da economia em Node.js, wireframes, revisão de consistência e checkpoint. Checkpoint decidido pelo Gabriel: sem verificação de idade, transferência imediata, GDD aprovado, equipe mínima. GDD ajustado; Fase 4 iniciada.
 - **2026-11-11** — Fase 4: arquitetura técnica, 2ª rodada da simulação (com correção do disjuntor no modelo), D15, D16 e D19 resolvidas, resumo e checkpoint da Fase 4. Checkpoint decidido pelo Gabriel; comida redesenhada (mochila do personagem, regeneração por tipo, segue sem comida quando acaba).
 - **2026-11-11** — Fase 5: roadmap com o MVP (7 ofícios, T1 e T2, Cavaleiro e Mago, Bolsa com moradores de teste, expedições) e 14 marcos até o lançamento; checkpoint do roadmap.
+- **2026-11-11** — Fase 5, M0: fundação do código, livro-razão, idempotência, configuração, 17 testes e integração contínua.

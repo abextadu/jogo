@@ -10,7 +10,7 @@ RPG idle de navegador (desktop e celular), online e multiplayer, com economia mo
 
 ## Regras-chave
 
-- **Nada de código do jogo antes da Fase 5.** Única exceção: o script de simulação da economia na Fase 3.
+- **Código só na Fase 5, um marco por vez** ([`docs/05-roadmap.md`](docs/05-roadmap.md)): cada marco termina com testes, demonstração e checkpoint; o próximo só começa com o ok do Gabriel.
 - **Checkpoint obrigatório ao fim de cada fase:** resumo executivo de no máximo uma página e no máximo 5 decisões, cada uma com opções e a recomendação justificada. Só avançar com o ok do Gabriel.
 - **Pesquisa real na web, com link para todo dado concreto.** Separar sempre: `[F]` fato com fonte, `[C]` consenso da comunidade, `[H]` hipótese ou opinião nossa, `[NV]` conhecimento prévio não verificado.
 - **Entender o porquê, não copiar o quê:** para cada mecânica, o problema que resolve, a emoção que gera, o comportamento que incentiva e o efeito colateral.
@@ -28,9 +28,19 @@ RPG idle de navegador (desktop e celular), online e multiplayer, com economia mo
 4. Arquitetura técnica → `docs/04-arquitetura.md`
 5. Roadmap e construção por marcos → `docs/05-roadmap.md`
 
+## Código (Fase 5)
+
+Stack decidida no checkpoint da Fase 4 ([`docs/04-arquitetura.md`](docs/04-arquitetura.md)): TypeScript em Node.js 26, PostgreSQL 18, Fastify, postgres.js, Zod, Vitest e fast-check. Por enquanto tudo roda no PC do Gabriel (Windows 11, Docker Desktop).
+
+- **Rodar:** `npm run db:subir` (PostgreSQL 18 em Docker, porta 5433; a 5432 é do PostgreSQL 16 do Windows) → `npm test` → `npm run servidor` (http://127.0.0.1:3000). Demonstração de cada marco: `npm run demo:m0` etc.
+- **Sem build:** o Node 26 roda `.ts` direto. Só sintaxe que se apaga (nada de `enum`, `namespace` ou propriedades no construtor); importações relativas com `.ts`. `npm run tipos` confere os tipos.
+- **Estrutura:** `apps/servidor` (HTTP), `pacotes/razao` (livro-razão, migrações SQL, idempotência), `pacotes/economia` (regras de valor), `pacotes/config` (esquemas), `config/` (os números do jogo), `testes/`, `scripts/`.
+- **Regras do código:** todo valor passa pelo livro-razão (lançamentos com soma zero, travas em ordem de id); todo comando que move valor leva `Idempotency-Key`; ouro e Coins em inteiros (BigInt, texto no JSON); números do jogo só em `config/`; **nenhuma rota de transferência com espera, retenção ou limite de saída** (decisão do Gabriel, checkpoint 3); sem verificação de idade.
+- **Testes obrigatórios** para economia e combate, incluindo pedidos simultâneos e invariantes do razão; a integração contínua (`.github/workflows/ci.yml`) roda tipos, testes e uma simulação curta a cada push.
+
 ## Infra do dono (ponto de partida, não obrigação)
 
-VPS própria com Docker Swarm e PostgreSQL. Desenvolvimento no VS Code / Claude Code.
+VPS própria com Docker Swarm e PostgreSQL, para quando outras pessoas forem testar. Desenvolvimento no VS Code / Claude Code.
 
 ## Git
 
