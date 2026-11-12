@@ -1,0 +1,31 @@
+{
+  "name": "jogo",
+  "private": true,
+  "description": "RPG idle de navegador com economia movida pelos jogadores (Projeto Ofício).",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "db:subir": "docker compose up -d --wait",
+    "db:descer": "docker compose down",
+    "db:migrar": "node pacotes/razao/src/migrar-cli.ts",
+    "dev": "node --watch apps/servidor/src/principal.ts",
+    "servidor": "node apps/servidor/src/principal.ts",
+    "demo:m0": "node scripts/demo-m0.ts",
+    "tipos": "tsc --noEmit",
+    "test": "vitest run",
+    "test:ver": "vitest"
+  },
+  "dependencies": {
+    "fastify": "^5.12.8",
+    "postgres": "^3.4.9",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "fast-check": "^4.10.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

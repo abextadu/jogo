@@ -1,0 +1,24 @@
+# Banco local de desenvolvimento (Fase 5, etapa 0: PC do Gabriel).
+# Porta 5433, porque o PostgreSQL 16 instalado no Windows já usa a 5432.
+# Credenciais só de desenvolvimento local; nunca usar em produção.
+services:
+  banco:
+    image: postgres:18
+    container_name: jogo-banco
+    environment:
+      POSTGRES_USER: jogo
+      POSTGRES_PASSWORD: jogo_local
+      POSTGRES_DB: jogo
+    ports:
+      - "5433:5432"
+    volumes:
+      - jogo-dados:/var/lib/postgresql
+      - ./infra/local/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jogo -d jogo"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  jogo-dados:

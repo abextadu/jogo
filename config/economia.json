@@ -1,0 +1,8 @@
+{
+  "_sobre": "Números da economia lidos pelo servidor (arquitetura, seção 12). No M0 entra só a taxa da Troca, para a transferência de ouro. Toda chave que começa com _ é comentário e não chega ao jogo.",
+  "taxas": {
+    "_fonte": "Bíblia §6.6 e GDD 07 §5.6: cada lado paga 3% do valor de mercado do que recebe, em ouro, destruído; mínimo de 1 ouro. Num presente, só quem recebe paga.",
+    "troca_lado_bps": 300,
+    "troca_minimo_ouro": 1
+  }
+}

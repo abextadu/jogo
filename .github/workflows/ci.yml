@@ -1,0 +1,40 @@
+# Integração contínua: tipos, testes de economia e simulação curta a cada commit no main e em cada PR.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    services:
+      banco:
+        image: postgres:18
+        env:
+          POSTGRES_USER: jogo
+          POSTGRES_PASSWORD: jogo_local
+          POSTGRES_DB: jogo_teste
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U jogo -d jogo_teste"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 30
+    env:
+      DATABASE_URL_TESTE: postgres://jogo:jogo_local@localhost:5433/jogo_teste
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+      - run: npm ci
+      - name: Tipos
+        run: npm run tipos
+      - name: Testes (livro-razão, idempotência, concorrência, configuração)
+        run: npm test
+      - name: Simulação da economia (cenário base, 60 dias)
+        run: node docs/03-gdd/08-simulacao/sim.js --cenario base --dias 60 --quieto --sem-csv
