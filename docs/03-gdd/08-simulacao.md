@@ -296,6 +296,66 @@ O que muda em cada módulo (o diretor aplica; este módulo não edita os outros)
 
 **Conferência do modelo.** O ouro fecha no centavo: a soma do ouro de todas as contas é igual às fontes menos os drenos acumulados (teste com bots desligados, diferença de 0,000%). As datas do primeiro 100 de ofício mestre por perfil (casual D149, regular D123, hardcore D102, com os tiers do 06) batem com as do 02 §13.3 (D149, D122, D100). A mesma semente reproduz o mesmo resultado.
 
+## 10. 2ª rodada (Fase 4, depois do checkpoint 3)
+
+### 10.1 O que mudou no modelo
+
+| Mudança | 1ª rodada | 2ª rodada | Origem |
+|---|---|---|---|
+| Carência do Coin | 72 h no Pix, 7 dias no cartão e na 1ª doação | **Zero** | Checkpoint 3, decisão 2 |
+| Contestação | 0,3% das doações; 60% dos Coins já transferidos | **0,5%; 95% já transferidos** | [13, §12.1](13-anti-abuso.md) |
+| Fazendas de bots | 0,5% das contas (identidade verificada) | **3%** (contas falsas baratas) | Checkpoint 3, decisões 1 e 3 |
+| Funil e retenção | 1.500 contas verificadas por dia; D1 50%, D7 25%, D30 12% | **1.875 por dia (×1,25); D1 45%, D7 22%, D30 10%** | [12, §10](12-onboarding.md) refeito |
+| Bônus da refeição (D15) | Não modelado | **+3% numa fila, dentro do teto de 1,10× do domínio**, em 50% das horas de fila de quem está abaixo do teto | D1 e D15 |
+| Disjuntor de pagamentos | Parava o Câmbio | **Suspende só a doação por cartão; o Pix continua** | Checkpoint 3 (a 1ª rodada tinha, no modelo, um freio de transferência que o GDD não tem mais) |
+| Contas falsas de uma onda | Só caíam na onda de banimento da própria onda | Também caem nas ondas regulares de detecção | Correção do modelo |
+| Critérios de saúde | 12 | **13**: entra a **extração das fazendas** (parte do valor negociável que sai pelo portão vinda de contas-fazenda; meta até 3%) | [13, §2.2](13-anti-abuso.md) |
+
+O cenário `r1_base_1a_rodada` reproduz as premissas da 1ª rodada, para comparar. Arquivos: `08-simulacao/parametros.json` (base da 2ª rodada), `cenarios.json` (grupo `rodada2`) e `resultados/sementes_r2.json`.
+
+### 10.2 Resultados (média de três sementes: 42, 7 e 2026)
+
+| Cenário | IPC ao ano (faixa) | Nível de preços | Drenos ÷ fontes | Premium em dias de renda | Top 10% | Fazenda (R$/conta/mês) | Extração das fazendas | Critérios (de 13, por semente) |
+|---|---|---|---|---|---|---|---|---|
+| 1ª rodada, para comparar | +2% (−28% a +55%) | 45,9 | 86% | 16,5 | 38% | 16,3 | 0,5% | 7 / 7 / 7 |
+| **Base da 2ª rodada** (decisões do checkpoint 3) | +102% (+5% a +176%) | 51,0 | 83% | 13,1 | 43% | 19,7 | 3,0% | 5 / 7 / 5 |
+| **Sem o bônus da refeição (recomendado)** | +26% (+15% a +35%) | 44,7 | 85% | 19,4 | 37% | 14,3 | 2,9% | 8 / 6 / 7 |
+| Sem o bônus da refeição e ouro de começo de 1.600 | +27% (+1% a +66%) | 45,1 | 85% | 16,2 | 39% | 15,5 | 2,9% | 6 / 8 / 6 |
+| Refeição só na bancada ativa (10% das horas) | +93% (+83% a +99%) | 50,6 | 84% | 19,0 | 44% | 12,5 | 3,0% | 6 / 7 / 6 |
+| Refeição em todas as horas de fila | +107% (+57% a +143%) | 57,9 | 83% | 16,0 | 47% | 16,1 | 2,9% | 7 / 6 / 7 |
+| Refeição na bancada ativa e ouro de começo de 1.600 | +81% (+52% a +111%) | 52,0 | 84% | 16,3 | 41% | 14,9 | 2,9% | 6 / 6 / 8 |
+| Fazendas em 10% | +106% (+47% a +204%) | 59,6 | 78% | 14,4 | 49% | 16,6 | 9,3% | 4 / 5 / 5 |
+| Fazendas em 10% e detecção pela metade | +80% (+47% a +129%) | 56,7 | 78% | 14,5 | 47% | 20,5 | 13,7% | 4 / 3 / 4 |
+| Fazendas em 10% e rampa de conta nova longa | +25% (+9% a +38%) | 85,3 | 77% | 5,3 | 60% | 32,2 | 8,2% | 3 / 2 / 4 |
+| Fazendas em 20% (E4) | +69% (+35% a +113%) | 68,4 | 75% | 14,9 | 51% | 12,1 | 18,6% | 3 / 5 / 5 |
+| Onda de contas falsas (30% das novas por 14 dias) | +119% (+64% a +190%) | 64,3 | 83% | 14,9 | 48% | 16,4 | 3,0% | 5 / 6 / 5 |
+| Ataque de cartões (2% das doações contestadas por 30 dias) | +45% (+14% a +106%) | 49,7 | 83% | 19,4 | 43% | 12,9 | 2,9% | 8 / 7 / 5 |
+
+**Diagnóstico da inflação** (uma mudança por vez sobre a 1ª rodada, três sementes): o funil novo leva o IPC a +61% ao ano; a carência zero, a −17%; as fazendas em 3%, a −1%; o disjuntor só no cartão, a +10%. O funil novo com ouro de começo de 1.600 (em vez de 2.000) volta a −8%.
+
+### 10.3 O que a rodada mostra [H]
+
+1. **As decisões do checkpoint 3, sozinhas, não derrubam a economia de preços.** Sem o bônus da refeição, o nível de preços (44,7) e o premium (19,4 dias de renda) ficam como na 1ª rodada, e os drenos destroem 85% do que entra. A tendência do IPC, porém, sobe nas três sementes, para +26% ao ano.
+2. **Parte da inflação vem do funil, não da carência nem das fazendas.** Sem verificação, entram 25% mais contas, que ficam menos tempo; cada uma recebe 2.000 de ouro de começo. Baixar o ouro de começo para 1.600 neutraliza esse efeito quando testado sozinho, mas não na combinação inteira (+27% ao ano, contra +26% com 2.000), e ainda tira 3 dias do premium. O ouro de começo fica em 2.000. A tendência do IPC, que já era o critério mais ruidoso da 1ª rodada, vira o principal ponto a calibrar no início da Fase 5, com a configuração real do jogo.
+3. **O bônus de ofício da refeição (D15) não deve entrar.** Qualquer bônus, mesmo pequeno, sobe a inflação: com refeição em 10% das horas de fila, o IPC vai a +93% ao ano nas três sementes (+83% a +99%); em 50%, a +102%; sem o bônus, +26%. O motivo é que os consumíveis já faltam no modelo (33% do consumo essencial não é atendido desde a 1ª rodada), e qualquer demanda extra vira alta de preço. Isso também contradiz a premissa da D1: a D1 criou o bônus porque uma conta estática do 06 indicava pouca demanda para Culinária e Pesca, mas na simulação a oferta de consumíveis é que não alcança a demanda. Em metade das horas de fila, o bônus ainda derruba o premium de 19 para 13 dias de renda.
+4. **A extração acompanha a fração de contas falsas.** Fazendas em 3% extraem 3,0% do valor emitido; em 10%, 9,3%; em 20%, 18,6%. O lucro por conta fica de R$ 12 a R$ 21 por mês. Sem verificação, nada impede o operador de abrir mais contas: a meta de 3% só se cumpre se a detecção mantiver as fazendas perto de 3% das contas. Com detecção pela metade, 10% de fazendas extraem 13,7%.
+5. **A rampa de conta nova mais longa não serve.** Corta pouco a extração (de 9,3% para 8,2%) e prejudica muito o jogador honesto que chega: o premium cai a 5 dias de renda, o nível de preços vai a 85 e o consumo não atendido a 70%, porque as contas novas são parte grande da oferta. Fica descartada.
+6. **A onda de contas falsas é absorvida** pelas ondas regulares de detecção (extração de 3,0% no ano), ao custo de preços mais altos (nível 64).
+7. **O ataque de cartões é um custo financeiro, não econômico.** Com o disjuntor suspendendo só o cartão, a economia aguenta (premium de 19 dias). Os Coins contestados que já tinham sido transferidos ("sem lastro") passam de ~11 mil na 1ª rodada para ~25 mil no base e ~40 mil no ataque, no fim do ano. O disjuntor fica ligado em média 35 a 127 dias por ano conforme o cenário, inclusive sem ataque: com 0,5% de disputas no base e o limiar de 0,8%, a margem é pequena, e a escala de 0,2 do modelo exagera o ruído. É um número a medir no alfa.
+
+### 10.4 Recomendações da 2ª rodada
+
+| Ponto | Recomendação [H] | Situação |
+|---|---|---|
+| Bônus de ofício da refeição (D1 e D15) | Sair do jogo; a refeição continua no combate e nas provisões do cerco e da Fronteira (a outra metade da D1); medir a parte de Culinária e Pesca nas horas de ofício no alfa | Decisão 4 do checkpoint da Fase 4 ([arquitetura](../04-arquitetura.md)) |
+| Ouro de começo | Fica em 2.000: baixar para 1.600 não melhorou a combinação | — |
+| Rampa de conta nova mais longa | Descartada | — |
+| Fazendas | A defesa é a detecção: ligações por pagador e fluxo de valor ([13, §4.2](13-anti-abuso.md)); o painel acompanha a extração, com alerta acima de 3% | Requisito da arquitetura (§11) |
+| Tendência do IPC | Calibrar no início da Fase 5 com a configuração real (ouro de começo, encomendas elásticas, drenos de topo), nunca com freios na transferência | Pendência da Fase 5 |
+| Disjuntor de pagamentos | Medir a taxa de disputa no alfa antes de fixar o limiar | Pendência do alfa |
+
+**Limitações desta rodada:** o modelo não tem matérias raras (a regra da D16 é analítica, [arquitetura, §17](../04-arquitetura.md)) nem mede a demanda por ofício, então não diz se Culinária e Pesca ficam na faixa de 6% a 11% das horas que a D1 queria proteger.
+
 ## Como isso pode dar errado
 
 | Risco | Como acontece | Mitigação |

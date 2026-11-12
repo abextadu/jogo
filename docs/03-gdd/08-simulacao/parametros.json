@@ -9,12 +9,12 @@
     "idade_minima_riqueza": 7
   },
   "populacao": {
-    "_fonte": "07 §13 (parâmetros 1 a 5); 12 §10.2 (retenção D1/D7/D30); 11 §8.4 (onda de estreia ~60 mil verificados). A entrada por dia foi calibrada para ~30 mil ativos (o 07 fala em 1,5% dos ativos por dia, o que não sustenta a base com a retenção do 12; ver o 08-simulacao.md).",
-    "onda_lancamento": {"contas_por_dia": 4000, "dias": 14},
-    "entrada_por_dia": 1500,
+    "_fonte": "07 §13 (parâmetros 1 a 5); 12 §10.2 (retenção D1/D7/D30); 11 §8.4 (onda de estreia ~60 mil verificados). A entrada por dia foi calibrada para ~30 mil ativos (o 07 fala em 1,5% dos ativos por dia, o que não sustenta a base com a retenção do 12; ver o 08-simulacao.md). 2ª rodada (checkpoint 3, sem verificação): funil do 12 refeito, 50 contas a cada 100 prólogos em vez de 40 verificadas (entrada e onda × 1,25) e retenção 45/22/10%.",
+    "onda_lancamento": {"contas_por_dia": 5000, "dias": 14},
+    "entrada_por_dia": 1875,
     "dias_sem_entrada": null,
     "mix_entrada": {"casual": 0.52, "regular": 0.37, "hardcore": 0.11},
-    "retencao_novas": {"d1": 0.5, "d7": 0.25, "d30": 0.12},
+    "retencao_novas": {"d1": 0.45, "d7": 0.22, "d30": 0.1},
     "evasao_mensal": 0.25,
     "evasao_extra": null,
     "fator_evasao_perfil": {"casual": 1.25, "regular": 0.9, "hardcore": 0.55},
@@ -149,6 +149,7 @@
     "fator_consumo_tier": [1, 1.4, 1.8, 2.35, 3, 3.9],
     "equip_min_por_hora_T1": 8,
     "refeicoes_por_hora": 1,
+    "refeicao_oficio": {"_fonte": "D1 e D15 (2ª rodada): +3% de eficiência numa fila por 1 h, dentro do teto de 1,10× do domínio; 'uso' = fração das horas de fila cobertas por refeição, para quem está abaixo do teto.", "bonus": 0.03, "uso": 0.5},
     "vr_refeicao_min_T1": 0.6,
     "pocoes_por_hora": 3,
     "vr_pocao_min_T1": 0.55,
@@ -234,7 +235,7 @@
     "dias_media_decisao": 7
   },
   "coins": {
-    "_fonte": "11 §2 e §8 (conversão, ARPPU, faixas, destino dos Coins); 07 §6 (carência, contestação, guardados); 13 §12.1.",
+    "_fonte": "11 §2 e §8 (conversão, ARPPU, faixas, destino dos Coins); 07 §6 (contestação, guardados); 13 §12.1. 2ª rodada (checkpoint 3): carência zero; contestação a 0,5% das doações e 95% dos Coins contestados já transferidos.",
     "coins_por_real": 10,
     "premium_reais": 20,
     "premium_dias": 30,
@@ -250,15 +251,16 @@
       "400": [0.01, 0.55, 0.14, 0.15, 0.15],
       "_ordem": "conveniencia, venda, loja, bazar, guardados (frações de cada doação)"
     },
-    "carencia": {"pix_dias": 3, "cartao_dias": 7, "primeira_dias": 7, "parcela_pix": 0.6},
+    "carencia": {"pix_dias": 0, "cartao_dias": 0, "primeira_dias": 0, "parcela_pix": 0.6},
     "contestacao": {
-      "taxa": 0.003,
+      "taxa": 0.005,
       "regulariza": 0.5,
-      "transferidos": 0.6,
+      "transferidos": 0.95,
       "dias_ate": [20, 90],
       "dias_regularizar": [5, 30],
       "disjuntor": 0.008,
-      "religa": 0.004
+      "religa": 0.004,
+      "disjuntor_modo": "cartao"
     },
     "guardados_dias": [30, 180],
     "guardados_parcela_venda": 0.5,
@@ -336,9 +338,9 @@
     "escala_quantidade": true
   },
   "bots": {
-    "_fonte": "13 §2.2 e §12.1.",
+    "_fonte": "13 §2.2 e §12.1. 2ª rodada (checkpoint 3): sem verificação, fazendas em 3% das contas (eram 0,5%).",
     "automacao_frac": 0.03,
-    "fazenda_frac": 0.005,
+    "fazenda_frac": 0.03,
     "deteccao_fazenda": {"intervalo": 21, "taxa": 0.6},
     "deteccao_automacao_semana": 0.08,
     "param_apos_sancao": 0.3,
@@ -373,6 +375,7 @@
     "basicos_piso_min": 1.3,
     "salario_topo_max": 100,
     "dia_teto_reais": [0.5, 1.5],
-    "lucro_fazenda_mes_max": 15
+    "lucro_fazenda_mes_max": 15,
+    "extracao_fazendas_max": 0.03
   }
 }

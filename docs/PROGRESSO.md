@@ -5,7 +5,15 @@
 
 ## Fase atual
 
-**Fase 4 — Arquitetura técnica: em andamento.** O checkpoint da Fase 3 foi decidido pelo Gabriel em 2026-11-11 (tabela abaixo): sem verificação de idade alguma, transferência imediata sem freios, GDD aprovado com segunda rodada de simulação no início da Fase 4, e equipe mínima (Gabriel + Claude). O GDD foi ajustado a essas decisões. Entregável: [`04-arquitetura.md`](04-arquitetura.md).
+**Fase 4 — Arquitetura técnica: entregue.** 🛑 **Checkpoint da Fase 4 aguardando o Gabriel:** 5 decisões no fim de [`04-arquitetura.md`](04-arquitetura.md) (stack, hospedagem, meios de pagamento no lançamento, bônus de ofício da refeição, modelo do Bazar de Personagens).
+
+**Entregue na Fase 4 (2026-11-11):**
+- [`04-arquitetura.md`](04-arquitetura.md): stack com comparação, modelo de dados e livro-razão, APIs, tempo real, jobs e cálculo do ausente, mercado e leilão atômicos, segurança e anti-bot sem verificação, pagamentos e auditoria, observabilidade e painel da economia, balanceamento por configuração, escala de 100 a 100 mil, riscos e checkpoint.
+- **2ª rodada da simulação** ([`03-gdd/08-simulacao.md`](03-gdd/08-simulacao.md), seção 10): sem carência e sem verificação, com o bônus da refeição (D15), 13 cenários e três sementes. Achados: preços e premium aguentam; a inflação ao longo do ano sobe de +2% para +26%; o bônus da refeição a leva a +100% e deve sair; a extração das fazendas acompanha a fração de contas falsas; a rampa de conta nova mais longa foi descartada. O modelo tinha um freio antigo (o disjuntor parava o Câmbio), corrigido para suspender só o cartão.
+- **Pendências resolvidas:** D15 (refeição dentro do teto do domínio), D16 (valor de referência das matérias raras e dos insumos nobres), D19 (Bazar: o personagem muda de conta, a conta não muda de dono; aplicado no 07, no 13 e na bíblia).
+- **Pendência para a Fase 5:** calibrar a tendência do IPC com a configuração real, sem freios na transferência.
+
+O checkpoint da Fase 3 foi decidido pelo Gabriel em 2026-11-11 (tabela abaixo): sem verificação de idade alguma, transferência imediata sem freios, GDD aprovado com segunda rodada de simulação no início da Fase 4, e equipe mínima (Gabriel + Claude). O GDD foi ajustado a essas decisões.
 
 O checkpoint da Fase 2 foi aprovado pelo Gabriel em 2026-11-11 (as 5 recomendações).
 
@@ -71,7 +79,7 @@ A Fase 1 foi concluída e o checkpoint dela foi decidido pelo Gabriel em 2026-11
 | 1. Pesquisa profunda | `docs/01-pesquisa/` + `00-sintese.md` | ✅ Concluída · checkpoint decidido |
 | 2. Conceito (3 conceitos) | `docs/02-conceito.md` | ✅ Concluída · checkpoint aprovado |
 | 3. GDD + simulação da economia | `docs/03-gdd/` | ✅ Concluída · checkpoint decidido |
-| 4. Arquitetura técnica | `docs/04-arquitetura.md` | 🔵 Em andamento |
+| 4. Arquitetura técnica | `docs/04-arquitetura.md` | ✅ Entregue · 🛑 checkpoint pendente |
 | 5. Roadmap e construção | `docs/05-roadmap.md` | ⚪ Não iniciada |
 
 ## Decisões do checkpoint da Fase 1 (2026-11-11)
@@ -139,3 +147,4 @@ Opções e justificativas em [`01-pesquisa/00-sintese.md`](01-pesquisa/00-sintes
 - **2026-11-11** — Matriz, padrões, leis e síntese com 30 insights concluídos. Checkpoint da Fase 1 apresentado e decidido pelo Gabriel, com ajustes.
 - **2026-11-11** — Fase 2: três conceitos (Casas da Maré, Fronteira, Cidade dos Ofícios), comparação, recomendação e checkpoint em `02-conceito.md`.
 - **2026-11-11** — Fase 3: bíblia, 14 módulos, simulação da economia em Node.js, wireframes, revisão de consistência e checkpoint. Checkpoint decidido pelo Gabriel: sem verificação de idade, transferência imediata, GDD aprovado, equipe mínima. GDD ajustado; Fase 4 iniciada.
+- **2026-11-11** — Fase 4: arquitetura técnica, 2ª rodada da simulação (com correção do disjuntor no modelo), D15, D16 e D19 resolvidas, resumo e checkpoint da Fase 4.

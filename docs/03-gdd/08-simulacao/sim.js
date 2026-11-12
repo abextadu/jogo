@@ -342,7 +342,7 @@ function populacao(sim) {
     if (a.bot === 1 && a.susp <= d && rng.chance(pAuto)) {
       a.susp = d + P.bots.suspensao_dias;
       if (rng.chance(P.bots.param_apos_sancao)) a.bot = 0;
-    } else if ((a.bot === 2 && onda && rng.chance(df.taxa)) || (a.bot === 3 && ondaCat && rng.chance(cat.ban_frac))) {
+    } else if ((a.bot >= 2 && onda && rng.chance(df.taxa)) || (a.bot === 3 && ondaCat && rng.chance(cat.ban_frac))) { // 2ª rodada: as contas falsas que sobram da onda também caem nas ondas regulares
       banirFazenda(sim, a);
     }
   }
@@ -422,6 +422,15 @@ function progressao(sim, a, perf) {
   const ferr = acel ? 1 + perf.bonus_ferramenta * Math.min(1, idade / PP.rampa_ferramenta_dias) : 1;
   a.s1 = dominio(P, a.n1, a.T1, dmax) * ferr;
   a.s2 = dominio(P, a.n2, a.T2, dmax) * ferr;
+  // D15 (2ª rodada): a refeição dá +3% numa fila por 1 h, mas conta dentro do teto do domínio (1,10×);
+  // quem já está no teto não ganha nada comendo e não come para isso
+  const RO = P.consumo.refeicao_oficio;
+  a.come1 = a.come2 = 0;
+  if (RO && RO.bonus > 0 && RO.uso > 0) {
+    const capV = 1 + 0.01 * PP.dominio_max_niveis;
+    if (a.s1 < capV) { a.s1 = Math.min(capV, a.s1 * (1 + RO.bonus * RO.uso)); a.come1 = RO.uso; }
+    if (a.s2 < capV) { a.s2 = Math.min(capV, a.s2 * (1 + RO.bonus * RO.uso)); a.come2 = RO.uso; }
+  }
   a.sv = dominio(P, a.nv, a.Tv, PP.dominio_max_niveis);
   a.taxa = PP.taxa_ausente_base + PP.taxa_por_marco * a.marcos;
   // XP do dia
@@ -632,6 +641,9 @@ function fase1(sim, a) {
   nec[gi(EQUIP, a.T1e)] += a.h1 * ferr * fc[a.T1e - 1];
   nec[gi(EQUIP, a.T2e)] += a.h2 * ferr * fc[a.T2e - 1];
   nec[gi(EQUIP, a.Ta)] += a.ha * ferr * fc[a.Ta - 1];
+  // D15: refeições comidas nas filas de ofício (1 por hora de fila coberta pelo bônus)
+  if (a.come1) nec[gi(CONSUM, a.T1e)] += a.h1 * a.come1 * C.vr_refeicao_min_T1 * fc[a.T1e - 1] * G;
+  if (a.come2) nec[gi(CONSUM, a.T2e)] += a.h2 * a.come2 * C.vr_refeicao_min_T1 * fc[a.T2e - 1] * G;
   if (sim.fronteiraAtiva && a.adFront && P.social.fronteira.desvio_atividade <= 0) {
     const Fr = P.social.fronteira;
     const extra = Fr.frac_P / Fr.adesao * a.prodEMAtot * sim.picoFront;
@@ -1043,8 +1055,9 @@ function fontesColetivas(sim) {
     a.rendaEMA += (a.fontesHoje + a.receitaHoje - a.rendaEMA) / 14;
   }
   // fazendas: todo o ouro acima da reserva vai para os compradores do mercado cinza, por Troca (13 §2.2)
-  let transf = 0, dias = 0, saidas = 0;
+  let transf = 0, dias = 0, saidas = 0, saidasTodas = 0;
   for (const a of A) {
+    saidasTodas += a.saidaOrigemHoje + a.encEntregue * porVra;
     if (a.bot < 2) continue;
     dias++;
     saidas += a.saidaOrigemHoje + a.encEntregue * porVra;
@@ -1056,6 +1069,7 @@ function fontesColetivas(sim) {
     for (const r of a.receptores) { if (r.ativo) { r.ouro += parte; r.ouroCinza += parte; } else sim.massaInativa += parte; }
   }
   sim.fazTransfJanela.push(transf); sim.fazDiasJanela.push(dias); sim.fazSaidasJanela.push(saidas);
+  sim.saidasTodasDia = saidasTodas; sim.saidasFazDia = saidas;
   if (sim.fazTransfJanela.length > 30) { sim.fazTransfJanela.shift(); sim.fazDiasJanela.shift(); sim.fazSaidasJanela.shift(); }
 }
 
@@ -1068,6 +1082,9 @@ function premiumCoins(P) { return P.coins.premium_reais * P.coins.coins_por_real
 function coinsDia(sim) {
   const P = sim.P, C = P.coins, d = sim.dia, rng = sim.rng, cpr = C.coins_por_real;
   const pc = premiumCoins(P);
+  // disjuntor de pagamentos: na 1ª rodada parava as transferências de Coins (Câmbio); desde o checkpoint 3,
+  // suspende só a doação por cartão (o Pix continua) e nunca a transferência
+  const modoTransf = (C.contestacao.disjuntor_modo || 'transferencias') === 'transferencias';
   const ev = P.eventos;
   const onda = ev.onda_pagantes && d >= ev.onda_pagantes.inicio && d < ev.onda_pagantes.fim ? ev.onda_pagantes : null;
   const fuga = ev.fuga_pagantes && d >= ev.fuga_pagantes.inicio ? ev.fuga_pagantes : null;
@@ -1085,6 +1102,7 @@ function coinsDia(sim) {
     if (!pagante || idade < C.inicio_doacao_dias) continue;
     if ((idade - C.inicio_doacao_dias) % 30 !== a.diaDoacao) continue;
     if (fuga && rng.chance(fuga.frac)) continue;
+    if (sim.disjuntorCoins && !modoTransf && !rng.chance(C.carencia.parcela_pix)) { sim.doacoesCartaoBloqueadas = (sim.doacoesCartaoBloqueadas || 0) + 1; continue; }
     let reais = pagante * (0.85 + 0.3 * rng.next());
     if (onda) reais *= onda.mult_doacao;
     const coins = Math.round(reais * cpr);
@@ -1141,7 +1159,7 @@ function coinsDia(sim) {
       });
     }
     let v = a.coinsVenda || 0;
-    if (v > 0 && !sim.disjuntorCoins) {
+    if (v > 0 && !(sim.disjuntorCoins && modoTransf)) {
       if (v < P.cambio.ordem_min) { sim.contadores.vendasAbaixoMin++; continue; } // granularidade: fica esperando juntar
       a.coinsVenda = 0;
       if (rng.chance(migr)) { v = trocaComLivro(sim, a, 1, v); if (v < 1) continue; }
@@ -1183,7 +1201,7 @@ function coinsDia(sim) {
   sim.cambioDia = { volume: 0, ouro: 0, rodadasComNegocio: 0, rodadas: 0, ordensNovas: sim.ordensHoje || 0, vwapNum: 0 };
   sim.ordensHoje = 0;
   const R = P.cambio.rodadas_por_dia;
-  if (!sim.disjuntorCoins) for (let h = 0; h < R; h++) rodadaCambio(sim, h);
+  if (!(sim.disjuntorCoins && modoTransf)) for (let h = 0; h < R; h++) rodadaCambio(sim, h);
   // 15.8 cancela ordens de compra velhas; quem juntou Coins compra a conveniência
   const lim = P.cambio.cancelar_compra_dias;
   sim.livro = sim.livro.filter(o => {
@@ -1539,6 +1557,7 @@ function metricas(sim) {
     frac_teto: N ? nTeto / N : 0,
     lucro_fazenda_mes_reais: lucroFazMes,
     saida_fazenda_dia_ouro: saidaFazDia, saida_fazenda_dia_reais: saidaFazDia * reaisPorOuro,
+    emissao_saida_dia: (sim.saidasTodasDia || 0) / esc, emissao_fazendas_dia: (sim.saidasFazDia || 0) / esc,
     nivel_precos: nivel, teto_mediano: mediana(tetos),
     dia_teto_mediano_reais: mediana(tetos) * ouroPorTeto * reaisPorOuro,
     salario_topo_mes_reais: tetoTopo * ouroPorTeto * reaisPorOuro * 30 * (1 - P.teto.salario_custo_frac),
@@ -1630,6 +1649,7 @@ function resumir(sim) {
     salario_topo: media('salario_topo_mes_reais'),
     dia_teto_reais: media('dia_teto_mediano_reais'),
     lucro_fazenda_mes: media('lucro_fazenda_mes_reais'),
+    extracao_fazendas: soma('emissao_saida_dia') > 0 ? soma('emissao_fazendas_dia') / soma('emissao_saida_dia') : 0,
     preco_coin: media('preco_coin'), premium_ouro: media('premium_ouro'), renda_mediana: media('renda_mediana'),
     ativos: media('ativos'), massa_por_ativo: media('massa_por_ativo'),
     velocidade: media('velocidade'), cambio_rodadas: media('cambio_rodadas_negocio'), cambio_ordens: media('cambio_ordens_dia'),
@@ -1667,6 +1687,8 @@ function resumir(sim) {
     dia_teto: dentro(r.dia_teto_reais, S.dia_teto_reais),
     lucro_fazenda: r.lucro_fazenda_mes <= S.lucro_fazenda_mes_max,
   };
+  // 13º critério (checkpoint 3): sem verificação, a conta-fazenda é barata; mede-se também a escala
+  if (S.extracao_fazendas_max !== undefined) r.criterios.extracao_fazendas = r.extracao_fazendas <= S.extracao_fazendas_max;
   r.passa = Object.values(r.criterios).filter(Boolean).length;
   r.total = Object.keys(r.criterios).length;
   return r;
@@ -1719,6 +1741,7 @@ function imprimirResumo(cen, r) {
   console.log(`  [${ok(c.premium_dias)}] premium ${num(r.premium_dias)} dias de renda   [${ok(c.massa_premiums)}] massa/ativo ${num(r.massa_premiums, 2)} premiums   [${ok(c.top10)}] top 10% ${pct(r.top10)} (top 1% ${pct(r.top1)}, Gini ${num(r.gini, 2)})`);
   console.log(`  [${ok(c.premium_via_ouro)}] premium via ouro ${pct(r.premium_via_ouro)}   [${ok(c.coins_trocas)}] Trocas em Coins ${pct(r.coins_trocas)}   [${ok(c.basicos_piso)}] básicos/piso ${num(r.basicos_piso, 2)}`);
   console.log(`  [${ok(c.salario_topo)}] salário-teto topo R$ ${num(r.salario_topo, 0)}/mês   [${ok(c.dia_teto)}] dia de teto (mediano) R$ ${num(r.dia_teto_reais, 2)}   [${ok(c.lucro_fazenda)}] fazenda R$ ${num(r.lucro_fazenda_mes, 2)}/conta/mês`);
+  if (c.extracao_fazendas !== undefined) console.log(`  [${ok(c.extracao_fazendas)}] extração das fazendas ${pct(r.extracao_fazendas)} do valor negociável emitido (meta até 3%)`);
   console.log(`  Coin ${num(r.preco_coin)} ouro (${num(r.coin_min)}–${num(r.coin_max)}); premium ${num(r.premium_ouro, 0)} ouro; renda mediana ${num(r.renda_mediana, 0)}/dia; ativos ${num(r.ativos, 0)}; 1º 100 casual/regular/hardcore D${num(r.d100.casual, 0)}/D${num(r.d100.regular, 0)}/D${num(r.d100.hardcore, 0)}`);
   console.log(`  => ${r.passa}/${r.total} critérios`);
 }
@@ -1731,8 +1754,8 @@ function principal() {
     const sementes = String(op.sementes).split(',').map(Number);
     const ids = op.cenarios ? String(op.cenarios).split(',') : ['base'];
     const chaves = ['ipc_anual', 'ipc_medio', 'drenos_fontes', 'frac_teto', 'premium_dias', 'massa_premiums', 'massa_estab_premiums', 'top10', 'top1', 'gini',
-      'premium_via_ouro', 'coins_trocas', 'basicos_piso', 'salario_topo', 'dia_teto_reais', 'lucro_fazenda_mes', 'preco_coin', 'premium_ouro', 'renda_mediana',
-      'falta_essencial', 'vr_preso', 'producao', 'mercado_ouro', 'cambio_rodadas', 'cambio_ordens', 'vol_coin', 'vol_ipc', 'velocidade', 'massa_por_ativo'];
+      'premium_via_ouro', 'coins_trocas', 'basicos_piso', 'salario_topo', 'dia_teto_reais', 'lucro_fazenda_mes', 'extracao_fazendas', 'preco_coin', 'premium_ouro', 'renda_mediana',
+      'falta_essencial', 'ativos', 'coins_sem_lastro_final', 'dias_disjuntor', 'vr_preso', 'producao', 'mercado_ouro', 'cambio_rodadas', 'cambio_ordens', 'vol_coin', 'vol_ipc', 'velocidade', 'massa_por_ativo'];
     const saida = [];
     for (const id of ids) {
       const cen = cenarios.find(c => c.id === id);
@@ -1741,7 +1764,7 @@ function principal() {
       const ag = { id, nome: cen.nome, grupo: cen.grupo, sementes, media: {}, min: {}, max: {}, passa: rs.map(r => r.passa), d100: rs.map(r => r.d100), contadores: rs.map(r => r.contadores) };
       for (const k of chaves) { const v = rs.map(r => r[k]).filter(Number.isFinite); ag.media[k] = v.reduce((a, b) => a + b, 0) / (v.length || 1); ag.min[k] = Math.min(...v); ag.max[k] = Math.max(...v); }
       saida.push(ag);
-      console.log(`${id.padEnd(28)} IPC ${pct(ag.media.ipc_anual)} (${pct(ag.min.ipc_anual)} a ${pct(ag.max.ipc_anual)})  nível ${num(ag.media.ipc_medio)}  prem ${num(ag.media.premium_dias)}d  teto ${pct(ag.media.frac_teto)}  D/F ${pct(ag.media.drenos_fontes)}  fazenda R$${num(ag.media.lucro_fazenda_mes, 1)}  falta ${pct(ag.media.falta_essencial)}  passa ${ag.passa.join('/')}`);
+      console.log(`${id.padEnd(28)} IPC ${pct(ag.media.ipc_anual)} (${pct(ag.min.ipc_anual)} a ${pct(ag.max.ipc_anual)})  nível ${num(ag.media.ipc_medio)}  prem ${num(ag.media.premium_dias)}d  teto ${pct(ag.media.frac_teto)}  D/F ${pct(ag.media.drenos_fontes)}  fazenda R$${num(ag.media.lucro_fazenda_mes, 1)} extr ${pct(ag.media.extracao_fazendas)}  falta ${pct(ag.media.falta_essencial)}  passa ${ag.passa.join('/')}`);
     }
     fs.mkdirSync(PASTA_RES, { recursive: true });
     const arq = path.join(PASTA_RES, op.saida || 'sementes.json');
@@ -1768,7 +1791,7 @@ function principal() {
       if (filtro && !c.id.startsWith(filtro) && c.grupo !== filtro) continue;
       i++; if (i % n !== k - 1) continue;
       const { r, sim } = rodarCenario(c, Object.assign({}, op, { quieto: true }));
-      console.log(`${c.id.padEnd(28)} ${r.passa}/${r.total}  IPC ${pct(r.ipc_anual).padStart(7)}  D/F ${pct(r.drenos_fontes).padStart(6)}  teto ${pct(r.frac_teto).padStart(6)}  prem ${num(r.premium_dias).padStart(5)}d  top10 ${pct(r.top10).padStart(6)}  fazenda R$${num(r.lucro_fazenda_mes, 2).padStart(6)}  (${r.segundos.toFixed(0)} s)`);
+      console.log(`${c.id.padEnd(28)} ${r.passa}/${r.total}  IPC ${pct(r.ipc_anual).padStart(7)}  D/F ${pct(r.drenos_fontes).padStart(6)}  teto ${pct(r.frac_teto).padStart(6)}  prem ${num(r.premium_dias).padStart(5)}d  top10 ${pct(r.top10).padStart(6)}  fazenda R$${num(r.lucro_fazenda_mes, 2).padStart(6)} extr ${pct(r.extracao_fazendas).padStart(6)}  (${r.segundos.toFixed(0)} s)`);
       res.push({ id: c.id, nome: c.nome, grupo: c.grupo, descricao: c.descricao, r, serie: amostrarSerie(sim.serie) });
     }
     fs.mkdirSync(PASTA_RES, { recursive: true });
@@ -1795,7 +1818,7 @@ function amostrarSerie(serie) {
   const cols = ['dia', 'ativos', 'ipc', 'ipc_anual_90d', 'preco_coin', 'premium_ouro', 'premium_dias_renda', 'renda_mediana',
     'massa_ativa', 'massa_por_ativo', 'massa_premiums', 'estoque_coins', 'coins_guardados', 'coins_sem_lastro', 'velocidade',
     'fontes_total', 'drenos_total', 'drenos_fontes', 'gini', 'top1', 'top10', 'frac_teto', 'lucro_fazenda_mes_reais',
-    'dia_teto_mediano_reais', 'salario_topo_mes_reais', 'premium_via_ouro', 'basicos_vs_piso', 'cambio_volume',
+    'dia_teto_mediano_reais', 'salario_topo_mes_reais', 'emissao_saida_dia', 'emissao_fazendas_dia', 'premium_via_ouro', 'basicos_vs_piso', 'cambio_volume',
     'cambio_rodadas_negocio', 'mult_encomendas', 'producao_vra_dia', 'mercado_ouro_dia', 'nivel_mestre_mediano', 'pagantes',
     'fonte_npc', 'fonte_encomendas', 'fonte_cercos', 'fonte_eventos', 'fonte_comeco',
     'dreno_insumos', 'dreno_partida', 'dreno_ajudantes', 'dreno_taxas', 'dreno_troca', 'dreno_cambio', 'dreno_bau', 'dreno_bazar',

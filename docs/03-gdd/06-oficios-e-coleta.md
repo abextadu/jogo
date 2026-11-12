@@ -340,6 +340,8 @@ Edda põe 2 pontos em Bloqueio (de 7,5% para 9,5%) e 2 em têmpera (+10% de dura
 | Comida | Peixe raro (Tn) | Vai direto ao lote | Lote fino da Culinária; banquete de cerco |
 | Erva | Erva rara (Tn) | Vai direto ao lote | Lote fino da Alquimia |
 
+**Valor de referência das matérias raras e dos insumos nobres (D16, resolvida na Fase 4, [arquitetura](../04-arquitetura.md), §17)** [H]: a matéria rara do tier n vale **2.000 × o VR de uma unidade do bruto do tier n**, o tempo de fila em que ela apareceria por acaso (1 a cada 2.000 ações); o insumo nobre vale **(VR da matéria rara + VR dos 10 insumos da fornada) ÷ 2**, porque um mestre atento tira em média 2 por fornada. Exemplo: o veio puro de ferro (T2) vale ~747 de VR. A calibrar com a telemetria do alfa.
+
 ### 6.5 O que nunca entra na obra-prima
 
 - **Cronômetro ou reflexo.** Não há tempo para decidir. A sessão fica salva no servidor e pode ser pausada e retomada, o que serve ao celular e à acessibilidade.
@@ -445,7 +447,7 @@ O modelo de conferência expande o consumo de uma hora de combate (desgaste de e
 | Mineração | 5,6% | 5,7% | 7,5% | 7,7% |
 
 **Revisão de consistência (R1):** a tabela acima foi calculada com 4 refeições por hora. Com 1 refeição por combatente, a demanda de combate da Culinária cai para ~3,5% das horas e a da Pesca para ~2,5% (no T1, estimativa desta revisão), abaixo da tolerância; os outros ofícios sobem um pouco. **Resolução do diretor (revisão de consistência: D1):**
-- **A refeição também dá um bônus pequeno de ofício:** por exemplo, +3% de eficiência numa fila por 1 h [H]. A refeição é consumida ao ser comida, então quem só produz também come, e a demanda de Culinária e Pesca deixa de depender só do combate.
+- **A refeição também dá um bônus pequeno de ofício:** por exemplo, +3% de eficiência numa fila por 1 h [H]. O bônus conta dentro do teto de 1,10× do domínio e nunca o ultrapassa (D15). **A 2ª rodada da simulação recomenda tirar o bônus** ([08](08-simulacao.md), seção 10): os consumíveis já faltam no modelo, e o bônus leva a inflação a +100% ao ano. Decisão 4 do checkpoint da Fase 4. A refeição é consumida ao ser comida, então quem só produz também come, e a demanda de Culinária e Pesca deixa de depender só do combate.
 - **As provisões do cerco e da Fronteira passam a ser refeições** (o rancho do cerco no Arsenal, [04](04-combate.md), seção 11.6; a comida do kit de expedição, [10](10-live-ops.md), seção 4.4).
 - **A meta continua de 6% a 11% das horas exigidas por ofício.** O tamanho do bônus e a quantidade de provisões ficam para **calibrar na próxima rodada da simulação** (08), junto com o recálculo desta tabela pelo modelo de conferência.
 

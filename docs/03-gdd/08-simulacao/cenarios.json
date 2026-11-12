@@ -1,12 +1,89 @@
 {
-  "_sobre": "Cenários da simulação. 'mudancas' é mesclado sobre parametros.json (só as chaves listadas mudam). Grupos: base, estresse (os 12 do 07 §13 e extras do 11 e do 13), reconciliacao (as 4 decisões pedidas ao 08) e sensibilidade.",
+  "_sobre": "Cenários da simulação. 'mudancas' é mesclado sobre parametros.json (só as chaves listadas mudam). Grupos: base, rodada2 (checkpoint 3), estresse (os 12 do 07 §13 e extras do 11 e do 13), reconciliacao (as 4 decisões pedidas ao 08) e sensibilidade.",
   "cenarios": [
     {
       "id": "base",
       "grupo": "base",
       "nome": "Cenário base (configuração recomendada)",
-      "descricao": "Configuração final recomendada: teto em VR fixo (trabalho embutido) com portão de saída e crédito dos insumos; indexação dos insumos de NPC de até ±10% por mês na 1ª Era; Selo com o custo do 07 (30 mil ouro + 20 mil VR) que mantém o tier de produção; ouro de encomenda só a partir do 14º dia da conta; ~27 a 30 mil ativos; bots do 13 (3% de automação, 0,5% de fazendas).",
+      "descricao": "2ª rodada (checkpoint 3): sem verificação de idade e sem carência; fazendas em 3% das contas; contestação a 0,5% com 95% dos Coins já transferidos; funil e retenção do 12 refeitos; bônus da refeição dentro do teto de 1,10× (D15). Mantém a configuração recomendada da 1ª rodada: teto em VR fixo (trabalho embutido) com portão de saída e crédito dos insumos; indexação dos insumos de NPC de até ±10% por mês na 1ª Era; Selo com o custo do 07 (30 mil ouro + 20 mil VR) que mantém o tier de produção; ouro de encomenda só a partir do 14º dia da conta; ~27 a 30 mil ativos; bots do 13 (3% de automação, 0,5% de fazendas).",
       "mudancas": {}
+    },
+    {
+      "id": "r1_base_1a_rodada",
+      "grupo": "rodada2",
+      "nome": "R1 — Base da 1ª rodada (com verificação e carência)",
+      "descricao": "As premissas da 1ª rodada, para comparar: carência de 72 h no Pix e 7 dias no cartão, contestação a 0,3% com 60% transferidos, fazendas em 0,5% (identidade verificada), funil com verificação, sem o bônus da refeição e com o disjuntor que parava o Câmbio.",
+      "mudancas": {"populacao":{"onda_lancamento":{"contas_por_dia":4000},"entrada_por_dia":1500,"retencao_novas":{"d1":0.5,"d7":0.25,"d30":0.12}},"coins":{"carencia":{"pix_dias":3,"cartao_dias":7,"primeira_dias":7},"contestacao":{"taxa":0.003,"transferidos":0.6,"disjuntor_modo":"transferencias"}},"bots":{"fazenda_frac":0.005},"consumo":{"refeicao_oficio":{"bonus":0}}}
+    },
+    {
+      "id": "r2_fazendas10",
+      "grupo": "rodada2",
+      "nome": "R2 — Fazendas em 10% das contas",
+      "descricao": "Sem verificação, abrir contas falsas é barato: fazendas em 10% das contas ativas, repostas pelo operador depois de cada onda.",
+      "mudancas": {"bots":{"fazenda_frac":0.1}}
+    },
+    {
+      "id": "r2_fazendas10_deteccao_fraca",
+      "grupo": "rodada2",
+      "nome": "R2 — Fazendas em 10% e detecção pela metade",
+      "descricao": "Fazendas em 10% e cada onda de detecção pegando 30% delas (em vez de 60%), com 40% do valor recuperado.",
+      "mudancas": {"bots":{"fazenda_frac":0.1,"deteccao_fazenda":{"intervalo":21,"taxa":0.3},"fiscalizacao_recuperacao":0.4}}
+    },
+    {
+      "id": "r2_rampa_forte",
+      "grupo": "rodada2",
+      "nome": "R2 — Fazendas em 10% com rampa de conta nova mais longa",
+      "descricao": "Alavanca que não mexe na transferência: a rampa do teto de emissão vai a 25% até o dia 14, 50% até o 28 e 75% até o 45 (era 7, 14 e 30).",
+      "mudancas": {"bots":{"fazenda_frac":0.1},"teto":{"rampa":[[14,0.25],[28,0.5],[45,0.75]]}}
+    },
+    {
+      "id": "r2_onda_falsas",
+      "grupo": "rodada2",
+      "nome": "R2 — Onda de contas falsas (30% das novas por 14 dias)",
+      "descricao": "Substitui a catástrofe da verificação: do dia 100 ao 114, 30% das contas novas são falsas; a onda de banimento do dia 121 pega 60% delas.",
+      "mudancas": {"bots":{"catastrofe":{"inicio":100,"dias":14,"frac_novas":0.3,"ban_dia":121,"ban_frac":0.6}}}
+    },
+    {
+      "id": "r2_ataque_cartoes",
+      "grupo": "rodada2",
+      "nome": "R2 — Ataque de cartões sem carência",
+      "descricao": "Do dia 150 ao 180, 2% das doações são contestadas (cartões roubados), com 95% dos Coins já transferidos; testa o disjuntor de pagamentos.",
+      "mudancas": {"eventos":{"contestacao_onda":{"inicio":150,"fim":180,"taxa":0.02}}}
+    },
+    {
+      "id": "r2_refeicao_uso_total",
+      "grupo": "rodada2",
+      "nome": "R2 — Refeição em todas as horas de fila",
+      "descricao": "Sensibilidade do D15: quem está abaixo do teto do domínio come em 100% das horas de fila (o base usa 50%).",
+      "mudancas": {"consumo":{"refeicao_oficio":{"uso":1}}}
+    },
+    {
+      "id": "r2_sem_refeicao",
+      "grupo": "rodada2",
+      "nome": "R2 — Sem o bônus da refeição (configuração recomendada)",
+      "descricao": "Isola o efeito do D15: o mesmo base, sem o bônus de ofício da refeição.",
+      "mudancas": {"consumo":{"refeicao_oficio":{"bonus":0}}}
+    },
+    {
+      "id": "r2_refeicao_ativa_comeco",
+      "grupo": "rodada2",
+      "nome": "R2 — Refeição na bancada ativa e ouro de começo de 1.600",
+      "descricao": "Alternativa testada: o bônus da refeição só nas horas de bancada ativa (10%) e ouro de começo de 1.600.",
+      "mudancas": {"consumo":{"refeicao_oficio":{"uso":0.1}},"fontes":{"comeco_ouro_total":1600}}
+    },
+    {
+      "id": "r2_refeicao_ativa",
+      "grupo": "rodada2",
+      "nome": "R2 — Refeição só nas horas de bancada ativa",
+      "descricao": "Alternativa ao D15: o bônus de +3% da refeição vale só quando o jogador está presente (bancada ativa), cerca de 10% das horas de fila (o base usa 50%).",
+      "mudancas": {"consumo":{"refeicao_oficio":{"uso":0.1}}}
+    },
+    {
+      "id": "r2_sem_refeicao_comeco",
+      "grupo": "rodada2",
+      "nome": "R2 — Sem o bônus da refeição e ouro de começo de 1.600",
+      "descricao": "Testa se baixar o ouro de começo (2.000 → 1.600, para manter a fonte do tamanho da 1ª rodada com 25% mais contas novas) ajuda na combinação inteira, sem o bônus da refeição.",
+      "mudancas": {"consumo":{"refeicao_oficio":{"bonus":0}},"fontes":{"comeco_ouro_total":1600}}
     },
     {
       "id": "e01_crescimento",

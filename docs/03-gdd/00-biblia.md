@@ -151,7 +151,7 @@ Termos oficiais que os módulos criaram na Fase 3. Valem como os da tabela acima
 | **Disjuntor** | Suspensão da entrada de novas operações num balcão, item, moeda ou fluxo, sem desligar a economia inteira. | 07, 13 |
 | **Risco de troca** | Pontuação do valor dado sem contrapartida entre contas (níveis 0 a 3). Serve só à detecção e à investigação depois do fato; nunca limita, atrasa nem exige troca equilibrada (checkpoint 3). | 07, 13 |
 | **Conta nova** | Conta com menos de 14 dias ou menos de 20 h de jogo ativo; está na rampa do teto de emissão e não recebe ouro de encomenda (R23). Não tem limite de saída (checkpoint 3). | 07, 13 |
-| **Aposentadoria** | Conta arquivada por quem compra outra no Bazar de Personagens: sem jogar nem negociar, reativável trocando de lugar com a ativa no máximo uma vez a cada 90 dias. | 13 |
+| **Aposentadoria** | Personagem arquivado por quem compra outro no Bazar de Personagens e o recebe na própria conta: sem jogar nem negociar, reativável trocando de lugar com o ativo no máximo uma vez a cada 90 dias. No Bazar, o personagem muda de conta; a conta não muda de dono (D19). | 07, 13 |
 
 ## 5. Decisões já tomadas (não reabrir nos módulos)
 

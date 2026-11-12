@@ -598,8 +598,9 @@ Como ela se aplica a uma moeda que circula [H]:
 - **Uma pessoa = uma conta = um personagem ativo** (decisão 4 do checkpoint 2; sem verificação de identidade desde o checkpoint 3, a regra é cobrada por detecção, [13](13-anti-abuso.md), §4.2). Para receber o personagem, a conta do comprador precisa estar vaga:
   - uma conta nova;
   - uma conta cujo personagem foi vendido no Bazar de Personagens;
-  - ou uma conta cujo personagem foi encerrado pelo dono (os bens negociáveis ficam na conta).
-- Não existe "guardar" o personagem antigo para voltar a ele, o que daria a uma pessoa quatro ofícios mestres por revezamento e quebraria o pilar 1.
+  - ou uma conta cujo personagem foi encerrado pelo dono (os bens negociáveis ficam na conta);
+  - ou a conta atual do comprador, com o personagem atual na **aposentadoria** ([13](13-anti-abuso.md), §7.5; D19).
+- O personagem antigo só se guarda pela aposentadoria, com troca de lugar no máximo uma vez a cada 90 dias. Sem esse limite, o revezamento daria a uma pessoa quatro ofícios mestres e quebraria o pilar 1.
 - O personagem comprado chega sem guilda e fica 30 dias fora dos pódios de ranking da Era. **A reconciliar com os módulos 03, 09 e 13.**
 
 ### 7.6 Segurança
